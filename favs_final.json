@@ -1,0 +1,38 @@
+{
+  "B000FGECAI": {
+    "name": "Learning Resources Kanoodle",
+    "rating": 4.7,
+    "reviews": 34183,
+    "img": "images/learning-resources-kanoodle-rompecabezas-3d-y-2d-juego-logico.webp",
+    "url": "https://www.amazon.es/dp/B000FGECAI/"
+  },
+  "B07YNKKGRJ": {
+    "name": "Hasbro Simon",
+    "rating": 4.6,
+    "reviews": 25980,
+    "img": "images/hasbro-gaming-simon-juguete-electronico-de-memoria-habilidad-y.webp",
+    "url": "https://www.amazon.es/dp/B07YNKKGRJ/"
+  },
+  "B08KHLW7TX": {
+    "name": "ThinkFun Gravity Maze",
+    "rating": 4.6,
+    "reviews": 2564,
+    "img": "images/thinkfun-gravity-maze-regalo-nino-8-anos-juegos-de-mesa-ninos-8-anos.webp",
+    "url": "https://www.amazon.es/dp/B08KHLW7TX/"
+  },
+  "B07B42X1Z3": {
+    "name": "Science4you Robotics Betabot",
+    "rating": 4.5,
+    "reviews": 3147,
+    "img": "images/science4you-robotics-betabot-kit-robotica-de-125-piezas-construye-tu.webp",
+    "page": "robotica-8-anos.html",
+    "asin": "B07B42X1Z3"
+  },
+  "B07QRB9NWP": {
+    "name": "Game Factory Virus",
+    "rating": 4.6,
+    "reviews": 1275,
+    "img": "images/game-factory-virus-juego-de-cartas.webp",
+    "url": "https://www.amazon.es/dp/B07QRB9NWP/"
+  }
+}

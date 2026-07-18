@@ -1,0 +1,58 @@
+<!--
+  favorite_item_template.html
+
+  Plantilla de referencia del componente reutilizable "⭐ Favoritos de los
+  papás". Vive en css/site.css (clases .favorites*) para que cualquier
+  pagina de categoria o de edad pueda incluirlo con el mismo aspecto.
+
+  Usa los mismos datos que ya devuelve tools/amazon_import.py para cada
+  producto (nombre corto ya redactado, imagen, valoracion, num_valoraciones)
+  mas la pagina de categoria donde vive la ficha real, para enlazar
+  internamente en vez de a Amazon.
+
+  Placeholders de la fila: {{IMAGEN}}, {{NOMBRE}}, {{VALORACION}},
+  {{NUM_VALORACIONES}}, {{PAGINA_CATEGORIA}}, {{ASIN}}.
+
+  Reglas:
+  - Sin subtitulo bajo el titulo y sin ningun texto/consejo despues de la
+    ultima tarjeta — el bloque termina justo despues del ultimo
+    favorite-item. Solo titulo + listado, nada mas.
+  - Cada fila (.favorite-item) es una tarjeta con marco: fondo blanco,
+    borde 1px #EAEAEA, radio 8px, sombra muy suave
+    (box-shadow:0 1px 2px rgba(0,0,0,.06)) y padding 16px vertical y
+    horizontal. Termina con una flecha "›" naranja (var(--accent)) pegada
+    a la derecha via margin-left:auto en .favorite-arrow.
+  - Separacion vertical entre tarjetas: 16px exactos, fijados por la
+    variable --favorites-gap en .favorites-list. La separacion titulo ->
+    primera tarjeta usa el mismo valor (margin-top: var(--favorites-gap)).
+    Nunca un valor inline ni hardcodeado en una pagina concreta: cambiar
+    solo en css/site.css (y su copia identica en el <style> de
+    guia-regalos-juguetes.html).
+  - Maximo 5 productos por bloque (los 5 mas relevantes de esa categoria/edad).
+  - El enlace de cada fila es interno cuando el producto ya tiene ficha
+    propia: "{{PAGINA_CATEGORIA}}#{{ASIN}}" — el ASIN coincide con el
+    id="{{ASIN}}" del <article class="product-card"> real (ver
+    product_card_template.html), asi que el navegador hace scroll directo
+    a la ficha al hacer clic. Si el producto no tiene ficha propia
+    todavia, el enlace va directo a la URL de Amazon en pestaña nueva
+    (target="_blank" rel="noopener") en vez de usar PAGINA_CATEGORIA#ASIN.
+  - Si un producto no tiene valoracion/num_valoraciones (Amazon no siempre
+    los expone), no inventar cifras: omitir esa fila o completarla solo
+    cuando el dato real este disponible.
+  - No mostrar descripcion, beneficios, precio ni boton "Ver en Amazon" en
+    este componente — su unica funcion es la recomendacion rapida.
+-->
+<div class="favorites">
+  <h4 class="favorites-title">⭐ Favoritos de los papás</h4>
+  <div class="favorites-list">
+    <!-- Repetir esta fila hasta 5 veces -->
+    <a class="favorite-item" href="{{PAGINA_CATEGORIA}}#{{ASIN}}">
+      <img class="favorite-thumb" src="{{IMAGEN}}" alt="{{NOMBRE}}" width="56" height="56" loading="lazy">
+      <span class="favorite-info">
+        <span class="favorite-name">{{NOMBRE}}</span>
+        <span class="favorite-rating">⭐ {{VALORACION}} · {{NUM_VALORACIONES}} valoraciones en Amazon</span>
+      </span>
+      <span class="favorite-arrow" aria-hidden="true">›</span>
+    </a>
+  </div>
+</div>

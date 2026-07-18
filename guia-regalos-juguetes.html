@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de regalos · Juguetes por edad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+<style>
+  :root{
+    --bg:#FAFAF8;
+    --ink:#1C1C1E;
+    --ink-soft:#6B6B70;
+    --line:#E4E2DC;
+    --card:#FFFFFF;
+    --accent:#FF8A65;
+    --chip-icon:#378ADD;
+    --chip-v2-ink:#1E2A47;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  /* Padding horizontal base: 32px en pantallas medianas/grandes, 24px en
+     movil (media query mas abajo). Las secciones que combinan su propia
+     clase con "wrap" deben fijar el padding vertical con padding-top/
+     padding-bottom, nunca con el shorthand "padding", que pisaria a 0
+     el padding horizontal heredado de aqui. */
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+
+  /* NAV — cabecera clara (fondo crema), logo con icono de regalo, titulo
+     verde y subtitulo naranja, y una fila de "chips" pildora reutilizables
+     (Edades, Buscar, Guia Montessori, Favoritos). Edades y Favoritos abren
+     un desplegable con las franjas de edad / sus bloques de Favoritos. */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:#FBF3EA;
+    border-bottom:1px solid #F0E4D5;
+  }
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand-icon{width:40px;height:40px;object-fit:contain;flex-shrink:0;}
+  .brand-text{display:flex;flex-direction:column;}
+  .brand-title{font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;color:#1D6B3E;line-height:1.15;}
+  .brand-sub{font-size:12.5px;color:#B5651D;margin-top:1px;}
+
+  .nav-chips{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .nav-chip-wrap{position:relative;}
+  .nav-chip{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid #ECE6DA;border-radius:999px;
+    padding:10px 20px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#1C1C1E;
+    cursor:pointer;transition:box-shadow .15s,border-color .15s;
+    box-shadow:0 1px 2px rgba(28,28,30,.04);
+  }
+  .nav-chip i{color:#2E7D46;font-size:17px;line-height:1;}
+  .nav-chip:hover{box-shadow:0 3px 10px rgba(28,28,30,.08);border-color:#DCD3C0;}
+  .chip-caret{font-size:14px !important;color:#8B8981 !important;margin-left:-2px;transition:transform .15s;}
+  .nav-chip[aria-expanded="true"] .chip-caret{transform:rotate(180deg);}
+
+  .nav-dropdown{
+    position:absolute;top:calc(100% + 8px);left:0;min-width:200px;
+    background:#fff;border:1px solid #ECE6DA;border-radius:14px;
+    box-shadow:0 10px 30px rgba(28,28,30,.12);padding:8px;
+    display:none;flex-direction:column;gap:2px;z-index:60;
+  }
+  .nav-dropdown.is-open{display:flex;}
+  .nav-dropdown a{padding:9px 12px;border-radius:8px;font-size:14px;font-weight:500;color:#1C1C1E;}
+  .nav-dropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
+
+  /* HERO principal — fotografia a sangre completa (extraida de la maqueta
+     de referencia, sin recortar, sin zoom y sin ningun efecto). El texto
+     ("Encuentra el regalo...", boton, etc.) es el que ya lleva la propia
+     fotografia; no se superpone ningun texto HTML encima para evitar
+     duplicados. */
+  .hero-main{position:relative;overflow:hidden;}
+  .hero-main-photo{display:block;width:100%;height:auto;}
+  @media (max-width:640px){
+    .brand-icon{width:32px;height:32px;}
+    .brand-title{font-size:17px;}
+    .brand-sub{font-size:11px;}
+    .nav-chip{padding:8px 14px;font-size:12.5px;}
+  }
+
+  /* SIDE RULER (signature element) */
+  .ruler{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;z-index:40;}
+  .ruler-track{position:relative;width:2px;height:320px;background:var(--line);border-radius:2px;}
+  .ruler-tick{position:absolute;left:-4px;width:10px;height:1px;background:var(--ink-soft);opacity:.5;}
+  .ruler-num{position:absolute;left:-30px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink-soft);transform:translateY(-50%);}
+  .ruler-dot{
+    position:absolute;left:50%;width:14px;height:14px;border-radius:50%;
+    background:#FF8A65;transform:translate(-50%,-50%);
+    transition:top .2s ease, background .2s ease;box-shadow:0 0 0 4px var(--bg);
+  }
+  @media (max-width:900px){ .ruler{display:none;} }
+
+  /* HERO — selector de edades en tarjetas tintadas (sustituye al antiguo
+     grafico de barras; el contenedor conserva id="chart" para que el enlace
+     "Edades" de la cabecera siga funcionando). El titular/subtitulo que
+     llevaba encima se elimino: ahora el mensaje principal vive en
+     .hero-main, superpuesto a la fotografia. */
+  .hero{padding-top:40px;padding-bottom:52px;border-bottom:1px solid var(--line);text-align:center;}
+
+  /* Selector de edades: seis fotografías circulares alineadas, con un aro fino
+     de su familia de color (coral, ámbar, amarillo, verde, azul y morado).
+     Se mantienen los mismos enlaces y estados de selección; solo cambia el
+     tratamiento visual respecto a los antiguos chevrons de color. */
+  .age-cards{
+    margin:0 auto 0;max-width:960px;
+    display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:28px;align-items:start;
+    padding:10px 4px 24px;
+  }
+  .age-card{
+    --age-accent:#D85A30;display:flex;min-width:0;flex-direction:column;align-items:center;
+    text-align:center;text-decoration:none;
+    transition:transform .15s;
+  }
+  .age-card:hover{transform:translateY(-3px);}
+  .age-chevron{
+    display:flex;flex-direction:column;align-items:center;gap:1px;margin-top:13px;
+  }
+  .age-photo{
+    width:114px;height:114px;display:block;object-fit:cover;object-position:center;
+    border-radius:50%;
+    box-shadow:0 5px 16px rgba(44,44,42,.10);
+  }
+  .age-card-num{font-family:'Fredoka',sans-serif;font-weight:600;font-size:22px;line-height:1.1;}
+  .age-card-unit{font-family:'Inter',sans-serif;font-size:11px;margin-top:1px;}
+
+  /* Tintes por franja: solo texto y aro de la fotografía, nunca fondos sólidos. */
+  .ac-coral{--age-accent:#D85A30;} .ac-coral .age-card-num{color:#B94A26;} .ac-coral .age-card-unit{color:#D85A30;}
+  .ac-amber{--age-accent:#C77E17;} .ac-amber .age-card-num{color:#9C610F;} .ac-amber .age-card-unit{color:#BA7517;}
+  .ac-yellow{--age-accent:#C79A1B;} .ac-yellow .age-card-num{color:#8A6D12;} .ac-yellow .age-card-unit{color:#A88B1B;}
+  .ac-green{--age-accent:#3E9E5E;} .ac-green .age-card-num{color:#2E7D46;} .ac-green .age-card-unit{color:#3B9256;}
+  .ac-blue{--age-accent:#3A75DC;} .ac-blue .age-card-num{color:#2D66C9;} .ac-blue .age-card-unit{color:#3A75DC;}
+  .ac-purple{--age-accent:#7A6CD6;} .ac-purple .age-card-num{color:#5647A8;} .ac-purple .age-card-unit{color:#7F77DD;}
+  .age-card.is-selected .age-photo{box-shadow:0 5px 18px rgba(58,117,220,.19);}
+
+  /* INTRO to list */
+  .list-intro{padding-top:64px;padding-bottom:8px;}
+  .list-intro h2{font-size:28px;margin-bottom:8px;}
+  .list-intro p{color:var(--ink-soft);max-width:560px;font-size:15px;}
+
+  /* AGE ROWS */
+  .age-list{padding-bottom:40px;}
+  .age-row{
+    display:block;
+    /* padding-bottom es 5px a proposito: sumado al border-top (1px) y al
+       padding-top de la siguiente fila (26px) da los 32px exactos que debe
+       haber entre la ultima tarjeta de Favoritos y el titulo de la
+       siguiente franja de edad (5 + 1 + 26 = 32). */
+    padding-top:26px;padding-bottom:5px;
+    /* Divisor mas suave que el --line general de la web (usado en header,
+       hero, etc.): mismo grosor de 1px, pero color mas tenue para que
+       separe sin llamar tanto la atencion entre bloques de edad. */
+    border-top:1px solid rgba(28,28,30,.06);
+    scroll-margin-top:110px;align-items:stretch;
+  }
+  .age-list .age-row:last-child{border-bottom:1px solid rgba(28,28,30,.06);}
+  [id^="fav-"]{scroll-margin-top:110px;}
+  /* Insignia de edad: circulo tintado con anillo del color de la franja
+     (var(--accent), fijado por fila desde el array bands) del que baja una
+     linea vertical fina que recorre toda la franja y termina en un punto.
+     Los tintes se derivan del color de la franja con color-mix, asi que no
+     hay ningun color hardcodeado por edad. */
+  .age-tag{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;text-align:center;}
+  .age-circle{
+    width:58px;height:58px;border-radius:50%;flex-shrink:0;
+    background:color-mix(in srgb, var(--accent) 14%, #fff);
+    border:3px solid var(--accent);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .age-num{font-family:'Fredoka',sans-serif;font-weight:600;font-size:17px;line-height:1;color:color-mix(in srgb, var(--accent) 80%, #000);}
+  .age-unit{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--accent);margin-top:3px;text-transform:uppercase;letter-spacing:.04em;}
+  .age-line{width:2px;flex:1;background:color-mix(in srgb, var(--accent) 30%, #fff);margin-top:8px;}
+  .age-dot{width:8px;height:8px;border-radius:50%;background:color-mix(in srgb, var(--accent) 30%, #fff);margin-top:-1px;flex-shrink:0;}
+
+  /* Cabecera reutilizable de cada franja: fotografía, contexto y apoyos. */
+  .age-header{
+    display:grid;grid-template-columns:minmax(215px,.9fr) minmax(0,1.8fr) minmax(150px,.6fr);
+    gap:42px;align-items:center;padding:42px 46px;margin-bottom:34px;
+    border:1px solid rgba(28,28,30,.06);border-radius:30px;background:linear-gradient(120deg,color-mix(in srgb,var(--accent) 8%,#fff),#fff 48%,color-mix(in srgb,var(--accent) 5%,#fff));
+    box-shadow:0 10px 28px rgba(44,44,42,.05);
+  }
+  .age-header-photo{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:5px solid color-mix(in srgb,var(--accent) 22%,#fff);box-shadow:0 10px 24px rgba(44,44,42,.10);}
+  .age-header-age{display:inline-flex;align-items:baseline;gap:5px;margin-bottom:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+  .age-header-age strong{font-family:'Fredoka',sans-serif;font-size:25px;line-height:1;letter-spacing:0;}
+  .age-header h3{font-size:36px;line-height:1.08;margin:0 0 16px;max-width:560px;}
+  .age-header-desc{max-width:600px;color:var(--ink-soft);font-size:15px;line-height:1.7;}
+  .age-header-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px;}
+  .age-highlight{display:grid;grid-template-columns:42px minmax(0,1fr);gap:11px;align-items:start;padding:14px 12px;border-radius:16px;background:rgba(255,255,255,.72);}
+  .age-highlight:first-child{padding-left:12px;}
+  .age-highlight-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:color-mix(in srgb,var(--accent) 14%,#fff);color:var(--accent);font-size:21px;}
+  .age-highlight h4{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;line-height:1.25;margin:2px 0 4px;}
+  .age-highlight p{color:var(--ink-soft);font-size:12.5px;line-height:1.45;}
+  .age-header-illustration{justify-self:end;width:170px;height:170px;display:grid;place-items:center;border-radius:50%;background:var(--age-illu-bg,transparent);}
+  .age-header-illustration img{width:76%;height:76%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(44,44,42,.12));}
+
+  /* ---- Cabecera v2 (fase de validacion, SOLO franja 4 años / a5) ----
+     Variante que reproduce el diseno de images/cabecera/cabecera-diseno-oficial.png:
+     foto sin aro/borde, ilustracion 3D sin fondo pastel y mas grande, bloques
+     inferiores sin caja/fondo (editorial, no "columnas"), mas aire en general.
+     Usa nombres de clase propios (sufijo -v2) para no tocar el resto de
+     franjas, que siguen usando .age-header-photo/.age-highlight/etc. */
+  .age-header.age-header-v2{grid-template-columns:minmax(200px,.85fr) minmax(0,1.55fr) minmax(160px,.75fr);gap:44px;padding:52px 48px;}
+  .age-header-photo-v2{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 16px 32px rgba(44,44,42,.14);}
+  .age-header-v2 .age-header-age{margin-bottom:14px;}
+  .age-header-v2 h3{margin:0 0 18px;}
+  .age-header-highlights-v2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px;}
+  .age-highlight-v2-head{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+  .age-highlight-v2-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:17px;flex-shrink:0;}
+  .age-highlight-v2:nth-child(1) .age-highlight-v2-icon{background:#EDEBFB;color:#7C6FE0;}
+  .age-highlight-v2:nth-child(2) .age-highlight-v2-icon{background:#FEF3D6;color:#E0A02E;}
+  .age-highlight-v2:nth-child(3) .age-highlight-v2-icon{background:#E9F5EA;color:#4E9B5D;}
+  .age-highlight-v2-head h4{font-family:'Inter',sans-serif;font-size:13.5px;font-weight:700;}
+  .age-highlight-v2 p{color:var(--ink-soft);font-size:12.5px;line-height:1.55;margin:0;}
+  .age-header-illustration-v2{justify-self:end;width:196px;height:196px;display:flex;align-items:center;justify-content:center;overflow:visible;}
+  .age-header-illustration-v2 img{width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(44,44,42,.16));}
+  .category-heading{font-family:'Fredoka',sans-serif;font-size:21px;margin:0 0 16px;}
+  .chips{
+    display:grid;
+    /* Dos columnas de ancho FIJO e identico (no 1fr): todas las tarjetas
+       miden exactamente lo mismo y quedan mas cortas que el ancho de la
+       franja. 260px da espacio a la categoria mas larga ("Coches
+       teledirigidos sencillos") en una sola linea. */
+    grid-template-columns:repeat(2, 260px);
+    grid-auto-flow:column;
+    grid-template-rows:repeat(var(--chip-rows, 5), auto);
+    column-gap:16px;row-gap:9px;
+    margin-bottom:39px;
+  }
+  /* Mini tarjeta de categoria: misma clase .chip para el <span> (sin
+     pagina todavia) y el <a class="chip chip-link"> (con pagina), asi que
+     el aspecto de caja (fondo, borde, radio, sombra, padding) es identico
+     en ambos casos; solo .chip-link anade cursor, hover y focus-visible,
+     ya que un <span> sin href no es interactivo.
+     Cada tarjeta lleva un icono minimalista (webfont Tabler Icons,
+     enlazada en el <head>) elegido por palabra clave en chipIcon() del
+     <script>; el icono toma el color de la franja (var(--accent)).
+     Sin punto decorativo y sin flecha: la tarjeta es solo icono + nombre. */
+  .chip{
+    display:flex;align-items:center;gap:9px;
+    font-size:13.5px;color:var(--ink);
+    background:#F3F4F6;border:1px solid #E9ECEF;border-radius:10px;
+    box-shadow:0 2px 4px rgba(0,0,0,.03);
+    padding:10px 15px;
+  }
+  /* Icono siempre en el mismo azul (--chip-icon), NUNCA el color de la
+     franja ni gris: uniforme en toda la landing. */
+  .chip .ti{font-size:15px;color:var(--chip-icon);flex-shrink:0;}
+  .chip-label{font-family:'Inter',sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+  .chip-link{
+    color:var(--ink);text-decoration:none;cursor:pointer;
+    transition:background-color .28s ease, border-color .28s ease, box-shadow .28s ease;
+  }
+  .chip-link:hover{
+    color:var(--accent);background:#fff;border-color:var(--accent);
+    box-shadow:0 3px 7px rgba(0,0,0,.06);
+  }
+  .chip-link:focus-visible{
+    outline:2px solid var(--accent);outline-offset:2px;
+  }
+
+  /* Tarjeta de categoria "v2": diseno ilustrado que sustituye a .chip SOLO
+     para las categorias con diseno de referencia aportado por el usuario
+     (ver CHIP_DESIGNS en el <script>). Coexiste con .chip/.chip-link (se
+     anaden como clases extra, nunca se quitan) para no romper nada que
+     dependa de ellas; el fondo pastel llega por categoria vía --chip-bg. */
+  .chip-v2{
+    background:var(--chip-bg, #F3F4F6);border:none;border-radius:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+    padding:14px 18px;gap:14px;
+  }
+  .chip-v2 .chip-icon-3d{
+    width:44px;height:44px;object-fit:contain;flex-shrink:0;
+  }
+  .chip-v2 .chip-label{
+    font-weight:700;color:var(--chip-v2-ink);font-size:14.5px;white-space:normal;
+    flex:1;
+  }
+  .chip-v2 .chip-arrow{
+    font-size:17px;color:var(--chip-v2-ink);flex-shrink:0;transition:transform .2s ease;
+  }
+  .chip-v2.chip-link:hover{
+    background:var(--chip-bg, #F3F4F6);border-color:transparent;
+    box-shadow:0 4px 12px rgba(0,0,0,.09);transform:translateY(-1px);
+  }
+  .chip-v2.chip-link:hover .chip-arrow{transform:translateX(3px);}
+
+  .tip-line{font-size:13.5px;color:var(--ink-soft);}
+  .tip-line b{color:var(--ink);}
+
+  .age-pager{display:flex;align-items:center;gap:10px;margin-top:24px;}
+  .age-pager:empty{display:none;}
+  .age-pager-link{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--ink-soft);border:1px solid var(--line);border-radius:100px;padding:8px 15px;transition:border-color .15s,color .15s;}
+  .age-pager-link:hover{border-color:var(--accent);color:var(--accent);}
+  .age-pager-link.next{margin-left:auto;}
+
+  /* Componente reutilizable "⭐ Favoritos de los papas" — mismas clases y
+     reglas que css/site.css (categorias), para que el diseno sea identico
+     en toda la web. Ligero a proposito: sin descripcion, beneficios, precio
+     ni boton "Ver en Amazon", sin subtitulo bajo el titulo y sin ningun
+     texto/consejo despues de la ultima tarjeta — solo miniatura + nombre +
+     valoracion. Cada fila enlaza a la ficha real dentro de la web
+     ("<categoria>.html#ASIN"), nunca a Amazon. Maximo 5 filas.
+     --favorites-gap fija la separacion vertical entre tarjetas: 16px
+     (cada fila es su propia tarjeta con marco, ver mas abajo). La
+     separacion titulo -> primera tarjeta es independiente del
+     --favorites-gap: 28px fijos (16px base + 12px extra), para que el
+     titulo respire mas que el ritmo entre tarjetas. La separacion por
+     encima del bloque completo (.favorites, entre la ultima categoria y
+     el titulo) es de 24px. Cada fila (.favorite-item) es una tarjeta con
+     marco: fondo blanco, borde 1px #EAEAEA, radio 8px, sombra muy suave y
+     padding 16px; termina con una flecha ">" naranja (--accent) pegada
+     a la derecha via margin-left:auto.
+     Esta landing tiene su propia hoja de estilos (no enlaza css/site.css),
+     asi que este bloque es la copia identica de ese archivo — cambiar el
+     valor en los dos sitios a la vez. */
+  .favorites{margin-top:24px;}
+  .favorites-title{font-size:15px;font-weight:600;}
+  .favorites-list{
+    --favorites-gap:16px;
+    margin-top:28px;
+    display:flex;flex-direction:column;gap:var(--favorites-gap);
+  }
+  .favorite-item{
+    display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;
+    background:#fff;border:1px solid #EAEAEA;border-radius:8px;
+    box-shadow:0 1px 2px rgba(0,0,0,0.06);padding:16px;
+  }
+  .favorite-thumb{
+    width:56px;height:56px;object-fit:contain;border-radius:6px;
+    border:1px solid var(--line);background:#fff;flex-shrink:0;
+  }
+  .favorite-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+  .favorite-name{font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .favorite-rating{font-size:12px;color:var(--ink-soft);}
+  .favorite-arrow{margin-left:auto;flex-shrink:0;color:var(--accent);font-size:20px;font-weight:700;line-height:1;}
+  .favorite-item:hover .favorite-name{color:var(--accent);}
+
+  /* Variante "Favoritos" en lista de tarjetas grandes (EXCLUSIVA de la
+     franja 0-6 meses / a0, siguiendo la maqueta de referencia en
+     images/cabecera/Cards/1.png). Rompe a todo el ancho hacia la izquierda
+     (columna insignia 120px + gap 28px = 148px) para alinear el
+     corazon+titulo bajo la linea de la edad y las tarjetas a la izquierda.
+     Imagen grande a la izquierda, nombre + fila de valoracion (estrella 3D +
+     numero, separador, icono 3D de opiniones + numero de opiniones) a la
+     derecha, y boton circular crema+dorado con flecha 3D pegado al borde
+     derecho. El enlace sigue llevando a la ficha interna del producto (toda
+     la tarjeta es el enlace, el boton es visual y no un <a> anidado). Estas
+     clases (.fav-card, .fav-grid, etc.) solo se usan dentro de
+     favGridHtml(), asi que no afectan a ninguna otra franja ni pagina. */
+  .favorites--grid{margin-left:-148px;}
+  .favorites--grid .fav-head{display:grid;grid-template-columns:120px 1fr;gap:28px;align-items:start;margin-bottom:16px;}
+  .favorites--grid .fav-head .favorites-title{margin:0;}
+  .fav-heart{width:34px;height:34px;border-radius:50%;background:#FAECE7;color:#D85A30;display:flex;align-items:center;justify-content:center;font-size:17px;margin:-6px auto 0;}
+  .fav-star-icon{width:20px;height:20px;object-fit:contain;margin:1px auto 0;display:block;}
+  .fav-sub{font-size:12px;color:var(--ink-soft);margin:3px 0 0;}
+  .fav-grid{display:flex;flex-direction:column;gap:16px;margin-left:148px;}
+  .fav-card{
+    display:flex;align-items:center;gap:16px;background:#fff;border-radius:14px;
+    text-decoration:none;color:inherit;box-shadow:0 2px 10px rgba(44,44,42,.06);
+    padding:10px 16px 10px 10px;transition:box-shadow .15s,transform .15s;
+  }
+  .fav-card:hover{box-shadow:0 5px 16px rgba(44,44,42,.10);transform:translateY(-2px);}
+  .fav-card-img{width:68px;height:68px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .fav-card-img img{max-width:100%;max-height:100%;object-fit:contain;}
+  .fav-card-body{display:flex;flex-direction:column;flex:0 0 300px;min-width:0;gap:7px;}
+  .fav-card-name{font-family:'Fredoka',sans-serif;font-size:14.5px;font-weight:600;line-height:1.3;color:#1C2B4A;}
+  .fav-card-rating{display:flex;align-items:center;gap:7px;font-size:0;}
+  .fav-card-star-icon,.fav-card-reviews-icon{width:15px;height:15px;flex-shrink:0;}
+  .fav-card-rating-num{font-size:13px;font-weight:600;color:#1C2B4A;margin-left:4px;}
+  .fav-card-sep{width:1px;height:14px;background:#E3E1DA;margin:0 1px;}
+  .fav-card-count{color:#8B8981;font-size:12px;margin-left:4px;}
+  /* Dos beneficios en linea, uno junto al otro (no apilados), centrados
+     como bloque dentro de la altura de la tarjeta para que la separacion
+     respecto al nombre del producto y al boton circular quede equilibrada
+     visualmente sin necesidad de medidas fijas (alineacion optica, no
+     matematica). */
+  .fav-card-benefits{
+    display:flex;flex-direction:row;align-items:center;justify-content:center;gap:20px;
+    flex:1;min-width:0;padding:0 22px;margin:0 2px;
+    border-left:1px solid #EFEDE6;
+  }
+  .fav-card-benefit{display:flex;align-items:center;gap:8px;}
+  .fav-card-benefit-icon{
+    width:26px;height:26px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .fav-card-benefit-icon img{width:100%;height:100%;object-fit:contain;}
+  .fav-card-benefit-icon i{font-size:14px;line-height:1;}
+  .fav-card-benefit-text{font-size:12.5px;font-weight:500;color:#1C2B4A;line-height:1.25;max-width:92px;white-space:normal;}
+  .fav-card-arrow{
+    width:34px;height:34px;border-radius:50%;flex-shrink:0;margin-left:auto;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .fav-card-arrow img{width:100%;height:100%;object-fit:contain;}
+  @media (max-width:640px){
+    .fav-card{gap:12px;padding:9px 14px 9px 9px;}
+    .fav-card-img{width:56px;height:56px;}
+    /* En movil los beneficios se ocultan, asi que el nombre ya no necesita
+       el ancho fijo de 300px que lo alinea con escritorio: vuelve a
+       flex:1 para ocupar el espacio disponible sin empujar la flecha
+       fuera de la tarjeta. */
+    .fav-card-body{flex:1 1 auto;max-width:none;}
+    .fav-card-name{font-size:13px;}
+    .fav-card-star-icon,.fav-card-reviews-icon{width:13px;height:13px;}
+    .fav-card-rating-num,.fav-card-count{font-size:11px;}
+    .fav-card-benefits{display:none;}
+    .fav-card-arrow{width:30px;height:30px;}
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:0 24px;}
+    .age-row{grid-template-columns:1fr;gap:8px;}
+    .age-tag{flex-direction:row;justify-content:flex-start;}
+    .age-line,.age-dot{display:none;}
+    .hero h1{font-size:32px;}
+    .chips{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none;row-gap:9px;}
+    .age-header{grid-template-columns:116px minmax(0,1fr);gap:22px;padding:26px;}
+    .age-header-illustration{grid-column:1 / -1;justify-self:center;width:92px;height:92px;}
+    .age-header-illustration .ti{font-size:46px;}
+    .age-header h3{font-size:28px;}
+    .age-header-highlights{grid-column:1 / -1;}
+    /* En móvil se conserva la cuadrícula actual de tres columnas. */
+    .age-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px;margin-top:44px;}
+    .age-photo{width:90px;height:90px;}
+    .age-chevron{margin-top:10px;}
+    .age-card-num{font-size:19px;}
+    .age-header{display:flex;flex-direction:column;align-items:stretch;padding:24px 20px;text-align:center;border-radius:22px;}
+    .age-header-photo{width:132px;height:132px;align-self:center;}
+    .age-header-age{justify-content:center;margin-bottom:8px;}
+    .age-header h3{font-size:27px;}
+    .age-header-desc{font-size:14px;}
+    .age-header-highlights{grid-template-columns:1fr;gap:14px;margin-top:22px;text-align:left;}
+    .age-highlight,.age-highlight:first-child{padding:0;border-left:0;}
+    .age-header-illustration{order:4;margin-top:2px;}
+    .age-header-v2{padding:24px 20px;}
+    .age-header-photo-v2{width:132px;height:132px;align-self:center;}
+    .age-header-highlights-v2{grid-template-columns:1fr;gap:16px;margin-top:22px;text-align:left;}
+    .age-header-illustration-v2{order:4;margin-top:6px;width:150px;height:150px;justify-self:center;}
+    .category-heading{font-size:19px;margin-bottom:14px;}
+    .list-intro{padding-top:10px;}
+    .navlinks{gap:12px;}
+    .navlinks a{font-size:12px;}
+    .nav-cta{padding:7px 12px;font-size:12px;}
+    .age-body{min-width:0;}
+    .favorites--grid{margin-left:0;min-width:0;}
+    .fav-grid{margin-left:0;}
+    .favorites--grid .fav-head{grid-template-columns:auto 1fr;gap:12px;}
+    .fav-heart{margin:0;}
+    .fav-star-icon{margin:0;}
+    .fav-grid{grid-template-columns:1fr 1fr;gap:10px;}
+  }
+
+  @media (min-width:641px) and (max-width:900px){
+    .age-header{grid-template-columns:132px minmax(0,1fr);gap:24px;padding:28px;}
+    .age-header-illustration{grid-column:1 / -1;justify-self:center;width:96px;height:96px;}
+    .age-header-illustration .ti{font-size:48px;}
+    .age-header-highlights{grid-column:1 / -1;}
+    .age-header-v2{grid-template-columns:132px minmax(0,1fr);gap:24px;padding:28px;}
+    .age-header-photo-v2{width:132px;height:132px;}
+    .age-header-highlights-v2{grid-template-columns:1fr;gap:16px;margin-top:22px;}
+    .age-header-illustration-v2{grid-column:1 / -1;justify-self:center;width:170px;height:170px;margin-top:6px;}
+  }
+
+  /* GENERAL TIPS */
+  .checklist{padding-top:80px;padding-bottom:80px;border-top:1px solid var(--line);}
+  .checklist h2{font-size:30px;margin-bottom:8px;}
+  .checklist>p{color:var(--ink-soft);max-width:560px;margin-bottom:32px;}
+  .clist{display:flex;flex-direction:column;gap:0;max-width:680px;}
+  .citem{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:14.5px;}
+  .citem:last-child{border-bottom:1px solid var(--line);}
+  .citem .n{font-family:'JetBrains Mono',monospace;color:var(--ink-soft);font-size:12.5px;padding-top:2px;}
+
+  .mont-promo{margin-top:56px;}
+  .mont-promo-inner{display:flex;align-items:center;gap:20px;background:#EAF3EC;border:1px solid #DCEBDF;border-radius:16px;padding:24px 28px;}
+  .mont-promo-icon{width:40px;height:40px;border-radius:50%;background:#fff;color:#6C9B5D;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+  .mont-promo-text{flex:1;min-width:0;}
+  .mont-promo-title{font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:var(--ink);margin:0;}
+  .mont-promo-desc{font-size:13.5px;color:var(--ink-soft);margin:4px 0 0;line-height:1.5;max-width:480px;}
+  .mont-promo-link{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#4E8A5C;white-space:nowrap;flex-shrink:0;transition:gap .15s;}
+  .mont-promo-link:hover{gap:9px;}
+  @media (max-width:640px){
+    .mont-promo-inner{flex-direction:column;align-items:flex-start;}
+    .mont-promo-link{margin-top:2px;}
+  }
+
+  footer{padding:44px 0 60px;}
+  footer p{font-size:13px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#top">
+      <img class="brand-icon" src="images/icons-3d/logo-gift.png" alt="" width="40" height="40">
+      <span class="brand-text">
+        <span class="brand-title">Guía de Regalos</span>
+        <span class="brand-sub">Juguetes que inspiran momentos</span>
+      </span>
+    </a>
+    <div class="nav-chips">
+      <div class="nav-chip-wrap">
+        <button class="nav-chip" type="button" aria-haspopup="true" aria-expanded="false" data-dropdown="dropdownEdades">
+          <i class="ti ti-users" aria-hidden="true"></i><span>Edades</span><i class="ti ti-chevron-down chip-caret" aria-hidden="true"></i>
+        </button>
+        <div class="nav-dropdown" id="dropdownEdades">
+          <a href="#a0">0-6 meses</a>
+          <a href="#a1">6-12 meses</a>
+          <a href="#a2">1 año</a>
+          <a href="#a3">2 años</a>
+          <a href="#a4">3 años</a>
+          <a href="#a5">4 años</a>
+          <a href="#a6">5 años</a>
+          <a href="#a7">6 años</a>
+          <a href="#a8">7 años</a>
+          <a href="#a9">8 años</a>
+          <a href="#a10">9 años</a>
+          <a href="#a11">10 años</a>
+        </div>
+      </div>
+      <button class="nav-chip" type="button">
+        <i class="ti ti-search" aria-hidden="true"></i><span>Buscar</span>
+      </button>
+      <a class="nav-chip" href="guia-montessori.html">
+        <i class="ti ti-leaf" aria-hidden="true"></i><span>Guía Montessori</span>
+      </a>
+      <div class="nav-chip-wrap">
+        <button class="nav-chip" type="button" aria-haspopup="true" aria-expanded="false" data-dropdown="dropdownFavoritos">
+          <i class="ti ti-star" aria-hidden="true"></i><span>Favoritos</span><i class="ti ti-chevron-down chip-caret" aria-hidden="true"></i>
+        </button>
+        <div class="nav-dropdown" id="dropdownFavoritos">
+          <a href="#fav-a0">Favoritos 0-6 meses</a>
+          <a href="#fav-a1">Favoritos 6-12 meses</a>
+          <a href="#fav-a2">Favoritos 1 año</a>
+          <a href="#fav-a3">Favoritos 2 años</a>
+          <a href="#fav-a4">Favoritos 3 años</a>
+          <a href="#fav-a5">Favoritos 4 años</a>
+          <a href="#fav-a6">Favoritos 5 años</a>
+          <a href="#fav-a7">Favoritos 6 años</a>
+          <a href="#fav-a8">Favoritos 7 años</a>
+          <a href="#fav-a9">Favoritos 8 años</a>
+          <a href="#fav-a10">Favoritos 9 años</a>
+          <a href="#fav-a11">Favoritos 10 años</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero-main">
+  <img class="hero-main-photo" src="images/hero/hero-main.webp" alt="Mesa con juguetes de madera: bloques de construcción, tren, oso de peluche, xilófono, microscopio y un libro infantil. Encuentra el regalo ideal para cada etapa: juguetes seleccionados con criterio, para aprender, jugar y crecer.">
+</section>
+
+<div class="ruler">
+  <div class="ruler-track" id="rulerTrack">
+    <div class="ruler-dot" id="rulerDot" style="top:0%"></div>
+  </div>
+</div>
+
+<section class="hero wrap">
+  <div class="age-cards" id="chart">
+    <a class="age-card ac-coral" href="#a0">
+      <img class="age-photo" src="images/hero/edad-0-6-meses.webp" alt="Bebé descubriendo un móvil sensorial" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">0-6</span>
+        <span class="age-card-unit">meses</span>
+      </span>
+    </a>
+    <a class="age-card ac-amber" href="#a1">
+      <img class="age-photo" src="images/hero/edad-6-12-meses.webp" alt="Bebé sentado jugando con un apilable de madera" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">6-12</span>
+        <span class="age-card-unit">meses</span>
+      </span>
+    </a>
+    <a class="age-card ac-yellow" href="#a2">
+      <img class="age-photo" src="images/hero/edad-1-3-anos.webp" alt="Niño pequeño construyendo con bloques de madera" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">1-3</span>
+        <span class="age-card-unit">años</span>
+      </span>
+    </a>
+    <a class="age-card ac-green" href="#a5">
+      <img class="age-photo" src="images/hero/edad-4-5-anos.webp" alt="Niña pintando con acuarelas" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">4-5</span>
+        <span class="age-card-unit">años</span>
+      </span>
+    </a>
+    <a class="age-card ac-green" href="#a7">
+      <img class="age-photo" src="images/hero/edad-6-7-anos.webp" alt="Niño leyendo un libro" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">6-7</span>
+        <span class="age-card-unit">años</span>
+      </span>
+    </a>
+    <a class="age-card ac-blue is-selected" href="#a9">
+      <img class="age-photo" src="images/hero/edad-8-9-anos.webp" alt="Niño montando una construcción robótica" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">8-9</span>
+        <span class="age-card-unit">años</span>
+      </span>
+    </a>
+    <a class="age-card ac-purple" href="#a11">
+      <img class="age-photo" src="images/hero/edad-10-anos.webp" alt="Niño usando un portátil" width="104" height="104">
+      <span class="age-chevron">
+        <span class="age-card-num">10</span>
+        <span class="age-card-unit">años</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="age-list wrap" id="ageList"></section>
+
+<section class="checklist wrap" id="tips">
+  <h2>Antes de comprar</h2>
+  <p>Cinco preguntas rápidas que valen para cualquier edad de la lista anterior.</p>
+  <div class="clist">
+    <div class="citem"><span class="n">01</span><span>Revisa la edad recomendada en el empaque — es una guía de seguridad, no solo de gustos.</span></div>
+    <div class="citem"><span class="n">02</span><span>Piensa en la etapa de desarrollo real del niño o niña, no solo en su edad exacta.</span></div>
+    <div class="citem"><span class="n">03</span><span>Prioriza la seguridad: materiales, piezas pequeñas y normativas de fabricación.</span></div>
+    <div class="citem"><span class="n">04</span><span>Valora la durabilidad frente a la novedad: ¿seguirá interesando en tres meses?</span></div>
+    <div class="citem"><span class="n">05</span><span>Si tienes duda, pregunta. La sorpresa importa menos que el acierto.</span></div>
+  </div>
+</section>
+
+<section class="mont-promo wrap">
+  <div class="mont-promo-inner">
+    <span class="mont-promo-icon"><i class="ti ti-leaf" aria-hidden="true"></i></span>
+    <div class="mont-promo-text">
+      <p class="mont-promo-title">¿Quieres profundizar antes de elegir?</p>
+      <p class="mont-promo-desc">Nuestra guía Montessori explica el método, cómo elegir juguetes según cada etapa y qué beneficios aporta el aprendizaje a través del juego.</p>
+    </div>
+    <a class="mont-promo-link" href="guia-montessori.html">Leer la guía Montessori <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p>Guía de regalos · Pensada para acompañar el crecimiento, no para venderlo.</p>
+</footer>
+
+<script>
+  // Desplegables de la cabecera (Edades / Favoritos): comparten el mismo
+  // comportamiento via [data-dropdown]. Se cierran al elegir una opcion,
+  // al hacer click fuera, o al abrir el otro desplegable.
+  document.querySelectorAll('[data-dropdown]').forEach(btn=>{
+    const dropdown = document.getElementById(btn.dataset.dropdown);
+    if(!dropdown) return;
+    btn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const willOpen = !dropdown.classList.contains('is-open');
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(d=>{
+        d.classList.remove('is-open');
+        document.querySelector(`[data-dropdown="${d.id}"]`)?.setAttribute('aria-expanded','false');
+      });
+      if(willOpen){ dropdown.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+  document.addEventListener('click', ()=>{
+    document.querySelectorAll('.nav-dropdown.is-open').forEach(d=>{
+      d.classList.remove('is-open');
+      document.querySelector(`[data-dropdown="${d.id}"]`)?.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // Separador de miles en formato español (punto). No usar toLocaleString:
+  // en algunos motores no agrupa numeros de 4 cifras (9058 en vez de 9.058).
+  function formatMiles(n){
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+  const bands = [
+    {id:'a0', num:'0–6', unit:'meses', color:'#FF8A65', title:'Descubriendo el mundo',
+      intro:[
+        'En los primeros seis meses el bebé descubre el mundo a través de los sentidos: mira, escucha, toca y empieza a llevarse todo a la boca. Sonríe, sigue objetos con la mirada y va ganando control sobre su cabeza y sus manos. Es una etapa de grandes cambios en muy poco tiempo, en la que cada estímulo nuevo capta toda su atención.',
+        'Los mejores regalos para esta edad son los que estimulan los sentidos sin agobiar: peluches suaves, sonajeros, gimnasios de actividades o libros de tela. También son muy bienvenidos los regalos prácticos, como ropa de primera puesta o canastillas completas. En las categorías siguientes encontrarás una selección pensada para esta primera etapa.'
+      ],
+      img:'images/cabecera/edad-0-6-meses.webp',
+      chips:['Peluches','Mordedores','Gimnasio de actividades','Juguete espiral cochecito','Regalos personalizados','Canastillas de regalo','Sonajeros','Libros de tela','Cesta organizadora','Primera puesta'],
+      chipPages:{
+        'Peluches':'peluches.html',
+        'Mordedores':'mordedores.html',
+        'Sonajeros':'sonajeros.html',
+        'Libros de tela':'libros-de-tela.html',
+        'Gimnasio de actividades':'gimnasio-de-actividades.html',
+        'Juguete espiral cochecito':'juguete-espiral-cochecito.html',
+        'Canastillas de regalo':'canastillas-de-regalo.html',
+        'Cesta organizadora':'cesta-organizadora.html',
+        'Regalos personalizados':'regalos-personalizados.html',
+        'Primera puesta':'primera-puesta.html'
+      },
+      favorites:[
+        {asin:'B07N1JP56L', name:'Nutria musical Hora de Dormir Fisher-Price', img:'images/fisher-price-nutria-hora-de-dormir-peluche-musical-con-movimiento-2.webp', rating:4.7, reviews:62590, page:'peluches.html', benefits:[
+          {icon:'ti-moon', bg:'#FDEFD1', fg:'#C98A2E', text:'Favorece el descanso'},
+          {icon:'ti-heart', bg:'#FDE2E2', fg:'#D8555A', text:'Relaja al bebé'}
+        ]},
+        {asin:'B008J1QP7Y', name:'Sonajero Oball Easy Grasp Bright Starts', img:'images/bright-starts-sonajero-oball-easy-grasp-para-bebe-en-azul-verde-apto.webp', rating:4.6, reviews:45528, page:'sonajeros.html', benefits:[
+          {icon:'ti-hand-stop', bg:'#E3F3E6', fg:'#3E9E5E', text:'Mejora el agarre'},
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Motricidad fina'}
+        ]},
+        {asin:'B0CFZX62BY', name:'Libro de tela de alto contraste URMYWO', img:'images/urmywo-bebe-juguetes-0-6-meses-negro-blanco-libro-bebe-contraste.webp', rating:4.5, reviews:9058, page:'libros-de-tela.html', benefits:[
+          {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Estimula la visión'},
+          {icon:'ti-contrast', bg:'#ECECEA', fg:'#5B5D63', text:'Contraste blanco y negro'}
+        ]},
+        {asin:'B00FBW7CNA', name:'Maracas musicales Fisher-Price', img:'images/fisher-price-maracas-musicales-juguete-y-sonajero-para-bebe-3-meses.webp', rating:4.6, reviews:21733, page:'sonajeros.html', benefits:[
+          {icon:'ti-music', bg:'#FCE7DE', fg:'#D8703A', text:'Descubre sonidos'},
+          {icon:'ti-ear', bg:'#FDF1D6', fg:'#C79A1B', text:'Estimula el oído'}
+        ]},
+        {asin:'B071HN7DYP', name:'Mordedor zanahoria Infantino', img:'images/infantino-lil-nibbles-mordedor-de-silicona-texturizada-juguete-para.webp', rating:4.6, reviews:43621, page:'mordedores.html', benefits:[
+          {img:'images/icons-3d/fav-benefit-tooth.png', text:'Alivia las encías'},
+          {icon:'ti-hand-grab', bg:'#E3F3E6', fg:'#3E9E5E', text:'Fácil de sujetar'}
+        ]}
+      ],
+      tip:'Prioriza materiales sin piezas sueltas ni bordes duros.'},
+    {id:'a1', num:'6–12', unit:'meses', color:'#FF9F5C', title:'Explorando sin parar',
+      intro:[
+        'Entre los 6 y los 12 meses el bebé gana mucha autonomía: se sienta solo, empieza a gatear y manipula objetos con cada vez más precisión. Es la etapa del gateo, los primeros dientes y las primeras palabras sueltas, en la que explora todo lo que tiene a su alcance con curiosidad.',
+        'Los juguetes que mejor funcionan ahora son los que acompañan ese movimiento: gimnasios de actividades, mordedores, bloques blandos o andadores para dar los primeros pasos. También siguen gustando los sonajeros y los libros de tela, ahora que el bebé ya los manipula con más soltura. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-6-12-meses.webp',
+      chips:['Andadores y primeros pasos','Bloques blandos','Mordedores','Gimnasio de actividades','Juguete espiral cochecito','Sonajeros','Libros de tela','Peluches'],
+      chipPages:{
+        'Andadores y primeros pasos':'andadores-y-primeros-pasos-6-12-meses.html',
+        'Bloques blandos':'bloques-blandos-6-12-meses.html',
+        'Mordedores':'mordedores-6-12-meses.html',
+        'Gimnasio de actividades':'gimnasio-de-actividades-6-12-meses.html',
+        'Juguete espiral cochecito':'juguete-espiral-cochecito-6-12-meses.html',
+        'Sonajeros':'sonajeros-6-12-meses.html',
+        'Libros de tela':'libros-de-tela-6-12-meses.html',
+        'Peluches':'peluches-6-12-meses.html'
+      },
+      favorites:[
+        {asin:'B01NCUSC7V', name:'Cubo de bloques Fisher-Price', img:'images/fisher-price-bloques-infantiles-juguete-para-bebe-6-meses-diez.webp', rating:4.7, reviews:47496, page:'bloques-blandos-6-12-meses.html', benefits:[
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la coordinación'},
+          {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Estimula la lógica'}
+        ]},
+        {asin:'B00ZRD99C0', name:'Pelota Oball de agarre fácil', img:'images/bright-starts-pelota-clasica-oball-de-facil-agarre-libre-de-bpa-rojo.webp', rating:4.8, reviews:43706, url:'https://www.amazon.es/Bright-Starts-actividad-sensorial-multicolor/dp/B00ZRD99C0', benefits:[
+          {icon:'ti-hand-stop', bg:'#E3F3E6', fg:'#3E9E5E', text:'Fácil de agarrar'},
+          {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Estimula el gateo'}
+        ]},
+        {asin:'B082G4QRKL', name:'Dinosaurio interactivo musical CubicFun', img:'images/cubicfun-dinosaurio-interactivo-juguetes-ninos-1-ano-musical-juguetes.webp', rating:4.5, reviews:10154, page:'juguetes-musicales-6-12-meses.html', benefits:[
+          {icon:'ti-ear', bg:'#FDF1D6', fg:'#C79A1B', text:'Estimula el oído'},
+          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Luces y sonidos'}
+        ]},
+        {asin:'B09P9HNXTM', name:'Cubo de bloques Fisher-Price Cervatillo', img:'images/fisher-price-cubo-primeros-bloques-diseno-cervatillo-a-la-luz-de-la.webp', rating:4.7, reviews:5787, page:'bloques-blandos-6-12-meses.html', benefits:[
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Refuerza la motricidad'},
+          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Estimula la curiosidad'}
+        ]},
+        {asin:'B0D89W954H', name:'Cangrejo bailarín musical hahaland', img:'images/hahaland-cangrejo-juguete-bebe-6-12-meses-cangrejo-bailarin-con.webp', rating:4.6, reviews:1895, page:'juguetes-musicales-6-12-meses.html', benefits:[
+          {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Estimula el movimiento'},
+          {icon:'ti-music', bg:'#FCE7DE', fg:'#D8703A', text:'Descubre la música'}
+        ]}
+      ],
+      tip:'Buscan objetos que respondan claramente a lo que hacen.'},
+    {id:'a2', num:'1', unit:'año', color:'#FFB454', title:'Primeros pasos',
+      intro:[
+        'Alrededor del año el niño empieza a caminar y su mundo se expande de golpe: ya puede desplazarse solo, señalar lo que quiere y decir sus primeras palabras. Es una etapa de mucha curiosidad motriz, en la que empuja, arrastra y explora cada rincón que antes le quedaba lejos.',
+        'Correpasillos, construcciones sencillas, vehículos de arrastre o los primeros puzzles de piezas grandes son regalos muy acertados en esta etapa. También funcionan bien los libros de cartón resistente y los juguetes de baño, que combinan diversión y aprendizaje. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-1-ano.webp',
+      chips:['Correpasillos','Construcciones','Vehículos','Instrumentos musicales','Libros','Puzzles','Pintura y creatividad','Peluches','Juegos de baño'],
+      chipPages:{
+        'Vehículos':'vehiculos-1-ano.html',
+        'Construcciones':'construcciones-1-ano.html',
+        'Correpasillos':'correpasillos-1-ano.html',
+        'Pintura y creatividad':'pintura-y-creatividad-1-ano.html',
+        'Puzzles':'puzzles-1-ano.html',
+        'Libros':'libros-1-ano.html',
+        'Peluches':'peluches-1-ano.html',
+        'Juegos de baño':'juguetes-de-bano-1-ano.html'
+      },
+      favorites:[
+        {asin:'B0083F2XCW', name:'Bolsa 60 bloques clásicos Mega Bloks', img:'images/mega-bloks-bolsa-clasica-con-60-bloques-de-construccion-juguetes.webp', rating:4.8, reviews:38993, page:'construcciones-1-ano.html', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la motricidad'}
+        ]},
+        {asin:'B0843HYXQ4', name:'Puzzle de la granja Carotina Baby Lisciani', img:'images/lisciani-carotina-baby-puzzle-la-granja-juego-educativo-para-ninos.webp', rating:4.7, reviews:12202, page:'puzzles-1-ano.html', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
+          {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Estimula la observación'}
+        ]},
+        {asin:'B0C7VP45P4', name:'Alfombra musical piano Rodzon', img:'images/rodzon-alfombra-musical-piano-bebe-1-ano-juguetes-ninos-y-ninas-con.webp', rating:4.5, reviews:4542, page:'juguetes-montessori-1-ano.html', benefits:[
+          {icon:'ti-music', bg:'#FCE7DE', fg:'#D8703A', text:'Descubre la música'},
+          {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Fomenta el movimiento'}
+        ]},
+        {asin:'B0CSFBGQJP', name:'Juego de pesca Montessori hahaland', img:'images/hahaland-juguetes-ninos-1-ano-montessori-juego-pesca-de-tela-juguetes.webp', rating:4.6, reviews:3573, page:'juguetes-montessori-1-ano.html', benefits:[
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Motricidad fina'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Estimula la concentración'}
+        ]},
+        {asin:'B0BQXF3M5W', name:'Cubo sensorial clasificador Mailesi', img:'images/mailesi-juguetes-montessori-ninos-12-18-24-meses-juguetes-bebes-en.webp', rating:4.6, reviews:2124, page:'juguetes-montessori-1-ano.html', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Enseña formas y colores'},
+          {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Estimula los sentidos'}
+        ]}
+      ],
+      tip:'El equilibrio y el movimiento son la prioridad.'},
+    {id:'a3', num:'2', unit:'años', color:'#FFC53D', title:'Pequeños exploradores',
+      intro:[
+        'A los 2 años el lenguaje avanza a pasos agigantados y el niño empieza a jugar junto a otros niños, aunque todavía no siempre con ellos. Le gusta imitar, nombrar lo que ve y repetir palabras nuevas una y otra vez. También gana precisión con las manos, lo que abre la puerta a juegos algo más complejos.',
+        'Construcciones más elaboradas, puzzles de varias piezas, manualidades sencillas o los primeros instrumentos musicales encajan muy bien en esta etapa. Los libros con rimas y los correpasillos también son un acierto seguro. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-2-anos.webp',
+      chips:['Correpasillos','Vehículos','Construcciones','Manualidades','Puzzles','Libros','Música','Juguetes de baño','Peluches'],
+      chipPages:{
+        'Correpasillos':'correpasillos-2-anos.html',
+        'Manualidades':'manualidades-2-anos.html',
+        'Juguetes de baño':'juguetes-de-bano-2-anos.html',
+        'Música':'musica-2-anos.html',
+        'Puzzles':'puzzles-2-anos.html',
+        'Vehículos':'vehiculos-2-anos.html',
+        'Construcciones':'construcciones-2-anos.html',
+        'Libros':'libros-2-anos.html',
+        'Peluches':'peluches-2-anos.html'
+      },
+      favorites:[
+        {asin:'B0083F2XDQ', name:'Bolsa 60 bloques Big Building Bag Mega Bloks', img:'images/mega-bloks-juego-de-construccion-big-building-bag-con-60-bloques-de.webp', rating:4.8, reviews:24045, page:'construcciones-2-anos.html', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Construcciones sin límites'}
+        ]},
+        {asin:'B0B24DDR4R', name:'Busy board 7 en 1 hahaland', img:'images/hahaland-busy-board-montessori-2-anos-libro-montessori-maletin.webp', rating:4.6, reviews:7870, page:'manualidades-2-anos.html', benefits:[
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Motricidad fina'},
+          {icon:'ti-award', bg:'#FEF3D9', fg:'#C79A1B', text:'Estimula la autonomía'}
+        ]},
+        {asin:'B0C7VP45P4', name:'Alfombra musical piano Rodzon', img:'images/rodzon-alfombra-musical-piano-bebe-1-ano-juguetes-ninos-y-ninas-con.webp', rating:4.5, reviews:4547, page:'musica-2-anos.html', benefits:[
+          {icon:'ti-music', bg:'#FCE7DE', fg:'#D8703A', text:'Descubre la música'},
+          {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Fomenta el movimiento'}
+        ]},
+        {asin:'B0CQ2XBTSB', name:'Maletín busy board Montessori BONNYCO', img:'images/bonnyco-busy-board-montessori-de-fieltro-maletin-de-paneles.webp', rating:4.6, reviews:3935, page:'manualidades-2-anos.html', benefits:[
+          {icon:'ti-award', bg:'#FEF3D9', fg:'#C79A1B', text:'Desarrolla la autonomía'},
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Motricidad fina'}
+        ]},
+        {asin:'B01BKSB1JO', name:'Baby Color Goula', img:'images/goula-baby-color-juego-preescolar-educativo-a-partir-de-2-anos.webp', rating:4.6, reviews:3248, page:'manualidades-2-anos.html', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Enseña colores y formas'},
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Estimula la lógica'}
+        ]}
+      ],
+      tip:'Disfrutan repetir la misma actividad muchas veces.'},
+    {id:'a4', num:'3', unit:'años', color:'#E8C651', title:'La imaginación despierta',
+      intro:[
+        'A los 3 años la imaginación despega y el juego se vuelve mucho más creativo. Los niños empiezan a inventar historias, imitan a los adultos y disfrutan compartiendo juegos con otros. También mejoran su coordinación y su autonomía, por lo que aparecen nuevos intereses y formas de jugar.',
+        'Es una etapa ideal para introducir construcciones, puzles, manualidades, bicicletas sin pedales, juegos simbólicos y primeros juegos de mesa. Elegir juguetes adaptados a este momento ayuda a estimular su desarrollo mientras se divierten.'
+      ],
+      img:'images/cabecera/edad-3-anos.webp',
+      chips:['Bicicletas y patinetes','Construcciones','Cocinitas','Disfraces','Manualidades','Juegos de mesa','Libros','Figuras y animales','Coches teledirigidos','Puzzles','Coches'],
+      chipPages:{
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-3-anos.html',
+        'Cocinitas':'cocinitas-3-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-3-anos.html',
+        'Puzzles':'puzzles-3-anos.html',
+        'Coches':'coches-3-anos.html',
+        'Juegos de mesa':'juegos-de-mesa-3-anos.html',
+        'Disfraces':'disfraces-3-anos.html',
+        'Construcciones':'construcciones-3-anos.html',
+        'Manualidades':'manualidades-3-anos.html',
+        'Figuras y animales':'figuras-y-animales-3-anos.html',
+        'Libros':'libros-3-anos.html'
+      },
+      favorites:[
+        {asin:'B07NPPMZM8', name:'Torre de Bloques 4 en 1 Nene Toys', img:'images/nene-toys-torre-de-bloques-infantil-de-madera-4-en-1-con-colores-y.webp', rating:4.7, reviews:17196, page:'juegos-de-mesa-3-anos.html', benefits:[
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Cuatro juegos en uno'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Fomenta la puntería'}
+        ]},
+        {asin:'B0D1FN6WSP', name:'Bloques Magnéticos 50 piezas COOLJOYA', img:'images/bloques-magneticos-construccion-ninos-construcciones-magneticas.webp', rating:4.6, reviews:2427, url:'https://www.amazon.es/COOLJOYA-Magneticos-Construccion-Construcciones-Construcci%C3%B3n/dp/B0D1FN6WSP', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Estimula la creatividad'},
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la lógica espacial'}
+        ]},
+        {asin:'B0D9HLLFB9', name:'Cocinita de Madera Grande Mamabrum', img:'images/mamabrum-cocinita-de-madera-infantil-grande-99-5cm-cocina-juguete-con.webp', rating:4.3, reviews:2080, url:'https://www.amazon.es/Mamabrum-infantil-accesorios-microondas-fregadero/dp/B0D9HLLFB9', benefits:[
+          {icon:'ti-chef-hat', bg:'#FCE7DE', fg:'#D8703A', text:'Fomenta el juego simbólico'},
+          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Estimula la imaginación'}
+        ]},
+        {asin:'B0C4H52VCM', name:'Bloques Magnéticos 36 piezas Coodoo', img:'images/coodoo-magneticos-de-construccion-para-ninos-de-3-y-4-bloques.webp', rating:4.8, reviews:1213, url:'https://www.amazon.es/Coodoo-Magn%C3%A9ticos-Construcci%C3%B3n-sensoriales-Montessori/dp/B0C4H52VCM', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Desarrolla la creatividad'},
+          {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la motricidad'}
+        ]},
+        {asin:'B07PC79BYN', name:'Goula Catch It!', img:'images/goula-catch-it-juego-de-mesa-preescolar-de-agilidad-visual-para-ninos.webp', rating:4.7, reviews:992, url:'https://www.amazon.es/Goula-53446-Goula-Catch-it/dp/B07PC79BYN', benefits:[
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Mejora los reflejos'},
+          {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la agilidad visual'}
+        ]}
+      ],
+      tip:'El juego simbólico —imitar la vida real— es clave.'},
+    {id:'a5', num:'4', unit:'años', color:'#C8CB5E', title:'Mil preguntas al día',
+      intro:[
+        'A los 4 años el juego simbólico se dispara: el niño inventa historias, imita a los adultos y disfruta metiéndose en la piel de otros personajes. Habla con soltura, hace muchas preguntas y empieza a jugar de forma más cooperativa con otros niños, siguiendo pequeñas normas propias.',
+        'Es una etapa ideal para disfraces, cocinitas, construcciones más elaboradas y los primeros juegos de mesa sencillos. También despierta el interés por la ciencia y por historias más largas. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-4-anos.webp',
+      chips:['Construcciones','Bicicletas y patinetes','Ciencia','Manualidades','Juegos de mesa','Disfraces','Coches','Libros','Coches teledirigidos','Cocinitas','Puzzles'],
+      chipPages:{
+        'Construcciones':'construcciones-4-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-4-anos.html',
+        'Ciencia':'ciencia-4-anos.html',
+        'Manualidades':'manualidades-4-anos.html',
+        'Juegos de mesa':'juegos-de-mesa-4-anos.html',
+        'Disfraces':'disfraces-4-anos.html',
+        'Libros':'libros-4-anos.html',
+        'Coches':'vehiculos-4-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-4-anos.html',
+        'Puzzles':'puzzles-4-anos.html',
+        'Cocinitas':'cocinitas-4-anos.html'
+      },
+      favorites:[
+        {asin:'B07NPPMZM8', name:'Torre de Bloques 4 en 1 Nene Toys', img:'images/nene-toys-torre-de-bloques-infantil-de-madera-4-en-1-con-colores-y.webp', rating:4.7, reviews:17196, url:'https://www.amazon.es/Nene-Toys-Animales-Educativo-Compartir/dp/B07NPPMZM8', benefits:[
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Cuatro juegos en uno'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Fomenta la puntería'}
+        ]},
+        {asin:'B0848KXPZ2', name:'Monster Jam Megalodon Teledirigido', img:'images/monster-jam-coche-teledirigido-megalodon-monster-truck-coche-rc.webp', rating:4.3, reviews:8913, page:'vehiculos-4-anos.html', benefits:[
+          {icon:'ti-car', bg:'#E3F3E6', fg:'#3E9E5E', text:'Control remoto real'},
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Diversión todoterreno'}
+        ]},
+        {asin:'B0BG55YRZW', name:'Cámara de Fotos Infantil ARNSSIEN', img:'images/camara-fotos-infantil-arnssien-camara-de-fotos-para-ninos-con.webp', rating:4.4, reviews:7853, url:'https://www.amazon.es/ARNSSIEN-pantalla-pulgadas-reproducci%C3%B3n-Cumplea%C3%B1os/dp/B0BG55YRZW', benefits:[
+          {icon:'ti-camera', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
+          {icon:'ti-mood-smile', bg:'#FDE2E2', fg:'#D8555A', text:'Capturan sus recuerdos'}
+        ]},
+        {asin:'B0BJ2F2HMF', name:'Dominó Patrulla Canina Spin Master', img:'images/spin-master-games-juego-de-mesa-patrulla-canina-domino-infantil-con.webp', rating:4.7, reviews:6951, page:'juegos-de-mesa-4-anos.html', benefits:[
+          {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la memoria'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B0CZCVXVZC', name:'Karaoke Infantil Dislocati', img:'images/dislocati-karaoke-infantil-2-microfonos-inalambricos-karaoke.webp', rating:4.6, reviews:2866, url:'https://www.amazon.es/Dislocati-Microfonos-Inalambricos-Unicornios-Inal%C3%A1mbrico/dp/B0CZCVXVZC', benefits:[
+          {icon:'ti-music', bg:'#FCE7DE', fg:'#D8703A', text:'Estimula el canto'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión en pareja'}
+        ]}
+      ],
+      tip:'Les encanta inventar historias con lo que ya tienen.'},
+    {id:'a6', num:'5', unit:'años', color:'#9ECB72', title:'Primeras reglas del juego',
+      intro:[
+        'A los 5 años el niño ya entiende y respeta reglas más completas, lo que transforma su forma de jugar: sigue partidas enteras, negocia con otros niños y empieza a planificar antes de actuar. Gana también en fuerza y coordinación, lo que le permite retos físicos más ambiciosos.',
+        'Los juegos de mesa con algo de estrategia, las bicicletas sin ruedines, las construcciones más técnicas o los kits de ciencia sencillos son regalos muy acertados en esta etapa. También sigue disfrutando de las cocinitas y los disfraces, ahora con juegos más elaborados. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-5-anos.webp',
+      chips:['Construcciones','Juegos de mesa','Ciencia','Manualidades','Bicicletas y patinetes','Coches','Coches teledirigidos','Libros','Cocinitas','Puzzles','Disfraces'],
+      chipPages:{
+        'Construcciones':'construcciones-5-anos.html',
+        'Juegos de mesa':'juegos-de-mesa-5-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-5-anos.html',
+        'Coches':'coches-5-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-5-anos.html',
+        'Ciencia':'ciencia-5-anos.html',
+        'Manualidades':'manualidades-5-anos.html',
+        'Libros':'libros-5-anos.html',
+        'Puzzles':'puzzles-5-anos.html',
+        'Cocinitas':'cocinitas-5-anos.html',
+        'Disfraces':'disfraces-5-anos.html'
+      },
+      favorites:[
+        {asin:'B07NPPMZM8', name:'Torre de Bloques 4 en 1 Nene Toys', img:'images/nene-toys-torre-de-bloques-infantil-de-madera-4-en-1-con-colores-y.webp', rating:4.7, reviews:17197, page:'juegos-de-mesa-5-anos.html', benefits:[
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Cuatro juegos en uno'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Fomenta la puntería'}
+        ]},
+        {asin:'B08PBK29H2', name:'Dreamon Dinosaurios de Construcción', img:'images/dreamon-dinosaurios-juguetes-para-ninos-3-4-5-6-7-anos-con-caja-de.webp', rating:4.4, reviews:10599, url:'https://www.amazon.es/Dreamon-Dinosaurios-Almacenamiento-Construccion-Dducativos/dp/B08PBK29H2', benefits:[
+          {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Construye sus dinosaurios'}
+        ]},
+        {asin:'B0744QM4PD', name:'Ludilo Grabolo Jr', img:'images/ludilo-grabolo-jr-juegos-de-mesa-4-anos-o-mas-juegos-educativos-ninos.webp', rating:4.7, reviews:1275, url:'https://www.amazon.es/L%C3%BAdilo-Grabolo-Juego-Educativo-80452/dp/B0744QM4PD', benefits:[
+          {icon:'ti-abc', bg:'#FCE9F1', fg:'#C6538C', text:'Amplía el vocabulario'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B07Q4X195G', name:'Ludilo Pillado', img:'images/ludilo-pillado-juegos-de-mesa-ninos-5-anos-o-mas-juegos-educativos.webp', rating:4.7, reviews:1172, page:'juegos-de-mesa-5-anos.html', benefits:[
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Mejora los reflejos'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B079P6LQQ4', name:'Diset Las Sílabas', img:'images/diset-las-silabas-juego-educativo-para-aprender-las-letras-y-el.webp', rating:4.6, reviews:775, url:'https://www.amazon.es/Diset-Aprendo-Juguete-educativos-68962/dp/B079P6LQQ4', benefits:[
+          {icon:'ti-abc', bg:'#FCE9F1', fg:'#C6538C', text:'Aprende a leer'},
+          {icon:'ti-book', bg:'#FEF3D9', fg:'#C79A1B', text:'Refuerza las sílabas'}
+        ]}
+      ],
+      tip:'Empiezan a tolerar perder si el juego es divertido.'},
+    {id:'a7', num:'6', unit:'años', color:'#6FC98C', title:'Grandes ideas en marcha',
+      intro:[
+        'A los 6 años el niño ya sigue instrucciones más largas y disfruta de los retos con varios pasos: montar un set de LEGO completo, programar los primeros movimientos de un robot o completar un puzzle de cien piezas. Es también la etapa en la que muchos empiezan a leer sus primeras palabras.',
+        'LEGO, robótica sencilla, kits de ciencia y juegos de mesa con estrategia son regalos que triunfan en esta edad. Los libros de lectura fácil y las bicicletas ya sin ruedines también encajan muy bien. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-6-anos.webp',
+      chips:['LEGO','Robótica','Ciencia','Bicicletas y patinetes','Juegos de mesa','Manualidades','Libros','Coches','Coches teledirigidos','Puzzles'],
+      chipPages:{
+        'LEGO':'lego-6-anos.html',
+        'Juegos de mesa':'juegos-de-mesa-6-anos.html',
+        'Manualidades':'manualidades-6-anos.html',
+        'Ciencia':'ciencia-6-anos.html',
+        'Coches':'coches-6-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-6-anos.html',
+        'Robótica':'robotica-6-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-6-anos.html',
+        'Libros':'libros-6-anos.html',
+        'Puzzles':'puzzles-6-anos.html'
+      },
+      favorites:[
+        {asin:'B07W1PC52K', name:'Heromask Idiomas: Gafas VR', img:'images/heromask-idiomas-gafas-virtuales-juegos-5-12-anos-regalo-que-motiva-a-2.webp', rating:4.4, reviews:10682, url:'https://www.amazon.es/Gafas-Virtuales-Ninos/dp/B07W1PC52K', benefits:[
+          {icon:'ti-language', bg:'#EAF1FB', fg:'#3A75DC', text:'Aprende idiomas jugando'},
+          {icon:'ti-device-gamepad-2', bg:'#EFE7FB', fg:'#7A6CD6', text:'Experiencia inmersiva'}
+        ]},
+        {asin:'B0B2SFNV57', name:'HiMont Cámara Instantánea', img:'images/himont-camara-infantil-digital-instantanea-con-papel-de-impresion-y-2.webp', rating:4.6, reviews:4610, url:'https://www.amazon.es/HiMont-infantil-instant%C3%A1nea-impresi%C3%B3n-manualidades/dp/B0B2SFNV57', benefits:[
+          {icon:'ti-camera', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
+          {icon:'ti-mood-smile', bg:'#FDE2E2', fg:'#D8555A', text:'Recuerdos al instante'}
+        ]},
+        {asin:'B011LATCVU', name:'LUDILO Palabrea', img:'images/ludilo-palabrea-juegos-de-mesa-ninos-6-anos-o-mas-juegos-educativos-6-2.webp', rating:4.6, reviews:2717, url:'https://www.amazon.es/LUDILO-Palabrea-juego-educativo-80305/dp/B011LATCVU', benefits:[
+          {icon:'ti-abc', bg:'#FCE9F1', fg:'#C6538C', text:'Amplía el vocabulario'},
+          {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita el ingenio'}
+        ]},
+        {asin:'B08483RBD5', name:'Hasbro Twister', img:'images/hasbro-gaming-twister-juegos-de-habilidad-fiestas-con-amigos-y-2.webp', rating:4.7, reviews:2167, url:'https://www.amazon.es/Hasbro-Gaming-98831B09-Gaming-Twister/dp/B08483RBD5', benefits:[
+          {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Mejora el equilibrio'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión en grupo'}
+        ]},
+        {asin:'B09QGYHC9T', name:'Hasbro Pictureka!', img:'images/hasbro-gaming-juego-pictureka-de-dibujos-de-mesa-infantil-divertido-3.webp', rating:4.7, reviews:984, url:'https://www.amazon.es/Hasbro-Gaming-Juego-Pictureka-Divertido/dp/B09QGYHC9T', benefits:[
+          {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la observación'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]}
+      ],
+      tip:'Quieren sentir que "ya saben hacerlo".'},
+    {id:'a8', num:'7', unit:'años', color:'#4FB0AE', title:'Curiosos y decididos',
+      intro:[
+        'A los 7 años aparece el gusto por competir y compararse con los demás, siempre que se plantee como algo divertido. El niño ya lee con soltura, sigue proyectos más técnicos y disfruta de juegos que requieren más de una sesión para completarse. También gana autonomía física sobre la bici o el patinete.',
+        'Los drones sencillos, los sets de LEGO más técnicos, los juegos de mesa de estrategia y los libros de aventuras son regalos muy acertados en esta etapa. Los kits de robótica y ciencia también siguen despertando mucho interés. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-7-anos.webp',
+      chips:['LEGO','Robótica','Ciencia','Manualidades','Juegos de mesa','Drones','Libros','Bicicletas y patinetes','Puzzles','Coches','Coches teledirigidos'],
+      chipPages:{
+        'LEGO':'lego-7-anos.html',
+        'Robótica':'robotica-7-anos.html',
+        'Ciencia':'ciencia-7-anos.html',
+        'Manualidades':'manualidades-7-anos.html',
+        'Juegos de mesa':'juegos-de-mesa-7-anos.html',
+        'Drones':'drones-7-anos.html',
+        'Libros':'libros-7-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-7-anos.html',
+        'Puzzles':'puzzles-7-anos.html',
+        'Coches':'coches-7-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-7-anos.html'
+      },
+      favorites:[
+        {asin:'B00F7842X6', name:'Hudora Big Wheel Scooter', img:'images/hudora-bigwheel-scooter-205-i-scooter-robusto-de-aluminio-i-scooter.webp', rating:4.6, reviews:22188, page:'bicicletas-y-patinetes-7-anos.html', benefits:[
+          {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Mejora el equilibrio'},
+          {icon:'ti-bike', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión al aire libre'}
+        ]},
+        {asin:'B0BBRYHTPS', name:'LEGO Creator Lanzadera Espacial', img:'images/lego-creator-3-en-1-lanzadera-espacial-figura-de-astronauta-o-nave-de-2.webp', rating:4.8, reviews:8205, page:'lego-7-anos.html', benefits:[
+          {icon:'ti-rocket', bg:'#EAF1FB', fg:'#3A75DC', text:'Tres modelos en uno'},
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Estimula la construcción'}
+        ]},
+        {asin:'B0DMSVXBDV', name:'TOSY Magnet Pyramid Stone', img:'images/tosy-magnet-pyramid-stone-1-cubo-se-transforma-en-mil-millones-de.webp', rating:4.4, reviews:8522, page:'ciencia-7-anos.html', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Estimula la lógica'},
+          {icon:'ti-atom', bg:'#E3F3E6', fg:'#3E9E5E', text:'Mil combinaciones posibles'}
+        ]},
+        {asin:'B01H07ASIY', name:'Ravensburger Pokémon Puzzle XXL', img:'images/ravensburger-puzzles-xxl-pokemon-puzzle-7-anos-o-mas-regalo-nino-7.webp', rating:4.8, reviews:5931, page:'puzzles-7-anos.html', benefits:[
+          {icon:'ti-clock', bg:'#ECECEA', fg:'#5B5D63', text:'Ejercita la paciencia'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Fomenta la concentración'}
+        ]},
+        {asin:'B0CP47SW3H', name:'QUNREDA Coche RC Stunt', img:'images/qunreda-coche-teledirigido-rc-stunt-car-4wd-2-4-ghz-360-volteos-luces-2.webp', rating:4.5, reviews:6080, page:'coches-teledirigidos-7-anos.html', benefits:[
+          {icon:'ti-car', bg:'#E3F3E6', fg:'#3E9E5E', text:'Acrobacias a control remoto'},
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Diversión todoterreno'}
+        ]}
+      ],
+      tip:'Disfrutan medir su propio progreso.'},
+    {id:'a9', num:'8', unit:'años', color:'#4FA0C4', title:'Exploradores del conocimiento',
+      intro:[
+        'A los 8 años el niño ya es capaz de llevar un proyecto de principio a fin: planificar, montar y disfrutar del resultado, ya sea un set de LEGO técnico, un experimento de ciencia o un puzzle de varios cientos de piezas. Le gusta entender cómo funcionan las cosas y compartir lo que sabe con otros.',
+        'La robótica más avanzada, los drones, las maquetas de coches y los juegos de mesa con estrategia profunda son regalos que triunfan en esta etapa. Los libros con sagas completas también encajan muy bien. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-8-anos.webp',
+      chips:['Robots','Ciencia','LEGO','Drones','Libros','Juegos de mesa','Manualidades','Puzzles','Bicicletas y patinetes','Coches','Coches teledirigidos'],
+      chipPages:{
+        'Juegos de mesa':'juegos-de-mesa-8-anos.html',
+        'LEGO':'lego-8-anos.html',
+        'Drones':'drones-8-anos.html',
+        'Ciencia':'ciencia-8-anos.html',
+        'Libros':'libros-8-anos.html',
+        'Manualidades':'manualidades-8-anos.html',
+        'Robots':'robotica-8-anos.html',
+        'Puzzles':'puzzles-8-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-8-anos.html',
+        'Coches':'coches-8-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-8-anos.html'
+      },
+      favorites:[
+        {asin:'B000FGECAI', name:'Learning Resources Kanoodle', img:'images/learning-resources-kanoodle-rompecabezas-3d-y-2d-juego-logico.webp', rating:4.7, reviews:34183, url:'https://www.amazon.es/dp/B000FGECAI/', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
+          {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Miles de combinaciones'}
+        ]},
+        {asin:'B07YNKKGRJ', name:'Hasbro Simon', img:'images/hasbro-gaming-simon-juguete-electronico-de-memoria-habilidad-y.webp', rating:4.6, reviews:25980, url:'https://www.amazon.es/dp/B07YNKKGRJ/', benefits:[
+          {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la memoria'},
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Mejora los reflejos'}
+        ]},
+        {asin:'B07B42X1Z3', name:'Science4you Robotics Betabot', img:'images/science4you-robotics-betabot-kit-robotica-de-125-piezas-construye-tu.webp', rating:4.5, reviews:3147, page:'robotica-8-anos.html', benefits:[
+          {icon:'ti-robot', bg:'#E7EFFC', fg:'#3A75DC', text:'Introduce la robótica'},
+          {icon:'ti-tool', bg:'#FEF3D9', fg:'#C79A1B', text:'Aprende construyendo'}
+        ]},
+        {asin:'B08KHLW7TX', name:'ThinkFun Gravity Maze', img:'images/thinkfun-gravity-maze-regalo-nino-8-anos-juegos-de-mesa-ninos-8-anos.webp', rating:4.6, reviews:2564, url:'https://www.amazon.es/dp/B08KHLW7TX/', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Un reto por partida'}
+        ]},
+        {asin:'B07QRB9NWP', name:'Game Factory Virus', img:'images/gamefactory-peligro-de-contagio-multicolor-game-factory-646239.webp', rating:4.6, reviews:1275, url:'https://www.amazon.es/dp/B07QRB9NWP/', benefits:[
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'},
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Partidas rápidas y ágiles'}
+        ]}
+      ],
+      tip:'Valoran terminar algo y poder mostrarlo.'},
+    {id:'a10', num:'9', unit:'años', color:'#5A8FE0', title:'Mentes en expansión',
+      intro:[
+        'A los 9 años los gustos del niño ya están bastante definidos: sabe qué tipo de libros, juegos o aficiones le interesan de verdad, y disfruta profundizando en ellas. Planifica sus propios proyectos, desde una construcción de LEGO hasta un puzzle grande, y busca referencias propias más allá de las instrucciones.',
+        'Los kits de robótica y ciencia más completos, los drones avanzados, los juegos de mesa de estrategia y las manualidades de diseño propio son regalos muy acertados en esta etapa. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-9-anos.webp',
+      chips:['Robótica','Ciencia','LEGO','Drones','Manualidades','Libros','Juegos de mesa','Bicicletas y patinetes','Puzzles','Coches','Coches teledirigidos'],
+      chipPages:{
+        'Juegos de mesa':'juegos-de-mesa-9-anos.html',
+        'LEGO':'lego-9-anos.html',
+        'Robótica':'robotica-9-anos.html',
+        'Drones':'drones-9-anos.html',
+        'Ciencia':'ciencia-9-anos.html',
+        'Manualidades':'manualidades-9-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-9-anos.html',
+        'Libros':'libros-9-anos.html',
+        'Puzzles':'puzzles-9-anos.html',
+        'Coches':'coches-9-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-9-anos.html'
+      },
+      favorites:[
+        {asin:'B0CMP9M725', name:'TOSY Flying Ring', img:'images/tosy-flying-ring-12-monocolor-leds-superbrillante-modo-perdido.webp', rating:4.2, reviews:17135, url:'https://www.amazon.es/dp/B0CMP9M725/', benefits:[
+          {icon:'ti-bike', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión al aire libre'},
+          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Luces llamativas'}
+        ]},
+        {asin:'B07W1PC52K', name:'Heromask Gafas Virtuales de Idiomas', img:'images/heromask-idiomas-gafas-virtuales-juegos-5-12-anos-regalo-que-motiva-a-3.webp', rating:4.4, reviews:10683, url:'https://www.amazon.es/dp/B07W1PC52K/', benefits:[
+          {icon:'ti-language', bg:'#EAF1FB', fg:'#3A75DC', text:'Aprende idiomas jugando'},
+          {icon:'ti-device-gamepad-2', bg:'#EFE7FB', fg:'#7A6CD6', text:'Experiencia inmersiva'}
+        ]},
+        {asin:'B0DMSVXBDV', name:'TOSY Magnet Pyramid Stone', img:'images/tosy-magnet-pyramid-stone-1-cubo-se-transforma-en-mil-millones-de-3.webp', rating:4.4, reviews:8522, url:'https://www.amazon.es/dp/B0DMSVXBDV/', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Estimula la lógica'},
+          {icon:'ti-atom', bg:'#E3F3E6', fg:'#3E9E5E', text:'Mil combinaciones posibles'}
+        ]},
+        {asin:'B071RHYKDL', name:'Sphero Mini Esfera Robótica', img:'images/sphero-mini-verde-esfera-robotica-controlada-por-una-aplicacion.webp', rating:4.6, reviews:4274, url:'https://www.amazon.es/dp/B071RHYKDL/', benefits:[
+          {icon:'ti-device-gamepad-2', bg:'#EFE7FB', fg:'#7A6CD6', text:'Se controla con el móvil'},
+          {icon:'ti-robot', bg:'#E7EFFC', fg:'#3A75DC', text:'Introduce la programación'}
+        ]},
+        {asin:'B07B42X1Z3', name:'Science4you Robotics Betabot', img:'images/science4you-robotics-betabot-kit-robotica-de-125-piezas-construye-tu-3.webp', rating:4.5, reviews:3146, page:'robotica-9-anos.html', benefits:[
+          {icon:'ti-robot', bg:'#E7EFFC', fg:'#3A75DC', text:'Introduce la robótica'},
+          {icon:'ti-tool', bg:'#FEF3D9', fg:'#C79A1B', text:'Aprende construyendo'}
+        ]}
+      ],
+      tip:'El interés empieza a ser muy personal.'},
+    {id:'a11', num:'10', unit:'años', color:'#6C8EF5', title:'Listos para nuevos retos',
+      intro:[
+        'A los 10 años el niño se acerca a la preadolescencia con mucha más independencia: organiza sus propios proyectos, tiene aficiones bien definidas y disfruta de juegos y actividades que puede desarrollar durante días. Le gusta profundizar en lo que le apasiona y compartirlo con su grupo de amigos.',
+        'La robótica avanzada, los drones, los sets de LEGO más técnicos, los juegos de mesa de estrategia compleja y las sagas de libros son regalos que triunfan en esta etapa. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
+      ],
+      img:'images/cabecera/edad-10-anos.webp',
+      chips:['Robótica','Ciencia','Drones','LEGO','Libros','Juegos de mesa','Manualidades','Puzzles','Bicicletas y patinetes','Coches','Coches teledirigidos'],
+      chipPages:{
+        'Robótica':'robotica-10-anos.html',
+        'Ciencia':'ciencia-10-anos.html',
+        'Drones':'drones-10-anos.html',
+        'LEGO':'lego-10-anos.html',
+        'Juegos de mesa':'juegos-de-mesa-10-anos.html',
+        'Manualidades':'manualidades-10-anos.html',
+        'Puzzles':'puzzles-10-anos.html',
+        'Libros':'libros-10-anos.html',
+        'Bicicletas y patinetes':'bicicletas-y-patinetes-10-anos.html',
+        'Coches':'coches-10-anos.html',
+        'Coches teledirigidos':'coches-teledirigidos-10-anos.html'
+      },
+      favorites:[
+        {asin:'B0B1YMNGS2', name:'TOSY Flying Disc', img:'images/tosy-flying-disc-36-leds-brillante-modos-inteligentes-iluminacion.webp', rating:4.5, reviews:10325, url:'https://www.amazon.es/dp/B0B1YMNGS2/', benefits:[
+          {icon:'ti-bike', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión al aire libre'},
+          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Luces llamativas'}
+        ]},
+        {asin:'B07X4B2TWY', name:'Ludilo Batalla de Genios', img:'images/ludilo-batalla-de-genios-original-juegos-de-mesa-ninos-6-anos-o-mas.webp', rating:4.8, reviews:2840, page:'juegos-de-mesa-10-anos.html', benefits:[
+          {icon:'ti-chess-knight', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la estrategia'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B08KHLW7TX', name:'ThinkFun Gravity Maze', img:'images/thinkfun-gravity-maze-regalo-nino-8-anos-juegos-de-mesa-ninos-8-anos-2.webp', rating:4.6, reviews:2567, url:'https://www.amazon.es/dp/B08KHLW7TX/', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
+          {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Un reto por partida'}
+        ]},
+        {asin:'B0DHSD4ZJM', name:'LEGO Fortnite Autobús de Batalla', img:'images/lego-fortnite-autobus-de-batalla-vehiculo-del-videojuego-con-9.webp', rating:4.7, reviews:2447, url:'https://www.amazon.es/dp/B0DHSD4ZJM/', benefits:[
+          {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Estimula la construcción'},
+          {icon:'ti-device-gamepad-2', bg:'#EFE7FB', fg:'#7A6CD6', text:'Inspirado en el videojuego'}
+        ]},
+        {asin:'B089MYYLLK', name:'Magic Block Game', img:'images/juegos-de-mesa-ninos-juego-de-mesa-de-secuencia-logica-juegos-de.webp', rating:4.4, reviews:1374, url:'https://www.amazon.es/dp/B089MYYLLK/', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Partidas rápidas y ágiles'}
+        ]}
+      ],
+      tip:'Mejor preguntar directamente qué les gusta.'},
+  ];
+
+  // Datos de presentación para la cabecera reutilizable de cada franja.
+  // El renderizador no conoce edades concretas: recibe todo por argumento.
+  const ageHeaderContent = {
+    a0:{description:'En estos primeros meses, cada sonido, textura y movimiento es una nueva aventura.',illustration:'images/icons-3d/illu-a0.png',highlights:[
+      {icon:'ti-hand-click',title:'Estimulación',description:'Exploran con los sentidos.'},{icon:'ti-eye',title:'Curiosidad',description:'Descubren formas, colores y sonidos.'},{icon:'ti-heart',title:'Vínculo',description:'Necesitan afecto, miradas y contacto.'}]},
+    a1:{description:'Empiezan a moverse, tocar, mirar y entender cómo funcionan las cosas.',illustration:'images/icons-3d/illu-a1.png',highlights:[
+      {icon:'ti-hand-click',title:'Motricidad',description:'Practican agarre, precisión y fuerza.'},{icon:'ti-bulb',title:'Descubrimiento',description:'Entienden causa y efecto.'},{icon:'ti-mood-smile',title:'Confianza',description:'Ganan seguridad en sí mismos.'}]},
+    a2:{description:'Los primeros pasos abren una etapa de movimiento, imitación y exploración.',illustration:'images/icons-3d/illu-a2.png',highlights:[
+      {icon:'ti-run',title:'Movimiento',description:'Se desplazan con más seguridad.'},{icon:'ti-hand-click',title:'Descubrimiento',description:'Exploran texturas, formas y materiales.'},{icon:'ti-music',title:'Imitación',description:'Repiten gestos y sonidos.'}]},
+    a3:{description:'Sienten curiosidad por todo y disfrutan haciendo las cosas por sí mismos.',illustration:'images/icons-3d/illu-a3.png',highlights:[
+      {icon:'ti-search',title:'Curiosidad',description:'Preguntan, prueban y descubren.'},{icon:'ti-hand-click',title:'Autonomía',description:'Quieren hacer las cosas solos.'},{icon:'ti-heart',title:'Lenguaje',description:'Aumentan su vocabulario.'}]},
+    a4:{description:'El juego se vuelve más creativo y social. Inventan historias y disfrutan compartiendo.',illustration:'images/icons-3d/illu-a4.png',highlights:[
+      {icon:'ti-brain',title:'Imaginación',description:'Inventan historias y crean juegos.'},{icon:'ti-users',title:'Socialización',description:'Disfrutan jugando con otros niños.'},{icon:'ti-hand-click',title:'Autonomía',description:'Cada vez hacen más cosas solos.'}]},
+    a5:{description:'Quieren entender cómo funciona todo y disfrutan aprendiendo jugando.',illustration:'images/icons-3d/pizarra-4anos-illu.png',highlights:[
+      {icon:'ti-help-circle',title:'Curiosidad',description:'Observan, preguntan y experimentan.'},{icon:'ti-bulb',title:'Creatividad',description:'Expresan ideas con dibujos y juegos.'},{icon:'ti-users',title:'Socialización',description:'Hacen amigos y juego en grupo.'}]},
+    a6:{description:'Buscan retos con sentido y la satisfacción de resolverlos. Las instrucciones se convierten en una aventura.',illustration:'images/icons-3d/illu-a6.png',highlights:[
+      {icon:'ti-puzzle',title:'Pensamiento',description:'Resuelven problemas y retos.'},{icon:'ti-target',title:'Concentración',description:'Mejoran su atención y precisión.'},{icon:'ti-mood-smile',title:'Confianza',description:'Celebran sus logros y avances.'}]},
+    a7:{description:'Desarrollan habilidades, intereses propios y una visión cada vez más amplia del mundo.',illustration:'images/icons-3d/illu-a7.png',highlights:[
+      {icon:'ti-brain',title:'Pensamiento crítico',description:'Analizan, comparan y crean soluciones.'},{icon:'ti-rocket',title:'Creatividad',description:'Desarrollan proyectos e ideas propias.'},{icon:'ti-world',title:'Independencia',description:'Ganan autonomía y responsabilidad.'}]},
+    a8:{description:'Les apasiona aprender, comprender y superar nuevos desafíos cada día.',illustration:'images/icons-3d/illu-a8.png',highlights:[
+      {icon:'ti-book',title:'Aprendizaje',description:'Disfrutan descubrir cosas nuevas.'},{icon:'ti-target',title:'Constancia',description:'Se esfuerzan por mejorar cada día.'},{icon:'ti-users',title:'Amistad',description:'Fortalecen vínculos y trabajan en equipo.'}]},
+    a9:{description:'Les gusta investigar, crear y entender cómo funciona el mundo que les rodea.',illustration:'images/icons-3d/illu-a9.png',highlights:[
+      {icon:'ti-flask',title:'Curiosidad',description:'Investigan y hacen preguntas complejas.'},{icon:'ti-pencil',title:'Creatividad',description:'Diseñan, inventan y expresan ideas.'},{icon:'ti-users',title:'Autoestima',description:'Toman decisiones y confían en sí mismos.'}]},
+    a10:{description:'Desarrollan su pensamiento crítico, su sentido del humor y su visión del mundo.',illustration:'images/icons-3d/illu-a10.png',highlights:[
+      {icon:'ti-brain',title:'Pensamiento crítico',description:'Argumentan, analizan y sacan conclusiones.'},{icon:'ti-bulb',title:'Creatividad',description:'Proponen ideas originales.'},{icon:'ti-users',title:'Colaboración',description:'Disfrutan proyectos en equipo.'}]},
+    a11:{description:'Buscan independencia, propósito y retos que les permitan crecer y superarse.',illustration:'images/icons-3d/illu-a11.png',highlights:[
+      {icon:'ti-chart-bar',title:'Autonomía',description:'Gestionan su tiempo y sus proyectos.'},{icon:'ti-target',title:'Enfoque',description:'Trabajan con objetivos y constancia.'},{icon:'ti-leaf',title:'Visión',description:'Empiezan a definir sus intereses.'}]}
+  };
+
+  // Normaliza un nombre de categoria para comparaciones tolerantes a
+  // mayusculas/acentos/espacios (usado por CHIP_DESIGNS más abajo).
+  function normalizeCatName(s){
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  // Biblioteca GLOBAL de diseno ilustrado "v2" por categoria: una misma
+  // categoria (p.ej. "Peluches") usa exactamente la misma tarjeta en TODAS
+  // las franjas de edad donde aparezca, sin importar la posicion.
+  // Estructura: { nombreNormalizado: {bg, icon} }.
+  // Toda categoria que no este aqui sigue usando el chip clasico (icono
+  // Tabler + fondo neutro) sin ningun cambio.
+  // icon: ruta a la ilustracion 3D ORIGINAL (images/icons-3d/...), nunca
+  // un emoji/SVG/icono generado — se renderiza como <img>, ver mas abajo.
+  const CHIP_DESIGNS = {
+    // -- 0-6 meses (algunas confirmadas de nuevo en la biblioteca oficial) --
+    [normalizeCatName('Peluches')]: {bg:'#FDF0EE', icon:'images/icons-3d/peluches.webp'},
+    [normalizeCatName('Mordedores')]: {bg:'#FDF2F0', icon:'images/icons-3d/mordedores.webp'},
+    [normalizeCatName('Gimnasio de actividades')]: {bg:'#F7F3FB', icon:'images/icons-3d/gimnasio-de-actividades.webp'},
+    [normalizeCatName('Juguete espiral cochecito')]: {bg:'#FDF7ED', icon:'images/icons-3d/juguete-espiral-cochecito.webp'},
+    [normalizeCatName('Regalos personalizados')]: {bg:'#F2F5FB', icon:'images/icons-3d/regalos-personalizados.webp'},
+    [normalizeCatName('Canastillas de regalo')]: {bg:'#F8F4FA', icon:'images/icons-3d/canastillas-de-regalo.webp'},
+    [normalizeCatName('Sonajeros')]: {bg:'#EFF6FD', icon:'images/icons-3d/sonajeros.webp'},
+    [normalizeCatName('Libros de tela')]: {bg:'#FEF8EB', icon:'images/icons-3d/libros-de-tela.webp'},
+    [normalizeCatName('Cesta organizadora')]: {bg:'#F3F7F2', icon:'images/icons-3d/cesta-organizadora.webp'},
+    [normalizeCatName('Primera puesta')]: {bg:'#FCF1EF', icon:'images/icons-3d/primera-puesta.webp'},
+    [normalizeCatName('Andadores y primeros pasos')]: {bg:'#F3F4F3', icon:'images/icons-3d/andadores-y-primeros-pasos.webp'},
+    [normalizeCatName('Bloques blandos')]: {bg:'#F3F2F4', icon:'images/icons-3d/bloques-blandos.webp'},
+
+    // -- biblioteca oficial (aplica en cualquier franja donde aparezca el nombre) --
+    [normalizeCatName('Correpasillos')]: {bg:'#F4F9F4', icon:'images/icons-3d/correpasillos-cutout.webp'},
+    [normalizeCatName('Vehículos')]: {bg:'#F3F4FC', icon:'images/icons-3d/vehiculos.webp'},
+    [normalizeCatName('Música')]: {bg:'#FEF5F6', icon:'images/icons-3d/musica.webp'},
+    [normalizeCatName('Juguetes de baño')]: {bg:'#F0F7FD', icon:'images/icons-3d/juguetes-de-bano-cutout.webp'},
+    [normalizeCatName('Juegos de baño')]: {bg:'#F1FAEE', icon:'images/icons-3d/juguetes-de-bano-cutout.webp'},
+    [normalizeCatName('Pintura y creatividad')]: {bg:'#FEF4EA', icon:'images/icons-3d/pintura-y-creatividad-fixed.webp'},
+    [normalizeCatName('Instrumentos musicales')]: {bg:'#F3F3F5', icon:'images/icons-3d/instrumentos-musicales.webp'},
+    [normalizeCatName('Construcciones')]: {bg:'#F5EFFD', icon:'images/icons-3d/construcciones.webp'},
+    [normalizeCatName('Juegos de mesa')]: {bg:'#EEF7EA', icon:'images/icons-3d/juegos-de-mesa.webp'},
+    [normalizeCatName('Ciencia')]: {bg:'#EAF3FD', icon:'images/icons-3d/ciencia.webp'},
+    [normalizeCatName('Manualidades')]: {bg:'#FDF5E9', icon:'images/icons-3d/manualidades-fixed.webp'},
+    [normalizeCatName('Bicicletas y patinetes')]: {bg:'#FDEFEA', icon:'images/icons-3d/bicicletas-y-patinetes.webp'},
+    [normalizeCatName('Coches')]: {bg:'#EBF4FA', icon:'images/icons-3d/coches.webp'},
+    [normalizeCatName('Coches teledirigidos')]: {bg:'#FDF7EE', icon:'images/icons-3d/coches-teledirigidos.webp'},
+    [normalizeCatName('Libros')]: {bg:'#FDECED', icon:'images/icons-3d/libros.webp'},
+    [normalizeCatName('Cocinitas')]: {bg:'#EDF6F4', icon:'images/icons-3d/cocinitas.webp'},
+    [normalizeCatName('Puzzles')]: {bg:'#F2EBF8', icon:'images/icons-3d/puzzles.webp'},
+    [normalizeCatName('Disfraces')]: {bg:'#FCF3DB', icon:'images/icons-3d/disfraces.webp'},
+    [normalizeCatName('Robótica')]: {bg:'#F6F3F9', icon:'images/icons-3d/robotica.webp'},
+    [normalizeCatName('Robots')]: {bg:'#FEF7ED', icon:'images/icons-3d/robots.webp'},
+    [normalizeCatName('Drones')]: {bg:'#F5F2FA', icon:'images/icons-3d/drones.webp'},
+    [normalizeCatName('LEGO')]: {bg:'#FDF6EF', icon:'images/icons-3d/lego.webp'},
+    [normalizeCatName('Figuras y animales')]: {bg:'#F7F2F9', icon:'images/icons-3d/figuras-y-animales.webp'},
+  };
+
+  // Icono minimalista por categoria (webfont Tabler Icons, ver <head>).
+  // Se resuelve por palabra clave sobre el nombre normalizado (sin acentos),
+  // con ti-gift como comodin para categorias nuevas sin icono propio.
+  function chipIcon(name){
+    const n = name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    if(n.includes('robot')) return 'ti-robot';
+    if(n.includes('ciencia')||n.includes('experiment')||n.includes('laborator')) return 'ti-flask';
+    if(n.includes('construc')||n.includes('lego')) return 'ti-crane';
+    if(n.includes('dron')) return 'ti-drone';
+    if(n.includes('libro')||n.includes('lectura')||n.includes('cuento')) return 'ti-book';
+    if(n.includes('juegos de mesa')) return 'ti-dice';
+    if(n.includes('puzzle')) return 'ti-puzzle';
+    if(n.includes('diseno')||n.includes('dibujo')||n.includes('pizarra')) return 'ti-pencil';
+    if(n.includes('manualidad')||n.includes('pintura')||n.includes('creativ')) return 'ti-palette';
+    if(n.includes('bici')||n.includes('patinete')||n.includes('correpasillos')||n.includes('andador')) return 'ti-bike';
+    if(n.includes('cochecito')) return 'ti-baby-carriage';
+    if(n.includes('coche')||n.includes('vehicul')||n.includes('camion')||n.includes('garaje')||n.includes('circuito')) return 'ti-car';
+    if(n.includes('music')||n.includes('instrument')) return 'ti-music';
+    if(n.includes('peluche')||n.includes('animal')||n.includes('dinosaurio')||n.includes('figura')) return 'ti-paw';
+    if(n.includes('mordedor')) return 'ti-baby-bottle';
+    if(n.includes('sonajero')) return 'ti-bell';
+    if(n.includes('gimnasio')) return 'ti-activity';
+    if(n.includes('montessori')||n.includes('bloques')) return 'ti-triangle-square-circle';
+    if(n.includes('cocinita')) return 'ti-chef-hat';
+    if(n.includes('disfraz')) return 'ti-masks-theater';
+    if(n.includes('bano')) return 'ti-bath';
+    if(n.includes('exterior')) return 'ti-sun';
+    if(n.includes('bebe')||n.includes('puesta')||n.includes('canastilla')) return 'ti-baby-carriage';
+    return 'ti-gift';
+  }
+
+  // Build age rows
+  const ageList = document.getElementById('ageList');
+
+  /**
+   * Cabecera reutilizable para cualquier franja de edad.
+   * Toda la información visual y editorial llega por argumento para mantener
+   * el componente independiente de los datos concretos de cada edad.
+   */
+  function renderAgeHeader({age, unit, title, description, heroImage, illustration, illustrationBg, highlights}){
+    const illuStyle = illustrationBg ? ` style="--age-illu-bg:${illustrationBg}"` : '';
+    return `<section class="age-header">
+      <img class="age-header-photo" src="${heroImage}" alt="Niño o niña en la etapa de ${age} ${unit}" loading="lazy">
+      <div class="age-header-content">
+        <div class="age-header-age"><strong>${age}</strong><span>${unit}</span></div>
+        <h3>${title}</h3>
+        <p class="age-header-desc">${description}</p>
+        <div class="age-header-highlights">${highlights.map(item=>`<article class="age-highlight">
+          <span class="age-highlight-icon"><i class="ti ${item.icon}" aria-hidden="true"></i></span>
+          <div><h4>${item.title}</h4><p>${item.description}</p></div>
+        </article>`).join('')}</div>
+      </div>
+      <div class="age-header-illustration" aria-hidden="true"${illuStyle}><img src="${illustration}" alt=""></div>
+    </section>`;
+  }
+
+  // Variante v2 de la cabecera (fase de validacion, SOLO franja 4 años/a5):
+  // reproduce images/cabecera/cabecera-diseno-oficial.png. Foto sin aro,
+  // ilustracion sin fondo pastel y mas grande, bloques inferiores sin caja
+  // (icono+titulo en una fila, descripcion debajo a todo el ancho). Cuando
+  // se apruebe este diseno, sustituira a renderAgeHeader() para todas las
+  // franjas; hasta entonces conviven ambas funciones sin tocarse.
+  function renderAgeHeaderV2({age, unit, title, description, heroImage, illustration, highlights}){
+    return `<section class="age-header age-header-v2">
+      <img class="age-header-photo-v2" src="${heroImage}?v=47" alt="Niño o niña en la etapa de ${age} ${unit}" loading="lazy">
+      <div class="age-header-content">
+        <div class="age-header-age"><strong>${age}</strong><span>${unit}</span></div>
+        <h3>${title}</h3>
+        <p class="age-header-desc">${description}</p>
+        <div class="age-header-highlights-v2">${highlights.map(item=>`<article class="age-highlight-v2">
+          <div class="age-highlight-v2-head"><span class="age-highlight-v2-icon"><i class="ti ${item.icon}" aria-hidden="true"></i></span><h4>${item.title}</h4></div>
+          <p>${item.description}</p>
+        </article>`).join('')}</div>
+      </div>
+      <div class="age-header-illustration-v2" aria-hidden="true"><img src="${illustration}?v=47" alt=""></div>
+    </section>`;
+  }
+
+  // Elige, para la ilustracion 3D grande de la cabecera, la MISMA
+  // ilustracion que ya usa una de las categorias de esa franja mas abajo
+  // (nunca un icono independiente): recorre los chips de la franja en su
+  // orden real y usa el primero que ya exista en CHIP_DESIGNS.
+  function pickHeaderIllustration(b){
+    for(const c of b.chips){
+      const d = CHIP_DESIGNS[normalizeCatName(c)];
+      if(d) return d;
+    }
+    return null;
+  }
+
+  function favGridHtml(b){
+    const headIcon = `<img class="fav-star-icon" src="images/icons-3d/fav-star-families.png" alt="">`;
+    const headTitle = 'Favoritos de las familias';
+    return `<div class="favorites favorites--grid" id="fav-${b.id}">
+      <div class="fav-head">
+        ${headIcon}
+        <div><h4 class="favorites-title">${headTitle}</h4><p class="fav-sub">Los juguetes mejor valorados por otras familias, sin importar la edad.</p></div>
+      </div>
+      <div class="fav-grid">${b.favorites.slice(0,5).map(p=>{
+        const isInternal = !!p.page;
+        const href = isInternal ? `${p.page}#${p.asin}` : p.url;
+        const linkAttrs = isInternal ? '' : ' target="_blank" rel="noopener"';
+        const rating = p.rating.toFixed(1).replace('.', ',');
+        const reviews = formatMiles(p.reviews);
+        const benefitsHtml = p.benefits.map(be=>{
+          const icon = be.img
+            ? `<img src="${be.img}" alt="" aria-hidden="true">`
+            : `<i class="ti ${be.icon}" style="color:${be.fg}" aria-hidden="true"></i>`;
+          const bg = be.bg ? ` style="background:${be.bg}"` : '';
+          return `<span class="fav-card-benefit"><span class="fav-card-benefit-icon"${bg}>${icon}</span><span class="fav-card-benefit-text">${be.text}</span></span>`;
+        }).join('');
+        return `<a class="fav-card" href="${href}"${linkAttrs}><span class="fav-card-img"><img src="${p.img}" alt="${p.name}" loading="lazy"></span><span class="fav-card-body"><span class="fav-card-name">${p.name}</span><span class="fav-card-rating"><img class="fav-card-star-icon" src="images/icons-3d/fav-star.png" alt="" aria-hidden="true"><span class="fav-card-rating-num">${rating}</span><span class="fav-card-sep"></span><img class="fav-card-reviews-icon" src="images/icons-3d/fav-reviews.png" alt="" aria-hidden="true"><span class="fav-card-count">(${reviews} opiniones)</span></span></span><span class="fav-card-benefits">${benefitsHtml}</span><span class="fav-card-arrow"><img src="images/icons-3d/fav-arrow.png" alt="" aria-hidden="true"></span></a>`;
+      }).join('')}</div>
+    </div>`;
+  }
+
+  bands.forEach((b,bandIndex)=>{
+    const header = ageHeaderContent[b.id];
+    const row = document.createElement('div');
+    row.className='age-row';
+    row.id=b.id;
+    row.style.setProperty('--accent', b.color);
+    row.innerHTML = `
+      <div class="age-body">
+        ${renderAgeHeaderV2({age:b.num,unit:b.unit,title:b.title,description:header.description,heroImage:b.img,illustration:header.illustration,highlights:header.highlights})}
+        <h4 class="category-heading">Explora los juguetes por categoría</h4>
+        <div class="chips" style="--chip-rows:${Math.ceil(b.chips.length/2)}">${b.chips.map(c=>{
+          const page = b.chipPages && b.chipPages[c];
+          const design = CHIP_DESIGNS[normalizeCatName(c)];
+          const inner = design
+            ? `<img class="chip-icon-3d" src="${design.icon}" alt="" width="44" height="44" loading="lazy"><span class="chip-label">${c}</span><i class="ti ti-arrow-right chip-arrow" aria-hidden="true"></i>`
+            : `<i class="ti ${chipIcon(c)}" aria-hidden="true"></i><span class="chip-label">${c}</span>`;
+          const cls = design ? 'chip chip-v2' : 'chip';
+          const style = design ? ` style="--chip-bg:${design.bg}"` : '';
+          if(page){
+            return `<a class="${cls} chip-link" href="${page}"${style}>${inner}</a>`;
+          }
+          return `<span class="${cls}"${style}>${inner}</span>`;
+        }).join('')}</div>
+        ${(b.favorites && b.favorites.length) ? favGridHtml(b) : (b.tip ? `<div class="tip-line">💡 ${b.tip}</div>` : '')}
+        <nav class="age-pager">${(() => {
+          const prevB = bands[bandIndex-1], nextB = bands[bandIndex+1];
+          const prevLink = prevB ? `<a class="age-pager-link prev" href="#${prevB.id}">← ${prevB.num} ${prevB.unit}</a>` : '';
+          const nextLink = nextB ? `<a class="age-pager-link next" href="#${nextB.id}">${nextB.num} ${nextB.unit} →</a>` : '';
+          return prevLink + nextLink;
+        })()}</nav>
+      </div>`;
+    ageList.appendChild(row);
+  });
+
+  // Ruler ticks (years 0,2,4,6,8,10)
+  const track = document.getElementById('rulerTrack');
+  [0,2,4,6,8,10].forEach(y=>{
+    const pct = (y/10)*100;
+    const tick = document.createElement('div');
+    tick.className='ruler-tick'; tick.style.top=pct+'%';
+    track.appendChild(tick);
+    const num = document.createElement('div');
+    num.className='ruler-num'; num.style.top=pct+'%'; num.textContent=y;
+    track.appendChild(num);
+  });
+
+  // Scroll-tracking dot
+  const dot = document.getElementById('rulerDot');
+  function updateDot(){
+    const viewportCenter = window.scrollY + window.innerHeight*0.4;
+    let idx = 0;
+    bands.forEach((b,i)=>{
+      const el = document.getElementById(b.id);
+      if(el && viewportCenter >= el.offsetTop) idx = i;
+    });
+    const pct = (idx/(bands.length-1))*100;
+    dot.style.top = pct+'%';
+    dot.style.background = bands[idx].color;
+  }
+  window.addEventListener('scroll', updateDot, {passive:true});
+  window.addEventListener('resize', updateDot);
+  updateDot();
+</script>
+
+</body>
+</html>

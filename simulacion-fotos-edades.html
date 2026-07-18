@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación · Navegación editorial por edades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#2C2C2A;--ink-soft:#6E6D69;--line:#EAEAEA;--paper:#FFFEFC}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+    header{background:#2C2C2A;color:#fff}.wrap{width:min(960px,calc(100% - 40px));margin:auto}
+    nav{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:Fredoka,sans-serif;font-size:22px;font-weight:600}.logo span{color:#F39A78}.back{color:#E9E7E2;text-decoration:none;font-size:14px}
+    main{padding:52px 0 72px}.eyebrow{display:inline-block;padding:7px 12px;border-radius:999px;background:#FAECE7;color:#993C1D;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}h1{font-family:Fredoka,sans-serif;font-size:38px;margin:18px 0 10px}p{color:var(--ink-soft);line-height:1.6;margin:0;max-width:660px}
+    .age-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px;align-items:start;margin-top:60px;padding:10px 4px 24px;border-bottom:1px solid var(--line)}
+    .age-card{--accent:#D85A30;display:flex;min-width:0;flex-direction:column;align-items:center;text-decoration:none;text-align:center;color:inherit;transition:transform .15s ease}.age-card:hover{transform:translateY(-3px)}
+    .age-photo{width:104px;height:104px;display:block;object-fit:cover;border-radius:50%;border:2px solid var(--accent);padding:3px;background:var(--paper);box-shadow:0 5px 16px rgba(44,44,42,.10)}
+    .age-card-num{margin-top:13px;font-family:Fredoka,sans-serif;font-weight:600;font-size:22px;line-height:1.1;color:color-mix(in srgb,var(--accent) 80%,#000)}.age-card-unit{margin-top:2px;font-size:11px;line-height:1.2;color:var(--accent)}
+    .ac-coral{--accent:#D85A30}.ac-amber{--accent:#C77E17}.ac-yellow{--accent:#C79A1B}.ac-green{--accent:#3E9E5E}.ac-blue{--accent:#3A75DC}.ac-purple{--accent:#7A6CD6}.is-selected .age-photo{border-width:3px;box-shadow:0 5px 18px rgba(58,117,220,.19)}
+    .note{margin-top:28px;font-size:14px}
+    @media(max-width:700px){.wrap{width:min(100% - 28px,960px)}nav{height:60px}.logo{font-size:18px}.back{font-size:12px}main{padding-top:34px}h1{font-size:31px}.age-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px;margin-top:42px}.age-photo{width:82px;height:82px}.age-card-num{font-size:19px;margin-top:10px}}
+  </style>
+</head>
+<body>
+  <header><nav class="wrap"><div class="logo">Guía de <span>Regalos</span></div><a class="back" href="guia-regalos-juguetes.html">← Volver a la guía</a></nav></header>
+  <main class="wrap">
+    <span class="eyebrow">Simulación sin aplicar</span>
+    <h1>Navegación por edades con fotografías</h1>
+    <p>Propuesta visual: fotografías circulares como protagonistas, texto de edad debajo y un aro fino de color. Se eliminan por completo las flechas y los fondos sólidos.</p>
+    <section class="age-cards" aria-label="Vista previa de navegación por edades">
+      <a class="age-card ac-coral" href="#a0"><img class="age-photo" src="https://images.pexels.com/photos/3661335/pexels-photo-3661335.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=260" alt="Bebé descubriendo un móvil sensorial"><span class="age-card-num">0–6</span><span class="age-card-unit">meses</span></a>
+      <a class="age-card ac-amber" href="#a1"><img class="age-photo" src="https://images.pexels.com/photos/459976/pexels-photo-459976.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=260" alt="Bebé sentado jugando con un apilable de madera"><span class="age-card-num">6–12</span><span class="age-card-unit">meses</span></a>
+      <a class="age-card ac-yellow" href="#a2"><img class="age-photo" src="https://images.pexels.com/photos/3933039/pexels-photo-3933039.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=260" alt="Niño pequeño construyendo con bloques de madera"><span class="age-card-num">1–3</span><span class="age-card-unit">años</span></a>
+      <a class="age-card ac-green" href="#a5"><img class="age-photo" src="https://images.pexels.com/photos/8467263/pexels-photo-8467263.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=260" alt="Niño jugando al aire libre"><span class="age-card-num">4–7</span><span class="age-card-unit">años</span></a>
+      <a class="age-card ac-blue is-selected" href="#a9"><img class="age-photo" src="https://images.pexels.com/photos/8294681/pexels-photo-8294681.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=260" alt="Niña realizando una actividad educativa"><span class="age-card-num">8–9</span><span class="age-card-unit">años</span></a>
+      <a class="age-card ac-purple" href="#a11"><img class="age-photo" src="https://images.pexels.com/photos/7177648/pexels-photo-7177648.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=260" alt="Niño montando un robot STEM"><span class="age-card-num">10</span><span class="age-card-unit">años</span></a>
+    </section>
+    <p class="note">Esta página es solo una simulación. No se ha modificado la navegación ni el diseño de la landing.</p>
+  </main>
+</body>
+</html>

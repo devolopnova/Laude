@@ -1,0 +1,47 @@
+<!--
+  product_card_template.html
+
+  Plantilla de referencia para una ficha de producto. No la procesa ningun
+  script todavia (el contenido se redacta y se inserta a mano siguiendo
+  este orden y estas clases) — existe para que el diseno de la ficha se
+  pueda modificar sin tocar tools/amazon_import.py, y para que una futura
+  funcion de actualizacion automatica sepa exactamente que estructura y
+  marcadores debe respetar al regenerar un bloque.
+
+  Placeholders a sustituir: {{ASIN}}, {{URL_AMAZON}}, {{IMAGEN}}, {{NOMBRE}},
+  {{DESCRIPCION}}, {{BENEFICIO_1}}, {{BENEFICIO_2}}, {{BENEFICIO_3}},
+  {{RESUMEN_FAMILIAS}}.
+
+  Los comentarios PRODUCT START / PRODUCT END y el atributo data-asin son
+  el marcador que permite localizar y sustituir un bloque completo de forma
+  automatica (por ASIN) sin depender del resto del formato del HTML.
+
+  El atributo id="{{ASIN}}" en el <article> es el enlace interno de la
+  ficha: permite que el componente "⭐ Favoritos de los papás" (y cualquier
+  otro enlace interno futuro) apunte directamente a
+  "<categoria>.html#{{ASIN}}" y el navegador haga scroll a esta ficha
+  exacta, sin depender de Amazon.
+-->
+<!-- PRODUCT START asin="{{ASIN}}" -->
+<article class="product-card" id="{{ASIN}}" data-asin="{{ASIN}}" data-url="{{URL_AMAZON}}">
+  <img class="product-card-img" src="{{IMAGEN}}" alt="{{NOMBRE}}" width="600" height="600" loading="lazy">
+  <h3 class="product-card-name">{{NOMBRE}}</h3>
+  <p class="product-card-desc">{{DESCRIPCION}}</p>
+
+  <div class="product-card-why">
+    <h4>⭐ ¿Por qué nos gusta?</h4>
+    <ul>
+      <li>✔ {{BENEFICIO_1}}</li>
+      <li>✔ {{BENEFICIO_2}}</li>
+      <li>✔ {{BENEFICIO_3}}</li>
+    </ul>
+  </div>
+
+  <div class="product-card-reviews">
+    <h4>💬 Lo que más destacan las familias</h4>
+    <p>{{RESUMEN_FAMILIAS}}</p>
+  </div>
+
+  <a class="cta" href="{{URL_AMAZON}}" target="_blank" rel="noopener">Ver en Amazon</a>
+</article>
+<!-- PRODUCT END asin="{{ASIN}}" -->
