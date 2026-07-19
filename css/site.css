@@ -77,7 +77,7 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:64
 .cat-hero-2-illu img{position:relative;width:132px;height:auto;}
 .cat-hero-2-body{margin-top:32px;color:var(--ink-soft);font-size:15.5px;line-height:1.85;max-width:640px;}
 
-.skills-card{display:flex;flex-direction:column;margin-top:0;margin-bottom:0;background:color-mix(in srgb, var(--accent) 5%, var(--card));border:1px solid var(--line);border-radius:14px;padding:28px;gap:16px;}
+.skills-card{display:flex;flex-direction:column;margin-top:36px;margin-bottom:0;background:color-mix(in srgb, var(--accent) 5%, var(--card));border:1px solid var(--line);border-radius:14px;padding:28px;gap:16px;}
 .skills-card-head{padding-bottom:0px;margin-bottom:16px;}
 .skills-card-head h2{font-size:18px;margin-bottom:10px;}
 .skills-card-head p{color:var(--ink-soft);font-size:14.5px;line-height:1.6;}

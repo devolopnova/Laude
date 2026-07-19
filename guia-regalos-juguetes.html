@@ -167,7 +167,7 @@
     border-top:1px solid rgba(28,28,30,.06);
     scroll-margin-top:110px;align-items:stretch;
   }
-  .age-list .age-row:last-child{border-bottom:1px solid rgba(28,28,30,.06);}
+  .age-list .age-row:last-child{}
   [id^="fav-"]{scroll-margin-top:110px;}
   /* Insignia de edad: circulo tintado con anillo del color de la franja
      (var(--accent), fijado por fila desde el array bands) del que baja una
@@ -477,7 +477,7 @@
   }
 
   /* GENERAL TIPS */
-  .checklist{padding-top:80px;padding-bottom:80px;border-top:1px solid var(--line);}
+  .checklist{padding-top:40px;padding-bottom:80px;}
   .checklist h2{font-size:30px;margin-bottom:8px;}
   .checklist>p{color:var(--ink-soft);max-width:560px;margin-bottom:32px;}
   .clist{display:flex;flex-direction:column;gap:0;max-width:680px;}
@@ -498,8 +498,99 @@
     .mont-promo-link{margin-top:2px;}
   }
 
-  footer{padding:44px 0 60px;}
-  footer p{font-size:13px;color:var(--ink-soft);}
+  /* FOOTER — Lauderem */
+  footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
+  .footer-top{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:44px 0;}
+  .footer-column{display:flex;flex-direction:column;}
+  .footer-brand{gap:16px;}
+  .footer-logo{background:transparent;}
+  .footer-logo img{width:230px;height:auto;display:block;max-width:100%;background:transparent;border-radius:0;}
+  .footer-tagline{font-size:11px;font-weight:600;letter-spacing:0.04em;color:#9FAF93;margin:0;}
+  .footer-desc{font-size:13px;line-height:1.6;color:#C5BFB5;margin:0;}
+
+  .footer-navigation{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start;}
+  .footer-accordion-btn{
+    width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
+    border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
+    letter-spacing:0.02em;cursor:pointer;display:flex;justify-content:space-between;
+    align-items:center;transition:border-color .2s,background .2s;
+  }
+  .footer-accordion-btn:hover{border-color:#5A7F65;background:rgba(255,255,255,.04);}
+  .footer-accordion-btn[aria-expanded="true"]{
+    background:#2D4A36;border-color:#5A7F65;
+  }
+  .footer-accordion-btn i{font-size:14px;transition:transform .2s;}
+  .footer-accordion-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+  .footer-accordion-content{padding:12px 0;display:flex;flex-direction:column;gap:8px;}
+  .footer-accordion-content a{
+    font-size:13px;color:#C5BFB5;text-decoration:none;padding:4px 0;
+    transition:color .2s;
+  }
+  .footer-accordion-content a:hover{color:#E8E6E0;}
+
+  /* Acordeones: ocultar por defecto con animación suave */
+  .footer-accordion-content{
+    flex-direction:column;gap:0;padding:0;
+    max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .3s ease,opacity .3s ease;
+    display:flex;
+  }
+
+  /* Chips layout en columna vertical */
+  .footer-chips{flex-direction:column;gap:0;}
+  .footer-chip{
+    display:flex;align-items:center;
+    padding:10px 0;font-size:13px;color:#C5BFB5;text-decoration:none;
+    border-bottom:1px solid rgba(61,90,71,.5);
+    transition:color .2s;
+  }
+  .footer-chip:last-child{border-bottom:none;}
+  .footer-chip:hover{color:#E8E6E0;}
+
+  .footer-divider{border:none;border-top:1px solid #3D5A47;margin:0;}
+
+  .footer-middle{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;padding:44px 0;text-align:left;}
+  .footer-trust{display:flex;gap:16px;}
+  .footer-trust-icon{
+    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
+    color:#9FAF93;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+  }
+  .footer-trust h4{font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;margin:0 0 4px;color:#E8E6E0;}
+  .footer-trust p{font-size:13px;color:#C5BFB5;margin:0;line-height:1.5;}
+
+  .footer-affiliate{font-size:13px;color:#C5BFB5;line-height:1.6;}
+
+  .footer-families{display:flex;gap:16px;}
+  .footer-families-icon{
+    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
+    color:#B8A27D;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+  }
+  .footer-families p{font-size:13px;color:#C5BFB5;margin:0 0 4px;line-height:1.5;}
+  .footer-families p:first-child{color:#E8E6E0;font-weight:600;}
+
+  .footer-bottom{padding:32px 0 44px;text-align:center;}
+  .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
+  .footer-links a{font-size:12px;color:#C5BFB5;text-decoration:none;transition:color .2s;}
+  .footer-links a:hover{color:#E8E6E0;}
+
+  @media (max-width:900px){
+    .footer-top{grid-template-columns:1fr;gap:32px;}
+    .footer-navigation{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:640px){
+    .footer-top{padding:32px 0;}
+    .footer-navigation{grid-template-columns:1fr;gap:12px;}
+    .footer-accordion-btn{font-size:11px;padding:10px 14px;}
+    .footer-accordion-content{padding:10px 0;gap:6px;}
+    .footer-accordion-content a{font-size:12px;}
+
+    .footer-middle{grid-template-columns:1fr;gap:32px;padding:32px 0;}
+    .footer-trust,.footer-families{flex-direction:column;gap:12px;}
+    .footer-trust-icon,.footer-families-icon{align-self:flex-start;}
+
+    .footer-bottom{padding:24px 0 32px;}
+    .footer-links{gap:16px;font-size:11px;}
+  }
 </style>
 </head>
 <body>
@@ -651,11 +742,168 @@
   </div>
 </section>
 
-<footer class="wrap">
-  <p>Guía de regalos · Pensada para acompañar el crecimiento, no para venderlo.</p>
+<footer>
+  <div class="footer-top wrap">
+    <div class="footer-column footer-brand">
+      <div class="footer-logo">
+        <img src="images/cabecera/branding/2.png" alt="Lauderem - Jugar, Aprender y Crecer" width="230" height="auto" loading="lazy" decoding="async">
+      </div>
+      <p class="footer-tagline">JUGAR · APRENDER · CRECER</p>
+      <p class="footer-desc">Te ayudamos a encontrar el regalo perfecto para cada edad, con selecciones cuidadas y recomendaciones útiles para familias.</p>
+    </div>
+
+    <div class="footer-navigation">
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-edades">
+          <span>EDADES</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-edades" hidden>
+          <a class="footer-chip" href="#a0">0–6 meses</a>
+          <a class="footer-chip" href="#a1">6–12 meses</a>
+          <a class="footer-chip" href="#a2">1 año</a>
+          <a class="footer-chip" href="#a3">2 años</a>
+          <a class="footer-chip" href="#a4">3 años</a>
+          <a class="footer-chip" href="#a5">4 años</a>
+          <a class="footer-chip" href="#a6">5 años</a>
+          <a class="footer-chip" href="#a7">6 años</a>
+          <a class="footer-chip" href="#a8">7 años</a>
+          <a class="footer-chip" href="#a9">8 años</a>
+          <a class="footer-chip" href="#a10">9 años</a>
+          <a class="footer-chip" href="#a11">10 años</a>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-categorias">
+          <span>CATEGORÍAS</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-categorias" hidden>
+          <a class="footer-chip" href="peluches.html">Peluches</a>
+          <a class="footer-chip" href="mordedores.html">Mordedores</a>
+          <a class="footer-chip" href="gimnasio-de-actividades.html">Gimnasio de actividades</a>
+          <a class="footer-chip" href="sonajeros.html">Sonajeros</a>
+          <a class="footer-chip" href="libros-de-tela.html">Libros de tela</a>
+          <a class="footer-chip" href="andadores-y-primeros-pasos.html">Andadores y primeros pasos</a>
+          <a class="footer-chip" href="construcciones.html">Construcciones</a>
+          <a class="footer-chip" href="juegos-de-mesa.html">Juegos de mesa</a>
+          <a class="footer-chip" href="lego.html">LEGO</a>
+          <a class="footer-chip" href="robotica.html">Robótica</a>
+          <a class="footer-chip" href="ciencia.html">Ciencia</a>
+          <a class="footer-chip" href="libros.html">Libros</a>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-guias">
+          <span>GUÍAS</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-guias" hidden>
+          <a class="footer-chip" href="guia-montessori.html">Guía Montessori</a>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-informacion">
+          <span>INFORMACIÓN</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-informacion" hidden>
+          <a class="footer-chip" href="#sobre-nosotros">Sobre nosotros</a>
+          <a class="footer-chip" href="#contacto">Contacto</a>
+          <a class="footer-chip" href="#privacidad">Política de privacidad</a>
+          <a class="footer-chip" href="#cookies">Cookies</a>
+          <a class="footer-chip" href="#legal">Aviso legal</a>
+          <a class="footer-chip" href="#afiliados">Afiliados Amazon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-middle wrap">
+    <div class="footer-trust">
+      <span class="footer-trust-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></span>
+      <div>
+        <h4>Compra con confianza</h4>
+        <p>Recomendamos productos de calidad a través de Amazon.</p>
+      </div>
+    </div>
+
+    <div class="footer-affiliate">
+      <p>Como afiliados de Amazon podemos recibir una comisión por las compras realizadas a través de nuestros enlaces, sin coste adicional para el usuario.</p>
+    </div>
+
+    <div class="footer-families">
+      <span class="footer-families-icon"><i class="ti ti-heart" aria-hidden="true"></i></span>
+      <div>
+        <p><strong>Hecho pensando en las familias.</strong></p>
+        <p>© 2026 Lauderem · Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom wrap">
+    <nav class="footer-links">
+      <a href="#sobre-nosotros">Sobre nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#privacidad">Política de privacidad</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#legal">Aviso legal</a>
+      <a href="#afiliados">Afiliados Amazon</a>
+    </nav>
+  </div>
 </footer>
 
 <script>
+  // Acordeones del footer: solo un acordeón abierto a la vez.
+  document.querySelectorAll('.footer-accordion-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const isOpen = btn.getAttribute('aria-expanded')==='true';
+      const content = document.getElementById(btn.getAttribute('aria-controls'));
+
+      // Cerrar todos los demás
+      document.querySelectorAll('.footer-accordion-btn').forEach(b=>{
+        if(b!==btn){
+          b.setAttribute('aria-expanded','false');
+          const c = document.getElementById(b.getAttribute('aria-controls'));
+          if(c){
+            c.setAttribute('hidden','');
+            c.style.maxHeight='0px';
+            c.style.opacity='0';
+          }
+        }
+      });
+
+      // Toggle el actual
+      if(isOpen){
+        // Cerrar
+        btn.setAttribute('aria-expanded','false');
+        if(content){
+          content.setAttribute('hidden','');
+          content.style.maxHeight='0px';
+          content.style.opacity='0';
+        }
+      } else {
+        // Abrir
+        btn.setAttribute('aria-expanded','true');
+        if(content){
+          content.removeAttribute('hidden');
+          // Usar setTimeout para que la transición se aplique
+          setTimeout(()=>{
+            content.style.maxHeight=(content.scrollHeight+16)+'px';
+            content.style.opacity='1';
+          },0);
+        }
+      }
+    });
+  });
+
   // Desplegables de la cabecera (Edades / Favoritos): comparten el mismo
   // comportamiento via [data-dropdown]. Se cierran al elegir una opcion,
   // al hacer click fuera, o al abrir el otro desplegable.

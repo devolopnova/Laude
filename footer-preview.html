@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview - Footer Lauderem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+<style>
+  :root{
+    --bg:#FAFAF8;
+    --ink:#1C1C1E;
+    --ink-soft:#6B6B70;
+    --line:#E4E2DC;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;}
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+
+  /* CTA */
+  .cta-find-gift{
+    display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;
+    padding:44px 0;margin:64px 0 0;border-top:1px solid var(--line);
+  }
+  .cta-find-gift-content{display:flex;flex-direction:column;gap:20px;}
+  .cta-find-gift-icon{
+    width:60px;height:60px;border-radius:50%;background:#D4E8D1;color:#4E8A5C;
+    display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;
+  }
+  .cta-find-gift h2{font-size:28px;line-height:1.2;}
+  .cta-find-gift p{color:var(--ink-soft);font-size:14px;line-height:1.5;}
+  .cta-find-gift-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#2C3C2E;color:#fff;padding:12px 24px;border-radius:999px;
+    font-weight:600;font-size:14px;width:fit-content;
+    transition:background .2s,transform .15s;
+  }
+  .cta-find-gift-btn:hover{background:#1F2820;transform:translateY(-2px);}
+  .cta-find-gift-image{
+    background:linear-gradient(135deg,#F5E6D3 0%,#F9EFE6 100%);
+    border-radius:16px;height:280px;position:relative;
+  }
+  @media (max-width:900px){
+    .cta-find-gift{grid-template-columns:1fr;gap:24px;}
+  }
+  @media (max-width:640px){
+    .cta-find-gift{padding:32px 0;margin:48px 0 0;}
+    .cta-find-gift h2{font-size:22px;}
+    .cta-find-gift p{font-size:13px;}
+    .cta-find-gift-image{display:none;}
+  }
+
+  /* FOOTER */
+  footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
+  .footer-top{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:44px 0;}
+  .footer-column{display:flex;flex-direction:column;}
+  .footer-brand{gap:16px;}
+  .footer-logo svg{width:120px;height:auto;display:block;}
+  .footer-tagline{font-size:11px;font-weight:600;letter-spacing:0.04em;color:#9FAF93;margin:0;}
+  .footer-desc{font-size:13px;line-height:1.6;color:#C5BFB5;margin:0;}
+
+  .footer-navigation{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start;}
+  .footer-accordion-btn{
+    width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
+    border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
+    letter-spacing:0.02em;cursor:pointer;display:flex;justify-content:space-between;
+    align-items:center;transition:border-color .2s,background .2s;
+  }
+  .footer-accordion-btn:hover{border-color:#5A7F65;background:rgba(255,255,255,.04);}
+  .footer-accordion-btn[aria-expanded="true"]{
+    background:#2D4A36;border-color:#5A7F65;
+  }
+  .footer-accordion-btn i{font-size:14px;transition:transform .2s;}
+  .footer-accordion-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+  .footer-accordion-content{
+    flex-direction:column;gap:0;padding:0;
+    max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .3s ease,opacity .3s ease;
+    display:flex;
+  }
+
+  /* Chips layout en columna vertical */
+  .footer-chips{flex-direction:column;gap:0;}
+  .footer-chip{
+    display:flex;align-items:center;
+    padding:10px 0;font-size:13px;color:#C5BFB5;text-decoration:none;
+    border-bottom:1px solid rgba(61,90,71,.5);
+    transition:color .2s;
+  }
+  .footer-chip:last-child{border-bottom:none;}
+  .footer-chip:hover{color:#E8E6E0;}
+
+  .footer-divider{border:none;border-top:1px solid #3D5A47;margin:0;}
+
+  .footer-middle{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;padding:44px 0;text-align:left;}
+  .footer-trust{display:flex;gap:16px;}
+  .footer-trust-icon{
+    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
+    color:#9FAF93;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+  }
+  .footer-trust h4{font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;margin:0 0 4px;color:#E8E6E0;}
+  .footer-trust p{font-size:13px;color:#C5BFB5;margin:0;line-height:1.5;}
+
+  .footer-affiliate{font-size:13px;color:#C5BFB5;line-height:1.6;}
+
+  .footer-families{display:flex;gap:16px;}
+  .footer-families-icon{
+    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
+    color:#B8A27D;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+  }
+  .footer-families p{font-size:13px;color:#C5BFB5;margin:0 0 4px;line-height:1.5;}
+  .footer-families p:first-child{color:#E8E6E0;font-weight:600;}
+
+  .footer-bottom{padding:32px 0 44px;text-align:center;}
+  .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
+  .footer-links a{font-size:12px;color:#C5BFB5;text-decoration:none;transition:color .2s;}
+  .footer-links a:hover{color:#E8E6E0;}
+
+  @media (max-width:900px){
+    .footer-top{grid-template-columns:1fr;gap:32px;}
+    .footer-navigation{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:640px){
+    .footer-top{padding:32px 0;}
+    .footer-navigation{grid-template-columns:1fr;gap:12px;}
+    .footer-accordion-btn{font-size:11px;padding:10px 14px;}
+    .footer-accordion-content{padding:10px 0;gap:6px;}
+    .footer-accordion-content a{font-size:12px;}
+
+    .footer-middle{grid-template-columns:1fr;gap:32px;padding:32px 0;}
+    .footer-trust,.footer-families{flex-direction:column;gap:12px;}
+    .footer-trust-icon,.footer-families-icon{align-self:flex-start;}
+
+    .footer-bottom{padding:24px 0 32px;}
+    .footer-links{gap:16px;font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<section class="cta-find-gift wrap">
+  <div class="cta-find-gift-content">
+    <span class="cta-find-gift-icon"><i class="ti ti-gift" aria-hidden="true"></i></span>
+    <div>
+      <h2>¿Todavía no has encontrado el regalo perfecto?</h2>
+      <p>Explora nuestras recomendaciones por edad y descubre juguetes que realmente ayudan a aprender jugando.</p>
+    </div>
+    <a class="cta-find-gift-btn" href="#chart">Explorar por edades <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <div class="cta-find-gift-image" aria-hidden="true"></div>
+</section>
+
+<footer>
+  <div class="footer-top wrap">
+    <div class="footer-column footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 180 80" width="120" height="60" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <circle cx="30" cy="35" r="22" fill="none" stroke="#E8A87C" stroke-width="2"/>
+            <circle cx="18" cy="28" r="6" fill="#E8A87C"/>
+            <circle cx="25" cy="18" r="7" fill="#D8956F"/>
+            <circle cx="38" cy="20" r="6" fill="#E8A87C"/>
+            <circle cx="45" cy="28" r="7" fill="#D8956F"/>
+            <circle cx="42" cy="40" r="6" fill="#E8A87C"/>
+            <circle cx="20" cy="45" r="6" fill="#D8956F"/>
+            <rect x="27" y="52" width="6" height="12" fill="#8B7355"/>
+          </g>
+          <text x="70" y="48" font-family="'Fredoka', sans-serif" font-size="32" font-weight="700" fill="#E8E6E0" letter-spacing="-0.01em">Lauderem</text>
+        </svg>
+      </div>
+      <p class="footer-tagline">JUGAR · APRENDER · CRECER</p>
+      <p class="footer-desc">Te ayudamos a encontrar el regalo perfecto para cada edad, con selecciones cuidadas y recomendaciones útiles para familias.</p>
+    </div>
+
+    <div class="footer-navigation">
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-edades">
+          <span>EDADES</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-edades" hidden>
+          <a class="footer-chip" href="#a0">0–6 meses</a>
+          <a class="footer-chip" href="#a1">6–12 meses</a>
+          <a class="footer-chip" href="#a2">1 año</a>
+          <a class="footer-chip" href="#a3">2 años</a>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-categorias">
+          <span>CATEGORÍAS</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-categorias" hidden>
+          <a class="footer-chip" href="peluches.html">Peluches</a>
+          <a class="footer-chip" href="mordedores.html">Mordedores</a>
+          <a class="footer-chip" href="construcciones.html">Construcciones</a>
+          <a class="footer-chip" href="juegos-de-mesa.html">Juegos de mesa</a>
+          <a class="footer-chip" href="lego.html">LEGO</a>
+          <a class="footer-chip" href="robotica.html">Robótica</a>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-guias">
+          <span>GUÍAS</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-guias" hidden>
+          <a class="footer-chip" href="guia-montessori.html">Guía Montessori</a>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-informacion">
+          <span>INFORMACIÓN</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="footer-accordion-content footer-chips" id="footer-informacion" hidden>
+          <a class="footer-chip" href="#sobre-nosotros">Sobre nosotros</a>
+          <a class="footer-chip" href="#contacto">Contacto</a>
+          <a class="footer-chip" href="#privacidad">Política de privacidad</a>
+          <a class="footer-chip" href="#cookies">Cookies</a>
+          <a class="footer-chip" href="#legal">Aviso legal</a>
+          <a class="footer-chip" href="#afiliados">Afiliados Amazon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-middle wrap">
+    <div class="footer-trust">
+      <span class="footer-trust-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></span>
+      <div>
+        <h4>Compra con confianza</h4>
+        <p>Recomendamos productos de calidad a través de Amazon.</p>
+      </div>
+    </div>
+
+    <div class="footer-affiliate">
+      <p>Como afiliados de Amazon podemos recibir una comisión por las compras realizadas a través de nuestros enlaces, sin coste adicional para el usuario.</p>
+    </div>
+
+    <div class="footer-families">
+      <span class="footer-families-icon"><i class="ti ti-heart" aria-hidden="true"></i></span>
+      <div>
+        <p><strong>Hecho pensando en las familias.</strong></p>
+        <p>© 2026 Lauderem · Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom wrap">
+    <nav class="footer-links">
+      <a href="#sobre-nosotros">Sobre nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#privacidad">Política de privacidad</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#legal">Aviso legal</a>
+      <a href="#afiliados">Afiliados Amazon</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.footer-accordion-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const isOpen = btn.getAttribute('aria-expanded')==='true';
+      document.querySelectorAll('.footer-accordion-btn').forEach(b=>{
+        const content = document.getElementById(b.getAttribute('aria-controls'));
+        if(b===btn && !isOpen){
+          b.setAttribute('aria-expanded','true');
+          content?.removeAttribute('hidden');
+        } else {
+          b.setAttribute('aria-expanded','false');
+          content?.setAttribute('hidden','');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
