@@ -984,6 +984,9 @@
       ],
       img:'images/cabecera/edad-6-anos.webp',
       chips:['LEGO','Robótica','Ciencia','Bicicletas y patinetes','Juegos de mesa','Manualidades','Libros','Coches','Coches teledirigidos','Puzzles'],
+      chipDesigns:{
+        'Robótica':{bg:'#F6F3F9', icon:'images/icons-3d/robotica-6-anos.png'}
+      },
       chipPages:{
         'LEGO':'lego-6-anos.html',
         'Juegos de mesa':'juegos-de-mesa-6-anos.html',
@@ -1068,7 +1071,7 @@
         'La robótica más avanzada, los drones, las maquetas de coches y los juegos de mesa con estrategia profunda son regalos que triunfan en esta etapa. Los libros con sagas completas también encajan muy bien. En las categorías siguientes encontrarás regalos recomendados para esta edad.'
       ],
       img:'images/cabecera/edad-8-anos.webp',
-      chips:['Robots','Ciencia','LEGO','Drones','Libros','Juegos de mesa','Manualidades','Puzzles','Bicicletas y patinetes','Coches','Coches teledirigidos'],
+      chips:['Robótica','Ciencia','LEGO','Drones','Libros','Juegos de mesa','Manualidades','Puzzles','Bicicletas y patinetes','Coches','Coches teledirigidos'],
       chipPages:{
         'Juegos de mesa':'juegos-de-mesa-8-anos.html',
         'LEGO':'lego-8-anos.html',
@@ -1076,7 +1079,7 @@
         'Ciencia':'ciencia-8-anos.html',
         'Libros':'libros-8-anos.html',
         'Manualidades':'manualidades-8-anos.html',
-        'Robots':'robotica-8-anos.html',
+        'Robótica':'robotica-8-anos.html',
         'Puzzles':'puzzles-8-anos.html',
         'Bicicletas y patinetes':'bicicletas-y-patinetes-8-anos.html',
         'Coches':'coches-8-anos.html',
@@ -1238,43 +1241,43 @@
   // un emoji/SVG/icono generado — se renderiza como <img>, ver mas abajo.
   const CHIP_DESIGNS = {
     // -- 0-6 meses (algunas confirmadas de nuevo en la biblioteca oficial) --
-    [normalizeCatName('Peluches')]: {bg:'#FDF0EE', icon:'images/icons-3d/peluches.webp'},
-    [normalizeCatName('Mordedores')]: {bg:'#FDF2F0', icon:'images/icons-3d/mordedores.webp'},
-    [normalizeCatName('Gimnasio de actividades')]: {bg:'#F7F3FB', icon:'images/icons-3d/gimnasio-de-actividades.webp'},
-    [normalizeCatName('Juguete espiral cochecito')]: {bg:'#FDF7ED', icon:'images/icons-3d/juguete-espiral-cochecito.webp'},
-    [normalizeCatName('Regalos personalizados')]: {bg:'#F2F5FB', icon:'images/icons-3d/regalos-personalizados.webp'},
-    [normalizeCatName('Canastillas de regalo')]: {bg:'#F8F4FA', icon:'images/icons-3d/canastillas-de-regalo.webp'},
-    [normalizeCatName('Sonajeros')]: {bg:'#EFF6FD', icon:'images/icons-3d/sonajeros.webp'},
-    [normalizeCatName('Libros de tela')]: {bg:'#FEF8EB', icon:'images/icons-3d/libros-de-tela.webp'},
-    [normalizeCatName('Cesta organizadora')]: {bg:'#F3F7F2', icon:'images/icons-3d/cesta-organizadora.webp'},
-    [normalizeCatName('Primera puesta')]: {bg:'#FCF1EF', icon:'images/icons-3d/primera-puesta.webp'},
-    [normalizeCatName('Andadores y primeros pasos')]: {bg:'#F3F4F3', icon:'images/icons-3d/andadores-y-primeros-pasos.webp'},
-    [normalizeCatName('Bloques blandos')]: {bg:'#F3F2F4', icon:'images/icons-3d/bloques-blandos.webp'},
+    [normalizeCatName('Peluches')]: {bg:'#FDF0EE', icon:'images/icons-3d/peluches-cutout.webp'},
+    [normalizeCatName('Mordedores')]: {bg:'#FDF2F0', icon:'images/icons-3d/mordedores-cutout.webp'},
+    [normalizeCatName('Gimnasio de actividades')]: {bg:'#F7F3FB', icon:'images/icons-3d/gimnasio-de-actividades-cutout.webp'},
+    [normalizeCatName('Juguete espiral cochecito')]: {bg:'#FDF7ED', icon:'images/icons-3d/juguete-espiral-cochecito-cutout.webp'},
+    [normalizeCatName('Regalos personalizados')]: {bg:'#F2F5FB', icon:'images/icons-3d/regalos-personalizados-cutout.webp'},
+    [normalizeCatName('Canastillas de regalo')]: {bg:'#F8F4FA', icon:'images/icons-3d/canastillas-de-regalo-cutout.webp'},
+    [normalizeCatName('Sonajeros')]: {bg:'#EFF6FD', icon:'images/icons-3d/sonajeros-cutout.webp'},
+    [normalizeCatName('Libros de tela')]: {bg:'#FEF8EB', icon:'images/icons-3d/libros-de-tela-cutout.webp'},
+    [normalizeCatName('Cesta organizadora')]: {bg:'#F3F7F2', icon:'images/icons-3d/cesta-organizadora-cutout.webp'},
+    [normalizeCatName('Primera puesta')]: {bg:'#FCF1EF', icon:'images/icons-3d/primera-puesta-cutout.webp'},
+    [normalizeCatName('Andadores y primeros pasos')]: {bg:'#F3F4F3', icon:'images/icons-3d/andadores-y-primeros-pasos-cutout.webp'},
+    [normalizeCatName('Bloques blandos')]: {bg:'#F3F2F4', icon:'images/icons-3d/bloques-blandos-cutout.webp'},
 
     // -- biblioteca oficial (aplica en cualquier franja donde aparezca el nombre) --
     [normalizeCatName('Correpasillos')]: {bg:'#F4F9F4', icon:'images/icons-3d/correpasillos-cutout.webp'},
-    [normalizeCatName('Vehículos')]: {bg:'#F3F4FC', icon:'images/icons-3d/vehiculos.webp'},
-    [normalizeCatName('Música')]: {bg:'#FEF5F6', icon:'images/icons-3d/musica.webp'},
+    [normalizeCatName('Vehículos')]: {bg:'#F3F4FC', icon:'images/icons-3d/vehiculos-cutout.webp'},
+    [normalizeCatName('Música')]: {bg:'#FEF5F6', icon:'images/icons-3d/musica-cutout.webp'},
     [normalizeCatName('Juguetes de baño')]: {bg:'#F0F7FD', icon:'images/icons-3d/juguetes-de-bano-cutout.webp'},
     [normalizeCatName('Juegos de baño')]: {bg:'#F1FAEE', icon:'images/icons-3d/juguetes-de-bano-cutout.webp'},
-    [normalizeCatName('Pintura y creatividad')]: {bg:'#FEF4EA', icon:'images/icons-3d/pintura-y-creatividad-fixed.webp'},
-    [normalizeCatName('Instrumentos musicales')]: {bg:'#F3F3F5', icon:'images/icons-3d/instrumentos-musicales.webp'},
-    [normalizeCatName('Construcciones')]: {bg:'#F5EFFD', icon:'images/icons-3d/construcciones.webp'},
-    [normalizeCatName('Juegos de mesa')]: {bg:'#EEF7EA', icon:'images/icons-3d/juegos-de-mesa.webp'},
-    [normalizeCatName('Ciencia')]: {bg:'#EAF3FD', icon:'images/icons-3d/ciencia.webp'},
+    [normalizeCatName('Pintura y creatividad')]: {bg:'#FEF4EA', icon:'images/icons-3d/manualidades.webp'},
+    [normalizeCatName('Instrumentos musicales')]: {bg:'#F3F3F5', icon:'images/icons-3d/instrumentos-musicales-cutout.webp'},
+    [normalizeCatName('Construcciones')]: {bg:'#F5EFFD', icon:'images/icons-3d/construcciones-cutout.webp'},
+    [normalizeCatName('Juegos de mesa')]: {bg:'#EEF7EA', icon:'images/icons-3d/juegos-de-mesa-fixed.webp'},
+    [normalizeCatName('Ciencia')]: {bg:'#EAF3FD', icon:'images/icons-3d/ciencia-cutout.webp'},
     [normalizeCatName('Manualidades')]: {bg:'#FDF5E9', icon:'images/icons-3d/manualidades-fixed.webp'},
-    [normalizeCatName('Bicicletas y patinetes')]: {bg:'#FDEFEA', icon:'images/icons-3d/bicicletas-y-patinetes.webp'},
-    [normalizeCatName('Coches')]: {bg:'#EBF4FA', icon:'images/icons-3d/coches.webp'},
-    [normalizeCatName('Coches teledirigidos')]: {bg:'#FDF7EE', icon:'images/icons-3d/coches-teledirigidos.webp'},
-    [normalizeCatName('Libros')]: {bg:'#FDECED', icon:'images/icons-3d/libros.webp'},
-    [normalizeCatName('Cocinitas')]: {bg:'#EDF6F4', icon:'images/icons-3d/cocinitas.webp'},
-    [normalizeCatName('Puzzles')]: {bg:'#F2EBF8', icon:'images/icons-3d/puzzles.webp'},
-    [normalizeCatName('Disfraces')]: {bg:'#FCF3DB', icon:'images/icons-3d/disfraces.webp'},
-    [normalizeCatName('Robótica')]: {bg:'#F6F3F9', icon:'images/icons-3d/robotica.webp'},
-    [normalizeCatName('Robots')]: {bg:'#FEF7ED', icon:'images/icons-3d/robots.webp'},
-    [normalizeCatName('Drones')]: {bg:'#F5F2FA', icon:'images/icons-3d/drones.webp'},
-    [normalizeCatName('LEGO')]: {bg:'#FDF6EF', icon:'images/icons-3d/lego.webp'},
-    [normalizeCatName('Figuras y animales')]: {bg:'#F7F2F9', icon:'images/icons-3d/figuras-y-animales.webp'},
+    [normalizeCatName('Bicicletas y patinetes')]: {bg:'#FDEFEA', icon:'images/icons-3d/bicicletas-y-patinetes-cutout.webp'},
+    [normalizeCatName('Coches')]: {bg:'#EBF4FA', icon:'images/icons-3d/coches-cutout.webp'},
+    [normalizeCatName('Coches teledirigidos')]: {bg:'#FDF7EE', icon:'images/icons-3d/coches-teledirigidos-completo.png'},
+    [normalizeCatName('Libros')]: {bg:'#FDECED', icon:'images/icons-3d/libros-cutout.webp'},
+    [normalizeCatName('Cocinitas')]: {bg:'#EDF6F4', icon:'images/icons-3d/cocinitas-cutout.webp'},
+    [normalizeCatName('Puzzles')]: {bg:'#F2EBF8', icon:'images/icons-3d/puzzles-cutout.webp'},
+    [normalizeCatName('Disfraces')]: {bg:'#FCF3DB', icon:'images/icons-3d/disfraces-cutout.webp'},
+    [normalizeCatName('Robótica')]: {bg:'#F6F3F9', icon:'images/icons-3d/robotica-6-anos.png'},
+    [normalizeCatName('Robots')]: {bg:'#FEF7ED', icon:'images/icons-3d/robots-cutout.webp'},
+    [normalizeCatName('Drones')]: {bg:'#F5F2FA', icon:'images/icons-3d/drones-cutout.webp'},
+    [normalizeCatName('LEGO')]: {bg:'#FDF6EF', icon:'images/icons-3d/lego-cutout.webp'},
+    [normalizeCatName('Figuras y animales')]: {bg:'#F7F2F9', icon:'images/icons-3d/figuras-y-animales-cutout.webp'},
   };
 
   // Icono minimalista por categoria (webfont Tabler Icons, ver <head>).
@@ -1405,7 +1408,7 @@
         <h4 class="category-heading">Explora los juguetes por categoría</h4>
         <div class="chips" style="--chip-rows:${Math.ceil(b.chips.length/2)}">${b.chips.map(c=>{
           const page = b.chipPages && b.chipPages[c];
-          const design = CHIP_DESIGNS[normalizeCatName(c)];
+          const design = (b.chipDesigns && b.chipDesigns[c]) || CHIP_DESIGNS[normalizeCatName(c)];
           const inner = design
             ? `<img class="chip-icon-3d" src="${design.icon}" alt="" width="44" height="44" loading="lazy"><span class="chip-label">${c}</span><i class="ti ti-arrow-right chip-arrow" aria-hidden="true"></i>`
             : `<i class="ti ${chipIcon(c)}" aria-hidden="true"></i><span class="chip-label">${c}</span>`;

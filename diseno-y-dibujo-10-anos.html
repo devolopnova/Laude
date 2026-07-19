@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
+
+<style>
+@media (max-width:560px){
+  .skills-card{padding-top:32px;margin-bottom:28px;}
+}
+</style>
 </head>
 <body>
 
@@ -18,181 +24,339 @@
   </nav>
 </header>
 
-<section class="hero wrap">
-  <div class="eyebrow">10 años</div>
-  <h1>Diseño y dibujo</h1>
-  <p>Una selección con los libros de dibujo más elegidos por otros padres para esta edad, con enlace directo a Amazon.</p>
+<section class="cat-hero-2 wrap">
+  <div class="cat-hero-2-top">
+    <div>
+      <div class="cat-hero-2-chip">👶 10 años</div>
+      <h1>Diseño y dibujo</h1>
+    </div>
+    <div class="cat-hero-2-illu">
+      <img src="images/icons-3d/pintura-y-creatividad-fixed.webp" alt="" width="150" height="150" loading="eager">
+    </div>
+  </div>
+  <p class="cat-hero-2-body">Una selección con los libros de dibujo más elegidos por otros padres para esta edad, con enlace directo a Amazon.</p>
 </section>
 
-<section class="products wrap">
+<section class="products-v2 wrap">
+  
   <!-- PRODUCT START asin="1700809806" -->
-  <article class="product-card" id="1700809806" data-asin="1700809806" data-url="https://www.amazon.es/dp/1700809806/">
-    <img class="product-card-img" src="images/crea-tu-propio-comic.webp" alt="Crea tu Propio Cómic" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Crea tu Propio Cómic</h3>
-    <p class="product-card-desc">Un libro que enseña paso a paso a crear personajes, viñetas y diálogos para diseñar un cómic propio desde cero. Pensado para quienes ya dibujan algo y quieren dar el salto a contar historias completas.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ Enseña a crear personajes y viñetas propias.</li>
-        <li>✔ Progresión paso a paso, sin conocimientos previos.</li>
-        <li>✔ Fomenta contar historias a través del dibujo.</li>
+  <article class="product-card-v2" id="1700809806" data-asin="1700809806" data-url="https://www.amazon.es/dp/1700809806/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/crea-tu-propio-comic.webp" alt="Crea tu Propio Cómic" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Crea tu Propio Cómic</h3>
+        <div class="pc2-desc-card">
+          <p>Un libro que enseña paso a paso a crear personajes, viñetas y diálogos para diseñar un cómic propio desde cero. Pensado para quienes ya dibujan algo y quieren dar el salto a contar historias completas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>Enseña a crear personajes y viñetas propias.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Progresión paso a paso, sin conocimientos previos.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Fomenta contar historias a través del dibujo.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Muchos padres coinciden en que es un buen empujón para pasar de dibujar sueltos a crear historias completas con hilo narrativo. El formato paso a paso ayuda incluso a quienes nunca han dibujado un cómic.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Muchos padres coinciden en que es un buen empujón para pasar de dibujar sueltos a crear historias completas con hilo narrativo. El formato paso a paso ayuda incluso a quienes nunca han dibujado un cómic.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/1700809806/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/1700809806/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="1700809806" -->
 
+
+  
   <!-- PRODUCT START asin="B0C641MPB3" -->
-  <article class="product-card" id="B0C641MPB3" data-asin="B0C641MPB3" data-url="https://www.amazon.es/dp/B0C641MPB3/">
-    <img class="product-card-img" src="images/como-dibujar-101-proyectos-paso-a-paso-libro-para-aprender-a-dibujar.webp" alt="Cómo Dibujar 101 Proyectos Paso a Paso" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Cómo Dibujar 101 Proyectos Paso a Paso</h3>
-    <p class="product-card-desc">Una guía con 101 proyectos de dibujo distintos explicados paso a paso, pensada para desarrollar la creatividad probando temáticas variadas. Ideal para practicar un poco cada día sin repetir siempre lo mismo.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ 101 proyectos de dibujo distintos incluidos.</li>
-        <li>✔ Explicaciones paso a paso, fáciles de seguir.</li>
-        <li>✔ Gran variedad de temáticas para no aburrirse.</li>
+  <article class="product-card-v2" id="B0C641MPB3" data-asin="B0C641MPB3" data-url="https://www.amazon.es/dp/B0C641MPB3/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/como-dibujar-101-proyectos-paso-a-paso-libro-para-aprender-a-dibujar.webp" alt="Cómo Dibujar 101 Proyectos Paso a Paso" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Cómo Dibujar 101 Proyectos Paso a Paso</h3>
+        <div class="pc2-desc-card">
+          <p>Una guía con 101 proyectos de dibujo distintos explicados paso a paso, pensada para desarrollar la creatividad probando temáticas variadas. Ideal para practicar un poco cada día sin repetir siempre lo mismo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>101 proyectos de dibujo distintos incluidos.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Explicaciones paso a paso, fáciles de seguir.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Gran variedad de temáticas para no aburrirse.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Se repite bastante el comentario de que la variedad de proyectos evita que el libro se quede a medias, ya que siempre hay algo nuevo que probar. El formato paso a paso también se valora para practicar de forma autónoma.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Se repite bastante el comentario de que la variedad de proyectos evita que el libro se quede a medias, ya que siempre hay algo nuevo que probar. El formato paso a paso también se valora para practicar de forma autónoma.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/B0C641MPB3/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/B0C641MPB3/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="B0C641MPB3" -->
 
+
+  
   <!-- PRODUCT START asin="B0C9RYV9DL" -->
-  <article class="product-card" id="B0C9RYV9DL" data-asin="B0C9RYV9DL" data-url="https://www.amazon.es/dp/B0C9RYV9DL/">
-    <img class="product-card-img" src="images/como-dibujar-101-kawaii-aprende-con-este-libro-de-dibujo-facil-y.webp" alt="Cómo Dibujar 101 Kawaii" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Cómo Dibujar 101 Kawaii</h3>
-    <p class="product-card-desc">Una guía centrada en el estilo kawaii, con 101 dibujos explicados paso a paso de personajes y objetos con ese estilo tierno tan popular entre los más pequeños. Pensado para quienes disfrutan de un trazo sencillo y colorido.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ 101 dibujos en el popular estilo kawaii.</li>
-        <li>✔ Guías paso a paso fáciles de seguir.</li>
-        <li>✔ Trazo sencillo, ideal para empezar con soltura.</li>
+  <article class="product-card-v2" id="B0C9RYV9DL" data-asin="B0C9RYV9DL" data-url="https://www.amazon.es/dp/B0C9RYV9DL/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/como-dibujar-101-kawaii-aprende-con-este-libro-de-dibujo-facil-y.webp" alt="Cómo Dibujar 101 Kawaii" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Cómo Dibujar 101 Kawaii</h3>
+        <div class="pc2-desc-card">
+          <p>Una guía centrada en el estilo kawaii, con 101 dibujos explicados paso a paso de personajes y objetos con ese estilo tierno tan popular entre los más pequeños. Pensado para quienes disfrutan de un trazo sencillo y colorido.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>101 dibujos en el popular estilo kawaii.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Guías paso a paso fáciles de seguir.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Trazo sencillo, ideal para empezar con soltura.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Entre los comentarios más habituales aparece lo bien que conecta con el gusto por el estilo kawaii, muy popular entre los niños. El nivel de dificultad se valora como accesible incluso para quienes empiezan.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Entre los comentarios más habituales aparece lo bien que conecta con el gusto por el estilo kawaii, muy popular entre los niños. El nivel de dificultad se valora como accesible incluso para quienes empiezan.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/B0C9RYV9DL/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/B0C9RYV9DL/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="B0C9RYV9DL" -->
 
+
+  
   <!-- PRODUCT START asin="8417389032" -->
-  <article class="product-card" id="8417389032" data-asin="8417389032" data-url="https://www.amazon.es/dp/8417389032/">
-    <img class="product-card-img" src="images/aprende-a-dibujar-en-accion-aprende-a-dibujar-comic.webp" alt="Aprende a Dibujar: En Acción" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Aprende a Dibujar: En Acción</h3>
-    <p class="product-card-desc">Un libro centrado en dibujar poses dinámicas y escenas de acción, típicas de los cómics de superhéroes. Pensado para quienes ya dominan lo básico y quieren dar más movimiento a sus dibujos.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ Se centra en poses dinámicas y de acción.</li>
-        <li>✔ Ideal para dar el salto tras lo básico.</li>
-        <li>✔ Inspirado en el estilo de los cómics.</li>
+  <article class="product-card-v2" id="8417389032" data-asin="8417389032" data-url="https://www.amazon.es/dp/8417389032/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/aprende-a-dibujar-en-accion-aprende-a-dibujar-comic.webp" alt="Aprende a Dibujar: En Acción" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Aprende a Dibujar: En Acción</h3>
+        <div class="pc2-desc-card">
+          <p>Un libro centrado en dibujar poses dinámicas y escenas de acción, típicas de los cómics de superhéroes. Pensado para quienes ya dominan lo básico y quieren dar más movimiento a sus dibujos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>Se centra en poses dinámicas y de acción.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Ideal para dar el salto tras lo básico.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Inspirado en el estilo de los cómics.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Un detalle que aparece una y otra vez es lo útil que resulta para dar sensación de movimiento a los dibujos, algo que cuesta al principio. Los fans de los cómics de superhéroes lo valoran especialmente.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Un detalle que aparece una y otra vez es lo útil que resulta para dar sensación de movimiento a los dibujos, algo que cuesta al principio. Los fans de los cómics de superhéroes lo valoran especialmente.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/8417389032/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/8417389032/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="8417389032" -->
 
+
+  
   <!-- PRODUCT START asin="1700818465" -->
-  <article class="product-card" id="1700818465" data-asin="1700818465" data-url="https://www.amazon.es/dp/1700818465/">
-    <img class="product-card-img" src="images/aprender-a-dibujar-crea-tu-propio-comic.webp" alt="Aprender a Dibujar: Crea tu Cómic" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Aprender a Dibujar: Crea tu Cómic</h3>
-    <p class="product-card-desc">Un libro que combina técnicas básicas de dibujo con la creación de un cómic propio, pensado como introducción para quienes empiezan desde cero. Explica personajes, viñetas y estructura narrativa paso a paso.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ Combina técnica de dibujo y creación narrativa.</li>
-        <li>✔ Pensado para principiantes desde cero.</li>
-        <li>✔ Explica personajes, viñetas y estructura del cómic.</li>
+  <article class="product-card-v2" id="1700818465" data-asin="1700818465" data-url="https://www.amazon.es/dp/1700818465/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/aprender-a-dibujar-crea-tu-propio-comic.webp" alt="Aprender a Dibujar: Crea tu Cómic" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Aprender a Dibujar: Crea tu Cómic</h3>
+        <div class="pc2-desc-card">
+          <p>Un libro que combina técnicas básicas de dibujo con la creación de un cómic propio, pensado como introducción para quienes empiezan desde cero. Explica personajes, viñetas y estructura narrativa paso a paso.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>Combina técnica de dibujo y creación narrativa.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Pensado para principiantes desde cero.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Explica personajes, viñetas y estructura del cómic.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Lo que más suele gustar es que no da por hecho ningún conocimiento previo, siendo una buena puerta de entrada al mundo del cómic. La progresión paso a paso facilita seguirlo sin frustraciones.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Lo que más suele gustar es que no da por hecho ningún conocimiento previo, siendo una buena puerta de entrada al mundo del cómic. La progresión paso a paso facilita seguirlo sin frustraciones.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/1700818465/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/1700818465/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="1700818465" -->
 
+
+  
   <!-- PRODUCT START asin="B0H6GSHSRJ" -->
-  <article class="product-card" id="B0H6GSHSRJ" data-asin="B0H6GSHSRJ" data-url="https://www.amazon.es/dp/B0H6GSHSRJ/">
-    <img class="product-card-img" src="images/mision-caligrafia-aventura-con-los-hermanos-rocket-cuaderno-de.webp" alt="Misión Caligrafía Hermanos Rocket" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Misión Caligrafía Hermanos Rocket</h3>
-    <p class="product-card-desc">Un cuaderno de escritura con pauta Montessori que combina caligrafía con juegos y enigmas de una aventura protagonizada por los Hermanos Rocket. Pensado para mejorar la letra de forma amena, no como un ejercicio repetitivo.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ Pauta Montessori para mejorar la letra.</li>
-        <li>✔ Combina caligrafía con juegos y enigmas.</li>
-        <li>✔ Formato de aventura, más ameno que un cuaderno normal.</li>
+  <article class="product-card-v2" id="B0H6GSHSRJ" data-asin="B0H6GSHSRJ" data-url="https://www.amazon.es/dp/B0H6GSHSRJ/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/mision-caligrafia-aventura-con-los-hermanos-rocket-cuaderno-de.webp" alt="Misión Caligrafía Hermanos Rocket" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Misión Caligrafía Hermanos Rocket</h3>
+        <div class="pc2-desc-card">
+          <p>Un cuaderno de escritura con pauta Montessori que combina caligrafía con juegos y enigmas de una aventura protagonizada por los Hermanos Rocket. Pensado para mejorar la letra de forma amena, no como un ejercicio repetitivo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>Pauta Montessori para mejorar la letra.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Combina caligrafía con juegos y enigmas.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Formato de aventura, más ameno que un cuaderno normal.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Muchos padres destacan que consigue que practicar caligrafía deje de sentirse como una obligación gracias al hilo de aventura. Los enigmas y juegos incluidos mantienen el interés más allá de solo repasar letras.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Muchos padres destacan que consigue que practicar caligrafía deje de sentirse como una obligación gracias al hilo de aventura. Los enigmas y juegos incluidos mantienen el interés más allá de solo repasar letras.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/B0H6GSHSRJ/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/B0H6GSHSRJ/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="B0H6GSHSRJ" -->
 
+
+  
   <!-- PRODUCT START asin="B0G49RZCNT" -->
-  <article class="product-card" id="B0G49RZCNT" data-asin="B0G49RZCNT" data-url="https://www.amazon.es/dp/B0G49RZCNT/">
-    <img class="product-card-img" src="images/aprender-a-dibujar-para-ninos-edicion-cool-mas-de-300-dibujos-faciles.webp" alt="Aprender a Dibujar para Niños Edición Cool" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">Aprender a Dibujar para Niños Edición Cool</h3>
-    <p class="product-card-desc">Un libro con más de 300 dibujos explicados paso a paso, pensado para que los niños practiquen a diario con ejemplos variados y sencillos. Ideal como primer acercamiento al dibujo guiado.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ Más de 300 dibujos explicados paso a paso.</li>
-        <li>✔ Gran variedad de temáticas para practicar.</li>
-        <li>✔ Ideal como primer acercamiento guiado al dibujo.</li>
+  <article class="product-card-v2" id="B0G49RZCNT" data-asin="B0G49RZCNT" data-url="https://www.amazon.es/dp/B0G49RZCNT/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/aprender-a-dibujar-para-ninos-edicion-cool-mas-de-300-dibujos-faciles.webp" alt="Aprender a Dibujar para Niños Edición Cool" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">Aprender a Dibujar para Niños Edición Cool</h3>
+        <div class="pc2-desc-card">
+          <p>Un libro con más de 300 dibujos explicados paso a paso, pensado para que los niños practiquen a diario con ejemplos variados y sencillos. Ideal como primer acercamiento al dibujo guiado.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>Más de 300 dibujos explicados paso a paso.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Gran variedad de temáticas para practicar.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Ideal como primer acercamiento guiado al dibujo.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>No es raro encontrar comentarios sobre lo bien que funciona para practicar un poco cada día, gracias a la cantidad de ejemplos incluidos. Es una opción sencilla para quienes recién empiezan a dibujar de forma guiada.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>No es raro encontrar comentarios sobre lo bien que funciona para practicar un poco cada día, gracias a la cantidad de ejemplos incluidos. Es una opción sencilla para quienes recién empiezan a dibujar de forma guiada.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/B0G49RZCNT/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/B0G49RZCNT/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="B0G49RZCNT" -->
 
+
+  
   <!-- PRODUCT START asin="B0G8ZLYHPB" -->
-  <article class="product-card" id="B0G8ZLYHPB" data-asin="B0G8ZLYHPB" data-url="https://www.amazon.es/dp/B0G8ZLYHPB/">
-    <img class="product-card-img" src="images/250-como-dibujar-paso-a-paso-reto-creativo-para-aprender-a-dibujar.webp" alt="250 Cómo Dibujar Paso a Paso" width="600" height="600" loading="lazy">
-    <h3 class="product-card-name">250 Cómo Dibujar Paso a Paso</h3>
-    <p class="product-card-desc">Un libro con 250 propuestas de dibujo explicadas paso a paso, pensado como reto creativo para aprender a dibujar prácticamente de todo. Cubre una gran variedad de temas para no quedarse siempre en lo mismo.</p>
-    <div class="product-card-why">
-      <h4>⭐ ¿Por qué nos gusta?</h4>
-      <ul>
-        <li>✔ 250 propuestas de dibujo distintas.</li>
-        <li>✔ Gran variedad temática, sin quedarse en lo mismo.</li>
-        <li>✔ Formato de reto creativo, motivador para seguir practicando.</li>
+  <article class="product-card-v2" id="B0G8ZLYHPB" data-asin="B0G8ZLYHPB" data-url="https://www.amazon.es/dp/B0G8ZLYHPB/">
+    <div class="pc2-top">
+      <div class="pc2-media">
+        <img src="images/250-como-dibujar-paso-a-paso-reto-creativo-para-aprender-a-dibujar.webp" alt="250 Cómo Dibujar Paso a Paso" width="600" height="600" loading="lazy">
+      </div>
+      <div class="pc2-info">
+        <span class="pc2-age">👶 10 años</span>
+        <h3 class="pc2-name">250 Cómo Dibujar Paso a Paso</h3>
+        <div class="pc2-desc-card">
+          <p>Un libro con 250 propuestas de dibujo explicadas paso a paso, pensado como reto creativo para aprender a dibujar prácticamente de todo. Cubre una gran variedad de temas para no quedarse siempre en lo mismo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc2-why">
+      <div class="pc2-why-head"><span class="pc2-badge">⭐</span><h4>¿Por qué nos gusta?</h4></div>
+      <ul class="pc2-why-list">
+        <li><span class="pc2-why-check">✔</span><span>250 propuestas de dibujo distintas.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Gran variedad temática, sin quedarse en lo mismo.</span></li>
+        <li><span class="pc2-why-check">✔</span><span>Formato de reto creativo, motivador para seguir practicando.</span></li>
       </ul>
     </div>
-    <div class="product-card-reviews">
-      <h4>💬 Lo que más destacan las familias</h4>
-      <p>Se repite bastante el comentario de que la cantidad de propuestas incluidas da para practicar durante mucho tiempo sin aburrirse. El enfoque de reto creativo anima a completar cada vez más dibujos.</p>
+    <div class="pc2-reviews">
+      <div class="pc2-reviews-left">
+        <div class="pc2-reviews-head"><span class="pc2-badge">💬</span><h4>Lo que más destacan las familias</h4></div>
+        <p>Se repite bastante el comentario de que la cantidad de propuestas incluidas da para practicar durante mucho tiempo sin aburrirse. El enfoque de reto creativo anima a completar cada vez más dibujos.</p>
+      </div>
+      <div class="pc2-reviews-illu" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="34" r="12"/><path d="M14,82 C14,60 18,52 28,52 C38,52 42,60 42,82"/><circle cx="72" cy="32" r="13"/><path d="M57,84 C57,60 61,52 72,52 C83,52 87,60 87,84"/><circle cx="50" cy="54" r="9"/><path d="M39,86 C39,72 42,66 50,66 C58,66 61,72 61,86"/><path d="M50,26 C50,20 43,17 41,22 C39,27 45,31 50,36 C55,31 61,27 59,22 C57,17 50,20 50,26 Z"/></svg></div>
     </div>
-    <a class="cta" href="https://www.amazon.es/dp/B0G8ZLYHPB/" target="_blank" rel="noopener">Ver en Amazon</a>
+    <div class="pc2-cta"><a class="cta" href="https://www.amazon.es/dp/B0G8ZLYHPB/" target="_blank" rel="noopener">Ver en Amazon</a></div>
   </article>
   <!-- PRODUCT END asin="B0G8ZLYHPB" -->
+
 </section>
+
+<div class="bottom-nav wrap">
+  <section class="bottom-nav-section">
+    <h3 class="bottom-nav-title">⊞ NAVEGAR ENTRE CATEGORÍAS</h3>
+    <div class="bottom-nav-grid">
+      <a class="bottom-nav-card bottom-nav-prev" href="guia-regalos-juguetes.html">
+        <span class="bottom-nav-icon">←</span>
+        <span class="bottom-nav-label">Categoría anterior</span>
+      </a>
+      <a class="bottom-nav-card bottom-nav-center" href="guia-regalos-juguetes.html">
+        <span class="bottom-nav-icon">⊞</span>
+        <span class="bottom-nav-title-main">Todas las categorías</span>
+      </a>
+      <a class="bottom-nav-card bottom-nav-next" href="guia-regalos-juguetes.html">
+        <span class="bottom-nav-label">Siguiente categoría</span>
+        <span class="bottom-nav-icon">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bottom-nav-section">
+    <h3 class="bottom-nav-title">🔍 EXPLORAR MÁS</h3>
+    <div class="bottom-nav-explore">
+      <a class="bottom-nav-explore-card" href="guia-regalos-juguetes.html#a0">
+        <strong class="bottom-nav-explore-name">Ver regalos para<br>0–6 meses</strong>
+        <span class="bottom-nav-explore-desc">Ideas para la etapa anterior</span>
+      </a>
+      <a class="bottom-nav-explore-card" href="guia-regalos-juguetes.html#a1">
+        <strong class="bottom-nav-explore-name">Ver regalos para<br>2 años</strong>
+        <span class="bottom-nav-explore-desc">Ideas para la siguiente etapa</span>
+      </a>
+      <a class="bottom-nav-explore-card" href="guia-montessori.html">
+        <strong class="bottom-nav-explore-name">Descubre la<br>Guía Montessori</strong>
+        <span class="bottom-nav-explore-desc">Juguetes por edades basados en el método Montessori</span>
+      </a>
+    </div>
+    <p class="bottom-nav-note">ℹ Los enlaces llevan directamente a la ficha del producto en Amazon.es.</p>
+  </section>
+</div>
 
 <footer class="wrap">
   <p>Los enlaces llevan directamente a la ficha del producto en Amazon.es.</p>
