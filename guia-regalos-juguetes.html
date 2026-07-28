@@ -79,18 +79,31 @@
   .nav-dropdown a{padding:9px 12px;border-radius:8px;font-size:14px;font-weight:500;color:#1C1C1E;}
   .nav-dropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
 
+  .nav-dropdown-item-wrapper{position:relative;}
+  .nav-dropdown-item-link{display:block;}
+  .nav-subdropdown{
+    position:absolute;left:calc(100% + 4px);top:0;min-width:220px;
+    background:#fff;border:1px solid #ECE6DA;border-radius:8px;
+    box-shadow:0 10px 30px rgba(28,28,30,.12);padding:8px;
+    display:none;flex-direction:column;gap:2px;
+  }
+  .nav-dropdown-item-wrapper:hover .nav-subdropdown{display:flex;}
+  .nav-subdropdown a{padding:9px 12px;border-radius:6px;font-size:13px;font-weight:500;color:#1C1C1E;}
+  .nav-subdropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
+
   /* HERO principal — fotografia a sangre completa (extraida de la maqueta
      de referencia, sin recortar, sin zoom y sin ningun efecto). El texto
      ("Encuentra el regalo...", boton, etc.) es el que ya lleva la propia
      fotografia; no se superpone ningun texto HTML encima para evitar
      duplicados. */
-  .hero-main{position:relative;overflow:hidden;}
-  .hero-main-photo{display:block;width:100%;height:auto;}
+  .hero-main{position:relative;overflow:hidden;padding:0 32px;}
+  .hero-main-photo{display:block;width:100%;height:auto;max-height:700px;object-fit:cover;object-position:center 30%;}
   @media (max-width:640px){
     .brand-icon{width:32px;height:32px;}
     .brand-title{font-size:17px;}
     .brand-sub{font-size:11px;}
     .nav-chip{padding:8px 14px;font-size:12.5px;}
+    .hero-main{padding:0 24px;}
   }
 
   /* SIDE RULER (signature element) */
@@ -110,7 +123,7 @@
      "Edades" de la cabecera siga funcionando). El titular/subtitulo que
      llevaba encima se elimino: ahora el mensaje principal vive en
      .hero-main, superpuesto a la fotografia. */
-  .hero{padding-top:40px;padding-bottom:52px;border-bottom:1px solid var(--line);text-align:center;}
+  .hero{padding-top:12px;padding-bottom:52px;border-bottom:1px solid var(--line);text-align:center;}
 
   /* Selector de edades: seis fotografías circulares alineadas, con un aro fino
      de su familia de color (coral, ámbar, amarillo, verde, azul y morado).
@@ -169,6 +182,7 @@
   }
   .age-list .age-row:last-child{}
   [id^="fav-"]{scroll-margin-top:110px;}
+  [id^="categories-"]{scroll-margin-top:85px;}
   /* Insignia de edad: circulo tintado con anillo del color de la franja
      (var(--accent), fijado por fila desde el array bands) del que baja una
      linea vertical fina que recorre toda la franja y termina en un punto.
@@ -502,8 +516,8 @@
   footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
   .footer-top{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:44px 0;}
   .footer-column{display:flex;flex-direction:column;}
-  .footer-brand{gap:16px;}
-  .footer-logo{background:transparent;}
+  .footer-brand{gap:16px;align-items:flex-start;}
+  .footer-logo{background:transparent;margin-top:-38px;margin-bottom:-8px;}
   .footer-logo img{width:230px;height:auto;display:block;max-width:100%;background:transparent;border-radius:0;}
   .footer-tagline{font-size:11px;font-weight:600;letter-spacing:0.04em;color:#9FAF93;margin:0;}
   .footer-desc{font-size:13px;line-height:1.6;color:#C5BFB5;margin:0;}
@@ -610,18 +624,190 @@
           <i class="ti ti-users" aria-hidden="true"></i><span>Edades</span><i class="ti ti-chevron-down chip-caret" aria-hidden="true"></i>
         </button>
         <div class="nav-dropdown" id="dropdownEdades">
-          <a href="#a0">0-6 meses</a>
-          <a href="#a1">6-12 meses</a>
-          <a href="#a2">1 año</a>
-          <a href="#a3">2 años</a>
-          <a href="#a4">3 años</a>
-          <a href="#a5">4 años</a>
-          <a href="#a6">5 años</a>
-          <a href="#a7">6 años</a>
-          <a href="#a8">7 años</a>
-          <a href="#a9">8 años</a>
-          <a href="#a10">9 años</a>
-          <a href="#a11">10 años</a>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a0" class="nav-dropdown-item-link">0-6 meses</a>
+            <div class="nav-subdropdown">
+              <a href="peluches.html">Peluches</a>
+              <a href="mordedores.html">Mordedores</a>
+              <a href="gimnasio-de-actividades.html">Gimnasio de actividades</a>
+              <a href="juguete-espiral-cochecito.html">Juguete espiral cochecito</a>
+              <a href="regalos-personalizados.html">Regalos personalizados</a>
+              <a href="canastillas-de-regalo.html">Canastillas de regalo</a>
+              <a href="sonajeros.html">Sonajeros</a>
+              <a href="libros-de-tela.html">Libros de tela</a>
+              <a href="cesta-organizadora.html">Cesta organizadora</a>
+              <a href="primera-puesta.html">Primera puesta</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a1" class="nav-dropdown-item-link">6-12 meses</a>
+            <div class="nav-subdropdown">
+              <a href="andadores-y-primeros-pasos-6-12-meses.html">Andadores y primeros pasos</a>
+              <a href="bloques-blandos-6-12-meses.html">Bloques blandos</a>
+              <a href="mordedores-6-12-meses.html">Mordedores</a>
+              <a href="gimnasio-de-actividades-6-12-meses.html">Gimnasio de actividades</a>
+              <a href="juguete-espiral-cochecito-6-12-meses.html">Juguete espiral cochecito</a>
+              <a href="sonajeros-6-12-meses.html">Sonajeros</a>
+              <a href="libros-de-tela-6-12-meses.html">Libros de tela</a>
+              <a href="peluches-6-12-meses.html">Peluches</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a2" class="nav-dropdown-item-link">1 año</a>
+            <div class="nav-subdropdown">
+              <a href="correpasillos-1-ano.html">Correpasillos</a>
+              <a href="construcciones-1-ano.html">Construcciones</a>
+              <a href="vehiculos-1-ano.html">Vehículos</a>
+              <a href="juguetes-musicales-1-ano.html">Instrumentos musicales</a>
+              <a href="libros-1-ano.html">Libros</a>
+              <a href="puzzles-1-ano.html">Puzzles</a>
+              <a href="pintura-y-creatividad-1-ano.html">Pintura y creatividad</a>
+              <a href="peluches-1-ano.html">Peluches</a>
+              <a href="juguetes-de-bano-1-ano.html">Juegos de baño</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a3" class="nav-dropdown-item-link">2 años</a>
+            <div class="nav-subdropdown">
+              <a href="correpasillos-2-anos.html">Correpasillos</a>
+              <a href="vehiculos-2-anos.html">Vehículos</a>
+              <a href="construcciones-2-anos.html">Construcciones</a>
+              <a href="manualidades-2-anos.html">Manualidades</a>
+              <a href="puzzles-2-anos.html">Puzzles</a>
+              <a href="libros-2-anos.html">Libros</a>
+              <a href="juguetes-musicales-2-anos.html">Música</a>
+              <a href="juguetes-de-bano-2-anos.html">Juguetes de baño</a>
+              <a href="peluches-2-anos.html">Peluches</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a4" class="nav-dropdown-item-link">3 años</a>
+            <div class="nav-subdropdown">
+              <a href="bicicletas-y-patinetes-3-anos.html">Bicicletas y patinetes</a>
+              <a href="construcciones-3-anos.html">Construcciones</a>
+              <a href="cocinitas-3-anos.html">Cocinitas</a>
+              <a href="disfraces-3-anos.html">Disfraces</a>
+              <a href="manualidades-3-anos.html">Manualidades</a>
+              <a href="juegos-de-mesa-3-anos.html">Juegos de mesa</a>
+              <a href="libros-3-anos.html">Libros</a>
+              <a href="figuras-y-animales-3-anos.html">Figuras y animales</a>
+              <a href="coches-teledirigidos-3-anos.html">Coches teledirigidos</a>
+              <a href="puzzles-3-anos.html">Puzzles</a>
+              <a href="coches-3-anos.html">Coches</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a5" class="nav-dropdown-item-link">4 años</a>
+            <div class="nav-subdropdown">
+              <a href="construcciones-4-anos.html">Construcciones</a>
+              <a href="bicicletas-y-patinetes-4-anos.html">Bicicletas y patinetes</a>
+              <a href="ciencia-4-anos.html">Ciencia</a>
+              <a href="manualidades-4-anos.html">Manualidades</a>
+              <a href="juegos-de-mesa-4-anos.html">Juegos de mesa</a>
+              <a href="disfraces-4-anos.html">Disfraces</a>
+              <a href="coches-4-anos.html">Coches</a>
+              <a href="libros-4-anos.html">Libros</a>
+              <a href="coches-teledirigidos-4-anos.html">Coches teledirigidos</a>
+              <a href="cocinitas-4-anos.html">Cocinitas</a>
+              <a href="puzzles-4-anos.html">Puzzles</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a6" class="nav-dropdown-item-link">5 años</a>
+            <div class="nav-subdropdown">
+              <a href="construcciones-5-anos.html">Construcciones</a>
+              <a href="bicicletas-y-patinetes-5-anos.html">Bicicletas y patinetes</a>
+              <a href="ciencia-5-anos.html">Ciencia</a>
+              <a href="manualidades-5-anos.html">Manualidades</a>
+              <a href="juegos-de-mesa-5-anos.html">Juegos de mesa</a>
+              <a href="disfraces-5-anos.html">Disfraces</a>
+              <a href="coches-5-anos.html">Coches</a>
+              <a href="libros-5-anos.html">Libros</a>
+              <a href="coches-teledirigidos-5-anos.html">Coches teledirigidos</a>
+              <a href="cocinitas-5-anos.html">Cocinitas</a>
+              <a href="puzzles-5-anos.html">Puzzles</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a7" class="nav-dropdown-item-link">6 años</a>
+            <div class="nav-subdropdown">
+              <a href="lego-6-anos.html">LEGO</a>
+              <a href="robotica-6-anos.html">Robótica</a>
+              <a href="ciencia-6-anos.html">Ciencia</a>
+              <a href="bicicletas-y-patinetes-6-anos.html">Bicicletas y patinetes</a>
+              <a href="juegos-de-mesa-6-anos.html">Juegos de mesa</a>
+              <a href="manualidades-6-anos.html">Manualidades</a>
+              <a href="libros-6-anos.html">Libros</a>
+              <a href="coches-6-anos.html">Coches</a>
+              <a href="coches-teledirigidos-6-anos.html">Coches teledirigidos</a>
+              <a href="puzzles-6-anos.html">Puzzles</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a8" class="nav-dropdown-item-link">7 años</a>
+            <div class="nav-subdropdown">
+              <a href="lego-7-anos.html">LEGO</a>
+              <a href="robotica-7-anos.html">Robótica</a>
+              <a href="ciencia-7-anos.html">Ciencia</a>
+              <a href="manualidades-7-anos.html">Manualidades</a>
+              <a href="juegos-de-mesa-7-anos.html">Juegos de mesa</a>
+              <a href="drones-7-anos.html">Drones</a>
+              <a href="libros-7-anos.html">Libros</a>
+              <a href="bicicletas-y-patinetes-7-anos.html">Bicicletas y patinetes</a>
+              <a href="puzzles-7-anos.html">Puzzles</a>
+              <a href="coches-7-anos.html">Coches</a>
+              <a href="coches-teledirigidos-7-anos.html">Coches teledirigidos</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a9" class="nav-dropdown-item-link">8 años</a>
+            <div class="nav-subdropdown">
+              <a href="robotica-8-anos.html">Robótica</a>
+              <a href="ciencia-8-anos.html">Ciencia</a>
+              <a href="lego-8-anos.html">LEGO</a>
+              <a href="drones-8-anos.html">Drones</a>
+              <a href="libros-8-anos.html">Libros</a>
+              <a href="juegos-de-mesa-8-anos.html">Juegos de mesa</a>
+              <a href="manualidades-8-anos.html">Manualidades</a>
+              <a href="puzzles-8-anos.html">Puzzles</a>
+              <a href="bicicletas-y-patinetes-8-anos.html">Bicicletas y patinetes</a>
+              <a href="coches-8-anos.html">Coches</a>
+              <a href="coches-teledirigidos-8-anos.html">Coches teledirigidos</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a10" class="nav-dropdown-item-link">9 años</a>
+            <div class="nav-subdropdown">
+              <a href="robotica-9-anos.html">Robótica</a>
+              <a href="ciencia-9-anos.html">Ciencia</a>
+              <a href="drones-9-anos.html">Drones</a>
+              <a href="lego-9-anos.html">LEGO</a>
+              <a href="libros-9-anos.html">Libros</a>
+              <a href="juegos-de-mesa-9-anos.html">Juegos de mesa</a>
+              <a href="manualidades-9-anos.html">Manualidades</a>
+              <a href="puzzles-9-anos.html">Puzzles</a>
+              <a href="bicicletas-y-patinetes-9-anos.html">Bicicletas y patinetes</a>
+              <a href="coches-9-anos.html">Coches</a>
+              <a href="coches-teledirigidos-9-anos.html">Coches teledirigidos</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item-wrapper">
+            <a href="#categories-a11" class="nav-dropdown-item-link">10 años</a>
+            <div class="nav-subdropdown">
+              <a href="robotica-10-anos.html">Robótica</a>
+              <a href="ciencia-10-anos.html">Ciencia</a>
+              <a href="drones-10-anos.html">Drones</a>
+              <a href="lego-10-anos.html">LEGO</a>
+              <a href="libros-10-anos.html">Libros</a>
+              <a href="juegos-de-mesa-10-anos.html">Juegos de mesa</a>
+              <a href="manualidades-10-anos.html">Manualidades</a>
+              <a href="puzzles-10-anos.html">Puzzles</a>
+              <a href="bicicletas-y-patinetes-10-anos.html">Bicicletas y patinetes</a>
+              <a href="coches-10-anos.html">Coches</a>
+              <a href="coches-teledirigidos-10-anos.html">Coches teledirigidos</a>
+              <a href="diseno-y-dibujo-10-anos.html">Diseño y dibujo</a>
+            </div>
+          </div>
         </div>
       </div>
       <button class="nav-chip" type="button">
@@ -665,49 +851,49 @@
 
 <section class="hero wrap">
   <div class="age-cards" id="chart">
-    <a class="age-card ac-coral" href="#a0">
+    <a class="age-card ac-coral" href="#categories-a0">
       <img class="age-photo" src="images/hero/edad-0-6-meses.webp" alt="Bebé descubriendo un móvil sensorial" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">0-6</span>
         <span class="age-card-unit">meses</span>
       </span>
     </a>
-    <a class="age-card ac-amber" href="#a1">
+    <a class="age-card ac-amber" href="#categories-a1">
       <img class="age-photo" src="images/hero/edad-6-12-meses.webp" alt="Bebé sentado jugando con un apilable de madera" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">6-12</span>
         <span class="age-card-unit">meses</span>
       </span>
     </a>
-    <a class="age-card ac-yellow" href="#a2">
+    <a class="age-card ac-yellow" href="#categories-a2">
       <img class="age-photo" src="images/hero/edad-1-3-anos.webp" alt="Niño pequeño construyendo con bloques de madera" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">1-3</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-green" href="#a5">
+    <a class="age-card ac-green" href="#categories-a5">
       <img class="age-photo" src="images/hero/edad-4-5-anos.webp" alt="Niña pintando con acuarelas" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">4-5</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-green" href="#a7">
+    <a class="age-card ac-green" href="#categories-a7">
       <img class="age-photo" src="images/hero/edad-6-7-anos.webp" alt="Niño leyendo un libro" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">6-7</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-blue is-selected" href="#a9">
+    <a class="age-card ac-blue is-selected" href="#categories-a9">
       <img class="age-photo" src="images/hero/edad-8-9-anos.webp" alt="Niño montando una construcción robótica" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">8-9</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-purple" href="#a11">
+    <a class="age-card ac-purple" href="#categories-a11">
       <img class="age-photo" src="images/hero/edad-10-anos.webp" alt="Niño usando un portátil" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">10</span>
@@ -746,9 +932,8 @@
   <div class="footer-top wrap">
     <div class="footer-column footer-brand">
       <div class="footer-logo">
-        <img src="images/cabecera/branding/2.png" alt="Lauderem - Jugar, Aprender y Crecer" width="230" height="auto" loading="lazy" decoding="async">
+        <img src="images/cabecera/footer/logo/lauderem-logo-oscuro 2.svg" alt="Lauderem - Jugar, Aprender y Crecer" width="230" height="auto" loading="lazy" decoding="async">
       </div>
-      <p class="footer-tagline">JUGAR · APRENDER · CRECER</p>
       <p class="footer-desc">Te ayudamos a encontrar el regalo perfecto para cada edad, con selecciones cuidadas y recomendaciones útiles para familias.</p>
     </div>
 
@@ -759,18 +944,18 @@
           <i class="ti ti-chevron-down" aria-hidden="true"></i>
         </button>
         <div class="footer-accordion-content footer-chips" id="footer-edades" hidden>
-          <a class="footer-chip" href="#a0">0–6 meses</a>
-          <a class="footer-chip" href="#a1">6–12 meses</a>
-          <a class="footer-chip" href="#a2">1 año</a>
-          <a class="footer-chip" href="#a3">2 años</a>
-          <a class="footer-chip" href="#a4">3 años</a>
-          <a class="footer-chip" href="#a5">4 años</a>
-          <a class="footer-chip" href="#a6">5 años</a>
-          <a class="footer-chip" href="#a7">6 años</a>
-          <a class="footer-chip" href="#a8">7 años</a>
-          <a class="footer-chip" href="#a9">8 años</a>
-          <a class="footer-chip" href="#a10">9 años</a>
-          <a class="footer-chip" href="#a11">10 años</a>
+          <a class="footer-chip" href="#categories-a0">0–6 meses</a>
+          <a class="footer-chip" href="#categories-a1">6–12 meses</a>
+          <a class="footer-chip" href="#categories-a2">1 año</a>
+          <a class="footer-chip" href="#categories-a3">2 años</a>
+          <a class="footer-chip" href="#categories-a4">3 años</a>
+          <a class="footer-chip" href="#categories-a5">4 años</a>
+          <a class="footer-chip" href="#categories-a6">5 años</a>
+          <a class="footer-chip" href="#categories-a7">6 años</a>
+          <a class="footer-chip" href="#categories-a8">7 años</a>
+          <a class="footer-chip" href="#categories-a9">8 años</a>
+          <a class="footer-chip" href="#categories-a10">9 años</a>
+          <a class="footer-chip" href="#categories-a11">10 años</a>
         </div>
       </div>
 
@@ -1653,7 +1838,7 @@
     row.innerHTML = `
       <div class="age-body">
         ${renderAgeHeaderV2({age:b.num,unit:b.unit,title:b.title,description:header.description,heroImage:b.img,illustration:header.illustration,highlights:header.highlights})}
-        <h4 class="category-heading">Explora los juguetes por categoría</h4>
+        <h4 class="category-heading" id="categories-${b.id}">Explora los juguetes por categoría</h4>
         <div class="chips" style="--chip-rows:${Math.ceil(b.chips.length/2)}">${b.chips.map(c=>{
           const page = b.chipPages && b.chipPages[c];
           const design = (b.chipDesigns && b.chipDesigns[c]) || CHIP_DESIGNS[normalizeCatName(c)];
