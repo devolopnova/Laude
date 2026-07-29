@@ -298,6 +298,10 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
 @media (max-width:900px){
   .footer-top{grid-template-columns:1fr;gap:32px;}
   .footer-navigation{grid-template-columns:repeat(2,1fr);}
+  /* Igual que en guia-regalos-juguetes.html: el margin-top negativo de
+     .footer-logo solo alinea el logo con el chip "EDADES" en la columna
+     de escritorio; en 1 columna corta el logo contra la cabecera sticky. */
+  .footer-logo{margin-top:0;}
   .page-body{grid-template-columns:1fr;gap:32px;}
   .toc{position:static;}
   .contact-layout{grid-template-columns:1fr;}

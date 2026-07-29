@@ -670,6 +670,12 @@
   @media (max-width:900px){
     .footer-top{grid-template-columns:1fr;gap:32px;}
     .footer-navigation{grid-template-columns:repeat(2,1fr);}
+    /* El margin-top negativo de .footer-logo solo tiene sentido en la
+       columna de 2 columnas de escritorio, para alinear el logo con la
+       altura del chip "EDADES" de al lado. En 1 columna (tablet/movil) no
+       hay chip junto al que alinearse, y ese margen negativo tira del
+       logo hacia arriba hasta cortarlo contra la cabecera sticky. */
+    .footer-logo{margin-top:0;}
   }
   @media (max-width:640px){
     .footer-top{padding:32px 0;}
