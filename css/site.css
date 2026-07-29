@@ -401,15 +401,51 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 .bottom-nav-explore-icon{font-size:24px;line-height:1;}
 .bottom-nav-explore-name{font-size:13.5px;line-height:1.4;display:block;color:var(--ink);}
 .bottom-nav-explore-desc{font-size:12px;line-height:1.4;color:#6B7280;}
-/* Colores por posicion en grid de explorar mas */
-.bottom-nav-explore .bottom-nav-explore-card:nth-child(1){background:#F3F0FF;}.bottom-nav-explore .bottom-nav-explore-card:nth-child(1) .bottom-nav-explore-name{color:#6E40FF;}
-.bottom-nav-explore .bottom-nav-explore-card:nth-child(2){background:#FFF3ED;}.bottom-nav-explore .bottom-nav-explore-card:nth-child(2) .bottom-nav-explore-name{color:#FF6A00;}
-.bottom-nav-explore .bottom-nav-explore-card:nth-child(3){background:#F1F8F3;}.bottom-nav-explore .bottom-nav-explore-card:nth-child(3) .bottom-nav-explore-name{color:#2E7D32;}
+/* Colores por ROL (no por posicion): permite que la tarjeta de edad
+   anterior no exista en algunas paginas (p.ej. no hay edad posterior a
+   10 anos) sin que el color de Guia Montessori cambie por desplazarse de
+   posicion en el grid. */
+.bottom-nav-explore-card.bne-prev-age{background:#F3F0FF;}.bottom-nav-explore-card.bne-prev-age .bottom-nav-explore-name{color:#6E40FF;}
+.bottom-nav-explore-card.bne-next-age{background:#FFF3ED;}.bottom-nav-explore-card.bne-next-age .bottom-nav-explore-name{color:#FF6A00;}
+.bottom-nav-explore-card.bne-montessori{background:#F1F8F3;}.bottom-nav-explore-card.bne-montessori .bottom-nav-explore-name{color:#2E7D32;}
 .bottom-nav-note{font-size:12px;color:var(--ink-soft);text-align:center;padding:0 16px;}
+
+/* "Descubre mas juguetes para <edad>": tarjetas hacia el resto de
+   categorias de la misma edad (excluyendo la actual), para reforzar el
+   enlazado interno. Mismo radio, borde y tipografia que
+   .bottom-nav-explore-card. En escritorio/tablet es una cuadricula que se
+   adapta sola por ancho disponible (auto-fill); en movil pasa a carrusel
+   horizontal con scroll-snap - los enlaces siguen existiendo en el HTML
+   tal cual, solo cambia el CSS, asi que Google los sigue rastreando igual. */
+.discover-more-sub{font-size:13.5px;color:var(--ink-soft);margin:-16px 0 20px;}
+.discover-more-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;}
+.discover-more-card{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:18px 14px;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  text-align:center;color:inherit;text-decoration:none;
+  transition:border-color .15s,background .15s;
+}
+.discover-more-card:hover{border-color:var(--accent);background:rgba(255,138,101,0.03);}
+.discover-more-img{width:100%;max-width:96px;aspect-ratio:1;object-fit:contain;}
+.discover-more-name{font-size:13.5px;line-height:1.35;color:#2E7D32;}
+.discover-more-arrow{color:#2E7D32;font-size:15px;line-height:1;}
 
 @media (max-width:560px){
   .wrap{padding:0 24px;}
   .hero h1{font-size:28px;}
   .product{flex-direction:column;align-items:flex-start;gap:12px;}
   .product-card-img{width:140px;height:140px;}
+
+  /* Carrusel horizontal: la cuadricula pasa a fila con scroll-snap,
+     mostrando cada tarjeta parcialmente cortada para insinuar que hay mas. */
+  .discover-more-grid{
+    display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    margin:0 -24px;padding:2px 24px 6px;
+    scrollbar-width:none;
+  }
+  .discover-more-grid::-webkit-scrollbar{display:none;}
+  .discover-more-card{
+    flex:0 0 30%;min-width:112px;scroll-snap-align:start;padding:14px 10px;
+  }
 }

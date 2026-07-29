@@ -121,15 +121,12 @@ def generate_bottom_nav_html(prev_cat, next_cat, prev_age_link, next_age_link):
     <div class="bottom-nav-explore">
       <a class="bottom-nav-explore-card" href="guia-regalos-juguetes.html#a0">
         <strong class="bottom-nav-explore-name">Ver regalos para<br>0–6 meses</strong>
-        <span class="bottom-nav-explore-desc">Ideas para la etapa anterior</span>
       </a>
       <a class="bottom-nav-explore-card" href="guia-regalos-juguetes.html#a1">
         <strong class="bottom-nav-explore-name">Ver regalos para<br>2 años</strong>
-        <span class="bottom-nav-explore-desc">Ideas para la siguiente etapa</span>
       </a>
       <a class="bottom-nav-explore-card" href="guia-montessori.html">
         <strong class="bottom-nav-explore-name">Descubre la<br>Guía Montessori</strong>
-        <span class="bottom-nav-explore-desc">Juguetes por edades basados en el método Montessori</span>
       </a>
     </div>
     <p class="bottom-nav-note">ℹ Los enlaces llevan directamente a la ficha del producto en Amazon.es.</p>

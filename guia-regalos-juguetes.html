@@ -79,10 +79,17 @@
   .nav-dropdown a{padding:9px 12px;border-radius:8px;font-size:14px;font-weight:500;color:#1C1C1E;}
   .nav-dropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
 
-  .nav-dropdown-item-wrapper{position:relative;}
-  .nav-dropdown-item-link{display:block;}
+  .nav-dropdown-item-wrapper{position:relative;display:flex;align-items:center;}
+  .nav-dropdown-item-link{display:block;flex:1;}
   .nav-subdropdown{
-    position:absolute;left:calc(100% + 4px);top:0;min-width:220px;
+    /* left:100% (sin hueco) en vez de "+4px": un hueco entre el trigger y el
+       submenu es zona muerta de hover, el cursor sale de ambos al cruzarlo y
+       el submenu se cierra antes de llegar. El borde+sombra ya dan
+       separacion visual sin necesidad de un gap real.
+       top:-8px (en vez de 0) compensa el padding propio del submenu (8px)
+       para que el texto de la primera categoria quede a la misma altura
+       que el texto de la edad sobre la que se hace hover, no 8px mas abajo. */
+    position:absolute;left:100%;top:-8px;min-width:220px;
     background:#fff;border:1px solid #ECE6DA;border-radius:8px;
     box-shadow:0 10px 30px rgba(28,28,30,.12);padding:8px;
     display:none;flex-direction:column;gap:2px;
@@ -90,6 +97,55 @@
   .nav-dropdown-item-wrapper:hover .nav-subdropdown{display:flex;}
   .nav-subdropdown a{padding:9px 12px;border-radius:6px;font-size:13px;font-weight:500;color:#1C1C1E;}
   .nav-subdropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
+  /* Boton-flecha inyectado por JS: solo visible en movil (no hay :hover
+     tactil). El link de la edad SIEMPRE navega directo al tap; este boton
+     aparte es el unico que despliega el submenu de categorias. */
+  .nav-subdropdown-toggle{display:none;}
+  @media (max-width:640px){
+    .nav-subdropdown-toggle{
+      /* 44x44 (no 34x34): minimo recomendado de tap target tactil (Apple HIG
+         / Material Design), para que el dedo no falle el toque en un
+         dispositivo real. */
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+      width:44px;height:44px;margin:-5px -8px -5px 0;border:none;background:transparent;
+      color:#8B8981;font-size:18px;cursor:pointer;
+    }
+    .nav-subdropdown-toggle[aria-expanded="true"] i{transform:rotate(90deg);}
+    .nav-subdropdown-toggle i{transition:transform .15s;}
+    /* No anular aqui el :hover general (linea 97): en tactil real no se
+       sostiene, asi que no molesta, pero SI es necesario para quien prueba
+       la vista movil redimensionando el navegador de escritorio con raton
+       — ahi el hover real si funciona y debe seguir desplegando el submenu
+       al pasar por encima, igual que en desktop. */
+    /* El wrapper pasa a permitir salto de linea: link y boton ocupan la
+       fila superior, y el submenu (flex-basis:100%) cae siempre a una
+       fila propia debajo, en vez de flotar a la derecha como en desktop. */
+    .nav-dropdown-item-wrapper{flex-wrap:wrap;}
+    /* order explicito: el boton (creado por JS y anadido al DOM DESPUES del
+       div .nav-subdropdown) debe quedar siempre en la fila de arriba junto
+       al link, no despues del submenu. Sin esto, al expandir (subdropdown
+       con flex-basis:100% fuerza su propia fila) el boton -que va detras en
+       el DOM- caia a una TERCERA fila, debajo de las categorias, en vez de
+       quedarse junto al nombre de la edad. */
+    .nav-dropdown-item-link{order:1;}
+    .nav-subdropdown-toggle{order:2;}
+    .nav-subdropdown{order:3;position:static;flex-basis:100%;box-shadow:none;border:none;padding:2px 0 2px 14px;margin-top:2px;min-width:0;width:100%;}
+    .nav-subdropdown.is-open-mobile{display:flex;}
+    /* El header es sticky, asi que scrollear la pagina NO mueve el
+       desplegable (esta "pegado" al header) ni revela el resto de una
+       franja expandida que se salga por debajo de la pantalla. Le damos
+       scroll propio, limitado a la altura visible bajo el header
+       (--mobile-header-h, la misma variable que ya mide su alto real), con
+       margen de 16px de aire abajo. overflow-y:auto NO se aplica en
+       desktop (solo dentro de esta media query) porque ahi clipearia el
+       submenu flotante que sale hacia la derecha (position:absolute;
+       left:100%). */
+    .nav-dropdown{
+      max-height:calc(100vh - var(--mobile-header-h, 174px) - 16px);
+      overflow-y:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+  }
 
   /* HERO principal — fotografia a sangre completa (extraida de la maqueta
      de referencia, sin recortar, sin zoom y sin ningun efecto). El texto
@@ -97,7 +153,14 @@
      fotografia; no se superpone ningun texto HTML encima para evitar
      duplicados. */
   .hero-main{position:relative;overflow:hidden;padding:0 32px;}
-  .hero-main-photo{display:block;width:100%;height:auto;max-height:700px;object-fit:cover;object-position:center 30%;}
+  /* La foto se muestra SIEMPRE entera: solo width:100% + height:auto, sin
+     max-height y sin object-fit. Es una decision deliberada — se prioriza que
+     la composicion de la fotografia (mesa, libro, juguetes) se vea completa
+     por encima de que la franja de edades entre en el primer pantallazo. Las
+     edades quedan por debajo y se llega a ellas con un pequeno scroll.
+     No reintroducir max-height/object-fit aqui para "hacer sitio" a las
+     edades: eso recorta la foto y es justo lo que se quiso evitar. */
+  .hero-main-photo{display:block;width:100%;height:auto;}
   @media (max-width:640px){
     .brand-icon{width:32px;height:32px;}
     .brand-title{font-size:17px;}
@@ -123,7 +186,13 @@
      "Edades" de la cabecera siga funcionando). El titular/subtitulo que
      llevaba encima se elimino: ahora el mensaje principal vive en
      .hero-main, superpuesto a la fotografia. */
-  .hero{padding-top:12px;padding-bottom:52px;border-bottom:1px solid var(--line);text-align:center;}
+  /* 24px exactos entre el borde inferior de la fotografia del hero y la
+     franja de edades. Va aqui como padding-top de .hero (y no como
+     margin-top de .age-cards) porque .hero es el hermano inmediato de
+     .hero-main: asi el valor no colapsa con ningun otro margen. El
+     padding-top de .age-cards debe seguir siendo 0 para que estos 24px
+     sean los unicos que separan hero y edades. */
+  .hero{padding-top:24px;padding-bottom:36px;text-align:center;}
 
   /* Selector de edades: seis fotografías circulares alineadas, con un aro fino
      de su familia de color (coral, ámbar, amarillo, verde, azul y morado).
@@ -132,7 +201,7 @@
   .age-cards{
     margin:0 auto 0;max-width:960px;
     display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:28px;align-items:start;
-    padding:10px 4px 24px;
+    padding:0 4px 24px;
   }
   .age-card{
     --age-accent:#D85A30;display:flex;min-width:0;flex-direction:column;align-items:center;
@@ -183,6 +252,17 @@
   .age-list .age-row:last-child{}
   [id^="fav-"]{scroll-margin-top:110px;}
   [id^="categories-"]{scroll-margin-top:85px;}
+  @media (max-width:640px){
+    /* En movil los chips de la cabecera pasan a 2 filas y su alto real
+       varia (ancho de pantalla, tamano de fuente del sistema, etc.), asi
+       que 65px fijos se quedaban cortos y el titulo "Explora los juguetes
+       por categoria" acababa tapado detras de la cabecera sticky. La
+       variable --mobile-header-h la fija un script (mide header.offsetHeight
+       en tiempo real, con 174px de fallback antes de que corra el JS) y
+       aqui solo se le suman 16px de aire para que el titulo quede
+       completamente visible, nunca a medias. */
+    [id^="categories-"]{scroll-margin-top:calc(var(--mobile-header-h, 174px) + 16px);}
+  }
   /* Insignia de edad: circulo tintado con anillo del color de la franja
      (var(--accent), fijado por fila desde el array bands) del que baja una
      linea vertical fina que recorre toda la franja y termina en un punto.
@@ -840,7 +920,7 @@
 </header>
 
 <section class="hero-main">
-  <img class="hero-main-photo" src="images/hero/hero-main.webp" alt="Mesa con juguetes de madera: bloques de construcción, tren, oso de peluche, xilófono, microscopio y un libro infantil. Encuentra el regalo ideal para cada etapa: juguetes seleccionados con criterio, para aprender, jugar y crecer.">
+  <img class="hero-main-photo" src="images/hero/hero-main.webp" alt="Sala de juegos con juguetes de madera: bloques de construcción, tren, oso de peluche, xilófono, apilable de anillas, microscopio y un libro infantil. Encuentra el regalo ideal para cada etapa.">
 </section>
 
 <div class="ruler">
@@ -1105,12 +1185,61 @@
       if(willOpen){ dropdown.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); }
     });
   });
-  document.addEventListener('click', ()=>{
+  document.addEventListener('click', (e)=>{
+    // No cerrar el dropdown si el click ocurrió dentro de él (incluyendo
+    // toggles de categorías en móvil), solo cerrar si hizo click fuera.
+    if(e.target.closest('.nav-dropdown')) return;
+
     document.querySelectorAll('.nav-dropdown.is-open').forEach(d=>{
       d.classList.remove('is-open');
       document.querySelector(`[data-dropdown="${d.id}"]`)?.setAttribute('aria-expanded','false');
     });
   });
+
+  // En móvil no hay :hover, así que el submenu de categorías se despliega con
+  // un botón-flecha aparte (inyectado aquí) en vez de interceptar el tap
+  // sobre el nombre de la edad: ese link SIEMPRE debe navegar directo al
+  // encabezado "Explora los juguetes por categoría" en el primer tap, sin
+  // que nada le haga preventDefault.
+  document.querySelectorAll('.nav-dropdown-item-wrapper').forEach(wrapper=>{
+    const subdrop = wrapper.querySelector('.nav-subdropdown');
+    if(!subdrop) return;
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'nav-subdropdown-toggle';
+    toggle.setAttribute('aria-label', 'Ver categorías de esta edad');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<i class="ti ti-chevron-right" aria-hidden="true"></i>';
+    toggle.addEventListener('click', (e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = subdrop.classList.contains('is-open-mobile');
+      document.querySelectorAll('.nav-subdropdown.is-open-mobile').forEach(s=>{
+        s.classList.remove('is-open-mobile');
+        s.closest('.nav-dropdown-item-wrapper')?.querySelector('.nav-subdropdown-toggle')?.setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        subdrop.classList.add('is-open-mobile');
+        toggle.setAttribute('aria-expanded','true');
+      }
+    });
+    wrapper.appendChild(toggle);
+  });
+
+  // Mide el alto real de la cabecera sticky y lo expone en --mobile-header-h
+  // para que [id^="categories-"] (CSS de arriba) calcule su scroll-margin-top
+  // exacto. En movil los chips pasan a 2 filas y ese alto varia segun ancho
+  // de pantalla / tamano de fuente, asi que un valor fijo se quedaba corto y
+  // el titulo "Explora los juguetes por categoria" quedaba tapado detras de
+  // la cabecera al hacer scroll a el. Se recalcula en resize por si el
+  // usuario gira el movil o cambia el zoom del texto.
+  function updateMobileHeaderHeight(){
+    const header = document.querySelector('header');
+    if(!header) return;
+    document.documentElement.style.setProperty('--mobile-header-h', header.offsetHeight + 'px');
+  }
+  updateMobileHeaderHeight();
+  window.addEventListener('resize', updateMobileHeaderHeight);
 
   // Separador de miles en formato español (punto). No usar toLocaleString:
   // en algunos motores no agrupa numeros de 4 cifras (9058 en vez de 9.058).
@@ -1288,6 +1417,11 @@
       ],
       img:'images/cabecera/edad-3-anos.webp',
       chips:['Bicicletas y patinetes','Construcciones','Cocinitas','Disfraces','Manualidades','Juegos de mesa','Libros','Figuras y animales','Coches teledirigidos','Puzzles','Coches'],
+      chipDesigns:{
+        'Cocinitas':{bg:'#EDF6F4', icon:'images/icons-3d/cocinitas-3-anos.png'},
+        'Bicicletas y patinetes':{bg:'#FDEFEA', icon:'images/icons-3d/bicicletas-y-patinetes-3-anos.png'},
+        'Coches':{bg:'#EBF4FA', icon:'images/icons-3d/coches-3-anos.png'}
+      },
       chipPages:{
         'Bicicletas y patinetes':'bicicletas-y-patinetes-3-anos.html',
         'Cocinitas':'cocinitas-3-anos.html',
@@ -1699,11 +1833,11 @@
     [normalizeCatName('Juegos de mesa')]: {bg:'#EEF7EA', icon:'images/icons-3d/juegos-de-mesa-fixed.webp'},
     [normalizeCatName('Ciencia')]: {bg:'#EAF3FD', icon:'images/icons-3d/ciencia-cutout.webp'},
     [normalizeCatName('Manualidades')]: {bg:'#FDF5E9', icon:'images/icons-3d/manualidades-fixed.webp'},
-    [normalizeCatName('Bicicletas y patinetes')]: {bg:'#FDEFEA', icon:'images/icons-3d/bicicletas-y-patinetes-cutout.webp'},
+    [normalizeCatName('Bicicletas y patinetes')]: {bg:'#FDEFEA', icon:'images/icons-3d/bicicletas-y-patinetes-3-anos.png'},
     [normalizeCatName('Coches')]: {bg:'#EBF4FA', icon:'images/icons-3d/coches-cutout.webp'},
     [normalizeCatName('Coches teledirigidos')]: {bg:'#FDF7EE', icon:'images/icons-3d/coches-teledirigidos-completo.png'},
     [normalizeCatName('Libros')]: {bg:'#FDECED', icon:'images/icons-3d/libros-cutout.webp'},
-    [normalizeCatName('Cocinitas')]: {bg:'#EDF6F4', icon:'images/icons-3d/cocinitas-cutout.webp'},
+    [normalizeCatName('Cocinitas')]: {bg:'#EDF6F4', icon:'images/icons-3d/cocinitas-3-anos.png'},
     [normalizeCatName('Puzzles')]: {bg:'#F2EBF8', icon:'images/icons-3d/puzzles-cutout.webp'},
     [normalizeCatName('Disfraces')]: {bg:'#FCF3DB', icon:'images/icons-3d/disfraces-cutout.webp'},
     [normalizeCatName('Robótica')]: {bg:'#F6F3F9', icon:'images/icons-3d/robotica-6-anos.png'},
