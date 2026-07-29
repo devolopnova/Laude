@@ -602,7 +602,7 @@
   .footer-tagline{font-size:11px;font-weight:600;letter-spacing:0.04em;color:#9FAF93;margin:0;}
   .footer-desc{font-size:13px;line-height:1.6;color:#C5BFB5;margin:0;}
 
-  .footer-navigation{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start;}
+  .footer-navigation{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:start;}
   .footer-accordion-btn{
     width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
     border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
@@ -615,6 +615,21 @@
   }
   .footer-accordion-btn i{font-size:14px;transition:transform .2s;}
   .footer-accordion-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+
+  /* Chip "Buscar" del footer: misma caja que los botones de acordeon
+     (border/padding/tipografia), pero sin flecha ni contenido desplegable,
+     igual que el boton "Buscar" de la cabecera (decorativo, sin funcion
+     de busqueda todavia). Clase propia para que no la capture el
+     querySelectorAll('.footer-accordion-btn') que engancha los acordeones. */
+  .footer-search-chip{
+    width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
+    border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
+    letter-spacing:0.02em;display:flex;align-items:center;gap:8px;
+    font-family:'Inter',sans-serif;cursor:pointer;transition:border-color .2s,background .2s;
+  }
+  .footer-search-chip:hover{border-color:#5A7F65;background:rgba(255,255,255,.04);}
+  .footer-search-chip i{font-size:14px;}
+
   .footer-accordion-content{padding:12px 0;display:flex;flex-direction:column;gap:8px;}
   .footer-accordion-content a{
     font-size:13px;color:#C5BFB5;text-decoration:none;padding:4px 0;
@@ -640,6 +655,30 @@
   }
   .footer-chip:last-child{border-bottom:none;}
   .footer-chip:hover{color:#E8E6E0;}
+
+  /* Sub-acordeon de edades dentro del acordeon "EDADES" del footer: cada
+     edad es un boton que despliega, justo debajo y en el mismo sitio, la
+     lista de categorias disponibles para esa edad (nunca un flyout lateral
+     tipo cabecera, que no encaja en la columna estrecha del footer). */
+  .footer-age-item{border-bottom:1px solid rgba(61,90,71,.5);}
+  .footer-age-item:last-child{border-bottom:none;}
+  .footer-age-btn{
+    width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px;
+    background:transparent;border:none;padding:10px 0;font-size:13px;color:#C5BFB5;
+    text-align:left;cursor:pointer;transition:color .2s;font-family:'Inter',sans-serif;
+  }
+  .footer-age-btn:hover{color:#E8E6E0;}
+  .footer-age-btn[aria-expanded="true"]{color:#E8E6E0;}
+  .footer-age-btn i{font-size:12px;flex-shrink:0;transition:transform .2s;}
+  .footer-age-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+  .footer-age-cats{
+    display:flex;flex-direction:column;
+    max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .3s ease,opacity .3s ease;
+    padding-left:14px;
+  }
+  .footer-subchip{font-size:12.5px;color:#A9A399;text-decoration:none;padding:6px 0;transition:color .2s;}
+  .footer-subchip:hover{color:#E8E6E0;}
 
   .footer-divider{border:none;border-top:1px solid #3D5A47;margin:0;}
 
@@ -1029,37 +1068,213 @@
           <i class="ti ti-chevron-down" aria-hidden="true"></i>
         </button>
         <div class="footer-accordion-content footer-chips" id="footer-edades" hidden>
-          <a class="footer-chip" href="#categories-a0">0–6 meses</a>
-          <a class="footer-chip" href="#categories-a1">6–12 meses</a>
-          <a class="footer-chip" href="#categories-a2">1 año</a>
-          <a class="footer-chip" href="#categories-a3">2 años</a>
-          <a class="footer-chip" href="#categories-a4">3 años</a>
-          <a class="footer-chip" href="#categories-a5">4 años</a>
-          <a class="footer-chip" href="#categories-a6">5 años</a>
-          <a class="footer-chip" href="#categories-a7">6 años</a>
-          <a class="footer-chip" href="#categories-a8">7 años</a>
-          <a class="footer-chip" href="#categories-a9">8 años</a>
-          <a class="footer-chip" href="#categories-a10">9 años</a>
-          <a class="footer-chip" href="#categories-a11">10 años</a>
-        </div>
-      </div>
-
-      <div class="footer-accordion">
-        <button class="footer-accordion-btn" aria-expanded="false" aria-controls="footer-categorias">
-          <span>CATEGORÍAS</span>
-          <i class="ti ti-chevron-down" aria-hidden="true"></i>
-        </button>
-        <div class="footer-accordion-content footer-chips" id="footer-categorias" hidden>
-          <a class="footer-chip" href="peluches.html">Peluches</a>
-          <a class="footer-chip" href="mordedores.html">Mordedores</a>
-          <a class="footer-chip" href="gimnasio-de-actividades.html">Gimnasio de actividades</a>
-          <a class="footer-chip" href="sonajeros.html">Sonajeros</a>
-          <a class="footer-chip" href="libros-de-tela.html">Libros de tela</a>
-          <a class="footer-chip" href="juguete-espiral-cochecito.html">Juguete espiral cochecito</a>
-          <a class="footer-chip" href="regalos-personalizados.html">Regalos personalizados</a>
-          <a class="footer-chip" href="canastillas-de-regalo.html">Canastillas de regalo</a>
-          <a class="footer-chip" href="cesta-organizadora.html">Cesta organizadora</a>
-          <a class="footer-chip" href="primera-puesta.html">Primera puesta</a>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a0">
+              <span>0–6 meses</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a0" hidden>
+              <a class="footer-subchip" href="peluches.html">Peluches</a>
+              <a class="footer-subchip" href="mordedores.html">Mordedores</a>
+              <a class="footer-subchip" href="gimnasio-de-actividades.html">Gimnasio de actividades</a>
+              <a class="footer-subchip" href="juguete-espiral-cochecito.html">Juguete espiral cochecito</a>
+              <a class="footer-subchip" href="regalos-personalizados.html">Regalos personalizados</a>
+              <a class="footer-subchip" href="canastillas-de-regalo.html">Canastillas de regalo</a>
+              <a class="footer-subchip" href="sonajeros.html">Sonajeros</a>
+              <a class="footer-subchip" href="libros-de-tela.html">Libros de tela</a>
+              <a class="footer-subchip" href="cesta-organizadora.html">Cesta organizadora</a>
+              <a class="footer-subchip" href="primera-puesta.html">Primera puesta</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a1">
+              <span>6–12 meses</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a1" hidden>
+              <a class="footer-subchip" href="andadores-y-primeros-pasos-6-12-meses.html">Andadores y primeros pasos</a>
+              <a class="footer-subchip" href="bloques-blandos-6-12-meses.html">Bloques blandos</a>
+              <a class="footer-subchip" href="mordedores-6-12-meses.html">Mordedores</a>
+              <a class="footer-subchip" href="gimnasio-de-actividades-6-12-meses.html">Gimnasio de actividades</a>
+              <a class="footer-subchip" href="juguete-espiral-cochecito-6-12-meses.html">Juguete espiral cochecito</a>
+              <a class="footer-subchip" href="sonajeros-6-12-meses.html">Sonajeros</a>
+              <a class="footer-subchip" href="libros-de-tela-6-12-meses.html">Libros de tela</a>
+              <a class="footer-subchip" href="peluches-6-12-meses.html">Peluches</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a2">
+              <span>1 año</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a2" hidden>
+              <a class="footer-subchip" href="correpasillos-1-ano.html">Correpasillos</a>
+              <a class="footer-subchip" href="construcciones-1-ano.html">Construcciones</a>
+              <a class="footer-subchip" href="vehiculos-1-ano.html">Vehículos</a>
+              <a class="footer-subchip" href="libros-1-ano.html">Libros</a>
+              <a class="footer-subchip" href="puzzles-1-ano.html">Puzzles</a>
+              <a class="footer-subchip" href="pintura-y-creatividad-1-ano.html">Pintura y creatividad</a>
+              <a class="footer-subchip" href="peluches-1-ano.html">Peluches</a>
+              <a class="footer-subchip" href="juguetes-de-bano-1-ano.html">Juegos de baño</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a3">
+              <span>2 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a3" hidden>
+              <a class="footer-subchip" href="correpasillos-2-anos.html">Correpasillos</a>
+              <a class="footer-subchip" href="vehiculos-2-anos.html">Vehículos</a>
+              <a class="footer-subchip" href="construcciones-2-anos.html">Construcciones</a>
+              <a class="footer-subchip" href="manualidades-2-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="puzzles-2-anos.html">Puzzles</a>
+              <a class="footer-subchip" href="libros-2-anos.html">Libros</a>
+              <a class="footer-subchip" href="juguetes-musicales-2-anos.html">Música</a>
+              <a class="footer-subchip" href="juguetes-de-bano-2-anos.html">Juguetes de baño</a>
+              <a class="footer-subchip" href="peluches-2-anos.html">Peluches</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a4">
+              <span>3 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a4" hidden>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-3-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="construcciones-3-anos.html">Construcciones</a>
+              <a class="footer-subchip" href="cocinitas-3-anos.html">Cocinitas</a>
+              <a class="footer-subchip" href="disfraces-3-anos.html">Disfraces</a>
+              <a class="footer-subchip" href="manualidades-3-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="juegos-de-mesa-3-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="libros-3-anos.html">Libros</a>
+              <a class="footer-subchip" href="figuras-y-animales-3-anos.html">Figuras y animales</a>
+              <a class="footer-subchip" href="coches-teledirigidos-3-anos.html">Coches teledirigidos</a>
+              <a class="footer-subchip" href="puzzles-3-anos.html">Puzzles</a>
+              <a class="footer-subchip" href="coches-3-anos.html">Coches</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a5">
+              <span>4 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a5" hidden>
+              <a class="footer-subchip" href="construcciones-4-anos.html">Construcciones</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-4-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="ciencia-4-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="manualidades-4-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="juegos-de-mesa-4-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="disfraces-4-anos.html">Disfraces</a>
+              <a class="footer-subchip" href="coches-4-anos.html">Coches</a>
+              <a class="footer-subchip" href="libros-4-anos.html">Libros</a>
+              <a class="footer-subchip" href="coches-teledirigidos-4-anos.html">Coches teledirigidos</a>
+              <a class="footer-subchip" href="cocinitas-4-anos.html">Cocinitas</a>
+              <a class="footer-subchip" href="puzzles-4-anos.html">Puzzles</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a6">
+              <span>5 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a6" hidden>
+              <a class="footer-subchip" href="construcciones-5-anos.html">Construcciones</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-5-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="ciencia-5-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="manualidades-5-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="juegos-de-mesa-5-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="disfraces-5-anos.html">Disfraces</a>
+              <a class="footer-subchip" href="coches-5-anos.html">Coches</a>
+              <a class="footer-subchip" href="libros-5-anos.html">Libros</a>
+              <a class="footer-subchip" href="coches-teledirigidos-5-anos.html">Coches teledirigidos</a>
+              <a class="footer-subchip" href="cocinitas-5-anos.html">Cocinitas</a>
+              <a class="footer-subchip" href="puzzles-5-anos.html">Puzzles</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a7">
+              <span>6 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a7" hidden>
+              <a class="footer-subchip" href="lego-6-anos.html">LEGO</a>
+              <a class="footer-subchip" href="robotica-6-anos.html">Robótica</a>
+              <a class="footer-subchip" href="ciencia-6-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-6-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="juegos-de-mesa-6-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="manualidades-6-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="libros-6-anos.html">Libros</a>
+              <a class="footer-subchip" href="coches-6-anos.html">Coches</a>
+              <a class="footer-subchip" href="coches-teledirigidos-6-anos.html">Coches teledirigidos</a>
+              <a class="footer-subchip" href="puzzles-6-anos.html">Puzzles</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a8">
+              <span>7 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a8" hidden>
+              <a class="footer-subchip" href="lego-7-anos.html">LEGO</a>
+              <a class="footer-subchip" href="robotica-7-anos.html">Robótica</a>
+              <a class="footer-subchip" href="ciencia-7-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="manualidades-7-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="juegos-de-mesa-7-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="drones-7-anos.html">Drones</a>
+              <a class="footer-subchip" href="libros-7-anos.html">Libros</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-7-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="puzzles-7-anos.html">Puzzles</a>
+              <a class="footer-subchip" href="coches-7-anos.html">Coches</a>
+              <a class="footer-subchip" href="coches-teledirigidos-7-anos.html">Coches teledirigidos</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a9">
+              <span>8 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a9" hidden>
+              <a class="footer-subchip" href="robotica-8-anos.html">Robótica</a>
+              <a class="footer-subchip" href="ciencia-8-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="lego-8-anos.html">LEGO</a>
+              <a class="footer-subchip" href="drones-8-anos.html">Drones</a>
+              <a class="footer-subchip" href="libros-8-anos.html">Libros</a>
+              <a class="footer-subchip" href="juegos-de-mesa-8-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="manualidades-8-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="puzzles-8-anos.html">Puzzles</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-8-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="coches-8-anos.html">Coches</a>
+              <a class="footer-subchip" href="coches-teledirigidos-8-anos.html">Coches teledirigidos</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a10">
+              <span>9 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a10" hidden>
+              <a class="footer-subchip" href="robotica-9-anos.html">Robótica</a>
+              <a class="footer-subchip" href="ciencia-9-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="drones-9-anos.html">Drones</a>
+              <a class="footer-subchip" href="lego-9-anos.html">LEGO</a>
+              <a class="footer-subchip" href="libros-9-anos.html">Libros</a>
+              <a class="footer-subchip" href="juegos-de-mesa-9-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="manualidades-9-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="puzzles-9-anos.html">Puzzles</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-9-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="coches-9-anos.html">Coches</a>
+              <a class="footer-subchip" href="coches-teledirigidos-9-anos.html">Coches teledirigidos</a>
+            </div>
+          </div>
+          <div class="footer-age-item">
+            <button class="footer-age-btn" type="button" aria-expanded="false" aria-controls="footer-age-a11">
+              <span>10 años</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="footer-age-cats" id="footer-age-a11" hidden>
+              <a class="footer-subchip" href="robotica-10-anos.html">Robótica</a>
+              <a class="footer-subchip" href="ciencia-10-anos.html">Ciencia</a>
+              <a class="footer-subchip" href="drones-10-anos.html">Drones</a>
+              <a class="footer-subchip" href="lego-10-anos.html">LEGO</a>
+              <a class="footer-subchip" href="libros-10-anos.html">Libros</a>
+              <a class="footer-subchip" href="juegos-de-mesa-10-anos.html">Juegos de mesa</a>
+              <a class="footer-subchip" href="manualidades-10-anos.html">Manualidades</a>
+              <a class="footer-subchip" href="puzzles-10-anos.html">Puzzles</a>
+              <a class="footer-subchip" href="bicicletas-y-patinetes-10-anos.html">Bicicletas y patinetes</a>
+              <a class="footer-subchip" href="coches-10-anos.html">Coches</a>
+              <a class="footer-subchip" href="coches-teledirigidos-10-anos.html">Coches teledirigidos</a>
+              <a class="footer-subchip" href="diseno-y-dibujo-10-anos.html">Diseño y dibujo</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1086,6 +1301,12 @@
           <a class="footer-chip" href="aviso-legal.html">Aviso legal</a>
           <a class="footer-chip" href="afiliacion-y-transparencia.html">Afiliados Amazon</a>
         </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="footer-search-chip" type="button">
+          <i class="ti ti-search" aria-hidden="true"></i><span>BUSCAR</span>
+        </button>
       </div>
     </div>
   </div>
@@ -1169,6 +1390,48 @@
           },0);
         }
       }
+    });
+  });
+
+  // Sub-acordeon de categorias por edad, dentro del acordeon "EDADES" del
+  // footer: al abrir una edad se despliegan sus categorias justo debajo
+  // (nunca un flyout lateral). Solo una edad abierta a la vez dentro del
+  // mismo panel. Como el alto maximo del panel "EDADES" se fijo al abrirlo
+  // con las edades aun colapsadas, hay que recalcularlo cada vez que una
+  // edad se abre o se cierra, o el contenido nuevo quedaria recortado.
+  document.querySelectorAll('.footer-age-btn').forEach(btn=>{
+    const cats = document.getElementById(btn.getAttribute('aria-controls'));
+    if(!cats) return;
+    btn.addEventListener('click', ()=>{
+      const isOpen = btn.getAttribute('aria-expanded')==='true';
+      const panel = btn.closest('.footer-accordion-content');
+      const syncPanelHeight = ()=>{
+        if(panel && !panel.hasAttribute('hidden')){ panel.style.maxHeight=(panel.scrollHeight+16)+'px'; }
+      };
+      if(panel){
+        panel.querySelectorAll('.footer-age-btn').forEach(b=>{
+          if(b!==btn && b.getAttribute('aria-expanded')==='true'){
+            const c = document.getElementById(b.getAttribute('aria-controls'));
+            b.setAttribute('aria-expanded','false');
+            if(c){ c.style.maxHeight='0px'; c.style.opacity='0'; c.setAttribute('hidden',''); }
+          }
+        });
+      }
+      if(isOpen){
+        btn.setAttribute('aria-expanded','false');
+        cats.style.maxHeight='0px';
+        cats.style.opacity='0';
+        cats.setAttribute('hidden','');
+      } else {
+        btn.setAttribute('aria-expanded','true');
+        cats.removeAttribute('hidden');
+        setTimeout(()=>{
+          cats.style.maxHeight=(cats.scrollHeight+8)+'px';
+          cats.style.opacity='1';
+        },0);
+      }
+      syncPanelHeight();
+      setTimeout(syncPanelHeight,320);
     });
   });
 

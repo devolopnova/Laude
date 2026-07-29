@@ -234,7 +234,7 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
 .footer-tagline{font-size:11px;font-weight:600;letter-spacing:0.04em;color:#9FAF93;margin:0;}
 .footer-desc{font-size:13px;line-height:1.6;color:#C5BFB5;margin:0;}
 
-.footer-navigation{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start;}
+.footer-navigation{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:start;}
 .footer-accordion-btn{
   width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
   border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
@@ -247,6 +247,21 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
 }
 .footer-accordion-btn i{font-size:14px;transition:transform .2s;}
 .footer-accordion-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+
+/* Chip "Buscar" del footer: misma caja que los botones de acordeon
+   (border/padding/tipografia), pero sin flecha ni contenido desplegable,
+   igual que el boton "Buscar" de la cabecera (decorativo, sin funcion
+   de busqueda todavia). Clase propia para que no la capture el
+   querySelectorAll('.footer-accordion-btn') que engancha los acordeones. */
+.footer-search-chip{
+  width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
+  border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
+  letter-spacing:0.02em;display:flex;align-items:center;gap:8px;
+  font-family:'Inter',sans-serif;cursor:pointer;transition:border-color .2s,background .2s;
+}
+.footer-search-chip:hover{border-color:#5A7F65;background:rgba(255,255,255,.04);}
+.footer-search-chip i{font-size:14px;}
+
 .footer-accordion-content{
   flex-direction:column;gap:0;padding:0;
   max-height:0;opacity:0;overflow:hidden;
@@ -268,6 +283,30 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
 }
 .footer-chip:last-child{border-bottom:none;}
 .footer-chip:hover{color:#E8E6E0;}
+
+/* Sub-acordeon de edades dentro del acordeon "EDADES" del footer: cada
+   edad es un boton que despliega, justo debajo y en el mismo sitio, la
+   lista de categorias disponibles para esa edad (nunca un flyout lateral
+   tipo cabecera, que no encaja en la columna estrecha del footer). */
+.footer-age-item{border-bottom:1px solid rgba(61,90,71,.5);}
+.footer-age-item:last-child{border-bottom:none;}
+.footer-age-btn{
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px;
+  background:transparent;border:none;padding:10px 0;font-size:13px;color:#C5BFB5;
+  text-align:left;cursor:pointer;transition:color .2s;font-family:'Inter',sans-serif;
+}
+.footer-age-btn:hover{color:#E8E6E0;}
+.footer-age-btn[aria-expanded="true"]{color:#E8E6E0;}
+.footer-age-btn i{font-size:12px;flex-shrink:0;transition:transform .2s;}
+.footer-age-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+.footer-age-cats{
+  display:flex;flex-direction:column;
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .3s ease,opacity .3s ease;
+  padding-left:14px;
+}
+.footer-subchip{font-size:12.5px;color:#A9A399;text-decoration:none;padding:6px 0;transition:color .2s;}
+.footer-subchip:hover{color:#E8E6E0;}
 
 .footer-divider{border:none;border-top:1px solid #3D5A47;margin:0;}
 
