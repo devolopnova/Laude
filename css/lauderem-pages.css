@@ -1,0 +1,325 @@
+/*
+  lauderem-pages.css
+  Estilos compartidos por las paginas informativas de Lauderem (Sobre
+  nosotros, Contacto, Politica de privacidad, Politica de cookies, Aviso
+  legal, Afiliacion y transparencia). Reutiliza la misma cabecera y el mismo
+  footer que guia-regalos-juguetes.html (mismas variables, tipografia,
+  colores y comportamiento), para que estas paginas se sientan parte de la
+  misma web. Si el diseno de cabecera/footer cambia en la landing, replicar
+  el cambio aqui tambien.
+*/
+
+:root{
+  --bg:#FAFAF8;
+  --ink:#1C1C1E;
+  --ink-soft:#6B6B70;
+  --line:#E4E2DC;
+  --card:#FFFFFF;
+  --accent:#FF8A65;
+  --chip-icon:#378ADD;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+.mono{font-family:'JetBrains Mono',monospace;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+
+/* ---------- CABECERA (identica a guia-regalos-juguetes.html) ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:#FBF3EA;
+  border-bottom:1px solid #F0E4D5;
+}
+nav.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand-icon{width:40px;height:40px;object-fit:contain;flex-shrink:0;}
+.brand-text{display:flex;flex-direction:column;}
+.brand-title{font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;color:#1D6B3E;line-height:1.15;}
+.brand-sub{font-size:12.5px;color:#B5651D;margin-top:1px;}
+
+.nav-chips{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.nav-chip-wrap{position:relative;}
+.nav-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid #ECE6DA;border-radius:999px;
+  padding:10px 20px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#1C1C1E;
+  cursor:pointer;transition:box-shadow .15s,border-color .15s;
+  box-shadow:0 1px 2px rgba(28,28,30,.04);
+}
+.nav-chip i{color:#2E7D46;font-size:17px;line-height:1;}
+.nav-chip:hover{box-shadow:0 3px 10px rgba(28,28,30,.08);border-color:#DCD3C0;}
+.chip-caret{font-size:14px !important;color:#8B8981 !important;margin-left:-2px;transition:transform .15s;}
+.nav-chip[aria-expanded="true"] .chip-caret{transform:rotate(180deg);}
+
+.nav-dropdown{
+  position:absolute;top:calc(100% + 8px);left:0;min-width:200px;max-width:260px;
+  background:#fff;border:1px solid #ECE6DA;border-radius:14px;
+  box-shadow:0 10px 30px rgba(28,28,30,.12);padding:8px;
+  display:none;flex-direction:column;gap:2px;z-index:60;
+  max-height:calc(100vh - var(--mobile-header-h, 174px) - 16px);overflow-y:auto;
+}
+.nav-dropdown.is-open{display:flex;}
+.nav-dropdown a{padding:9px 12px;border-radius:8px;font-size:14px;font-weight:500;color:#1C1C1E;}
+.nav-dropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
+
+@media (max-width:640px){
+  .brand-icon{width:32px;height:32px;}
+  .brand-title{font-size:17px;}
+  .brand-sub{font-size:11px;}
+  .nav-chip{padding:8px 14px;font-size:12.5px;}
+}
+
+/* Enlace de vuelta a la guia, bajo la cabecera (refuerzo de enlace interno). */
+.back-bar{padding:14px 0;}
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;
+  color:var(--ink-soft);transition:color .15s;
+}
+.back-link:hover{color:var(--accent);}
+
+/* ---------- CONTENIDO: hero de pagina informativa ---------- */
+.page-hero{padding-top:36px;padding-bottom:40px;border-bottom:1px solid var(--line);}
+.page-eyebrow{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#FAECE7;color:#993C1D;
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:.04em;text-transform:uppercase;
+  padding:7px 14px;border-radius:999px;margin-bottom:18px;
+}
+.page-hero h1{font-size:38px;line-height:1.12;max-width:720px;}
+.page-lead{margin-top:16px;color:var(--ink-soft);font-size:16px;line-height:1.7;max-width:640px;}
+.page-updated{margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);}
+
+/* ---------- CONTENIDO: cuerpo editorial ---------- */
+.page-body{padding-top:44px;padding-bottom:72px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:56px;align-items:start;}
+.page-body.no-aside{grid-template-columns:minmax(0,760px);}
+.prose{max-width:720px;}
+.prose section{margin-bottom:40px;}
+.prose section:last-child{margin-bottom:0;}
+.prose h2{font-size:23px;margin:0 0 14px;scroll-margin-top:96px;}
+.prose h3{font-size:16.5px;margin:22px 0 8px;color:var(--ink);}
+.prose p{color:var(--ink-soft);font-size:15px;line-height:1.8;margin-bottom:14px;}
+.prose p:last-child{margin-bottom:0;}
+.prose ul,.prose ol{color:var(--ink-soft);font-size:15px;line-height:1.8;padding-left:20px;margin-bottom:14px;}
+.prose li{margin-bottom:6px;}
+.prose strong{color:var(--ink);font-weight:600;}
+.prose a.inline-link{color:#1D6B3E;font-weight:600;text-decoration:underline;text-decoration-color:rgba(29,107,62,.35);text-underline-offset:2px;}
+.prose a.inline-link:hover{text-decoration-color:currentColor;}
+
+/* Indice de contenidos (paginas legales, mas largas) */
+.toc{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;position:sticky;top:96px;
+}
+.toc h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;font-family:'Inter',sans-serif;font-weight:700;color:var(--ink-soft);}
+.toc ol{list-style:none;display:flex;flex-direction:column;gap:2px;counter-reset:toc;}
+.toc li{counter-increment:toc;}
+.toc a{
+  display:flex;gap:8px;padding:7px 0;font-size:13.5px;color:var(--ink-soft);
+  transition:color .15s;
+}
+.toc a::before{content:counter(toc,decimal-leading-zero);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);flex-shrink:0;padding-top:1px;}
+.toc a:hover{color:var(--ink);}
+
+/* Tarjeta de aviso / resumen destacado dentro del cuerpo editorial */
+.info-callout{
+  display:flex;gap:14px;background:color-mix(in srgb, var(--accent) 6%, var(--card));
+  border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:8px 0 24px;
+}
+.info-callout-icon{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:color-mix(in srgb, var(--accent) 16%, #fff);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+}
+.info-callout p{margin:0;color:var(--ink);font-size:14px;line-height:1.65;}
+.info-callout strong{color:var(--ink);}
+
+/* Cuadricula de valores / pasos (Sobre nosotros, Afiliacion) */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:8px 0 24px;}
+.value-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px;display:flex;flex-direction:column;gap:10px;
+}
+.value-card-icon{
+  width:38px;height:38px;border-radius:50%;
+  background:color-mix(in srgb, var(--accent) 14%, #fff);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-size:18px;
+}
+.value-card h3{font-size:15px;margin:0;}
+.value-card p{color:var(--ink-soft);font-size:13.5px;line-height:1.6;margin:0;}
+
+/* Pasos numerados (como seleccionamos productos) */
+.step-list{display:flex;flex-direction:column;gap:0;margin:8px 0 24px;}
+.step-item{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);}
+.step-item:last-child{padding-bottom:0;}
+.step-num{
+  font-family:'JetBrains Mono',monospace;font-weight:600;font-size:12.5px;color:var(--accent);
+  flex-shrink:0;padding-top:2px;
+}
+.step-item h3{margin:0 0 4px;font-size:15px;}
+.step-item p{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.65;}
+
+/* Bloque de enlaces internos al final del contenido */
+.explore-more{
+  margin-top:8px;padding:24px;background:#EAF3EC;border:1px solid #DCEBDF;border-radius:16px;
+}
+.explore-more h2{font-size:16px;margin-bottom:6px;}
+.explore-more p{color:var(--ink-soft);font-size:13.5px;margin-bottom:14px;}
+.explore-more-links{display:flex;flex-wrap:wrap;gap:10px;}
+.explore-more-links a{
+  display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #DCEBDF;
+  border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;color:#1D6B3E;
+  transition:box-shadow .15s;
+}
+.explore-more-links a:hover{box-shadow:0 3px 8px rgba(28,28,30,.08);}
+
+/* ---------- Pagina de contacto: formulario ---------- */
+.contact-layout{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start;}
+.contact-form{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:30px;display:flex;flex-direction:column;gap:18px;
+}
+.form-field{display:flex;flex-direction:column;gap:7px;}
+.form-field label{font-size:13px;font-weight:600;color:var(--ink);}
+.form-field input,.form-field textarea{
+  font-family:'Inter',sans-serif;font-size:14.5px;color:var(--ink);
+  border:1px solid var(--line);border-radius:10px;padding:11px 14px;
+  background:#fff;transition:border-color .15s,box-shadow .15s;resize:vertical;
+}
+.form-field input:focus,.form-field textarea:focus{
+  outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,138,101,.15);
+}
+.form-note{font-size:12.5px;color:var(--ink-soft);}
+.form-submit{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;font-weight:600;font-size:14.5px;
+  border:none;border-radius:999px;padding:12px 24px;cursor:pointer;
+  transition:box-shadow .15s,transform .15s;
+}
+.form-submit:hover{box-shadow:0 6px 16px rgba(255,138,101,.35);transform:translateY(-1px);}
+.form-status{font-size:13px;color:#1D6B3E;font-weight:600;display:none;}
+.form-status.is-visible{display:block;}
+
+.contact-aside{display:flex;flex-direction:column;gap:16px;}
+.contact-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;
+  display:flex;gap:14px;
+}
+.contact-card-icon{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:color-mix(in srgb, var(--accent) 14%, #fff);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+}
+.contact-card h3{font-size:14px;margin:0 0 4px;}
+.contact-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin:0;}
+.contact-card a{color:#1D6B3E;font-weight:600;}
+
+/* ---------- FOOTER (identico a guia-regalos-juguetes.html) ---------- */
+footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
+.footer-top{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:44px 0;}
+.footer-column{display:flex;flex-direction:column;}
+.footer-brand{gap:16px;align-items:flex-start;}
+.footer-logo{background:transparent;margin-top:-38px;margin-bottom:-8px;}
+.footer-logo img{width:230px;height:auto;display:block;max-width:100%;background:transparent;border-radius:0;}
+.footer-tagline{font-size:11px;font-weight:600;letter-spacing:0.04em;color:#9FAF93;margin:0;}
+.footer-desc{font-size:13px;line-height:1.6;color:#C5BFB5;margin:0;}
+
+.footer-navigation{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:start;}
+.footer-accordion-btn{
+  width:100%;text-align:left;background:transparent;border:1px solid #3D5A47;
+  border-radius:8px;padding:12px 16px;color:#E8E6E0;font-weight:600;font-size:12px;
+  letter-spacing:0.02em;cursor:pointer;display:flex;justify-content:space-between;
+  align-items:center;transition:border-color .2s,background .2s;
+}
+.footer-accordion-btn:hover{border-color:#5A7F65;background:rgba(255,255,255,.04);}
+.footer-accordion-btn[aria-expanded="true"]{
+  background:#2D4A36;border-color:#5A7F65;
+}
+.footer-accordion-btn i{font-size:14px;transition:transform .2s;}
+.footer-accordion-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+.footer-accordion-content{
+  flex-direction:column;gap:0;padding:0;
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .3s ease,opacity .3s ease;
+  display:flex;
+}
+.footer-accordion-content a{
+  font-size:13px;color:#C5BFB5;text-decoration:none;padding:4px 0;
+  transition:color .2s;
+}
+.footer-accordion-content a:hover{color:#E8E6E0;}
+
+.footer-chips{flex-direction:column;gap:0;}
+.footer-chip{
+  display:flex;align-items:center;
+  padding:10px 0;font-size:13px;color:#C5BFB5;text-decoration:none;
+  border-bottom:1px solid rgba(61,90,71,.5);
+  transition:color .2s;
+}
+.footer-chip:last-child{border-bottom:none;}
+.footer-chip:hover{color:#E8E6E0;}
+
+.footer-divider{border:none;border-top:1px solid #3D5A47;margin:0;}
+
+.footer-middle{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;padding:44px 0;text-align:left;}
+.footer-trust{display:flex;gap:16px;}
+.footer-trust-icon{
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
+  color:#9FAF93;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+}
+.footer-trust h4{font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;margin:0 0 4px;color:#E8E6E0;}
+.footer-trust p{font-size:13px;color:#C5BFB5;margin:0;line-height:1.5;}
+
+.footer-affiliate{font-size:13px;color:#C5BFB5;line-height:1.6;}
+
+.footer-families{display:flex;gap:16px;}
+.footer-families-icon{
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
+  color:#B8A27D;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+}
+.footer-families p{font-size:13px;color:#C5BFB5;margin:0 0 4px;line-height:1.5;}
+.footer-families p:first-child{color:#E8E6E0;font-weight:600;}
+
+.footer-bottom{padding:32px 0 44px;text-align:center;}
+.footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
+.footer-links a{font-size:12px;color:#C5BFB5;text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:#E8E6E0;}
+
+@media (max-width:900px){
+  .footer-top{grid-template-columns:1fr;gap:32px;}
+  .footer-navigation{grid-template-columns:repeat(2,1fr);}
+  .page-body{grid-template-columns:1fr;gap:32px;}
+  .toc{position:static;}
+  .contact-layout{grid-template-columns:1fr;}
+  .value-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .wrap{padding:0 24px;}
+  .footer-top{padding:32px 0;}
+  .footer-navigation{grid-template-columns:1fr;gap:12px;}
+  .footer-accordion-btn{font-size:11px;padding:10px 14px;}
+  .footer-accordion-content{padding:10px 0;gap:6px;}
+  .footer-accordion-content a{font-size:12px;}
+
+  .footer-middle{grid-template-columns:1fr;gap:32px;padding:32px 0;}
+  .footer-trust,.footer-families{flex-direction:column;gap:12px;}
+  .footer-trust-icon,.footer-families-icon{align-self:flex-start;}
+
+  .footer-bottom{padding:24px 0 32px;}
+  .footer-links{gap:16px;font-size:11px;}
+
+  .page-hero h1{font-size:29px;}
+  .page-body{padding-top:32px;padding-bottom:52px;}
+  .value-grid{grid-template-columns:1fr;}
+  .contact-form{padding:22px;}
+}
