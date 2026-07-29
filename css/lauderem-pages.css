@@ -31,7 +31,7 @@ body{
 h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
 .mono{font-family:'JetBrains Mono',monospace;}
 a{color:inherit;text-decoration:none;}
-.wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+.wrap{max-width:1080px;margin:0 auto;padding-left:32px;padding-right:32px;}
 
 /* ---------- CABECERA (identica a guia-regalos-juguetes.html) ---------- */
 header{
@@ -79,7 +79,7 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;
 }
 
 /* Enlace de vuelta a la guia, bajo la cabecera (refuerzo de enlace interno). */
-.back-bar{padding:14px 0;}
+.back-bar{padding-top:14px;padding-bottom:14px;}
 .back-link{
   display:inline-flex;align-items:center;gap:6px;
   font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;
@@ -226,7 +226,7 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;
 
 /* ---------- FOOTER (identico a guia-regalos-juguetes.html) ---------- */
 footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
-.footer-top{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:44px 0;}
+.footer-top{display:grid;grid-template-columns:260px 1fr;gap:48px;padding-top:44px;padding-bottom:44px;}
 .footer-column{display:flex;flex-direction:column;}
 .footer-brand{gap:16px;align-items:flex-start;}
 .footer-logo{background:transparent;margin-top:-38px;margin-bottom:-8px;}
@@ -271,7 +271,7 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
 
 .footer-divider{border:none;border-top:1px solid #3D5A47;margin:0;}
 
-.footer-middle{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;padding:44px 0;text-align:left;}
+.footer-middle{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;padding-top:44px;padding-bottom:44px;text-align:left;}
 .footer-trust{display:flex;gap:16px;}
 .footer-trust-icon{
   width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);
@@ -290,7 +290,7 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
 .footer-families p{font-size:13px;color:#C5BFB5;margin:0 0 4px;line-height:1.5;}
 .footer-families p:first-child{color:#E8E6E0;font-weight:600;}
 
-.footer-bottom{padding:32px 0 44px;text-align:center;}
+.footer-bottom{padding-top:32px;padding-bottom:44px;text-align:center;}
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
 .footer-links a{font-size:12px;color:#C5BFB5;text-decoration:none;transition:color .2s;}
 .footer-links a:hover{color:#E8E6E0;}
@@ -308,18 +308,18 @@ footer{background:#1F3C2D;color:#E8E6E0;padding:44px 0 0;margin-top:80px;}
   .value-grid{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:640px){
-  .wrap{padding:0 24px;}
-  .footer-top{padding:32px 0;}
+  .wrap{padding-left:24px;padding-right:24px;}
+  .footer-top{padding-top:32px;padding-bottom:32px;}
   .footer-navigation{grid-template-columns:1fr;gap:12px;}
   .footer-accordion-btn{font-size:11px;padding:10px 14px;}
   .footer-accordion-content{padding:10px 0;gap:6px;}
   .footer-accordion-content a{font-size:12px;}
 
-  .footer-middle{grid-template-columns:1fr;gap:32px;padding:32px 0;}
+  .footer-middle{grid-template-columns:1fr;gap:32px;padding-top:32px;padding-bottom:32px;}
   .footer-trust,.footer-families{flex-direction:column;gap:12px;}
   .footer-trust-icon,.footer-families-icon{align-self:flex-start;}
 
-  .footer-bottom{padding:24px 0 32px;}
+  .footer-bottom{padding-top:24px;padding-bottom:32px;}
   .footer-links{gap:16px;font-size:11px;}
 
   .page-hero h1{font-size:29px;}
