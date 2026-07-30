@@ -50,10 +50,7 @@
   }
   nav.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap;}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-  .brand-icon{width:40px;height:40px;object-fit:contain;flex-shrink:0;}
-  .brand-text{display:flex;flex-direction:column;}
-  .brand-title{font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;color:#1D6B3E;line-height:1.15;}
-  .brand-sub{font-size:12.5px;color:#B5651D;margin-top:1px;}
+  .brand-logo{width:179px;height:44px;object-fit:contain;flex-shrink:0;display:block;background:transparent;}
 
   .nav-chips{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
   .nav-chip-wrap{position:relative;}
@@ -162,9 +159,7 @@
      edades: eso recorta la foto y es justo lo que se quiso evitar. */
   .hero-main-photo{display:block;width:100%;height:auto;}
   @media (max-width:640px){
-    .brand-icon{width:32px;height:32px;}
-    .brand-title{font-size:17px;}
-    .brand-sub{font-size:11px;}
+    .brand-logo{width:146px;height:36px;}
     .nav-chip{padding:8px 14px;font-size:12.5px;}
     .hero-main{padding:0 24px;}
   }
@@ -737,11 +732,7 @@
 <header>
   <nav class="wrap">
     <a class="brand" href="#top">
-      <img class="brand-icon" src="images/icons-3d/logo-gift.png" alt="" width="40" height="40">
-      <span class="brand-text">
-        <span class="brand-title">Guía de Regalos</span>
-        <span class="brand-sub">Juguetes que inspiran momentos</span>
-      </span>
+      <img class="brand-logo" src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem - Jugar, Aprender y Crecer" width="179" height="44">
     </a>
     <div class="nav-chips">
       <div class="nav-chip-wrap">
@@ -783,6 +774,7 @@
               <a href="correpasillos-1-ano.html">Correpasillos</a>
               <a href="construcciones-1-ano.html">Construcciones</a>
               <a href="vehiculos-1-ano.html">Vehículos</a>
+              <a href="musica-1-ano.html">Música</a>
               <a href="libros-1-ano.html">Libros</a>
               <a href="puzzles-1-ano.html">Puzzles</a>
               <a href="pintura-y-creatividad-1-ano.html">Pintura y creatividad</a>
@@ -799,7 +791,7 @@
               <a href="manualidades-2-anos.html">Manualidades</a>
               <a href="puzzles-2-anos.html">Puzzles</a>
               <a href="libros-2-anos.html">Libros</a>
-              <a href="juguetes-musicales-2-anos.html">Música</a>
+              <a href="musica-2-anos.html">Música</a>
               <a href="juguetes-de-bano-2-anos.html">Juguetes de baño</a>
               <a href="peluches-2-anos.html">Peluches</a>
             </div>
@@ -978,49 +970,49 @@
 
 <section class="hero wrap">
   <div class="age-cards" id="chart">
-    <a class="age-card ac-coral" href="#categories-a0">
+    <a class="age-card ac-coral" href="#a0">
       <img class="age-photo" src="images/hero/edad-0-6-meses.webp" alt="Bebé descubriendo un móvil sensorial" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">0-6</span>
         <span class="age-card-unit">meses</span>
       </span>
     </a>
-    <a class="age-card ac-amber" href="#categories-a1">
+    <a class="age-card ac-amber" href="#a1">
       <img class="age-photo" src="images/hero/edad-6-12-meses.webp" alt="Bebé sentado jugando con un apilable de madera" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">6-12</span>
         <span class="age-card-unit">meses</span>
       </span>
     </a>
-    <a class="age-card ac-yellow" href="#categories-a2">
+    <a class="age-card ac-yellow" href="#a2">
       <img class="age-photo" src="images/hero/edad-1-3-anos.webp" alt="Niño pequeño construyendo con bloques de madera" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">1-3</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-green" href="#categories-a5">
+    <a class="age-card ac-green" href="#a5">
       <img class="age-photo" src="images/hero/edad-4-5-anos.webp" alt="Niña pintando con acuarelas" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">4-5</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-green" href="#categories-a7">
+    <a class="age-card ac-green" href="#a7">
       <img class="age-photo" src="images/hero/edad-6-7-anos.webp" alt="Niño leyendo un libro" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">6-7</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-blue is-selected" href="#categories-a9">
+    <a class="age-card ac-blue is-selected" href="#a9">
       <img class="age-photo" src="images/hero/edad-8-9-anos.webp" alt="Niño montando una construcción robótica" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">8-9</span>
         <span class="age-card-unit">años</span>
       </span>
     </a>
-    <a class="age-card ac-purple" href="#categories-a11">
+    <a class="age-card ac-purple" href="#a11">
       <img class="age-photo" src="images/hero/edad-10-anos.webp" alt="Niño usando un portátil" width="104" height="104">
       <span class="age-chevron">
         <span class="age-card-num">10</span>
@@ -1584,7 +1576,7 @@
           {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la coordinación'},
           {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Estimula la lógica'}
         ]},
-        {asin:'B00ZRD99C0', name:'Pelota Oball de agarre fácil', img:'images/bright-starts-pelota-clasica-oball-de-facil-agarre-libre-de-bpa-rojo.webp', rating:4.8, reviews:43706, url:'https://www.amazon.es/Bright-Starts-actividad-sensorial-multicolor/dp/B00ZRD99C0', benefits:[
+        {asin:'B00ZRD99C0', name:'Pelota Oball de agarre fácil', img:'images/bright-starts-pelota-clasica-oball-de-facil-agarre-libre-de-bpa-rojo.webp', rating:4.8, reviews:44110, page:'sonajeros-6-12-meses.html', benefits:[
           {icon:'ti-hand-stop', bg:'#E3F3E6', fg:'#3E9E5E', text:'Fácil de agarrar'},
           {icon:'ti-run', bg:'#E3F3E6', fg:'#3E9E5E', text:'Estimula el gateo'}
         ]},
@@ -1613,6 +1605,7 @@
         'Vehículos':'vehiculos-1-ano.html',
         'Construcciones':'construcciones-1-ano.html',
         'Correpasillos':'correpasillos-1-ano.html',
+        'Música':'musica-1-ano.html',
         'Pintura y creatividad':'pintura-y-creatividad-1-ano.html',
         'Puzzles':'puzzles-1-ano.html',
         'Libros':'libros-1-ano.html',
@@ -1713,19 +1706,19 @@
           {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Cuatro juegos en uno'},
           {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Fomenta la puntería'}
         ]},
-        {asin:'B0D1FN6WSP', name:'Bloques Magnéticos 50 piezas COOLJOYA', img:'images/bloques-magneticos-construccion-ninos-construcciones-magneticas.webp', rating:4.6, reviews:2427, url:'https://www.amazon.es/COOLJOYA-Magneticos-Construccion-Construcciones-Construcci%C3%B3n/dp/B0D1FN6WSP', benefits:[
+        {asin:'B0D1FN6WSP', name:'Bloques Magnéticos 50 piezas COOLJOYA', img:'images/bloques-magneticos-construccion-ninos-construcciones-magneticas.webp', rating:4.6, reviews:2501, page:'construcciones-3-anos.html', benefits:[
           {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Estimula la creatividad'},
           {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la lógica espacial'}
         ]},
-        {asin:'B0D9HLLFB9', name:'Cocinita de Madera Grande Mamabrum', img:'images/mamabrum-cocinita-de-madera-infantil-grande-99-5cm-cocina-juguete-con.webp', rating:4.3, reviews:2080, url:'https://www.amazon.es/Mamabrum-infantil-accesorios-microondas-fregadero/dp/B0D9HLLFB9', benefits:[
+        {asin:'B0D9HLLFB9', name:'Cocinita de Madera Grande Mamabrum', img:'images/mamabrum-cocinita-de-madera-infantil-grande-99-5cm-cocina-juguete-con.webp', rating:4.4, reviews:1719, page:'cocinitas-3-anos.html', benefits:[
           {icon:'ti-chef-hat', bg:'#FCE7DE', fg:'#D8703A', text:'Fomenta el juego simbólico'},
           {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Estimula la imaginación'}
         ]},
-        {asin:'B0C4H52VCM', name:'Bloques Magnéticos 36 piezas Coodoo', img:'images/coodoo-magneticos-de-construccion-para-ninos-de-3-y-4-bloques.webp', rating:4.8, reviews:1213, url:'https://www.amazon.es/Coodoo-Magn%C3%A9ticos-Construcci%C3%B3n-sensoriales-Montessori/dp/B0C4H52VCM', benefits:[
+        {asin:'B0C4H52VCM', name:'Bloques Magnéticos 36 piezas Coodoo', img:'images/coodoo-magneticos-de-construccion-para-ninos-de-3-y-4-bloques.webp', rating:4.8, reviews:1243, page:'construcciones-3-anos.html', benefits:[
           {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Desarrolla la creatividad'},
           {icon:'ti-fingerprint', bg:'#E7EFFC', fg:'#3A75DC', text:'Mejora la motricidad'}
         ]},
-        {asin:'B07PC79BYN', name:'Goula Catch It!', img:'images/goula-catch-it-juego-de-mesa-preescolar-de-agilidad-visual-para-ninos.webp', rating:4.7, reviews:992, url:'https://www.amazon.es/Goula-53446-Goula-Catch-it/dp/B07PC79BYN', benefits:[
+        {asin:'B07PC79BYN', name:'Goula Catch It!', img:'images/goula-catch-it-juego-de-mesa-preescolar-de-agilidad-visual-para-ninos.webp', rating:4.7, reviews:992, page:'juegos-de-mesa-3-anos.html', benefits:[
           {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Mejora los reflejos'},
           {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la agilidad visual'}
         ]}
@@ -1760,17 +1753,17 @@
           {icon:'ti-car', bg:'#E3F3E6', fg:'#3E9E5E', text:'Control remoto real'},
           {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Diversión todoterreno'}
         ]},
-        {asin:'B0BG55YRZW', name:'Cámara de Fotos Infantil ARNSSIEN', img:'images/camara-fotos-infantil-arnssien-camara-de-fotos-para-ninos-con.webp', rating:4.4, reviews:7853, url:'https://www.amazon.es/ARNSSIEN-pantalla-pulgadas-reproducci%C3%B3n-Cumplea%C3%B1os/dp/B0BG55YRZW', benefits:[
-          {icon:'ti-camera', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
-          {icon:'ti-mood-smile', bg:'#FDE2E2', fg:'#D8555A', text:'Capturan sus recuerdos'}
-        ]},
         {asin:'B0BJ2F2HMF', name:'Dominó Patrulla Canina Spin Master', img:'images/spin-master-games-juego-de-mesa-patrulla-canina-domino-infantil-con.webp', rating:4.7, reviews:6951, page:'juegos-de-mesa-4-anos.html', benefits:[
           {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la memoria'},
           {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
         ]},
-        {asin:'B0CZCVXVZC', name:'Karaoke Infantil Dislocati', img:'images/dislocati-karaoke-infantil-2-microfonos-inalambricos-karaoke.webp', rating:4.6, reviews:2866, url:'https://www.amazon.es/Dislocati-Microfonos-Inalambricos-Unicornios-Inal%C3%A1mbrico/dp/B0CZCVXVZC', benefits:[
-          {icon:'ti-music', bg:'#FCE7DE', fg:'#D8703A', text:'Estimula el canto'},
-          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión en pareja'}
+        {asin:'B09ZLBFT3N', name:'Kizplays Autopista Flexible con Excavadora', img:'images/kizplays-260-piezas-car-racing-track-6-excavator-toy-autopista-de-3-4.webp', rating:4.5, reviews:3937, page:'construcciones-4-anos.html', benefits:[
+          {icon:'ti-road', bg:'#E3F3E6', fg:'#3E9E5E', text:'Circuito flexible y modular'},
+          {icon:'ti-car', bg:'#EAF1FB', fg:'#3A75DC', text:'Incluye coche y excavadora'}
+        ]},
+        {asin:'B00663V5LS', name:'Hasbro Tozudo', img:'images/hasbro-gaming-juego-tozudo-el-juegos-de-equilibrio-con-un-burrito-con-2.webp', rating:4.4, reviews:2593, page:'juegos-de-mesa-4-anos.html', benefits:[
+          {icon:'ti-scale', bg:'#FDE2E2', fg:'#D8555A', text:'Ejercita el pulso y el equilibrio'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión para 2 a 4 jugadores'}
         ]}
       ],
       tip:'Les encanta inventar historias con lo que ya tienen.'},
@@ -1799,11 +1792,11 @@
           {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Cuatro juegos en uno'},
           {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Fomenta la puntería'}
         ]},
-        {asin:'B08PBK29H2', name:'Dreamon Dinosaurios de Construcción', img:'images/dreamon-dinosaurios-juguetes-para-ninos-3-4-5-6-7-anos-con-caja-de.webp', rating:4.4, reviews:10599, url:'https://www.amazon.es/Dreamon-Dinosaurios-Almacenamiento-Construccion-Dducativos/dp/B08PBK29H2', benefits:[
+        {asin:'B08PBK29H2', name:'Dreamon Dinosaurios de Construcción', img:'images/dreamon-dinosaurios-juguetes-para-ninos-3-4-5-6-7-anos-con-caja-de.webp', rating:4.4, reviews:10658, page:'construcciones-5-anos.html', benefits:[
           {icon:'ti-palette', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
           {icon:'ti-cube', bg:'#E7EFFC', fg:'#3A75DC', text:'Construye sus dinosaurios'}
         ]},
-        {asin:'B0744QM4PD', name:'Ludilo Grabolo Jr', img:'images/ludilo-grabolo-jr-juegos-de-mesa-4-anos-o-mas-juegos-educativos-ninos.webp', rating:4.7, reviews:1275, url:'https://www.amazon.es/L%C3%BAdilo-Grabolo-Juego-Educativo-80452/dp/B0744QM4PD', benefits:[
+        {asin:'B0744QM4PD', name:'Ludilo Grabolo Jr', img:'images/ludilo-grabolo-jr-juegos-de-mesa-4-anos-o-mas-juegos-educativos-ninos.webp', rating:4.7, reviews:1280, page:'juegos-de-mesa-5-anos.html', benefits:[
           {icon:'ti-abc', bg:'#FCE9F1', fg:'#C6538C', text:'Amplía el vocabulario'},
           {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
         ]},
@@ -1811,7 +1804,7 @@
           {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Mejora los reflejos'},
           {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
         ]},
-        {asin:'B079P6LQQ4', name:'Diset Las Sílabas', img:'images/diset-las-silabas-juego-educativo-para-aprender-las-letras-y-el.webp', rating:4.6, reviews:775, url:'https://www.amazon.es/Diset-Aprendo-Juguete-educativos-68962/dp/B079P6LQQ4', benefits:[
+        {asin:'B079P6LQQ4', name:'Diset Las Sílabas', img:'images/diset-las-silabas-juego-educativo-para-aprender-las-letras-y-el.webp', rating:4.6, reviews:776, page:'juegos-de-mesa-5-anos.html', benefits:[
           {icon:'ti-abc', bg:'#FCE9F1', fg:'#C6538C', text:'Aprende a leer'},
           {icon:'ti-book', bg:'#FEF3D9', fg:'#C79A1B', text:'Refuerza las sílabas'}
         ]}
@@ -1840,14 +1833,6 @@
         'Puzzles':'puzzles-6-anos.html'
       },
       favorites:[
-        {asin:'B07W1PC52K', name:'Heromask Idiomas: Gafas VR', img:'images/heromask-idiomas-gafas-virtuales-juegos-5-12-anos-regalo-que-motiva-a-2.webp', rating:4.4, reviews:10682, url:'https://www.amazon.es/Gafas-Virtuales-Ninos/dp/B07W1PC52K', benefits:[
-          {icon:'ti-language', bg:'#EAF1FB', fg:'#3A75DC', text:'Aprende idiomas jugando'},
-          {icon:'ti-device-gamepad-2', bg:'#EFE7FB', fg:'#7A6CD6', text:'Experiencia inmersiva'}
-        ]},
-        {asin:'B0B2SFNV57', name:'HiMont Cámara Instantánea', img:'images/himont-camara-infantil-digital-instantanea-con-papel-de-impresion-y-2.webp', rating:4.6, reviews:4610, url:'https://www.amazon.es/HiMont-infantil-instant%C3%A1nea-impresi%C3%B3n-manualidades/dp/B0B2SFNV57', benefits:[
-          {icon:'ti-camera', bg:'#FCE9F1', fg:'#C6538C', text:'Fomenta la creatividad'},
-          {icon:'ti-mood-smile', bg:'#FDE2E2', fg:'#D8555A', text:'Recuerdos al instante'}
-        ]},
         {asin:'B011LATCVU', name:'LUDILO Palabrea', img:'images/ludilo-palabrea-juegos-de-mesa-ninos-6-anos-o-mas-juegos-educativos-6-2.webp', rating:4.6, reviews:2717, url:'https://www.amazon.es/LUDILO-Palabrea-juego-educativo-80305/dp/B011LATCVU', benefits:[
           {icon:'ti-abc', bg:'#FCE9F1', fg:'#C6538C', text:'Amplía el vocabulario'},
           {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita el ingenio'}
@@ -1858,6 +1843,14 @@
         ]},
         {asin:'B09QGYHC9T', name:'Hasbro Pictureka!', img:'images/hasbro-gaming-juego-pictureka-de-dibujos-de-mesa-infantil-divertido-3.webp', rating:4.7, reviews:984, url:'https://www.amazon.es/Hasbro-Gaming-Juego-Pictureka-Divertido/dp/B09QGYHC9T', benefits:[
           {icon:'ti-eye', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la observación'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B0C65FPP79', name:'Rodzon Coche Acrobático 360°', img:'images/rodzon-coche-teledirigido-coche-acrobatico-camiones-360-grados-de.webp', rating:4.4, reviews:4097, page:'coches-teledirigidos-6-anos.html', benefits:[
+          {icon:'ti-car', bg:'#E3F3E6', fg:'#3E9E5E', text:'Rotación de 360° y acrobacias'},
+          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Luces LED en neumáticos y faros'}
+        ]},
+        {asin:'B08BCSMKRX', name:'Educa Érase una Vez la Vida', img:'images/educa-erase-una-vez-la-vida-juego-de-mesa-familiar-educativo-con-mas.webp', rating:4.6, reviews:1201, page:'juegos-de-mesa-6-anos.html', benefits:[
+          {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Más de 300 preguntas de biología'},
           {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
         ]}
       ],
@@ -1926,11 +1919,11 @@
         'Coches teledirigidos':'coches-teledirigidos-8-anos.html'
       },
       favorites:[
-        {asin:'B000FGECAI', name:'Learning Resources Kanoodle', img:'images/learning-resources-kanoodle-rompecabezas-3d-y-2d-juego-logico.webp', rating:4.7, reviews:34183, url:'https://www.amazon.es/dp/B000FGECAI/', benefits:[
+        {asin:'B000FGECAI', name:'Learning Resources Kanoodle', img:'images/learning-resources-kanoodle-rompecabezas-3d-y-2d-juego-logico.webp', rating:4.7, reviews:34294, url:'https://www.amazon.es/dp/B000FGECAI/', benefits:[
           {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
           {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Miles de combinaciones'}
         ]},
-        {asin:'B07YNKKGRJ', name:'Hasbro Simon', img:'images/hasbro-gaming-simon-juguete-electronico-de-memoria-habilidad-y.webp', rating:4.6, reviews:25980, url:'https://www.amazon.es/dp/B07YNKKGRJ/', benefits:[
+        {asin:'B07YNKKGRJ', name:'Hasbro Simon', img:'images/hasbro-gaming-simon-juguete-electronico-de-memoria-habilidad-y.webp', rating:4.6, reviews:26049, page:'juegos-de-mesa-8-anos.html', benefits:[
           {icon:'ti-brain', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la memoria'},
           {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Mejora los reflejos'}
         ]},
@@ -1938,11 +1931,11 @@
           {icon:'ti-robot', bg:'#E7EFFC', fg:'#3A75DC', text:'Introduce la robótica'},
           {icon:'ti-tool', bg:'#FEF3D9', fg:'#C79A1B', text:'Aprende construyendo'}
         ]},
-        {asin:'B08KHLW7TX', name:'ThinkFun Gravity Maze', img:'images/thinkfun-gravity-maze-regalo-nino-8-anos-juegos-de-mesa-ninos-8-anos.webp', rating:4.6, reviews:2564, url:'https://www.amazon.es/dp/B08KHLW7TX/', benefits:[
+        {asin:'B08KHLW7TX', name:'ThinkFun Gravity Maze', img:'images/thinkfun-gravity-maze-regalo-nino-8-anos-juegos-de-mesa-ninos-8-anos.webp', rating:4.6, reviews:2591, page:'juegos-de-mesa-8-anos.html', benefits:[
           {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},
           {icon:'ti-target', bg:'#FDE2E2', fg:'#D8555A', text:'Un reto por partida'}
         ]},
-        {asin:'B07QRB9NWP', name:'Game Factory Virus', img:'images/gamefactory-peligro-de-contagio-multicolor-game-factory-646239.webp', rating:4.6, reviews:1275, url:'https://www.amazon.es/dp/B07QRB9NWP/', benefits:[
+        {asin:'8460659666', name:'Tranjis Games Virus', img:'images/tranjis-games-virus-juego-de-cartas-trg-01vir-1138753-62.webp', rating:4.8, reviews:13823, page:'juegos-de-mesa-8-anos.html', benefits:[
           {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'},
           {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Partidas rápidas y ágiles'}
         ]}
@@ -1969,14 +1962,6 @@
         'Coches teledirigidos':'coches-teledirigidos-9-anos.html'
       },
       favorites:[
-        {asin:'B0CMP9M725', name:'TOSY Flying Ring', img:'images/tosy-flying-ring-12-monocolor-leds-superbrillante-modo-perdido.webp', rating:4.2, reviews:17135, url:'https://www.amazon.es/dp/B0CMP9M725/', benefits:[
-          {icon:'ti-bike', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión al aire libre'},
-          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Luces llamativas'}
-        ]},
-        {asin:'B07W1PC52K', name:'Heromask Gafas Virtuales de Idiomas', img:'images/heromask-idiomas-gafas-virtuales-juegos-5-12-anos-regalo-que-motiva-a-3.webp', rating:4.4, reviews:10683, url:'https://www.amazon.es/dp/B07W1PC52K/', benefits:[
-          {icon:'ti-language', bg:'#EAF1FB', fg:'#3A75DC', text:'Aprende idiomas jugando'},
-          {icon:'ti-device-gamepad-2', bg:'#EFE7FB', fg:'#7A6CD6', text:'Experiencia inmersiva'}
-        ]},
         {asin:'B0DMSVXBDV', name:'TOSY Magnet Pyramid Stone', img:'images/tosy-magnet-pyramid-stone-1-cubo-se-transforma-en-mil-millones-de-3.webp', rating:4.4, reviews:8522, url:'https://www.amazon.es/dp/B0DMSVXBDV/', benefits:[
           {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Estimula la lógica'},
           {icon:'ti-atom', bg:'#E3F3E6', fg:'#3E9E5E', text:'Mil combinaciones posibles'}
@@ -1988,6 +1973,14 @@
         {asin:'B07B42X1Z3', name:'Science4you Robotics Betabot', img:'images/science4you-robotics-betabot-kit-robotica-de-125-piezas-construye-tu-3.webp', rating:4.5, reviews:3146, page:'robotica-9-anos.html', benefits:[
           {icon:'ti-robot', bg:'#E7EFFC', fg:'#3A75DC', text:'Introduce la robótica'},
           {icon:'ti-tool', bg:'#FEF3D9', fg:'#C79A1B', text:'Aprende construyendo'}
+        ]},
+        {asin:'B0D7ZW84RF', name:'Mattel Games Pictionary', img:'images/mattel-games-pictionary-juego-de-mesa-familiar-para-ninos-y-ninas-2.webp', rating:4.3, reviews:1987, page:'juegos-de-mesa-9-anos.html', benefits:[
+          {icon:'ti-brush', bg:'#FCE9F1', fg:'#C6538C', text:'Dibujar y adivinar en equipo'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B0DRTDMXKF', name:'Upples Comilón', img:'images/mejor-juego-de-mesa-infantil-interocio-2026-de-1-a-4-jugadores-juego.webp', rating:4.8, reviews:88, page:'juegos-de-mesa-9-anos.html', benefits:[
+          {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Lógica y estrategia'},
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Millones de combinaciones'}
         ]}
       ],
       tip:'El interés empieza a ser muy personal.'},
@@ -2012,13 +2005,13 @@
         'Coches teledirigidos':'coches-teledirigidos-10-anos.html'
       },
       favorites:[
-        {asin:'B0B1YMNGS2', name:'TOSY Flying Disc', img:'images/tosy-flying-disc-36-leds-brillante-modos-inteligentes-iluminacion.webp', rating:4.5, reviews:10325, url:'https://www.amazon.es/dp/B0B1YMNGS2/', benefits:[
-          {icon:'ti-bike', bg:'#EAF1FB', fg:'#3A75DC', text:'Diversión al aire libre'},
-          {icon:'ti-bulb', bg:'#FEF3D9', fg:'#D89B2E', text:'Luces llamativas'}
-        ]},
         {asin:'B07X4B2TWY', name:'Ludilo Batalla de Genios', img:'images/ludilo-batalla-de-genios-original-juegos-de-mesa-ninos-6-anos-o-mas.webp', rating:4.8, reviews:2840, page:'juegos-de-mesa-10-anos.html', benefits:[
           {icon:'ti-chess-knight', bg:'#EFE7FB', fg:'#7A6CD6', text:'Ejercita la estrategia'},
           {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'Juego en familia'}
+        ]},
+        {asin:'B0CJ54TF8K', name:'QuickStop Juego de Letras', img:'images/quickstop-juegos-de-mesa-para-familia-y-amigos-dinamico-y-divertido.webp', rating:4.8, reviews:6185, page:'juegos-de-mesa-10-anos.html', benefits:[
+          {icon:'ti-bolt', bg:'#FCE7DE', fg:'#D8703A', text:'Partidas rápidas y ágiles'},
+          {icon:'ti-users', bg:'#EAF1FB', fg:'#3A75DC', text:'De 2 a 7 jugadores'}
         ]},
         {asin:'B08KHLW7TX', name:'ThinkFun Gravity Maze', img:'images/thinkfun-gravity-maze-regalo-nino-8-anos-juegos-de-mesa-ninos-8-anos-2.webp', rating:4.6, reviews:2567, url:'https://www.amazon.es/dp/B08KHLW7TX/', benefits:[
           {icon:'ti-puzzle', bg:'#E7EFFC', fg:'#3A75DC', text:'Ejercita la lógica'},

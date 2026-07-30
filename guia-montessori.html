@@ -103,13 +103,13 @@
   .g-section p + p{margin-top:14px;}
   .g-space-item{margin-top:36px;max-width:680px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;}
   .g-space-cta{
-    display:inline-flex;align-items:center;gap:6px;margin-top:18px;
-    font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;
-    color:var(--m-accent-dark);background:#fff;border:1px solid var(--m-accent-dark);
-    border-radius:8px;padding:12px 20px;
-    transition:background .2s ease,color .2s ease;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    line-height:1;padding:9px 27px;margin:36px 0 10px;
+    font-family:'JetBrains Mono',monospace;font-size:13.5px;font-weight:600;letter-spacing:.02em;
+    color:#fff;background:var(--m-accent-dark);border-radius:999px;
+    transition:background .22s ease;
   }
-  .g-space-cta:hover{background:#f0f7f2;color:var(--m-ink-green);}
+  .g-space-cta:hover{background:var(--m-ink-green);}
   .g-lead{font-size:16px;color:var(--ink-soft);max-width:680px;line-height:1.65;margin-bottom:28px;}
   .g-transition{margin-top:36px;padding-top:20px;border-top:1px dashed var(--line);font-size:14px;color:var(--ink-soft);font-style:italic;max-width:680px;}
 
@@ -159,8 +159,15 @@
   .g-age-card li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--m-accent);}
   .g-age-avoid{font-size:13px;color:var(--ink-soft);}
   .g-age-avoid .g-age-label .ti{color:var(--warn);}
-  .g-age-link{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:14px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--m-accent-dark);transition:gap .15s;}
-  .g-age-link:hover{gap:9px;color:var(--m-ink-green);}
+  .g-age-link{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    align-self:flex-start;margin-top:auto;
+    line-height:1;padding:9px 27px;
+    font-family:'JetBrains Mono',monospace;font-size:13.5px;font-weight:600;letter-spacing:.02em;
+    color:#fff;background:var(--m-accent-dark);border-radius:999px;
+    transition:background .22s ease;
+  }
+  .g-age-link:hover{background:var(--m-ink-green);}
 
   /* Category cards (tipos de juguetes) */
   .g-type-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;transition:transform .2s ease,box-shadow .2s ease;}
@@ -190,6 +197,10 @@
   .g-photo-duo .g-section-photo{margin:0;}
   .g-photo-duo .g-section-photo img{height:230px;object-fit:cover;}
   .g-section-photo img{width:100%;height:auto;display:block;object-fit:cover;}
+  .g-photo-wide{margin:36px 0;border-radius:16px;overflow:hidden;}
+  .g-photo-wide img{width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:16/9;}
+  .g-age-photo-strip{margin:28px 0 40px;border-radius:16px;overflow:hidden;}
+  .g-age-photo-strip img{width:100%;height:auto;display:block;}
 
   /* Infografía "cómo elegir" */
   .g-flow{display:flex;flex-direction:column;align-items:center;gap:0;margin:28px 0;max-width:380px;}
@@ -198,13 +209,6 @@
   .g-flow-step span{font-size:13.5px;font-weight:600;color:var(--ink);}
   .g-flow-arrow{color:var(--m-accent);font-size:18px;padding:6px 0;}
 
-  /* Tira de etapas (por edades) */
-  .g-ages-strip{display:flex;align-items:flex-start;gap:6px;margin-top:28px;position:relative;}
-  .g-ages-strip::before{content:'';position:absolute;top:26px;left:26px;right:26px;height:2px;background:var(--m-border);z-index:0;}
-  .g-age-stage{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;}
-  .g-age-stage-icon{width:52px;height:52px;border-radius:50%;background:var(--m-tint);border:2px solid var(--m-accent);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--m-accent-dark);position:relative;z-index:1;transition:transform .2s ease,box-shadow .2s ease;}
-  .g-age-stage span{font-size:12px;font-weight:600;color:var(--ink);}
-  .g-age-stage:hover .g-age-stage-icon{transform:scale(1.08);box-shadow:0 6px 14px rgba(108,155,93,.28);}
 
   /* Collage tipos de material */
   .g-collage{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:10px;margin-top:28px;}
@@ -259,7 +263,7 @@
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
     .g-fade{opacity:1;transform:none;transition:none;}
-    .g-card,.g-type-card,.g-error-card,.g-tip-card,.g-age-card,.g-collage-item img,.g-age-stage-icon,.g-cta-final a,.g-progress-bar{transition:none;}
+    .g-card,.g-type-card,.g-error-card,.g-tip-card,.g-age-card,.g-collage-item img,.g-cta-final a,.g-progress-bar{transition:none;}
   }
 
   @media (max-width:640px){
@@ -271,9 +275,6 @@
     .g-criteria{grid-template-columns:1fr;}
     .g-hero h1{font-size:26px;}
     .g-section h2{font-size:21px;}
-    .g-ages-strip{flex-wrap:wrap;row-gap:20px;}
-    .g-ages-strip::before{display:none;}
-    .g-age-stage{flex:0 0 33%;}
     .g-collage{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
     .g-collage-item:first-child{grid-column:span 2;grid-row:span 1;}
     .g-photo-duo{max-width:100%;}
@@ -297,7 +298,7 @@
 
 <header>
   <nav class="wrap">
-    <div class="logo">Guía de <span>Regalos</span></div>
+    <div class="logo"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></div>
     <a class="back" href="guia-regalos-juguetes.html">← Volver a la guía</a>
   </nav>
 </header>
@@ -349,6 +350,10 @@
     <p>En lugar de dirigir constantemente el aprendizaje, el adulto acompaña y ofrece materiales adaptados a cada etapa del desarrollo. De esta forma, el niño gana autonomía, confianza y disfruta aprendiendo de manera natural.</p>
     <p>Aunque hoy en día existen muchos juguetes etiquetados como "Montessori", el método va mucho más allá de un tipo concreto de juguete. Se basa en respetar el ritmo de cada niño, ofrecer experiencias adecuadas a su edad y favorecer que participe activamente en su propio aprendizaje.</p>
 
+    <figure class="g-photo-wide">
+      <img src="images/montessori-nino-bloques-madera-exploracion.webp" alt="Niño pequeño explorando por iniciativa propia con bloques de madera Montessori en un ambiente luminoso y tranquilo" width="1200" height="675" loading="lazy">
+    </figure>
+
     <div class="g-callout g-callout-tip">
       <span class="g-callout-icon"><i class="ti ti-bulb" aria-hidden="true"></i></span>
       <div class="g-callout-body">
@@ -372,6 +377,10 @@
         <p>Cada niño evoluciona de forma diferente. Montessori propone adaptar el entorno y los materiales a ese momento concreto del desarrollo, sin prisas ni comparaciones.</p>
       </div>
     </div>
+
+    <figure class="g-photo-wide">
+      <img src="images/montessori-sala-juegos-madera-acogedora.webp" alt="Espacio Montessori ordenado con estanterías bajas y juguetes de madera al alcance del niño" width="1200" height="675" loading="lazy">
+    </figure>
 
     <h3 style="margin-top:32px;">Qué NO significa Montessori</h3>
     <p>Es habitual pensar que Montessori significa únicamente juguetes de madera o habitaciones minimalistas. En realidad, esos son solo algunos elementos que pueden formar parte de este enfoque.</p>
@@ -447,6 +456,15 @@
     <div class="g-eyebrow-num">03 · Antes de comprar</div>
     <h2>Cómo reconocer un buen juguete Montessori</h2>
     <p class="g-lead">La popularidad del método ha hecho que muchos productos utilicen la palabra "Montessori" en su nombre. Sin embargo, no todos siguen realmente sus principios. Antes de comprar, conviene fijarse en estas características.</p>
+
+    <div class="g-photo-duo">
+      <figure class="g-section-photo">
+        <img src="images/montessori-tren-madera-apilable-colores.webp" alt="Tren de madera Montessori con piezas apilables de colores" width="1000" height="563" loading="lazy">
+      </figure>
+      <figure class="g-section-photo">
+        <img src="images/montessori-formas-geometricas-madera.webp" alt="Juguete Montessori de formas geométricas de madera natural" width="1000" height="667" loading="lazy">
+      </figure>
+    </div>
 
     <div class="g-cards">
       <div class="g-card">
@@ -556,13 +574,9 @@
     <h2>Juguetes Montessori según la edad</h2>
     <p class="g-lead">Cada etapa del desarrollo presenta intereses y necesidades diferentes. Elegir un juguete adaptado a ese momento facilita que el niño disfrute, experimente y aprenda con mayor naturalidad.</p>
 
-    <div class="g-ages-strip" role="img" aria-label="Etapas del desarrollo infantil: bebé, 1 año, 2 años, 3 años y de 4 a 6 años">
-      <div class="g-age-stage"><span class="g-age-stage-icon"><i class="ti ti-baby" aria-hidden="true"></i></span><span>Bebé</span></div>
-      <div class="g-age-stage"><span class="g-age-stage-icon"><i class="ti ti-walk" aria-hidden="true"></i></span><span>1 año</span></div>
-      <div class="g-age-stage"><span class="g-age-stage-icon"><i class="ti ti-run" aria-hidden="true"></i></span><span>2 años</span></div>
-      <div class="g-age-stage"><span class="g-age-stage-icon"><i class="ti ti-puzzle" aria-hidden="true"></i></span><span>3 años</span></div>
-      <div class="g-age-stage"><span class="g-age-stage-icon"><i class="ti ti-school" aria-hidden="true"></i></span><span>4-6 años</span></div>
-    </div>
+    <figure class="g-age-photo-strip">
+      <img src="images/montessori-franja-edades-fotos.webp" alt="Seis etapas del desarrollo infantil, de 0 a 6 años, con un niño jugando con material Montessori en cada una" width="1703" height="386" loading="lazy">
+    </figure>
 
     <div class="g-age-grid">
       <div class="g-age-card">

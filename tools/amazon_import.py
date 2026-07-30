@@ -45,9 +45,11 @@ import argparse
 import importlib.util
 import json
 import os
+import random
 import re
 import subprocess
 import sys
+import time
 import unicodedata
 import urllib.request
 from typing import List, Optional, Tuple
@@ -67,6 +69,13 @@ def ensure_playwright_installed() -> None:
     subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"], check=True)
 
 
+def ensure_playwright_stealth_installed() -> None:
+    """Instala el paquete 'playwright-stealth' si falta (oculta navigator.webdriver
+    y otras senales de automatizacion que Amazon usa para bloquear el scraping)."""
+    if importlib.util.find_spec("playwright_stealth") is None:
+        subprocess.run([sys.executable, "-m", "pip", "install", "playwright-stealth"], check=True)
+
+
 # Pillow es ligero y lo necesitan tanto el flujo normal como --square-only,
 # asi que se asegura siempre. Playwright (con su navegador) solo se instala
 # de forma perezosa, cuando realmente hace falta acceder a Amazon.
@@ -79,6 +88,17 @@ USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
+
+# Categorias de juguetes usadas por warmup_session() para calentar la sesion
+# con una navegacion mas natural. Se elige una al azar en cada ejecucion en
+# vez de repetir siempre la misma.
+WARMUP_CATEGORY_URLS = [
+    "https://www.amazon.es/gp/browse.html?node=599372031",  # Juguetes y juegos
+    "https://www.amazon.es/s?k=peluches&i=toys",
+    "https://www.amazon.es/s?k=juegos+de+mesa&i=toys",
+    "https://www.amazon.es/s?k=puzzles&i=toys",
+    "https://www.amazon.es/s?k=construcciones+juguete&i=toys",
+]
 
 # Selectores candidatos para la imagen principal del producto.
 # Amazon cambia el marcado con frecuencia: si deja de funcionar, añade
@@ -193,6 +213,85 @@ def get_review_count(page) -> Optional[int]:
     return int(digits) if digits else None
 
 
+def warmup_session(page) -> None:
+    """
+    Calienta la sesion de navegacion ANTES de visitar ninguna ficha de
+    producto, simulando el recorrido de un usuario real (portada -> espera ->
+    categoria -> scroll -> espera [-> producto aleatorio y vuelta atras]).
+
+    Se ejecuta una unica vez por sesion (una vez por ejecucion del script,
+    nunca antes de cada producto individual). Cada paso esta aislado en su
+    propio try/except: un fallo puntual se registra y se continua con el
+    siguiente paso, y un fallo del warmup completo nunca debe impedir que se
+    importe el producto real despues.
+    """
+    _log("[INFO] Warm-up iniciado")
+
+    try:
+        page.goto("https://www.amazon.es", wait_until="networkidle", timeout=60000)
+        _log("[INFO] Home cargada")
+    except Exception as e:
+        _log(f"[WARN] Warm-up: fallo cargando la home ({e}); se continua igualmente")
+
+    try:
+        wait1 = random.uniform(15, 30)
+        _log(f"[INFO] Esperando {wait1:.0f} segundos")
+        time.sleep(wait1)
+    except Exception as e:
+        _log(f"[WARN] Warm-up: fallo en la espera inicial ({e})")
+
+    category_url = random.choice(WARMUP_CATEGORY_URLS)
+    try:
+        page.goto(category_url, wait_until="networkidle", timeout=60000)
+        _log(f"[INFO] Categoría abierta ({category_url})")
+    except Exception as e:
+        _log(f"[WARN] Warm-up: fallo abriendo la categoría {category_url} ({e}); se continua igualmente")
+
+    try:
+        # Scroll humano: varios desplazamientos pequenos con pausas
+        # aleatorias, nunca hasta el final de la pagina.
+        for _ in range(random.randint(3, 5)):
+            page.mouse.wheel(0, random.randint(150, 400))
+            time.sleep(random.uniform(0.4, 1.4))
+        _log("[INFO] Scroll realizado")
+    except Exception as e:
+        _log(f"[WARN] Warm-up: fallo haciendo scroll ({e}); se continua igualmente")
+
+    try:
+        wait2 = random.uniform(10, 20)
+        _log(f"[INFO] Esperando {wait2:.0f} segundos")
+        time.sleep(wait2)
+    except Exception as e:
+        _log(f"[WARN] Warm-up: fallo en la segunda espera ({e})")
+
+    # Paso opcional: abrir un producto al azar de la categoria y volver
+    # atras, para reforzar la naturalidad del recorrido. Si no se encuentra
+    # ningun enlace de producto, se omite sin afectar al resto del warmup.
+    try:
+        candidate_selectors = [
+            'div[data-component-type="s-search-result"] h2 a',
+            'a.a-link-normal.s-no-outline',
+        ]
+        links = []
+        for selector in candidate_selectors:
+            links = page.query_selector_all(selector)
+            if links:
+                break
+        if links:
+            chosen = random.choice(links)
+            chosen.click(timeout=10000)
+            page.wait_for_load_state("networkidle", timeout=30000)
+            time.sleep(random.uniform(2, 5))
+            page.go_back(wait_until="networkidle", timeout=30000)
+            _log("[INFO] Producto aleatorio visitado y vuelta atrás")
+        else:
+            _log("[INFO] Warm-up: sin enlaces de producto en la categoría, se omite el paso opcional")
+    except Exception as e:
+        _log(f"[WARN] Warm-up: fallo visitando un producto aleatorio ({e}); se continua igualmente")
+
+    _log("[INFO] Warm-up completado")
+
+
 def slugify(title: str, max_length: int = 70) -> str:
     """
     Convierte un titulo en un nombre de archivo SEO:
@@ -301,17 +400,53 @@ def check_duplicate(target_file: str, asin: Optional[str], url: str) -> bool:
     return False
 
 
+def _log(msg: str) -> None:
+    """Log de diagnostico a stderr (nunca a stdout, que solo lleva el JSON de salida)."""
+    print(msg, file=sys.stderr)
+
+
 def scrape_product(url: str):
-    """Abre la URL con Playwright y devuelve (image_url, title, bullets, reviews, rating, review_count)."""
+    """Abre la URL con Playwright y devuelve (image_url, title, bullets, reviews, rating, review_count).
+
+    Usa un unico browser + BrowserContext + Page durante toda la ejecucion (hoy
+    equivale a una sola URL, pero deja la sesion lista para reutilizarse en
+    lotes en una fase futura) y aplica playwright-stealth para ocultar las
+    senales de automatizacion (navigator.webdriver y similares) que Amazon usa
+    para bloquear peticiones automatizadas.
+    """
     ensure_playwright_installed()
+    ensure_playwright_stealth_installed()
     from playwright.sync_api import sync_playwright  # noqa: E402  (import tras auto-instalacion)
+    from playwright_stealth import Stealth  # noqa: E402
+    from importlib.metadata import version as pkg_version  # noqa: E402
+
+    _log(f"[INFO] Playwright version: {pkg_version('playwright')}")
+    _log(f"[INFO] playwright-stealth version: {pkg_version('playwright-stealth')}")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(user_agent=USER_AGENT, locale="es-ES")
+        _log("[INFO] Browser iniciado")
+
+        context = browser.new_context(
+            user_agent=USER_AGENT,
+            locale="es-ES",
+            viewport={"width": 1920, "height": 1080},
+        )
+        stealth = Stealth(navigator_languages_override=("es-ES", "es"))
+        stealth.apply_stealth_sync(context)
+        _log("[INFO] Stealth activado (navigator.webdriver, plugins, languages, "
+             "chrome runtime, permissions, user agent y viewport)")
+
         page = context.new_page()
+        _log("[INFO] Context reutilizado")
+        _log(f"[INFO] navigator.webdriver (antes de navegar) = {page.evaluate('navigator.webdriver')}")
+
+        warmup_session(page)
+
         try:
+            _log("[INFO] URL 1/1")
             page.goto(url, wait_until="networkidle", timeout=60000)
+            _log(f"[INFO] navigator.webdriver (despues de navegar) = {page.evaluate('navigator.webdriver')}")
             image_url = get_main_image_url(page)
             title = get_product_title(page)
             bullets = extract_bullets(page)
@@ -320,6 +455,7 @@ def scrape_product(url: str):
             review_count = get_review_count(page)
         finally:
             browser.close()
+            _log("[INFO] Browser cerrado")
 
     return image_url, title, bullets, reviews, rating, review_count
 
