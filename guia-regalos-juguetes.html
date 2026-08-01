@@ -523,11 +523,14 @@
     .age-header-illustration .ti{font-size:46px;}
     .age-header h3{font-size:28px;}
     .age-header-highlights{grid-column:1 / -1;}
-    /* En móvil se conserva la cuadrícula actual de tres columnas. */
+    /* En móvil se conserva la cuadrícula actual de tres columnas, con
+       fotos más compactas y texto más legible (rango + unidad apilados,
+       sin repetir "de X a Y meses/años"). */
     .age-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px;margin-top:44px;}
-    .age-photo{width:90px;height:90px;}
-    .age-chevron{margin-top:10px;}
-    .age-card-num{font-size:19px;}
+    .age-photo{width:68px;height:68px;border:2px solid #fff;box-shadow:0 3px 10px rgba(44,44,42,.14);}
+    .age-chevron{margin-top:8px;gap:2px;}
+    .age-card-num{font-size:15px;font-weight:700;}
+    .age-card-unit{font-size:11px;font-weight:500;}
     .age-header{display:flex;flex-direction:column;align-items:stretch;padding:24px 20px;text-align:center;border-radius:22px;}
     .age-header-photo{width:132px;height:132px;align-self:center;}
     .age-header-age{justify-content:center;margin-bottom:8px;}
