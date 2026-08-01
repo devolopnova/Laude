@@ -84,10 +84,11 @@
   .g-hero-card .emoji{font-size:18px;flex-shrink:0;line-height:1.3;}
 
   /* TOC */
-  .g-toc{padding:32px 0;border-bottom:1px solid var(--line);}
+  .g-toc{padding-top:32px;padding-bottom:32px;border-bottom:1px solid var(--line);}
   .g-toc h2{font-size:15px;margin-bottom:14px;color:var(--ink-soft);font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;}
   .g-toc-list{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;list-style:none;}
   .g-toc-list a{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14px;color:var(--ink);border-bottom:1px solid var(--line);transition:color .15s ease,padding-left .15s ease;}
+  .g-toc-list li:last-child a{border-bottom:none;}
   .g-toc-list a:hover{color:var(--m-accent-dark);padding-left:4px;}
   .g-toc-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--m-accent-dark);background:var(--m-tint);border-radius:6px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 
@@ -147,7 +148,8 @@
 
   /* Age blocks */
   .g-age-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
-  .g-age-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--m-accent);border-radius:14px;padding:20px;transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column;}
+  .g-age-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--m-accent);border-radius:14px;padding:20px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;display:flex;flex-direction:column;scroll-margin-top:90px;}
+  .g-age-card.is-target-active{border-color:var(--m-accent-dark);box-shadow:0 8px 22px rgba(78,138,92,.20);}
   .g-age-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.06);}
   .g-age-card h3{font-size:17px;color:var(--m-ink-green);margin-bottom:14px;}
   .g-age-block{margin-bottom:12px;}
@@ -199,8 +201,45 @@
   .g-section-photo img{width:100%;height:auto;display:block;object-fit:cover;}
   .g-photo-wide{margin:36px 0;border-radius:16px;overflow:hidden;}
   .g-photo-wide img{width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:16/9;}
-  .g-age-photo-strip{margin:28px 0 40px;border-radius:16px;overflow:hidden;}
+  .g-photo-wide--short img{aspect-ratio:21/9;}
+  .g-age-photo-strip{margin:28px 0 40px;border-radius:16px;overflow:hidden;position:relative;}
   .g-age-photo-strip img{width:100%;height:auto;display:block;}
+
+  /* Navegación por edades: capa de enlaces invisibles sobre la franja de
+     fotos de escritorio (una imagen plana no se puede resaltar por partes,
+     así que cada enlace lleva dentro un aro que sí se puede iluminar) y,
+     en móvil, las propias tarjetas circulares se convierten en enlaces. */
+  .g-age-nav-hit{position:absolute;top:0;bottom:0;display:block;outline-offset:4px;}
+  .g-age-nav-hit[data-age="edad-0-6"]{left:1.17%;width:14.56%;}
+  .g-age-nav-hit[data-age="edad-6-12"]{left:17.85%;width:14.62%;}
+  .g-age-nav-hit[data-age="edad-1-2"]{left:34.53%;width:14.44%;}
+  .g-age-nav-hit[data-age="edad-2-3"]{left:51.09%;width:14.39%;}
+  .g-age-nav-hit[data-age="edad-3-4"]{left:67.59%;width:14.44%;}
+  .g-age-nav-hit[data-age="edad-4-6"]{left:84.09%;width:14.50%;}
+  .g-age-nav-ring{
+    position:absolute;left:0;right:0;top:5.18%;height:70.47%;
+    border-radius:50%;box-shadow:0 0 0 0 rgba(78,138,92,0);
+    transition:box-shadow .2s ease,transform .2s ease;pointer-events:none;
+  }
+  .g-age-nav-hit.is-active .g-age-nav-ring{box-shadow:0 0 0 3px var(--m-accent-dark),0 4px 14px rgba(78,138,92,.28);transform:scale(1.04);}
+
+  .g-age-photo-cards{display:none;}
+  @media (max-width:768px){
+    .g-age-photo-strip{display:none;}
+    .g-age-photo-cards{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:24px 12px;
+      margin:28px 0 40px;
+    }
+    .g-age-photo-card{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;}
+    .g-age-photo-card img{
+      width:68px;height:68px;border-radius:50%;object-fit:cover;
+      box-shadow:0 3px 10px rgba(44,44,42,.14);
+      margin-bottom:8px;transition:box-shadow .2s ease,transform .2s ease;
+    }
+    .g-age-photo-card.is-active img{box-shadow:0 0 0 3px var(--m-accent-dark),0 4px 14px rgba(78,138,92,.28);transform:scale(1.04);}
+    .g-age-photo-num{font-size:15px;font-weight:700;color:var(--m-accent-dark);line-height:1.15;}
+    .g-age-photo-unit{font-size:11px;font-weight:500;color:var(--m-accent);margin-top:1px;}
+  }
 
   /* Infografía "cómo elegir" */
   .g-flow{display:flex;flex-direction:column;align-items:center;gap:0;margin:28px 0;max-width:380px;}
@@ -350,10 +389,6 @@
     <p>En lugar de dirigir constantemente el aprendizaje, el adulto acompaña y ofrece materiales adaptados a cada etapa del desarrollo. De esta forma, el niño gana autonomía, confianza y disfruta aprendiendo de manera natural.</p>
     <p>Aunque hoy en día existen muchos juguetes etiquetados como "Montessori", el método va mucho más allá de un tipo concreto de juguete. Se basa en respetar el ritmo de cada niño, ofrecer experiencias adecuadas a su edad y favorecer que participe activamente en su propio aprendizaje.</p>
 
-    <figure class="g-photo-wide">
-      <img src="images/montessori-nino-bloques-madera-exploracion.webp" alt="Niño pequeño explorando por iniciativa propia con bloques de madera Montessori en un ambiente luminoso y tranquilo" width="1200" height="675" loading="lazy">
-    </figure>
-
     <div class="g-callout g-callout-tip">
       <span class="g-callout-icon"><i class="ti ti-bulb" aria-hidden="true"></i></span>
       <div class="g-callout-body">
@@ -459,10 +494,10 @@
 
     <div class="g-photo-duo">
       <figure class="g-section-photo">
-        <img src="images/montessori-tren-madera-apilable-colores.webp" alt="Tren de madera Montessori con piezas apilables de colores" width="1000" height="563" loading="lazy">
+        <img src="images/montessori-abaco-madera-colores.webp" alt="Ábaco de madera Montessori con bolas de colores" width="1600" height="1011" loading="lazy">
       </figure>
       <figure class="g-section-photo">
-        <img src="images/montessori-formas-geometricas-madera.webp" alt="Juguete Montessori de formas geométricas de madera natural" width="1000" height="667" loading="lazy">
+        <img src="images/montessori-puzzle-formas-geometricas.webp" alt="Puzle Montessori de formas geométricas de madera con encajes de colores" width="1400" height="1277" loading="lazy">
       </figure>
     </div>
 
@@ -522,6 +557,10 @@
       <div class="g-flow-step"><i class="ti ti-gift" aria-hidden="true"></i><span>Juguete recomendado</span></div>
     </div>
 
+    <figure class="g-photo-wide g-photo-wide--short">
+      <img src="images/montessori-nino-bloques-madera-exploracion.webp" alt="Niño pequeño explorando por iniciativa propia con bloques de madera Montessori en un ambiente luminoso y tranquilo" width="1200" height="675" loading="lazy">
+    </figure>
+
     <div class="g-cards g-cards-2">
       <div class="g-card">
         <div class="g-card-num">1</div>
@@ -576,10 +615,49 @@
 
     <figure class="g-age-photo-strip">
       <img src="images/montessori-franja-edades-fotos.webp" alt="Seis etapas del desarrollo infantil, de 0 a 6 años, con un niño jugando con material Montessori en cada una" width="1703" height="386" loading="lazy">
+      <a class="g-age-nav-hit" href="#edad-0-6" data-age="edad-0-6" aria-label="Ir a la sección de 0 a 6 meses"><span class="g-age-nav-ring"></span></a>
+      <a class="g-age-nav-hit" href="#edad-6-12" data-age="edad-6-12" aria-label="Ir a la sección de 6 a 12 meses"><span class="g-age-nav-ring"></span></a>
+      <a class="g-age-nav-hit" href="#edad-1-2" data-age="edad-1-2" aria-label="Ir a la sección de 1 a 2 años"><span class="g-age-nav-ring"></span></a>
+      <a class="g-age-nav-hit" href="#edad-2-3" data-age="edad-2-3" aria-label="Ir a la sección de 2 a 3 años"><span class="g-age-nav-ring"></span></a>
+      <a class="g-age-nav-hit" href="#edad-3-4" data-age="edad-3-4" aria-label="Ir a la sección de 3 a 4 años"><span class="g-age-nav-ring"></span></a>
+      <a class="g-age-nav-hit" href="#edad-4-6" data-age="edad-4-6" aria-label="Ir a la sección de 4 a 6 años"><span class="g-age-nav-ring"></span></a>
     </figure>
 
+    <div class="g-age-photo-cards">
+      <a class="g-age-photo-card" href="#edad-0-6" data-age="edad-0-6" aria-label="Ir a la sección de 0 a 6 meses">
+        <img src="images/montessori-edad-0-6-meses-circular.webp" alt="" width="201" height="220" loading="lazy">
+        <span class="g-age-photo-num">0-6</span>
+        <span class="g-age-photo-unit">meses</span>
+      </a>
+      <a class="g-age-photo-card" href="#edad-6-12" data-age="edad-6-12" aria-label="Ir a la sección de 6 a 12 meses">
+        <img src="images/montessori-edad-6-12-meses-circular.webp" alt="" width="201" height="220" loading="lazy">
+        <span class="g-age-photo-num">6-12</span>
+        <span class="g-age-photo-unit">meses</span>
+      </a>
+      <a class="g-age-photo-card" href="#edad-1-2" data-age="edad-1-2" aria-label="Ir a la sección de 1 a 2 años">
+        <img src="images/montessori-edad-1-2-anos-circular.webp" alt="" width="199" height="220" loading="lazy">
+        <span class="g-age-photo-num">1-2</span>
+        <span class="g-age-photo-unit">años</span>
+      </a>
+      <a class="g-age-photo-card" href="#edad-2-3" data-age="edad-2-3" aria-label="Ir a la sección de 2 a 3 años">
+        <img src="images/montessori-edad-2-3-anos-circular.webp" alt="" width="198" height="220" loading="lazy">
+        <span class="g-age-photo-num">2-3</span>
+        <span class="g-age-photo-unit">años</span>
+      </a>
+      <a class="g-age-photo-card" href="#edad-3-4" data-age="edad-3-4" aria-label="Ir a la sección de 3 a 4 años">
+        <img src="images/montessori-edad-3-4-anos-circular.webp" alt="" width="199" height="220" loading="lazy">
+        <span class="g-age-photo-num">3-4</span>
+        <span class="g-age-photo-unit">años</span>
+      </a>
+      <a class="g-age-photo-card" href="#edad-4-6" data-age="edad-4-6" aria-label="Ir a la sección de 4 a 6 años">
+        <img src="images/montessori-edad-4-6-anos-circular.webp" alt="" width="200" height="220" loading="lazy">
+        <span class="g-age-photo-num">4-6</span>
+        <span class="g-age-photo-unit">años</span>
+      </a>
+    </div>
+
     <div class="g-age-grid">
-      <div class="g-age-card">
+      <div class="g-age-card" id="edad-0-6">
         <h3>De 0 a 6 meses</h3>
         <div class="g-age-block">
           <div class="g-age-label"><i class="ti ti-bulb" aria-hidden="true"></i>Qué empieza a desarrollar</div>
@@ -595,7 +673,7 @@
         </div>
         <a class="g-age-link" href="juguetes-montessori.html">Descubrir juguetes para 0-6 meses <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <div class="g-age-card">
+      <div class="g-age-card" id="edad-6-12">
         <h3>De 6 a 12 meses</h3>
         <div class="g-age-block">
           <div class="g-age-label"><i class="ti ti-bulb" aria-hidden="true"></i>Qué empieza a desarrollar</div>
@@ -607,7 +685,7 @@
         </div>
         <a class="g-age-link" href="juguetes-montessori-6-12-meses.html">Descubrir juguetes para 6-12 meses <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <div class="g-age-card">
+      <div class="g-age-card" id="edad-1-2">
         <h3>De 1 a 2 años</h3>
         <div class="g-age-block">
           <div class="g-age-label"><i class="ti ti-bulb" aria-hidden="true"></i>Qué empieza a desarrollar</div>
@@ -619,7 +697,7 @@
         </div>
         <a class="g-age-link" href="juguetes-montessori-1-ano.html">Descubrir juguetes para 1 año <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <div class="g-age-card">
+      <div class="g-age-card" id="edad-2-3">
         <h3>De 2 a 3 años</h3>
         <div class="g-age-block">
           <div class="g-age-label"><i class="ti ti-bulb" aria-hidden="true"></i>Qué empieza a desarrollar</div>
@@ -631,7 +709,7 @@
         </div>
         <a class="g-age-link" href="juguetes-montessori-2-anos.html">Descubrir juguetes para 2 años <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <div class="g-age-card">
+      <div class="g-age-card" id="edad-3-4">
         <h3>De 3 a 4 años</h3>
         <div class="g-age-block">
           <div class="g-age-label"><i class="ti ti-bulb" aria-hidden="true"></i>Qué empieza a desarrollar</div>
@@ -643,7 +721,7 @@
         </div>
         <a class="g-age-link" href="juguetes-montessori-3-anos.html">Descubrir juguetes para 3 años <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <div class="g-age-card">
+      <div class="g-age-card" id="edad-4-6">
         <h3>De 4 a 6 años</h3>
         <div class="g-age-block">
           <div class="g-age-label"><i class="ti ti-bulb" aria-hidden="true"></i>Qué empieza a desarrollar</div>
@@ -671,9 +749,9 @@
 
 <section class="g-section" id="tipos">
   <div class="wrap g-wrap">
-    <div class="g-eyebrow-num">06 · Tipos de material</div>
+    <div class="g-eyebrow-num">06 · Tipos de juguetes</div>
     <h2>Tipos de juguetes Montessori</h2>
-    <p class="g-lead">Aunque existen muchos materiales diferentes, la mayoría pueden agruparse según la habilidad que ayudan a desarrollar. Conocer estas categorías facilita mucho la elección.</p>
+    <p class="g-lead">Aunque existen muchos juguetes diferentes, la mayoría pueden agruparse según la habilidad que ayudan a desarrollar. Conocer estas categorías facilita mucho la elección.</p>
 
     <div class="g-collage">
       <div class="g-collage-item"><img src="https://images.pexels.com/photos/6692878/pexels-photo-6692878.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Torre de anillas y apilables de madera, un tipo de material Montessori para trabajar la coordinación" width="800" height="800" loading="lazy"><span>Torres y apilables</span></div>
@@ -685,7 +763,7 @@
 
     <div class="g-cards g-cards-2">
       <div class="g-type-card">
-        <h3><i class="ti ti-hand-finger" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Materiales sensoriales</h3>
+        <h3><i class="ti ti-hand-finger" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Juguetes sensoriales</h3>
         <div class="g-type-block"><p class="g-skills">Observación, percepción visual, tacto, discriminación de formas, colores y tamaños.</p></div>
         <ul><li>Tablas de texturas</li><li>Cilindros</li><li>Paneles sensoriales</li><li>Bolsas sensoriales</li></ul>
       </div>
@@ -700,22 +778,22 @@
         <ul><li>Torre de anillas</li><li>Cubos apilables</li><li>Bloques de madera</li></ul>
       </div>
       <div class="g-type-card">
-        <h3><i class="ti ti-shirt" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Materiales de vida práctica</h3>
+        <h3><i class="ti ti-shirt" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Juguetes de vida práctica</h3>
         <div class="g-type-block"><p class="g-skills">Autonomía, coordinación, concentración, responsabilidad.</p></div>
         <ul><li>Trasvases</li><li>Pinzas</li><li>Botones</li><li>Cremalleras</li><li>Hebillas</li></ul>
       </div>
       <div class="g-type-card">
-        <h3><i class="ti ti-abc" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Materiales de lenguaje</h3>
+        <h3><i class="ti ti-abc" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Juguetes de lenguaje</h3>
         <div class="g-type-block"><p class="g-skills">Vocabulario, conciencia fonológica, escritura, lectura.</p></div>
         <ul><li>Letras de lija</li><li>Tarjetas ilustradas</li><li>Alfabeto móvil</li></ul>
       </div>
       <div class="g-type-card">
-        <h3><i class="ti ti-math-symbols" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Materiales de matemáticas</h3>
+        <h3><i class="ti ti-math-symbols" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Juguetes de matemáticas</h3>
         <div class="g-type-block"><p class="g-skills">Numeración, cálculo, razonamiento lógico.</p></div>
         <ul><li>Barras numéricas</li><li>Cuentas</li><li>Tableros matemáticos</li></ul>
       </div>
       <div class="g-type-card">
-        <h3><i class="ti ti-leaf" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Materiales de naturaleza</h3>
+        <h3><i class="ti ti-leaf" aria-hidden="true" style="color:var(--m-accent-dark);margin-right:6px;"></i>Juguetes de naturaleza</h3>
         <div class="g-type-block"><p class="g-skills">Observación, clasificación, curiosidad, conocimiento del medio.</p></div>
         <ul><li>Lupas infantiles</li><li>Figuras de animales</li><li>Colecciones de hojas</li><li>Piedras y elementos naturales</li></ul>
       </div>
@@ -846,6 +924,10 @@
     <div class="g-eyebrow-num">09 · Recomendaciones</div>
     <h2>Productos Montessori recomendados</h2>
     <p class="g-lead">La filosofía de esta selección es siempre la misma: no recomendamos un producto porque sea popular, sino porque realmente aporta valor para una determinada etapa del desarrollo.</p>
+
+    <figure class="g-photo-wide g-photo-wide--short">
+      <img src="images/montessori-nino-construcciones-bloques-madera.webp" alt="Niño jugando con bloques y construcciones de madera Montessori" width="1200" height="675" loading="lazy">
+    </figure>
 
     <h3>Cómo seleccionamos los productos</h3>
     <p style="margin-bottom:0;">Para aparecer en esta guía valoramos aspectos como:</p>
@@ -1003,6 +1085,47 @@
       });
     }, {rootMargin:'-40% 0px -55% 0px'});
     sections.forEach(function(s){ navObs.observe(s); });
+
+    var ageNavEls = document.querySelectorAll('.g-age-nav-hit,.g-age-photo-card');
+    var ageCards = document.querySelectorAll('.g-age-card[id^="edad-"]');
+    if(ageCards.length){
+      var currentAge = null;
+      var selectorVisible = false;
+
+      function refreshAgeNav(){
+        var active = selectorVisible ? null : currentAge;
+        ageNavEls.forEach(function(el){
+          el.classList.toggle('is-active', el.dataset.age === active);
+        });
+      }
+
+      var ageObs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          entry.target.classList.toggle('is-target-active', entry.isIntersecting);
+          if(entry.isIntersecting){
+            currentAge = entry.target.id;
+          } else if(entry.target.id === currentAge){
+            currentAge = null;
+          }
+        });
+        refreshAgeNav();
+      }, {rootMargin:'-45% 0px -45% 0px'});
+      ageCards.forEach(function(c){ ageObs.observe(c); });
+
+      /* El selector (franja de fotos en escritorio, tarjetas circulares en
+         móvil) manda sobre el resaltado: mientras esté visible, ningún
+         aro debe quedar encendido, independientemente de lo que crea el
+         observer de tarjetas (dos tarjetas de una misma fila comparten
+         posición vertical y no se pueden distinguir solo por scroll). */
+      var selectorEls = document.querySelectorAll('.g-age-photo-strip,.g-age-photo-cards');
+      if(selectorEls.length){
+        var selectorObs = new IntersectionObserver(function(entries){
+          selectorVisible = entries.some(function(entry){ return entry.isIntersecting; });
+          refreshAgeNav();
+        }, {threshold:0});
+        selectorEls.forEach(function(el){ selectorObs.observe(el); });
+      }
+    }
 
     document.querySelectorAll('.g-card,.g-type-card,.g-error-card,.g-tip-card,.g-age-card,.g-callout,.g-collage-item,.g-section-photo,.g-flow-step,.g-hero-photo').forEach(function(el){
       el.classList.add('g-fade');
