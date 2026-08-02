@@ -79,16 +79,26 @@
     box-shadow:0 2px 6px rgba(28,28,30,.07);
   }
   .back-pill-icon{font-size:17px;color:inherit;flex-shrink:0;}
-  @media (max-width:640px){
-    header nav.wrap{gap:16px;}
-    /* max-width fuerza a la pildora a medir lo que su contenido necesita:
-       sin el, flex-shrink la estira para rellenar todo el hueco libre
-       junto al logo (por eso reducir solo el padding no bastaba). */
-    .back-pill{max-width:172px;padding:8px 12px;gap:6px;flex-shrink:0;margin-left:auto;}
-    /* En movil el icono de regalo ya comunica "hay mas contenido"; la
-       flecha sobra y aprieta demasiado el texto en dos lineas. */
-    .back-pill-arrow{display:none;}
-    .back-pill-text{display:block;text-align:center;line-height:1.55;}
+  .back-pill-text-mobile,.back-pill-arrow-mobile{display:none;}
+  /* Movil (<=767px): cabecera minimalista aparte del tratamiento de
+     escritorio de arriba. Texto e icono propios (mas cortos, sin el
+     icono de regalo) para que quepan en una sola linea sin envolver;
+     por eso se ocultan los elementos de escritorio y se muestran estos. */
+  @media (max-width:767px){
+    header{background:#fff;border-bottom:1px solid #EAEAEA;}
+    header nav.wrap{height:56px;padding:8px 12px;}
+    .logo img{width:120px;height:auto;}
+    .back-pill-icon,.back-pill-arrow,.back-pill-text{display:none;}
+    .back-pill-text-mobile,.back-pill-arrow-mobile{display:inline-flex;}
+    .back-pill{
+      max-width:none;flex-shrink:0;margin-left:auto;gap:0;
+      border:1px solid var(--m-accent-dark);color:var(--m-accent-dark);
+      background:#fff;border-radius:999px;padding:6px 14px;
+      font-size:14px;font-weight:600;line-height:1;
+      box-shadow:none;
+    }
+    .back-pill:hover{border-color:var(--m-ink-green);color:var(--m-ink-green);box-shadow:none;}
+    .back-pill-arrow-mobile{margin-left:6px;align-items:center;}
   }
 
   /* Barra de progreso de lectura */
@@ -390,7 +400,7 @@
 <header>
   <nav class="wrap">
     <div class="logo"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></div>
-    <a class="back back-pill" href="guia-regalos-juguetes.html"><i class="ti ti-gift back-pill-icon" aria-hidden="true"></i><span class="back-pill-arrow">← </span><span class="back-pill-text">Descubre otras ideas de regalos</span></a>
+    <a class="back back-pill" href="guia-regalos-juguetes.html"><i class="ti ti-gift back-pill-icon" aria-hidden="true"></i><span class="back-pill-arrow">← </span><span class="back-pill-text">Descubre otras ideas de regalos</span><span class="back-pill-text-mobile">Otras ideas de regalos</span><i class="ti ti-chevron-right back-pill-arrow-mobile" aria-hidden="true"></i></a>
   </nav>
 </header>
 
