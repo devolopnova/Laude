@@ -430,11 +430,93 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 .discover-more-name{font-size:13.5px;line-height:1.35;color:#2E7D32;}
 .discover-more-arrow{color:#2E7D32;font-size:15px;line-height:1;}
 
+/* Navegación de fin de página en las franjas de edad de la guía Montessori
+   (juguetes-montessori*.html): "edad anterior / espacios Montessori / edad
+   siguiente". Compartido por las 6 páginas para que sea un patrón único;
+   cambiar el diseño aquí lo actualiza en todas a la vez. */
+.age-nav{padding:56px 0 40px;border-top:1px solid var(--line);}
+.age-nav-title{font-family:'Fredoka',sans-serif;font-size:26px;text-align:center;color:var(--ink);}
+.age-nav-subtitle{margin:10px auto 0;max-width:460px;text-align:center;color:var(--ink-soft);font-size:15px;line-height:1.65;}
+.age-nav-grid{margin-top:36px;display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:24px;align-items:stretch;}
+
+.age-nav-card{border-radius:20px;padding:30px 26px;display:flex;flex-direction:column;}
+
+.age-nav-prev,.age-nav-next{
+  align-items:center;text-align:center;gap:12px;
+  text-decoration:none;color:inherit;
+  transition:transform .2s ease;
+}
+.age-nav-prev:hover,.age-nav-next:hover{transform:translateY(-2px);}
+.age-nav-prev{background:#F6F3FD;}
+.age-nav-next{background:#FDF3EE;}
+
+.age-nav-icon{
+  width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.age-nav-icon svg{width:20px;height:20px;}
+.age-nav-prev .age-nav-icon{background:#E7E0FA;}
+.age-nav-prev .age-nav-icon svg{color:#8574E0;}
+.age-nav-next .age-nav-icon{background:#FBE1D3;}
+.age-nav-next .age-nav-icon svg{color:var(--accent);}
+
+.age-nav-age{font-family:'Fredoka',sans-serif;font-weight:600;font-size:18px;}
+.age-nav-prev .age-nav-age{color:#7C6FDB;}
+.age-nav-next .age-nav-age{color:var(--accent);}
+.age-nav-desc{color:var(--ink-soft);font-size:13.5px;line-height:1.5;max-width:180px;}
+
+.age-nav-pill{
+  margin-top:auto;padding-top:8px;
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
+  padding:10px 20px;border-radius:100px;background:#fff;
+  transition:background .18s ease;
+}
+.age-nav-pill svg{width:13px;height:13px;}
+.age-nav-prev .age-nav-pill{color:#7C6FDB;border:1px solid #E1D9F7;}
+.age-nav-next .age-nav-pill{color:var(--accent);border:1px solid #FBDBC7;}
+.age-nav-prev:hover .age-nav-pill{background:#EFEAFC;}
+.age-nav-next:hover .age-nav-pill{background:#FDEAE0;}
+
+.age-nav-spaces{background:#FAFCFA;border:1px solid var(--line);}
+.age-nav-spaces-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.age-nav-spaces-icon{
+  width:36px;height:36px;border-radius:50%;background:#E1F1E4;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.age-nav-spaces-icon svg{width:18px;height:18px;color:#4E9A64;}
+.age-nav-spaces-title{font-family:'Fredoka',sans-serif;font-weight:600;font-size:16.5px;color:#2E7D32;}
+
+.age-nav-list{display:flex;flex-direction:column;}
+.age-nav-row{
+  display:flex;align-items:center;gap:12px;
+  padding:13px 4px;border-bottom:1px solid var(--line);
+  text-decoration:none;color:var(--ink);font-size:14.5px;
+  transition:background .15s ease;
+}
+.age-nav-list a.age-nav-row:last-child{border-bottom:none;}
+.age-nav-row:hover{background:rgba(46,125,50,.05);}
+.age-nav-row-icon{flex-shrink:0;width:19px;height:19px;color:#5B9C71;}
+.age-nav-row-label{flex:1;}
+.age-nav-row-arrow{flex-shrink:0;width:15px;height:15px;color:#5B9C71;transition:transform .18s ease,color .18s ease;}
+.age-nav-row:hover .age-nav-row-arrow{transform:translateX(3px);color:#2E7D32;}
+
+.age-nav-footnote{
+  margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
+  text-align:center;color:var(--ink-soft);font-size:13.5px;
+}
+
 @media (max-width:560px){
   .wrap{padding:0 24px;}
   .hero h1{font-size:28px;}
   .product{flex-direction:column;align-items:flex-start;gap:12px;}
   .product-card-img{width:140px;height:140px;}
+
+  .age-nav{padding:44px 0 32px;}
+  .age-nav-title{font-size:22px;}
+  .age-nav-grid{grid-template-columns:1fr;gap:16px;margin-top:28px;}
+  .age-nav-desc{max-width:none;}
+  .age-nav-footnote{margin-top:32px;padding-top:20px;}
 
   /* Carrusel horizontal: la cuadricula pasa a fila con scroll-snap,
      mostrando cada tarjeta parcialmente cortada para insinuar que hay mas. */
