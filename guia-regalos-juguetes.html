@@ -103,11 +103,15 @@
   .nav-dropdown-item-wrapper:hover .nav-subdropdown{display:flex;}
   .nav-subdropdown a{padding:9px 12px;border-radius:6px;font-size:13px;font-weight:500;color:#1C1C1E;}
   .nav-subdropdown a:hover{background:#F5F1E9;color:#1D6B3E;}
-  /* Boton-flecha inyectado por JS: solo visible en movil (no hay :hover
-     tactil). El link de la edad SIEMPRE navega directo al tap; este boton
-     aparte es el unico que despliega el submenu de categorias. */
+  /* Boton-flecha inyectado por JS: solo visible en tactil (no hay :hover
+     real), sea movil o tablet — se detecta por (hover:none) y no solo por
+     ancho, porque un iPad (768-1024px) es tan tactil como un movil pero
+     caia fuera del breakpoint de max-width:640px: el boton no se mostraba
+     y el submenu (solo abria por :hover) quedaba inaccesible en iPad. El
+     link de la edad SIEMPRE navega directo al tap; este boton aparte es el
+     unico que despliega el submenu de categorias. */
   .nav-subdropdown-toggle{display:none;}
-  @media (max-width:640px){
+  @media (max-width:640px), (hover:none) and (pointer:coarse){
     .nav-subdropdown-toggle{
       /* 44x44 (no 34x34): minimo recomendado de tap target tactil (Apple HIG
          / Material Design), para que el dedo no falle el toque en un
