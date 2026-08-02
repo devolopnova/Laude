@@ -173,6 +173,69 @@ Solo aplica a `guia-regalos-juguetes.html` (sus estilos viven en el
   `chipIcon()` la cubre — si no, añadir la palabra clave (el comodín es
   `ti-gift`).
 
+## Checklist obligatorio al crear una página HTML nueva
+
+Cada vez que se crea una página `.html` nueva en la raíz del proyecto
+(nueva categoría, nueva franja de edad, nueva guía...), Claude debe
+completar esta checklist antes de darla por terminada, sin que el
+usuario tenga que pedirlo:
+
+1. **Google Analytics 4**: insertar el snippet de gtag.js en el `<head>`,
+   justo después de la etiqueta de apertura `<head>` (mismo sitio que en
+   el resto de páginas). ID de medición: `G-88T9H9C650`. No existe
+   sistema de plantilla compartida para el `<head>`, así que se inserta
+   página a página — se puede reutilizar la lógica de
+   `tools/install_ga4.py` (detecta duplicados por ID antes de insertar).
+2. **Google AdSense**: si la página va a mostrar anuncios (caso general:
+   todas las páginas de categoría/producto), añadir también en el
+   `<head>` el mismo script que ya llevan el resto de páginas:
+   `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4612059479012565" crossorigin="anonymous"></script>`.
+   Páginas puramente institucionales/legales sin intención de monetizar
+   pueden omitirlo si así se decide explícitamente, pero por defecto se
+   añade igual que en el resto del sitio.
+3. **Enlaces de afiliado de Amazon**: todo enlace `href` a un producto de
+   Amazon (botón "Ver en Amazon" de cada ficha) debe llevar el parámetro
+   `?tag=laude09-21` (o `&tag=laude09-21` si la URL ya tiene query
+   string). Verificar con
+   `grep -o 'amazon\.[a-z.]*/[^"]*"' <archivo>.html` que ningún enlace de
+   producto se quedó sin el tag.
+4. **`sitemap.xml`**: regenerar tras crear la página con
+   `python tools/generate_sitemap.py` (lee todos los `.html` de la raíz,
+   asigna prioridad según el tipo de página — home 1.0, guías 0.9,
+   categorías 0.8, legales 0.2 — y usa la fecha de modificación real del
+   archivo como `lastmod`). Si la página nueva no encaja en ninguna
+   categoría existente del script (por ejemplo una guía nueva tipo
+   `guia-montessori.html`), actualizar antes los sets `GUIDES`/`LEGAL`
+   del script para que la clasifique bien, en vez de editar `sitemap.xml`
+   a mano.
+5. **`robots.txt`**: no requiere cambios salvo que la página nueva deba
+   quedar excluida de la indexación (páginas de prueba/preview tipo
+   `footer-preview.html`); en ese caso añadir una regla `Disallow:` en
+   vez de tocar el resto del archivo.
+6. **`<title>`, meta description y canonical**: toda página nueva lleva
+   los tres en el `<head>`:
+   - `<title>` descriptivo y único (patrón ya usado: `Categoría · Franja
+     de edad` o similar).
+   - `<meta name="description" content="...">` de ~150-160 caracteres,
+     redactado siguiendo el mismo tono que el resto del contenido
+     editorial (ver reglas editoriales más abajo), nunca copiado de otra
+     página.
+   - `<link rel="canonical" href="https://www.lauderem.com/<archivo>.html">`
+     (o `https://www.lauderem.com/` si la página nueva fuera a sustituir
+     la home, caso que no debería darse — ver `vercel.json`).
+7. **Enlace interno**: la página nueva debe quedar enlazada desde al
+   menos otra página real del sitio (típicamente desde
+   `guia-regalos-juguetes.html` y/o desde la página de su franja de edad
+   o guía relacionada). Verificar con
+   `grep -rl "href=\"<archivo>.html\"" *.html` que aparece al menos una
+   vez fuera de sí misma.
+8. **Validación básica de HTML**: comprobar que la página no tiene
+   `<head>`/`</head>` ni `<html>`/`</html>` duplicados ni mal cerrados, y
+   que no hay bloques repetidos (p. ej. un mismo `<!-- PRODUCT START
+   asin="..." -->` insertado dos veces). Un chequeo rápido:
+   `python -c "import pathlib; t=pathlib.Path('<archivo>.html').read_text(encoding='utf-8'); print(t.count('<head>'), t.count('</head>'))"`
+   debe devolver `1 1`.
+
 ## Preparado para el futuro: actualizar productos
 
 No existe todavía un comando de "actualizar producto", pero el sistema
