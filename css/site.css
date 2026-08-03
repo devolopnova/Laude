@@ -179,12 +179,12 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:64
    toca). La tarjeta "familias" usa un lila fijo (#EFE7FB/#7A6CD6, ya
    usado en otros iconos de beneficio del sitio) en vez de var(--accent),
    a proposito, para diferenciarla. */
-.products-v2{padding-top:40px;padding-bottom:64px;display:flex;flex-direction:column;gap:0;}
+.products-v2{padding-top:40px;padding-bottom:0;display:flex;flex-direction:column;gap:0;}
 .product-card-v2{
   display:flex;flex-direction:column;gap:26px;
-  padding:36px 0;border-top:1px solid var(--line);
+  padding:36px 0;
 }
-.products-v2 .product-card-v2:first-child{border-top:none;padding-top:0;}
+.products-v2 .product-card-v2:first-child{padding-top:0;}
 .products-v2 .product-card-v2:last-child{padding-bottom:0;}
 
 .pc2-top{
@@ -368,7 +368,7 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 
 /* Bloque de navegacion inferior: navegar entre categorias y explorar mas
    franjas de edad. Aparece al final de cada pagina de categoria. */
-.bottom-nav{margin-top:48px;padding-top:40px;padding-bottom:40px;border-top:1px solid var(--line);}
+.bottom-nav{margin-top:0;padding-top:48px;padding-bottom:40px;}
 .bottom-nav-section{margin-bottom:40px;}
 .bottom-nav-section:last-child{margin-bottom:0;}
 .bottom-nav-title{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:24px;}
@@ -434,10 +434,15 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
    (juguetes-montessori*.html): "edad anterior / espacios Montessori / edad
    siguiente". Compartido por las 6 páginas para que sea un patrón único;
    cambiar el diseño aquí lo actualiza en todas a la vez. */
-.age-nav{padding:56px 0 40px;border-top:1px solid var(--line);}
+.age-nav{padding:48px 0 40px;}
 .age-nav-title{font-family:'Fredoka',sans-serif;font-size:26px;text-align:center;color:var(--ink);}
 .age-nav-subtitle{margin:10px auto 0;max-width:460px;text-align:center;color:var(--ink-soft);font-size:15px;line-height:1.65;}
 .age-nav-grid{margin-top:36px;display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:24px;align-items:stretch;}
+/* Variante de dos tarjetas (categoria anterior/siguiente), sin la
+   tarjeta central: se usa en secciones donde no hay navegacion por
+   edades, como Espacios Montessori. */
+.age-nav-grid--pair{grid-template-columns:1fr 1fr;}
+.age-nav-grid--single{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto;}
 
 .age-nav-card{border-radius:20px;padding:30px 26px;display:flex;flex-direction:column;}
 
@@ -502,9 +507,37 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 .age-nav-row:hover .age-nav-row-arrow{transform:translateX(3px);color:#2E7D32;}
 
 .age-nav-footnote{
-  margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
+  margin-top:24px;
   text-align:center;color:var(--ink-soft);font-size:13.5px;
 }
+
+/* CTA "Descubre la guia de regalos": tarjeta secundaria y discreta que
+   enlaza a la guia de regalos principal, usada al final de las paginas
+   de producto de la guia Montessori (edades y espacios), debajo del
+   bloque age-nav. */
+.gr-cta{
+  margin-top:4px;margin-bottom:0;
+  background:#FAFAFA;border:1px solid #ECECEC;border-radius:22px;
+  padding:28px 32px;
+  display:flex;align-items:center;gap:24px;
+  box-shadow:0 1px 2px rgba(28,28,30,.02);
+}
+.gr-cta-icon{
+  flex-shrink:0;width:56px;height:56px;border-radius:50%;
+  background:#FFF1EC;display:flex;align-items:center;justify-content:center;
+}
+.gr-cta-icon svg{width:26px;height:26px;color:var(--accent);}
+.gr-cta-body{flex:1;min-width:0;}
+.gr-cta-title{font-family:'Fredoka',sans-serif;font-weight:600;font-size:17px;color:var(--ink);margin-bottom:4px;}
+.gr-cta-desc{color:var(--ink-soft);font-size:14px;line-height:1.55;}
+.gr-cta-pill{
+  flex-shrink:0;display:inline-flex;align-items:center;gap:6px;
+  background:#fff;border:1px solid var(--accent);color:var(--accent);
+  border-radius:999px;padding:12px 22px;
+  font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;
+  transition:background .2s ease,box-shadow .2s ease;
+}
+.gr-cta-pill:hover{background:#FFF6F3;box-shadow:0 2px 8px rgba(255,138,101,.18);}
 
 @media (max-width:560px){
   .wrap{padding:0 24px;}
@@ -517,7 +550,10 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
   .age-nav-title{font-size:22px;}
   .age-nav-grid{grid-template-columns:1fr;gap:16px;margin-top:28px;}
   .age-nav-desc{max-width:none;}
-  .age-nav-footnote{margin-top:32px;padding-top:20px;}
+  .age-nav-footnote{margin-top:24px;}
+
+  .gr-cta{flex-direction:column;text-align:center;padding:32px 24px;gap:16px;margin-top:12px;margin-bottom:0;}
+  .gr-cta-pill{align-self:center;}
 
   /* Carrusel horizontal: la cuadricula pasa a fila con scroll-snap,
      mostrando cada tarjeta parcialmente cortada para insinuar que hay mas. */
