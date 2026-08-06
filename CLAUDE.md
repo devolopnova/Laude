@@ -360,3 +360,178 @@ muestra ese consejo en las franjas que todavía no tienen favoritos.
 directo a Amazon). Si una franja de edad no tiene `favorites` definido,
 el bloque simplemente no se renderiza (no hace falta rellenarlo con datos
 de relleno).
+
+## Componente reutilizable: "Producto recomendado"
+
+Mención editorial mínima de un producto dentro del cuerpo de un artículo
+(guías tipo `puzzle-3d.html` y sus hijos, u otro contenido editorial) — no
+es una ficha de producto ni un bloque de favoritos: es el texto
+"Recomendación:" seguido de una tarjeta compacta con miniatura, pensada
+como etiqueta editorial que forma parte del contenido, no como CTA de
+compra grande.
+
+**Disparador:** este componente se inserta **únicamente** cuando el propio
+texto de origen (Word, mensaje del usuario, etc.) trae explícitamente un
+bloque con este formato:
+
+```
+[PRODUCTO RECOMENDADO]
+Nombre: Ravensburger Puzzle 3D Castillo de Neuschwanstein
+URL: https://...
+[/PRODUCTO RECOMENDADO]
+```
+
+Nunca se inserta de oficio ni se sugiere por iniciativa propia — solo
+cuando aparece ese marcador exacto.
+
+**Flujo automático al encontrar el marcador** (sin pedir confirmación,
+igual que el resto de cambios del proyecto — ver memoria
+`workflow_amazon_import`):
+1. Ejecutar `python tools/amazon_import.py <URL>` desde la raíz del
+   proyecto **únicamente para conseguir la imagen principal** del
+   producto (se descarga en `images/`, WebP, igual que para cualquier
+   otra importación). No se genera ficha de producto, no se redacta
+   descripción y no se extraen/usan reseñas — el resto del JSON que
+   devuelve el script (`titulo`, `bullets`, `reviews_muestra`,
+   `valoracion`, `num_valoraciones`) se ignora por completo para este
+   componente.
+2. Sustituir el bloque `[PRODUCTO RECOMENDADO]...[/PRODUCTO RECOMENDADO]`
+   por el componente con imagen (variante "tarjeta", ver
+   `tools/recommended_product_template.html`), sin modificar el resto del
+   artículo.
+3. **Si la descarga de imagen falla** (error del script, producto sin
+   imagen accesible, etc.), no bloquear la inserción: usar en su lugar la
+   variante sin imagen (la píldora simple, ver más abajo) para que el
+   componente se muestre siempre aunque no haya imagen.
+
+**Nombre de la tarjeta (`{{NOMBRE}}`):** nunca el nombre literal que trae
+el marcador ni el título de Amazon — se reescribe corto y editorial,
+siguiendo estas reglas:
+- 2-3 palabras como norma general; si con 2 el producto queda
+  perfectamente identificado, no añadir una tercera.
+- Si el nombre original es muy largo, quedarse solo con las palabras más
+  representativas.
+- Eliminar palabras comerciales o de relleno: "Puzzle", "3D", "Maqueta",
+  "Metálico", "Premium", "Edición", "Coleccionista", "Compatible", "Kit",
+  "Modelo", nombre de marca, etc., salvo que sean imprescindibles para
+  identificar el producto (p.ej. mantener la marca en "Porsche 911" o
+  "Mini Cooper", donde el modelo por sí solo sería ambiguo).
+- Nunca cortar palabras ni usar puntos suspensivos ("...").
+- Debe leerse como un título editorial, no como el título de Amazon.
+- Objetivo estético: la tarjeta `.reco-card` tiene ancho fijo (460px,
+  igual en todas, ver `css/site.css`) dimensionado para el nombre más
+  largo permitido por esta regla — mantener el nombre dentro de 2-3
+  palabras es lo que garantiza que quepa siempre en una sola línea, sin
+  necesidad de truncarlo ni de ensanchar la tarjeta.
+  Ejemplos: "Big Ben Londres Puzzle 3D Metálico" → "Big Ben" · "Puzzle 3D
+  Castillo de Hogwarts Express Edición Coleccionista" → "Castillo
+  Hogwarts" · "Puzzle 3D Puente de la Torre de Londres con Luz LED" →
+  "Puente Londres" · "Puzzle 3D Torre Eiffel Metal Earth" → "Torre
+  Eiffel".
+- Excepción: si en la misma página hay dos tarjetas del mismo producto en
+  variantes distintas (p.ej. con y sin luz LED), mantener el matiz que
+  las distingue (p.ej. "Big Ben" / "Big Ben Led") aunque añada una
+  palabra — sin él ambas tarjetas quedarían con el nombre idéntico.
+
+**Estructura de salida — variante con imagen (por defecto):**
+```html
+<div class="reco-product reco-product--card">
+  <strong>Recomendación:</strong>
+  <div class="reco-card">
+    <img class="reco-card-img" src="{{IMAGEN}}" alt="{{NOMBRE}}" width="80" height="80" loading="lazy">
+    <span class="reco-card-body">
+      <span class="reco-card-name">{{NOMBRE}}</span>
+      <span class="reco-card-sep" aria-hidden="true"></span>
+      <a class="reco-card-link" href="{{URL}}" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+    </span>
+  </div>
+</div>
+```
+
+**Estructura de salida — variante sin imagen (fallback si falla la
+descarga):**
+```html
+<div class="reco-product">
+  <strong>Recomendación:</strong>
+  <span class="reco-pill">
+    <a class="reco-product-name" href="{{URL}}" target="_blank" rel="nofollow sponsored noopener">{{NOMBRE}}</a>
+    <span class="reco-pill-dot" aria-hidden="true">·</span>
+    <a class="reco-product-link" href="{{URL}}" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+  </span>
+</div>
+```
+
+Ambas son un `<div>`, no un `<p>`, a propósito: varias páginas de artículo
+(p.ej. las guías `puzzles-3d-*.html`) tienen reglas propias de tipo
+`p + p` para el espaciado entre párrafos, más específicas en CSS que
+`.reco-product` por sí solo. Al no ser `<p>`, esas reglas nunca lo
+alcanzan y el margen fijo de abajo se respeta siempre, en cualquier
+página donde se inserte.
+
+**Reglas de diseño** (clases `.reco-product*`/`.reco-pill*`/`.reco-card*`
+en `css/site.css`):
+- `margin-top: 16px`, `margin-bottom: 36px`, fijos en `.reco-product`
+  (ambas variantes).
+- "Recomendación:" en negrita (`<strong>`), fuera de la tarjeta/píldora.
+- **Variante con imagen** (`.reco-card`) — diseño definitivo, fijado el
+  06/08/2026 tras varias iteraciones, no volver a rediseñarlo salvo
+  petición explícita: tarjeta horizontal, fondo `var(--card)`, borde
+  `1px solid var(--accent)`, `border-radius: 12px`. Ancho fijo e
+  idéntico en todas las tarjetas (`width: 460px`, con `max-width: 100%`
+  para no desbordar en móvil) — ese ancho es el mínimo necesario para
+  que quepa el nombre más largo permitido por la regla editorial (2-3
+  palabras) sin dejar hueco de sobra en las tarjetas con nombre corto;
+  si en el futuro hace falta un nombre más largo que ya no quepa,
+  ampliar este valor en vez de romper la regla de "misma anchura para
+  todas". Padding `2px 14px` (vertical mínimo a propósito: con la
+  miniatura fija en 80×80 no se puede bajar de ~82-86px de alto sin
+  recortar la imagen, así que el padding vertical se dejó casi a cero
+  para acercarse lo más posible a una tarjeta compacta). Miniatura
+  `.reco-card-img` de **80×80** fijo (no reducir sin que el usuario lo
+  pida explícitamente — ya se intentó bajar a 52×52 y a 44×44 en
+  iteraciones previas y el usuario pidió mantenerla en 80×80), gap de
+  16px respecto al nombre, `object-fit: contain`, esquinas redondeadas
+  (`border-radius: 9px`). `.reco-card-body` es un **grid** de columnas
+  `1fr auto auto` (nombre / separador / enlace), no flex: el nombre
+  (`font-weight: 700`, `17px`, color `var(--ink)`) va **centrado**
+  (`justify-self: center`) dentro de la columna `1fr`, que ocupa todo el
+  espacio libre entre la imagen y el separador — como esa columna mide
+  siempre lo mismo (ancho de tarjeta fijo, resto de columnas de ancho
+  fijo), el separador y "Ver en Amazon →" quedan siempre en la misma
+  posición horizontal en todas las tarjetas, sea cual sea la longitud
+  del nombre. Separador (`.reco-card-sep`, 1px × 22px, color
+  `var(--line)`) y enlace con `column-gap: 10px` entre sí. "Ver en
+  Amazon →" en `var(--accent)`, negrita, `14.5px` fijo (no hereda el
+  tamaño del artículo, para que la tarjeta se vea igual en cualquier
+  página), sin subrayado (subrayado al hover). En escritorio (≥768px)
+  todo va en una sola línea siempre (sin `flex-wrap`, sin truncar) — el
+  nombre del producto se redacta corto a propósito (ver reglas
+  editoriales más arriba) para que quepa sin necesidad de partir la
+  tarjeta en dos líneas.
+  **Móvil (`<768px`):** la distribución de una sola línea deja de usarse
+  (no cabría sin reducir la fuente ni truncar) y `.reco-card-body` pasa
+  de grid a columna vertical (`flex-direction: column`, `gap: 4px`,
+  alineado a la izquierda): nombre arriba, "Ver en Amazon →" justo
+  debajo, ambos con el mismo tamaño de fuente que en escritorio. El
+  separador (`.reco-card-sep`) se oculta (`display: none`). La imagen
+  sigue a la izquierda en 80×80 sin cambios, y como el bloque de texto
+  apilado mide menos que la miniatura, la altura de la tarjeta no varía
+  respecto a escritorio.
+- **Variante sin imagen** (`.reco-pill`, fallback): fondo blanco, borde
+  `1px solid var(--accent)`, esquinas `border-radius: 9999px`, ~32-33px
+  de alto, `padding: 7px 16px`, sin sombra ni icono. `font-size: 13px`
+  fijo — más pequeño que el cuerpo del artículo a propósito, para que
+  tenga menos protagonismo. Dentro: nombre sin subrayado (mismo color de
+  texto que el resto, sin usar `--accent`), un punto `·` centrado como
+  separador (`var(--ink-soft)`), y "Ver en Amazon →" en `var(--accent)` y
+  negrita.
+- Hover (ambas variantes): borde ligeramente más oscuro
+  (`color-mix(in srgb, var(--accent) 70%, #000)`) y fondo con un tinte
+  muy suave del color de marca (`color-mix(in srgb, var(--accent) 6%,
+  var(--card))`), transición de 0.2s. Sin animaciones llamativas.
+- Responsive: si el contenido no cabe en una línea, el texto salta de
+  línea dentro de la propia tarjeta/píldora (`flex-wrap`) — nunca se
+  convierte en un botón grande ni se parte en elementos separados.
+- Ambos enlaces llevan `target="_blank" rel="nofollow sponsored noopener"`
+  (enlace de afiliado saliente: `nofollow sponsored`, no solo `noopener`
+  como en los enlaces internos de Favoritos).

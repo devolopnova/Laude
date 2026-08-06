@@ -333,6 +333,95 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:64
 }
 .favorite-item:hover .favorite-name{color:var(--accent);}
 
+/* Componente reutilizable "Producto recomendado": mencion editorial minima
+   de un producto dentro del cuerpo de un articulo, sin aspecto de anuncio
+   grande - el texto "Recomendacion:" seguido de una tarjeta compacta con
+   miniatura (diseño por defecto, reglas mas abajo en ".reco-product--card
+   / .reco-card"). Esta pildora sin imagen (.reco-pill) queda como
+   fallback automatico para cuando no se puede descargar la imagen del
+   producto. Se inserta unicamente cuando el texto de origen trae el
+   marcador [PRODUCTO RECOMENDADO] Nombre: ... URL: ...
+   [/PRODUCTO RECOMENDADO] (ver CLAUDE.md y
+   tools/recommended_product_template.html); el marcador sigue siendo
+   manual, pero al encontrarlo la descarga de imagen vía
+   tools/amazon_import.py es automatica, sin pedir confirmacion.
+   .reco-product es un <div>, no un <p>: varias paginas de articulo
+   (p.ej. las guias puzzles-3d-*.html) tienen reglas propias de tipo
+   "p + p" para el espaciado entre parrafos, mas especificas que
+   .reco-product por si solo — al no ser <p>, esas reglas nunca lo
+   alcanzan y el margen fijo de aqui (16px/36px) se respeta siempre, en
+   cualquier pagina.
+   La pildora (.reco-pill) fija un font-size propio de 13px, mas pequeno
+   que el cuerpo del articulo, para que tenga menos protagonismo (es una
+   etiqueta discreta, no debe competir visualmente con el texto). El
+   line-height tambien es propio, mas compacto, para que la pildora sea
+   compacta en vez de tener la altura de linea suelta de un parrafo. En
+   movil, si el contenido no cabe en una linea, hace flex-wrap dentro de
+   la propia pildora (nunca se convierte en boton grande ni se parte en
+   dos elementos). */
+.reco-product{margin-top:16px;margin-bottom:36px;display:flex;align-items:center;flex-wrap:wrap;gap:10px;}
+.reco-pill{
+  display:inline-flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;
+  max-width:100%;
+  background:var(--card);border:1px solid var(--accent);border-radius:9999px;
+  padding:7px 16px;font-size:13px;line-height:1.3;
+  transition:border-color .2s ease,background .2s ease;
+}
+.reco-pill:hover{
+  border-color:color-mix(in srgb, var(--accent) 70%, #000);
+  background:color-mix(in srgb, var(--accent) 6%, var(--card));
+}
+/* Selectores anidados bajo .reco-product (no solo la clase suelta) a
+   proposito: varias paginas de articulo tienen su propia regla generica
+   ".p3d-section a{color:var(--accent);...}" para los enlaces del cuerpo
+   del texto, con mas especificidad que una clase sola. Anidar aqui evita
+   que esa regla de pagina pise el color pensado para cada enlace de la
+   pildora, sin recurrir a !important. */
+.reco-product .reco-product-name{color:var(--ink);text-decoration:none;}
+.reco-pill-dot{color:var(--ink-soft);}
+.reco-product .reco-product-link{color:var(--accent);font-weight:600;text-decoration:none;}
+.reco-product .reco-product-link:hover{text-decoration:underline;}
+
+/* Variante "tarjeta horizontal" del componente "Producto recomendado", con
+   miniatura del producto — diseño por defecto desde que el marcador
+   [PRODUCTO RECOMENDADO] dispara la descarga automatica de imagen (ver
+   CLAUDE.md). La variante sin imagen (.reco-product/.reco-pill de arriba)
+   queda como fallback si la descarga de imagen falla. "Recomendacion:" se
+   queda como etiqueta independiente encima de la tarjeta
+   (.reco-product--card pasa el contenedor a columna); la tarjeta en si es
+   .reco-card, con ancho ajustado al contenido (inline-flex, nunca 100% del
+   articulo) y borde del color de marca en vez del borde neutro del resto
+   del sitio. */
+.reco-product--card{flex-direction:column;align-items:flex-start;gap:10px;}
+.reco-card{
+  display:inline-flex;align-items:center;gap:16px;
+  box-sizing:border-box;width:460px;max-width:100%;
+  background:var(--card);border:1px solid var(--accent);border-radius:12px;
+  padding:2px 14px;
+}
+.reco-card-img{width:80px;height:80px;object-fit:contain;border-radius:9px;flex-shrink:0;}
+.reco-card-body{display:grid;grid-template-columns:1fr auto auto;align-items:center;column-gap:10px;flex:1 1 auto;min-width:0;}
+.reco-card-name{color:var(--ink);font-weight:700;font-size:17px;white-space:nowrap;justify-self:center;text-align:center;}
+.reco-card-sep{width:1px;height:22px;background:var(--line);flex-shrink:0;}
+.reco-card-link{color:var(--accent);font-weight:600;font-size:14.5px;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+.reco-card-link:hover{text-decoration:underline;}
+/* Movil (<768px): la distribucion horizontal en una sola linea
+   (imagen | nombre centrado | separador | enlace) no cabe en pantallas
+   estrechas sin reducir la fuente o truncar el nombre, asi que se
+   sustituye por imagen a la izquierda + bloque vertical a la derecha
+   (nombre arriba, enlace debajo), sin separador. La altura de la
+   tarjeta no cambia: la sigue marcando la miniatura de 80x80, ya que el
+   bloque de texto (nombre + enlace apilados) mide menos que eso. */
+@media (max-width:767px){
+  .reco-card{width:100%;}
+  .reco-card-body{
+    display:flex;flex-direction:column;align-items:flex-start;
+    justify-content:center;gap:4px;
+  }
+  .reco-card-name{justify-self:unset;text-align:left;}
+  .reco-card-sep{display:none;}
+}
+
 footer{padding:32px 0 56px;}
 footer p{font-size:12.5px;color:var(--ink-soft);}
 

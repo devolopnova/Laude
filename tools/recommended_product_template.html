@@ -1,0 +1,71 @@
+<!--
+  recommended_product_template.html
+
+  Plantilla de referencia del componente reutilizable "Producto
+  recomendado". Vive en css/site.css (clases .reco-product*, .reco-pill*,
+  .reco-card*) para que cualquier articulo editorial (guias tipo
+  puzzle-3d.html y sus hijos, u otro contenido editorial) pueda incluirlo
+  con el mismo aspecto.
+
+  Se inserta UNICAMENTE cuando el texto de origen trae explicitamente
+  este marcador (ver CLAUDE.md, seccion "Componente reutilizable:
+  Producto recomendado"):
+
+    [PRODUCTO RECOMENDADO]
+    Nombre: XXXXX
+    URL: XXXXX
+    [/PRODUCTO RECOMENDADO]
+
+  Nunca se inserta por iniciativa propia. Al encontrar el marcador:
+
+    1. Ejecutar `python tools/amazon_import.py <URL>` UNICAMENTE para
+       conseguir la imagen principal (se descarga en images/, WebP). No
+       se genera ficha, ni descripcion, ni se usan reseñas: el resto del
+       JSON que devuelve el script se ignora para este componente.
+    2. Sustituir el bloque completo por la variante CON IMAGEN de abajo
+       (es el diseño por defecto), sin modificar el resto del articulo.
+    3. Si la descarga de imagen falla, usar en su lugar la variante SIN
+       IMAGEN (fallback) para que el componente nunca se rompa.
+
+  Placeholders: {{NOMBRE}}, {{URL}}, {{IMAGEN}} (solo variante con imagen).
+
+  Reglas comunes a ambas variantes:
+  - Etiqueta editorial discreta, no un boton de compra grande.
+  - Separacion fija: margin-top 16px, margin-bottom 36px (en
+    .reco-product, nunca inline).
+  - "Recomendacion:" en negrita, fuera de la tarjeta/pildora.
+  - Ambos enlaces: target="_blank" rel="nofollow sponsored noopener"
+    (enlace de afiliado saliente, distinto del rel="noopener" que usan
+    los enlaces internos de Favoritos).
+  - Es un <div>, no un <p>: varias paginas de articulo tienen reglas
+    propias de tipo "p + p" para el espaciado entre parrafos, mas
+    especificas que .reco-product por si solo. Al no ser <p>, esas
+    reglas nunca lo afectan y el margen fijo (16px/36px) se respeta
+    siempre, en cualquier pagina donde se inserte.
+  - Responsive: si el contenido no cabe en una linea, el texto salta de
+    linea dentro de la propia tarjeta/pildora (flex-wrap) - nunca se
+    convierte en un boton grande ni se parte en elementos separados.
+-->
+
+<!-- Variante CON IMAGEN (por defecto) -->
+<div class="reco-product reco-product--card">
+  <strong>Recomendación:</strong>
+  <div class="reco-card">
+    <img class="reco-card-img" src="{{IMAGEN}}" alt="{{NOMBRE}}" width="80" height="80" loading="lazy">
+    <span class="reco-card-body">
+      <span class="reco-card-name">{{NOMBRE}}</span>
+      <span class="reco-card-sep" aria-hidden="true"></span>
+      <a class="reco-card-link" href="{{URL}}" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+    </span>
+  </div>
+</div>
+
+<!-- Variante SIN IMAGEN (fallback si falla la descarga) -->
+<div class="reco-product">
+  <strong>Recomendación:</strong>
+  <span class="reco-pill">
+    <a class="reco-product-name" href="{{URL}}" target="_blank" rel="nofollow sponsored noopener">{{NOMBRE}}</a>
+    <span class="reco-pill-dot" aria-hidden="true">·</span>
+    <a class="reco-product-link" href="{{URL}}" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+  </span>
+</div>
