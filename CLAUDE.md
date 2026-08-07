@@ -189,7 +189,7 @@ usuario tenga que pedirlo:
 2. **Google AdSense**: si la página va a mostrar anuncios (caso general:
    todas las páginas de categoría/producto), añadir también en el
    `<head>` el mismo script que ya llevan el resto de páginas:
-   `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4612059479012565" crossorigin="anonymous"></script>`.
+   `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559559964863356" crossorigin="anonymous"></script>`.
    Páginas puramente institucionales/legales sin intención de monetizar
    pueden omitirlo si así se decide explícitamente, pero por defecto se
    añade igual que en el resto del sitio.
