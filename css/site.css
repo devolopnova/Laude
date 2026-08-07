@@ -519,6 +519,50 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 .discover-more-name{font-size:13.5px;line-height:1.35;color:#2E7D32;}
 .discover-more-arrow{color:#2E7D32;font-size:15px;line-height:1;}
 
+/* Bloque reutilizable "Especiales sobre <categoria>": enlaza articulos
+   editoriales relacionados con la categoria (nunca productos), pensado
+   para crecer con el tiempo. Vive dentro de un .bottom-nav-section propio,
+   entre "Navegar entre categorias" y "Explorar mas", asi hereda el mismo
+   margen inferior (40px) que separa el resto de secciones del bloque de
+   navegacion sin necesidad de un valor nuevo.
+   Preparado para un array de articulos sin tocar CSS ni marcado: con una
+   unica .specials-card, :has(> .specials-card:only-child) la agranda a
+   tarjeta horizontal a todo el ancho (imagen a la izquierda); en cuanto
+   se anade una segunda tarjeta al HTML, pasa sola a una cuadricula
+   auto-fit de tarjetas verticales (imagen arriba). */
+.specials{
+  background:color-mix(in srgb, var(--accent) 5%, var(--card));
+  border:1px solid var(--line);border-radius:20px;
+  padding:28px;
+}
+.specials-head{display:flex;align-items:center;gap:8px;}
+.specials-icon{font-size:17px;line-height:1;}
+.specials-title{font-size:15px;font-weight:600;color:var(--ink);}
+.specials-sub{margin-top:6px;color:var(--ink-soft);font-size:13.5px;line-height:1.6;max-width:520px;}
+.specials-grid{
+  margin-top:20px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;
+}
+.specials-card{
+  display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  color:inherit;text-decoration:none;
+  transition:border-color .15s,box-shadow .15s,transform .15s;
+}
+.specials-card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(0,0,0,.06);transform:translateY(-2px);}
+.specials-img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;flex-shrink:0;}
+.specials-info{display:flex;flex-direction:column;gap:6px;padding:18px;}
+.specials-name{font-size:14.5px;font-weight:600;color:var(--ink);}
+.specials-desc{font-size:13px;color:var(--ink-soft);line-height:1.5;}
+.specials-link{margin-top:4px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--accent);}
+/* Tarjeta unica: horizontal a todo el ancho en vez de la cuadricula vertical. */
+.specials-grid:has(> .specials-card:only-child){grid-template-columns:1fr;}
+.specials-grid:has(> .specials-card:only-child) .specials-card{flex-direction:row;align-items:stretch;}
+.specials-grid:has(> .specials-card:only-child) .specials-img{width:200px;max-width:40%;aspect-ratio:1;flex-shrink:0;}
+.specials-grid:has(> .specials-card:only-child) .specials-info{justify-content:center;padding:24px 28px;}
+.specials-grid:has(> .specials-card:only-child) .specials-name{font-size:16px;}
+.specials-grid:has(> .specials-card:only-child) .specials-desc{font-size:13.5px;}
+
 /* Navegación de fin de página en las franjas de edad de la guía Montessori
    (juguetes-montessori*.html): "edad anterior / espacios Montessori / edad
    siguiente". Compartido por las 6 páginas para que sea un patrón único;
@@ -656,4 +700,8 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
   .discover-more-card{
     flex:0 0 30%;min-width:112px;scroll-snap-align:start;padding:14px 10px;
   }
+
+  .specials{padding:22px;}
+  .specials-grid:has(> .specials-card:only-child) .specials-card{flex-direction:column;}
+  .specials-grid:has(> .specials-card:only-child) .specials-img{width:100%;max-width:none;}
 }
