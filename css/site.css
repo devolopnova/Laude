@@ -499,6 +499,26 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 .bottom-nav-explore-card.bne-montessori{background:#F1F8F3;}.bottom-nav-explore-card.bne-montessori .bottom-nav-explore-name{color:#2E7D32;}
 .bottom-nav-note{font-size:12px;color:var(--ink-soft);text-align:center;padding:0 16px;}
 
+/* "Otras categorias de puzzles en Lauderem": tres filas horizontales
+   (nombre/descripcion + boton pildora) que enlazan a la pagina de
+   puzzles de la misma edad, a los puzzles 3D y a la guia general de
+   regalos. Vive en un .bottom-nav-section propio, igual que el resto de
+   bloques de esta zona. */
+.puzzle-other-title{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:16px;}
+.puzzle-other-list{display:flex;flex-direction:column;gap:12px;}
+.puzzle-other-card{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card);transition:border-color .15s, box-shadow .15s;}
+.puzzle-other-card:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.05);text-decoration:none;}
+.puzzle-other-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+.puzzle-other-name{font-weight:700;color:var(--ink);font-size:15px;}
+.puzzle-other-desc{color:var(--ink-soft);font-size:13.5px;line-height:1.5;font-weight:400;}
+.puzzle-other-btn{flex-shrink:0;width:212px;text-align:center;border:1.5px solid var(--accent);color:var(--accent);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:9999px;white-space:nowrap;transition:background .15s;}
+.puzzle-other-card:hover .puzzle-other-btn{background:color-mix(in srgb, var(--accent) 8%, var(--card));}
+@media (max-width:640px){
+  .puzzle-other-card{flex-wrap:wrap;}
+  .puzzle-other-body{flex-basis:100%;}
+  .puzzle-other-btn{width:auto;flex-basis:100%;text-align:center;margin-top:12px;}
+}
+
 /* "Descubre mas juguetes para <edad>": tarjetas hacia el resto de
    categorias de la misma edad (excluyendo la actual), para reforzar el
    enlazado interno. Mismo radio, borde y tipografia que
