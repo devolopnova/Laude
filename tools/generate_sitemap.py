@@ -38,6 +38,14 @@ EXCLUDE_PREFIXES = (
 # Páginas "guía" (contenido pilar, no ficha de categoría de producto).
 GUIDES = {
     "guia-montessori.html",
+    "vida-en-familia.html",
+    "comprar-mejor.html",
+    "organizacion-y-hogar.html",
+    "cumpleanos-y-celebraciones.html",
+    "lectura-y-cultura-infantil.html",
+    "pantallas-y-ocio.html",
+    "viajes-y-vacaciones.html",
+    "consumo-responsable.html",
     "guia-0-6-meses.html",
     "guia-6-12-meses.html",
     "guia-1-ano.html",

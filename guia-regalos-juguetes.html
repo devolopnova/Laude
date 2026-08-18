@@ -261,6 +261,11 @@
   .age-list .age-row:last-child{}
   [id^="fav-"]{scroll-margin-top:110px;}
   [id^="categories-"]{scroll-margin-top:85px;}
+  /* #chart es el selector de edades bajo el hero (enlace "Edades" de la
+     cabecera y el CTA "nuestras paginas por etapas" de otros articulos).
+     Mismo valor que .age-row/[id^="fav-"]: compensa la cabecera sticky
+     para que el bloque no quede tapado ni a medias al llegar por ancla. */
+  #chart{scroll-margin-top:110px;}
   @media (max-width:640px){
     /* En movil los chips de la cabecera pasan a 2 filas y su alto real
        varia (ancho de pantalla, tamano de fuente del sistema, etc.), asi
@@ -271,6 +276,7 @@
        aqui solo se le suman 16px de aire para que el titulo quede
        completamente visible, nunca a medias. */
     [id^="categories-"]{scroll-margin-top:calc(var(--mobile-header-h, 174px) + 16px);}
+    #chart{scroll-margin-top:calc(var(--mobile-header-h, 174px) + 16px);}
   }
   /* Insignia de edad: circulo tintado con anillo del color de la franja
      (var(--accent), fijado por fila desde el array bands) del que baja una
@@ -990,6 +996,9 @@
           </div>
         </div>
       </div>
+      <a class="nav-chip" href="vida-en-familia.html">
+        <i class="ti ti-home" aria-hidden="true"></i><span>Vida en familia</span>
+      </a>
       <!-- Chip "Buscar" oculto temporalmente hasta tener buscador funcional.
            No borrar: descomentar para reactivarlo.
       <button class="nav-chip" type="button">
