@@ -330,6 +330,51 @@
   .age-highlight-v2 p{color:var(--ink-soft);font-size:12.5px;line-height:1.55;margin:0;}
   .age-header-illustration-v2{justify-self:end;width:196px;height:196px;display:flex;align-items:center;justify-content:center;overflow:visible;}
   .age-header-illustration-v2 img{width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(44,44,42,.16));}
+
+  /* Tarjeta de acceso a la guia editorial de la franja (SOLO franja 0-6
+     meses / a0 por ahora, via el campo opcional "guideCard" en
+     ageHeaderContent). Vive dentro de .age-header-content, justo despues
+     de .age-header-highlights-v2 y antes de .age-header-illustration-v2:
+     en escritorio (grid de 3 columnas) queda debajo de los highlights en
+     la columna central; en movil (flex column, illustration con
+     order:4) queda tras los highlights y antes de la ilustracion, que se
+     empuja al final. El tinte se deriva de var(--accent) con color-mix
+     (igual que el resto de este bloque), nunca un color fijo por franja. */
+  .age-guide-card{
+    display:block;margin-top:24px;
+    background:color-mix(in srgb, var(--accent) 6%, #fff);
+    border:1px solid color-mix(in srgb, var(--accent) 22%, #fff);
+    border-radius:16px;padding:18px 20px;
+    text-decoration:none;
+    transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+  .age-guide-card:hover{
+    border-color:var(--accent);
+    box-shadow:0 4px 14px rgba(44,44,42,.08);
+    transform:translateY(-1px);
+  }
+  .age-guide-card-eyebrow{
+    display:block;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
+    color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;
+  }
+  .age-guide-card-title{
+    display:block;font-family:'Fredoka',sans-serif;font-weight:600;font-size:15.5px;
+    color:var(--ink);line-height:1.3;
+  }
+  .age-guide-card-desc{
+    display:block;font-size:12.5px;color:var(--ink-soft);margin-top:6px;line-height:1.5;
+  }
+  /* La flecha vive dentro del propio texto de la descripcion (no en un
+     <span> aparte con su propia linea): al ser un icono inline dentro del
+     mismo bloque, fluye pegado a la ultima palabra del texto en vez de
+     saltar a una linea propia, tanto si la descripcion ocupa una linea
+     como varias (movil). */
+  .age-guide-card-arrow{
+    display:inline-block;margin-left:4px;
+    color:var(--accent);font-size:13px;font-weight:600;
+    transition:transform .2s ease;
+  }
+  .age-guide-card:hover .age-guide-card-arrow{transform:translateX(3px);}
   .category-heading{font-family:'Fredoka',sans-serif;font-size:21px;margin:0 0 16px;}
   .chips{
     display:grid;
@@ -2054,29 +2099,41 @@
   // El renderizador no conoce edades concretas: recibe todo por argumento.
   const ageHeaderContent = {
     a0:{description:'En estos primeros meses, cada sonido, textura y movimiento es una nueva aventura.',illustration:'images/icons-3d/illu-a0.png',highlights:[
-      {icon:'ti-hand-click',title:'Estimulación',description:'Exploran con los sentidos.'},{icon:'ti-eye',title:'Curiosidad',description:'Descubren formas, colores y sonidos.'},{icon:'ti-heart',title:'Vínculo',description:'Necesitan afecto, miradas y contacto.'}]},
+      {icon:'ti-hand-click',title:'Estimulación',description:'Exploran con los sentidos.'},{icon:'ti-eye',title:'Curiosidad',description:'Descubren formas, colores y sonidos.'},{icon:'ti-heart',title:'Vínculo',description:'Necesitan afecto, miradas y contacto.'}],
+      guideCard:{href:'guia-0-6-meses.html',eyebrow:'DESCUBRE ESTA ETAPA · 0–6 MESES',title:'Jugar, descubrir y acompañar sus primeros aprendizajes',desc:'Sonidos, texturas y las primeras miradas que despiertan su curiosidad.'}},
     a1:{description:'Empiezan a moverse, tocar, mirar y entender cómo funcionan las cosas.',illustration:'images/icons-3d/illu-a1.png',highlights:[
-      {icon:'ti-hand-click',title:'Motricidad',description:'Practican agarre, precisión y fuerza.'},{icon:'ti-bulb',title:'Descubrimiento',description:'Entienden causa y efecto.'},{icon:'ti-mood-smile',title:'Confianza',description:'Ganan seguridad en sí mismos.'}]},
+      {icon:'ti-hand-click',title:'Motricidad',description:'Practican agarre, precisión y fuerza.'},{icon:'ti-bulb',title:'Descubrimiento',description:'Entienden causa y efecto.'},{icon:'ti-mood-smile',title:'Confianza',description:'Ganan seguridad en sí mismos.'}],
+      guideCard:{href:'guia-6-12-meses.html',eyebrow:'DESCUBRE ESTA ETAPA · 6–12 MESES',title:'Manipular, moverse y comunicarse cada vez más',desc:'Gateo, primeras palabras y manos que no paran de investigar.'}},
     a2:{description:'Los primeros pasos abren una etapa de movimiento, imitación y exploración.',illustration:'images/icons-3d/illu-a2.png',highlights:[
-      {icon:'ti-run',title:'Movimiento',description:'Se desplazan con más seguridad.'},{icon:'ti-hand-click',title:'Descubrimiento',description:'Exploran texturas, formas y materiales.'},{icon:'ti-music',title:'Imitación',description:'Repiten gestos y sonidos.'}]},
+      {icon:'ti-run',title:'Movimiento',description:'Se desplazan con más seguridad.'},{icon:'ti-hand-click',title:'Descubrimiento',description:'Exploran texturas, formas y materiales.'},{icon:'ti-music',title:'Imitación',description:'Repiten gestos y sonidos.'}],
+      guideCard:{href:'guia-1-ano.html',eyebrow:'DESCUBRE ESTA ETAPA · 1 AÑO',title:'Experimentar, aprender y ganar autonomía a través del juego',desc:'Una etapa llena de nuevos aprendizajes y descubrimientos.'}},
     a3:{description:'Sienten curiosidad por todo y disfrutan haciendo las cosas por sí mismos.',illustration:'images/icons-3d/illu-a3.png',highlights:[
-      {icon:'ti-search',title:'Curiosidad',description:'Preguntan, prueban y descubren.'},{icon:'ti-hand-click',title:'Autonomía',description:'Quieren hacer las cosas solos.'},{icon:'ti-heart',title:'Lenguaje',description:'Aumentan su vocabulario.'}]},
+      {icon:'ti-search',title:'Curiosidad',description:'Preguntan, prueban y descubren.'},{icon:'ti-hand-click',title:'Autonomía',description:'Quieren hacer las cosas solos.'},{icon:'ti-heart',title:'Lenguaje',description:'Aumentan su vocabulario.'}],
+      guideCard:{href:'guia-2-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 2 AÑOS',title:'Imaginar, crear y descubrir jugando',desc:'Juego simbólico, primeras historias y ganas de imitarlo todo.'}},
     a4:{description:'El juego se vuelve más creativo y social. Inventan historias y disfrutan compartiendo.',illustration:'images/icons-3d/illu-a4.png',highlights:[
-      {icon:'ti-brain',title:'Imaginación',description:'Inventan historias y crean juegos.'},{icon:'ti-users',title:'Socialización',description:'Disfrutan jugando con otros niños.'},{icon:'ti-hand-click',title:'Autonomía',description:'Cada vez hacen más cosas solos.'}]},
+      {icon:'ti-brain',title:'Imaginación',description:'Inventan historias y crean juegos.'},{icon:'ti-users',title:'Socialización',description:'Disfrutan jugando con otros niños.'},{icon:'ti-hand-click',title:'Autonomía',description:'Cada vez hacen más cosas solos.'}],
+      guideCard:{href:'guia-3-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 3 AÑOS',title:'Imaginar, crear y jugar cada vez más',desc:'Una etapa para dar espacio a la imaginación, la creatividad y el juego compartido.'}},
     a5:{description:'Quieren entender cómo funciona todo y disfrutan aprendiendo jugando.',illustration:'images/icons-3d/pizarra-4anos-illu.png',highlights:[
-      {icon:'ti-help-circle',title:'Curiosidad',description:'Observan, preguntan y experimentan.'},{icon:'ti-bulb',title:'Creatividad',description:'Expresan ideas con dibujos y juegos.'},{icon:'ti-users',title:'Socialización',description:'Hacen amigos y juego en grupo.'}]},
+      {icon:'ti-help-circle',title:'Curiosidad',description:'Observan, preguntan y experimentan.'},{icon:'ti-bulb',title:'Creatividad',description:'Expresan ideas con dibujos y juegos.'},{icon:'ti-users',title:'Socialización',description:'Hacen amigos y juego en grupo.'}],
+      guideCard:{href:'guia-4-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 4 AÑOS',title:'Imaginar, experimentar y descubrir nuevas posibilidades',desc:'Una etapa para dar espacio a la curiosidad, la creatividad y la imaginación.'}},
     a6:{description:'Buscan retos con sentido y la satisfacción de resolverlos. Las instrucciones se convierten en una aventura.',illustration:'images/icons-3d/illu-a6.png',highlights:[
-      {icon:'ti-puzzle',title:'Pensamiento',description:'Resuelven problemas y retos.'},{icon:'ti-target',title:'Concentración',description:'Mejoran su atención y precisión.'},{icon:'ti-mood-smile',title:'Confianza',description:'Celebran sus logros y avances.'}]},
+      {icon:'ti-puzzle',title:'Pensamiento',description:'Resuelven problemas y retos.'},{icon:'ti-target',title:'Concentración',description:'Mejoran su atención y precisión.'},{icon:'ti-mood-smile',title:'Confianza',description:'Celebran sus logros y avances.'}],
+      guideCard:{href:'guia-5-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 5 AÑOS',title:'Crear, razonar y descubrir jugando',desc:'Una etapa para desarrollar la curiosidad, la creatividad y nuevas formas de resolver retos.'}},
     a7:{description:'Desarrollan habilidades, intereses propios y una visión cada vez más amplia del mundo.',illustration:'images/icons-3d/illu-a7.png',highlights:[
-      {icon:'ti-brain',title:'Pensamiento crítico',description:'Analizan, comparan y crean soluciones.'},{icon:'ti-rocket',title:'Creatividad',description:'Desarrollan proyectos e ideas propias.'},{icon:'ti-world',title:'Independencia',description:'Ganan autonomía y responsabilidad.'}]},
+      {icon:'ti-brain',title:'Pensamiento crítico',description:'Analizan, comparan y crean soluciones.'},{icon:'ti-rocket',title:'Creatividad',description:'Desarrollan proyectos e ideas propias.'},{icon:'ti-world',title:'Independencia',description:'Ganan autonomía y responsabilidad.'}],
+      guideCard:{href:'guia-6-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 6 AÑOS',title:'Construir, pensar y resolver nuevos retos',desc:'Una etapa para desarrollar la curiosidad, la creatividad y nuevas formas de pensar.'}},
     a8:{description:'Les apasiona aprender, comprender y superar nuevos desafíos cada día.',illustration:'images/icons-3d/illu-a8.png',highlights:[
-      {icon:'ti-book',title:'Aprendizaje',description:'Disfrutan descubrir cosas nuevas.'},{icon:'ti-target',title:'Constancia',description:'Se esfuerzan por mejorar cada día.'},{icon:'ti-users',title:'Amistad',description:'Fortalecen vínculos y trabajan en equipo.'}]},
+      {icon:'ti-book',title:'Aprendizaje',description:'Disfrutan descubrir cosas nuevas.'},{icon:'ti-target',title:'Constancia',description:'Se esfuerzan por mejorar cada día.'},{icon:'ti-users',title:'Amistad',description:'Fortalecen vínculos y trabajan en equipo.'}],
+      guideCard:{href:'guia-7-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 7 AÑOS',title:'Imaginar, crear y superar nuevos retos',desc:'Una etapa para desarrollar la curiosidad, la estrategia y nuevas formas de resolver problemas.'}},
     a9:{description:'Les gusta investigar, crear y entender cómo funciona el mundo que les rodea.',illustration:'images/icons-3d/illu-a9.png',highlights:[
-      {icon:'ti-flask',title:'Curiosidad',description:'Investigan y hacen preguntas complejas.'},{icon:'ti-pencil',title:'Creatividad',description:'Diseñan, inventan y expresan ideas.'},{icon:'ti-users',title:'Autoestima',description:'Toman decisiones y confían en sí mismos.'}]},
+      {icon:'ti-flask',title:'Curiosidad',description:'Investigan y hacen preguntas complejas.'},{icon:'ti-pencil',title:'Creatividad',description:'Diseñan, inventan y expresan ideas.'},{icon:'ti-users',title:'Autoestima',description:'Toman decisiones y confían en sí mismos.'}],
+      guideCard:{href:'guia-8-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 8 AÑOS',title:'Pensar, crear y llevar las ideas más lejos',desc:'Una etapa para desarrollar la curiosidad, la estrategia y proyectos cada vez más propios.'}},
     a10:{description:'Desarrollan su pensamiento crítico, su sentido del humor y su visión del mundo.',illustration:'images/icons-3d/illu-a10.png',highlights:[
-      {icon:'ti-brain',title:'Pensamiento crítico',description:'Argumentan, analizan y sacan conclusiones.'},{icon:'ti-bulb',title:'Creatividad',description:'Proponen ideas originales.'},{icon:'ti-users',title:'Colaboración',description:'Disfrutan proyectos en equipo.'}]},
+      {icon:'ti-brain',title:'Pensamiento crítico',description:'Argumentan, analizan y sacan conclusiones.'},{icon:'ti-bulb',title:'Creatividad',description:'Proponen ideas originales.'},{icon:'ti-users',title:'Colaboración',description:'Disfrutan proyectos en equipo.'}],
+      guideCard:{href:'guia-9-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 9 AÑOS',title:'Descubrir, crear y encontrar nuevas soluciones',desc:'Una etapa para desarrollar la curiosidad, la estrategia y nuevas formas de resolver retos.'}},
     a11:{description:'Buscan independencia, propósito y retos que les permitan crecer y superarse.',illustration:'images/icons-3d/illu-a11.png',highlights:[
-      {icon:'ti-chart-bar',title:'Autonomía',description:'Gestionan su tiempo y sus proyectos.'},{icon:'ti-target',title:'Enfoque',description:'Trabajan con objetivos y constancia.'},{icon:'ti-leaf',title:'Visión',description:'Empiezan a definir sus intereses.'}]}
+      {icon:'ti-chart-bar',title:'Autonomía',description:'Gestionan su tiempo y sus proyectos.'},{icon:'ti-target',title:'Enfoque',description:'Trabajan con objetivos y constancia.'},{icon:'ti-leaf',title:'Visión',description:'Empiezan a definir sus intereses.'}],
+      guideCard:{href:'guia-10-anos.html',eyebrow:'DESCUBRE ESTA ETAPA · 10 AÑOS',title:'Imaginar, crear y desarrollar sus propias ideas',desc:'Una etapa para desarrollar la curiosidad, la autonomía y proyectos cada vez más personales.'}}
   };
 
   // Normaliza un nombre de categoria para comparaciones tolerantes a
@@ -2196,7 +2253,12 @@
   // (icono+titulo en una fila, descripcion debajo a todo el ancho). Cuando
   // se apruebe este diseno, sustituira a renderAgeHeader() para todas las
   // franjas; hasta entonces conviven ambas funciones sin tocarse.
-  function renderAgeHeaderV2({age, unit, title, description, heroImage, illustration, highlights}){
+  function renderAgeHeaderV2({age, unit, title, description, heroImage, illustration, highlights, guideCard}){
+    const guideCardHtml = guideCard ? `<a class="age-guide-card" href="${guideCard.href}">
+          <span class="age-guide-card-eyebrow">${guideCard.eyebrow}</span>
+          <span class="age-guide-card-title">${guideCard.title}</span>
+          <span class="age-guide-card-desc">${guideCard.desc}<i class="ti ti-arrow-right age-guide-card-arrow" aria-hidden="true"></i></span>
+        </a>` : '';
     return `<section class="age-header age-header-v2">
       <img class="age-header-photo-v2" src="${heroImage}?v=47" alt="Niño o niña en la etapa de ${age} ${unit}" loading="lazy">
       <div class="age-header-content">
@@ -2207,6 +2269,7 @@
           <div class="age-highlight-v2-head"><span class="age-highlight-v2-icon"><i class="ti ${item.icon}" aria-hidden="true"></i></span><h4>${item.title}</h4></div>
           <p>${item.description}</p>
         </article>`).join('')}</div>
+        ${guideCardHtml}
       </div>
       <div class="age-header-illustration-v2" aria-hidden="true"><img src="${illustration}?v=47" alt=""></div>
     </section>`;
@@ -2258,7 +2321,7 @@
     row.style.setProperty('--accent', b.color);
     row.innerHTML = `
       <div class="age-body">
-        ${renderAgeHeaderV2({age:b.num,unit:b.unit,title:b.title,description:header.description,heroImage:b.img,illustration:header.illustration,highlights:header.highlights})}
+        ${renderAgeHeaderV2({age:b.num,unit:b.unit,title:b.title,description:header.description,heroImage:b.img,illustration:header.illustration,highlights:header.highlights,guideCard:header.guideCard})}
         <h4 class="category-heading" id="categories-${b.id}">Explora los juguetes por categoría</h4>
         <div class="chips" style="--chip-rows:${Math.ceil(b.chips.length/2)}">${b.chips.map(c=>{
           const page = b.chipPages && b.chipPages[c];

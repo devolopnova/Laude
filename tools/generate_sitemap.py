@@ -25,9 +25,31 @@ EXCLUDE = {
     "simulacion-fotos-edades.html",
 }
 
+# Prefijos de páginas de prueba/preview cuyo número de versión cambia
+# constantemente (p.ej. iteraciones del prototipo de comparativa de
+# sillas de coche, todavía en desarrollo: ver memoria
+# project_sillas_coche_comparador_prototipo.md). Se excluyen por prefijo
+# en vez de listarlas una a una para no tener que tocar este archivo en
+# cada nueva iteración.
+EXCLUDE_PREFIXES = (
+    "prototipo-comparativa-sillas",
+)
+
 # Páginas "guía" (contenido pilar, no ficha de categoría de producto).
 GUIDES = {
     "guia-montessori.html",
+    "guia-0-6-meses.html",
+    "guia-6-12-meses.html",
+    "guia-1-ano.html",
+    "guia-2-anos.html",
+    "guia-3-anos.html",
+    "guia-4-anos.html",
+    "guia-5-anos.html",
+    "guia-6-anos.html",
+    "guia-7-anos.html",
+    "guia-8-anos.html",
+    "guia-9-anos.html",
+    "guia-10-anos.html",
     "puzzle-3d.html",
     "puzzles-y-rompecabezas.html",
     "puzzles-3d-madera.html",
@@ -87,7 +109,9 @@ def lastmod_of(path: pathlib.Path) -> str:
 def main():
     html_files = sorted(
         p for p in ROOT.glob("*.html")
-        if p.is_file() and p.name not in EXCLUDE
+        if p.is_file()
+        and p.name not in EXCLUDE
+        and not p.name.startswith(EXCLUDE_PREFIXES)
     )
 
     entries = []
