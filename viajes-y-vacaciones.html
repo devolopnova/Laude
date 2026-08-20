@@ -41,6 +41,18 @@
 }
 </script>
 <style>
+  /* Cabecera fotografica, variante "lateral" (foto vertical de Pexels,
+     ver tools/process_hero_photos_vida_en_familia.py): columna fija de
+     foto junto al bloque de texto. */
+  .pec-hero-split{display:flex;align-items:stretch;gap:32px;margin-top:20px;min-height:280px;}
+  .pec-hero-split-photo{flex:0 0 260px;border-radius:20px;overflow:hidden;}
+  .pec-hero-split-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .pec-hero-split-content{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding-top:4px;}
+  @media (max-width:768px){
+    .pec-hero-split{flex-direction:column;gap:20px;min-height:0;}
+    .pec-hero-split-photo{flex:0 0 auto;height:220px;}
+  }
+
   .vv-lead{margin-top:32px;}
   .vv-lead + .vv-lead{margin-top:14px;}
   .vv-section{margin-top:40px;font-size:15.5px;}
@@ -73,8 +85,11 @@
 </header>
 
 <section class="cat-hero-2 wrap">
-  <div class="cat-hero-2-top">
-    <div>
+  <div class="pec-hero-split">
+    <div class="pec-hero-split-photo">
+      <img src="images/cabecera/vida-en-familia/viajes-y-vacaciones-hero.webp" alt="Niña pequeña sonriendo con una maleta turquesa" width="700" height="900" loading="eager" decoding="async">
+    </div>
+    <div class="pec-hero-split-content">
       <div class="cat-hero-2-chip">✈️ Vida en familia · Viajes y vacaciones</div>
       <h1>Viajar con niños: cómo organizar unas vacaciones para disfrutar en familia</h1>
     </div>

@@ -41,6 +41,27 @@
 }
 </script>
 <style>
+  /* Cabecera fotografica (foto editorial de Pexels, ver
+     tools/process_hero_photos_vida_en_familia.py). Banner horizontal a
+     ancho completo, degradado inferior con el acento del sitio para
+     legibilidad del texto superpuesto. */
+  .pec-hero-photo{position:relative;border-radius:20px;overflow:hidden;height:320px;margin-top:20px;}
+  .pec-hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .pec-hero-photo-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(28,28,26,0) 30%, color-mix(in srgb, var(--accent) 60%, #1C1C1E) 100%);
+  }
+  .pec-hero-photo-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 30px;color:#fff;}
+  .pec-hero-photo-content .cat-hero-2-chip{
+    background:rgba(255,255,255,.2);color:#fff;margin-bottom:12px;display:inline-block;
+  }
+  .pec-hero-photo-content h1{color:#fff;font-size:30px;}
+  @media (max-width:640px){
+    .pec-hero-photo{height:260px;border-radius:16px;}
+    .pec-hero-photo-content{padding:20px;}
+    .pec-hero-photo-content h1{font-size:23px;}
+  }
+
   .lc-lead{margin-top:32px;}
   .lc-lead + .lc-lead{margin-top:14px;}
   .lc-section{margin-top:40px;font-size:15.5px;}
@@ -75,8 +96,10 @@
 </header>
 
 <section class="cat-hero-2 wrap">
-  <div class="cat-hero-2-top">
-    <div>
+  <div class="pec-hero-photo">
+    <img src="images/cabecera/vida-en-familia/lectura-y-cultura-infantil-hero.webp" alt="Mano señalando un libro ilustrado en braille sobre una mesa de madera" width="1400" height="580" loading="eager" decoding="async">
+    <div class="pec-hero-photo-overlay"></div>
+    <div class="pec-hero-photo-content">
       <div class="cat-hero-2-chip">📚 Vida en familia · Lectura y cultura infantil</div>
       <h1>Cómo fomentar el hábito de lectura en los niños: ideas para acercarlos a los libros</h1>
     </div>

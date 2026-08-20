@@ -47,13 +47,16 @@
   }
   .vef-card{
     display:flex;flex-direction:column;text-align:left;
-    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    background:color-mix(in srgb, var(--vef-accent, var(--accent)) 6%, var(--card));
+    border:1px solid color-mix(in srgb, var(--vef-accent, var(--accent)) 20%, var(--line));
+    border-radius:18px;
     padding:24px 18px;text-decoration:none;color:inherit;
-    transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+    transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease, background .2s ease;
   }
   a.vef-card:hover{
-    border-color:color-mix(in srgb, var(--vef-accent, var(--accent)) 45%, var(--line));
-    box-shadow:0 6px 18px rgba(44,44,42,.07);transform:translateY(-3px);
+    border-color:var(--vef-accent, var(--accent));
+    box-shadow:0 10px 24px rgba(44,44,42,.09);transform:translateY(-3px);
+    background:color-mix(in srgb, var(--vef-accent, var(--accent)) 10%, var(--card));
   }
   .vef-card-icon{
     width:42px;height:42px;border-radius:50%;flex-shrink:0;
