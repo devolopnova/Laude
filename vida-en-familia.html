@@ -32,6 +32,7 @@
 </script>
 <style>
   .vef-hero-body{margin-top:18px;color:var(--ink-soft);font-size:15.5px;line-height:1.75;max-width:640px;}
+  .vef-hero-body + .vef-hero-body{margin-top:14px;}
   .vef-section{margin-top:48px;}
   .vef-section h2{font-size:20px;margin-bottom:8px;}
   .vef-section > p{color:var(--ink-soft);font-size:14.5px;max-width:560px;}
@@ -57,12 +58,6 @@
     border-color:var(--vef-accent, var(--accent));
     box-shadow:0 10px 24px rgba(44,44,42,.09);transform:translateY(-3px);
     background:color-mix(in srgb, var(--vef-accent, var(--accent)) 10%, var(--card));
-  }
-  .vef-card-icon{
-    width:42px;height:42px;border-radius:50%;flex-shrink:0;
-    background:color-mix(in srgb, var(--vef-accent, var(--accent)) 14%, #fff);
-    color:var(--vef-accent, var(--accent));
-    display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px;
   }
   .vef-card-title{
     display:block;font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px;
@@ -92,7 +87,7 @@
 
 <header>
   <nav class="wrap">
-    <div class="logo"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></div>
+    <a class="logo" href="/" aria-label="Ir a la página principal de Lauderem"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></a>
     <a class="back" href="/">← Volver a la guía</a>
   </nav>
 </header>
@@ -104,53 +99,50 @@
       <p class="cat-hero-2-subtitle">Un espacio de Lauderem para encontrar ideas, consejos y recursos útiles para el día a día en familia.</p>
     </div>
   </div>
-  <p class="vef-hero-body">Esta sección no trata únicamente de juguetes. Aquí reunimos ideas y reflexiones sobre decisiones de compra, organización del hogar, celebraciones, lectura, ocio, viajes y consumo responsable — los aspectos cotidianos que, junto al juego, forman parte de acompañar a los niños. Mismo criterio, mismo tono cercano: Lauderem sigue siendo Lauderem.</p>
+  <p class="vef-hero-body">Vida en familia es un espacio pensado para acompañarte en todas esas decisiones, planes y pequeños momentos que forman parte de la vida cotidiana con niños. Porque la vida familiar va mucho más allá de los juguetes y del tiempo de juego: también está en organizar una escapada, elegir una actividad para compartir, preparar una celebración, descubrir un libro, buscar un lugar que visitar o encontrar ideas que hagan más sencillo el día a día.</p>
+  <p class="vef-hero-body">En esta sección encontrarás ideas, consejos y propuestas para disfrutar en familia, con contenidos relacionados con el ocio, las actividades, los viajes, la lectura, las celebraciones y la organización del hogar. También abordamos temas relacionados con las compras y el consumo responsable, para ayudarte a conocer mejor las opciones disponibles y tomar decisiones de forma más consciente.</p>
+  <p class="vef-hero-body">Queremos reunir contenidos que resulten realmente útiles cuando buscas qué hacer con los niños, cómo aprovechar una salida en familia, qué actividades pueden resultar interesantes o simplemente nuevas ideas para compartir tiempo juntos. Algunas propuestas estarán pensadas para disfrutar fuera de casa, mientras que otras pueden ayudarte a encontrar inspiración para esos momentos cotidianos que se viven en casa.</p>
+  <p class="vef-hero-body">También encontrarás recursos para diferentes edades y situaciones familiares, porque las necesidades y los intereses cambian a medida que los niños crecen. Por eso, iremos incorporando contenidos sobre diferentes formas de disfrutar del tiempo juntos, descubrir nuevos lugares, aprender, leer, viajar, celebrar y aprovechar cada experiencia.</p>
+  <p class="vef-hero-body">Vida en familia reúne ideas para compartir, descubrir y disfrutar juntos, desde los pequeños momentos del día a día hasta nuevas experiencias, actividades y lugares por conocer. Un espacio pensado para encontrar inspiración práctica y propuestas que ayuden a disfrutar más del tiempo en familia.</p>
 </section>
 
-<section class="wrap">
+<section class="wrap" style="padding-bottom:40px">
 
   <section class="vef-section">
     <h2>Explora las líneas editoriales</h2>
     <p>Siete temas para acompañar el día a día en familia, más allá de la elección de juguetes.</p>
     <div class="vef-grid">
       <a class="vef-card" href="comprar-mejor.html" style="--vef-accent:#C97B54">
-        <span class="vef-card-icon"><i class="ti ti-shopping-cart" aria-hidden="true"></i></span>
         <span class="vef-card-title">Comprar mejor</span>
         <span class="vef-card-desc">Criterios y consejos para tomar mejores decisiones antes de comprar productos para los niños.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="vef-card" href="organizacion-y-hogar.html" style="--vef-accent:#6FA37B">
-        <span class="vef-card-icon"><i class="ti ti-home" aria-hidden="true"></i></span>
         <span class="vef-card-title">Organización y hogar</span>
         <span class="vef-card-desc">Ideas para organizar los espacios familiares, mantener el orden y aprovechar mejor el hogar.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="vef-card" href="cumpleanos-y-celebraciones.html" style="--vef-accent:#D98CA6">
-        <span class="vef-card-icon"><i class="ti ti-cake" aria-hidden="true"></i></span>
         <span class="vef-card-title">Cumpleaños y celebraciones</span>
         <span class="vef-card-desc">Ideas para preparar cumpleaños, celebraciones y momentos especiales en familia.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="vef-card" href="lectura-y-cultura-infantil.html" style="--vef-accent:#C99A3E">
-        <span class="vef-card-icon"><i class="ti ti-book" aria-hidden="true"></i></span>
         <span class="vef-card-title">Lectura y cultura infantil</span>
         <span class="vef-card-desc">Propuestas para acercar la lectura, las historias y la cultura al día a día de los niños.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="vef-card" href="pantallas-y-ocio.html" style="--vef-accent:#6C8FB0">
-        <span class="vef-card-icon"><i class="ti ti-device-gamepad-2" aria-hidden="true"></i></span>
         <span class="vef-card-title">Pantallas y ocio</span>
         <span class="vef-card-desc">Ideas para disfrutar del tiempo libre y encontrar alternativas para equilibrar el ocio digital.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="vef-card" href="viajes-y-vacaciones.html" style="--vef-accent:#5A9BC9">
-        <span class="vef-card-icon"><i class="ti ti-plane" aria-hidden="true"></i></span>
         <span class="vef-card-title">Viajes y vacaciones</span>
         <span class="vef-card-desc">Recursos e ideas para preparar viajes, vacaciones y experiencias en familia.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="vef-card" href="consumo-responsable.html" style="--vef-accent:#7A9B5E">
-        <span class="vef-card-icon"><i class="ti ti-leaf" aria-hidden="true"></i></span>
         <span class="vef-card-title">Consumo responsable</span>
         <span class="vef-card-desc">Reflexiones y consejos para comprar, reutilizar y aprovechar mejor lo que ya tenemos.</span>
         <span class="vef-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
@@ -159,10 +151,6 @@
   </section>
 
 </section>
-
-<footer class="wrap">
-  <p>Vida en familia es la sección editorial de Lauderem sobre organización, decisiones y vida cotidiana en familia.</p>
-</footer>
 
 </body>
 </html>

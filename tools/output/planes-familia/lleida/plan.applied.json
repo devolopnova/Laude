@@ -1,0 +1,645 @@
+{
+  "province": "Lleida",
+  "province_slug": "lleida",
+  "generated_at": "2026-08-20",
+  "searches": [
+    "planes con niños Lleida",
+    "actividades con niños Lleida",
+    "qué hacer con niños Lleida"
+  ],
+  "plan_status": "reviewed",
+  "selection_notes": "Se buscaban hasta 18 lugares (15 primary + 3 backup); se consiguieron 18. De los 14 candidatos de fuente distintos revisados en el cribado, 5 se descartaron: juntines.com (HTTP 530, inaccesible), caixaforum.org (HTTP 403, inaccesible), segre.com (HTTP 404, artículo movido/eliminado), yumping.com y atrapalo.com (plataformas de reserva de actividades/tickets, no guías editoriales), y las 2 páginas de Tripadvisor (agregador de atracciones con función de reserva, no guía editorial). Quedaron 7 fuentes válidas y fetcheadas por completo: mammaproof.org, raluy.com, mamatieneunplan.com, derutaenfamilia.com, escapadaambnens.com (2 artículos distintos, mismo medio) y sortirambnens.com. Se aplicó la regla de diversificación de patrimonio histórico/arqueológico: de los candidatos de este tipo (Seu Vella, Castell de Gardeny, Ruta dels Castells de Sió, Montfalcó amurallat, Castell de Florejacs, Fortalesa dels Vilars d'Arbeca, Pilar d'Almenara), solo se incluyeron 2 en el primary (Seu Vella y Castell Templer de Gardeny), ambos a partir de la posición 7, y ambos justificados por tener programación familiar propia (itinerario infantil 'En busca de la Blau' en la Seu Vella, actividad mensual 'Templer per un dia' en Gardeny). El resto de candidatos de patrimonio histórico se descartaron de esta ronda para no concentrar la lista en un solo tipo de plan, priorizando en las primeras posiciones ciencia, naturaleza, animales y parques temáticos con atractivo familiar más directo. Ajuste manual en revisión (20/08/2026): se intercambiaron las posiciones 8 y 16 a petición del usuario — Museu Roda-Roda pasa a primary (rank 8) y Congost de Mont-rebei pasa a backup (rank 16).",
+  "sources_analyzed": [
+    {
+      "name": "Mammaproof Barcelona",
+      "domain": "mammaproof.org",
+      "url": "https://www.mammaproof.org/barcelona/los-mejores-planes-y-actividades-por-les-terres-de-lleida-para-hacer-con-ninos-y-ninas/",
+      "title": "Los mejores planes y actividades por les Terres de Lleida para hacer con niños y niñas",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 6
+    },
+    {
+      "name": "Raluy",
+      "domain": "raluy.com",
+      "url": "https://raluy.com/planes-con-ninos-en-lleida/",
+      "title": "Planes con niños en Lleida (Semana Santa): qué hacer en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 3
+    },
+    {
+      "name": "Mamá Tiene un Plan",
+      "domain": "mamatieneunplan.com",
+      "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+      "title": "Planes con niños en Lleida",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 12
+    },
+    {
+      "name": "De Ruta en Familia",
+      "domain": "derutaenfamilia.com",
+      "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+      "title": "Lleida con niños, planes para hacer en la ciudad con peques",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 9
+    },
+    {
+      "name": "Juntines",
+      "domain": "juntines.com",
+      "url": "https://www.juntines.com/calle-en-lleida",
+      "title": "Planes y Actividades para niños en Lleida",
+      "included": false,
+      "exclusion_reason": "Página inaccesible (HTTP 530)",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "CaixaForum Lleida",
+      "domain": "caixaforum.org",
+      "url": "https://caixaforum.org/es/lleida/familia",
+      "title": "Actividades para niños y familias en Lleida - CaixaForum Lleida",
+      "included": false,
+      "exclusion_reason": "Página inaccesible (HTTP 403)",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Yumping",
+      "domain": "yumping.com",
+      "url": "https://www.yumping.com/en/activities-for-children/lleida",
+      "title": "Actividades para niños en Lleida",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva de actividades (marketplace), no es una guía editorial",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Segre",
+      "domain": "segre.com",
+      "url": "https://www.segre.com/es/sociedad/240216/descubre-10-mejores-actividades-ninos-lleida_345971.html",
+      "title": "Descubre las 10 mejores actividades para hacer con niños en Lleida",
+      "included": false,
+      "exclusion_reason": "Página inaccesible (HTTP 404, artículo movido o eliminado)",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Escapada amb Nens",
+      "domain": "escapadaambnens.com",
+      "url": "https://www.escapadaambnens.com/es/lleida/",
+      "title": "Lleida con niños - Excursiones, ideas y actividades en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 15
+    },
+    {
+      "name": "Atrapalo",
+      "domain": "atrapalo.com",
+      "url": "https://www.atrapalo.com/actividades/lleida/actividades-infantiles/",
+      "title": "Actividades infantiles en Lleida Provincia",
+      "included": false,
+      "exclusion_reason": "Plataforma de reservas de actividades/tickets",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Tripadvisor",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g2431169-Activities-zft11306-Province_of_Lleida_Catalonia.html",
+      "title": "Cosas que hacer con niños en Provincia de Lleida",
+      "included": false,
+      "exclusion_reason": "Agregador de atracciones con función de reserva, no guía editorial",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Sortir amb Nens",
+      "domain": "sortirambnens.com",
+      "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-lleida",
+      "title": "Salir con niños en Lleida",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 29
+    },
+    {
+      "name": "Escapada amb Nens",
+      "domain": "escapadaambnens.com",
+      "url": "https://www.escapadaambnens.com/es/propuesta/308/las-10-mejores-actividades-para-hacer-con-ninos-en-lleida/",
+      "title": "Las 10 mejores actividades para hacer con niños en Lleida",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Tripadvisor",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187500-Activities-zft11306-Lleida_Province_of_Lleida_Catalonia.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Lleida",
+      "included": false,
+      "exclusion_reason": "Agregador de atracciones con función de reserva, no guía editorial (dominio duplicado)",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (mammaproof.org), aunque es una experiencia muy diferenciada (Reserva Starlight) que justifica su posición.",
+        "place_rank": 1
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (derutaenfamilia.com).",
+        "place_rank": 2
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (escapadaambnens.com, en 2 artículos).",
+        "place_rank": 4
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (derutaenfamilia.com).",
+        "place_rank": 13
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (derutaenfamilia.com).",
+        "place_rank": 14
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (sortirambnens.com).",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (derutaenfamilia.com).",
+        "place_rank": 8
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (sortirambnens.com).",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Un solo medio independiente lo recomienda (mamatieneunplan.com).",
+        "place_rank": 18
+      },
+      {
+        "severity": "warning",
+        "category": "low_confidence_source",
+        "message": "3 de los 14 candidatos de fuente no se pudieron leer (errores HTTP 403/404/530), reduciendo el número de fuentes cruzadas disponibles para este plan respecto a otras provincias ya trabajadas.",
+        "place_rank": null
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Parc Astronòmic del Montsec",
+      "description": "Complejo situado en el corazón de una Reserva Starlight, uno de los mejores cielos de Europa para observar estrellas. El Centre d'Observació de l'Univers ofrece experiencias guiadas por astrónomos tanto de día como de noche, con telescopios y un planetario para descubrir el sol, la luna y el cielo nocturno. Un plan diferente que despierta la curiosidad científica de toda la familia.",
+      "official_url": "https://parcastronomic.cat/",
+      "url_verified": true,
+      "address": "Camí del Coll d'Ares, s/n, 25691 Àger, Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Mammaproof Barcelona",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/los-mejores-planes-y-actividades-por-les-terres-de-lleida-para-hacer-con-ninos-y-ninas/",
+          "evidence": "Parc Astronòmic del Montsec (Àger): Reserva Starlight con planetario, observatorio de telescopios y experiencias guiadas."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Granja Pifarré · Engranja't",
+      "description": "Explotación agrícola familiar en la Horta de Lleida donde los niños pueden dar de comer a los animales, recoger fruta y participar en tareas reales de granja. El recorrido guiado pasa por el establo, el gallinero, los frutales y la zona de terneros, acercando el mundo rural a las familias de forma práctica. Una experiencia pensada para tocar, oler y descubrir de dónde vienen los alimentos.",
+      "official_url": "https://www.granjapifarre.com",
+      "url_verified": true,
+      "address": "Partida Caparrella, 115, 25198 Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "De Ruta en Familia",
+          "domain": "derutaenfamilia.com",
+          "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+          "evidence": "Granja Pifarré (Engranja't): actividad experiencial agrícola donde niños alimentan animales, recogen frutos y participan en tareas de granja."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Parc Màgic d'Almenar",
+      "description": "Parque temático de pequeño tamaño ambientado en el mundo de las hadas y los duendes, pensado especialmente para los más pequeños. Sus rincones escenificados, como la casa de la Ratita Presumida, invitan a pasear y descubrir historias entre plantas autóctonas y espacios cuidados con criterio ambiental. Un plan tranquilo y económico para una tarde en familia en el Segrià.",
+      "official_url": "https://almenar.cat/municipi/turisme/el-parc-magic",
+      "url_verified": true,
+      "address": "Camí Pont de l'Almúnia, 1, 25126 Almenar, Lleida",
+      "evidence_count": 2,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/lleida/",
+          "evidence": "Parc màgic de Almenar: un parque temático de auténtica fantasía con atracciones de hadas y duendes y la casa de la Ratita Presumida."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/308/las-10-mejores-actividades-para-hacer-con-ninos-en-lleida/",
+          "evidence": "Parque Mágico de Almenar: parque temático de fantasía con personajes como hadas y duendes en la comarca del Segrià."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Dinosfera",
+      "description": "Centro paleoambiental en Coll de Nargó dedicado a los dinosaurios y a la vida durante el Cretácico en el Pirineo. La exposición combina réplicas, fósiles y paneles didácticos pensados para despertar la curiosidad de los niños por la paleontología. Un buen complemento a las rutas de icnitas de la zona para familias interesadas en la prehistoria.",
+      "official_url": "http://www.dinosfera.com",
+      "url_verified": true,
+      "address": "Carrer de Xavier Marot, s/n, 25793 Coll de Nargó, Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/308/las-10-mejores-actividades-para-hacer-con-ninos-en-lleida/",
+          "evidence": "Museo Dinosfera: museo dedicado a dinosaurios en Coll de Nargó, Alt Urgell."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Tren dels Llacs",
+      "description": "Tren turístico de FGC que recorre 90 km entre Lleida y La Pobla de Segur, cruzando 40 túneles y 75 puentes camino del Prepirineo. El trayecto permite ver de cerca varios de los lagos y pantanos de la zona sin necesidad de conducir ni caminar, lo que lo hace cómodo para familias con niños pequeños. Algunas salidas incluyen guía a bordo que explica la historia del recorrido.",
+      "official_url": "https://www.fgc.cat/oferta-turisme-fgc/tren-dels-llacs/",
+      "url_verified": true,
+      "address": "Plaça de Berenguer IV, s/n, 25005 Lleida",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mammaproof Barcelona",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/los-mejores-planes-y-actividades-por-les-terres-de-lleida-para-hacer-con-ninos-y-ninas/",
+          "evidence": "Tren dels Llacs (Balaguer): ferrocarril histórico que recorre paisajes entre lagos, ríos y montañas siguiendo el río Segre."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/lleida/",
+          "evidence": "El Tren dels Llacs: recorrido histórico y panorámico en el Prepirineo de Lleida con 40 túneles."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/308/las-10-mejores-actividades-para-hacer-con-ninos-en-lleida/",
+          "evidence": "Tren de los Lagos: recorrido de 90 km que atraviesa 4 lagos, 40 túneles y 75 puentes."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Estany d'Ivars i Vila-sana",
+      "description": "Lago recuperado en el Pla d'Urgell, con una ruta llana y señalizada de 2,6 km apta para caminar o ir en bicicleta con niños. Miradores, pasarelas y zonas de descanso permiten observar aves acuáticas sin prisa. Un plan sencillo y gratuito para pasar la mañana al aire libre en familia.",
+      "official_url": "https://estanyivarsvilasana.cat/",
+      "url_verified": true,
+      "address": "Estany d'Ivars i Vila-sana, 25260 Ivars d'Urgell, Lleida",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mammaproof Barcelona",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/los-mejores-planes-y-actividades-por-les-terres-de-lleida-para-hacer-con-ninos-y-ninas/",
+          "evidence": "Estany de Ivars i Vila-sana: ruta en bicicleta de 2,6 km sin desnivel con miradores y pasarelas para observar aves."
+        },
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Espai d'Interpretació de l'Estany d'Ivars i Vila-sana: centro interpretativo para aprender sobre los ecosistemas locales."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-lleida",
+          "evidence": "Estanque de Ivars y Vila-Sana: zona de paseo en el Pla d'Urgell."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Seu Vella de Lleida",
+      "description": "Antigua catedral y fortaleza medieval sobre la colina que domina la ciudad, con un campanario de 238 escalones y vistas panorámicas de toda Lleida. Para las familias ofrece el itinerario infantil «En busca de la Blau», un recorrido con pistas y puzzles pensado para niños de 6 a 12 años. La entrada incluye también el cercano Castell de la Suda, en la misma colina.",
+      "official_url": "https://www.turoseuvella.cat/es/",
+      "url_verified": true,
+      "address": "Cerro de la Seu Vella, s/n, 25002 Lleida",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Raluy",
+          "domain": "raluy.com",
+          "url": "https://raluy.com/planes-con-ninos-en-lleida/",
+          "evidence": "Seu Vella: se puede subir y disfrutar de vistas panorámicas de la ciudad desde arriba."
+        },
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Seu Vella (Lleida): catedral medieval en Lleida ciudad."
+        },
+        {
+          "name": "De Ruta en Familia",
+          "domain": "derutaenfamilia.com",
+          "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+          "evidence": "Seu Vella (Castell de Lleida): itinerario infantil «En busca de la Blau» para niños de 6-12 años, campanario con 238 escalones."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/lleida/",
+          "evidence": "Seu Vella de Lleida: el icono de la ciudad, un monumento arquitectónico emblemático."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Congost de Mont-rebei",
+      "description": "Espectacular desfiladero excavado por el río Noguera Ribagorçana, con un camino tallado en la roca y pasarelas sobre el agua. La ruta clásica desde La Masieta, de unos 4 km, es exigente pero muy popular entre familias con niños algo más mayores por sus vistas. Conviene reservar el aparcamiento con antelación, especialmente en temporada alta.",
+      "official_url": "https://www.congostdemontrebei.cat",
+      "url_verified": true,
+      "address": "La Masieta, Ctra. de Pont de Montanyana a Sant Esteve de la Sarga, km 8, Lleida",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Congost de Mont-rebei: desfiladero natural con rutas familiares."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/lleida/",
+          "evidence": "Congost de Mont-rebei: una de las excursiones más espectaculares de toda Catalunya, con rutas familiares desde La Masieta."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/308/las-10-mejores-actividades-para-hacer-con-ninos-en-lleida/",
+          "evidence": "Congost de Mont-rebei: ruta de senderismo hacia un puente colgante con vistas espectaculares."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-lleida",
+          "evidence": "Congost de Mont-rebei: desfiladero en La Noguera."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Museu de Lleida",
+      "description": "Museo diocesano y comarcal con fondos de arqueología, arte medieval y etnología reunidos en un edificio moderno en el centro de la ciudad. Organiza actividades familiares y talleres pensados para acercar la colección a los niños de forma participativa y sensorial. Una opción de interior cómoda para días de lluvia o de mucho calor.",
+      "official_url": "https://museudelleida.cat/es/",
+      "url_verified": true,
+      "address": "Carrer del Sant Crist, 1, 25002 Lleida",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mammaproof Barcelona",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/los-mejores-planes-y-actividades-por-les-terres-de-lleida-para-hacer-con-ninos-y-ninas/",
+          "evidence": "Museu de Lleida: propuestas educativas y actividades familiares para descubrir arqueología e historia de forma lúdica e interactiva."
+        },
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Museo de Lleida: museo organizando actividades familiares."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Castell Templer de Gardeny",
+      "description": "Fortaleza de origen templario situada en un otero junto al centro de Lleida, con siglos de historia militar y religiosa. Una vez al mes organiza la actividad «Templer per un dia», pensada para que los niños vivan la vida del castillo de forma interactiva. El entorno, con vistas sobre la ciudad, también invita a un paseo tranquilo en familia.",
+      "official_url": "https://www.lleidaturisme.cat/es/visitar/patrimonio/castillo-templario-de-gardeny",
+      "url_verified": true,
+      "address": "Turó de Gardeny, s/n, 25001 Lleida",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Castillo de Gardeny: fortaleza templaria medieval con visitas guiadas."
+        },
+        {
+          "name": "De Ruta en Familia",
+          "domain": "derutaenfamilia.com",
+          "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+          "evidence": "Castillo de Gardeny: visitas guiadas y actividad «Templer por un día» el segundo domingo de cada mes."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Parc de la Mitjana",
+      "description": "Espacio natural de 90 hectáreas junto al Segre, con caminos señalizados, observatorios de aves y una zona de recreo pensada para familias. Es un lugar habitual para que los niños corran, observen patos y descubran la ribera del río sin salir de la ciudad. El centro de interpretación explica la fauna y flora del entorno de forma sencilla.",
+      "official_url": "https://www.lleidaturisme.cat/es/visitar/espacios-naturales/parc-de-la-mitjana",
+      "url_verified": true,
+      "address": "Glorieta de Font i Quer, s/n, 25005 Lleida",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Raluy",
+          "domain": "raluy.com",
+          "url": "https://raluy.com/planes-con-ninos-en-lleida/",
+          "evidence": "Parc de la Mitjana: parque donde los niños pueden correr, observar patos y disfrutar de actividades al aire libre."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-lleida",
+          "evidence": "Parque de la Mitjana: espacio natural en Lleida."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Parc Nacional d'Aigüestortes i Estany de Sant Maurici",
+      "description": "Único parque nacional de Cataluña, con lagos de montaña, bosques y prados de alta montaña en pleno Pirineo leridano. Desde Boí o Espot hay rutas cortas y accesibles aptas para familias, además de trayectos en taxi 4x4 hasta el Estany de Sant Maurici para quienes no quieran caminar mucho. Un plan de naturaleza que impresiona a cualquier edad.",
+      "official_url": "https://parcsnaturals.gencat.cat/es/xarxa-de-parcs/aiguestortes/inici/index.html",
+      "url_verified": true,
+      "address": "Casa del Parc Nacional de Boí, Ca de Simamet, Les Graieres, 2, 25528 Boí, Lleida",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Parque Nacional de Aigüestortes i Estany de Sant Maurici: parque natural con rutas señalizadas y zonas de picnic."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/lleida/",
+          "evidence": "L'Estany de Sant Maurici: lago alpino en el Parque Nacional de Aigüestortes."
+        },
+        {
+          "name": "Escapada amb Nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/308/las-10-mejores-actividades-para-hacer-con-ninos-en-lleida/",
+          "evidence": "Lago de San Mauricio: estanque accesible mediante taxi desde Espot."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Casa dels Gegants",
+      "description": "Espacio municipal gratuito que reúne a los gigantes, cabezudos y demás figuras festivas que salen en las fiestas de Lleida. Los niños pueden verlos de cerca, algo que normalmente solo ocurre durante los desfiles, y descubrir la tradición popular detrás de cada figura. Una visita corta y curiosa, fácil de combinar con otros planes por el centro.",
+      "official_url": "https://cultura.paeria.cat/ca/equipaments/casa-dels-gegants",
+      "url_verified": true,
+      "address": "Avinguda Blondel, 64, 25002 Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "De Ruta en Familia",
+          "domain": "derutaenfamilia.com",
+          "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+          "evidence": "Casa dels Gegants: museo gratuito con figuras festivas tradicionales de Lleida (gigantes y cabezudos)."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Parc dels Camps Elisis",
+      "description": "Jardín histórico junto al Segre, con plataneros centenarios, fuentes ornamentales y una zona de columpios para los más pequeños. Es un parque tranquilo, habitual para una merienda o un rato de juego después de visitar el centro de Lleida. Su trazado, de finales del siglo XIX, lo convierte también en un paseo agradable para toda la familia.",
+      "official_url": "https://www.paeria.cat/ca/ciutat/directori/parc-dels-camps-elisis",
+      "url_verified": true,
+      "address": "Avinguda de les Garrigues / Avinguda President Josep Tarradellas, 25001 Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "De Ruta en Familia",
+          "domain": "derutaenfamilia.com",
+          "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+          "evidence": "Camps Elisis: parque con plataneros, zonas ajardinadas, fuentes ornamentales y columpios infantiles junto al río Segre."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Museu de la Conca Dellà",
+      "description": "Museo de referencia en paleontología situado en Isona, centro de recepción del Parc Cretaci y de los yacimientos de icnitas cercanos. En el yacimiento de la Posa se pueden ver miles de marcas fósiles atribuidas a la actividad de rayas del Cretácico final, un buen complemento a la visita al museo. Una propuesta con mucho gancho para niños fascinados por los dinosaurios y la prehistoria.",
+      "official_url": "https://www.isonaiconcadella.cat/turisme/museu-disona",
+      "url_verified": true,
+      "address": "Carrer del Museu, 4, 25650 Isona, Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-lleida",
+          "evidence": "Conca Dellà: ruta geológica y paleontológica con pisadas de dinosaurios."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Museu Roda-Roda",
+      "description": "Museo municipal de la automoción con una amplia colección de coches, motos y modelos a escala de distintas épocas. Organizado por áreas temáticas, permite a los niños fijarse en los detalles de vehículos históricos que normalmente solo ven en fotos. Una opción de interior distinta para familias con algún aficionado a los motores.",
+      "official_url": "https://cultura.paeria.cat/ca/equipaments/museu-roda-roda",
+      "url_verified": true,
+      "address": "Carrer de Santa Cecília, 22, 25001 Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "De Ruta en Familia",
+          "domain": "derutaenfamilia.com",
+          "url": "https://derutaenfamilia.com/es/lleida-con-ninos/",
+          "evidence": "Museo Roda Roda: colección de automóviles, motocicletas y modelos a escala en edificio histórico."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Arborètum de Lleida",
+      "description": "Jardín botánico dentro del Parc Científic i Tecnològic Agroalimentari, con más de 500 especies vegetales repartidas en distintos biomas. Sus caminos señalizados permiten un paseo tranquilo entre plantas de todo el mundo, ideal para familias que buscan un plan relajado al aire libre. Una alternativa poco conocida frente a los parques más habituales de la ciudad.",
+      "official_url": "http://arboretum.parcteclleida.es",
+      "url_verified": true,
+      "address": "Carrer Enric Farreny, 49, 25199 Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-lleida",
+          "evidence": "Arborètum: jardín botánico de casi 7 hectáreas en Lleida."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Museu de la Noguera",
+      "description": "Museo comarcal en Balaguer con fondos de arqueología, historia y etnología de la Noguera, incluida una réplica de la sala capitular del monasterio de Sant Pere d'Àger. Ofrece un recorrido asequible para familias interesadas en la historia de la comarca, con salas pensadas para una visita sin prisas. Un buen complemento a una excursión al Tren dels Llacs, que también sale de Balaguer.",
+      "official_url": "http://www.museucn.com",
+      "url_verified": true,
+      "address": "Plaça dels Comtes d'Urgell, 5, 25600 Balaguer, Lleida",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Mamá Tiene un Plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p25-planes-con-ninos-lleida.php",
+          "evidence": "Museo de la Noguera: museo con actividades interactivas y talleres para niños."
+        }
+      ]
+    }
+  ]
+}

@@ -535,3 +535,690 @@ en `css/site.css`):
 - Ambos enlaces llevan `target="_blank" rel="nofollow sponsored noopener"`
   (enlace de afiliado saliente: `nofollow sponsored`, no solo `noopener`
   como en los enlaces internos de Favoritos).
+
+## Sección editorial "Planes en casa" (arquitectura, en desarrollo)
+
+Sección editorial de ocio y actividades para hacer en casa con niños —
+promesa: "Ideas para jugar, crear y disfrutar en casa con los niños."
+Responde a la necesidad "tengo a los niños en casa, ¿qué podemos hacer?".
+No es una sección de crianza, psicología ni desarrollo infantil: nunca
+afirmar lo que un niño "debería" conseguir a determinada edad.
+
+**Regla general de toda la sección**: todas las actividades de "Planes en
+casa" deben realizarse bajo la supervisión de un adulto responsable, con
+materiales adecuados a la edad. Esta nota (ver texto exacto aprobado en
+`manualidades-faciles.html`, bloque `.pec-act-callout`) debe aparecer de
+forma visible antes de las actividades en cada página de subtipo — no es
+opcional, es una directriz fija para toda la sección, no solo para
+Manualidades.
+
+**Estado actual:**
+- Chip de navegación "Planes en casa" en la navbar de
+  `guia-regalos-juguetes.html` (entre "Vida en familia" y "Guía
+  Montessori"), enlaza a `planes-en-casa.html`.
+- Landing `planes-en-casa.html` creada siguiendo el mismo patrón técnico
+  que `vida-en-familia.html` (mismo `<head>`, mismo header simple con
+  "← Volver a la guía", mismo `.cat-hero-2` para el hero). Contiene hero +
+  intro + 5 tarjetas de área (`.pec-card`, sin enlace todavía — no hay
+  páginas de destino aún; no tocar esta landing salvo petición explícita).
+- **`manualidades-faciles.html` (primer subtipo, CON CONTENIDO REAL Y
+  APROBADO)**: 8 actividades completas (título, edad, tiempo, dificultad,
+  materiales, pasos, variante y nota de supervisión), estructura de
+  tarjeta `.pec-act-card` en `.pec-act-grid` (2 columnas escritorio, 1
+  columna móvil). Breadcrumb funcional "Planes en casa · Manualidades"
+  (pill `.cat-hero-2-chip` enlazando a `planes-en-casa.html` — no existe
+  todavía una página hub de "Manualidades" separada, así que ese enlace
+  es la única ruta real disponible). Indexable (sin `noindex`), en
+  sitemap. El párrafo de introducción del hero (`.cat-hero-2-body
+  .pec-act-placeholder`) sigue siendo un placeholder pendiente — no se
+  proporcionó texto editorial para él en esta fase. **Página huérfana a
+  propósito**: no está enlazada desde `planes-en-casa.html` ni desde
+  ninguna otra página, porque las instrucciones de esta fase prohibían
+  tocar la landing; enlazarla desde la tarjeta "Manualidades" de la
+  landing queda pendiente para cuando el usuario lo pida.
+- **`dibujo-y-pintura.html` (segundo subtipo, CON CONTENIDO REAL Y
+  APROBADO)**: mismo patrón exacto que `manualidades-faciles.html` (8
+  actividades, mismo `.pec-act-*`, misma nota de supervisión). A
+  diferencia de la primera página, aquí NO se muestra ningún placeholder
+  visible para la introducción del hero — al no haber texto editorial
+  aprobado todavía, el bloque simplemente se omite (queda un comentario
+  HTML indicando dónde insertarlo) en vez de mostrar corchetes en
+  producción. Este es el patrón preferido a partir de ahora para
+  introducciones pendientes en páginas de "Planes en casa" —
+  `manualidades-faciles.html` se dejó con su placeholder visible
+  original sin tocar, por no formar parte del encargo que introdujo esta
+  preferencia. También huérfana a propósito (sin enlace desde la
+  landing), indexable y en sitemap.
+- **`manualidades-con-papel.html` (tercer subtipo, CON CONTENIDO REAL Y
+  APROBADO, 3+)**: mismo patrón exacto que las dos anteriores (8
+  actividades, `.pec-act-*`, callout de supervisión, sin placeholder
+  visible de intro). Huérfana a propósito, indexable, en sitemap.
+- **`manualidades-con-carton.html` (4+)**, **`manualidades-con-materiales-reciclados.html`
+  (4+)**, **`recortar-y-pegar.html` (4+)** y **`manualidades-con-varios-pasos.html`
+  (5+)** — todas CON CONTENIDO REAL Y APROBADO, mismo patrón exacto (8
+  actividades, `.pec-act-*`, callout de supervisión, sin placeholder
+  visible de intro).
+- **`manualidades.html` (HUB de Manualidades, creado)**: página
+  intermedia entre `planes-en-casa.html` y las subáreas, con H1
+  "Manualidades para hacer en casa con niños", intro editorial real (ya
+  no placeholder), grid `.pec-hub-*` de 8 tarjetas (2 columnas
+  escritorio / 1 móvil) y el mismo `.pec-act-callout` al final de la
+  página. De las 8 tarjetas, **7 son enlaces reales** (fáciles, dibujo y
+  pintura, papel, cartón, materiales reciclados, recortar y pegar,
+  varios pasos) y solo queda **1 pendiente sin enlace** (Manualidades
+  creativas avanzadas,
+  7+, `.pec-hub-card--pending`, opacidad reducida, sin flecha, div en
+  vez de `<a>`, sin etiqueta "PRÓXIMAMENTE" — no existe ese patrón en el
+  proyecto). La tarjeta "Manualidades" de `planes-en-casa.html` ahora
+  enlaza a este hub (única modificación autorizada en esa landing; se
+  añadió también un pequeño hover a esa tarjeta vía `a.pec-card:hover`,
+  sin tocar las otras 4 tarjetas que siguen siendo `<div>`).
+- **`manualidades-de-creacion-y-diseno.html` (6+)** y
+  **`manualidades-creativas-avanzadas.html` (7+)**: completan el bloque,
+  mismo patrón `.pec-act-*` con contenido real. La subárea de 6 años no
+  estaba en la lista original de 8 subtipos del hub — se añadió sobre la
+  marcha como escalón intermedio entre "varios pasos" (5+) y "avanzadas"
+  (7+); el hub tiene **9 tarjetas**, todas con enlace real, 0
+  pendientes. El texto bajo "Explora las manualidades" dice "Nueve
+  formas de crear en casa..." (corregido de "Ocho" al añadir la 9ª
+  tarjeta).
+- **BLOQUE MANUALIDADES COMPLETO Y CONSISTENTE (cierre de correcciones)**:
+  las 9 subáreas tienen página propia con contenido real y aprobado,
+  todas enlazadas desde el hub `manualidades.html`: fáciles (2+), dibujo
+  y pintura (2+), con papel (edad actualizada, ver nota más abajo), con
+  cartón (4+), con materiales reciclados (4+), recortar y pegar (edad
+  actualizada, ver nota más abajo), con varios pasos (5+), de
+  creación y diseño (6+), creativas avanzadas (7+). **Todas las 9
+  páginas, incluidas las 4 más antiguas (fáciles, dibujo y pintura,
+  papel, cartón), tienen ya su breadcrumb "Planes en casa · Manualidades"
+  apuntando al hub real `manualidades.html`** — la inconsistencia
+  original (esas 4 apuntaban a `planes-en-casa.html` por haberse creado
+  antes de que el hub existiera) quedó corregida.
+  La descripción de la tarjeta "Manualidades de creación y diseño" en el
+  hub se reescribió para igualar el tono/extensión de las otras 8
+  ("Proyectos para imaginar, diseñar y decidir cómo será el resultado
+  final de cada manualidad.") — ya no queda pendiente de revisión.
+- **ESTADO ACTUAL (19/08, tras varios ajustes puntuales)**: el hub tiene
+  ahora **10 tarjetas** (texto "Diez formas de crear en casa...", ya no
+  "Nueve") — se añadió **Construcciones con plastilina (5+)**, movida
+  desde el área "Crear y construir" antes de eliminarla por completo
+  (ver bloque "Crear y construir — ÁREA ELIMINADA" más abajo). Además,
+  dos edades se corrigieron a petición del usuario: **Manualidades con
+  papel pasó de 3+ a 4+** y **Recortar y pegar pasó de 4+ a 5+**
+  (actualizado en `<title>`, meta description, H1, subtítulo, las 8
+  fichas de actividad de cada página y su tarjeta en el hub).
+- **`experimentos-faciles.html` (primera subárea de Experimentos, 3+,
+  CON CONTENIDO REAL Y APROBADO)**: mismo patrón exacto `.pec-act-*` que
+  Manualidades (8 actividades, callout de supervisión, sin placeholder
+  visible de intro). Experimentos todavía no tiene hub propio (no existe
+  `experimentos.html`), así que el breadcrumb "Planes en casa ·
+  Experimentos" enlaza a `planes-en-casa.html`, igual que hacían las
+  primeras páginas de Manualidades antes de que su hub existiera — se
+  actualizará a un hub real si/cuando se cree, igual que se hizo con
+  Manualidades. Criterio de seguridad más estricto que Manualidades:
+  nada de fuego, electricidad, productos químicos, objetos cortantes ni
+  piezas pequeñas ingeribles. Huérfana a propósito (sin enlace desde la
+  landing todavía), indexable, en sitemap. **Actualización 19/08**: la
+  actividad "¿Qué objetos atrae el imán?" se eliminó a petición del
+  usuario — la página tiene ahora **7 actividades**, no 8 (meta
+  description actualizada de "8 experimentos" a "7 experimentos").
+- **`experimentos-con-colores.html` (segunda subárea de Experimentos, 4+,
+  CON CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Un campo Tiempo
+  usa "Varias horas" en vez de un rango en minutos (actividad "Flores
+  que cambian de color") — se dejó tal cual, sin normalizar el formato.
+  Mismo criterio de seguridad conservador y mismo breadcrumb provisional
+  a `planes-en-casa.html` (Experimentos sigue sin hub propio).
+- **`agua-y-liquidos.html` (tercera subárea de Experimentos, 4+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto, mismo criterio de
+  seguridad, mismo breadcrumb provisional.
+- **`naturaleza-y-plantas.html` (cuarta subárea de Experimentos, 4+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Varios campos
+  Tiempo usan formato compuesto ("10 minutos + observación durante
+  varios días", "10 minutos al día durante varios días") en vez de un
+  rango simple en minutos — se dejaron tal cual, sin normalizar.
+  Criterio de seguridad añade restricción específica de esta subárea:
+  nunca plantas desconocidas ni potencialmente tóxicas, y nunca llevarse
+  hojas/semillas/algodón a la boca.
+- **`reacciones-y-transformaciones.html` (quinta subárea de Experimentos,
+  5+, CON CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Restricción
+  de seguridad propia y explícita: ningún cuchillo ni actividad de
+  cortar fruta/alimentos — el niño nunca manipula objetos cortantes. La
+  actividad 6 se sustituyó en el propio encargo (el usuario reenvió el
+  prompt cambiando "La manzana que cambia de color" con cuchillo por "El
+  papel que se encoge", sin cuchillo) antes de que se diera por cerrada
+  esta página; la versión final no contiene manzana ni cuchillo. La
+  subárea "Imanes y movimiento" que existía en una lista intermedia fue
+  eliminada por el usuario y no debe volver a crearse.
+- **`luz-sombras-y-electricidad.html` (sexta subárea de Experimentos, 5+,
+  CON CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Pese al nombre
+  de la subárea, esta primera página es solo luz y sombras con
+  linterna — el criterio de seguridad prohíbe explícitamente
+  electricidad real (enchufes, circuitos, pilas, cables) y también
+  fuego/velas/láseres; verificado que ninguno de esos términos aparece
+  en el archivo. Nota fija en las 8 actividades: nunca dirigir la
+  linterna directamente a los ojos.
+- **`pequenos-cientificos.html` (séptima y última subárea de
+  Experimentos, 6+, CON CONTENIDO REAL Y APROBADO)**: mismo patrón
+  exacto. Cierra el bloque Experimentos (7/7 subáreas). Nota histórica:
+  una actividad de "paracaídas de papel" fue eliminada del contenido
+  antes de esta entrega — verificado que no aparece en el archivo final,
+  y no debe volver a añadirse.
+- **BLOQUE EXPERIMENTOS COMPLETO (7/7 subáreas con contenido real)**:
+  fáciles (3+), con colores (4+), agua y líquidos (4+), naturaleza y
+  plantas (4+), reacciones y transformaciones (5+), luz/sombras/
+  electricidad (5+), pequeños científicos (6+). Todas huérfanas a
+  propósito (breadcrumb a `planes-en-casa.html`, sin hub propio —
+  Experimentos no tiene página hub, a diferencia de Manualidades).
+- Las otras 2 áreas de Planes en casa (Crear y construir, Cocinar
+  juntos) siguen sin ninguna página ni arquitectura detallada más allá
+  de la lista de subtipos de la fase 3.
+
+### Juegos — arquitectura y progreso
+
+Subtipos confirmados por el usuario (distintos a la lista original de la
+fase 3, que usaba nombres tipo "Juegos sin materiales/de imaginación"):
+Juegos rápidos y sencillos (3+, primera subárea creada) · Juegos de
+movimiento (3+) · Juegos de observación (4+) · Juegos de memoria (4+) ·
+Juegos de palabras (5+) · Juegos de lógica (5+) · Juegos de retos (6+) ·
+Juegos para jugar en familia (3+). Las 7 subáreas pendientes aún no
+tienen contenido — no inventarlo, esperar a que se proporcione al crear
+cada página.
+
+- **`juegos-rapidos-y-sencillos.html` (primera subárea de Juegos, 3+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto `.pec-act-*` que
+  Manualidades y Experimentos (8 actividades, callout de supervisión,
+  sin placeholder visible de intro). Juegos no tiene hub propio (no
+  existe `juegos.html`), así que el breadcrumb "Planes en casa · Juegos"
+  enlaza a `planes-en-casa.html`, mismo patrón provisional usado en
+  Experimentos. Criterio de seguridad: nada de objetos pequeños/
+  cortantes/frágiles, escondites seguros (nunca cerca de enchufes,
+  ventanas, escaleras o espacios donde el niño pueda quedar atrapado),
+  espacio libre suficiente para juegos de movimiento. Huérfana a
+  propósito, indexable, en sitemap.
+- **`juegos-de-movimiento.html` (segunda subárea de Juegos, 3+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Criterio de
+  seguridad propio: superficie estable y despejada en todos los
+  recorridos, nada de escaleras/muebles como obstáculos/superficies
+  elevadas, cinta adhesiva bien fijada sin riesgo de resbalón. Mismo
+  breadcrumb provisional a `planes-en-casa.html`.
+- **`juegos-de-observacion.html` (tercera subárea de Juegos, 4+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Enfoque
+  exclusivamente en mirar/localizar/comparar/describir — nunca
+  convertidas en juegos de memoria o de lógica. Mismo breadcrumb
+  provisional a `planes-en-casa.html`.
+- **`juegos-de-memoria.html` (cuarta subárea de Juegos, 4+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Trabaja memoria
+  mediante secuencias, parejas, posiciones y sonidos — movimientos y
+  gestos siempre lentos y seguros, sonidos suaves, sin objetos frágiles
+  ni pequeños. Mismo breadcrumb provisional a `planes-en-casa.html`.
+- **`juegos-de-palabras.html` (quinta subárea de Juegos, 5+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto. Todas las 8
+  actividades son sin materiales (expresión oral, rimas, descripciones,
+  cadenas de palabras) — nunca convertidas en ejercicios escolares de
+  lectoescritura. Mismo breadcrumb provisional a `planes-en-casa.html`.
+- **`juegos-de-logica.html` (sexta subárea de Juegos, 5+, CON CONTENIDO
+  REAL Y APROBADO)**: mismo patrón exacto. Trabaja clasificación, orden,
+  secuencias, relaciones y elección de forma lúdica — nunca convertidas
+  en ejercicios escolares formales ni en juegos de memoria/palabras.
+  Mismo breadcrumb provisional a `planes-en-casa.html`.
+- **`juegos-de-retos.html` (séptima subárea de Juegos, 6+, CON CONTENIDO
+  REAL Y APROBADO)**: mismo patrón exacto. Retos exclusivamente mentales
+  y creativos (historias, soluciones, categorías, pistas, instrucciones,
+  inventar) — nunca retos físicos, cronómetros de presión ni
+  competición que genere frustración; "El reto de inventar" es solo
+  imaginativo, no requiere construir nada físicamente. Mismo breadcrumb
+  provisional a `planes-en-casa.html`.
+- **`juegos-para-jugar-en-familia.html` (octava y última subárea de
+  Juegos, 4+, CON CONTENIDO REAL Y APROBADO)**: mismo patrón exacto.
+  Cierra el bloque Juegos (8/8 subáreas). Actividades cooperativas entre
+  varias personas (turnos, adivinar, construir juntos) — nunca
+  competitivas, sin ganadores/perdedores, sin cronómetros de presión.
+- **BLOQUE JUEGOS COMPLETO (8/8 subáreas con contenido real)**: rápidos
+  y sencillos (3+), movimiento (3+), observación (4+), memoria (4+),
+  palabras (5+), lógica (5+), retos (6+), para jugar en familia (4+).
+- **HUBS de Experimentos y Juegos creados** (`experimentos.html`,
+  `juegos.html`), mismo patrón exacto que `manualidades.html` (grid
+  `.pec-hub-*`, callout al final). A diferencia de Manualidades, estos
+  hubs se crearon cuando TODAS sus subáreas ya existían, así que las 7 y
+  8 tarjetas respectivamente son enlaces reales desde el primer momento,
+  sin ninguna pendiente. Los textos de subtítulo de ambos hubs reutilizan
+  verbatim la descripción ya aprobada de su tarjeta en
+  `planes-en-casa.html`; las descripciones de cada tarjeta del grid las
+  redacté yo (parafraseando el contenido real de cada subárea, sin
+  inventar datos) — no vinieron dadas literalmente, a diferencia de las
+  8 tarjetas del hub de Manualidades. **Las 15 páginas de subárea de
+  Experimentos y Juegos NO se tocaron**: sus breadcrumbs siguen
+  apuntando a `planes-en-casa.html` en vez de a sus hubs reales —
+  inconsistencia conocida, igual que pasó con Manualidades antes de la
+  fase de corrección; pendiente de unificar si se pide.
+- **`planes-en-casa.html`**: las tarjetas "Experimentos" y "Juegos" ahora
+  enlazan a sus hubs reales (antes eran `<div>` sin enlazar porque no
+  existían). "Cocinar juntos" sigue sin enlazar (no tiene ninguna página
+  todavía). Ver bloque "Crear y construir" más abajo para esa tarjeta.
+
+### Crear y construir — ÁREA ELIMINADA (19/08)
+
+El área completa se eliminó del proyecto a petición del usuario ("la
+información es repetitiva"). Antes de borrar, se rescató una subárea:
+
+- **`construcciones-con-plastilina.html` pasó a formar parte de
+  Manualidades** (no se borró): se sacó su tarjeta del hub de Crear y
+  construir y se añadió a `manualidades.html` (ahora 10 tarjetas, texto
+  "Diez formas de crear..."), con nuevo tono `--craft-accent:#C08267`
+  (clay/terracota suave, distinto de los ya usados). Su breadcrumb,
+  JSON-LD y footer se actualizaron para apuntar a Manualidades en vez de
+  a Crear y construir (icono `ti-palette`).
+- **Borrados permanentemente** (no estaban en git, sin posibilidad de
+  recuperación): `crear-y-construir.html` (hub) y sus otras 5 subáreas —
+  `construcciones-y-estructuras.html`, `retos-de-construccion.html`,
+  `construcciones-con-materiales-reciclados.html`, `crear-vehiculos.html`,
+  `construir-casas-y-refugios.html`.
+- `planes-en-casa.html`: tarjeta "Crear y construir" eliminada, grid
+  pasó de 5 a 4 tarjetas (Manualidades, Experimentos, Juegos, Cocinar
+  juntos) — `.pec-grid` cambiado a `repeat(4, 1fr)` (fila única, sin
+  huérfanos) con un breakpoint intermedio a 2 columnas entre 641-900px;
+  texto "Cinco formas..." → "Cuatro formas...".
+- `tools/generate_sitemap.py`: las 6 URLs borradas se quitaron del set
+  `GUIDES` (no se añadieron a `EXCLUDE`, porque a diferencia de
+  `preparaciones-sin-horno.html` estos archivos ya no existen en disco).
+  `sitemap.xml` regenerado.
+- Si el usuario vuelve a pedir esta área en el futuro, no existe ningún
+  archivo que reutilizar — habría que crearla desde cero.
+- **`cocinar-juntos.html` (HUB, creado)**: mismo patrón exacto que los
+  otros 4 hubs. Subtítulo reutiliza verbatim la descripción ya aprobada
+  de la tarjeta en `planes-en-casa.html`. Introducción (`.cat-hero-2-body`)
+  la redacté yo (no vino dada), igual que se hizo con el hub de Crear y
+  construir. Grid con **1 sola tarjeta real** (Cocina fácil).
+  `planes-en-casa.html`: la tarjeta "Cocinar juntos" ahora enlaza a este
+  hub — con esto, **las 5 tarjetas del hub principal son ya enlaces
+  reales, la corrección de navegación queda 100% completa**.
+- **`cocina-facil.html` (primera subárea de Cocinar juntos, 3+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón `.pec-act-*` que el resto
+  del proyecto, con una diferencia intencional: el campo "Materiales" se
+  etiqueta **"Ingredientes"** (mismo icono, misma clase, misma
+  posición) por ser contenido de cocina — documentar este ajuste de
+  etiqueta como el patrón a seguir en el resto de subáreas de Cocinar
+  juntos. Enfoque: PONER → AÑADIR → MEZCLAR → APLASTAR → COMBINAR (nunca
+  recetas completas ni cocción por parte del niño). Criterio de
+  seguridad estricto: nunca fuego, horno, aceite caliente ni cuchillos
+  para el niño; cualquier corte/pelado lo hace el adulto previamente;
+  aviso de comprobar alergias con lácteos/avena. Enlazada desde
+  `cocinar-juntos.html`.
+- **`decorar-y-montar.html` (segunda subárea de Cocinar juntos, 3+, CON
+  CONTENIDO REAL Y APROBADO)**: mismo patrón exacto (campo "Ingredientes").
+  Enfoque: COLOCAR → MONTAR → COMBINAR → DECORAR → CREAR sobre una
+  preparación que el adulto deja lista — nunca cocinar desde cero (eso
+  es "Cocina fácil"). Regla especial: nunca palillos, brochetas ni
+  pinchos — verificado sin esos términos; "Ordena la fruta" coloca la
+  fruta en un plato, sin pincharla.
+- **`mezclar-ingredientes.html` (tercera subárea de Cocinar juntos, 3+,
+  CON CONTENIDO REAL Y APROBADO)**: mismo patrón exacto (campo
+  "Ingredientes"). Enfoque: COMBINAR → MEZCLAR → OBSERVAR → COMPARAR —
+  el protagonista es el cambio de textura/color al mezclar, nunca una
+  receta completa.
+- Las 3 subáreas de Cocinar juntos comparten el mismo criterio de
+  seguridad: nunca fuego/horno/aceite caliente/cuchillos para el niño,
+  con aviso de comprobar alergias e intolerancias (lácteos, avena).
+- **`recetas-sencillas.html` (cuarta y última subárea de Cocinar juntos,
+  4+, CON CONTENIDO REAL Y APROBADO)**: mismo patrón `.pec-act-*` (campo
+  "Ingredientes"), pero con **6 fichas en vez de 8** — el usuario pidió
+  exactamente 6 recetas y explícitamente prohibió rellenar hasta 8.
+  Recetas: Mantequilla casera en tarro, Limonada casera, Polos caseros
+  de fruta, Gazpacho suave, Hummus sencillo, Batido de cacao y plátano.
+  Ninguna usa fuente de calor (horno/fuego/sartén/agua o aceite
+  caliente/microondas) — verificado. **Ajuste de seguridad aplicado por
+  Claude sobre el contenido dado**: la regla global de esta subárea dice
+  que batidora/exprimidor los usa EXCLUSIVAMENTE el adulto, pero el
+  texto original de "Limonada casera" tenía al niño exprimiendo el
+  limón — se cambió ese paso para que el adulto exprima y el niño solo
+  coloque las mitades, dejando el resto de la receta intacta. Enlazada
+  desde `cocinar-juntos.html`.
+- **CIERRE DEFINITIVO DE "COCINAR JUNTOS" (19/08)**: el usuario declaró
+  la sección cerrada en exactamente estas 4 subáreas: Cocina fácil (4+, edad actualizada el 19/08 — antes 3+),
+  Decorar y montar (3+), Mezclar ingredientes (3+), Recetas sencillas
+  (4+). No ampliar, no crear nuevas subáreas ni actividades salvo
+  petición expresa; no reintroducir recetas con horno/fuego/sartén/agua
+  caliente/microondas. **`preparaciones-sin-horno.html` queda retirada**
+  de esta estructura: desenlazada del hub, excluida de `sitemap.xml`
+  (añadida a `EXCLUDE` en `tools/generate_sitemap.py` con comentario
+  explicativo) y no debe recuperarse ni volver a enlazarse. El archivo
+  se dejó en disco sin borrar (acción destructiva no solicitada
+  explícitamente) — si el usuario confirma que quiere eliminarlo del
+  repo, borrarlo entonces. "Recetas de varios pasos" y cualquier otra
+  categoría culinaria nueva tampoco deben crearse salvo petición
+  expresa. Regla de calidad fijada por el usuario para el futuro de esta
+  sección: priorizar variedad e interés sobre cantidad — nunca rellenar
+  con actividades repetitivas solo para alcanzar un número.
+
+### Cabeceras fotográficas de los 5 hubs (aprobadas, 19/08)
+
+Las páginas hub de las 5 áreas (`manualidades.html`, `experimentos.html`,
+`juegos.html`, `crear-y-construir.html`, `cocinar-juntos.html`) llevan una
+fotografía editorial en la cabecera, sustituyendo el `.cat-hero-2-top`
+solo-texto que tenían antes. **La landing `planes-en-casa.html` NO lleva
+foto** — sigue con sus 5 tarjetas de icono de color, sin tocar.
+
+**Origen de las fotos**: Pexels (licencia gratuita, uso comercial
+permitido), elegidas a mano en el chat tras descartar bastantes
+candidatas por look "banco de imágenes"/saturadas/con marca reconocible
+(p.ej. se descartó una con fichas tipo Carcassonne, y una con bloques
+"Jenga" nombrados explícitamente en la descripción de Pexels). Criterio:
+luz natural, composición editorial limpia, tonos suaves, preferencia por
+manos/objetos sobre rostros identificables (con alguna excepción cuando
+el usuario lo pidió explícitamente, ver Juegos). Fuente/autor de cada
+una, por si hay que dar crédito o revisar la licencia:
+- Manualidades: "Child Painting with Watercolors in Mexico" — Allan
+  González.
+- Experimentos: "Girl Dropping Blue Dye on Bowl with Water" — cottonbro
+  studio.
+- Juegos: "Close-Up Photograph of a Child Laughing with His Mother" —
+  Ana Bregantin. Única de las 5 elegida deliberadamente **con rostros
+  visibles** — el usuario pidió explícitamente una foto de un padre/madre
+  riendo con su hijo, sin apenas objetos alrededor, en vez de una escena
+  de "objetos de juego" como las otras candidatas.
+- Crear y construir: "Girl in White Long Sleeve Shirt Writing on White
+  Paper" — cottonbro studio. Única con rostro parcialmente visible (niña
+  mirando hacia abajo, no a cámara); se aceptó como principal por no
+  haber encontrado alternativa horizontal sin rostro igual de buena.
+- Cocinar juntos: "Girls Cutting Out Cookie Shapes from Dough" — Andy
+  Barbour.
+
+**Procesado**: originales descargados a
+`images/cabecera/planes-en-casa/*.jpg` y recortados a WebP con
+`tools/process_hero_photos.py` (script reproducible — reejecutar si se
+cambia alguna foto o el recorte). Dos tamaños de salida según
+orientación del original:
+- Horizontales (Juegos, Crear y construir, Cocinar juntos): 1400×580,
+  pensadas para el patrón banner a ancho completo.
+- Verticales (Manualidades, Experimentos): 700×900, pensadas para el
+  patrón lateral.
+
+**Patrón "banner horizontal"** (Juegos, Crear y construir, Cocinar
+juntos) — clases `.pec-hero-photo` / `.pec-hero-photo-overlay` /
+`.pec-hero-photo-content`, copiadas tal cual en el `<style>` propio de
+cada una de las 3 páginas (no hay hoja compartida para esto, igual que el
+resto del sistema `.pec-hub-*`): foto a ancho completo del bloque
+`.cat-hero-2`, `border-radius:20px`, degradado inferior
+`linear-gradient` que usa `color-mix(in srgb, var(--accent) 60%,
+#1C1C1E)` — es decir, el degradado se tiñe con el acento propio de cada
+área, nunca un negro genérico igual en las 5. Breadcrumb, `<h1>` y
+subtítulo van superpuestos en blanco sobre la foto, dentro de
+`.pec-hero-photo-content`. El párrafo largo de introducción
+(`.cat-hero-2-body`), cuando la página lo tiene, se queda **debajo** de
+la foto en flujo normal — nunca superpuesto, para no arriesgar
+legibilidad de un párrafo largo sobre una fotografía.
+
+**Patrón "lateral"** (Manualidades, Experimentos, fotos verticales) —
+clases `.pec-hero-split` / `.pec-hero-split-photo` /
+`.pec-hero-split-content`: foto en columna fija de 300px de ancho junto
+al bloque de texto (breadcrumb/h1/subtítulo, y el `.cat-hero-2-body`
+cuando existe, dentro de la misma columna de texto en vez de debajo).
+`.pec-hero-split-content` usa `justify-content:flex-start` (no
+`center`) para que el texto arranque a la misma altura que el borde
+superior de la foto — quedó mal centrado verticalmente en un primer
+intento y se corrigió a petición del usuario. En móvil (`≤768px`) ambos
+patrones apilan foto arriba/texto abajo (o viceversa según el patrón).
+
+**Antes de repetir este patrón en una página nueva**: seguir el mismo
+proceso — elegir foto en Pexels con estos mismos criterios, procesarla
+con `tools/process_hero_photos.py` (añadiendo su entrada al diccionario
+`HORIZONTAL`/`VERTICAL` del script), y replicar las clases CSS
+exactamente como están en estas 5 páginas.
+
+**Las 4 áreas** (Crear y construir eliminada el 19/08, ver más abajo) **y
+sus subtipos futuros** (edad = orientativa editorial, no frontera de
+desarrollo — ver regla de edades más abajo):
+
+- **Manualidades** (10 subáreas reales, ver "ESTADO ACTUAL" más abajo):
+  Manualidades fáciles (2+) · Dibujo y pintura (2+) ·
+  Manualidades con papel (4+) · Manualidades con cartón (4+) ·
+  Manualidades con materiales reciclados (4+) · Recortar y pegar (5+) ·
+  Manualidades con varios pasos (5+) · Construcciones con plastilina
+  (5+, movida desde Crear y construir el 19/08) · Manualidades de
+  creación y diseño (6+) · Manualidades creativas avanzadas (7+).
+- **Experimentos**: Experimentos fáciles (3+) · Experimentos con colores
+  (4+) · Agua y líquidos (4+) · Naturaleza y plantas (4+) · Reacciones y
+  transformaciones (5+) · Luces y sombras (5+, renombrada el 19/08 —
+  antes "Luz, sombras y electricidad"; el archivo sigue llamándose
+  `luz-sombras-y-electricidad.html`, solo cambió el título visible) ·
+  Pequeños
+  científicos — todas creadas o pendientes en ese orden (ver más abajo).
+  "Imanes y movimiento" estaba en una lista intermedia pero el usuario la
+  eliminó explícitamente del bloque — no existe y no debe volver a
+  añadirse. Nombres de subtipo distintos a la lista original de la fase 3
+  (que usaba nombres tipo "Experimentos con agua/aire/hielo/imanes"); las
+  2 subáreas pendientes aún no tienen edad orientativa asignada — no
+  inventarla, esperar a que se proporcione al crear cada página.
+- **Juegos**: Juegos fáciles (2+) · Juegos sin materiales (3+) · Juegos
+  de imaginación (3+) · Juegos de observación (3+) · Juegos con papel y
+  lápiz (4+) · Juegos para dos (4+) · Juegos para hermanos (4+) · Juegos
+  familiares (5+) · Juegos de estrategia (7+).
+- **Crear y construir**: Construcciones fáciles (3+) · Construir con
+  cajas (3+) · Construir con papel y cartón (4+) · Crear vehículos (4+) ·
+  Construir casas y refugios (4+) · Crear circuitos (5+) · Proyectos de
+  construcción (6+) · Retos de construcción (7+).
+- **Cocinar juntos** (CERRADA el 19/08, ver bloque "CIERRE DEFINITIVO"
+  más arriba — no ampliar): Cocina fácil (4+) · Decorar y montar (3+) ·
+  Mezclar ingredientes (3+) · Recetas sencillas (4+). "Preparaciones sin
+  horno" y "Recetas de varios pasos" quedaron descartadas explícitamente
+  y no deben recuperarse. En cocina, "a partir de X años" se refiere a
+  poder participar con supervisión adulta adecuada — nunca afirmar que
+  un niño de esa edad cocina de forma autónoma.
+
+**Regla de formulación de edades** (aplica a todo el contenido futuro de
+esta sección): nunca frases de desarrollo infantil ("los niños de 4 años
+pueden...", "a los 5 años ya debería..."). Usar siempre "A partir de X
+años" y, cuando corresponda, añadir "Con supervisión adulta cuando sea
+necesario". La edad es orientativa: una actividad concreta puede encajar
+en una edad ligeramente distinta según su dificultad, materiales y
+supervisión necesaria.
+
+**No forzar las franjas de edad generales de la web** (0-6 meses, 6-12
+meses, 1-10 años): "Planes en casa" no tiene por qué cubrir todas esas
+franjas. Si un área empieza en 2+, empieza en 2+ — nunca inventar
+actividades para bebés solo para rellenar la estructura.
+
+### Manualidades — arquitectura detallada (primera área en desarrollo)
+
+Única área trabajada en profundidad por ahora; Experimentos, Juegos,
+Crear y construir y Cocinar juntos siguen solo con la lista de subtipos
+de arriba, sin desarrollar. Todavía no existe ninguna página de subtipo
+ni actividad de Manualidades — esto es solo la arquitectura aprobada
+antes de crear contenido real.
+
+Finalidad de cada una de las 8 subáreas:
+- **Manualidades fáciles (2+)**: propuestas muy sencillas para empezar —
+  pocos materiales, pocos pasos, preparación rápida, resultado sencillo,
+  fácil de adaptar.
+- **Dibujo y pintura (2+)**: dibujo libre, pintura, estampación, mezclas
+  de colores, pintar con distintos materiales, propuestas temáticas.
+  Enfoque en disfrutar creando, nunca enseñanza académica del dibujo.
+- **Manualidades con papel (4+, editada el 19/08 — antes 3+)**: el papel como material principal —
+  doblar, pegar, crear figuras, collage, decoración, personajes,
+  animales, flores, elementos para jugar.
+- **Manualidades con cartón (4+)**: el cartón como material principal —
+  cajas transformadas, casas, vehículos, animales, escenarios, pequeños
+  teatros, juegos hechos con cartón, objetos decorativos.
+- **Manualidades con materiales reciclados (4+)**: reutilizar objetos
+  cotidianos (rollos de cartón, cajas, envases limpios, tapones, papel,
+  tubos...). Nunca materiales peligrosos ni envases con riesgo — solo
+  materiales domésticos sencillos y seguros.
+- **Recortar y pegar (5+, edad actualizada el 19/08 — antes 4+)**: collages, figuras, animales, personajes,
+  composiciones, tarjetas, decoraciones. Cuando haya tijeras, indicar
+  claramente cuándo hace falta supervisión adulta y qué herramientas son
+  apropiadas para la edad.
+- **Manualidades con varios pasos (5+)**: algo más elaboradas — varios
+  pasos, mayor precisión, preparación de materiales, instrucciones algo
+  más largas, resultado más elaborado.
+- **Manualidades creativas avanzadas (7+)**: proyectos más largos, mayor
+  autonomía, varios materiales, planificación, mayor precisión.
+  "Avanzadas" es solo clasificación editorial de dificultad, nunca una
+  afirmación sobre el desarrollo del niño.
+
+**Plantilla futura de página de subárea** (no crear todavía, es el
+modelo estructural para cuando se apruebe contenido real):
+- H1 con patrón `Manualidades <tipo> para niños a partir de <X> años`.
+- Introducción breve.
+- Sección "Ideas de manualidades" con una o varias actividades, cada una
+  con: título, edad orientativa ("A partir de X años"), materiales,
+  pasos, dificultad, tiempo aproximado y supervisión si procede.
+
+**Filtros futuros de la sección** (no implementar todavía, dejar la
+arquitectura compatible con ellos): por edad (2+ a 10+), por materiales
+(papel, cartón, pintura, reciclado...), por tiempo (10/20/30 min, 1 hora)
+y por dificultad (fácil, media, más elaborada).
+
+**SEO**: intención de búsqueda práctica ("manualidades fáciles para
+niños", "manualidades para niños de 3 años", "manualidades con papel",
+"manualidades con cartón", "manualidades para días de lluvia"), sin
+sobreoptimizar — el contenido debe responder a la necesidad real antes
+que a la keyword.
+
+**Enfoque visual**: mismo lenguaje visual de Lauderem (limpio, alegre,
+creativo, familiar, editorial, fácil de consultar) — nunca estética
+saturada de colores tipo guardería, y sin emojis decorativos ya que el
+sistema visual usa iconografía Tabler propia.
+
+**Pendiente para próximas fases** (no empezar sin que el usuario lo
+pida): validar y aprobar esta arquitectura de Manualidades; cuando esté
+aprobada, empezar a crear el primer contenido real (todavía no páginas
+de subtipo ni actividades). Experimentos, Juegos, Crear y construir y
+Cocinar juntos siguen pendientes de este mismo nivel de detalle.
+
+## Cabeceras fotográficas de "Vida en familia" (aprobadas, 19/08)
+
+Las 7 páginas de artículo de la sección "Vida en familia" —
+`comprar-mejor.html`, `organizacion-y-hogar.html`,
+`cumpleanos-y-celebraciones.html`, `lectura-y-cultura-infantil.html`,
+`pantallas-y-ocio.html`, `viajes-y-vacaciones.html`,
+`consumo-responsable.html` — llevan foto de cabecera, mismo sistema
+`.pec-hero-photo` / `.pec-hero-split` ya usado en los hubs de "Planes en
+casa" (ver bloque "Cabeceras fotográficas de los 5 hubs" más arriba),
+replicado en el `<style>` propio de cada página. A diferencia de esos
+hubs, estas páginas no tienen subtítulo ni `.cat-hero-2-body` en la
+cabecera (solo `.cat-hero-2-chip` + `<h1>`), así que el contenido
+superpuesto/lateral es más corto.
+
+**Origen de las fotos**: Pexels, mismo criterio que "Planes en casa"
+(luz natural, editorial, tonos suaves, preferencia por manos/objetos
+sobre rostros). Se relajó la preferencia de "sin rostro" en 2 de las 7
+(Pantallas y ocio, Viajes y vacaciones) al no encontrarse una alternativa
+igual de buena sin rostro — el usuario lo aprobó explícitamente viendo
+la propuesta completa. Autoría:
+- Comprar mejor: "A Person in White Long Sleeves Holding a Wooden Toys
+  on the Table" — kaboompics.com. No es literal "comprando": representa
+  el resultado de elegir un juguete de calidad (montessori, material
+  natural, sin marcas visibles). Se descartaron varias opciones por
+  mostrar logotipos de marcas reales en una tienda (BRIO, Tonka, Green
+  Toys) o por ser fotos de regalos navideños (demasiado estacional).
+- Organización y hogar: "Retro Toys and Globe on Cabinet in Nursery
+  Room" — Tatiana Syrikova. Se descartó una alternativa de armario real
+  demasiado abarrotada (tipo foto inmobiliaria, con juguetes de marca
+  visibles) por no encajar con el criterio "sin composiciones llenas de
+  objetos".
+- Cumpleaños y celebraciones: "Celebratory Cake with Lit Candles
+  Indoors" — Manolya İzgi Gezgin.
+- Lectura y cultura infantil: "Child Reading a Book" — leeloothefirst.
+  Foto de un libro ilustrado en braille (lectura inclusiva).
+- Pantallas y ocio: "Child Holding Tablet in Hands During Distance
+  Learning" — Julia M. Cameron. Rostro visible a propósito, tono cálido
+  y tranquilo — se descartó otra opción por ser demasiado oscura/con
+  disfraz de Spider-Man (riesgo de marca Marvel).
+- Viajes y vacaciones: "A Toddler Carrying a Bag While Standing Near the
+  White Wall" — Cherry Ann Gonzales. Rostro visible a propósito (única
+  candidata que mostraba a un niño en vez de a un adulto). El recorte
+  vertical estándar del script dejaba demasiado espacio en blanco arriba
+  (el sujeto ocupa solo el tercio inferior del original) y tuvo que
+  ajustarse a mano — ver comentario en
+  `tools/process_hero_photos_vida_en_familia.py`.
+- Consumo responsable: "A Box of Donations with Pillows and Stuffed
+  Animals" — Gustavo Fring. Caja con etiqueta "DONATIONS" (en inglés,
+  aceptado como parte de la foto). Se prefirió sobre una alternativa de
+  juguetes de madera por ser más literal (donar/reutilizar) y para no
+  duplicar visualmente el mismo concepto que la foto de "Comprar mejor".
+
+**Procesado**: originales en `images/cabecera/vida-en-familia/*.jpg`,
+recortados a WebP con `tools/process_hero_photos_vida_en_familia.py`
+(mismos tamaños que Planes en casa: 1400×580 horizontales, 700×900
+verticales). 3 horizontales (Comprar mejor, Lectura, Pantallas) + 4
+verticales (Organización, Cumpleaños, Viajes, Consumo).
+
+## Sistema de sillitas de coche (comparativa, en desarrollo)
+
+Extractor **independiente** de `amazon_import.py` (nunca se toca ese
+archivo ni su lógica): `tools/amazon_sillas_coche.py`. Busca en Amazon
+España, filtra por 17 marcas autorizadas, deduplica por ASIN y extrae 13
+atributos técnicos + precio + valoración + hasta 10 reseñas por producto.
+Uso: `python tools/amazon_sillas_coche.py --search "sillita coche"`.
+
+**Capas de cada producto en el JSON:**
+- `caracteristicas` / `caracteristicas_fuente`: los 13 atributos "planos"
+  originales (no tocar su lógica sin pedirlo).
+- `clasificacion`: capa nueva y más fina — `isofix`, `tipo_instalacion`
+  (`isofix`/`cinturon_seguridad`/`null`, nunca "ISOFIX + cinturón"),
+  `normativa` (`r129_isize`/`r44`/`null`, unifica R129 e i-Size como el
+  mismo estándar), `grupo_r44`, `altura_r129`, `peso`, `edad`. Cada campo
+  usa el envoltorio `{original, normalizado, mostrar, revisar, fuente,
+  url_fuente}`. Regla dura: si un atributo no tiene evidencia textual
+  explícita, `normalizado = null` — nunca inventar ni convertir R129 a
+  grupo R44 por inferencia, ni edad a partir de altura/peso.
+- `opiniones.muestra`: hasta 10 reseñas reales tal cual las presenta Amazon
+  por defecto (nunca "las más recientes": el orden de Amazon no es
+  necesariamente cronológico). `opiniones.resumen`: **lo redacta Claude
+  Code a mano en el chat**, nunca un script/API — ver criterio editorial en
+  memoria `feedback_sillas_coche_resumen_opiniones.md` (resumen: nunca usa
+  críticas negativas, ni aisladas ni repetidas; sin categorías fijas; texto
+  de transparencia fijo debajo).
+
+**Fuente secundaria — web oficial del fabricante** (`tools/fabricante_lookup.json`):
+se consulta solo cuando Amazon no confirma un dato técnico. Reglas fijadas:
+1. Jerarquía: Amazon → fabricante oficial. Nunca otras tiendas,
+   marketplaces, distribuidores, blogs ni comparadores.
+2. **Contenido válido = solo lo VISIBLE en la ficha** (descripción,
+   características, tablas, FAQs desplegadas). **Nunca** `<title>` HTML,
+   meta description, datos estructurados ocultos, snippets de buscador,
+   la URL o nombres de archivo — error real cometido con Maxi-Cosi Tanza:
+   se leyó el `<title>` SEO ("con cinturón") como si fuera contenido de la
+   página; el cuerpo visible decía "Con conectores ISOFIX" sin
+   contradicción real. Al usar una herramienta de lectura de página, todo
+   lo que aparezca antes de "Source element: `<main>`" es metadato y se
+   descarta.
+3. **Identidad de producto**: el nombre en Amazon y en el fabricante no
+   tienen por qué coincidir (ej. Kinderkraft "JUNIOR FIX 2 PRO" en Amazon =
+   "JUNIOR FIX 2 PLUS" en la web oficial). Cada entrada del lookup lleva
+   `identidad_verificada` (bool) — exige **al menos 2 señales
+   independientes** (SKU/prefijo de familia, características técnicas
+   coincidentes, rango de altura, homologación...) antes de dar la
+   identidad por buena; nunca solo por parecido de nombre. Si se investigó
+   y no se pudo confirmar, la entrada queda con
+   `identidad_verificada: false` y se avisa "posible variante/producto
+   diferente" en vez de usar el dato o dejar un N/A silencioso. Cuando el
+   nombre difiere pero la identidad sí se confirma, se guarda
+   `aviso_nombre_diferente: true` + `nombre_amazon`/`nombre_fabricante`/
+   `motivo_equivalencia`, sin ocultar la discrepancia.
+4. **Contradicciones**: si Amazon y fabricante no coinciden, `revisar =
+   true` y `normalizado = null` — nunca se resuelve automáticamente. Antes
+   de marcar `revisar`, comprobar: ¿es el mismo producto? ¿una fuente es
+   contenido no válido (SEO)? ¿es una diferencia de variante? ¿una fuente
+   habla de una función distinta (p.ej. "cinturón" del arnés del niño vs.
+   "cinturón" de instalación de la silla)? Solo si tras esos filtros sigue
+   habiendo desacuerdo real, queda en revisar. Un humano puede resolver una
+   contradicción explícitamente en el chat — se marca
+   `resuelto_manualmente: true` en el lookup, con fuente
+   `"fabricante_oficial (confirmado manualmente)"`, y esto no cuenta como
+   resolución automática.
+5. Cuando **solo el fabricante** confirma un dato, se usa igualmente como
+   dato de primer nivel (`fuente = "fabricante_oficial"`) — nunca se marca
+   como "inferido".
+6. `tools/fabricante_lookup.json` **no es un scraper automático**:
+   encontrar la página oficial del modelo exacto sin confundirla con una
+   variante parecida requiere criterio editorial (se hizo a mano, producto
+   a producto). Para ASIN nuevos que no estén en el lookup, la
+   clasificación depende solo de Amazon hasta que se investigue y se
+   añada su entrada siguiendo estas mismas reglas.
+
+**Scripts auxiliares** (ninguno modifica el extractor): `tools/build_sillas_report.py`
+(JSON+Excel con hojas Productos/Reseñas), `tools/build_sillas_comparativa.py`
+(añade hoja Comparativa + cobertura), `tools/audit_sillas_na.py` (revisita
+fichas en modo lectura para auditar N/A), `tools/reextraccion_lote1_clasificacion.py`
+(reprocesa el lote ya cacheado tras cambios de código, sin re-scrapear Amazon).

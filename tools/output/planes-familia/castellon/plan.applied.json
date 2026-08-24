@@ -1,0 +1,762 @@
+{
+  "province": "Castellón",
+  "province_slug": "castellon",
+  "generated_at": "2026-08-23T00:00:00Z",
+  "searches": [
+    "planes con niños Castellón",
+    "actividades con niños Castellón",
+    "qué hacer con niños Castellón"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se alcanzaron los 18 lugares (15 primary + 3 backup) con evidencia real tras el cribado de 7 fuentes válidas (de 11 páginas candidatas únicas analizadas, sobre un máximo teórico de 15 antes de deduplicar). Regla de diversificación de patrimonio histórico/arqueológico aplicada en la Fase A.6: Castellón tiene varios candidatos de este tipo con buena posición en las fuentes (Castillo del Papa Luna de Peñíscola, Morella con su recinto amurallado y castillo, Castillo de Onda, y el casco histórico/Concatedral de Castelló de la Plana). Para respetar el máximo de 2 lugares de este tipo entre los 15 primary y no colocar ninguno en las posiciones 1-6, se seleccionaron solo 2, por mayor interés familiar, reconocimiento y diferenciación entre sí: (1) el Castillo del Papa Luna de Peñíscola (rank 7), la fortaleza más reconocible y visitada de la provincia, con fuerte atractivo narrativo para niños (templarios, papa Luna, leyendas); y (2) Morella (rank 15), pueblo amurallado medieval de visita de día completo, distinto en experiencia al anterior (recinto urbano completo frente a fortaleza aislada). El Castillo de Onda y el casco histórico/Concatedral de Castelló de la Plana no se incluyeron en el plan para no concentrar la selección en propuestas similares, ni se investigaron sus datos definitivos (Fase A.7) al no haber sido seleccionados. Se priorizaron en las posiciones 1-6 experiencias con atractivo infantil más directo: ciencia (Planetari), aventura en mina (Parc Miner del Maestrat), tren en miniatura (Parc del Trenet), cuevas navegables (Coves de Sant Josep), piscinas naturales (Fuente de los Baños) y una ruta ciclista/senderista familiar (Vía Verde del Mar). Ajuste posterior a la aplicación (23/08/2026, a petición del usuario): se intercambiaron MIAU - Museo Inacabado de Arte Urbano (Fanzara) y Saltapins (Morella) — Saltapins pasó a primary #12 y MIAU a backup #18 — porque no se encontró una foto adecuada para la ficha de MIAU (ver rediseño con foto por lugar, .pfb-card).",
+  "sources_analyzed": [
+    {
+      "name": "Comunitat Valenciana - Planes de ocio para niños en la provincia de Castellón",
+      "domain": "comunitatvalenciana.com",
+      "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+      "title": "Planes con Niños en Castellón: ¡Diviértete en Familia!",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 7
+    },
+    {
+      "name": "Familias en Ruta - Castellón con niños en 15 planes para no perderse",
+      "domain": "familiasenruta.com",
+      "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+      "title": "Castellón con niños en 15 planes para no perderse",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 20
+    },
+    {
+      "name": "El Periódic - Seis planes para disfrutar en familia en la provincia de Castellón",
+      "domain": "elperiodic.com",
+      "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+      "title": "Seis planes para disfrutar en familia en la provincia de Castellón",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 6
+    },
+    {
+      "name": "Tus Casas Rurales - Qué hacer y qué ver en Castellón con niños",
+      "domain": "tuscasasrurales.com",
+      "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+      "title": "Qué hacer y qué ver en Castellón con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 14
+    },
+    {
+      "name": "Mamá tiene un plan - planes con niños en Castellón",
+      "domain": "mamatieneunplan.com",
+      "url": "https://www.mamatieneunplan.com/p12-planes-con-ninos-castellon.php",
+      "title": "planes con niños en Castellón",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Viajar con Hijos - 10 actividades en Castellón",
+      "domain": "viajarconhijos.es",
+      "url": "https://www.viajarconhijos.es/cvalenciana/10-actividades-en-castellon/",
+      "title": "10 actividades en Castellón",
+      "included": false,
+      "exclusion_reason": "Página no accesible (HTTP 403), no se pudo verificar su contenido.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Castellón Virtual - Actividades con niños en Castellón",
+      "domain": "castellonvirtual.es",
+      "url": "https://www.castellonvirtual.es/actividades/actividades-ninos-castellon/",
+      "title": "Actividades Con niños en Castellón",
+      "included": false,
+      "exclusion_reason": "Plataforma de directorio/agenda de actividades reservables con precios (parques de aventura, tours, excursiones en barco), no guía editorial de lugares.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Jaiekin - Actividades infantiles en Castellón/Castelló",
+      "domain": "jaiekin.com",
+      "url": "https://jaiekin.com/cat/actividades-infantiles/zona/castellon/",
+      "title": "Mejores ACTIVIDADES INFANTILES en CASTELLóN/CASTELLó este 2025",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva/catálogo de servicios para fiestas y celebraciones (hinchables, animaciones, DJ), no guía editorial de lugares visitables.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Ruralzoom - 20 lugares para visitar con niños en Castellón",
+      "domain": "ruralzoom.com",
+      "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+      "title": "20 Lugares para visitar con niños en Castellón",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 20
+    },
+    {
+      "name": "Zonaviajero - Qué hacer en Castellón con niños",
+      "domain": "zonaviajero.com",
+      "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+      "title": "Qué hacer en Castellón con niños (planes divertidos)",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 11
+    },
+    {
+      "name": "Tripadvisor - Cosas que hacer con niños en Provincia de Castellón",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g1064289-Activities-zft11306-Province_of_Castellon_Valencian_Community.html",
+      "title": "Cosas que hacer con niños en Provincia de Castellón",
+      "included": false,
+      "exclusion_reason": "Página no accesible (HTTP 403); además es plataforma de directorio/reservas de tours y atracciones, no guía editorial.",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "address_null",
+        "message": "Dirección no verificada con suficiente seguridad para \"Embalse de l'Alcora (Circuito Multiaventura)\": gestionado por varios operadores privados sin sede única confirmada.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_null",
+        "message": "No se encontró una web oficial única con suficiente seguridad para \"Embalse de l'Alcora (Circuito Multiaventura)\": la actividad la gestionan varios operadores privados distintos (Viunatura, RocRoi, CV Activa) sin una sede oficial unificada.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Jardín del Papagayo\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
+        "place_rank": 13
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Playa Norte de Peñíscola\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
+        "place_rank": 16
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Embalse de l'Alcora (Circuito Multiaventura)\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Saltapins (Morella)\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
+        "place_rank": 12
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Planetari de Castelló",
+      "description": "Un centro de divulgación científica junto al mar, en el Grau de Castelló, con una cúpula de proyección de 25 metros dedicada a la astronomía. Además de las sesiones sobre estrellas y planetas, organiza talleres y exposiciones sobre paleontología y biología pensados para todas las edades. Un buen plan para acercar a los niños a la ciencia con formato de espectáculo, a pocos pasos del paseo marítimo.",
+      "official_url": "https://www.castello.es/es/planetario-informacion-general",
+      "url_verified": true,
+      "address": "Passeig Marítim, 1, 12100 Grau de Castelló (Castellón)",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "\"El Planetari de Castelló de la Plana es un templo dedicado a la ciencia\""
+        },
+        {
+          "name": "El Periódic",
+          "domain": "elperiodic.com",
+          "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+          "evidence": "Centro científico con talleres, exposiciones y proyecciones sobre astronomía y paleontología"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Actividades para aprender gracias a la ciencia, adaptadas a todas las edades, con talleres infantiles de fin de semana"
+        },
+        {
+          "name": "Mamá tiene un plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p12-planes-con-ninos-castellon.php",
+          "evidence": "Planetari de Castelló con programación didáctica para niños"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Exposiciones sobre astronomía, física y paleontología dirigidas al público infantil"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Parc Miner del Maestrat",
+      "description": "Un antiguo complejo de minas de hierro, entre los términos de Culla y Torre d'en Besora, reconvertido en un parque visitable con guía. El recorrido combina un trayecto en tren minero por el exterior con la entrada a pie a las galerías Victoria y Esperanza, ambientadas como cuando estaban en explotación. Una forma distinta de acercar a los niños a la historia minera de la comarca, con parte de aventura subterránea incluida.",
+      "official_url": "https://parcminerdelmaestrat.es/",
+      "url_verified": true,
+      "address": "Paratge la Fontanella, CV-166 (Culla - Torre d'en Besora), 12134 Culla (Castellón)",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "\"Galerías de una antigua mina subterránea\" recorridas en tren minero"
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Parc Miner del Maestrat (Culla) entre los 20 lugares destacados"
+        },
+        {
+          "name": "El Periódic",
+          "domain": "elperiodic.com",
+          "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+          "evidence": "Explorar galerías de las minas Victoria y Esperanza con guía y viaje en tren minero"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Sitio minero histórico recorrido a pie y en tren minero auténtico"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Visita guiada a minas antiguas de hierro con transporte en tren entre galerías"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Parc del Trenet (Benicàssim)",
+      "description": "Un parque temático ferroviario en Benicàssim donde el protagonista es el propio tren: réplicas artesanales a escala de locomotoras históricas por las que los más pequeños pueden pasear. El circuito incluye estación, túneles y puentes en miniatura, gestionado por una asociación cultural ferroviaria local. Un plan sencillo y gratuito, muy popular entre familias con niños pequeños.",
+      "official_url": "http://www.plazadeltrenetbenicassim.com/",
+      "url_verified": true,
+      "address": "Av. Barcelona, 47, 12560 Benicàssim (Castellón)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "\"Trenes a escala en los que puedes montarte\" entre antiguas locomotoras y vapores"
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Réplicas de trenes históricos operativos"
+        },
+        {
+          "name": "El Periódic",
+          "domain": "elperiodic.com",
+          "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+          "evidence": "Réplicas de trenes míticos como el Talgo y el AVE, con zonas de juego"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Parque temático ferroviario gratuito con trenes y locomotoras artesanales a escala"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Coves de Sant Josep (La Vall d'Uixó)",
+      "description": "El río subterráneo navegable más largo de Europa, dentro de una cueva kárstica en La Vall d'Uixó. La visita combina un tramo a pie por galerías secas con un paseo en barca de unos 800 metros sobre aguas cristalinas. Una excursión distinta que sorprende tanto a niños como a adultos, con opción de kayak en los meses de verano.",
+      "official_url": "https://www.lavallduixo.es/es/conoce-el-municipio/coves-de-sant-josep",
+      "url_verified": true,
+      "address": "Paratge de Sant Josep, s/n, 12600 La Vall d'Uixó (Castellón)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Navegación por río subterráneo de 800 metros con pinturas rupestres"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "\"El río subterráneo navegable más largo de Europa\", con tramos a pie y en barca"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Cuevas con 800 metros en barca y 250 a pie"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Río subterráneo accesible en barca, con opción de kayak en verano"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Fuente de los Baños (Montanejos)",
+      "description": "Un conjunto de piscinas naturales de agua templada en el cauce del río Mijares, a su paso por Montanejos, con temperatura constante todo el año. Cuenta con zonas de baño, merenderos y área infantil, gestionadas por el propio ayuntamiento en temporada alta. Un plan de naturaleza y agua muy socorrido en verano, apto para toda la familia.",
+      "official_url": "https://www.montanejos.es/es/turismo/fuente-de-los-banos",
+      "url_verified": true,
+      "address": "Río Mijares, 12448 Montanejos (Castellón)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "\"Font dels Banys\", playa fluvial natural en el río Mijares"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Piscina natural que mantiene una temperatura constante de 25°C"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Piscinas naturales de agua templada todo el año"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Manantial natural del río Mijares con zona para nadar y servicio de kayak"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Vía Verde del Mar (Benicàssim - Oropesa del Mar)",
+      "description": "Un antiguo trazado de tren reconvertido en camino de casi 6 kilómetros entre Benicàssim y Oropesa del Mar, junto a la costa. Es llano y está asfaltado o compactado en la mayor parte del recorrido, así que se puede hacer a pie, en bici o incluso con carrito de bebé. Pasa junto a calas y pinares con el Mediterráneo siempre al lado, un paseo tranquilo apto para toda la familia.",
+      "official_url": "https://viasverdes.com/itinerarios/itinerario.asp?id=45",
+      "url_verified": true,
+      "address": "Benicàssim - Oropesa del Mar (Castellón)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "Vía Verde del Mar entre Oropesa del Mar y Benicasim"
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Ruta ciclista/senderista entre Oropesa y Benicàssim con túneles y puentes"
+        },
+        {
+          "name": "El Periódic",
+          "domain": "elperiodic.com",
+          "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+          "evidence": "Sendero de 5,3 km transitable a pie o en bicicleta por el antiguo trazado ferroviario"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Camino pedestre/ciclista de 6 km por la antigua línea de ferrocarril"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Castillo del Papa Luna (Peñíscola)",
+      "description": "Una fortaleza templaria del siglo XIII sobre el peñón de Peñíscola, que llegó a ser residencia del papa Benedicto XIII, conocido como el Papa Luna. Se visita su interior amurallado, con vistas al Mediterráneo desde sus jardines y murallas, y está rodeado del casco histórico del pueblo. Un plan de historia con ambiente de leyenda que suele gustar a los niños aficionados a castillos.",
+      "official_url": "https://castillodepeniscola.dipcas.es/es/",
+      "url_verified": true,
+      "address": "Calle Castillo, s/n (Casco antiguo), 12598 Peñíscola (Castellón)",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "\"El Castillo del Papa Luna en Peñíscola es una fortaleza medieval llena de leyendas\""
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Fortaleza medieval con audioguía y visitas guiadas estivales"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Fortaleza papal del siglo XIII sobre el Mediterráneo"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Fortaleza templaria del siglo XIV con historia y leyendas"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Casco antiguo amurallado con el Castillo del Papa Luna, ideal para explorar"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Parque Natural Desert de les Palmes",
+      "description": "Un espacio natural protegido entre Benicàssim, Castelló y Cabanes, con rutas de senderismo cortas y bien señalizadas entre bosque mediterráneo y restos de antiguos monasterios. El centro de interpretación La Bartola ofrece actividades gratuitas de fin de semana orientadas a todos los públicos. Un buen plan de naturaleza en familia, cerca de la costa.",
+      "official_url": "https://parquesnaturales.gva.es/es/web/pn-desert-de-les-palmes",
+      "url_verified": true,
+      "address": "Carretera CV-147, km 8, 12560 Benicàssim (Castellón)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Senderos, ruinas de monasterios y castillos históricos"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Rutas de senderismo sencillas ideales para hacer en familia"
+        },
+        {
+          "name": "Mamá tiene un plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p12-planes-con-ninos-castellon.php",
+          "evidence": "Parque natural con rutas de senderismo familiar"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Área natural con múltiples rutas, castillos y ermitas"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Jardín Encantado (Oropesa del Mar)",
+      "description": "Un parque temático dentro del complejo Magic World Resort, en Oropesa del Mar, con árboles que hablan, hadas y espectáculos con actores entre miles de flores de más de 50 especies distintas. Está pensado como una experiencia fantástica para los más pequeños, con pasacalles y personajes que interactúan con el público. Un plan de tarde diferente, entre naturaleza cuidada y teatro familiar.",
+      "official_url": "https://www.magicworldresort.com/es/parques/jardin-encantado",
+      "url_verified": true,
+      "address": "Marina d'Or, 12594 Oropesa del Mar (Castellón)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Parque temático con criaturas mágicas y 52 especies de plantas"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Árboles que hablan, personajes de cuento y espectáculos acrobáticos"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Elementos fantásticos, espectáculos y esculturas de personajes animados"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Parque Natural Islas Columbretes",
+      "description": "Un pequeño archipiélago volcánico a unos 50 kilómetros de la costa de Castellón, declarado reserva marina y parque natural. Se visita en excursión en barco, con parada en la isla Grossa para un paseo guiado y tiempo de baño y esnórquel en sus aguas transparentes. Una salida de día completo pensada para familias que quieran combinar naturaleza y mar de una forma distinta a la playa habitual.",
+      "official_url": "https://parquesnaturales.gva.es/es/web/pn-illes-columbretes",
+      "url_verified": true,
+      "address": "A unos 50 km de la costa de Castellón",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Archipiélago protegido accesible mediante cruceros costeros"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Archipiélago volcánico protegido con faro del siglo XIX en Illa Grossa"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Archipiélago accesible mediante paseos marítimos de dos horas"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Museo del Naipe (Oropesa del Mar)",
+      "description": "Un pequeño museo privado en el casco antiguo de Oropesa del Mar dedicado por completo a la baraja de cartas, con más de 16.000 ejemplares de todo el mundo. Incluye una baraja gigante certificada como la mayor del mundo y explicaciones sobre trucos y curiosidades del naipe. Una visita curiosa y breve, distinta al resto de planes de la zona, que suele sorprender a los niños.",
+      "official_url": "https://www.museodelnaipe.com/",
+      "url_verified": true,
+      "address": "Calle Hospital, 1 (Casco antiguo), 12594 Oropesa del Mar (Castellón)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Colección de más de 16.000 barajas"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Museo con más de 5 mil barajas de cartas"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Exposición de más de cinco mil barajas con trucos de magia"
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "MIAU - Museo Inacabado de Arte Urbano (Fanzara)",
+      "description": "Un pequeño pueblo del interior de Castellón cuyas fachadas se han convertido en un museo al aire libre, con más de 150 murales de artistas de todo el mundo. Pasear por sus calles es como recorrer una galería urbana a cielo abierto, sin horarios ni entrada. Un plan diferente para familias que quieran combinar arte y pueblo tranquilo, alejado de la costa.",
+      "official_url": "https://miau32.wixsite.com/miaufanzara-2016",
+      "url_verified": true,
+      "address": "Plaça de l'Església, s/n, 12222 Fanzara (Castellón)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Murales y arte urbano con acceso gratuito"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Más de 150 intervenciones artísticas en las calles del pueblo"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Museo de arte urbano al aire libre con unos 150 murales de 73 artistas"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Jardín del Papagayo",
+      "description": "Un santuario interactivo con más de 50 especies de papagayos y otras aves exóticas, cerca de Benicarló. Los niños pueden acercarse a las aves en paseos guiados y disfrutar de espectáculos pensados para todas las edades. Un plan de contacto con animales muy vistoso, distinto a un zoo convencional.",
+      "official_url": "https://jardindelpapagayo.com/",
+      "url_verified": true,
+      "address": "Camino del Término, s/n, 12580 Benicarló (Castellón)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Zoo con parque interactivo y más de 50 especies de papagayos"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Santuario interactivo donde los niños interactúan con las aves"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Parque Natural Serra d'Espadà",
+      "description": "Una sierra de alcornocales entre el interior y la costa de Castellón, con rutas de senderismo de dificultad variada y pueblos de origen morisco en su entorno. El centro de interpretación de Eslida explica la flora y fauna propias del parque, con especial protagonismo del alcornoque. Un plan tranquilo de naturaleza y montaña para familias que quieran alejarse un poco de la playa.",
+      "official_url": "https://parquesnaturales.gva.es/es/web/pn-serra-d-espada",
+      "url_verified": true,
+      "address": "Antigues Escoles d'Eslida, 12528 Eslida (Castellón)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "Sierra de Espadán con sendas recomendadas para disfrutar con niños"
+        },
+        {
+          "name": "El Periódic",
+          "domain": "elperiodic.com",
+          "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+          "evidence": "Parque Natural con rutas rodeadas de bosques de alcornoques y centro de interpretación"
+        },
+        {
+          "name": "Mamá tiene un plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p12-planes-con-ninos-castellon.php",
+          "evidence": "Zona montañosa para excursiones en familia"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Morella",
+      "description": "Un pueblo amurallado sobre un macizo rocoso, en el interior de Castellón, con castillo, calles empedradas y una basílica del siglo XVIII. Recorrer sus murallas y subir hasta el castillo ofrece vistas muy amplias sobre la comarca de Els Ports. Un plan de día completo que combina paseo, historia y gastronomía de interior, muy popular entre familias.",
+      "official_url": "https://www.morella.net/morellaturistica/descubre-morella/",
+      "url_verified": true,
+      "address": "Plaça de Sant Miquel, s/n, 12300 Morella (Castellón)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Ciudad amurallada con castillo accesible mediante audioguía gratuita"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "\"Uno de los pueblos más bonitos de España\", con castillo en la cima"
+        },
+        {
+          "name": "Mamá tiene un plan",
+          "domain": "mamatieneunplan.com",
+          "url": "https://www.mamatieneunplan.com/p12-planes-con-ninos-castellon.php",
+          "evidence": "Localidad con eventos familiares y mercados"
+        },
+        {
+          "name": "Ruralzoom",
+          "domain": "ruralzoom.com",
+          "url": "https://www.ruralzoom.com/blog/listas-turisticas/20-lugares-para-visitar-con-ninos-en-castellon/",
+          "evidence": "Pueblo amurallado con castillo, basílica del siglo XVIII y conventos históricos"
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Playa Norte de Peñíscola",
+      "description": "Una playa amplia y familiar de 5,5 km de arena fina, que arranca a los pies del castillo de Peñíscola y llega hasta Benicarló. Cuenta con bandera azul y todos los servicios habituales para pasar el día con niños: socorrismo, duchas y alquiler de hamacas. Una opción sencilla para combinar playa con la visita al casco histórico de Peñíscola.",
+      "official_url": "https://peniscola.es/en/what-to-do/beaches/north-beach/",
+      "url_verified": true,
+      "address": "Avinguda del Papa Luna, 19, 12598 Peñíscola (Castellón)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/castellon-con-ninos/",
+          "evidence": "Extensa playa de arena dorada con servicios completos y zona de juegos infantiles"
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Playa Norte, larga y extensa, con zona de juegos"
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Embalse de l'Alcora (Circuito Multiaventura)",
+      "description": "Un circuito de aventura en plena naturaleza, junto al embalse de l'Alcora, con actividades como tirolina, puente tibetano, kayak y tiro con arco. Está pensado para todo tipo de público, familias incluidas, en un entorno de montaña muy distinto a la costa. Un plan con más adrenalina para las familias que buscan actividad física al aire libre.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Paratge la Foia, Embassament de l'Alcora, 12110 l'Alcora (Castellón)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-de-ocio-para-ni-os-en-la-provincia-de-castellon",
+          "evidence": "Zona de aventuras con tirolinas y puentes tibetanos"
+        },
+        {
+          "name": "El Periódic",
+          "domain": "elperiodic.com",
+          "url": "https://www.elperiodic.com/pcastellon/seis-planes-para-disfrutar-familia-provincia-castellon_957062",
+          "evidence": "Zona de multiaventura: kayak, tirolina, puente tibetano, senderismo y tiro con arco"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Saltapins (Morella)",
+      "description": "Un circuito de aventura entre árboles junto al río Bergantes, cerca de Morella, con tirolinas, puentes tibetanos y lianas repartidos en varios recorridos según edad. Está pensado para que niños a partir de 6 años completen los circuitos con cierta autonomía mientras la familia observa desde abajo. Un buen complemento de aventura a una visita a Morella.",
+      "official_url": "https://www.saltapins.com/",
+      "url_verified": true,
+      "address": "Fàbrica Giner, paraje junto al río Bergantes, 12300 Morella (Castellón)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/castellon-con-ninos/",
+          "evidence": "Parque de aventura con circuitos de árboles desde 6 años"
+        },
+        {
+          "name": "Zonaviajero",
+          "domain": "zonaviajero.com",
+          "url": "https://www.zonaviajero.com/que-hacer-en-castellon-con-ninos/",
+          "evidence": "Parque vertical en árboles con circuitos, tirolinas y puentes para mayores de 6 años"
+        }
+      ]
+    }
+  ]
+}

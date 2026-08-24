@@ -23,6 +23,11 @@ HOME_FILE = "guia-regalos-juguetes.html"
 EXCLUDE = {
     "footer-preview.html",
     "simulacion-fotos-edades.html",
+    # Subárea retirada de "Cocinar juntos" (estructura definitiva cerrada
+    # el 19/08: solo Cocina fácil, Decorar y montar, Mezclar ingredientes
+    # y Recetas sencillas). El archivo se deja en disco pero fuera de
+    # navegación y de sitemap — ver CLAUDE.md.
+    "preparaciones-sin-horno.html",
 }
 
 # Prefijos de páginas de prueba/preview cuyo número de versión cambia
@@ -39,6 +44,40 @@ EXCLUDE_PREFIXES = (
 GUIDES = {
     "guia-montessori.html",
     "vida-en-familia.html",
+    "planes-en-casa.html",
+    "manualidades-faciles.html",
+    "dibujo-y-pintura.html",
+    "manualidades-con-papel.html",
+    "manualidades-con-carton.html",
+    "manualidades.html",
+    "manualidades-con-materiales-reciclados.html",
+    "recortar-y-pegar.html",
+    "manualidades-con-varios-pasos.html",
+    "manualidades-de-creacion-y-diseno.html",
+    "manualidades-creativas-avanzadas.html",
+    "experimentos-faciles.html",
+    "experimentos-con-colores.html",
+    "agua-y-liquidos.html",
+    "naturaleza-y-plantas.html",
+    "reacciones-y-transformaciones.html",
+    "luz-sombras-y-electricidad.html",
+    "pequenos-cientificos.html",
+    "juegos-rapidos-y-sencillos.html",
+    "juegos-de-movimiento.html",
+    "juegos-de-observacion.html",
+    "juegos-de-memoria.html",
+    "juegos-de-palabras.html",
+    "juegos-de-logica.html",
+    "juegos-de-retos.html",
+    "juegos-para-jugar-en-familia.html",
+    "experimentos.html",
+    "juegos.html",
+    "construcciones-con-plastilina.html",
+    "cocinar-juntos.html",
+    "cocina-facil.html",
+    "decorar-y-montar.html",
+    "mezclar-ingredientes.html",
+    "recetas-sencillas.html",
     "comprar-mejor.html",
     "organizacion-y-hogar.html",
     "cumpleanos-y-celebraciones.html",
@@ -80,7 +119,17 @@ GUIDES = {
     "juguetes-montessori-2-anos.html",
     "juguetes-montessori-3-anos.html",
     "juguetes-montessori-4-6-anos.html",
+    "planes-en-familia.html",
 }
+
+# Prefijo de las páginas de "Planes en familia" generadas por
+# tools/apply_plan_familia.py (hubs de CCAA y páginas de provincia:
+# planes-en-familia-cataluna.html, planes-en-familia-barcelona.html...).
+# Se clasifican por prefijo en vez de listarlas una a una en GUIDES para
+# que aplicar un plan nuevo nunca obligue a tocar este script.
+GUIDES_PREFIXES = (
+    "planes-en-familia-",
+)
 
 # Páginas legales / institucionales (no son ni home, ni guía, ni categoría).
 LEGAL = {
@@ -96,7 +145,7 @@ LEGAL = {
 def classify(name: str):
     if name == HOME_FILE:
         return 1.0, "weekly"
-    if name in GUIDES:
+    if name in GUIDES or name.startswith(GUIDES_PREFIXES):
         return 0.9, "monthly"
     if name in LEGAL:
         return 0.2, "yearly"

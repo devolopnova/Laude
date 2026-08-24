@@ -1,0 +1,615 @@
+{
+  "province": "Girona",
+  "province_slug": "girona",
+  "generated_at": "2026-08-21T13:28:24Z",
+  "searches": [
+    "planes con niños Girona",
+    "actividades con niños Girona",
+    "qué hacer con niños Girona"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se alcanzaron los 18 lugares (15 primary + 3 backup) con evidencia real tras el cribado de 5 fuentes válidas (de 12 páginas candidatas analizadas de un máximo de 15). Regla de diversificación de patrimonio histórico/arqueológico aplicada en la Fase A.6: Girona tiene un número muy alto de candidatos de este tipo (Barri Vell/Call Jueu, Catedral, Baños Árabes y Muralla de Girona; los pueblos medievales de Besalú, Peratallada, Pals, Tossa de Mar, Santa Pau, Madremanya, Sant Martí Vell y Beget; las ruinas de Empúries; y los castillos de Púbol, Hostalric y Sant Ferran). Para respetar el máximo de 2 lugares de este tipo entre los 15 primary y no colocar ninguno en las posiciones 1-6, se seleccionaron solo 2, por mayor interés familiar y diferenciación entre sí: (1) la Muralla de Girona (rank 7) -como paseo activo y gratuito que ya engloba las vistas sobre el Call Jueu, la Catedral y los Baños Árabes, evitando fichas repetidas del mismo casco histórico-, y (2) Besalú (rank 14) -como pueblo medieval de día completo, con el añadido distintivo del puente románico y el Museo de Miniaturas-. El resto de candidatos de patrimonio histórico/arqueológico (Peratallada, Pals, Tossa de Mar, Santa Pau, Madremanya, Sant Martí Vell, Beget, Ruines d'Empúries, Castell de Púbol, Castell de Hostalric, Castell de Sant Ferran, y Catedral/Call Jueu/Baños Árabes como fichas independientes de Girona ciudad) no se incluyeron en el plan, para no concentrar la selección en propuestas similares, ni se investigaron sus datos definitivos (Fase A.7) al no haber sido seleccionados. El Teatre-Museu Dalí no se consideró patrimonio histórico/arqueológico a efectos de esta regla: su atractivo principal es el arte de Dalí, no un valor histórico/arqueológico en sí. Los 3 backups (Via Verda del Carrilet, Espai Cràter, Observatori Astronòmic Albanyà) y Molló Parc (rank 15) se apoyan en una sola fuente de las 5 válidas; se documenta como advertencia de información limitada en vez de excluirlos, dado su interés familiar genuino y la escasez de candidatos alternativos de calidad equivalente una vez aplicada la regla de diversificación histórica.",
+  "sources_analyzed": [
+    {
+      "name": "Escapada amb nens - Los mejores planes gratis con niños en Girona",
+      "domain": "escapadaambnens.com",
+      "url": "https://www.escapadaambnens.com/es/propuesta/411/los-mejores-planes-gratis-para-hacer-con-ninos-en-girona/",
+      "title": "Los mejores planes gratis para hacer con niños en Girona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 13
+    },
+    {
+      "name": "Entre 7 maletas - Planes con niños en Girona y alrededores",
+      "domain": "entre7maletas.com",
+      "url": "https://entre7maletas.com/planes-con-ninos-en-girona-y-alrededores/",
+      "title": "Planes con niños en Girona y alrededores",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 8
+    },
+    {
+      "name": "Tus Casas Rurales - Qué hacer y qué ver en Girona con niños",
+      "domain": "tuscasasrurales.com",
+      "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+      "title": "Qué hacer y qué ver en Girona con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 16
+    },
+    {
+      "name": "Sortir amb nens - Salir con niños en Girona",
+      "domain": "sortirambnens.com",
+      "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+      "title": "Salir con niños en Girona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 15
+    },
+    {
+      "name": "Qué ver en tus viajes - Qué ver en Girona con niños",
+      "domain": "queverentusviajes.com",
+      "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+      "title": "Qué ver en Girona con niños: 10 visitas imprescindibles",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 19
+    },
+    {
+      "name": "Escapada amb nens (portada)",
+      "domain": "escapadaambnens.com",
+      "url": "https://www.escapadaambnens.com/es/",
+      "title": "Escapada amb nens: Excursiones, ideas y actividades...",
+      "included": false,
+      "exclusion_reason": "Portada/navegación genérica del sitio, sin listado específico de lugares en Girona.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Yumping - Activities for children Girona",
+      "domain": "yumping.com",
+      "url": "https://www.yumping.com/en/activities-for-children/girona",
+      "title": "Actividades para niños en Girona",
+      "included": false,
+      "exclusion_reason": "Plataforma de reservas de actividades y tours (botones de reserva, pagos, empresas proveedoras), no guía editorial.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "CaixaForum Girona - Familia",
+      "domain": "caixaforum.org",
+      "url": "https://caixaforum.org/es/girona/familia",
+      "title": "Actividades para niños y familias en Girona",
+      "included": false,
+      "exclusion_reason": "Página no accesible (HTTP 403); además es página promocional de una única institución, no listado de varios lugares.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Juntines - Calle en Girona",
+      "domain": "juntines.com",
+      "url": "https://www.juntines.com/calle-en-girona",
+      "title": "Planes y Actividades para niños en Girona",
+      "included": false,
+      "exclusion_reason": "Página no accesible (HTTP 530).",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "On Anem Avui - Qué hacer en Girona con niños",
+      "domain": "onanemavui.cat",
+      "url": "https://onanemavui.cat/es/agenda-de-girona/que-hacer-en-girona-con-ninos/",
+      "title": "Que hacer en Girona con niños",
+      "included": false,
+      "exclusion_reason": "Página no accesible (HTTP 402).",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Tripadvisor - Cosas que hacer con niños en Provincia de Girona",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g2431168-Activities-zft11306-Province_of_Girona_Catalonia.html",
+      "title": "Cosas que hacer con niños en Provincia de Girona",
+      "included": false,
+      "exclusion_reason": "Plataforma de reservas/listado de atracciones con tours reservables, no guía editorial.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Tripadvisor - Las 10 mejores cosas que hacer con niños en Girona",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187499-Activities-zft11306-Girona_Province_of_Girona_Catalonia.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Girona",
+      "included": false,
+      "exclusion_reason": "Plataforma de reservas/listado de atracciones con tours reservables, no guía editorial (mismo dominio ya descartado).",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "address_null",
+        "message": "Dirección no verificada con suficiente seguridad para \"Camí de Ronda de S'Agaró\".",
+        "place_rank": 16
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_low_confidence",
+        "message": "URL oficial de \"Molló Parc\" no se pudo verificar por lectura directa (sitio bloqueó la verificación automática o la página no cargó); se usa con corroboración indirecta de búsqueda.",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Molló Parc\" solo cuenta con 1 fuente/evidencia entre las 5 válidas tras el cribado.",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_low_confidence",
+        "message": "URL oficial de \"Via Verda del Carrilet (Girona - Sant Feliu de Guíxols)\" no se pudo verificar por lectura directa (sitio bloqueó la verificación automática o la página no cargó); se usa con corroboración indirecta de búsqueda.",
+        "place_rank": 11
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Via Verda del Carrilet (Girona - Sant Feliu de Guíxols)\" solo cuenta con 1 fuente/evidencia entre las 5 válidas tras el cribado.",
+        "place_rank": 11
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Espai Cràter\" solo cuenta con 1 fuente/evidencia entre las 5 válidas tras el cribado.",
+        "place_rank": 10
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_low_confidence",
+        "message": "URL oficial de \"Observatori Astronòmic Albanyà\" no se pudo verificar por lectura directa (sitio bloqueó la verificación automática o la página no cargó); se usa con corroboración indirecta de búsqueda.",
+        "place_rank": 18
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Información limitada: \"Observatori Astronòmic Albanyà\" solo cuenta con 1 fuente/evidencia entre las 5 válidas tras el cribado.",
+        "place_rank": 18
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "La Fageda d'en Jordà",
+      "description": "Un hayedo excepcional que crece sobre una antigua colada de lava fría, dentro del Parc Natural de la Zona Volcànica de la Garrotxa. La ruta Joan Maragall es corta, llana y de apenas 1,5 km, perfecta para que los más pequeños caminen sin cansarse. Un paseo tranquilo entre árboles centenarios, ideal como primer contacto de la familia con el paisaje volcánico de la Garrotxa.",
+      "official_url": "https://parcsnaturals.gencat.cat/es/xarxa-de-parcs/garrotxa/gaudeix-del-parc/equipaments-i-itineraris/itineraris/num2/index.html",
+      "url_verified": true,
+      "address": "Carretera d'Olot a Santa Pau, km 4,5, 17811 Santa Pau (Girona)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Escapada amb nens - planes gratis Girona",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/411/los-mejores-planes-gratis-para-hacer-con-ninos-en-girona/",
+          "evidence": "\"ruta corta clásica en la Garrotxa para familias\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "Menciona la Fageda d'en Jordà dentro de las rutas familiares de la Garrotxa"
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"Fageda d'en Jordà - Aventura en carro tirado por caballos\""
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Illes Medes",
+      "description": "Un pequeño archipiélago frente a L'Estartit declarado reserva marina, uno de los fondos submarinos más ricos del Mediterráneo. Se visita en barcos con fondo de cristal que permiten ver peces y fondos rocosos sin necesidad de bucear, una experiencia muy vistosa para los niños. Una salida en barco corta y sencilla que combina naturaleza y aventura marina.",
+      "official_url": "https://parcsnaturals.gencat.cat/ca/illes-medes",
+      "url_verified": true,
+      "address": "Passeig del Port, s/n, Espigó de Llevant, 17258 L'Estartit (Girona)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"Excursiones en barco desde L'Estartit con vistas al fondo marino\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"archipiélago con barcos de fondo de cristal (Nautilus)\""
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"Excursiones en barco disponibles\""
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Parc Natural de la Zona Volcànica de la Garrotxa",
+      "description": "El parque natural protege unos 40 volcanes y coladas de lava hoy cubiertos de bosque, con rutas señaladas de distinta duración pensadas para toda la familia. El Casal dels Volcans, en Olot, es un buen punto de partida para informarse sobre senderos e itinerarios adaptados a niños. Un destino que combina paseo al aire libre y curiosidad geológica en un mismo plan.",
+      "official_url": "https://parcsnaturals.gencat.cat/ca/xarxa-de-parcs/garrotxa/inici/index.html",
+      "url_verified": true,
+      "address": "Casal dels Volcans, Av. de Santa Coloma, 47, 17800 Olot (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"cuarenta volcanes\", Parque Natural Zona Volcánica Garrotxa"
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"Parque Natural de la Zona Volcánica de la Garrotxa - Zona natural protegida\""
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Butterfly Park Empuriabrava",
+      "description": "Un gran invernadero tropical en Castelló d'Empúries donde cientos de mariposas exóticas vuelan en libertad entre plantas y estanques. También conviven aves y algún reptil, en un recorrido cerrado que suele gustar especialmente a los niños más pequeños. Una visita corta y muy visual, buena opción también para días de lluvia.",
+      "official_url": "https://www.butterflypark.es/es/",
+      "url_verified": true,
+      "address": "Carrer de Santa Clara, s/n, 17486 Castelló d'Empúries (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"invernadero de 2 mil metros cuadrados que recrea una selva tropical\""
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"aves exóticas, que vuelan, beben\""
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Fundació Mona",
+      "description": "Un centro de recuperación de chimpancés y macacos rescatados de circos, publicidad o de vivir como mascotas, en Riudellots de la Selva. Las visitas, que hay que reservar con antelación, explican de forma cercana el bienestar animal y el trabajo de rehabilitación de los primates. Un plan distinto, con un componente educativo claro sobre el respeto a los animales.",
+      "official_url": "https://www.fundaciomona.org",
+      "url_verified": true,
+      "address": "Carretera C-25 (Cassà-aeroport), s/n, 17457 Riudellots de la Selva (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"Observar primates rescatados en rehabilitación\""
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"Fundació Mona (Riudellots de la Selva) - Centro dedicado a primates\""
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Estany de Banyoles",
+      "description": "Uno de los lagos naturales más grandes de Cataluña, con un paseo perimetral llano ideal para ir en bici o caminando en familia. Alrededor hay zonas de césped, alquiler de barcas y kayaks, y varios museos pequeños sobre la comarca. Un plan tranquilo al aire libre que se puede alargar tanto como se quiera.",
+      "official_url": "https://turisme.banyoles.cat/es-es/",
+      "url_verified": true,
+      "address": "Passeig Darder - Pesquera, 10, 17820 Banyoles (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"Paseo en barca o catamarán eléctrico\""
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"la mejor manera de descubrir y conocer el Lago\""
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Muralla de Girona (Passeig de la Muralla)",
+      "description": "El paseo por lo alto de las murallas medievales de Girona ofrece vistas sobre el Barri Vell, el Call Jueu y la Catedral, con varios puntos de acceso gratuitos repartidos por la ciudad. Es un recorrido corto, de entre 30 y 60 minutos, que a los niños suele gustarles por caminar en altura junto a las almenas. Una forma activa y sin coste de descubrir la Girona histórica en familia.",
+      "official_url": "https://www.girona.cat/turisme/esp/monuments_muralla.php",
+      "url_verified": true,
+      "address": "Passeig de la Muralla, s/n, 17004 Girona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Escapada amb nens - planes gratis Girona",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/411/los-mejores-planes-gratis-para-hacer-con-ninos-en-girona/",
+          "evidence": "\"acceso gratuito y un recorrido lleno de historia\""
+        },
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "Girona capital: \"barrio judío, catedral, muralla, baños árabes\""
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Museu del Cinema de Girona",
+      "description": "Un museo dedicado a la historia del cine y sus orígenes, con la colección Tomàs Mallol de artilugios previos a la invención del cinematógrafo. Las salas interactivas permiten a los niños experimentar con sombras chinescas, linternas mágicas y otros juguetes ópticos antiguos. Una visita cultural entretenida, pensada para descubrir cómo empezó la imagen en movimiento.",
+      "official_url": "https://museudelcinema.girona.cat/esp/index.php",
+      "url_verified": true,
+      "address": "Carrer de la Séquia, 1, 17001 Girona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Entre 7 maletas",
+          "domain": "entre7maletas.com",
+          "url": "https://entre7maletas.com/planes-con-ninos-en-girona-y-alrededores/",
+          "evidence": "\"museo interactivo donde aprenderán los orígenes del cine y su evolución\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"Museo del Cine\" dentro de los imprescindibles de Girona capital"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Jardí Botànic Marimurtra",
+      "description": "Un jardín botánico sobre un acantilado de Blanes con más de 4.000 especies de plantas de todo el mundo y vistas espectaculares al mar. Los caminos están bien señalizados y combinan zonas de sombra, miradores y rincones con cactus o plantas tropicales. Un paseo relajado que funciona tanto para explorar la naturaleza como para hacer una parada con buenas vistas.",
+      "official_url": "https://marimurtra.cat/es/",
+      "url_verified": true,
+      "address": "Passeig Carles Faust, 9, 17300 Blanes (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"Marimurtra, Blanes - jardín con flora exótica\""
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"Jardí Botànic Marimurtra, Blanes\""
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Espai Cràter",
+      "description": "Un espacio museístico dentro de un antiguo volcán urbano de Olot, pensado para explicar de forma visual e interactiva el origen volcánico de la Garrotxa. Las salas combinan maquetas, proyecciones y elementos para tocar, pensados para el público infantil. Una buena forma de completar, en clave de museo, las rutas por el parque volcánico.",
+      "official_url": "https://espaicrater.com/es/explora/",
+      "url_verified": true,
+      "address": "Carrer Macarnau, 55, 17800 Olot (Girona)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"Espacio Cráter (Olot) - Experiencia volcánica para niños\""
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Via Verda del Carrilet (Girona - Sant Feliu de Guíxols)",
+      "description": "Un antiguo trazado de tren reconvertido en vía verde que conecta Girona con Sant Feliu de Guíxols, pensado para recorrer en bicicleta sin apenas desniveles. Se puede hacer el tramo completo o elegir solo una parte, adaptando la distancia a la edad de los niños. Un plan activo al aire libre, fácil de ajustar a cada familia.",
+      "official_url": "https://viasverdes.com/itinerarios/itinerario.asp?id=53",
+      "url_verified": false,
+      "address": "Parc de la Devesa, 17001 Girona",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-girona/",
+          "evidence": "\"antiguo trazado que seguía el tren\""
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Parc Natural dels Aiguamolls de l'Empordà",
+      "description": "Una de las zonas húmedas más importantes de Cataluña, con senderos y observatorios de aves adaptados para ver garzas, flamencos o cigüeñas sin molestarlas. El centro de información de El Cortalet ofrece paneles y recorridos pensados también para los más pequeños. Un plan tranquilo de naturaleza, ideal para iniciar a los niños en la observación de aves.",
+      "official_url": "https://parcsnaturals.gencat.cat/es/xarxa-de-parcs/aiguamolls-emporda/inici/index.html",
+      "url_verified": true,
+      "address": "El Cortalet, GIV-6216 (Sant Pere Pescador - Castelló d'Empúries), km 4,2, 17486 Castelló d'Empúries (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"Senderismo entre marismas\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"humedales de Cataluña para observar aves\""
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Teatre-Museu Dalí",
+      "description": "El museo que Salvador Dalí diseñó personalmente en el antiguo teatro de Figueres, con la colección más amplia de su obra y varios espacios pensados para sorprender al visitante. Los elementos surrealistas y los efectos ópticos suelen despertar la curiosidad de los niños, aunque conviene dejarles ir a su ritmo. Una experiencia cultural distinta, más juego visual que museo tradicional.",
+      "official_url": "https://www.salvador-dali.org/es/visita/teatro-museo-dali/",
+      "url_verified": true,
+      "address": "Plaça Gala-Salvador Dalí, 5, 17600 Figueres (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"Exposición sobre Salvador Dalí\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"museo dedicado a las obras del artista surrealista\""
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Besalú",
+      "description": "Uno de los pueblos medievales mejor conservados de Girona, con un puente románico sobre el río Fluvià que es una de las imágenes más reconocibles de la Costa Brava interior. Pasear por sus calles empedradas y cruzar el puente a pie es un plan sencillo que gusta a toda la familia. La oficina de turismo organiza visitas guiadas que ayudan a los niños a entender la historia del pueblo de forma amena.",
+      "official_url": "https://besalu.cat/turisme-2/oficina-de-turisme-2/",
+      "url_verified": true,
+      "address": "Carrer del Pont, 1, 17850 Besalú (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"puente medieval icónico y Museo de Miniaturas\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"puente medieval icónico\""
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Molló Parc",
+      "description": "Un parque de animales al aire libre en el Pirineo gerundense, en el Valle de Camprodon, con más de 30 especies que se pueden observar en un entorno natural. El recorrido, de unas tres horas, combina fauna de montaña con paisaje pirenaico. Un plan de día completo para familias que buscan naturaleza y animales fuera de la costa.",
+      "official_url": "https://www.molloparc.com/es/",
+      "url_verified": false,
+      "address": "Carretera a França, 12, Veïnat del Riberal, 17868 Molló (Girona)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"Recorrido de 3 horas viendo más de 30 especies de animales en su entorno natural\""
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Camí de Ronda de S'Agaró",
+      "description": "Un tramo de sendero costero de unos 4,4 km entre las playas de Sant Pol y Sa Conca, considerado uno de los más cuidados de toda la Costa Brava. El camino, bien señalizado y sin grandes desniveles, permite parar en varias calas para descansar o bañarse. Un plan sencillo al aire libre para combinar caminata y playa en la misma salida.",
+      "official_url": "https://www.visitplatjadaro.com/en/discover-platja-d-aro-castell-d-aro-and-s-agaro/s-agaro/coastal-walking-route/",
+      "url_verified": true,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Escapada amb nens - planes gratis Girona",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/411/los-mejores-planes-gratis-para-hacer-con-ninos-en-girona/",
+          "evidence": "\"Recorre 2 km entre la Playa de Sant Pol y Cala Sa Conca\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"viejos senderos que utilizaban piratas, contrabandistas... vistas al litoral\""
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Jardins de Santa Clotilde",
+      "description": "Jardines modernistas de principios del siglo XX construidos sobre un acantilado entre las calas de Fenals y Boadella, en Lloret de Mar. Las escaleras, terrazas y fuentes escalonadas hacia el mar convierten el paseo en un pequeño descubrimiento en cada rincón. Una visita corta y muy fotogénica para combinar con un día de playa en la zona.",
+      "official_url": "https://lloretdemar.org/es/cultura/jardines-de-santa-clotilde/",
+      "url_verified": true,
+      "address": "Paratge de Santa Clotilde, 17310 Lloret de Mar (Girona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"25 mil metros cuadrados sobre un acantilado con vistas al mar\""
+        },
+        {
+          "name": "Qué ver en tus viajes",
+          "domain": "queverentusviajes.com",
+          "url": "https://queverentusviajes.com/que-ver-en-girona-con-ninos",
+          "evidence": "\"Jardines de Santa Clotilde, Lloret de Mar - vistas al mar Mediterráneo\""
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Observatori Astronòmic Albanyà",
+      "description": "Un observatorio en un entorno rural sin apenas contaminación lumínica, en Albanyà, que organiza sesiones de observación de estrellas y planetas para todos los públicos. Las actividades incluyen explicaciones adaptadas a los niños y telescopios guiados por el propio equipo del observatorio. Un plan nocturno diferente, ideal para una noche despejada en familia.",
+      "official_url": "https://www.observatorialbanya.com/en/the-observatory/astronomy-spain",
+      "url_verified": false,
+      "address": "Camí de Bassegoda, s/n, 17733 Bassegoda, Albanyà (Girona)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/girona-con-ninos/",
+          "evidence": "\"telescopio automatizado más grande de la provincia con bautizos astronómicos\""
+        }
+      ]
+    }
+  ]
+}

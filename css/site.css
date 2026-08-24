@@ -692,6 +692,176 @@ footer p{font-size:12.5px;color:var(--ink-soft);}
 }
 .gr-cta-pill:hover{background:#FFF6F3;box-shadow:0 2px 8px rgba(255,138,101,.18);}
 
+/* ============================================================
+   "Planes en familia" — lugares y actividades familiares fuera de
+   casa, organizados por Comunidad Autónoma > Provincia. Páginas
+   generadas por tools/apply_plan_familia.py a partir de
+   tools/output/planes-familia/<provincia>/plan.json (ver skill
+   .claude/skills/planes-familia). Prefijo propio .pf- a propósito:
+   es una sección distinta de "Planes en casa" (.pec-*) y no debe
+   mezclarse ni compartir clases con ella.
+   ============================================================ */
+
+/* Tarjeta de enlace en los hubs (raíz -> CCAA, CCAA -> provincia).
+   Editorial y calida (no "panel admin"): fondo pastel muy suave que
+   rota entre 4 tonos por posicion (melocoton/verde agua/amarillo
+   crema/azul), via nth-child sobre .pf-hub-grid -- nunca por nombre de
+   provincia, para que cualquier numero de tarjetas futuras siga
+   ciclando sola. Sin icono: se probo un icono de ubicacion generico
+   (pin) y no aportaba, mismo criterio que las tarjetas de comunidad de
+   planes-en-familia.html (.pfccaa-card), que tampoco llevan icono. */
+.pf-hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px;}
+.pf-hub-grid .pf-hub-card:nth-child(4n+1){--phc-bg:#FAE5D8;--phc-accent:#D9714A;}
+.pf-hub-grid .pf-hub-card:nth-child(4n+2){--phc-bg:#E1F0EA;--phc-accent:#4F9684;}
+.pf-hub-grid .pf-hub-card:nth-child(4n+3){--phc-bg:#FAEED2;--phc-accent:#C99A3E;}
+.pf-hub-grid .pf-hub-card:nth-child(4n+4){--phc-bg:#E1EDF6;--phc-accent:#4F82A8;}
+.pf-hub-card{
+  display:flex;align-items:center;gap:14px;min-height:88px;
+  background:var(--phc-bg, var(--card));
+  border:1px solid color-mix(in srgb, var(--phc-accent, var(--accent)) 16%, var(--line));
+  border-radius:16px;
+  padding:20px 22px;text-decoration:none;color:inherit;
+  box-shadow:0 1px 3px rgba(28,28,30,.04);
+  transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+a.pf-hub-card:hover{
+  border-color:var(--phc-accent, var(--accent));
+  box-shadow:0 8px 20px rgba(44,44,42,.08);transform:translateY(-2px);
+}
+.pf-hub-card-body{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0;}
+.pf-hub-card-title{font-family:'Fredoka',sans-serif;font-weight:600;font-size:15.5px;color:var(--ink);}
+.pf-hub-card-desc{font-size:13px;color:var(--ink-soft);line-height:1.55;}
+.pf-hub-card-arrow{align-self:center;color:var(--phc-accent, var(--accent));font-size:16px;flex-shrink:0;transition:transform .2s ease;}
+a.pf-hub-card:hover .pf-hub-card-arrow{transform:translateX(4px);}
+
+/* Migas de pan tipo "Planes en familia · Cataluña" en cabecera de hub
+   de CCAA y de página de provincia. */
+.pf-crumb{display:inline-flex;align-items:center;gap:6px;margin-bottom:14px;}
+.pf-crumb-link{color:var(--accent);font-weight:600;text-decoration:none;}
+.pf-crumb-link:hover{text-decoration:underline;}
+
+/* Listado de lugares de una provincia (solo status="primary", nunca
+   backups — ese filtro lo aplica tools/apply_plan_familia.py, no el
+   CSS). Sin imagen a propósito en esta primera versión: el esquema de
+   plan.json no tiene campo de imagen. */
+.pf-place-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px;}
+.pf-place-card{
+  display:flex;flex-direction:column;gap:12px;
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:22px 24px;
+}
+.pf-place-name{font-family:'Fredoka',sans-serif;font-weight:600;font-size:17px;color:var(--ink);}
+.pf-place-desc{font-size:14px;color:var(--ink-soft);line-height:1.65;}
+.pf-place-address{
+  display:flex;align-items:flex-start;gap:6px;
+  font-size:13px;color:var(--ink-soft);line-height:1.5;
+}
+.pf-place-address i{color:var(--accent);flex-shrink:0;margin-top:2px;}
+/* Enlace externo normal a la web oficial del lugar — nunca enlace de
+   afiliado: sin parámetro ?tag= ni rel="sponsored". */
+.pf-place-link{
+  align-self:flex-start;margin-top:2px;
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--accent);font-weight:600;font-size:13.5px;text-decoration:none;
+}
+.pf-place-link:hover{text-decoration:underline;}
+
+@media (max-width:768px){
+  .pf-hub-grid{grid-template-columns:1fr;}
+  .pf-place-grid{grid-template-columns:1fr;}
+}
+
+/* Tarjeta de lugar v3 — horizontal, 2 zonas: numeración a la izquierda
+   (ancho fijo) + una única columna a la derecha con nombre, descripción,
+   dirección y enlace apilados, aprovechando TODO el ancho restante (sin
+   subcolumnas ni líneas divisorias internas). Sustituye visualmente a
+   .pf-place-grid/.pf-place-card de arriba, pero esas clases NO se
+   borran: la página ya publicada de Barcelona las sigue usando hasta
+   que se vuelva a aplicar el plan con este diseño nuevo. Reutiliza
+   .pf-place-name/.pf-place-desc tal cual (misma tipografía). Sin imagen
+   ni icono temático todavía — fase posterior, ver plan.json (no tiene
+   campo de imagen). */
+.pf-place-list{display:flex;flex-direction:column;gap:20px;margin-top:32px;}
+.pf-disclaimer{
+  margin-top:30px;
+  background:#FBF8F1;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:18px 20px;
+  font-size:12.5px;
+  line-height:1.6;
+  color:color-mix(in srgb, var(--ink-soft) 80%, #4A6FA8 20%);
+}
+.pf-place-row{
+  display:flex;align-items:stretch;
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  box-shadow:0 1px 3px rgba(28,28,30,.05);
+  overflow:hidden;
+}
+/* Numeración editorial, no un ranking agresivo: número grande sobre
+   fondo muy suave, dos dígitos siempre (01, 02...). aria-hidden en el
+   HTML porque el orden ya lo transmite el propio DOM. Ancho fijo
+   120-140px, centrado vertical y horizontalmente, estirado a la altura
+   real de la tarjeta (align-items:stretch en .pf-place-row). */
+.pf-place-rank{
+  flex:0 0 132px;
+  display:flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb, var(--accent) 8%, var(--card));
+  font-family:'Fredoka',sans-serif;font-weight:600;font-size:34px;
+  color:var(--accent);
+}
+/* Miniatura representativa del lugar (400x300, ratio 4:3), estira a la
+   altura real de la fila igual que .pf-place-rank (align-items:stretch
+   en .pf-place-row). Ancho fijo en escritorio; en móvil pasa a foto de
+   cabecera a ancho completo (ver media query de abajo). */
+.pf-place-photo{
+  flex:0 0 220px;
+  overflow:hidden;
+}
+.pf-place-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+/* Columna única de contenido: ocupa TODO el ancho restante (flex:1),
+   nombre arriba, descripción debajo (llega hasta el final del
+   contenedor, no se recorta a una fracción del ancho), y dirección +
+   enlace apilados debajo de la descripción, uno debajo del otro. */
+.pf-place-content{
+  flex:1;min-width:0;
+  display:flex;flex-direction:column;justify-content:center;gap:8px;
+  padding:26px 32px;
+}
+.pf-place-loc{
+  display:flex;align-items:flex-start;gap:6px;margin-top:2px;
+  font-size:13px;color:var(--ink-soft);line-height:1.5;
+}
+.pf-place-loc i{color:var(--accent);flex-shrink:0;margin-top:2px;font-size:15px;}
+/* Enlace editorial subrayado (no un botón con borde) a la web oficial —
+   nunca enlace de afiliado. */
+.pf-place-cta{
+  display:inline-flex;align-items:center;gap:5px;width:fit-content;margin-top:2px;
+  color:var(--accent);font-weight:600;font-size:13.5px;text-decoration:underline;
+}
+.pf-place-cta:hover{opacity:.72;}
+
+@media (max-width:860px){
+  .pf-place-row{flex-direction:column;}
+  /* La foto pasa a cabecera a ancho completo arriba del todo (order:-1,
+     antes que rank y content en el DOM), con altura fija propia ya que
+     en columna no hay stretch de altura que heredar. */
+  .pf-place-photo{
+    order:-1;flex:none;width:100%;height:180px;
+  }
+  .pf-place-rank{
+    /* .pf-place-row pasa a flex-direction:column aquí, así que el eje
+       principal ya es vertical: flex:0 0 132px (pensado para el ancho
+       en escritorio) se aplicaría como ALTURA de 132px si no se anula
+       explícitamente con flex:none. */
+    flex:none;width:auto;align-self:flex-start;
+    margin:18px 0 0 20px;padding:4px 14px;border-radius:9px;font-size:19px;
+  }
+  .pf-place-content{padding:10px 20px 22px;}
+}
+
 @media (max-width:560px){
   .wrap{padding:0 24px;}
   .back-suffix{display:none;}

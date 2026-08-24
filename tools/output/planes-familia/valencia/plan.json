@@ -1,0 +1,801 @@
+{
+  "province": "Valencia",
+  "province_slug": "valencia",
+  "generated_at": "2026-08-19",
+  "searches": [
+    "planes con niños Valencia",
+    "actividades con niños Valencia",
+    "qué hacer con niños Valencia"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se analizaron los 5 primeros resultados orgánicos de cada una de las 3 búsquedas (15 posiciones candidatas, con solapes entre búsquedas -> 10 URLs únicas). 3 se descartaron en el cribado (TripAdvisor por ser directorio/plataforma de reservas; CaixaForum València por ser una página institucional de un único centro, además de dar error 403 al leerla; Chiquilín por ser un artículo promocional de una escuela infantil, confirmado por su propio texto). Quedaron 7 fuentes válidas de 7 medios independientes (sin repetidos, a diferencia de Barcelona). Se seleccionaron exactamente 18 lugares (15 primary + 3 backup); todos los 18 tienen al menos 2 medios independientes que los recomiendan -- no hizo falta bajar a candidatos de una sola fuente. Los 7 candidatos empatados a 2 medios independientes (puestos 12-18) se repartieron entre primary y backup por variedad de tipo de plan, ver advertencias. Oceanogràfic se promovió al puesto 2 por reconocibilidad pese a tener menos evidencias que Bioparc/Gulliver/Albufera -- ver advertencias. AJUSTE MANUAL (revisión editorial): a petición del usuario, se intercambiaron los puestos 14 y 16 -- Bombas Gens pasa a primary y Parque de Cabecera pasa a backup.",
+  "sources_analyzed": [
+    {
+      "name": "Comunitat Valenciana (turismo oficial)",
+      "domain": "comunitatvalenciana.com",
+      "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-en-valencia-con-ni-os",
+      "title": "Planes en Valencia con Niños Para Escapadas en Familia Inolvidables",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 6
+    },
+    {
+      "name": "Valencia Secreta",
+      "domain": "valenciasecreta.com",
+      "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+      "title": "Planes para hacer en Valencia con niños durante todo el año",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 15
+    },
+    {
+      "name": "Familias en Ruta",
+      "domain": "familiasenruta.com",
+      "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+      "title": "Valencia con niños en 12 planes para no perderse",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 12
+    },
+    {
+      "name": "Visit Valencia (turismo oficial)",
+      "domain": "visitvalencia.com",
+      "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+      "title": "Qué hacer en València con niños: mil planes para descubrir la ciudad",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 25
+    },
+    {
+      "name": "Viajandodo",
+      "domain": "viajandodo.com",
+      "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+      "title": "Qué ver en Valencia con niños: Parques, museos y actividades",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 9
+    },
+    {
+      "name": "Menudos Viajeros",
+      "domain": "menudosviajeros.com",
+      "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+      "title": "14 cosas que hacer con niños en Valencia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 16
+    },
+    {
+      "name": "Civitatis (blog)",
+      "domain": "civitatis.com",
+      "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+      "title": "¿Qué hacer en Valencia con niños?: 15 planes en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 13
+    },
+    {
+      "name": "CaixaForum València",
+      "domain": "caixaforum.org",
+      "url": "https://caixaforum.org/es/valencia/familia",
+      "title": "Actividades para niños y familias en València - CaixaForum València",
+      "included": false,
+      "exclusion_reason": "Página institucional de un único centro (CaixaForum), no una guía comparativa de varios planes (además devolvió error 403 al intentar leer el contenido completo).",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Chiquilín (escuela infantil bilingüe)",
+      "domain": "eichiquilin.com",
+      "url": "https://www.eichiquilin.com/blog/actividades-bebes-valencia/",
+      "title": "Actividades para niños y bebés en Valencia",
+      "included": false,
+      "exclusion_reason": "Artículo promocional de una escuela infantil (lo confirma el propio texto: \"Desde Chiquilín, nuestra escuela infantil bilingüe...\", con CTA final hacia sus servicios), no una guía editorial neutral.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "TripAdvisor",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187529-Activities-zft11306-Valencia_Province_of_Valencia_Valencian_Community.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Valencia",
+      "included": false,
+      "exclusion_reason": "Directorio/plataforma de reservas de atracciones, no un listado editorial curado.",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "Oceanogràfic se promovió del puesto que le correspondería por evidencia estricta (4 evidencias, empatado con Hemisfèric/Jardines del Turia/L'Iber) al puesto 2, por ser la atracción más icónica de Valencia (el acuario más grande de Europa) -- criterio de reconocimiento del lugar, como permite la Fase A.5.",
+        "place_rank": 2
+      },
+      {
+        "severity": "warning",
+        "category": "address_null",
+        "message": "Parque de Cabecera y Jardines de Viveros son parques extensos sin una direccion postal puntual confirmada en las fuentes consultadas -- se deja address=null en los 2 en vez de inventar o deducir una.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "Puestos 12-15 (primary) y 16-18 (backup) se decidieron entre 7 candidatos empatados a 2 medios independientes (Centro de Arte Hortensia Herrero, Almacén del Ratoncito Pérez, Parque de Cabecera, Centre del Carme, Bombas Gens, Jardines de Viveros, Iglesia de San Nicolás) por criterio de variedad de tipo de plan -- ninguno quedó fuera del plan final. AJUSTE MANUAL (revisión editorial): a petición del usuario, se intercambiaron los puestos 14 y 16 -- Bombas Gens pasa a primary y Parque de Cabecera pasa a backup. Este cambio no está respaldado por evidencia adicional entre fuentes, es una decisión editorial explícita.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Parc Gulliver: direccion \"Jardin del Turia, s/n, Valencia\" confirmada manualmente por el usuario en el chat (no por una fuente web adicional) tras quedar en null por direcciones contradictorias entre fuentes no oficiales.",
+        "place_rank": 4
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Parc Natural de l'Albufera: direccion \"Ctra. del Palmar, s/n (Centro de Interpretación Racó de l'Olla), 46012 Valencia\" (Centro de Interpretacion Raco de l'Olla) confirmada manualmente por el usuario en el chat, no por una fuente web adicional -- sustituye al address=null anterior.",
+        "place_rank": 5
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Jardines del Turia: extension confirmada manualmente por el usuario en el chat (\"Desde el Parque de Cabecera (Avenida Manuel de Falla, s/n) hasta la Ciudad de las Artes y las Ciencias (Autopista del Saler, s/n), Valencia\"), no por una fuente web adicional -- sustituye al address=null anterior. Al ser un parque lineal de varios km, la direccion son sus dos extremos, no un punto unico.",
+        "place_rank": 10
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Museu de les Ciències Príncipe Felipe",
+      "description": "Museo de ciencia dentro de la Ciutat de les Arts i les Ciències, con un diseño futurista firmado por Santiago Calatrava que llama la atención antes incluso de entrar. Sus salas están pensadas para tocar y experimentar, con exposiciones sobre biología, física y tecnología adaptadas a distintas edades. Es un buen punto de partida para dedicar toda una mañana o tarde al complejo, ya que está junto al Oceanogràfic y al Hemisfèric.",
+      "official_url": "https://cac.es/museu-de-les-ciencies/",
+      "url_verified": true,
+      "address": "Av. del Professor López Piñero, 7, 46013 Valencia",
+      "evidence_count": 7,
+      "independent_source_count": 7,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-en-valencia-con-ni-os",
+          "evidence": "Ciutat de les Arts i les Ciències, con museo de ciencia interactivo."
+        },
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "Museu de les Ciències listado entre los planes de interior."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Ciutat de les Arts i les Ciències incluye el Museu de les Ciències."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Museo de las Ciencias con exhibits interactivos para niños."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Museo interactivo de física, biología y tecnología."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Museo interactivo con Espai de Xiquets para niños de 3-8 años."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Interactive science museum with hands-on exhibits."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Oceanogràfic",
+      "description": "El acuario más grande de Europa, con un túnel submarino donde caminar rodeado de tiburones y varios ecosistemas marinos distintos repartidos por el recinto. Los niños pueden ver de cerca belugas, pingüinos y peces luna, además de asistir a algunas de las actividades educativas que organiza el propio centro. Forma parte de la Ciutat de les Arts i les Ciències, aunque se gestiona y se visita de forma independiente.",
+      "official_url": "https://www.oceanografic.org/",
+      "url_verified": true,
+      "address": "Carrer d'Eduardo Primo Yúfera, 1B, 46013 Valencia",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Ciutat de les Arts i les Ciències incluye L'Oceanogràfic."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "El acuario más grande de toda Europa."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Acuario europeo más grande con túneles submarinos, tiburones y belugas."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Europe's largest aquarium with 45,000+ specimens across 500 species."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Bioparc Valencia",
+      "description": "Zoo de nueva generación dentro del Parque de Cabecera, diseñado para que los animales se vean en hábitats abiertos, sin las típicas jaulas o rejas de un zoo tradicional. La mayor parte de su colección está dedicada a fauna africana, con sabanas, bosques ecuatoriales y una zona de Madagascar por las que pasear. Es un plan pensado para varias horas, con recorridos diseñados para sentirse cerca de los animales.",
+      "official_url": "https://bioparcvalencia.es/",
+      "url_verified": true,
+      "address": "Avenida Pío Baroja, 3, 46015 Valencia",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-en-valencia-con-ni-os",
+          "evidence": "Bioparc: experiencia inmersiva entre lémures, jirafas, gorilas y elefantes."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "BIOPARC Valencia, zoo integrado en un parque sin barreras aparentes."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Modern zoo in Parque de Cabecera showcasing African ecosystems."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Zoo integrado dentro de un parque con fauna africana de cerca."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Zoo pequeño que recrea hábitats naturales, accesible con cochecito."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Zoo featuring African wildlife in naturalistic habitats."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Parc Gulliver",
+      "description": "Parque infantil gratuito en pleno Jardín del Turia, construido alrededor de una gigantesca figura tumbada de Gulliver que los niños recorren como si fueran los habitantes de Lilliput. Rampas, toboganes y escaleras permiten subir y bajar por todo el cuerpo de la figura, en un diseño pensado exclusivamente para jugar. Al ser al aire libre y gratuito, es fácil de combinar con un paseo por el resto del Jardín del Turia.",
+      "official_url": "https://www.valencia.es/-/infociudad-instalaciones-jard%C3%8Dn-del-turia-parque-gulliver-tram-xii-",
+      "url_verified": true,
+      "address": "Jardín del Turia, s/n, Valencia",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "El Gulliver Park, parque infantil curioso con figura gigante."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Parque Gulliver, figura recostada con toboganes y zonas de escalada."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Parque infantil gigante con rampas, toboganes y escaleras."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Gigantesca figura de Gulliver tumbada en el suelo para trepar y deslizarse."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Parque infantil con rampas, toboganes y escaleras, entrada libre."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Free children's playground with slides and climbing structures."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Parc Natural de l'Albufera",
+      "description": "Humedal protegido a las puertas de Valencia, conocido por su lago y sus arrozales, donde se pueden hacer paseos en barca tradicional y observar aves en su hábitat natural. Es un cambio de ritmo respecto al resto de planes urbanos, ideal para una tarde tranquila en familia con algo de naturaleza. Varias empresas locales organizan los paseos en barca desde los pueblos que rodean el lago.",
+      "official_url": "https://parquesnaturales.gva.es/es/web/pn-l-albufera",
+      "url_verified": true,
+      "address": "Ctra. del Palmar, s/n (Centro de Interpretación Racó de l'Olla), 46012 Valencia",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "Albufera Boat Rides, paseos en barca que admiten carritos de bebé."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "La Albufera, humedal protegido con paseos en barca y avistamiento de aves."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Paseo por L'Albufera en barcas tradicionales, con paella valenciana."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Parque natural conocido por su laguna y arrozales."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Lago europeo importante con rutas de senderismo y paseos en barca."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Natural wetland park with boat tours and rice fields."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Playa de la Malvarrosa",
+      "description": "Playa urbana de arena fina en pleno paseo marítimo de Valencia, con chiringuitos, zonas de sombrillas y vigilancia durante la temporada de baño. Su cercanía al centro y sus servicios la convierten en un plan sencillo para completar cualquier visita a la ciudad con un rato de playa. El paseo marítimo cuenta también con restaurantes y zonas cómodas para ir con carrito.",
+      "official_url": "https://www.valencia.es/es/-/playa-la-malvarrosa",
+      "url_verified": true,
+      "address": "Paseo Marítimo de la Malvarrosa, Valencia",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Beaches: Malvarrosa & Cabanyal, playas urbanas con zona de paseo marítimo."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Malvarrosa & Cabanyal, playas urbanas con zonas de juego y restauración."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Playa de Malvarrosa entre las playas familiares de Valencia."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Malvarrosa, Patacona y Las Arenas, arena fina y servicios para familias."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Playa de la Malvarrosa, playa urbana con paseo marítimo."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Museu Faller",
+      "description": "Museo dedicado a la fiesta de las Fallas, con una colección de \"ninots\" indultados por votación popular a lo largo de los años, las figuras que se libraron de la quema. Es una forma sencilla de acercar a los niños a una de las tradiciones más importantes de Valencia sin necesidad de coincidir con las fiestas de marzo. Muchas de las figuras conservan el colorido y el humor que caracteriza a las fallas.",
+      "official_url": "https://www.valencia.es/-/infociudad-museo-fallero-de-valencia",
+      "url_verified": true,
+      "address": "Plaza Monteolivete, 4, 46006 Valencia",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Comunitat Valenciana",
+          "domain": "comunitatvalenciana.com",
+          "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/planes-en-valencia-con-ni-os",
+          "evidence": "Museu Faller, tradición y artesanía de las fallas, figuras indultadas."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Museo Fallero, historia de las Fallas con ninots salvados desde 1934."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Museo Fallero, preserva figuras indultadas (ninots)."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Museo Fallero con talleres educativos para crear figuras."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Cultural museum displaying Fallas festival artifacts."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Museo Iluziona",
+      "description": "Espacio de escenografías e ilusiones ópticas inspirado en la cultura y las leyendas valencianas, pensado para tocar, fotografiarse y descubrir cómo funcionan los trucos visuales. Cada sala propone una ambientación distinta, desde habitaciones imposibles hasta juegos de perspectiva. Es un plan de interior entretenido tanto para niños como para adultos, perfecto para un día de lluvia.",
+      "official_url": "https://iluziona.com/",
+      "url_verified": true,
+      "address": "Calle Castellón, 20, Valencia",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "Museo Mundo de Ilusiones, arte y fotografía con trucos visuales."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Museo Iluziona, escenarios inspirados en leyendas con realidad virtual."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Museo Iluziona/Museo de las Ilusiones, salas invertidas y perspectiva."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Valencia Iluziona, ilusiones ópticas y escenarios creativos."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "Interactive optical illusions and 3D experiences."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "L'Hemisfèric",
+      "description": "Edificio con forma de ojo diseñado por Calatrava, dentro de la Ciutat de les Arts i les Ciències, que alberga una gran pantalla cóncava para proyecciones de cine IMAX, 3D digital y espectáculos sobre astronomía. Es una experiencia distinta a un museo o un parque: sentarse y dejarse envolver por la proyección. Se puede combinar fácilmente con la visita al Museu de les Ciències o al Oceanogràfic, a solo unos pasos.",
+      "official_url": "https://cac.es/hemisferic/",
+      "url_verified": true,
+      "address": "Av. del Professor López Piñero, 46013 Valencia",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "Hemisfèric listado entre los planes de interior."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "L'Hemisféric cinema, parte del complejo Ciutat de les Arts i les Ciències."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Calatrava-designed building with 2D/3D digital projections."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Cine IMAX con pantalla cóncava de 900 metros cuadrados."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Jardines del Turia",
+      "description": "El antiguo cauce del río Turia convertido en un parque lineal de varios kilómetros que atraviesa toda la ciudad, con carriles bici, zonas deportivas y áreas de juego infantil repartidas por el recorrido. Dentro de sus jardines se encuentran otros planes como el Parque Gulliver o el Parque de Cabecera, así que es fácil enlazar varias paradas en un mismo paseo. Es un plan gratuito y flexible, que se adapta a cualquier rato libre.",
+      "official_url": "https://jardins.valencia.es/es/jardin/jardin-del-turia-tramos-1-2-3",
+      "url_verified": true,
+      "address": "Desde el Parque de Cabecera (Avenida Manuel de Falla, s/n) hasta la Ciudad de las Artes y las Ciencias (Autopista del Saler, s/n), Valencia",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Jardines del Turia, 9 km de espacio verde con zonas deportivas y carriles bici."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Jardin Turia, pulmón verde de la ciudad con zonas de juego."
+        },
+        {
+          "name": "Viajandodo",
+          "domain": "viajandodo.com",
+          "url": "https://viajandodo.com/valencia-con-ninos-guia-actividades/",
+          "evidence": "Parque urbano de más de 9 km ideal para bici, paseo y picnic en familia."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "9+ kilometer urban park with biking paths and green spaces."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "L'Iber - Museo de los Soldaditos de Plomo",
+      "description": "El museo de miniaturas más grande del mundo, con decenas de miles de piezas repartidas en varias salas dentro de un palacio gótico del centro histórico. Las vitrinas recrean batallas, escenas históricas e incluso momentos de ciencia ficción con un nivel de detalle que suele sorprender tanto a niños como a adultos. Es un plan de interior distinto a lo habitual, ideal para quienes disfrutan fijándose en los detalles pequeños.",
+      "official_url": "https://www.museoliber.org/",
+      "url_verified": true,
+      "address": "Calle Caballeros, 20-22, 46001 Valencia",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "L'Iber, museo de miniaturas con piezas de historia y ciencia ficción."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "L'Iber, museo del mundo de soldaditos de plomo con 95.000 piezas."
+        },
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "L'IBER, mayor museo de miniaturas del mundo."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-valencia-ninos/",
+          "evidence": "World's largest tin soldier museum with 95,000 pieces across 15 rooms."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Centro de Arte Hortensia Herrero",
+      "description": "Centro de arte contemporáneo instalado en el antiguo Palacio de Valeriola, con obras de artistas internacionales creadas específicamente para sus salas y patios. El recorrido combina arquitectura histórica restaurada con instalaciones muy visuales, algunas pensadas para caminar alrededor o incluso debajo de ellas. Es una opción cultural distinta para familias que ya han visitado los museos más clásicos de la ciudad.",
+      "official_url": "https://www.cahh.es/",
+      "url_verified": true,
+      "address": "Carrer del Mar, Valencia (Palacio de Valeriola)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Contemporary art museum in a restored 17th-century palace."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Museo en palacio antiguo, entrada gratuita para niños 0-12 años."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Almacén del Ratoncito Pérez",
+      "description": "Visita guiada y teatralizada por el almacén donde, según la tradición, el Ratoncito Pérez procesa los dientes de leche que recoge por todo el mundo. Los niños participan activamente en la puesta en escena, con máquinas curiosas y una ambientación pensada para sorprender. Es un plan corto y muy temático, ideal para completar una mañana en el centro histórico.",
+      "official_url": "https://www.antiguoalmacendedientes.com/",
+      "url_verified": true,
+      "address": "Calle Borrull, 16, Valencia",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Valencia Secreta",
+          "domain": "valenciasecreta.com",
+          "url": "https://valenciasecreta.com/que-hacer-valencia-ninos/",
+          "evidence": "Antiguo Almacén de Dientes, museo del Ratoncito Pérez con shows."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Almacén del Ratoncito Pérez, visita guiada y teatralizada de 45 minutos."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Bombas Gens",
+      "description": "Antigua fábrica de bombas hidráulicas de los años 30 transformada en centro de arte digital, con proyecciones inmersivas y exposiciones que ocupan las naves industriales originales. El contraste entre la arquitectura antigua y las instalaciones audiovisuales suele llamar mucho la atención a los niños. Es un plan cultural distinto, pensado para quienes buscan algo más visual que un museo tradicional.",
+      "official_url": "https://bombasgens.com/",
+      "url_verified": true,
+      "address": "Avenida de Burjassot, 54-56, Valencia",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Bombas Gens, arte y tecnología mediante proyectos audiovisuales."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Bombas Gens Centro de Artes Digitales, fábrica rehabilitada con proyecciones."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Centre del Carme (CCCC)",
+      "description": "Antiguo convento del siglo XIV reconvertido en centro de cultura contemporánea, con exposiciones de arte, danza y proyectos audiovisuales que cambian a lo largo del año. Su claustro y sus salas históricas conviven con instalaciones muy actuales, lo que le da un aire distinto al resto de museos de la ciudad. La entrada es gratuita, lo que lo convierte en un plan fácil de improvisar en un rato libre.",
+      "official_url": "https://www.consorcimuseus.gva.es/centro-del-carmen/?lang=es",
+      "url_verified": true,
+      "address": "Calle Museo, 2, 46003 Valencia",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/valencia-con-ninos/",
+          "evidence": "Centre del Carme, espacio cultural en el Barrio del Carme."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Centre del Carme (CCCC), convento del siglo XIV con exposiciones interactivas."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Parque de Cabecera",
+      "description": "Parque urbano dentro del antiguo cauce del Turia, con zonas de césped, un lago navegable y una gran área de juegos infantiles con forma de barco. Comparte espacio con el Bioparc, así que ambos planes se pueden combinar fácilmente en la misma visita. Es un lugar amplio para que los niños corran y jueguen al aire libre sin salir de la ciudad.",
+      "official_url": "https://jardins.valencia.es/es/jardin/parque-de-cabecera",
+      "url_verified": true,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Ofrece bicis acuáticas de pedales con forma de cisne."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Parque de Cabecera, bicis acuáticas en forma de cisne y zona de juegos."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Jardines de Viveros",
+      "description": "También conocidos como Jardines del Real, son uno de los parques históricos más grandes de Valencia, con cientos de variedades de árboles y plantas repartidas en amplias zonas de paseo. Cuenta con zonas de juego infantil y espacio de sobra para pasear o merendar en familia. Su ubicación céntrica lo convierte en una parada fácil para descansar entre otros planes.",
+      "official_url": "https://www.valencia.es/-/infociudad-jardines-del-real-jardines-de-viveros",
+      "url_verified": true,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "Circuito municipal de educación vial y Museo de Ciencias Naturales."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Parque de Viveros, circuito de educación vial y Museo de Ciencias Naturales."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Iglesia de San Nicolás",
+      "description": "Conocida como la \"Capilla Sixtina valenciana\", esta iglesia del centro histórico esconde bajo su fachada gótica una bóveda cubierta casi por completo de frescos barrocos restaurados. La visita incluye una audioguía pensada para explicar de forma sencilla lo que se ve en el techo, algo que suele sorprender también a los niños. Es un plan corto, ideal para combinar con un paseo por el barrio del Carmen.",
+      "official_url": "https://www.sannicolasvalencia.com/",
+      "url_verified": true,
+      "address": "Calle Caballeros, 35, 46001 Valencia",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Visit Valencia",
+          "domain": "visitvalencia.com",
+          "url": "https://www.visitvalencia.com/que-hacer-valencia/valencia-con-ninos",
+          "evidence": "La luz de San Nicolás, videomapping sobre la bóveda barroca."
+        },
+        {
+          "name": "Menudos Viajeros",
+          "domain": "menudosviajeros.com",
+          "url": "https://menudosviajeros.com/blog/10-cosas-que-hacer-con-ninos-en-valencia",
+          "evidence": "Iglesia de San Nicolás, conocida como Capilla Sixtina Valenciana."
+        }
+      ]
+    }
+  ]
+}

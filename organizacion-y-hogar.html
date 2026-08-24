@@ -50,7 +50,8 @@
   .pec-hero-split-content{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding-top:4px;}
   @media (max-width:768px){
     .pec-hero-split{flex-direction:column;gap:20px;min-height:0;}
-    .pec-hero-split-photo{flex:0 0 auto;height:220px;}
+    .pec-hero-split-photo{flex:0 0 auto;height:auto;}
+    .pec-hero-split-photo img{height:auto;object-fit:contain;}
   }
 
   .oh-lead{margin-top:32px;}
@@ -80,7 +81,7 @@
 
 <header>
   <nav class="wrap">
-    <div class="logo"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></div>
+    <a class="logo" href="/" aria-label="Ir a la página principal de Lauderem"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></a>
     <a class="back" href="/">← Volver a la guía</a>
   </nav>
 </header>
@@ -97,7 +98,7 @@
   </div>
 </section>
 
-<section class="wrap">
+<section class="wrap" style="padding-bottom:40px">
 
   <section class="oh-section">
     <p class="oh-lead" style="margin-top:0;">Vivir con niños significa que la casa cambia constantemente. Aparecen juguetes, libros, materiales para crear, ropa, dibujos, construcciones a medio terminar y todo tipo de objetos que forman parte de su día a día.</p>
@@ -401,10 +402,6 @@
   </section>
 
 </section>
-
-<footer class="wrap">
-  <p>Artículo editorial de Lauderem, dentro de la sección Vida en familia · Organización y hogar.</p>
-</footer>
 
 </body>
 </html>

@@ -1,0 +1,783 @@
+{
+  "province": "Tarragona",
+  "province_slug": "tarragona",
+  "generated_at": "2026-08-19",
+  "searches": [
+    "planes con niños Tarragona",
+    "actividades con niños Tarragona",
+    "qué hacer con niños Tarragona"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se analizaron los 5 primeros resultados organicos de cada una de las 3 busquedas (15 posiciones candidatas, con solapes entre busquedas -> 12 URLs unicas). 6 se descartaron en el cribado (Juntines por error de servidor 530/inaccesible; Yumping y Atrapalo por ser plataformas de reserva de actividades; CaixaForum Tarragona por ser pagina institucional de un unico centro; Binter Canarias y OUIGO por ser articulos confirmados como principalmente promocionales de una aerolinea y una empresa de trenes respectivamente). Quedaron 6 fuentes validas (Escapada amb nens aporta 2 articulos distintos del mismo medio) de 5 medios independientes. Se seleccionaron exactamente 18 lugares (15 primary + 3 backup); no hizo falta rellenar artificialmente, hubo mas candidatos con >=2 medios independientes de los que cupieron en 18. Ferrari Land (puesto 7) se prioriza en el orden pese a tener menos evidencias que varios candidatos de 3/3, por formar parte del mismo recinto que PortAventura y su alta reconocibilidad de marca -- ver advertencias. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambiaron los puestos 8 y 17 -- Bosc Aventura Salou pasa a primary y Pretori i Circ Roma pasa a backup. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambiaron ademas los puestos 2 y 18 -- Karting Salou pasa a primary y Amfiteatre Roma pasa a backup. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambiaron ademas los puestos 2 y 16 -- Platja Llarga pasa a primary y Karting Salou pasa a backup. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambiaron ademas los puestos 5 y 16 -- Karting Salou pasa a primary y Pont del Diable pasa a backup. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambio el orden entre los puestos 2 y 8 (ambos primary) -- Bosc Aventura Salou pasa al puesto 2 y Platja Llarga al puesto 8. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambio el orden entre los puestos 4 y 7 (ambos primary) -- Ferrari Land pasa al puesto 4 y Castell de Miravet al puesto 7. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambio el orden entre los puestos 6 y 11 (ambos primary) -- Parc Astronomic Muntanyes de Prades pasa al puesto 6 y Part Alta al puesto 11. AJUSTE MANUAL (revision editorial): a peticion del usuario, se intercambio el orden entre los puestos 6 y 15 (ambos primary) -- Parc del Francoli pasa al puesto 6 y Parc Astronomic Muntanyes de Prades al puesto 15.",
+  "sources_analyzed": [
+    {
+      "name": "Tus Casas Rurales (blog)",
+      "domain": "tuscasasrurales.com",
+      "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+      "title": "Qué ver en Tarragona con niños ¡Los mejores planes!",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 16
+    },
+    {
+      "name": "Familias en Ruta",
+      "domain": "familiasenruta.com",
+      "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+      "title": "Top 22 planes Costa Daurada y Tarragona con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 22
+    },
+    {
+      "name": "Escapada amb nens",
+      "domain": "escapadaambnens.com",
+      "url": "https://www.escapadaambnens.com/es/propuesta/402/25-planes-gratis-para-hacer-con-ninos-en-tarragona/",
+      "title": "25 planes gratis para hacer con niños en Tarragona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 19
+    },
+    {
+      "name": "Barcelona Colours",
+      "domain": "barcelonacolours.com",
+      "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+      "title": "10 planes para hacer con niños en Tarragona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Escapada amb nens",
+      "domain": "escapadaambnens.com",
+      "url": "https://www.escapadaambnens.com/es/tarragona/",
+      "title": "Tarragona con niños - Excursiones, ideas y actividades en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 25
+    },
+    {
+      "name": "Sortir amb nens",
+      "domain": "sortirambnens.com",
+      "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+      "title": "Salir con niños en Tarragona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 28
+    },
+    {
+      "name": "Juntines",
+      "domain": "juntines.com",
+      "url": "https://www.juntines.com/calle-en-tarragona",
+      "title": "Planes y Actividades para niños en Tarragona",
+      "included": false,
+      "exclusion_reason": "La página devolvió un error del servidor (HTTP 530) al intentar leer su contenido; descartada por inaccesible.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Yumping",
+      "domain": "yumping.com",
+      "url": "https://www.yumping.com/en/activities-for-children/tarragona",
+      "title": "Actividades para niños en Tarragona",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva de actividades, no una guía editorial curada.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "CaixaForum Tarragona",
+      "domain": "caixaforum.org",
+      "url": "https://caixaforum.org/es/tarragona/familia",
+      "title": "Actividades para niños y familias en Tarragona - CaixaForum Tarragona",
+      "included": false,
+      "exclusion_reason": "Página institucional de un único centro (CaixaForum), no una guía comparativa de varios planes.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Atrapalo",
+      "domain": "atrapalo.com",
+      "url": "https://www.atrapalo.com/actividades/tarragona/actividades-infantiles/",
+      "title": "Actividades infantiles en Tarragona Provincia",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva de actividades/tickets, no es una guía editorial de planes.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Binter Canarias (blog)",
+      "domain": "elblog.bintercanarias.com",
+      "url": "https://elblog.bintercanarias.com/blog/7-ideas-de-actividades-para-ni%C3%B1os-en-tu-viaje-a-tarragona",
+      "title": "7 ideas de actividades para niños en tu viaje a Tarragona",
+      "included": false,
+      "exclusion_reason": "Artículo confirmado como principalmente promocional de la aerolínea (vuelos a Tarragona), no una guía editorial neutral.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "OUIGO (blog)",
+      "domain": "ouigo.com",
+      "url": "https://www.ouigo.com/es/actualidad/que-hacer-en-tarragona-con-ninos",
+      "title": "Qué hacer en Tarragona con niños",
+      "included": false,
+      "exclusion_reason": "Artículo confirmado como principalmente promocional de la empresa de trenes (billetes, precios, tiempos de viaje), no una guía editorial neutral.",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "address_null",
+        "message": "Platja Llarga, Bosc Aventura Salou y Karting Salou quedan con address=null por no haberse confirmado una direccion postal puntual y fiable en las fuentes consultadas -- no se ha inventado ni deducido ninguna. Son los 3 backups (16-18), no lugares primary.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_null",
+        "message": "Part Alta (Casc Antic de Tarragona) es un barrio, no una institución con web propia -- no se encontró una página oficial de turismo dedicada con suficiente confianza en la búsqueda, así que official_url queda en null en vez de usar una guía de descubrimiento como si fuera oficial.",
+        "place_rank": 6
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "Puesto 7 (Ferrari Land) se promovio con solo 2/2 evidencias por formar parte del mismo recinto que PortAventura (puesto 1) y tener alta reconocibilidad de marca, adelantandose a otros candidatos de 3/3 en el orden de puestos -- no afecta a cuales entraron en el plan, solo al orden.",
+        "place_rank": 7
+      },
+      {
+        "severity": "warning",
+        "category": "fuente_inaccesible",
+        "message": "Juntines.com devolvio error de servidor (HTTP 530) al intentar leer su contenido completo -- se descarto por inaccesible, no se pudo evaluar si habria aportado lugares adicionales.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Pont del Diable: direccion \"Carretera N-240, s/n, 43006 Tarragona\" confirmada manualmente por el usuario en el chat, no por una fuente web adicional -- sustituye al address=null anterior.",
+        "place_rank": 5
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Parc Astronòmic Muntanyes de Prades: direccion \"Carrer de la Muralla, 5, Prades (Tarragona)\" confirmada manualmente por el usuario en el chat (sin codigo postal, a peticion expresa), no por una fuente web adicional -- sustituye al address=null anterior.",
+        "place_rank": 11
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Parc del Francolí: direccion \"Carrer del Riu Francolí, Tarragona\" confirmada manualmente por el usuario en el chat, no por una fuente web adicional -- sustituye al address=null anterior.",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Part Alta (Casc Antic de Tarragona): referencia \"Plaça de la Font o Plaça del Fòrum, Part Alta, Tarragona\" dada manualmente por el usuario en el chat -- al ser un barrio, no una direccion puntual, se usan estas dos plazas centrales como referencia de ubicacion. Sustituye al address=null anterior.",
+        "place_rank": 6
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "AJUSTE MANUAL: a peticion del usuario se intercambiaron los puestos 8 y 17 -- Bosc Aventura Salou pasa a primary (puesto 8) y Pretori i Circ Roma pasa a backup (puesto 17). Bosc Aventura Salou queda sin direccion confirmada (era backup, nunca se le pidio) -- si se mantiene como primary habria que localizarla.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "AJUSTE MANUAL: a peticion del usuario se intercambiaron los puestos 2 y 18 -- Karting Salou pasa a primary (puesto 2) y Amfiteatre Roma pasa a backup (puesto 18). Karting Salou queda sin direccion confirmada (era backup, nunca se le pidio) -- si se mantiene como primary habria que localizarla.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "AJUSTE MANUAL: a peticion del usuario se intercambiaron los puestos 2 y 16 -- Platja Llarga pasa a primary (puesto 2) y Karting Salou pasa a backup (puesto 16). Platja Llarga queda sin direccion confirmada (era backup, nunca se le pidio) -- si se mantiene como primary habria que localizarla.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Bosc Aventura Salou: direccion \"Carrer de Barbastre, 15, 43840 Salou, Tarragona\" confirmada manualmente por el usuario en el chat, no por una fuente web adicional.",
+        "place_rank": 8
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Platja Llarga: direccion \"Carretera N-340, km 1167, Tarragona\" confirmada manualmente por el usuario en el chat, no por una fuente web adicional.",
+        "place_rank": 2
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "AJUSTE MANUAL: a peticion del usuario se intercambiaron los puestos 5 y 16 -- Karting Salou pasa a primary (puesto 5) y Pont del Diable pasa a backup (puesto 16). Karting Salou queda sin direccion confirmada -- si se mantiene como primary habria que localizarla.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "address_resuelta_manualmente",
+        "message": "Karting Salou: direccion \"C-14, km 0,196, 43840 Salou (Tarragona)\" confirmada manualmente por el usuario en el chat, no por una fuente web adicional.",
+        "place_rank": 5
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "PortAventura World",
+      "description": "El parque temático más importante de Cataluña, con seis áreas ambientadas (México, China, Polinesia, Far West, Mediterrània y SésamoAventura) y atracciones para todas las edades, desde montañas rusas intensas hasta zonas pensadas para los más pequeños. Además del parque principal, el recinto incluye Ferrari Land y el parque acuático Caribe Aquatic Park, así que se puede combinar en una visita de varios días. Es el plan de referencia en la Costa Daurada para familias que buscan un día completo de atracciones.",
+      "official_url": "https://www.portaventuraworld.com/",
+      "url_verified": true,
+      "address": "Avinguda Alcalde Pere Molas, s/n, 43480 Vila-seca",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "PortAventura World, parque temático con múltiples zonas."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "PortAventura, parque temático con 42 atracciones y espectáculos diarios."
+        },
+        {
+          "name": "Barcelona Colours",
+          "domain": "barcelonacolours.com",
+          "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+          "evidence": "PortAventura Theme Park, gran atracción familiar en la Costa Daurada."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "PortAventura World mencionado como plan de excursión familiar."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Bosc Aventura Salou",
+      "description": "Parque de aventura entre árboles en pleno centro de Salou, con tirolinas, circuitos de altura y zona de paintball. Los circuitos están pensados para distintas edades, desde niños de 3 años en adelante hasta adultos. Es un plan para pasar la tarde gastando energía al aire libre.",
+      "official_url": "https://www.boscaventurasalou.com/",
+      "url_verified": true,
+      "address": "Carrer de Barbastre, 15, 43840 Salou, Tarragona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Bosque Aventura (Salou), circuitos, tirolinas y arquería desde 3 años."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Bosque Aventura, actividades de arborismo y paintball soft."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Parc Natural del Delta de l'Ebre",
+      "description": "Uno de los humedales más importantes del Mediterráneo occidental, con arrozales, lagunas y playas vírgenes donde observar aves en su hábitat natural. Se pueden hacer rutas en barca, en bicicleta o simplemente pasear por sus caminos llanos, fáciles para ir con niños. El centro de información de Deltebre es un buen punto de partida para planificar la visita según la época del año.",
+      "official_url": "https://parcsnaturals.gencat.cat/ca/xarxa-de-parcs/delta-ebre/inici/",
+      "url_verified": true,
+      "address": "Av. Catalunya, 46, 43580 Deltebre",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Parque Natural del Delta del Ebro, ecosistema protegido con arrozales."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Delta de l'Ebre, reserva de biosfera UNESCO con observación de aves."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "Delta del Ebro Natural Park, avistamiento de aves y kayak."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Parque Natural Delta del Ebro, rutas en barca, paddle surf o kayak."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Ferrari Land",
+      "description": "Parque temático dedicado al mundo Ferrari dentro del recinto de PortAventura World, con la montaña rusa más alta y rápida de Europa entre sus atracciones. También cuenta con simuladores, una zona infantil temática y un edificio central dedicado a la historia de la marca. Es un buen complemento a la visita de PortAventura si se dispone de más de un día.",
+      "official_url": "https://www.portaventuraworld.com/ferrari-land",
+      "url_verified": true,
+      "address": "Avinguda Alcalde Pere Molas, s/n, 43480 Vila-seca",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Ferrari Land, parque temático Ferrari dentro de PortAventura."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Port Aventura incluye Ferrari Land."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Karting Salou",
+      "description": "Circuito de karts en Salou, con opciones tanto para niños como para adultos, pensado como un plan de velocidad controlada en un entorno seguro. Es una opción diferente para familias con niños algo más mayores que buscan algo de adrenalina. Se puede combinar fácilmente con un día de playa en la zona.",
+      "official_url": "https://kartingsalou.com/",
+      "url_verified": true,
+      "address": "C-14, km 0,196, 43840 Salou (Tarragona)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Electric Karting/Karting Salou, karting para niños 6+."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Karting en Salou, incluye opción de electric karting."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Parc del Francolí",
+      "description": "Uno de los parques más grandes de Tarragona, junto al río Francolí, con caminos de tierra para pasear o ir en bici, zona de picnic y un gran barco pirata de madera con cuerdas y toboganes. Conecta por un extremo con el Pont del Diable, así que ambos planes se pueden enlazar en la misma salida. Es un plan gratuito y al aire libre, fácil para cualquier día.",
+      "official_url": "https://www.tarragona.cat/la-ciutat/planol/agenda_ubicacions/parc-del-francoli",
+      "url_verified": true,
+      "address": "Carrer del Riu Francolí, Tarragona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/402/25-planes-gratis-para-hacer-con-ninos-en-tarragona/",
+          "evidence": "Parque del Francolí, gran barco pirata de dos plantas de madera."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Parque Francolí, uno de los más grandes de la provincia."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Castell de Miravet",
+      "description": "Fortaleza de origen templario en lo alto de un promontorio rocoso, con vistas espectaculares sobre el río Ebro y el pueblo de Miravet a sus pies. Su silueta bien conservada y las salas que se pueden recorrer hacen que los niños se imaginen fácilmente cómo era la vida de un caballero medieval. La subida hasta el castillo ya forma parte de la experiencia, con el pueblo escalonado alrededor.",
+      "official_url": "https://patrimoni.gencat.cat/ca/monuments/monuments/castell-de-miravet",
+      "url_verified": true,
+      "address": "Camí del Castell, s/n, 43747 Miravet",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Castillo de Miravet, fortaleza templaria con vistas al río Ebro."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Castillo de Miravet, castillo templario con posibilidad de kayak."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "12th-century templars' castle overlooking the Ebro."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Castillo de Miravet, fortaleza medieval."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Platja Llarga",
+      "description": "La playa más extensa de Tarragona, con dunas naturales y arena fina, orientada al sur y con entrada suave al agua. Cuenta con socorristas, duchas, acceso adaptado y alquiler de embarcaciones en temporada alta. Es una opción algo más tranquila que las playas más céntricas de la ciudad.",
+      "official_url": "https://www.tarragonaturisme.cat/en/beach/platja-llarga",
+      "url_verified": true,
+      "address": "Carretera N-340, km 1167, Tarragona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Costa Dorada Beaches, incluye Playa Larga."
+        },
+        {
+          "name": "Barcelona Colours",
+          "domain": "barcelonacolours.com",
+          "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+          "evidence": "Platja Llarga, diez minutos de Tarragona con buena calidad de arena y agua."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Gaudí Centre (Reus)",
+      "description": "Espacio interactivo en el centro de Reus, ciudad natal de Antoni Gaudí, pensado para descubrir cómo se formó el genio creativo del arquitecto de una manera didáctica. Incluye maquetas táctiles, audiovisuales y escenografías que ayudan a los niños a entender su arquitectura sin necesidad de conocimientos previos. Es una opción distinta a los planes de playa o parques naturales, ideal para un día de interior.",
+      "official_url": "https://www.reus.cat/es/disfrute-centro-reus",
+      "url_verified": true,
+      "address": "Plaça Mercadal, 3, 43205 Reus",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Gaudí Centre (Reus), museo interactivo con maquetas táctiles."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "Gaudí Centre Reus, centro interpretativo sobre Gaudí."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Gaudí Centre, espacio moderno de 1.200 m² dedicado al arquitecto."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Museu del Port de Tarragona",
+      "description": "Museo instalado en un antiguo almacén del muelle de Costa, en el barrio marinero del Serrallo, dedicado a la actividad pesquera, comercial y deportiva del puerto. Ofrece experiencias interactivas como gobernar un barco a vela o descubrir cómo funciona un motor de barco. Después de la visita, el propio barrio del Serrallo, con sus calles de pescadores, invita a seguir paseando.",
+      "official_url": "https://www.porttarragona.cat/",
+      "url_verified": true,
+      "address": "Moll de la Costa, s/n, 43004 Tarragona",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "El Serrallo, barrio histórico con museo marítimo."
+        },
+        {
+          "name": "Barcelona Colours",
+          "domain": "barcelonacolours.com",
+          "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+          "evidence": "Museo del Puerto, exhibiciones de barcos y navegación."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/402/25-planes-gratis-para-hacer-con-ninos-en-tarragona/",
+          "evidence": "Museo del Puerto, museo marítimo con barcos, herramientas y fotografías."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Part Alta (Casc Antic de Tarragona)",
+      "description": "El barrio histórico de Tarragona, con calles estrechas y empinadas que suben desde el centro hasta la Catedral, mezclando restos romanos, medievales y edificios más recientes. Pasear sin rumbo fijo por sus plazas, como la Plaça del Fòrum o la Plaça del Rei, es en sí mismo un plan familiar sencillo. Buena parte del recorrido arqueológico de Tarragona, declarado Patrimonio de la Humanidad, atraviesa este barrio.",
+      "official_url": "https://www.tarragonaturisme.cat/es/la-part-alta",
+      "url_verified": true,
+      "address": "Plaça de la Font o Plaça del Fòrum, Part Alta, Tarragona",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Casco Antiguo, Part Alta con calles frescas y mural en la plaza dels Sedassos."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Old Town (Part Alta), Cathedral of Santa Tecla, Plaza de la Font."
+        },
+        {
+          "name": "Barcelona Colours",
+          "domain": "barcelonacolours.com",
+          "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+          "evidence": "Historic City Center, calles estrechas con plazas y terrazas."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Parte Antigua, estrechas calles con tesoros para descubrir."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Coves de l'Espluga (Cova de la Font Major)",
+      "description": "Sistema de cuevas en pleno centro de L'Espluga de Francolí, con varios kilómetros de galerías y grabados prehistóricos de miles de años de antigüedad. El recorrido permite ver formaciones geológicas y el curso de agua subterráneo que da origen al río Francolí. Es un plan de interior fresco, muy adecuado para los días de más calor.",
+      "official_url": "https://covesdelespluga.info/",
+      "url_verified": true,
+      "address": "Avinguda de Catalunya, s/n, 43440 L'Espluga de Francolí",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Cueva Museo de la Font Major, sistema de cuevas de 3,5 km."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/402/25-planes-gratis-para-hacer-con-ninos-en-tarragona/",
+          "evidence": "Cuevas de la Espluga de Francolí, una de las cuevas más largas del mundo."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "Espluga de Francolí Caves, una de las cuevas más largas del mundo."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Balcó del Mediterrani",
+      "description": "Mirador clásico de Tarragona al final de la Rambla Nova, con una barandilla de hierro desde la que se contempla el mar Mediterráneo, el puerto y el anfiteatro romano a los pies del acantilado. Es tradición \"tocar hierro\" en la barandilla al pasar por aquí. Un punto de parada rápido y gratuito que se puede combinar fácilmente con un paseo por la Rambla o la Part Alta.",
+      "official_url": "https://www.tarragonaturisme.cat/es/monumento/balcon-del-mediterraneo",
+      "url_verified": true,
+      "address": "Rambla Nova, s/n, 43004 Tarragona",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Balcón del Mediterráneo, mirador cerca del casco antiguo."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Balcón del Mediterráneo, mirador a 40 metros sobre el mar."
+        },
+        {
+          "name": "Barcelona Colours",
+          "domain": "barcelonacolours.com",
+          "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+          "evidence": "Balcón del Mediterráneo, vistas al mar desde el final de la Rambla Nova."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Bosc Pintat de Poblet",
+      "description": "Ruta de senderismo sencilla en el bosque de Castellfollit, cerca de Poblet, donde varios troncos de árbol esconden dibujos de setas que solo se ven completos desde un punto exacto del camino. Convertido en un juego de observación, anima a los niños a caminar buscando la siguiente pintura. Hay una versión corta de unos 3 km y otra más larga de 6,5 km, según la edad y el ritmo del grupo.",
+      "official_url": "http://www.vimbodiipoblet.cat/",
+      "url_verified": true,
+      "address": "Casa Forestal de Castellfollit, Vimbodí i Poblet",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/402/25-planes-gratis-para-hacer-con-ninos-en-tarragona/",
+          "evidence": "Bosque Pintado de Poblet, recorrido con setas pintadas."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "Painted Forest (Bosc Pintat), Vimbodí forest con esculturas artísticas."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Bosque Pintado de Poblet, recorrido artístico natural."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Parc Astronòmic Muntanyes de Prades",
+      "description": "Centro dedicado a la divulgación de la astronomía en plena naturaleza, en las Muntanyes de Prades, lejos de la contaminación lumínica de la costa. Organiza observaciones del cielo nocturno y actividades pensadas para acercar el universo a los niños de forma sencilla. Es un plan distinto para una tarde-noche en familia, ideal para combinar con una excursión por la zona.",
+      "official_url": "https://www.parcastronomicprades.cat/",
+      "url_verified": true,
+      "address": "Carrer de la Muralla, 5, Prades (Tarragona)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Muntanyes de Prades, parque astronómico con planetario."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "Prades, vila vermella con parque astronómico."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Parque Astronómico (Montañas de Prades), observación celeste."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Pont del Diable",
+      "description": "Acueducto romano de dos pisos de arcos que formaba parte del sistema que llevaba agua a la antigua Tarraco, uno de los mejor conservados de todo el mundo romano. Se puede caminar por debajo y observar de cerca la construcción, además de acercarse por un sendero cercano para verlo desde distintos ángulos. Es un plan gratuito y al aire libre, fácil de combinar con un paseo por el Parc del Francolí, que queda muy cerca.",
+      "official_url": "https://www.tarragona.cat/patrimoni/museu-historia/monuments/laqueducte-del-francoli",
+      "url_verified": true,
+      "address": "Carretera N-240, s/n, 43006 Tarragona",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Pont del Diable, parque ecohistórico con acueducto romano UNESCO."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Pont del Diable, acueducto romano con actividades ecohistóricas."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/propuesta/402/25-planes-gratis-para-hacer-con-ninos-en-tarragona/",
+          "evidence": "Puente del Diablo, paseo bajo los arcos con zona de picnic."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Pont del Diable, estructura histórica para disfrutar naturaleza."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Pretori i Circ Romà",
+      "description": "Antiguo circo romano donde se celebraban carreras de carros, con capacidad para unas 30.000 personas en su época, uno de los pocos circos romanos conservados dentro de una ciudad. La torre del Pretori, que conectaba la parte baja con el foro provincial, ofrece vistas panorámicas sobre Tarragona. Se visita junto con el resto del conjunto arqueológico gestionado por el Museu d'Història de Tarragona.",
+      "official_url": "https://www.tarragona.cat/patrimoni/museu-historia/monuments/el-circ-roma",
+      "url_verified": true,
+      "address": "Rambla Vella, 1, 43003 Tarragona",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Pretorio y Circo Romano, torre que conecta ciudad alta y baja."
+        },
+        {
+          "name": "Escapada amb nens",
+          "domain": "escapadaambnens.com",
+          "url": "https://www.escapadaambnens.com/es/tarragona/",
+          "evidence": "Praetorium and Roman Circus, vistas panorámicas de la ciudad."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Circo romano, sitio histórico de espectáculos antiguos."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Amfiteatre Romà",
+      "description": "Anfiteatro del siglo II construido junto al mar, donde antiguamente se celebraban combates de gladiadores, hoy declarado Patrimonio de la Humanidad por la UNESCO. Pasear entre sus gradas de piedra frente al Mediterráneo es una forma sencilla de acercar a los niños a la historia romana de Tarragona sin necesidad de una visita muy larga. Forma parte del conjunto arqueológico gestionado por el Museu d'Història de Tarragona, junto con el Pretori y el Circo Romano.",
+      "official_url": "https://www.tarragona.cat/patrimoni/museu-historia/monuments/lamfiteatre",
+      "url_verified": true,
+      "address": "Parc de l'Amfiteatre romà, s/n, 43003 Tarragona",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Tus Casas Rurales",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/tarragona-con-ninos/",
+          "evidence": "Anfiteatro Romano, gladiadores en la época romana."
+        },
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/tarragona-con-ninos/",
+          "evidence": "Tarraco Roman Heritage incluye el anfiteatro accesible con visitas guiadas."
+        },
+        {
+          "name": "Barcelona Colours",
+          "domain": "barcelonacolours.com",
+          "url": "https://barcelonacolours.com/10-planes-para-visitar-tarragona-con-ninos/",
+          "evidence": "Roman Amphitheater, edificio de espectáculos con audioguías."
+        },
+        {
+          "name": "Sortir amb nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/salir-con-ninos/salir-con-ninos-en-tarragona/",
+          "evidence": "Conjunto Arqueológico Romano, incluye anfiteatro."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,801 @@
+{
+  "province": "Madrid",
+  "province_slug": "madrid",
+  "generated_at": "2026-08-22",
+  "searches": [
+    "planes con niños Madrid",
+    "actividades con niños Madrid",
+    "qué hacer con niños Madrid"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "De las 3 búsquedas (5 primeros resultados orgánicos cada una = 15 candidatas máx.) se obtuvieron 12 páginas únicas tras quitar 3 duplicados entre búsquedas (madridsecreto.co, timeout.es y unbuendiaenmadrid.com aparecieron en más de una búsqueda). De esas 12, se descartaron 4 en el cribado: bonoparques.es (plataforma de venta de bonos/entradas combinadas a parques de Madrid, blog promocional de su propio negocio), caixaforum.org/es/madrid/familia (página institucional de un único centro, no guía comparativa, además con error HTTP 403), granpaintballmadrid.es (página promocional de un único negocio de paintball infantil disfrazada de ranking) y h2oaventura.com (página híbrida que favorece claramente sus propias actividades de kayak/paddle surf frente al resto de lugares mencionados). Quedaron 8 fuentes válidas y leídas por completo: madridsecreto.co, timeout.es, unbuendiaenmadrid.com, madridhappypeople.com, sortirambnens.com, esmadrid.com (2 artículos distintos del portal oficial de turismo, uno en español '10 cosas' y otro en inglés '30 things', contados como 1 solo medio independiente por ser el mismo dominio), y civitatis.com/blog. Entre las 8 fuentes se extrajeron más de 150 lugares distintos tras normalizar variantes. Se buscaban 18 lugares (15 primary + 3 backup) y se consiguieron los 18, con un nivel de evidencia notablemente más alto que en provincias más pequeñas ya trabajadas (mínimo 3 evidencias / 3 medios independientes en los 18 seleccionados, frente a picos de 1 evidencia habituales en provincias con menos oferta editorial): Madrid capital y su área metropolitana ofrecen muchísimos candidatos con respaldo real, tal y como se anticipaba. La selección de las posiciones 1-15 priorizó variedad de tipo de plan (parques urbanos, parque temático, parque acuático/zoo, ciudad infantil interactiva, museos temáticos, monumento con espectáculo familiar, estadio) por encima del puro orden de evidencia, evitando agrupar varios museos o varios parques seguidos. Regla de diversificación de patrimonio histórico/arqueológico: no se incluyó ningún anfiteatro, ruina, muralla o casco histórico en la selección final (Madrid capital tiene abundante oferta de museos/parques/ocio real con más respaldo editorial, tal y como se preveía). El único lugar con componente patrimonial es el Palacio Real de Madrid (rank 9), que se trató como excepción explícita de la regla (punto 5: 'un castillo puede ocupar posición superior si presenta un atractivo familiar claro') por su Cambio de Guardia Solemne, un espectáculo en vivo con uniformes de época y música que tiene un atractivo familiar directo y verificable, distinto de una simple visita a un monumento histórico; en cualquier caso queda en la posición 9, fuera de las posiciones 1-6, y es el único lugar de este tipo en toda la selección (muy por debajo del máximo de 2 permitido). Un candidato de tipo castillo (Castillo de Manzanares el Real, mencionado solo indirectamente a través del Parque Nacional de la Sierra de Guadarrama) y otro de tipo monumento (Templo de Debod) tenían evidencia más débil (2 y 1 respectivamente) y no llegaron a entrar ni como backup.",
+  "sources_analyzed": [
+    {
+      "name": "Madrid Secreto",
+      "domain": "madridsecreto.co",
+      "url": "https://madridsecreto.co/planes-ninos-madrid/",
+      "title": "Qué hacer con niños en Madrid: 20 planes imprescindibles para toda la familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 32
+    },
+    {
+      "name": "Bonoparques (blog)",
+      "domain": "bonoparques.es",
+      "url": "https://www.bonoparques.es/blog/12-planes-para-disfrutar-madrid-con-ninos-en-verano",
+      "title": "Planes para disfrutar Madrid con niños en verano",
+      "included": false,
+      "exclusion_reason": "Plataforma de venta de bonos/entradas combinadas a parques de Madrid (Aquópolis, Warner, Faunia, Zoo); el artículo es contenido promocional de su propio negocio de venta de entradas, no una guía editorial independiente.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Time Out Madrid",
+      "domain": "timeout.es",
+      "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+      "title": "Lugares para ir con niños en Madrid: ideas y actividades para la familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 60
+    },
+    {
+      "name": "Un Buen Día en Madrid",
+      "domain": "unbuendiaenmadrid.com",
+      "url": "https://unbuendiaenmadrid.com/planes-gratis-con-ninos-en-madrid/",
+      "title": "15 planes gratis e ideas para hacer con niños en Madrid",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 16
+    },
+    {
+      "name": "Madrid Happy People",
+      "domain": "madridhappypeople.com",
+      "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+      "title": "Planes con niños en Madrid y en familia: ideas y descuentos",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 76
+    },
+    {
+      "name": "CaixaForum Madrid",
+      "domain": "caixaforum.org",
+      "url": "https://caixaforum.org/es/madrid/familia",
+      "title": "Actividades para niños y familias en Madrid - CaixaForum Madrid",
+      "included": false,
+      "exclusion_reason": "Página institucional de un único centro (CaixaForum), no una guía comparativa de varios planes; además devolvió error HTTP 403 al intentar leer el contenido completo.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Sortir amb Nens",
+      "domain": "sortirambnens.com",
+      "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+      "title": "Madrid con niños y niñas, las mejores actividades",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 22
+    },
+    {
+      "name": "Gran Paintball Madrid",
+      "domain": "granpaintballmadrid.es",
+      "url": "https://www.granpaintballmadrid.es/actividades-ninos-madrid.html",
+      "title": "Las 11 mejores actividades para niños en Madrid",
+      "included": false,
+      "exclusion_reason": "Página promocional de un único negocio (paintball infantil) disfrazada de ranking editorial: sus propias actividades aparecen repetidas con las valoraciones más altas y el resto de lugares recibe descripciones más breves.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "H2O Aventura",
+      "domain": "h2oaventura.com",
+      "url": "https://www.h2oaventura.com/actividades-con-ninos-en-madrid/",
+      "title": "Actividades con niños en Madrid - Ideal Familias",
+      "included": false,
+      "exclusion_reason": "Página híbrida que funciona principalmente como plataforma promocional de las actividades propias de H2O Aventura (kayak, paddle surf, parque de aventura), con descripciones, precios y enlaces de reserva detallados solo para sus propios servicios frente al resto de lugares mencionados.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "esMadrid (Turismo Madrid) - 10 cosas 0-8 años",
+      "domain": "esmadrid.com",
+      "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+      "title": "10 cosas que hacer en Madrid con niños (de 0 a 8 años)",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 23
+    },
+    {
+      "name": "Civitatis (blog)",
+      "domain": "civitatis.com",
+      "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+      "title": "Madrid con niños: qué ver y 20 planes en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 24
+    },
+    {
+      "name": "esMadrid (Turismo Madrid) - 30 things EN",
+      "domain": "esmadrid.com",
+      "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+      "title": "30 cosas que hacer con niños y niñas en Madrid",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 43
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "editorial_exception",
+        "message": "Palacio Real de Madrid es el único lugar de la selección con componente de patrimonio histórico/monumental. Se ha tratado como excepción a la regla de diversificación (no como uno de los 2 permitidos) por su Cambio de Guardia Solemne, un espectáculo familiar en vivo distinto de una simple visita monumental, y queda en la posición 9, fuera de las posiciones 1-6.",
+        "place_rank": 16
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Madrid Río",
+      "description": "Parque lineal de más de seis kilómetros junto al río Manzanares, con diecisiete zonas de juego infantil, carriles bici y la conocida \"playa urbana\" de fuentes a ras de suelo para refrescarse en verano. Conecta varios barrios de la ciudad sin necesidad de coche y combina deporte, paseo y juego libre en un mismo recorrido. Un plan gratuito y muy flexible, fácil de adaptar a cualquier edad.",
+      "official_url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Medio-ambiente/Parques-y-jardines/Madrid-Rio-informacion-ampliada/?vgnextfmt=default&vgnextoid=5acc7f0917afc110VgnVCM2000000c205a0aRCRD&vgnextchannel=2ba279ed268fe410VgnVCM1000000b205a0aRCRD",
+      "url_verified": true,
+      "address": "Pasarela Histórica, Paseo de las Yeserías, 0, Madrid",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Madrid Río: uno de los paraísos para los más pequeños, con 17 zonas de juego."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Madrid Río: 17 áreas de juegos infantiles con estructuras de materiales naturales."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Madrid Río: 8 toboganes de distintas formas y tamaños en más de 6 km de recorrido."
+        },
+        {
+          "name": "Un Buen Día en Madrid",
+          "domain": "unbuendiaenmadrid.com",
+          "url": "https://unbuendiaenmadrid.com/planes-gratis-con-ninos-en-madrid/",
+          "evidence": "Playa de Madrid: fuentes incrustadas en el suelo que lanzan chorros, gratuitas, en Madrid Río."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Madrid Río Park: 17 playgrounds equipped with fun and sustainable play equipment."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Parque de Atracciones de Madrid",
+      "description": "Parque temático en la Casa de Campo con atracciones para todas las edades, desde zonas suaves pensadas para los más pequeños hasta montañas rusas como el Tornado o el Abismo. Incluye espectáculos en directo y varias zonas de restauración para pasar el día completo sin salir del recinto. Una opción clásica para familias que buscan un plan de emociones sin salir de Madrid.",
+      "official_url": "https://www.parquedeatracciones.es",
+      "url_verified": true,
+      "address": "Lugar Parque Atracciones, s/n, 28011 Madrid",
+      "evidence_count": 5,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Parque de Atracciones de Madrid: situado en plena Casa de Campo con atracciones diversas."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Parque de Atracciones Madrid: parque temático ubicado dentro de Casa de Campo."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Parque de Atracciones: numerosas atracciones y espectáculos adecuados para su edad."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Parque de Atracciones de Madrid: atracciones temáticas, inaugurado en 1969."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Adrenaline-fueled fun at the Parque de Atracciones amusement park in Casa de Campo."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Faunia",
+      "description": "Parque temático de la naturaleza que recrea distintos ecosistemas del planeta bajo grandes cúpulas, desde la selva tropical hasta zonas polares, con más de mil animales de especies muy variadas. Permite a los niños observar de cerca focas, pingüinos o aves rapaces según la zona que visiten. Un plan pensado para acercar la naturaleza de forma directa y muy visual.",
+      "official_url": "http://www.faunia.es",
+      "url_verified": true,
+      "address": "Avenida de las Comunidades, 28, Vicálvaro, 28032 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Faunia: 14 hectáreas de extensión, el gran parque temático de la naturaleza."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Faunia: 14 hectáreas con ovejas, ponis, cabras, burros y focas."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Faunia: se recrean ecosistemas de una forma muy curiosa y original."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Nature theme park showcasing extraordinary ecosystems and 1,200 animals from 170 species."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Micropolix",
+      "description": "Ciudad para niños a tamaño infantil donde los pequeños de 4 a 14 años pueden ejercer de bombero, veterinario, piloto o periodista entre más de treinta oficios distintos, ganando su propia moneda por el trabajo realizado. Todo el recinto está cubierto y climatizado, lo que lo convierte en un plan seguro para días de lluvia o de mucho calor. Una experiencia de juego simbólico pensada para fomentar la autonomía de los niños.",
+      "official_url": "https://micropolix.com",
+      "url_verified": true,
+      "address": "Calle de Salvador de Madariaga, s/n, 28702 San Sebastián de los Reyes, Madrid",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "Micropolix: ciudad educativa temática de 12.000 m² para niños de 4 a 14 años."
+        },
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Micropolix: ciudad infantil de 12.000 metros cuadrados con 30 espacios tematizados."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Micrópolis: pequeña ciudad en la que los pequeños son los dueños."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Micropolix: una verdadera ciudad, pero a escala de los niños."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Micropolix: ciudad infantil de ocio educativo en San Sebastián de los Reyes."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Parque de El Retiro",
+      "description": "Jardín histórico en pleno centro de Madrid, con el gran estanque donde alquilar una barca, amplias zonas verdes para correr y el Palacio de Cristal como uno de sus rincones más conocidos. Cada fin de semana acoge también el Teatro de Títeres, con funciones gratuitas al aire libre. Un clásico imprescindible para pasear en familia sin salir de la ciudad.",
+      "official_url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Medio-ambiente/Parques-y-jardines/Retiro/?vgnextfmt=default&vgnextoid=a696fd36c1714610VgnVCM1000001d4a900aRCRD&vgnextchannel=2ba279ed268fe410VgnVCM1000000b205a0aRCRD",
+      "url_verified": true,
+      "address": "Plaza de la Independencia, 7, 28001 Madrid",
+      "evidence_count": 5,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Parque de El Retiro: uno de los pulmones verdes de la metrópoli, con paseos en barca."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Parque El Retiro: nació en 1630 cuando el Conde Duque de Olivares cedió los terrenos al monarca."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Parque de El Retiro: uno de los pulmones verdes de esta metrópoli."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Parque de El Retiro: paseo en barca en el bonito estanque y alquiler de bicicleta."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "El Retiro Park: hire a rowing boat for a paddle on the lake."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Zoo Aquarium de Madrid",
+      "description": "Parque zoológico y acuario situado en la Casa de Campo, con especies tan variadas como pandas gigantes, koalas o focas monje repartidas por distintas zonas temáticas. Combina el recorrido por tierra con un acuario que permite observar la vida marina de cerca. Un plan de día completo para familias interesadas en el mundo animal.",
+      "official_url": "https://www.zoomadrid.com",
+      "url_verified": true,
+      "address": "Casa de Campo, s/n, 28011 Madrid",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Zoo Aquarium de Madrid: los animales están divididos por zonas que representan a diferentes continentes."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Zoo Aquarium de Madrid: los animales están divididos por zonas que representan a diferentes continentes."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Zoo Aquarium: get up close to over 1,300 animals."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Casita-Museo del Ratón Pérez",
+      "description": "Pequeño museo en pleno centro de Madrid, en el mismo edificio de la calle Arenal donde según la tradición vivía el Ratoncito Pérez. La visita guiada recorre su casa en miniatura y cuenta el origen del popular personaje infantil español, creado a finales del siglo XIX. Un plan corto y entrañable, especialmente indicado para los niños que acaban de perder su primer diente.",
+      "official_url": "https://www.casamuseoratonperez.es",
+      "url_verified": true,
+      "address": "Calle del Arenal, 8, planta 1, 28013 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "Casita-Museo Ratón Pérez: casa temática del personaje de cuento infantil clásico."
+        },
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Casita Museo de Ratón Pérez: el ratón más famoso del mundo tiene su hogar en la capital."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Casita Museo de Ratón Pérez: el lugar exacto (Arenal, 8) donde vivía el protagonista del cuento."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Casa del Ratón Pérez: el roedor más querido por los más pequeños."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Parque Warner Madrid",
+      "description": "Parque temático ambientado en el universo de Warner Bros., con seis áreas diferenciadas dedicadas a superhéroes, dibujos animados clásicos y grandes producciones de cine. Sus atracciones cubren un rango amplio de edades, desde zonas familiares hasta montañas rusas de mayor intensidad. Cuenta además con Parque Warner Beach, su zona acuática, como complemento en los meses de más calor.",
+      "official_url": "https://www.parquewarner.com",
+      "url_verified": true,
+      "address": "Autovía A-4, salida 22, 28330 San Martín de la Vega, Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Parque Warner Madrid: parque temático ubicado en San Martín de la Vega."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Parque Warner: atracciones centradas en superhéroes."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Parque Warner: atracciones centradas en superhéroes."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Parque Warner: rides, beloved DC Comics superheroes, restaurants and shops."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "El Bosque Encantado",
+      "description": "Jardín botánico a las afueras de Madrid con más de trescientas esculturas vegetales vivas, entre dragones, dinosaurios y otras figuras recortadas en los propios setos. El recorrido incluye también Dinolandia, un espacio con dinosaurios a tamaño real dentro del mismo parque. Una excursión de un día distinta, pensada para explorar caminando y sin prisa.",
+      "official_url": "https://bosqueencantado.net",
+      "url_verified": true,
+      "address": "Camino de Marañones, 217, 28680 San Martín de Valdeiglesias, Madrid",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "El Bosque Encantado: jardín botánico único y espectacular en Europa, con 320 esculturas vegetales vivas."
+        },
+        {
+          "name": "Un Buen Día en Madrid",
+          "domain": "unbuendiaenmadrid.com",
+          "url": "https://unbuendiaenmadrid.com/planes-gratis-con-ninos-en-madrid/",
+          "evidence": "El Bosque Encantado: jardín único en Europa con más de 300 setos que adoptan formas curiosas."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "El Bosque Encantado: jardín botánico único en Europa, con setos en forma de dragones y dinosaurios."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Museo de las Ilusiones de Madrid",
+      "description": "Espacio interactivo cerca de la Puerta del Sol dedicado a las ilusiones ópticas, con salas pensadas para tocar, fotografiarse y experimentar en primera persona cada efecto visual. Los niños pueden entender de forma práctica cómo el cerebro interpreta ciertas imágenes. Un plan corto, muy visual y con garantía de fotos curiosas para el recuerdo.",
+      "official_url": "https://museosdelasilusiones.com/madrid/",
+      "url_verified": true,
+      "address": "Calle del Doctor Cortezo, 8, 28012 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Museo de las Ilusiones de Madrid: recorrido que sorprenderá a niños y adultos a través de experiencias visuales."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Museo de las Ilusiones de Madrid: ilusiones ópticas y exposiciones diseñadas."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Museo de las Ilusiones: juega con infinidad de efectos ópticos."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Museum of Illusions: world of optical illusions that will amaze both kids and adults."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Casa de Campo",
+      "description": "El mayor espacio verde de Madrid, con más de mil setecientas hectáreas de bosque mediterráneo, un lago donde alquilar barcas y kilómetros de caminos para pasear o ir en bicicleta. Dentro de su perímetro conviven también el Zoo Aquarium y el Parque de Atracciones, aunque el propio parque ya ofrece un plan gratuito de naturaleza y aire libre. Un espacio muy versátil para pasar toda una mañana o tarde en familia.",
+      "official_url": "https://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Parques-y-jardines/Patrimonio-Verde/Parques-en-Madrid/Parque-de-la-Casa-de-Campo/?vgnextfmt=default&vgnextoid=482a315919a9e210VgnVCM1000000b205a0aRCRD&vgnextchannel=38bb1914e7d4e210VgnVCM1000000b205a0aRCRD",
+      "url_verified": true,
+      "address": "Paseo Puerta del Ángel, 1, 28011 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "Barcas del lago Casa de Campo: paseos en bote por el lago, con 1.700 hectáreas de parque."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Casa de Campo: mayor espacio natural de Madrid, con 1.535,52 hectáreas."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Casa de Campo: amplio espacio verde con barcas y actividades al aire libre."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Casa de Campo Park: hire a rowing boat for a paddle on the lake."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Museo de Cera de Madrid",
+      "description": "Museo en pleno Paseo de Recoletos con cientos de figuras de cera de personajes históricos, de la actualidad y de ficción, incluida una zona pensada especialmente para el público infantil. Los niños pueden fotografiarse junto a sus personajes favoritos y recorrer distintos escenarios temáticos. Un plan de interior cómodo para cualquier época del año.",
+      "official_url": "https://museodecera.com/",
+      "url_verified": true,
+      "address": "Paseo de Recoletos, 41, 28004 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "Museo de Cera: figuras históricas y personajes de ficción, incluida sección infantil."
+        },
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Museo de Cera de Madrid: más de 450 figuras de la historia y la cultura pop."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Museo de Cera: esculturas muy realistas de célebres personajes nacionales e internacionales."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Museo de Cera de Madrid: aquí reconocen a muchos protagonistas de la actualidad, de la historia y de la ficción."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Museo del Ferrocarril de Madrid",
+      "description": "Museo instalado en la antigua estación de Delicias, con una colección de locomotoras y vagones históricos que se pueden ver de cerca y, en algunos casos, recorrer por dentro. Incluye maquetas a escala y actividades pensadas para despertar el interés de los niños por el mundo ferroviario. Un plan educativo y visual, especialmente atractivo para los más fascinados por los trenes.",
+      "official_url": "https://museodelferrocarril.org/",
+      "url_verified": true,
+      "address": "Paseo de las Delicias, 61, 28045 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "Museo del Ferrocarril: colección de trenes históricos y salas educativas ferroviarias."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Museo del Ferrocarril Madrid: sede en la antigua estación de Delicias."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Museo del Ferrocarril: contemplar un buen número de maquetas espectaculares y subirse a algunos vagones antiguos."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Railway Museum: historic trains and feel like a real conductor."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Tour Bernabéu",
+      "description": "Visita guiada por el estadio Santiago Bernabéu, sede del Real Madrid, que recorre el museo de trofeos, el túnel de vestuarios y las gradas con vistas al césped. Una experiencia pensada tanto para aficionados al fútbol como para quienes simplemente quieren conocer por dentro uno de los estadios más conocidos del mundo. Un plan de un par de horas, fácil de combinar con otros planes por la zona norte de la ciudad.",
+      "official_url": "https://www.realmadrid.com/es-ES/tour-bernabeu",
+      "url_verified": true,
+      "address": "Avenida de Concha Espina, 1, 28036 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Santiago Bernabéu: estadio del Real Madrid con museo y visitas guiadas."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Estadio Santiago Bernabéu: campo de juego del Real Madrid."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Estadio Bernabéu: podrán ver los trofeos de estos dos equipos y el túnel de vestuarios."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Bernabéu Stadium: explore the iconic home of Real Madrid and admire the club's legendary trophies."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Museo Naval de Madrid",
+      "description": "Museo dedicado a la historia naval española, con maquetas de barcos, instrumentos de navegación antiguos y piezas relacionadas con los grandes viajes de exploración. La entrada es gratuita, con una aportación voluntaria, lo que lo convierte en un plan accesible para toda la familia. Un buen complemento cultural cerca del Paseo del Prado.",
+      "official_url": "https://www.fundacionmuseonaval.com/museonavalmadrid.html",
+      "url_verified": true,
+      "address": "Paseo del Prado, 3, 28014 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Museo Naval: podrás ver restos del botín acumulado por Colón y otros navegantes pioneros."
+        },
+        {
+          "name": "Un Buen Día en Madrid",
+          "domain": "unbuendiaenmadrid.com",
+          "url": "https://unbuendiaenmadrid.com/planes-gratis-con-ninos-en-madrid/",
+          "evidence": "Museo Naval: colección de maquetas de barcos, instrumentos de navegación y mapas antiguos."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/10-cosas-hacer-madrid-ninos-0-8-anos",
+          "evidence": "Museo Naval: piezas y colecciones de valor histórico, artístico, científico y técnico relacionados con la historia naval de España."
+        },
+        {
+          "name": "esMadrid (Turismo Madrid)",
+          "domain": "esmadrid.com",
+          "url": "https://www.esmadrid.com/en/ultimate-family-guide-30-things-do-kids",
+          "evidence": "Naval Museum: fascinating voyage into maritime history."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Palacio Real de Madrid",
+      "description": "Residencia oficial de la Familia Real española, aunque hoy se usa solo para actos protocolarios, con salones de gran ornamentación abiertos a las visitas. Los miércoles y sábados se puede ver el Cambio de Guardia Solemne, un espectáculo con uniformes de época y música en directo que suele llamar mucho la atención de los niños. Una manera de acercar la historia y la arquitectura a la familia sin necesidad de explicaciones largas.",
+      "official_url": "https://www.patrimonionacional.es/visita/palacio-real-de-madrid",
+      "url_verified": true,
+      "address": "Calle de Bailén, s/n, 28071 Madrid",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Sortir amb Nens",
+          "domain": "sortirambnens.com",
+          "url": "https://www.sortirambnens.com/es/actividades/viajar-con-ninos/madrid-con-ninos-y-ninas-las-mejores-actividades/",
+          "evidence": "Palacio Real de Madrid: mayor residencia real de Europa."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Cambio de Guardia en el Palacio Real: espectáculo gratuito los miércoles y sábados."
+        },
+        {
+          "name": "Un Buen Día en Madrid",
+          "domain": "unbuendiaenmadrid.com",
+          "url": "https://unbuendiaenmadrid.com/planes-gratis-con-ninos-en-madrid/",
+          "evidence": "Palacio Real: cambio de guardia los miércoles y sábados."
+        },
+        {
+          "name": "Civitatis (blog)",
+          "domain": "civitatis.com",
+          "url": "https://www.civitatis.com/blog/planes-ninos-comunidad-madrid/",
+          "evidence": "Palacio Real: tour por el Palacio Real para niños."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Teatro de Títeres de El Retiro",
+      "description": "Espacio municipal al aire libre dentro del Parque de El Retiro, con programación de marionetas y teatro de objetos todos los fines de semana. Las funciones son gratuitas y suelen combinar humor, música e historias sencillas pensadas para los más pequeños. Un plan corto y sin coste, fácil de combinar con un paseo por el parque.",
+      "official_url": "https://teatrotiteresretiro.es",
+      "url_verified": true,
+      "address": "Avenida de México, s/n, 28009 Madrid",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "Títeres del Retiro: desde los años 50, funciones de marionetas los fines de semana en el parque."
+        },
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Teatro de Títeres de El Retiro: espacio cultural al aire libre en mitad del Parque del Retiro."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Teatro de Títeres en El Retiro: funciones gratuitas todos los fines de semana."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "MUNCYT Alcobendas",
+      "description": "Sede en Alcobendas del Museo Nacional de Ciencia y Tecnología, con piezas históricas de la ciencia y la técnica españolas y exposiciones pensadas para experimentar de forma interactiva. Organiza también talleres familiares centrados en física, tecnología y descubrimiento. Un plan educativo de interior, con entrada gratuita, muy útil para días de lluvia.",
+      "official_url": "https://muncyt.es/sobre-el-museo/sedes/muncyt-alcobendas",
+      "url_verified": true,
+      "address": "Calle Pintor Velázquez, 5, 28100 Alcobendas, Madrid",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Madrid Secreto",
+          "domain": "madridsecreto.co",
+          "url": "https://madridsecreto.co/planes-ninos-madrid/",
+          "evidence": "MUNCYT (Museo Nacional de Ciencia y Tecnología): exposiciones interactivas con entrada gratuita."
+        },
+        {
+          "name": "Time Out Madrid",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/madrid/es/que-hacer/planes-con-ninos-en-madrid",
+          "evidence": "Museo Nacional de Ciencia y Tecnología: espacio dedicado a que niños y adultos aprendan de manera interactiva sobre física."
+        },
+        {
+          "name": "Madrid Happy People",
+          "domain": "madridhappypeople.com",
+          "url": "https://www.madridhappypeople.com/ocio-madrid/category/planes-madrid/planes-con-ninos-madrid/",
+          "evidence": "Museo de Ciencia y Tecnología: exposiciones permanentes y temporales con acceso gratuito."
+        }
+      ]
+    }
+  ]
+}

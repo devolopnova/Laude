@@ -1,0 +1,459 @@
+{
+  "province": "Alicante",
+  "province_slug": "alicante",
+  "generated_at": "2026-08-23",
+  "searches": [
+    "planes con niños Alicante",
+    "actividades con niños Alicante",
+    "qué hacer con niños Alicante"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se analizaron 10 fuentes únicas dentro de los 5 primeros resultados orgánicos de cada una de las 3 búsquedas (15 posiciones totales, con solapamiento entre búsquedas). 2 se descartaron en el cribado (Tripadvisor, por ser plataforma de reservas/atracciones; Barcelo, por ser web promocional de una cadena hotelera). De las 8 fuentes válidas, alicanteout.com aporta 2 artículos distintos (evidencias separadas, un único medio independiente). Se completaron los 18 lugares (15 primary + 3 backup) sin necesidad de rellenar con candidatos débiles. Regla de diversificación de patrimonio histórico/arqueológico aplicada: el Castillo de Santa Bárbara se considera exento de la restricción de posición (1-6) por su atractivo familiar claro y verificado (exposición temática para niños, zonas de picnic, actividades familiares) más allá de su valor puramente patrimonial; el Casco antiguo de Altea es el único lugar de tipo histórico/casco-histórico incluido en el primary (posición 9, fuera de las posiciones 1-6), muy por debajo del máximo de 2 permitidos. MARQ se trata como museo arqueológico interactivo moderno, no como ruina/casco histórico, por lo que no computa en esa restricción. Por criterio editorial de variedad y reconocimiento (más allá del recuento de evidencias, según permite la Fase A.5), se elevaron a la selección final varios lugares muy conocidos y diferenciadores pese a tener una sola evidencia textual en las fuentes analizadas: Terra Mítica (parque temático de referencia en Benidorm), Safari Aitana (único safari en coche de la Comunitat Valenciana), Museo del Juguete de Ibi (propuesta cultural única de la provincia) y, como backup, Aqualandia y Río Safari Elche.",
+  "sources_analyzed": [
+    {
+      "name": "Familias en Ruta - Alicante con niños, 15 planes para no perderse",
+      "domain": "familiasenruta.com",
+      "url": "https://familiasenruta.com/destinos/alicante-con-ninos/",
+      "title": "Alicante con niños, 15 planes para no perderse",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 16
+    },
+    {
+      "name": "AlicanteOut - Alicante con niños",
+      "domain": "alicanteout.com",
+      "url": "https://alicanteout.com/alicante-con-ninos/",
+      "title": "Planes con Niños en Alicante. Alicante con Niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 7
+    },
+    {
+      "name": "Tour & Kids - 10 planes con niños en la provincia de Alicante",
+      "domain": "tourandkids.com",
+      "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante",
+      "title": "10 Planes para hacer con niños en la Provincia de Alicante",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "AlicanteOut - Planes con niños en Alicante",
+      "domain": "alicanteout.com",
+      "url": "https://alicanteout.com/planes-con-ninos-en-alicante/",
+      "title": "Planes con Niños en Alicante. Actividades para Niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 7
+    },
+    {
+      "name": "Locus Fugae by Experiencity - Planes con niños Alicante",
+      "domain": "locusfugae.com",
+      "url": "https://locusfugae.com/blog/planes-con-ninos-alicante",
+      "title": "Planes con niños Alicante: las mejores actividades para disfrutar en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Alicante Turismo (oficial) - Alicante con niños",
+      "domain": "alicanteturismo.com",
+      "url": "https://alicanteturismo.com/en/alicante-with-children/",
+      "title": "Alicante with children",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Tripadvisor - Las 10 mejores cosas que hacer con niños en Alicante",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g1064230-Activities-zft11306-Alicante_Costa_Blanca_Province_of_Alicante_Valencian_Community.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Alicante",
+      "included": false,
+      "exclusion_reason": "Plataforma de reservas/listado de atracciones reservables, no guía editorial",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Quenosvamos - Cosas que hacer en Alicante con niños",
+      "domain": "quenosvamos.com",
+      "url": "https://www.quenosvamos.com/alicante-con-ninos",
+      "title": "Cosas que hacer en Alicante con Niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Barcelo - Qué hacer en Alicante con niños",
+      "domain": "barcelo.com",
+      "url": "https://www.barcelo.com/guia-turismo/en/spain/alicante/things-to-do/alicante/",
+      "title": "Qué hacer en Alicante con niños, planes para todo tipo de...",
+      "included": false,
+      "exclusion_reason": "Web promocional de una cadena hotelera, no guía editorial independiente",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Planes para familias - Alicante",
+      "domain": "planesparafamilias.com",
+      "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/",
+      "title": "Qué hacer en Alicante con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 12
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "No se ha podido verificar una dirección de calle concreta para Isla de Tabarca (es una isla, no un punto único con dirección postal).",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "No se ha localizado una web oficial propia de Isla de Tabarca con suficiente seguridad (la visita se organiza a través de distintas navieras).",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "El Casco antiguo de Altea es un barrio, no un punto único; no se asigna una dirección de calle concreta.",
+        "place_rank": 9
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_low_confidence",
+        "message": "El Circuito de Trenes de Torrellano no tiene web propia dedicada; se usa como referencia oficial la web de la asociación que lo gestiona (AAAF), no un sitio del propio circuito.",
+        "place_rank": 12
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_shared",
+        "message": "Aqua Natura Benidorm no tiene un dominio oficial propio verificado de forma independiente: comparte web oficial con Terra Natura Benidorm (mismo operador, mismo recinto).",
+        "place_rank": 3
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "No se ha localizado una web oficial propia de Playa del Postiguet (playa municipal sin sitio dedicado).",
+        "place_rank": 16
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Terra Mítica aparece en una sola fuente de las analizadas; se incluye igualmente por su relevancia y reconocimiento como parque temático de referencia en Benidorm.",
+        "place_rank": 1
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Safari Aitana aparece en una sola fuente de las analizadas; se incluye igualmente por ser el único safari en coche de la Comunitat Valenciana y aportar diversidad de plan.",
+        "place_rank": 10
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Museo del Juguete de Ibi aparece en una sola fuente de las analizadas; se incluye igualmente por ser una propuesta cultural única en la provincia.",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Aqualandia aparece en una sola fuente de las analizadas.",
+        "place_rank": 14
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "Río Safari Elche aparece en una sola fuente de las analizadas.",
+        "place_rank": 5
+      },
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "No se ha podido verificar una dirección de calle exacta para Safari Aitana (solo referencia de carretera/kilómetro sin confirmación cruzada); se ha dejado como null.",
+        "place_rank": 10
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Terra Mítica",
+      "description": "Parque temático dividido en zonas ambientadas en el Egipto, Grecia, Roma e Iberia antiguos, con atracciones para distintas edades y espectáculos en directo durante el día. Combina emoción moderada con un hilo narrativo histórico pensado para que los niños disfruten sin darse cuenta de que están aprendiendo. Un clásico de Benidorm para pasar el día completo en familia.",
+      "official_url": "https://www.terramiticabenidorm.com/",
+      "url_verified": true,
+      "address": "Partida del Moralet, s/n, 03502 Benidorm (Alicante)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Parque temático con 32 atracciones ambientadas en civilizaciones mediterráneas" }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Terra Natura Benidorm",
+      "description": "Un parque zoológico donde caminar entre elefantes, tigres o leones sin barreras visibles, con hábitats que recrean Asia, América y el área mediterránea. Las rutas están pensadas para observar a los animales de cerca con explicaciones adaptadas a las familias. Un plan de naturaleza que se puede combinar con el parque acuático Aqua Natura, justo al lado.",
+      "official_url": "https://benidorm.terranatura.com/es/",
+      "url_verified": true,
+      "address": "Avda. Alcalde Eduardo Zaplana, cruce con CV-70, 03502 Benidorm (Alicante)",
+      "evidence_count": 5,
+      "independent_source_count": 4,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Parque faunístico de 322.000 m² con elefantes, tigres, leones y aves exóticas" },
+        { "name": "AlicanteOut", "domain": "alicanteout.com", "url": "https://alicanteout.com/alicante-con-ninos/", "evidence": "Parque para disfrutar de la naturaleza y el agua, con 'Sunset Experience'" },
+        { "name": "Tour & Kids", "domain": "tourandkids.com", "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante", "evidence": "Parque zoológico donde los niños viven aventuras con animales" },
+        { "name": "AlicanteOut", "domain": "alicanteout.com", "url": "https://alicanteout.com/planes-con-ninos-en-alicante/", "evidence": "Parque con experiencias guiadas al atardecer" },
+        { "name": "Locus Fugae", "domain": "locusfugae.com", "url": "https://locusfugae.com/blog/planes-con-ninos-alicante", "evidence": "Parque zoológico con recorridos temáticos para observar animales" }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Aqua Natura Benidorm",
+      "description": "Parque acuático de 40.000 m² junto a Terra Natura, con toboganes para todas las edades, zonas infantiles con castillos de agua y una piscina de olas con cascadas. Reúne atracciones suaves para los más pequeños y otras con más adrenalina para los mayores. Ideal para completar la visita al zoo con un chapuzón en familia.",
+      "official_url": "https://benidorm.terranatura.com/es/",
+      "url_verified": true,
+      "address": "Avda. Alcalde Eduardo Zaplana, cruce con CV-70, 03502 Benidorm (Alicante)",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "AlicanteOut", "domain": "alicanteout.com", "url": "https://alicanteout.com/alicante-con-ninos/", "evidence": "Atracción 'Jungle Race', pensada para competir en grupo" },
+        { "name": "Tour & Kids", "domain": "tourandkids.com", "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante", "evidence": "Parque acuático temático para diversión familiar" },
+        { "name": "AlicanteOut", "domain": "alicanteout.com", "url": "https://alicanteout.com/planes-con-ninos-en-alicante/", "evidence": "Atracción acuática pensada para competir en grupo" }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Castillo de Santa Bárbara",
+      "description": "Una fortaleza medieval en lo alto del monte Benacantil, con vistas de 360° sobre Alicante y el mar, a la que se puede subir a pie o en ascensor panorámico desde la playa del Postiguet. Dentro hay zonas de picnic y, según la temporada, exposiciones pensadas para que los niños descubran su historia jugando. Un plan que combina naturaleza, un poco de aventura y patrimonio en una sola visita.",
+      "official_url": "https://castillodesantabarbara.com/",
+      "url_verified": true,
+      "address": "Avenida Juan Bautista Lafora, s/n, 03001 Alicante",
+      "evidence_count": 6,
+      "independent_source_count": 5,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Fortaleza a 165 metros sobre el nivel del mar con vistas panorámicas de la ciudad" },
+        { "name": "AlicanteOut", "domain": "alicanteout.com", "url": "https://alicanteout.com/alicante-con-ninos/", "evidence": "Exposición 'El universo de Tintín' con más de 300 figuras y escenas" },
+        { "name": "AlicanteOut", "domain": "alicanteout.com", "url": "https://alicanteout.com/planes-con-ninos-en-alicante/", "evidence": "Museo con exposición 'El universo de Tintín'" },
+        { "name": "Alicante Turismo (oficial)", "domain": "alicanteturismo.com", "url": "https://alicanteturismo.com/en/alicante-with-children/", "evidence": "Fortaleza histórica con museo MUSA y actividades diseñadas para niños" },
+        { "name": "Quenosvamos", "domain": "quenosvamos.com", "url": "https://www.quenosvamos.com/alicante-con-ninos", "evidence": "Vistas de ciudad y mar, con zonas de picnic para el almuerzo en familia" },
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Fortaleza histórica con vistas de la ciudad" }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Río Safari Elche",
+      "description": "Un parque de animales y centro de conservación rodeado de más de 4.000 palmeras, con cerca de un centenar de especies. Incluye un recorrido en tren para ver a los animales desde dentro del recinto. Un plan de naturaleza cerca de Elche, algo menos conocido que otros parques de fauna de la provincia.",
+      "official_url": "https://riosafari.com/",
+      "url_verified": true,
+      "address": "CV-865, Elche-Santa Pola, km 4, 03296 Elche (Alicante)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Parque zoológico con fauna diversa" }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "DinoPark Algar",
+      "description": "Un parque temático junto a las Fuentes del Algar donde pasear entre dinosaurios a tamaño real que se mueven y rugen. Tiene zona de juegos, un patio paleontológico para excavar réplicas de fósiles y una proyección en 3D. Pensado para que los más pequeños se acerquen a la prehistoria jugando.",
+      "official_url": "https://www.dinopark.es/es/algar",
+      "url_verified": true,
+      "address": "Partida Segarra, s/n, 03811 Callosa d'en Sarrià (Alicante)",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Jardín botánico con réplicas de dinosaurios, parque infantil, zona de excavación y proyección 3D" },
+        { "name": "Quenosvamos", "domain": "quenosvamos.com", "url": "https://www.quenosvamos.com/alicante-con-ninos", "evidence": "Parque educativo con réplicas de dinosaurios a tamaño real" },
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Atracción temática de dinosaurios en Callosa d'en Sarrià" }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "MARQ - Museo Arqueológico de Alicante",
+      "description": "El Museo Arqueológico de Alicante presenta la historia de la provincia a través de salas interactivas, recreaciones y recursos audiovisuales, lejos de las vitrinas tradicionales. Tiene itinerarios y actividades pensados específicamente para público familiar. Una forma amena de acercar la arqueología a los niños en un día de museo.",
+      "official_url": "https://www.marqalicante.com/",
+      "url_verified": true,
+      "address": "Plaza Doctor Gómez Ulla, s/n, 03013 Alicante",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        { "name": "Tour & Kids", "domain": "tourandkids.com", "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante", "evidence": "Museo arqueológico con hallazgos prehistóricos y actividades" },
+        { "name": "Locus Fugae", "domain": "locusfugae.com", "url": "https://locusfugae.com/blog/planes-con-ninos-alicante", "evidence": "Museo arqueológico con exposiciones que permiten actividades lúdicas e interactivas" },
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Centro con exhibiciones arqueológicas" }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Museo de las Ilusiones",
+      "description": "Un museo interactivo en el centro de Alicante con más de 70 instalaciones entre espejos, ilusiones ópticas y juegos de percepción. Todo se puede tocar y fotografiar, así que los niños aprenden nociones de física y óptica jugando. Un plan de interior perfecto para un día de lluvia o de mucho calor.",
+      "official_url": "https://www.ilusionesalicante.es/",
+      "url_verified": true,
+      "address": "Avenida Doctor Ramón y Cajal, 8, 03003 Alicante",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Más de 70 atracciones basadas en espejos, puzzles, figuras geométricas y efectos de luz" },
+        { "name": "Alicante Turismo (oficial)", "domain": "alicanteturismo.com", "url": "https://alicanteturismo.com/en/alicante-with-children/", "evidence": "Museo interactivo que despierta la imaginación de los niños" }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Casco antiguo de Altea",
+      "description": "El barrio antiguo de Altea, con calles blancas y empinadas coronadas por la cúpula azul de la iglesia de Nuestra Señora del Consuelo, es un paseo tranquilo y muy fotogénico para hacer en familia. Hay talleres de artistas, pequeñas tiendas de artesanía y miradores con vistas al Mediterráneo. Un plan sin prisa, ideal para combinar con una tarde de playa cercana.",
+      "official_url": "https://altea.es/venue/casco-antiguo/",
+      "url_verified": true,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Pueblo con casco histórico tradicional, iglesia con cúpula colorida y tiendas de artesanía" },
+        { "name": "Tour & Kids", "domain": "tourandkids.com", "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante", "evidence": "Pueblo con calles blancas empinadas ideal para paseos y fotografía" }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Safari Aitana",
+      "description": "Un safari que se recorre en coche propio por espacios abiertos donde conviven leones, tigres, jirafas o rinocerontes sin jaulas de por medio. El recorrido está dividido por zonas geográficas (África, Asia, América...) y termina con una parte a pie con animales más pequeños. Una experiencia de naturaleza distinta a la de un zoo convencional, la única de este tipo en la Comunitat Valenciana.",
+      "official_url": "https://safariaitana.es/",
+      "url_verified": true,
+      "address": null,
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        { "name": "Quenosvamos", "domain": "quenosvamos.com", "url": "https://www.quenosvamos.com/safari-aitana", "evidence": "Safari semi-salvaje donde observar especies exóticas como leones, tigres, jirafas y rinocerontes desde el vehículo y a pie" }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Tirolinas Go! Alicante",
+      "description": "Parque de aventura en árboles en plena naturaleza, con varios circuitos según la edad y la experiencia, puentes colgantes, redes y tirolinas de hasta 250 metros. Los niños a partir de 5 años pueden hacer los circuitos más sencillos acompañados de un adulto. Un plan activo para pasar la mañana entre pinos, a pocos minutos de Benidorm.",
+      "official_url": "https://tirolinasgo.com/alicante/",
+      "url_verified": true,
+      "address": "Carrer de Guadalest, 2, 03530 La Nucía (Alicante)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Parque de aventura forestal con tirolinas de hasta 300 metros, para mayores de 5 años" },
+        { "name": "Tour & Kids", "domain": "tourandkids.com", "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante", "evidence": "Actividad de árboles con tirolinas de hasta 300 metros" }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Circuito de Trenes de Torrellano",
+      "description": "Un pequeño tren a escala real, construido y mantenido por un grupo de aficionados al ferrocarril, que recorre 660 metros junto a la antigua estación de Torrellano. Es un plan corto, económico y muy sencillo, ideal para los niños más pequeños que todavía no piden grandes atracciones. Abre solo algunos días al mes, así que conviene comprobar el horario antes de ir.",
+      "official_url": "https://www.aaaf.org/horarios",
+      "url_verified": true,
+      "address": "Antiguo muelle de mercancías, Estación de Torrellano, Elche (Alicante)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Locus Fugae", "domain": "locusfugae.com", "url": "https://locusfugae.com/blog/planes-con-ninos-alicante", "evidence": "Recorrido en minitrén a pequeña escala, plan económico y atractivo para niños pequeños" },
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Atracción ferroviaria para niños" }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Huerto del Cura",
+      "description": "Un jardín histórico dentro del Palmeral de Elche, Patrimonio de la Humanidad por la Unesco, con casi 500 palmeras entre las que destaca la Palmera Imperial. Sus senderos son fáciles de recorrer con niños y ofrecen un rato tranquilo a la sombra, muy distinto al resto de planes de la provincia. Una buena parada si se visita Elche en familia.",
+      "official_url": "https://huertodelcura.com/",
+      "url_verified": true,
+      "address": "Calle Porta de la Morera, 49, 03203 Elche (Alicante)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Tour & Kids", "domain": "tourandkids.com", "url": "https://tourandkids.com/es/blog/10-planes-para-hacer-con-ninos-en-la-provincia-de-alicante", "evidence": "Patrimonio UNESCO con experiencias educativas para niños" },
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Jardín Artístico Nacional con palmerales" }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Aqualandia",
+      "description": "Uno de los parques acuáticos más veteranos de Benidorm, situado en el Parque Natural de Sierra Helada, con más de 15 atracciones de agua para todas las edades. Tiene zonas tranquilas para los más pequeños y toboganes con más adrenalina para los mayores. Un clásico de la Costa Blanca para un día de chapuzones en familia.",
+      "official_url": "https://www.aqualandiabenidorm.com/es/",
+      "url_verified": true,
+      "address": "Sierra Helada, s/n, 03503 Benidorm (Alicante)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Parque acuático con decenas de atracciones, considerado uno de los mayores de Europa" }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Museo del Juguete de Ibi",
+      "description": "Un museo instalado en la antigua fábrica de juguetes Payá, en Ibi, la localidad conocida como la capital juguetera de España. Reúne miles de piezas históricas, desde juguetes de hojalata hasta las primeras muñecas de plástico, y tiene una ludoteca para que los niños jueguen de verdad. Un plan curioso para familias a las que les gusten los museos distintos.",
+      "official_url": "https://www.museojuguete.com/",
+      "url_verified": true,
+      "address": "Glorieta D. Nicolás Payá Jover, 1, 03440 Ibi (Alicante)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Ubicado en la antigua fábrica de los hermanos Payá, con ludoteca y colecciones de juguetes clásicos" }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Playa del Postiguet",
+      "description": "La playa urbana de Alicante, junto al puerto y a los pies del Castillo de Santa Bárbara, con arena fina y aguas tranquilas. Tiene todos los servicios cerca (chiringuitos, duchas, zonas de juego infantil) y se llega caminando desde el centro. Un plan sencillo para completar cualquier día de turismo por la ciudad con un rato de playa.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Playa del Postiguet, 03001 Alicante",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Alicante Turismo (oficial)", "domain": "alicanteturismo.com", "url": "https://alicanteturismo.com/en/alicante-with-children/", "evidence": "Playas con zonas de juego diseñadas para niños" },
+        { "name": "Planes para familias", "domain": "planesparafamilias.com", "url": "https://planesparafamilias.com/lugares/comunidad-valenciana/alicante/", "evidence": "Playa del Postiguet, con aguas tranquilas y seguras para niños" }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Isla de Tabarca",
+      "description": "La isla habitada más pequeña del Mediterráneo, a la que se llega en barco desde Alicante o Santa Pola en poco más de media hora. Sus aguas transparentes y poco profundas, dentro de una reserva marina, son perfectas para que los niños se bañen y descubran los fondos marinos con tubo y gafas de buceo. Un plan de playa distinto, con paseo en barco incluido.",
+      "official_url": null,
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        { "name": "Familias en Ruta", "domain": "familiasenruta.com", "url": "https://familiasenruta.com/destinos/alicante-con-ninos/", "evidence": "Isla de 2 km con fondos marinos protegidos, ideal para buceo y actividades acuáticas familiares" },
+        { "name": "Locus Fugae", "domain": "locusfugae.com", "url": "https://locusfugae.com/blog/planes-con-ninos-alicante", "evidence": "Excursión en barco hacia isla con posibilidades de baño y exploración" },
+        { "name": "Alicante Turismo (oficial)", "domain": "alicanteturismo.com", "url": "https://alicanteturismo.com/en/alicante-with-children/", "evidence": "Accesible por barco, ofrece una experiencia mágica para los niños" }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Museu de Fogueres",
+      "description": "Un museo que explica, con trajes, fotografías y las figuras 'ninots' que cada año se libran de la quema, la fiesta más importante de Alicante: las Hogueras de San Juan. La entrada es gratuita y está en pleno centro, junto a la Explanada. Una manera curiosa de que los niños entiendan una tradición local antes de vivirla en directo en junio.",
+      "official_url": "https://www.hogueras.es/",
+      "url_verified": true,
+      "address": "Rambla de Méndez Núñez, 29, 03002 Alicante",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        { "name": "Locus Fugae", "domain": "locusfugae.com", "url": "https://locusfugae.com/blog/planes-con-ninos-alicante", "evidence": "Museo dedicado a las Hogueras de San Juan, entrada gratuita" },
+        { "name": "Alicante Turismo (oficial)", "domain": "alicanteturismo.com", "url": "https://alicanteturismo.com/en/alicante-with-children/", "evidence": "Museo de las Hogueras, tradiciones festivas locales" }
+      ]
+    }
+  ]
+}

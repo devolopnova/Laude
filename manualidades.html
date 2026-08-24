@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/067dce5e5b2c3eeb8cc1f8f51d3c14a8.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88T9H9C650"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-88T9H9C650');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manualidades para hacer en casa con niños | Lauderem</title>
+<link rel="canonical" href="https://www.lauderem.com/manualidades.html">
+<meta name="description" content="Manualidades fáciles, dibujo y pintura, papel, cartón y más ideas para crear en casa con niños, organizadas por tipo de actividad y edad orientativa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Guía de Regalos", "item": "guia-regalos-juguetes.html"},
+    {"@type": "ListItem", "position": 2, "name": "Planes en casa", "item": "planes-en-casa.html"},
+    {"@type": "ListItem", "position": 3, "name": "Manualidades", "item": "manualidades.html"}
+  ]
+}
+</script>
+<style>
+  /* Hub de "Manualidades" dentro de Planes en casa. Reutiliza .pec-act-callout
+     (mismo bloque de supervision que las paginas de actividad) y define un
+     sistema de tarjetas propio (.pec-hub-*) en grid de 2 columnas, distinto
+     del flex de 5 tarjetas de planes-en-casa.html porque aqui son 8 y el
+     encargo pide explicitamente 2 columnas / 1 en movil. */
+  .pec-hub-crumb{margin-bottom:14px;}
+  .pec-hub-crumb-link{color:var(--accent);font-weight:600;}
+  .pec-hub-crumb-link:hover{text-decoration:underline;}
+
+  /* Cabecera fotografica del hub, variante "lateral": la foto elegida
+     (Pexels, ver tools/process_hero_photos.py) es vertical, asi que en
+     vez del banner horizontal a ancho completo (usado en Juegos/Crear y
+     construir/Cocinar juntos) va en una columna fija junto al texto. */
+  .pec-hero-split{display:flex;align-items:stretch;gap:32px;margin-top:20px;min-height:320px;}
+  .pec-hero-split-photo{flex:0 0 300px;border-radius:20px;overflow:hidden;}
+  .pec-hero-split-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .pec-hero-split-content{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding-top:4px;}
+  .pec-hero-split-content .cat-hero-2-body{margin-top:18px;max-width:100%;}
+  @media (max-width:768px){
+    .pec-hero-split{flex-direction:column;gap:20px;min-height:0;}
+    .pec-hero-split-photo{flex:0 0 auto;height:240px;}
+  }
+
+  .pec-act-callout{
+    margin-top:44px;padding:16px 20px;border-left:3px solid var(--accent);
+    background:color-mix(in srgb, var(--accent) 6%, var(--card));
+    border-radius:0 10px 10px 0;color:var(--ink);font-size:14.5px;line-height:1.7;max-width:660px;
+  }
+  .pec-hub-section{margin-top:44px;}
+  .pec-hub-section h2{font-size:20px;margin-bottom:8px;}
+  .pec-hub-section > p{color:var(--ink-soft);font-size:14.5px;max-width:560px;}
+  .pec-hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px;}
+  .pec-hub-card{
+    display:flex;align-items:flex-start;gap:14px;
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:18px 20px;text-decoration:none;color:inherit;
+    transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+  a.pec-hub-card:hover{
+    border-color:color-mix(in srgb, var(--accent) 45%, var(--line));
+    box-shadow:0 6px 18px rgba(44,44,42,.07);transform:translateY(-2px);
+  }
+  .pec-hub-card--pending{opacity:.55;cursor:default;}
+  .pec-hub-card-icon{
+    width:42px;height:42px;border-radius:50%;flex-shrink:0;
+    background:color-mix(in srgb, var(--accent) 14%, #fff);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;font-size:18px;
+  }
+  .pec-hub-card-body{flex:1;display:flex;flex-direction:column;gap:6px;}
+  .pec-hub-card-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+  .pec-hub-card-title{font-family:'Fredoka',sans-serif;font-weight:600;font-size:15.5px;color:var(--ink);}
+  .pec-hub-card-age{
+    font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--accent);
+    background:color-mix(in srgb, var(--accent) 12%, white);border-radius:999px;padding:3px 9px;white-space:nowrap;
+  }
+  .pec-hub-card-desc{font-size:13px;color:var(--ink-soft);line-height:1.55;}
+  .pec-hub-card-arrow{align-self:center;color:var(--accent);font-size:16px;flex-shrink:0;transition:transform .2s ease;}
+  a.pec-hub-card:hover .pec-hub-card-arrow{transform:translateX(4px);}
+
+  /* Variante "premium" SOLO para las tarjetas de Manualidades, en prueba
+     antes de decidir si se extiende al resto de areas. Clase adicional
+     (nunca sobre .pec-hub-card directamente) para no afectar a los otros
+     hubs, que tienen su propia copia de estos estilos en su propio
+     <style>. Cada tarjeta fija su tono via 2 variables inline
+     (--craft-bg / --craft-accent); todo lo demas (borde, pastilla de
+     edad, icono, hover) se deriva de esas dos con color-mix. */
+  .pec-hub-card.pec-hub-card--craft{
+    background:var(--craft-bg);
+    border:1px solid color-mix(in srgb, var(--craft-accent) 22%, var(--card));
+    box-shadow:none;
+  }
+  a.pec-hub-card.pec-hub-card--craft:hover{
+    border-color:var(--craft-accent);
+    box-shadow:0 10px 24px rgba(44,44,42,.09);
+    transform:translateY(-3px);
+    background:color-mix(in srgb, var(--craft-bg) 90%, var(--craft-accent) 10%);
+  }
+  .pec-hub-card--craft .pec-hub-card-icon{
+    width:46px;height:46px;font-size:19px;
+    background:color-mix(in srgb, var(--craft-accent) 18%, #fff);
+    color:var(--craft-accent);
+  }
+  .pec-hub-card--craft .pec-hub-card-title{font-size:16px;}
+  .pec-hub-card--craft .pec-hub-card-age{
+    color:var(--craft-accent);
+    background:color-mix(in srgb, var(--craft-accent) 15%, white);
+  }
+  .pec-hub-card--craft .pec-hub-card-arrow{color:var(--craft-accent);}
+
+  @media (max-width:768px){
+    .pec-hub-grid{grid-template-columns:1fr;}
+  }
+  footer p{margin-top:24px;}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559559964863356"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="/" aria-label="Ir a la página principal de Lauderem"><img src="images/cabecera/logohero/lauderem-logo-hero.svg" alt="Lauderem" width="130" height="32" loading="lazy" decoding="async"></a>
+    <a class="back" href="/">← Volver a la guía</a>
+  </nav>
+</header>
+
+<section class="cat-hero-2 wrap">
+  <div class="pec-hero-split">
+    <div class="pec-hero-split-photo">
+      <img src="images/cabecera/planes-en-casa/manualidades-hero.webp" alt="Niño pintando con acuarelas" width="700" height="900" loading="eager" decoding="async">
+    </div>
+    <div class="pec-hero-split-content">
+      <div class="cat-hero-2-chip pec-hub-crumb">
+        <i class="ti ti-palette" aria-hidden="true"></i>
+        <a class="pec-hub-crumb-link" href="planes-en-casa.html">Planes en casa</a> · Manualidades
+      </div>
+      <h1>Manualidades para hacer en casa con niños</h1>
+      <p class="cat-hero-2-subtitle">Ideas para crear, decorar y transformar materiales sencillos en proyectos para disfrutar juntos.</p>
+      <p class="cat-hero-2-body">Las manualidades son una forma sencilla de pasar un rato en casa creando algo juntos. No hace falta preparar grandes proyectos ni tener muchos materiales: con papel, cartón, pintura y algunos objetos cotidianos pueden surgir propuestas muy diferentes. Aquí reunimos ideas organizadas por tipo de manualidad y edad orientativa para que sea fácil encontrar una propuesta que encaje con cada momento.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:40px">
+
+  <section class="pec-hub-section">
+    <h2>Explora las manualidades</h2>
+    <p>Diez formas de crear en casa, organizadas por tipo de actividad y edad orientativa.</p>
+    <div class="pec-hub-grid">
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-faciles.html" style="--craft-bg:#FBF1F1;--craft-accent:#C17E89">
+        <span class="pec-hub-card-icon"><i class="ti ti-palette" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades fáciles</span>
+            <span class="pec-hub-card-age">A partir de 2 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Propuestas sencillas para empezar a crear con pocos materiales y pasos fáciles de seguir.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="dibujo-y-pintura.html" style="--craft-bg:#FCF4EC;--craft-accent:#D08A5A">
+        <span class="pec-hub-card-icon"><i class="ti ti-brush" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Dibujo y pintura</span>
+            <span class="pec-hub-card-age">A partir de 2 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Ideas para experimentar con colores, trazos, formas y diferentes maneras de pintar.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-con-papel.html" style="--craft-bg:#F5F2FA;--craft-accent:#8D7CB5">
+        <span class="pec-hub-card-icon"><i class="ti ti-cut" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades con papel</span>
+            <span class="pec-hub-card-age">A partir de 4 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Proyectos para crear figuras, decoraciones y pequeños escenarios utilizando principalmente papel.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-con-carton.html" style="--craft-bg:#F8F4EC;--craft-accent:#A9835A">
+        <span class="pec-hub-card-icon"><i class="ti ti-crane" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades con cartón</span>
+            <span class="pec-hub-card-age">A partir de 4 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Ideas para transformar cajas y piezas de cartón en objetos, construcciones y pequeños mundos para jugar.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-con-materiales-reciclados.html" style="--craft-bg:#F1F6F1;--craft-accent:#6E9370">
+        <span class="pec-hub-card-icon"><i class="ti ti-recycle" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades con materiales reciclados</span>
+            <span class="pec-hub-card-age">A partir de 4 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Propuestas para dar una nueva vida a cajas, tubos y otros materiales cotidianos.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="recortar-y-pegar.html" style="--craft-bg:#F0F4F7;--craft-accent:#5F7D95">
+        <span class="pec-hub-card-icon"><i class="ti ti-scissors" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Recortar y pegar</span>
+            <span class="pec-hub-card-age">A partir de 5 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Collages, composiciones y creaciones en las que cortar, combinar y pegar forman parte del proceso.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-con-varios-pasos.html" style="--craft-bg:#FBF8EA;--craft-accent:#AD8B2E">
+        <span class="pec-hub-card-icon"><i class="ti ti-list-numbers" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades con varios pasos</span>
+            <span class="pec-hub-card-age">A partir de 5 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Proyectos algo más elaborados para quienes quieren dedicar más tiempo a crear.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="construcciones-con-plastilina.html" style="--craft-bg:#FBF0EC;--craft-accent:#C08267">
+        <span class="pec-hub-card-icon"><i class="ti ti-hand-stop" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Construcciones con plastilina</span>
+            <span class="pec-hub-card-age">A partir de 5 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Torres, puentes y estructuras hechas únicamente con plastilina.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-de-creacion-y-diseno.html" style="--craft-bg:#F3F1FA;--craft-accent:#7C74B3">
+        <span class="pec-hub-card-icon"><i class="ti ti-bulb" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades de creación y diseño</span>
+            <span class="pec-hub-card-age">A partir de 6 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Proyectos para imaginar, diseñar y decidir cómo será el resultado final de cada manualidad.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+      <a class="pec-hub-card pec-hub-card--craft" href="manualidades-creativas-avanzadas.html" style="--craft-bg:#FAF1EC;--craft-accent:#B87049">
+        <span class="pec-hub-card-icon"><i class="ti ti-award" aria-hidden="true"></i></span>
+        <span class="pec-hub-card-body">
+          <span class="pec-hub-card-head">
+            <span class="pec-hub-card-title">Manualidades creativas avanzadas</span>
+            <span class="pec-hub-card-age">A partir de 7 años</span>
+          </span>
+          <span class="pec-hub-card-desc">Propuestas más elaboradas que requieren mayor precisión, planificación o varios materiales.</span>
+        </span>
+        <span class="pec-hub-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+      </a>
+
+    </div>
+  </section>
+
+  <p class="pec-act-callout"><strong>Las edades son orientativas.</strong> Cada niño puede disfrutar de una actividad de forma diferente y algunas propuestas pueden requerir más o menos ayuda según sus características y la dificultad de cada actividad. <strong>Todas las actividades deben realizarse siempre bajo la supervisión de un adulto responsable</strong>, utilizando materiales adecuados para la edad y siguiendo las indicaciones de seguridad correspondientes.</p>
+
+</section>
+
+
+</body>
+</html>

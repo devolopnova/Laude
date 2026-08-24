@@ -1,0 +1,82 @@
+<!--
+  place_card_template.html
+
+  Plantilla de referencia para una tarjeta de lugar de "Planes en familia"
+  (lugares y actividades familiares fuera de casa, organizados por
+  provincia — ver .claude/skills/planes-familia). La procesa
+  tools/apply_plan_familia.py al ejecutar "aplicar plan [PROVINCIA]"; este
+  archivo existe para que el diseño de la tarjeta se pueda revisar o
+  modificar sin leer el .py, igual que product_card_template.html hace
+  para las fichas de producto.
+
+  DISEÑO v3 (2026-08-19, en revisión visual, todavía sin icono temático
+  ni fotografía — fase posterior pendiente de aprobación): tarjeta
+  HORIZONTAL de 2 zonas, no 4 columnas con líneas divisorias. A la
+  izquierda, un bloque fijo de numeración (120-140px). A la derecha, UNA
+  única columna que ocupa todo el ancho restante con nombre, descripción,
+  dirección y enlace apilados uno debajo del otro (nunca en subcolumnas
+  separadas).
+
+  Fuente de los datos: el array "places" de
+  tools/output/planes-familia/<provincia>/plan.json, filtrado a
+  status == "primary" (nunca "backup") y ordenado por "rank". Los campos
+  se vuelcan literalmente — la redacción editorial ya ocurrió en la Fase
+  A.7 del skill, "aplicar plan" no reescribe ningún texto.
+
+  Placeholders a sustituir: {{RANK}} (número tal cual, 1-15),
+  {{RANK_2D}} (mismo rank con dos dígitos: 01, 02... 15), {{NOMBRE}},
+  {{DESCRIPCION}}, {{DIRECCION}}, {{URL_OFICIAL}}.
+
+  Los comentarios PLACE START / PLACE END son el marcador que permite
+  localizar un bloque completo por posición (rank) sin depender del resto
+  del formato del HTML, igual que PRODUCT START/END en las fichas de
+  producto — pensado para una futura reaplicación selectiva tras
+  "actualizar plan", aunque hoy la página completa se regenera entera en
+  cada aplicación (más simple, y suficiente mientras estas páginas sean
+  enteramente generadas por script, nunca editadas a mano).
+
+  Reglas:
+  - El número (.pf-place-rank) es un elemento editorial/visual, nunca un
+    ranking agresivo de "mejor a peor" — por eso lleva aria-hidden="true"
+    (el orden ya lo transmite el propio DOM para lectores de pantalla).
+    Siempre con dos dígitos (rank < 10 lleva cero delante). Ancho fijo
+    120-140px, centrado vertical y horizontalmente.
+  - La columna de contenido (.pf-place-content) es única: nombre arriba,
+    descripción debajo (a todo el ancho restante, sin recortarse a una
+    fracción de la tarjeta), dirección debajo de la descripción, enlace
+    debajo de la dirección. Dirección y enlace van uno debajo del otro,
+    nunca lado a lado ni en columnas separadas por líneas divisorias.
+  - Nunca imágenes ni iconos temáticos por lugar en esta primera versión
+    (el esquema de plan.json no tiene campo de imagen; la biblioteca de
+    iconos es una fase posterior, pendiente de aprobar este diseño
+    primero).
+  - Si "address" es null en plan.json, se omite el bloque .pf-place-loc
+    completo (nunca inventar ni dejar una dirección vacía).
+  - Si "official_url" es null, se omite el bloque .pf-place-cta completo
+    (nunca inventar una URL).
+  - El enlace a la web oficial es un enlace externo normal: NUNCA lleva
+    el parámetro de afiliado de Amazon (?tag=...) ni su lógica —
+    "Planes en familia" no es contenido patrocinado. Lleva
+    target="_blank" rel="noopener" (sin "nofollow": no es un enlace
+    patrocinado/de afiliación). Es un enlace editorial subrayado
+    (.pf-place-cta), no un botón con borde.
+  - En móvil (≤860px) la fila se apila verticalmente por CSS
+    (.pf-place-row pasa a flex-direction:column, el número se convierte
+    en una insignia pequeña arriba) — el HTML no cambia, solo el layout.
+-->
+<!-- PLACE START rank="{{RANK}}" -->
+<article class="pf-place-row" data-rank="{{RANK}}">
+  <div class="pf-place-rank" aria-hidden="true">{{RANK_2D}}</div>
+  <div class="pf-place-content">
+    <h3 class="pf-place-name">{{NOMBRE}}</h3>
+    <p class="pf-place-desc">{{DESCRIPCION}}</p>
+    <!-- Omitir esta línea si address es null -->
+    <span class="pf-place-loc">
+      <i class="ti ti-map-pin" aria-hidden="true"></i>
+      <span>{{DIRECCION}}</span>
+    </span>
+    <!-- Omitir esta línea si official_url es null -->
+    <a class="pf-place-cta" href="{{URL_OFICIAL}}" target="_blank" rel="noopener">Visitar web oficial <i class="ti ti-external-link" aria-hidden="true"></i></a>
+  </div>
+</article>
+<!-- PLACE END rank="{{RANK}}" -->

@@ -1,0 +1,690 @@
+{
+  "province": "Barcelona",
+  "province_slug": "barcelona",
+  "generated_at": "2026-08-19",
+  "searches": [
+    "planes con niños Barcelona",
+    "actividades con niños Barcelona",
+    "qué hacer con niños Barcelona"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se analizaron los 5 primeros resultados orgánicos de cada una de las 3 búsquedas (15 posiciones candidatas, con solapes entre búsquedas -> 11 URLs únicas). 4 se descartaron en el cribado (Atrapalo, TripAdvisor y GetYourGuide por ser plataformas de reserva/directorio; Big Fun Museum por ser un artículo casi enteramente autopromocional de su propio negocio). Quedaron 7 fuentes válidas de 5 medios independientes (Mammaproof aporta 3 artículos distintos del mismo medio). Se seleccionaron exactamente 18 lugares (15 primary + 3 backup); no hizo falta rellenar artificialmente, había más candidatos con >=2 medios independientes de los que cupieron en 18 (CaixaForum, MNAC, SAT! Teatre, Ateneu Popular 9Barris, Paradox Museum, SENSAS Barcelona, Jungle Tag, House of Candy, L'Autèntica Teatre quedaron fuera). Puestos 9-15 y 16-18 se decidieron por criterio editorial (variedad de tipo de plan y reconocibilidad) entre varios lugares empatados a 2 medios independientes -- ver advertencias. AJUSTE MANUAL (revisión editorial): a petición del usuario, se intercambiaron los puestos 15 y 16 -- Aquarium Barcelona pasa a primary y Telefèric de Montjuïc pasa a backup. Este cambio no está respaldado por evidencia adicional entre fuentes, es una decisión editorial explícita.",
+  "sources_analyzed": [
+    {
+      "name": "Mammaproof",
+      "domain": "mammaproof.org",
+      "url": "https://www.mammaproof.org/barcelona/",
+      "title": "Lugares para ir con niños en Barcelona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 9
+    },
+    {
+      "name": "Mammaproof",
+      "domain": "mammaproof.org",
+      "url": "https://www.mammaproof.org/barcelona/planes-gratis-ninos-barcelona/",
+      "title": "Planes gratis para hacer con niños y niñas en Barcelona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 13
+    },
+    {
+      "name": "Mammaproof",
+      "domain": "mammaproof.org",
+      "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+      "title": "35 planes con niños en Barcelona recomendados por familias locales",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 36
+    },
+    {
+      "name": "Barcelona Secreta",
+      "domain": "barcelonasecreta.com",
+      "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+      "title": "Qué hacer con niños en Barcelona: 16 planes en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 22
+    },
+    {
+      "name": "Barcelona City Tour",
+      "domain": "barcelona.city-tour.com",
+      "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+      "title": "Visiting Barcelona with kids? Here are the best plans",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Time Out Barcelona",
+      "domain": "timeout.es",
+      "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+      "title": "Los 50 mejores sitios de Barcelona para ir con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 48
+    },
+    {
+      "name": "Un buen día en Barcelona",
+      "domain": "unbuendiaenbarcelona.com",
+      "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+      "title": "30 planes para niños (y para toda la familia) en Barcelona",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 37
+    },
+    {
+      "name": "Atrapalo",
+      "domain": "atrapalo.com",
+      "url": "https://www.atrapalo.com/actividades/barcelona/actividades-infantiles/",
+      "title": "Actividades infantiles en Barcelona Provincia",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva de actividades/tickets, no es una guía editorial de planes.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "TripAdvisor",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187497-Activities-zft11306-Barcelona_Catalonia.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Barcelona",
+      "included": false,
+      "exclusion_reason": "Directorio/plataforma de reservas de atracciones, no un listado editorial curado.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "GetYourGuide",
+      "domain": "getyourguide.com",
+      "url": "https://www.getyourguide.com/es-es/explorer/barcelona-ttd45/things-to-do-with-kids-in-barcelona/",
+      "title": "7 de las mejores cosas que hacer en Barcelona con niños",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva de tours/tickets como resultado principal.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Big Fun Museum",
+      "domain": "bigfunmuseum.com",
+      "url": "https://bigfunmuseum.com/blog/planes-ninos-barcelona/",
+      "title": "Actividades con niños en Barcelona: Guía para disfrutar en familia",
+      "included": false,
+      "exclusion_reason": "Artículo casi enteramente autopromocional de su propio negocio (solo lista salas internas del propio museo), no aporta un listado real de planes variados.",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "url_low_confidence",
+        "message": "Parc de la Ciutadella no tiene un dominio propio dedicado (es un parque público, no una institución con web propia); se usa la página institucional del Ajuntament de Barcelona como official_url, corroborada por varias fuentes independientes.",
+        "place_rank": 10
+      },
+      {
+        "severity": "warning",
+        "category": "url_low_confidence",
+        "message": "Llac de Can Dragó es gestionado por un operador privado (Eurofitness) bajo concesión municipal; se usa su página operativa como official_url en lugar de un dominio institucional dedicado.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "Puesto 9 (Museu Blau) se priorizó sobre otros candidatos con 2 medios independientes (CaixaForum, MNAC, Ateneu Popular 9Barris, Paradox Museum, SENSAS Barcelona) por tener una evidencia adicional y ofrecer variedad respecto a CosmoCaixa (naturaleza/biodiversidad frente a ciencia experimental).",
+        "place_rank": 9
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "Puestos 10-15 se decidieron por criterio editorial de variedad de tipo de plan (parque histórico, castillo/mirador, arte, jardín botánico, museo temático, teleférico) entre varios candidatos empatados a 2 medios independientes: quedaron fuera CaixaForum, MNAC, SAT! Teatre, Ateneu Popular 9Barris, Paradox Museum, SENSAS Barcelona, Jungle Tag, House of Candy y L'Autèntica Teatre, todos con evidencia similar.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "low_evidence",
+        "message": "Aquarium Barcelona solo se documentó en 1 de las 7 fuentes válidas (Barcelona City Tour). A petición explícita del usuario se promovió de backup a primary (puesto 15), intercambiando posición con Telefèric de Montjuïc (que pasa a backup, puesto 16) -- ajuste editorial manual, no basado en evidencia adicional encontrada.",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "editorial_tie_break",
+        "message": "Los 3 backups (puestos 16-18) quedaron, tras el ajuste manual del usuario, en: Telefèric de Montjuïc (alternativa de mirador/vistas, antes primary en el puesto 15), Llac de Can Dragó (plan de verano al aire libre) y Parc de l'Oreneta (parque con tren, alternativa a Parc de la Ciutadella).",
+        "place_rank": null
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "CosmoCaixa",
+      "description": "Museo de la ciencia de referencia en Barcelona, con un tramo de bosque amazónico recreado bajo techo, una gran sala dedicada a la evolución del universo y un planetario. Los niños pueden tocar, experimentar y hacer preguntas en un recorrido pensado para despertar curiosidad científica en familia. Cuenta también con un espacio propio para los más pequeños, Clik, y actividades prácticas que cambian según la temporada.",
+      "official_url": "https://cosmocaixa.org/es/",
+      "url_verified": true,
+      "address": "Carrer d'Isaac Newton, 26, 08022 Barcelona",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Museo de la ciencia con bosque inundado amazónico, planetario y actividades prácticas."
+        },
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "CosmoCaixa - Espacio CLIK, experiencia interactiva para niños de 3 a 11 años."
+        },
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Science museum with interactive exhibits and a recreated Amazonian ecosystem."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Museo de Ciencia con bosque inundado y máquinas interactivas."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Poble Espanyol",
+      "description": "Un recorrido a pie por réplicas a tamaño real de calles, plazas y edificios de toda España, construido para la Exposición Internacional de 1929. Es un plan sin tráfico ni prisas, con talleres de artesanía en directo y espacio de sobra para que los niños caminen y descubran cada rincón. Dentro conviven restaurantes, comercios y, en ocasiones, espectáculos pensados para el público familiar.",
+      "official_url": "https://www.poble-espanyol.com/",
+      "url_verified": true,
+      "address": "Avinguda de Francesc Ferrer i Guàrdia, 13, 08038 Barcelona",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Aldea al aire libre con talleres de artesanía y actividades culturales."
+        },
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Parque temático con arquitectura española típica."
+        },
+        {
+          "name": "Time Out Barcelona",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+          "evidence": "117 edificios españoles, talleres de panadería y artesanía, ambiente sin coches."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Museo arquitectónico al aire libre con talleres de artesanía y espectáculos de magia."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Barcelona Bosc Urbà",
+      "description": "Parque de aventura al aire libre en el Parc del Fòrum, con circuitos de tirolinas, puentes y plataformas organizados por edad y altura. Las familias pueden elegir entre recorridos más sencillos para los más pequeños y otros con mayor dificultad para niños con más experiencia trepando. Es un plan pensado para pasar la tarde al aire libre y gastar energía en un entorno controlado y con arnés.",
+      "official_url": "https://www.barcelonaboscurba.com/",
+      "url_verified": true,
+      "address": "Plaça del Fòrum, 2, 08019 Barcelona",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Parque de aventura con circuitos de altura, trampolines y niveles de dificultad desde 5 años."
+        },
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Circuito familiar de aventura al aire libre en Parc del Fòrum."
+        },
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Urban adventure park with zip lines, rope bridges and activities for different age groups."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Parque de aventuras con tirolinas, circuitos familiares y trampolines."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Tibidabo (Parc d'Atraccions)",
+      "description": "El parque de atracciones más antiguo de Barcelona, con más de un siglo de historia y vistas panorámicas de la ciudad desde lo alto de la montaña. Combina atracciones clásicas, como el avión giratorio original, con otras más modernas para distintas edades. La subida en sí, con el Tramvia Blau o el funicular, ya forma parte de la experiencia para los niños.",
+      "official_url": "https://www.tibidabo.cat/",
+      "url_verified": true,
+      "address": "Plaça del Tibidabo, 3-4, 08035 Barcelona",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/",
+          "evidence": "Parque de atracciones con experiencias de verano para familias."
+        },
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Parque centenario con atracciones para todas las edades e instalaciones renovadas."
+        },
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Más de 120 años de historia con atracciones modernas y espectáculos únicos."
+        },
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Historic amusement park with more than 25 attractions including a Ferris wheel and roller coasters."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "White Rabbit Barcelona",
+      "description": "Experiencia inmersiva en pleno Passeig de Gràcia dedicada a las tradiciones y la cultura popular catalana, sin vitrinas ni silencio obligado. Cada sala invita a tocar, moverse y fotografiar, combinando proyecciones envolventes, realidad virtual e instalaciones interactivas. Es una opción distinta para familias que buscan algo más sensorial que un museo tradicional.",
+      "official_url": "https://whiterabbit-theoffmuseum.com/",
+      "url_verified": true,
+      "address": "Passeig de Gràcia, 55, 08007 Barcelona",
+      "evidence_count": 4,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/",
+          "evidence": "Experiencia inmersiva para descubrir la cultura catalana en familia."
+        },
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Experiencia cultural inmersiva en Passeig de Gràcia con salas interactivas."
+        },
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Experiencia sensorial e inmersiva sobre tradiciones catalanas."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Diez salas interactivas sobre tradiciones catalanas con realidad virtual."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Zoo de Barcelona",
+      "description": "Parque zoológico centenario dentro del Parc de la Ciutadella, con miles de animales de cientos de especies distintas repartidos en un recorrido amplio y arbolado. Combina la visita a los animales con actividades educativas orientadas a la conservación, pensadas también para el público infantil. Su ubicación junto al parque permite alargar la visita con un paseo o un rato en el lago de barcas.",
+      "official_url": "https://zoobarcelona.cat/",
+      "url_verified": true,
+      "address": "Parc de la Ciutadella, s/n, 08003 Barcelona",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Más de 5.500 ejemplares de 400 especies diferentes en 32 hectáreas."
+        },
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Zoo with over 2,000 animals representing 300 different species, within Parc de la Ciutadella."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Zoo con actividades navideñas, Pasaporte de la Naturaleza y talleres experimentales."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "L'Auditori",
+      "description": "Sala de conciertos de referencia en Barcelona con una programación familiar propia, pensada para acercar la música clásica y contemporánea a los niños desde bebés. Incluye conciertos adaptados a distintas edades y ciclos didácticos que explican los instrumentos y las orquestas de forma sencilla. Es un buen plan para introducir a los más pequeños en la música en vivo sin perder el rigor de una sala profesional.",
+      "official_url": "https://www.auditori.cat/",
+      "url_verified": true,
+      "address": "Carrer de Lepant, 150, 08013 Barcelona",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Sala con talleres familiares y conciertos para bebés."
+        },
+        {
+          "name": "Time Out Barcelona",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+          "evidence": "Talleres familiares; conciertos para bebés (0-12 meses); visitas al Museu de la Música."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Conciertos, talleres para bebés y performances de orquesta diseñadas para familias."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "La Puntual (Teatre de Titelles)",
+      "description": "El teatro de titelles más pequeño e íntimo de Barcelona, con capacidad para apenas medio centenar de espectadores, especializado en marionetas, títeres y sombras chinescas. Su programación estable de fines de semana y festivos está pensada específicamente para público familiar. Al estar tan cerca del escenario, los niños viven la función casi como si formaran parte de ella.",
+      "official_url": "https://www.lapuntual.info/",
+      "url_verified": true,
+      "address": "Carrer Allada-Vermell, 15, 08003 Barcelona",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Teatro donde títeres, marionetas y sombras chinescas son los únicos protagonistas."
+        },
+        {
+          "name": "Time Out Barcelona",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+          "evidence": "Teatro de títeres, marionetas y sombras chinas; 50 plazas íntimas."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Espacio escénico con títeres, marionetas y sombras chinescas, además de talleres creativos."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Museu Blau (Museu de Ciències Naturals)",
+      "description": "Sede principal del Museu de Ciències Naturals de Barcelona, con una exposición permanente sobre la evolución de la vida en el planeta y un espacio propio, el Niu Viu, pensado para niños de 0 a 6 años. El edificio, amplio y luminoso, incluye también una mediateca y talleres que cambian según la época del año. Es una opción de museo de ciencia distinta a CosmoCaixa, con más peso en la biodiversidad y la naturaleza.",
+      "official_url": "https://museuciencies.cat/",
+      "url_verified": true,
+      "address": "Plaça de Leonardo da Vinci, 4-5, 08019 Barcelona",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/planes-gratis-ninos-barcelona/",
+          "evidence": "Entrada gratuita en días concretos; exposición Planeta Viu."
+        },
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Exposición Planeta Viu y espacio sensorial niu viu."
+        },
+        {
+          "name": "Time Out Barcelona",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+          "evidence": "Azotea con plantas; exposiciones sobre historia planetaria; espacio experimental para menores de 6 años."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Parc de la Ciutadella",
+      "description": "El gran parque histórico del centro de Barcelona, con jardines centenarios, una cascada monumental y un lago donde se pueden alquilar pequeñas barcas de remo. Es un plan sencillo y gratuito para pasar la tarde al aire libre, con zonas de juego infantil y espacio de sobra para correr. Comparte terreno con el Zoo de Barcelona, así que ambos planes se pueden combinar en la misma visita.",
+      "official_url": "https://ajuntament.barcelona.cat/ciutatvella/es/guia-del-districte/equipaments-temes/parc-de-la-ciutadella-92086011921",
+      "url_verified": true,
+      "address": "Passeig de Picasso, s/n, 08003 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Large urban park containing a zoo, described alongside the Barcelona Zoo entry."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Espacio verde principal con fuentes, estanque para alquilar barcas y zona de juego."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Castell de Montjuïc",
+      "description": "Antigua fortaleza militar en lo alto de la montaña de Montjuïc, con un centro de interpretación sobre su historia y vistas amplias sobre el puerto y la ciudad. Los fosos y las explanadas del castillo dan mucho espacio para que los niños se muevan mientras los adultos disfrutan del entorno. Se puede llegar caminando, en autobús o combinando la subida con el teleférico de Montjuïc.",
+      "official_url": "https://ajuntament.barcelona.cat/castelldemontjuic/",
+      "url_verified": true,
+      "address": "Carretera de Montjuïc, 66, 08038 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Castillo con juego de pistas familiar con prismáticos, brújula y linterna."
+        },
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Historic fortress with gardens and viewpoints, reached via the Montjuïc cable car."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Fundació Joan Miró",
+      "description": "Museo de arte moderno en Montjuïc dedicado a la obra de Joan Miró, con formas y colores que suelen resultar cercanos y comprensibles para los niños. Organiza talleres familiares en los que los más pequeños experimentan con las mismas ideas que inspiraron al artista. El edificio cuenta además con terrazas y un jardín de esculturas al aire libre que invita a pasear entre una sala y otra.",
+      "official_url": "https://www.fmirobcn.org/",
+      "url_verified": true,
+      "address": "Parc de Montjuïc, s/n, 08038 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Talleres familiares explorando el universo artístico de Miró."
+        },
+        {
+          "name": "Time Out Barcelona",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+          "evidence": "Pintura moderna comprensible para niños; actividades familiares; patio y jardín de esculturas."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Jardí Botànic de Barcelona",
+      "description": "Jardín botánico en la montaña de Montjuïc con colecciones de plantas mediterráneas de todo el mundo, organizadas por regiones de clima similar. Sus caminos en pendiente suave y los distintos paisajes según la época del año lo convierten en un paseo tranquilo para hacer en familia. Ofrece también actividades pensadas para que los niños observen y descubran la naturaleza por sí mismos.",
+      "official_url": "https://museuciencies.cat/es/el-nat/las-sedes/jardin-botanico-de-barcelona/",
+      "url_verified": true,
+      "address": "Carrer del Doctor Font i Quer, 2, 08038 Barcelona",
+      "evidence_count": 3,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/planes-gratis-ninos-barcelona/",
+          "evidence": "Entrada gratuita el primer domingo de mes y todos los domingos tras las 15h."
+        },
+        {
+          "name": "Mammaproof",
+          "domain": "mammaproof.org",
+          "url": "https://www.mammaproof.org/barcelona/que-hacer-ninos-barcelona/",
+          "evidence": "Mochila del naturalista para exploración autoguiada."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Juegos y ejercicios basados en la observación para aprender ciencias naturales."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Museu de la Xocolata",
+      "description": "Museo instalado en un antiguo convento del siglo XIV que recorre la historia del chocolate, desde su llegada a Europa hasta su lugar en la repostería actual. Incluye figuras hechas enteramente de chocolate y talleres en los que los niños pueden elaborar sus propias piezas. Es un plan que combina cultura y algo de dulce, pensado para todas las edades.",
+      "official_url": "https://museudelaxocolata.cat/",
+      "url_verified": true,
+      "address": "Carrer del Comerç, 36, 08003 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Museo con juegos, talleres y recorridos por su fábrica."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Historia del chocolate con obras de arte en chocolate y talleres."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Aquarium Barcelona",
+      "description": "Acuario situado en el Port Vell dedicado sobre todo a la fauna del Mediterráneo, con un túnel transparente de 80 metros que atraviesa el tanque de tiburones. El recorrido por las distintas salas permite ver de cerca especies marinas difíciles de observar en cualquier otro lugar de la ciudad. Es un plan de interior que funciona bien tanto en días de lluvia como en pleno verano.",
+      "official_url": "https://www.aquariumbcn.com/",
+      "url_verified": true,
+      "address": "Moll d'Espanya del Port Vell, s/n, 08039 Barcelona",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "35 different tanks, an 80-meter-long underwater tunnel, and an impressive collection of sharks."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Telefèric de Montjuïc",
+      "description": "Teleférico que sube desde el Parc de Montjuïc hasta el Castell, con cabinas panorámicas y vistas sobre el puerto y la ciudad durante todo el trayecto. Para muchos niños, el propio viaje en las cabinas ya es la parte más emocionante del plan. Es una forma cómoda de combinar la subida al castillo con las vistas, sin tener que caminar toda la cuesta.",
+      "official_url": "https://www.telefericdemontjuic.cat/ca",
+      "url_verified": true,
+      "address": "Avinguda de Miramar, 20-30, 08038 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Barcelona Secreta",
+          "domain": "barcelonasecreta.com",
+          "url": "https://barcelonasecreta.com/planes-con-ninos-en-barcelona/",
+          "evidence": "Trayecto de 750 metros con vistas panorámicas de la ciudad."
+        },
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Cable car offering city views leading to the historic fortress."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Llac de Can Dragó",
+      "description": "La piscina exterior más grande de Barcelona, dentro del Centre Esportiu Municipal Can Dragó, con zonas de poca profundidad pensadas para los más pequeños. Es un plan de verano sencillo para pasar el día en familia, entre el baño y el césped de alrededor. Cuenta con socorristas y distintas áreas según la edad de los niños.",
+      "official_url": "https://eurofitness.com/llac/",
+      "url_verified": true,
+      "address": "Carrer de Rosselló i Porcel, 7-11, 08016 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "City's largest outdoor swimming pool with over 3,000 square meters, shallow areas for young children."
+        },
+        {
+          "name": "Time Out Barcelona",
+          "domain": "timeout.es",
+          "url": "https://www.timeout.es/barcelona/es/con-ninos/50-lugares-para-ir-con-ninyos-en-barcelona",
+          "evidence": "Lago artificial de 15.000 m²; piscina más grande de Barcelona; zona de césped."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Parc de l'Oreneta (Tren de l'Oreneta)",
+      "description": "Parque en la zona alta de Barcelona con un tren en miniatura que recorre más de 600 metros entre túneles, puentes y desniveles del terreno. El trayecto, abierto desde 1978, imita un viaje de montaña a pequeña escala y suele ser el gran atractivo de la visita para los niños. El resto del parque, con zonas de juego y espacio natural, permite alargar el plan más allá del propio tren.",
+      "official_url": "https://www.trenoreneta.com/",
+      "url_verified": true,
+      "address": "Passatge de la Blada, s/n, 08017 Barcelona",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Barcelona City Tour",
+          "domain": "barcelona.city-tour.com",
+          "url": "https://barcelona.city-tour.com/en/blog/visiting-barcelona-with-kids-here-are-the-best-plans",
+          "evidence": "Park featuring a miniature steam train (Sundays only) and play areas."
+        },
+        {
+          "name": "Un buen día en Barcelona",
+          "domain": "unbuendiaenbarcelona.com",
+          "url": "https://unbuendiaenbarcelona.com/planes-para-ninos-en-barcelona/",
+          "evidence": "Bosque mediterráneo; trenecito de vapor a escala; zona de juegos equipada."
+        }
+      ]
+    }
+  ]
+}
