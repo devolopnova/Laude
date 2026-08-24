@@ -120,6 +120,7 @@ GUIDES = {
     "juguetes-montessori-3-anos.html",
     "juguetes-montessori-4-6-anos.html",
     "planes-en-familia.html",
+    "guias-por-edad.html",
 }
 
 # Prefijo de las páginas de "Planes en familia" generadas por

@@ -176,6 +176,17 @@
     .brand-logo{width:146px;height:36px;}
     .nav-chip{padding:8px 14px;font-size:12.5px;}
     .hero-main{padding:0 24px;}
+    /* Chips de la cabecera en movil: cuadricula de 2 columnas (en vez del
+       flex-wrap de escritorio) para que cada fila agrupe 2 accesos
+       relacionados. El orden visual sale directo del orden real en el DOM
+       (Edades, Guias por edad, Vida en familia, Planes en casa, Planes en
+       familia, Guia Montessori, Favoritos): no hace falta "order" en CSS.
+       Favoritos es impar (7 chips en total) y cierra solo en su propia
+       fila, ocupando las 2 columnas para no dejar un hueco vacio al lado. */
+    .nav-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;}
+    .nav-chip-wrap{width:100%;}
+    .nav-chip{width:100%;justify-content:center;}
+    .nav-chips > :last-child{grid-column:1 / -1;}
   }
 
   /* SIDE RULER (signature element) */
@@ -996,6 +1007,9 @@
           </div>
         </div>
       </div>
+      <a class="nav-chip" href="guias-por-edad.html">
+        <i class="ti ti-book" aria-hidden="true"></i><span>Guías por edad</span>
+      </a>
       <a class="nav-chip" href="vida-en-familia.html">
         <i class="ti ti-home" aria-hidden="true"></i><span>Vida en familia</span>
       </a>
