@@ -67,7 +67,7 @@
   .nav-chip{
     display:inline-flex;align-items:center;gap:8px;
     background:#fff;border:1px solid #ECE6DA;border-radius:999px;
-    padding:10px 20px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#1C1C1E;
+    padding:10px 20px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#1C1C1E;line-height:1.3;
     cursor:pointer;transition:box-shadow .15s,border-color .15s;
     box-shadow:0 1px 2px rgba(28,28,30,.04);
   }
@@ -178,15 +178,45 @@
     .hero-main{padding:0 24px;}
     /* Chips de la cabecera en movil: cuadricula de 2 columnas (en vez del
        flex-wrap de escritorio) para que cada fila agrupe 2 accesos
-       relacionados. El orden visual sale directo del orden real en el DOM
-       (Edades, Guias por edad, Vida en familia, Planes en casa, Planes en
-       familia, Guia Montessori, Favoritos): no hace falta "order" en CSS.
-       Favoritos es impar (7 chips en total) y cierra solo en su propia
-       fila, ocupando las 2 columnas para no dejar un hueco vacio al lado. */
+       relacionados. El orden en el DOM es Juguetes por edad, Guias por
+       edad, Vida en familia, Actividades en casa, Planes con ninos, Guia
+       Montessori, Favoritos, pero en movil "Actividades en casa" (4º en
+       el DOM) se intercambia visualmente con "Guias por edad" (2º) via
+       "order" (con nth-child en vez de nombres de clase, porque varios
+       chips comparten .nav-chip/.nav-chip-wrap). Como el grid ordena por
+       "order" y los elementos sin valor explicito cuentan como 0, hay que
+       fijar un valor a los 7 (no solo a los 2 que cambian), o los 5
+       restantes se agruparian todos antes que ellos. El orden de
+       escritorio (flex-wrap) no usa "order" y no se ve afectado. Favoritos
+       es impar (7 chips en total) y cierra solo en su propia fila,
+       ocupando las 2 columnas para no dejar un hueco vacio al lado. */
     .nav-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;}
     .nav-chip-wrap{width:100%;}
     .nav-chip{width:100%;justify-content:center;}
+    .nav-chip span{text-align:center;}
+    .nav-chips > :nth-child(1){order:1;}
+    .nav-chips > :nth-child(2){order:4;}
+    .nav-chips > :nth-child(3){order:3;}
+    .nav-chips > :nth-child(4){order:2;}
+    .nav-chips > :nth-child(5){order:5;}
+    .nav-chips > :nth-child(6){order:6;}
+    .nav-chips > :nth-child(7){order:7;}
     .nav-chips > :last-child{grid-column:1 / -1;}
+  }
+
+  /* Chips de la cabecera en escritorio ancho: 5 columnas fijas para que
+     la fila 1 tenga siempre Juguetes por edad/Guias por edad/Vida en
+     familia/Actividades en casa/Planes con ninos, y la fila 2 (6º y 7º
+     chip) caiga siempre en columnas 1 y 2 por el propio auto-flow del
+     grid — Guia Montessori bajo Juguetes por edad y Favoritos bajo Guias
+     por edad, alineados verticalmente de forma explicita en vez de
+     depender de que los anchos casen por casualidad con el flex-wrap
+     (se rompia si cambiaba algun texto). No se aplica en movil (grid
+     propio de 640px) ni en tablet intermedio (sigue con el flex-wrap de
+     siempre, mismo criterio que el breakpoint de 900px ya usado en
+     Planes en casa). */
+  @media (min-width:901px){
+    .nav-chips{display:grid;grid-template-columns:repeat(5, max-content);column-gap:12px;row-gap:12px;align-items:center;justify-items:start;}
   }
 
   /* SIDE RULER (signature element) */
@@ -818,7 +848,7 @@
     <div class="nav-chips">
       <div class="nav-chip-wrap">
         <button class="nav-chip" type="button" aria-haspopup="true" aria-expanded="false" data-dropdown="dropdownEdades">
-          <i class="ti ti-users" aria-hidden="true"></i><span>Edades</span><i class="ti ti-chevron-down chip-caret" aria-hidden="true"></i>
+          <i class="ti ti-users" aria-hidden="true"></i><span>Juguetes por edad</span><i class="ti ti-chevron-down chip-caret" aria-hidden="true"></i>
         </button>
         <div class="nav-dropdown" id="dropdownEdades">
           <div class="nav-dropdown-item-wrapper">
@@ -1014,11 +1044,11 @@
         <i class="ti ti-home" aria-hidden="true"></i><span>Vida en familia</span>
       </a>
       <a class="nav-chip" href="planes-en-casa.html">
-        <i class="ti ti-sofa" aria-hidden="true"></i><span>Planes en casa</span>
+        <i class="ti ti-sofa" aria-hidden="true"></i><span>Actividades en casa</span>
       </a>
       <!-- NAV-CHIP planes-en-familia -->
       <a class="nav-chip" href="planes-en-familia.html">
-        <i class="ti ti-map" aria-hidden="true"></i><span>Planes en familia</span>
+        <i class="ti ti-map" aria-hidden="true"></i><span>Planes con niños</span>
       </a>
       <!-- /NAV-CHIP planes-en-familia -->
       <!-- Chip "Buscar" oculto temporalmente hasta tener buscador funcional.
