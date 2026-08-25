@@ -8,7 +8,7 @@
     "qué hacer con niños Castellón"
   ],
   "plan_status": "applied",
-  "selection_notes": "Se alcanzaron los 18 lugares (15 primary + 3 backup) con evidencia real tras el cribado de 7 fuentes válidas (de 11 páginas candidatas únicas analizadas, sobre un máximo teórico de 15 antes de deduplicar). Regla de diversificación de patrimonio histórico/arqueológico aplicada en la Fase A.6: Castellón tiene varios candidatos de este tipo con buena posición en las fuentes (Castillo del Papa Luna de Peñíscola, Morella con su recinto amurallado y castillo, Castillo de Onda, y el casco histórico/Concatedral de Castelló de la Plana). Para respetar el máximo de 2 lugares de este tipo entre los 15 primary y no colocar ninguno en las posiciones 1-6, se seleccionaron solo 2, por mayor interés familiar, reconocimiento y diferenciación entre sí: (1) el Castillo del Papa Luna de Peñíscola (rank 7), la fortaleza más reconocible y visitada de la provincia, con fuerte atractivo narrativo para niños (templarios, papa Luna, leyendas); y (2) Morella (rank 15), pueblo amurallado medieval de visita de día completo, distinto en experiencia al anterior (recinto urbano completo frente a fortaleza aislada). El Castillo de Onda y el casco histórico/Concatedral de Castelló de la Plana no se incluyeron en el plan para no concentrar la selección en propuestas similares, ni se investigaron sus datos definitivos (Fase A.7) al no haber sido seleccionados. Se priorizaron en las posiciones 1-6 experiencias con atractivo infantil más directo: ciencia (Planetari), aventura en mina (Parc Miner del Maestrat), tren en miniatura (Parc del Trenet), cuevas navegables (Coves de Sant Josep), piscinas naturales (Fuente de los Baños) y una ruta ciclista/senderista familiar (Vía Verde del Mar). Ajuste posterior a la aplicación (23/08/2026, a petición del usuario): se intercambiaron MIAU - Museo Inacabado de Arte Urbano (Fanzara) y Saltapins (Morella) — Saltapins pasó a primary #12 y MIAU a backup #18 — porque no se encontró una foto adecuada para la ficha de MIAU (ver rediseño con foto por lugar, .pfb-card).",
+  "selection_notes": "Se alcanzaron los 18 lugares (15 primary + 3 backup) con evidencia real tras el cribado de 7 fuentes válidas (de 11 páginas candidatas únicas analizadas, sobre un máximo teórico de 15 antes de deduplicar). Regla de diversificación de patrimonio histórico/arqueológico aplicada en la Fase A.6: Castellón tiene varios candidatos de este tipo con buena posición en las fuentes (Castillo del Papa Luna de Peñíscola, Morella con su recinto amurallado y castillo, Castillo de Onda, y el casco histórico/Concatedral de Castelló de la Plana). Para respetar el máximo de 2 lugares de este tipo entre los 15 primary y no colocar ninguno en las posiciones 1-6, se seleccionaron solo 2, por mayor interés familiar, reconocimiento y diferenciación entre sí: (1) el Castillo del Papa Luna de Peñíscola (rank 7), la fortaleza más reconocible y visitada de la provincia, con fuerte atractivo narrativo para niños (templarios, papa Luna, leyendas); y (2) Morella (rank 15), pueblo amurallado medieval de visita de día completo, distinto en experiencia al anterior (recinto urbano completo frente a fortaleza aislada). El Castillo de Onda y el casco histórico/Concatedral de Castelló de la Plana no se incluyeron en el plan para no concentrar la selección en propuestas similares, ni se investigaron sus datos definitivos (Fase A.7) al no haber sido seleccionados. Se priorizaron en las posiciones 1-6 experiencias con atractivo infantil más directo: ciencia (Planetari), aventura en mina (Parc Miner del Maestrat), tren en miniatura (Parc del Trenet), cuevas navegables (Coves de Sant Josep), piscinas naturales (Fuente de los Baños) y una ruta ciclista/senderista familiar (Vía Verde del Mar). Ajuste posterior a la aplicación (23/08/2026, a petición del usuario): se intercambiaron MIAU - Museo Inacabado de Arte Urbano (Fanzara) y Saltapins (Morella) — Saltapins pasó a primary #12 y MIAU a backup #18 — porque no se encontró una foto adecuada para la ficha de MIAU (ver rediseño con foto por lugar, .pfb-card). Ajuste posterior (23/08/2026, a petición del usuario): se intercambiaron Jardín Encantado (Oropesa del Mar) y Embalse de l'Alcora — Embalse pasó a primary #12 y Jardín Encantado a backup #17. El usuario aportó también la URL oficial de Embalse de l'Alcora (comunitatvalenciana.com, portal oficial de turismo de la Generalitat), resolviendo la advertencia de official_url_null; la dirección ya existente (Paratge la Foia) quedó confirmada por esa misma fuente.",
   "sources_analyzed": [
     {
       "name": "Comunitat Valenciana - Planes de ocio para niños en la provincia de Castellón",
@@ -115,18 +115,6 @@
     "issues": [
       {
         "severity": "warning",
-        "category": "address_null",
-        "message": "Dirección no verificada con suficiente seguridad para \"Embalse de l'Alcora (Circuito Multiaventura)\": gestionado por varios operadores privados sin sede única confirmada.",
-        "place_rank": 17
-      },
-      {
-        "severity": "warning",
-        "category": "official_url_null",
-        "message": "No se encontró una web oficial única con suficiente seguridad para \"Embalse de l'Alcora (Circuito Multiaventura)\": la actividad la gestionan varios operadores privados distintos (Viunatura, RocRoi, CV Activa) sin una sede oficial unificada.",
-        "place_rank": 17
-      },
-      {
-        "severity": "warning",
         "category": "limited_evidence",
         "message": "Información limitada: \"Jardín del Papagayo\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
         "place_rank": 13
@@ -141,13 +129,13 @@
         "severity": "warning",
         "category": "limited_evidence",
         "message": "Información limitada: \"Embalse de l'Alcora (Circuito Multiaventura)\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
-        "place_rank": 17
+        "place_rank": 12
       },
       {
         "severity": "warning",
         "category": "limited_evidence",
         "message": "Información limitada: \"Saltapins (Morella)\" solo cuenta con 2 evidencias/fuentes entre las 7 válidas tras el cribado.",
-        "place_rank": 12
+        "place_rank": 9
       }
     ]
   },
@@ -467,8 +455,8 @@
       ]
     },
     {
-      "rank": 9,
-      "status": "primary",
+      "rank": 17,
+      "status": "backup",
       "name": "Jardín Encantado (Oropesa del Mar)",
       "description": "Un parque temático dentro del complejo Magic World Resort, en Oropesa del Mar, con árboles que hablan, hadas y espectáculos con actores entre miles de flores de más de 50 especies distintas. Está pensado como una experiencia fantástica para los más pequeños, con pasacalles y personajes que interactúan con el público. Un plan de tarde diferente, entre naturaleza cuidada y teatro familiar.",
       "official_url": "https://www.magicworldresort.com/es/parques/jardin-encantado",
@@ -709,12 +697,12 @@
       ]
     },
     {
-      "rank": 17,
-      "status": "backup",
+      "rank": 12,
+      "status": "primary",
       "name": "Embalse de l'Alcora (Circuito Multiaventura)",
       "description": "Un circuito de aventura en plena naturaleza, junto al embalse de l'Alcora, con actividades como tirolina, puente tibetano, kayak y tiro con arco. Está pensado para todo tipo de público, familias incluidas, en un entorno de montaña muy distinto a la costa. Un plan con más adrenalina para las familias que buscan actividad física al aire libre.",
-      "official_url": null,
-      "url_verified": false,
+      "official_url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/embalse-de-l-alcora",
+      "url_verified": true,
       "address": "Paratge la Foia, Embassament de l'Alcora, 12110 l'Alcora (Castellón)",
       "evidence_count": 2,
       "independent_source_count": 2,
@@ -734,7 +722,7 @@
       ]
     },
     {
-      "rank": 12,
+      "rank": 9,
       "status": "primary",
       "name": "Saltapins (Morella)",
       "description": "Un circuito de aventura entre árboles junto al río Bergantes, cerca de Morella, con tirolinas, puentes tibetanos y lianas repartidos en varios recorridos según edad. Está pensado para que niños a partir de 6 años completen los circuitos con cierta autonomía mientras la familia observa desde abajo. Un buen complemento de aventura a una visita a Morella.",

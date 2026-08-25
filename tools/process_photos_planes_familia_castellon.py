@@ -32,6 +32,7 @@ FILES = [
     "jardin-del-papagayo.jpg",
     "serra-despada.jpg",
     "morella.jpg",
+    "embalse-alcora.png",
 ]
 
 # miau-fanzara.jpg queda fuera de esta lista desde el 23/08/2026: MIAU se
@@ -39,6 +40,12 @@ FILES = [
 # ver selection_notes) porque no se encontro foto adecuada para su ficha.
 # El archivo miau-fanzara.jpg/webp se deja en disco sin borrar (ya no se
 # usa en planes-en-familia-castellon.html).
+#
+# embalse-alcora.png (25/08/2026) es la unica foto de esta lista que NO
+# viene de Pexels/Unsplash/Pixabay: la aporto directamente el usuario
+# (guardada en Descargas), sustituyendo la foto generica de Pexels
+# (tirolina sobre agua) usada en el intercambio anterior. El .jpg viejo
+# de Pexels se deja en disco sin borrar.
 
 
 def resize_preserving_aspect(im: Image.Image, short_side: int) -> Image.Image:
