@@ -50,13 +50,10 @@
     background:linear-gradient(180deg, rgba(28,28,26,0) 30%, color-mix(in srgb, var(--accent) 60%, #1C1C1E) 100%);
   }
   .pec-hero-photo-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:28px 32px;color:#fff;}
-  .pec-hero-photo-content .pec-hub-crumb{
-    display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;
-    background:rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:600;
-  }
-  .pec-hero-photo-content .pec-hub-crumb-link{color:#fff;}
-  .pec-hero-photo-content .pec-hub-crumb-link:hover{text-decoration:underline;}
   .pec-hero-photo-content h1{color:#fff;font-size:34px;}
+  .pec-hub-crumb{margin-bottom:14px;}
+  .pec-hub-crumb-link{color:var(--accent);font-weight:600;}
+  .pec-hub-crumb-link:hover{text-decoration:underline;}
   .pec-hero-photo-content .cat-hero-2-subtitle{color:rgba(255,255,255,.92);margin-top:8px;font-size:15.5px;}
   @media (max-width:640px){
     .pec-hero-photo{height:260px;border-radius:16px;}
@@ -144,6 +141,10 @@
 </header>
 
 <section class="cat-hero-2 wrap">
+  <div class="cat-hero-2-chip pec-hub-crumb">
+    <i class="ti ti-dice" aria-hidden="true"></i>
+    <a class="pec-hub-crumb-link" href="planes-en-casa.html">Planes en casa</a> · Juegos
+  </div>
   <div class="pec-hero-photo">
     <img src="images/cabecera/planes-en-casa/juegos-hero.webp" alt="Madre e hijo riendo juntos" width="1400" height="580" loading="eager" decoding="async">
     <div class="pec-hero-photo-overlay"></div>

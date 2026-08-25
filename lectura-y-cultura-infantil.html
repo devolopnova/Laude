@@ -52,10 +52,10 @@
     background:linear-gradient(180deg, rgba(28,28,26,0) 30%, color-mix(in srgb, var(--accent) 60%, #1C1C1E) 100%);
   }
   .pec-hero-photo-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 30px;color:#fff;}
-  .pec-hero-photo-content .cat-hero-2-chip{
-    background:rgba(255,255,255,.2);color:#fff;margin-bottom:12px;display:inline-block;
-  }
   .pec-hero-photo-content h1{color:#fff;font-size:30px;}
+  .pec-hub-crumb{margin-bottom:14px;}
+  .pec-hub-crumb-link{color:var(--accent);font-weight:600;}
+  .pec-hub-crumb-link:hover{text-decoration:underline;}
   @media (max-width:640px){
     .pec-hero-photo{height:260px;border-radius:16px;}
     .pec-hero-photo-content{padding:20px;}
@@ -68,6 +68,7 @@
   .lc-section h2{font-size:20px;margin-top:40px;margin-bottom:14px;}
   .lc-section h3{font-size:16px;margin-top:24px;margin-bottom:10px;}
   .lc-section p{color:var(--ink);line-height:1.75;max-width:660px;}
+  .lc-intro p{max-width:none;}
   .lc-section p + p{margin-top:14px;}
   .lc-section strong{color:var(--ink);}
   .lc-section a{color:var(--accent);font-weight:600;}
@@ -80,6 +81,7 @@
     font-family:'Fredoka',sans-serif;font-weight:600;font-size:16.5px;color:var(--ink);
     margin-top:24px;line-height:1.5;max-width:640px;
   }
+  .lc-intro .lc-callout{max-width:none;}
   .lc-callout + .lc-callout{margin-top:8px;}
   footer p{margin-top:24px;}
 </style>
@@ -96,6 +98,10 @@
 </header>
 
 <section class="cat-hero-2 wrap">
+  <div class="cat-hero-2-chip pec-hub-crumb">
+    <i class="ti ti-book" aria-hidden="true"></i>
+    <a class="pec-hub-crumb-link" href="vida-en-familia.html">Vida en familia</a> · Lectura y cultura infantil
+  </div>
   <div class="pec-hero-photo">
     <img src="images/cabecera/vida-en-familia/lectura-y-cultura-infantil-hero.webp" alt="Mano señalando un libro ilustrado en braille sobre una mesa de madera" width="1400" height="580" loading="eager" decoding="async">
     <div class="pec-hero-photo-overlay"></div>
@@ -107,7 +113,7 @@
 
 <section class="wrap" style="padding-bottom:40px">
 
-  <section class="lc-section">
+  <section class="lc-section lc-intro">
     <p class="lc-lead" style="margin-top:0;">La lectura puede convertirse en una parte muy especial de la vida familiar, pero no siempre empieza con un niño leyendo por su cuenta. Antes de aprender a leer, ya existe una relación con las historias: escuchar cuentos, mirar ilustraciones, elegir un libro, inventar finales o volver una y otra vez a la misma historia.</p>
     <p class="lc-lead">Por eso, fomentar la lectura no consiste únicamente en conseguir que un niño lea más.</p>
     <p class="lc-lead">Se trata de <strong>crear un entorno en el que los libros formen parte de su vida de una manera natural y agradable</strong>.</p>

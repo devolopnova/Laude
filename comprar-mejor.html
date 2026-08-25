@@ -52,10 +52,10 @@
     background:linear-gradient(180deg, rgba(28,28,26,0) 30%, color-mix(in srgb, var(--accent) 60%, #1C1C1E) 100%);
   }
   .pec-hero-photo-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 30px;color:#fff;}
-  .pec-hero-photo-content .cat-hero-2-chip{
-    background:rgba(255,255,255,.2);color:#fff;margin-bottom:12px;display:inline-block;
-  }
   .pec-hero-photo-content h1{color:#fff;font-size:30px;}
+  .pec-hub-crumb{margin-bottom:14px;}
+  .pec-hub-crumb-link{color:var(--accent);font-weight:600;}
+  .pec-hub-crumb-link:hover{text-decoration:underline;}
   @media (max-width:640px){
     .pec-hero-photo{height:260px;border-radius:16px;}
     .pec-hero-photo-content{padding:20px;}
@@ -68,6 +68,7 @@
   .cm-section h2{font-size:20px;margin-top:40px;margin-bottom:14px;}
   .cm-section h3{font-size:16px;margin-top:24px;margin-bottom:10px;}
   .cm-section p{color:var(--ink);line-height:1.75;max-width:660px;}
+  .cm-intro p{max-width:none;}
   .cm-section p + p{margin-top:14px;}
   .cm-section strong{color:var(--ink);}
   .cm-section a{color:var(--accent);font-weight:600;}
@@ -80,6 +81,7 @@
     font-family:'Fredoka',sans-serif;font-weight:600;font-size:16.5px;color:var(--ink);
     margin-top:24px;line-height:1.5;max-width:640px;
   }
+  .cm-intro .cm-callout{max-width:none;}
   .cm-quote{
     margin:24px 0;padding:16px 20px;
     border-left:3px solid var(--accent);
@@ -104,6 +106,10 @@
 </header>
 
 <section class="cat-hero-2 wrap">
+  <div class="cat-hero-2-chip pec-hub-crumb">
+    <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+    <a class="pec-hub-crumb-link" href="vida-en-familia.html">Vida en familia</a> · Comprar mejor
+  </div>
   <div class="pec-hero-photo">
     <img src="images/cabecera/vida-en-familia/comprar-mejor-hero.webp" alt="Niña jugando con un juguete de clasificación de madera" width="1400" height="580" loading="eager" decoding="async">
     <div class="pec-hero-photo-overlay"></div>
@@ -115,7 +121,7 @@
 
 <section class="wrap" style="padding-bottom:40px">
 
-  <section class="cm-section">
+  <section class="cm-section cm-intro">
     <p class="cm-lead" style="margin-top:0;">Comprar para un niño no siempre significa encontrar el producto más llamativo, el que tiene más funciones o el que acumula más opiniones. A veces, la mejor elección es simplemente la que encaja mejor con el niño, con su momento actual y con la forma en la que podrá utilizarla.</p>
     <p class="cm-lead">Además, cuando se trata de productos infantiles, hay otros aspectos que merece la pena valorar: la edad recomendada, la seguridad, el espacio disponible en casa, la calidad, la posibilidad de utilizarlo durante más tiempo o incluso lo fácil que resulta guardarlo y mantenerlo.</p>
     <p class="cm-lead">Por eso, antes de comprar, puede ser útil detenerse unos minutos y hacerse algunas preguntas.</p>

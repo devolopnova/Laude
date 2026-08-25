@@ -52,10 +52,10 @@
     background:linear-gradient(180deg, rgba(28,28,26,0) 30%, color-mix(in srgb, var(--accent) 60%, #1C1C1E) 100%);
   }
   .pec-hero-photo-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 30px;color:#fff;}
-  .pec-hero-photo-content .cat-hero-2-chip{
-    background:rgba(255,255,255,.2);color:#fff;margin-bottom:12px;display:inline-block;
-  }
   .pec-hero-photo-content h1{color:#fff;font-size:30px;}
+  .pec-hub-crumb{margin-bottom:14px;}
+  .pec-hub-crumb-link{color:var(--accent);font-weight:600;}
+  .pec-hub-crumb-link:hover{text-decoration:underline;}
   @media (max-width:640px){
     .pec-hero-photo{height:260px;border-radius:16px;}
     .pec-hero-photo-content{padding:20px;}
@@ -67,6 +67,7 @@
   .po-section{margin-top:40px;font-size:15.5px;}
   .po-section h2{font-size:20px;margin-top:40px;margin-bottom:14px;}
   .po-section p{color:var(--ink);line-height:1.75;max-width:660px;}
+  .po-intro p{max-width:none;}
   .po-section p + p{margin-top:14px;}
   .po-section strong{color:var(--ink);}
   .po-section a{color:var(--accent);font-weight:600;}
@@ -79,6 +80,7 @@
     font-family:'Fredoka',sans-serif;font-weight:600;font-size:16.5px;color:var(--ink);
     margin-top:24px;line-height:1.5;max-width:640px;
   }
+  .po-intro .po-callout{max-width:none;}
   .po-callout + .po-callout{margin-top:8px;}
   footer p{margin-top:24px;}
 </style>
@@ -95,6 +97,10 @@
 </header>
 
 <section class="cat-hero-2 wrap">
+  <div class="cat-hero-2-chip pec-hub-crumb">
+    <i class="ti ti-devices" aria-hidden="true"></i>
+    <a class="pec-hub-crumb-link" href="vida-en-familia.html">Vida en familia</a> · Pantallas y ocio
+  </div>
   <div class="pec-hero-photo">
     <img src="images/cabecera/vida-en-familia/pantallas-y-ocio-hero.webp" alt="Niño mirando una tablet con luz natural" width="1400" height="580" loading="eager" decoding="async">
     <div class="pec-hero-photo-overlay"></div>
@@ -106,7 +112,7 @@
 
 <section class="wrap" style="padding-bottom:40px">
 
-  <section class="po-section">
+  <section class="po-section po-intro">
     <p class="po-lead" style="margin-top:0;">Las pantallas forman parte de la vida cotidiana de muchas familias. Televisión, tabletas, móviles, ordenadores o videojuegos pueden ocupar distintos momentos del día y cumplir funciones muy diferentes.</p>
     <p class="po-lead">Por eso, hablar de pantallas no tiene por qué significar hablar únicamente de cuánto tiempo se utilizan.</p>
     <p class="po-lead">También importa <strong>para qué se utilizan, qué lugar ocupan dentro del ocio familiar y qué otras experiencias tienen los niños a su alrededor</strong>.</p>
