@@ -43,23 +43,25 @@
 <style>
   /* Cabecera fotografica (foto editorial de Pexels, ver
      tools/process_hero_photos_vida_en_familia.py). Banner horizontal a
-     ancho completo, degradado inferior con el acento del sitio para
-     legibilidad del texto superpuesto. */
+     ancho completo. El h1 vive FUERA de la foto (entre la chip y la foto,
+     igual que en las paginas de foto lateral: Organizacion, Cumpleanos,
+     Viajes, Consumo) - ya no hay texto superpuesto, por eso tampoco hay
+     degradado de contraste sobre la imagen. */
   .pec-hero-photo{position:relative;border-radius:20px;overflow:hidden;height:320px;margin-top:20px;}
   .pec-hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
-  .pec-hero-photo-overlay{
-    position:absolute;inset:0;z-index:1;
-    background:linear-gradient(180deg, rgba(28,28,26,0) 30%, color-mix(in srgb, var(--accent) 60%, #1C1C1E) 100%);
-  }
-  .pec-hero-photo-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 30px;color:#fff;}
-  .pec-hero-photo-content h1{color:#fff;font-size:30px;}
-  .pec-hub-crumb{margin-bottom:14px;}
+  /* margin-top:20px: mismo aire respecto al top que .pec-hero-split en
+     las paginas de foto lateral (Organizacion, Cumpleanos, Viajes,
+     Consumo), para que la chip no quede pegada al header en ninguna
+     pagina de "Vida en familia". */
+  .pec-hub-crumb{margin-top:20px;margin-bottom:14px;}
   .pec-hub-crumb-link{color:var(--accent);font-weight:600;}
   .pec-hub-crumb-link:hover{text-decoration:underline;}
   @media (max-width:640px){
     .pec-hero-photo{height:260px;border-radius:16px;}
-    .pec-hero-photo-content{padding:20px;}
-    .pec-hero-photo-content h1{font-size:23px;}
+    /* Mismo tamano de chip que en las paginas de foto lateral
+       (organizacion-y-hogar/cumpleanos/viajes/consumo), para que la
+       pildora "Vida en familia · ..." se vea igual en toda la seccion. */
+    .pec-hub-crumb{font-size:11px;padding:6px 12px;letter-spacing:.04em;}
   }
 
   .po-lead{margin-top:32px;}
@@ -101,12 +103,9 @@
     <i class="ti ti-devices" aria-hidden="true"></i>
     <a class="pec-hub-crumb-link" href="vida-en-familia.html">Vida en familia</a> · Pantallas y ocio
   </div>
+  <h1>Pantallas y niños: cómo encontrar un equilibrio en el día a día</h1>
   <div class="pec-hero-photo">
     <img src="images/cabecera/vida-en-familia/pantallas-y-ocio-hero.webp" alt="Niño mirando una tablet con luz natural" width="1400" height="580" loading="eager" decoding="async">
-    <div class="pec-hero-photo-overlay"></div>
-    <div class="pec-hero-photo-content">
-      <h1>Pantallas y niños: cómo encontrar un equilibrio en el día a día</h1>
-    </div>
   </div>
 </section>
 

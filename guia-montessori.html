@@ -243,11 +243,26 @@
   .g-type-card li{font-size:12.5px;color:var(--m-ink-green);background:var(--m-tint);border-radius:999px;padding:4px 10px;}
   .g-type-card .g-skills{font-size:13px;color:var(--ink-soft);margin:0;max-width:none;}
 
-  /* Errores */
-  .g-error-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .2s ease,box-shadow .2s ease;}
+  /* Errores: numero + icono en la misma fila (numero primero, sin capsula
+     circular), titulo debajo y descripcion debajo del titulo. Mismo
+     tratamiento en escritorio y movil (ver tambien el data-n="01".. de
+     cada .g-error-num en el HTML, que sustituye al digito real "1".."6"
+     por el formato de 2 cifras vía ::before, sin tocar el texto). */
+  .g-error-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-wrap:wrap;align-items:center;column-gap:10px;}
   .g-error-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.06);}
-  .g-error-icon{width:44px;height:44px;border-radius:12px;background:var(--warn-tint);color:var(--warn);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;}
-  .g-error-num{width:26px;height:26px;border-radius:50%;background:var(--warn-tint);color:var(--warn);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .g-error-icon{order:2;width:34px;height:34px;border-radius:10px;background:var(--warn-tint);color:var(--warn);display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:0;}
+  .g-error-num{
+    order:1;width:auto;height:auto;border-radius:0;background:none;color:var(--warn);
+    font-family:'JetBrains Mono',monospace;font-weight:600;margin-bottom:0;
+    font-size:0; /* oculta el digito real ("1".."6"): se muestra en su lugar
+      el ::before con formato de 2 cifras, sin tocar el texto del HTML */
+  }
+  .g-error-num::before{
+    content:attr(data-n);
+    font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:var(--warn);
+  }
+  .g-error-card h3{order:3;flex-basis:100%;margin:12px 0 4px;}
+  .g-error-card p{order:4;flex-basis:100%;margin:0;}
 
   /* Fotografías e ilustraciones editoriales */
   .g-hero-photo{margin-top:28px;border-radius:20px;overflow:hidden;}
@@ -971,12 +986,12 @@
     <p class="g-lead">Elegir un juguete Montessori no tiene por qué ser complicado. Sin embargo, es fácil dejarse llevar por el marketing o por recomendaciones poco útiles. Estos son algunos de los errores más habituales y cómo evitarlos.</p>
 
     <div class="g-cards g-cards-2">
-      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-trees" aria-hidden="true"></i></div><div class="g-error-num">1</div><h3>Pensar que todo lo de madera es Montessori</h3><p style="font-size:13.5px;color:var(--ink-soft);">La madera es un material muy utilizado, pero no convierte automáticamente un juguete en Montessori. Lo importante es que tenga un propósito claro y sea adecuado para la etapa del niño.</p></div>
-      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-arrow-up" aria-hidden="true"></i></div><div class="g-error-num">2</div><h3>Comprar un juguete para una edad superior</h3><p style="font-size:13.5px;color:var(--ink-soft);">Un juguete demasiado complejo suele generar frustración y acaba olvidado. Es preferible elegir un material adaptado al momento actual del niño.</p></div>
-      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-box" aria-hidden="true"></i></div><div class="g-error-num">3</div><h3>Tener demasiados juguetes</h3><p style="font-size:13.5px;color:var(--ink-soft);">Un exceso de opciones puede dificultar la concentración. Es mejor ofrecer pocos materiales bien seleccionados y rotarlos periódicamente.</p></div>
-      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-target" aria-hidden="true"></i></div><div class="g-error-num">4</div><h3>Buscar el juguete perfecto</h3><p style="font-size:13.5px;color:var(--ink-soft);">No existe un único juguete ideal. Cada niño tiene intereses diferentes y un mismo material puede despertar mucho o poco interés según el caso.</p></div>
-      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-trending-up" aria-hidden="true"></i></div><div class="g-error-num">5</div><h3>Dejarse llevar por las modas</h3><p style="font-size:13.5px;color:var(--ink-soft);">Antes de comprar, pregúntate si el juguete responde realmente a las necesidades de tu hijo o simplemente está de moda.</p></div>
-      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-tag" aria-hidden="true"></i></div><div class="g-error-num">6</div><h3>Fijarse solo en el precio</h3><p style="font-size:13.5px;color:var(--ink-soft);">El juguete más caro no siempre es el mejor. Un material sencillo suele ofrecer más posibilidades de aprendizaje que otro mucho más complejo.</p></div>
+      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-trees" aria-hidden="true"></i></div><div class="g-error-num" data-n="01">1</div><h3>Pensar que todo lo de madera es Montessori</h3><p style="font-size:13.5px;color:var(--ink-soft);">La madera es un material muy utilizado, pero no convierte automáticamente un juguete en Montessori. Lo importante es que tenga un propósito claro y sea adecuado para la etapa del niño.</p></div>
+      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-arrow-up" aria-hidden="true"></i></div><div class="g-error-num" data-n="02">2</div><h3>Comprar un juguete para una edad superior</h3><p style="font-size:13.5px;color:var(--ink-soft);">Un juguete demasiado complejo suele generar frustración y acaba olvidado. Es preferible elegir un material adaptado al momento actual del niño.</p></div>
+      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-box" aria-hidden="true"></i></div><div class="g-error-num" data-n="03">3</div><h3>Tener demasiados juguetes</h3><p style="font-size:13.5px;color:var(--ink-soft);">Un exceso de opciones puede dificultar la concentración. Es mejor ofrecer pocos materiales bien seleccionados y rotarlos periódicamente.</p></div>
+      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-target" aria-hidden="true"></i></div><div class="g-error-num" data-n="04">4</div><h3>Buscar el juguete perfecto</h3><p style="font-size:13.5px;color:var(--ink-soft);">No existe un único juguete ideal. Cada niño tiene intereses diferentes y un mismo material puede despertar mucho o poco interés según el caso.</p></div>
+      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-trending-up" aria-hidden="true"></i></div><div class="g-error-num" data-n="05">5</div><h3>Dejarse llevar por las modas</h3><p style="font-size:13.5px;color:var(--ink-soft);">Antes de comprar, pregúntate si el juguete responde realmente a las necesidades de tu hijo o simplemente está de moda.</p></div>
+      <div class="g-error-card"><div class="g-error-icon"><i class="ti ti-tag" aria-hidden="true"></i></div><div class="g-error-num" data-n="06">6</div><h3>Fijarse solo en el precio</h3><p style="font-size:13.5px;color:var(--ink-soft);">El juguete más caro no siempre es el mejor. Un material sencillo suele ofrecer más posibilidades de aprendizaje que otro mucho más complejo.</p></div>
     </div>
 
     <div class="g-callout g-callout-pin">

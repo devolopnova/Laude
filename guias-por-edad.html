@@ -32,6 +32,12 @@
 </script>
 <style>
   .gpe-hero-body{margin-top:18px;color:var(--ink-soft);font-size:15.5px;line-height:1.75;max-width:640px;}
+  /* Foto panoramica 21:9 debajo del texto de cabecera, mismo patron que
+     .pfc-photo/.pfm-photo/.pfcv-photo de "Planes en familia" (ver memoria
+     feedback_ccaa_hub_foto_seo.md): recorte 21:9 ya hecho en el propio
+     archivo de imagen, sin object-fit/recorte por CSS. */
+  .gpe-photo{margin-top:28px;border-radius:20px;overflow:hidden;}
+  .gpe-photo img{width:100%;height:auto;display:block;}
   .gpe-section{margin-top:48px;}
   .gpe-section h2{font-size:20px;margin-bottom:8px;}
   .gpe-section > p{color:var(--ink-soft);font-size:14.5px;max-width:560px;}
@@ -56,12 +62,13 @@
     background:color-mix(in srgb, var(--gpe-accent, var(--accent)) 10%, var(--card));
   }
   .gpe-card-title{
-    display:block;font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px;
+    display:flex;align-items:center;gap:8px;
+    font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px;
     color:var(--ink);margin-bottom:8px;line-height:1.3;
   }
   .gpe-card-desc{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.6;flex:1;}
   .gpe-card-arrow{
-    display:flex;align-items:center;margin-top:16px;
+    display:flex;align-items:center;margin-top:0;
     color:var(--gpe-accent, var(--accent));font-size:15px;
     transition:transform .2s ease;
   }
@@ -94,6 +101,9 @@
     </div>
   </div>
   <p class="gpe-hero-body">Cada etapa tiene su propio ritmo, sus propios intereses y sus propias formas de aprender jugando. Por eso reunimos aquí todas nuestras guías por edad, para ayudarte a encontrar ideas adaptadas a cada momento del desarrollo de tu hijo.</p>
+  <div class="gpe-photo">
+    <img src="images/cabecera/guias-por-edad/guias-por-edad-panoramica.webp" alt="Niño jugando con bloques de letras junto a un globo terráqueo" width="1920" height="823" loading="eager" decoding="async">
+  </div>
 </section>
 
 <section class="wrap" style="padding-bottom:40px">
@@ -103,64 +113,52 @@
     <p>Doce guías, una para cada etapa, desde los primeros meses hasta los 10 años.</p>
     <div class="gpe-grid">
       <a class="gpe-card" href="guia-0-6-meses.html" style="--gpe-accent:#C97B54">
-        <span class="gpe-card-title">0-6 meses</span>
+        <span class="gpe-card-title">0-6 meses<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Sonidos, texturas y las primeras miradas que despiertan su curiosidad.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-6-12-meses.html" style="--gpe-accent:#D98CA6">
-        <span class="gpe-card-title">6-12 meses</span>
+        <span class="gpe-card-title">6-12 meses<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Gateo, primeras palabras y manos que no paran de investigar.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-1-ano.html" style="--gpe-accent:#6FA37B">
-        <span class="gpe-card-title">1 año</span>
+        <span class="gpe-card-title">1 año<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa llena de nuevos aprendizajes y descubrimientos.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-2-anos.html" style="--gpe-accent:#C99A3E">
-        <span class="gpe-card-title">2 años</span>
+        <span class="gpe-card-title">2 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Juego simbólico, primeras historias y ganas de imitarlo todo.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-3-anos.html" style="--gpe-accent:#6C8FB0">
-        <span class="gpe-card-title">3 años</span>
+        <span class="gpe-card-title">3 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para dar espacio a la imaginación, la creatividad y el juego compartido.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-4-anos.html" style="--gpe-accent:#7A9B5E">
-        <span class="gpe-card-title">4 años</span>
+        <span class="gpe-card-title">4 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para dar espacio a la curiosidad, la creatividad y la imaginación.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-5-anos.html" style="--gpe-accent:#8D7CB5">
-        <span class="gpe-card-title">5 años</span>
+        <span class="gpe-card-title">5 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para desarrollar la curiosidad, la creatividad y nuevas formas de resolver retos.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-6-anos.html" style="--gpe-accent:#5A9BC9">
-        <span class="gpe-card-title">6 años</span>
+        <span class="gpe-card-title">6 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para desarrollar la curiosidad, la creatividad y nuevas formas de pensar.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-7-anos.html" style="--gpe-accent:#D08A5A">
-        <span class="gpe-card-title">7 años</span>
+        <span class="gpe-card-title">7 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para desarrollar la curiosidad, la estrategia y nuevas formas de resolver problemas.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-8-anos.html" style="--gpe-accent:#A9835A">
-        <span class="gpe-card-title">8 años</span>
+        <span class="gpe-card-title">8 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para desarrollar la curiosidad, la estrategia y proyectos cada vez más propios.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-9-anos.html" style="--gpe-accent:#5F7D95">
-        <span class="gpe-card-title">9 años</span>
+        <span class="gpe-card-title">9 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para desarrollar la curiosidad, la estrategia y nuevas formas de resolver retos.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
       <a class="gpe-card" href="guia-10-anos.html" style="--gpe-accent:#B87049">
-        <span class="gpe-card-title">10 años</span>
+        <span class="gpe-card-title">10 años<span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></span>
         <span class="gpe-card-desc">Una etapa para desarrollar la curiosidad, la autonomía y proyectos cada vez más personales.</span>
-        <span class="gpe-card-arrow"><i class="ti ti-arrow-right" aria-hidden="true"></i></span>
       </a>
     </div>
   </section>

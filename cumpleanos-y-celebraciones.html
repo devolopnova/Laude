@@ -54,8 +54,24 @@
   .cc-hero-lead{margin-top:16px;color:var(--ink-soft);font-size:15.5px;line-height:1.7;}
   @media (max-width:768px){
     .pec-hero-split{flex-direction:column;gap:20px;min-height:0;}
-    .pec-hero-split-photo{flex:0 0 auto;height:auto;}
+    .pec-hero-split-photo{flex:0 0 auto;height:auto;order:3;}
     .pec-hero-split-photo img{height:auto;object-fit:contain;}
+    /* Orden en movil: chip -> h1 -> foto -> parrafo (antes: foto arriba y
+       chip+h1+parrafo debajo). Con display:contents en
+       .pec-hero-split-content, sus hijos (chip, h1, lead) pasan a ser
+       items directos de .pec-hero-split (ya flex-direction:column aqui) y
+       se pueden reordenar cada uno por separado frente a la foto. */
+    .pec-hero-split-content{display:contents;}
+    /* align-self:flex-start: sin esto la chip hereda el align-items:stretch
+       de .pec-hero-split (base, pensado para que foto/columna de texto
+       ocupen todo el ancho) y la pildora se estira a todo el ancho,
+       partiendo el texto en 2 lineas en vez de una sola. */
+    .pec-hero-split-content .pec-hub-crumb{
+      order:1;align-self:flex-start;max-width:100%;
+      font-size:11px;padding:6px 12px;letter-spacing:.04em;
+    }
+    .pec-hero-split-content h1{order:2;}
+    .pec-hero-split-content .cc-hero-lead{order:4;}
   }
 
   .cc-lead{margin-top:32px;}
