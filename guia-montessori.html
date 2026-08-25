@@ -350,11 +350,22 @@
   .g-closing-mark i{color:var(--m-accent);font-size:20px;}
 
   /* CTA final */
-  .g-cta-final{background:var(--m-accent-dark);border-radius:20px;padding:40px 32px;text-align:center;margin:48px 0;box-shadow:0 16px 36px rgba(78,138,92,.22);}
+  .g-cta-final{background:var(--m-accent-dark);border-radius:20px;padding:40px 32px;text-align:center;margin:48px 0 0;box-shadow:0 16px 36px rgba(78,138,92,.22);}
   .g-cta-final h2{color:#fff;font-size:24px;margin-bottom:10px;}
   .g-cta-final p{color:rgba(255,255,255,.85);font-size:15px;max-width:520px;margin:0 auto 22px;}
   .g-cta-final a{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--m-accent-dark);font-weight:600;font-size:14px;padding:12px 24px;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease;}
   .g-cta-final a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18);}
+  /* La tarjeta CTA es el ultimo elemento de #conclusion: sin margen propio
+     debajo (ver arriba) y sin el padding-bottom generico de .g-section
+     (56px), para poder fijar el hueco hasta el footer en un unico sitio
+     (footer, mas abajo) en vez de sumar 3 espaciados distintos. */
+  #conclusion{padding-bottom:0;}
+  /* Footer de esta pagina: 36px exactos entre la tarjeta CTA y el aviso de
+     afiliacion (24px se veia demasiado pegado a la tarjeta), en vez del
+     padding-top:32px generico de css/site.css (pensado para paginas sin
+     CTA justo encima). Override scoped a esta pagina, no se toca la regla
+     compartida. */
+  footer{padding-top:36px;}
 
   /* Microanimaciones: aparición suave al hacer scroll */
   .g-fade{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;}
