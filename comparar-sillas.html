@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/067dce5e5b2c3eeb8cc1f8f51d3c14a8.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88T9H9C650"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-88T9H9C650');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparar sillas de coche · Comparativa de 2 modelos</title>
+<link rel="canonical" href="https://www.lauderem.com/comparar-sillas.html">
+<meta name="description" content="Compara en detalle 2 sillas de coche: normativa, edad, altura, peso, grupo, Isofix, orientación, arnés y giro 360º, con ficha técnica completa de cada modelo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF8; --ink:#1C1C1E; --ink-soft:#6B6B70; --line:#E4E2DC; --card:#FFFFFF;
+  --accent:#FF8A65; --accent-deep:#D85A30; --revisar:#B5841C; --revisar-bg:#FBF2DE;
+  --line-row:color-mix(in srgb, var(--line) 55%, var(--card));
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding:40px 32px 80px;}
+h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+
+.wrap{max-width:640px;margin:0 auto;}
+
+/* Enlace discreto de vuelta al listado, mismo lenguaje tipografico
+   (JetBrains Mono, mayusculas, letter-spacing) que .eyebrow del resto
+   del comparador. */
+.back-link{
+  display:inline-flex; align-items:center; gap:6px; margin-bottom:22px;
+  font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600;
+  color:var(--ink-soft); text-decoration:none; letter-spacing:.02em;
+}
+.back-link:hover{color:var(--accent-deep);}
+
+.page-head{margin-bottom:24px;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent-deep);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.page-head h1{font-size:26px;margin-bottom:6px;}
+.page-head p{color:var(--ink-soft);font-size:14.5px;}
+
+/* Mensaje de error (parametros ausentes/invalidos en la URL) -- mismo
+   lenguaje visual de tarjeta que el resto de bloques de esta pagina. */
+.cmp-error{
+  display:none; background:var(--card); border:1px solid var(--line); border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05); padding:28px 24px; text-align:center;
+}
+.cmp-error p{color:var(--ink-soft);font-size:14.5px;margin-bottom:16px;}
+.cmp-error[hidden]{display:none;}
+
+/* ---- Tarjeta VS + matriz de caracteristicas + ficha tecnica ----
+   Mismo componente .mc-* ya usado (y validado) en comparador-sillas-
+   coche.html; aqui siempre a ancho completo en columna unica, sin el
+   layout de 2 columnas que llevaba el prototipo de escritorio -- la
+   ficha tecnica pedida "a ancho completo, no en columna lateral". */
+.mc-vs-card{
+  position:relative; display:flex; align-items:stretch;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05); overflow:hidden;
+}
+.mc-product{
+  flex:1 1 50%; min-width:0; display:flex; flex-direction:column; align-items:center;
+  text-align:center; gap:3px; padding:20px 12px 22px;
+}
+.mc-product-img{width:100%; max-width:132px; aspect-ratio:1/1; object-fit:contain; margin-bottom:8px;}
+.mc-product-brand{font-size:11px; font-weight:700; color:var(--accent-deep); text-transform:uppercase; letter-spacing:.03em;}
+.mc-product-model{font-size:14px; font-weight:600; color:var(--ink); line-height:1.3; margin-bottom:4px;}
+.mc-product-rating{font-size:13px; font-weight:700; color:var(--ink);}
+.mc-product-reviews{font-size:11.5px; font-weight:400; color:var(--ink-soft); margin-bottom:6px;}
+.mc-product-price{font-size:16px; font-weight:700; color:var(--accent-deep);}
+.mc-product-amazon{margin-top:10px;}
+.mc-divider{position:absolute; top:18px; bottom:18px; left:50%; width:1px; background:var(--line-row);}
+.mc-vs{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:32px; height:32px; border-radius:50%; background:var(--card);
+  border:1px solid var(--line); box-shadow:0 2px 6px rgba(0,0,0,.1);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--accent-deep);
+}
+.mc-features{
+  margin-top:20px; display:grid; grid-template-columns:130px 1fr 1fr;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05); overflow:hidden;
+}
+.mc-feat-label, .mc-feat-val{
+  padding:12px 8px; border-bottom:1px solid var(--line-row);
+  display:flex; align-items:center; min-width:0;
+}
+.mc-features > div:nth-last-child(-n+3){border-bottom:none;}
+.mc-feat-label{background:var(--bg); font-size:12px; font-weight:700; color:var(--ink);}
+.mc-feat-val{
+  justify-content:center; text-align:center; flex-direction:column; gap:2px;
+  font-size:13px; color:var(--ink); font-weight:400;
+}
+.mc-feat-val .rango-primary, .mc-feat-val .rango-secondary{
+  white-space:normal; overflow:visible; text-overflow:clip; text-align:center;
+}
+.mc-feat-val .rango-block{display:flex; flex-direction:column; align-items:center;}
+
+.mc-ficha{margin-top:16px;}
+.mc-ficha-toggle{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05); padding:14px 16px; cursor:pointer;
+  font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:var(--accent-deep);
+  text-transform:uppercase; letter-spacing:.03em;
+}
+.mc-ficha-toggle:hover{color:var(--accent-deep);}
+.mc-ficha-toggle-icon{font-size:12px; color:var(--accent-deep); transition:transform .15s;}
+.mc-ficha-toggle[aria-expanded="true"] .mc-ficha-toggle-icon{transform:rotate(180deg);}
+.mc-ficha-panel{
+  margin-top:10px; display:grid; grid-template-columns:150px 1fr 1fr;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05); overflow:hidden;
+}
+.mc-ficha-panel .mc-feat-label{overflow-wrap:break-word;}
+.mc-ficha-panel[hidden]{display:none;}
+.mc-ficha-panel > div:nth-last-child(-n+3){border-bottom:none;}
+
+.mc-thumb-ph{
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg,#F4F2EE,#E9E6DF); border:1px solid var(--line);
+  border-radius:9px; font-family:'JetBrains Mono',monospace; font-weight:700;
+  color:var(--ink-soft); font-size:28px;
+}
+
+.txt-plain{display:block;font-size:12.5px;font-weight:400;color:var(--ink);line-height:1.3;}
+.txt-plain--unk{color:#9C9A93;}
+.cell-unspecified{color:#9C9A93;font-weight:400;font-size:13px;}
+.cell-revisar{color:var(--revisar);font-weight:600;}
+
+.btn-amazon-row{
+  display:block;background:var(--accent-deep);color:#fff;text-align:center;text-decoration:none;
+  font-size:12.5px;font-weight:700;padding:9px 12px;border-radius:8px;
+  font-family:'Inter',sans-serif;transition:background .15s;white-space:nowrap;width:100%;
+}
+.btn-amazon-row:hover{background:#B5471F;text-decoration:none;}
+
+@media (min-width:769px){
+  .mc-vs-card{max-width:600px;margin:0 auto;}
+  .mc-features,.mc-ficha{max-width:600px;margin-left:auto;margin-right:auto;}
+  .mc-features{margin-top:20px;}
+  .mc-ficha{margin-top:16px;}
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559559964863356"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back-link" href="comparador-sillas-coche.html">← Volver a todas las sillas</a>
+
+<div class="page-head">
+  <span class="eyebrow">Comparativa de 2 sillitas</span>
+  <h1 id="cmp-title">Comparar sillas de coche</h1>
+  <p id="cmp-sub">Normativa, edad, altura, peso, grupo, Isofix, orientación, arnés y giro 360º, una junto a la otra.</p>
+</div>
+
+<div class="cmp-error" id="cmp-error" hidden>
+  <p>No hemos podido cargar esta comparación. Vuelve al listado y elige 2 sillitas para comparar.</p>
+  <a class="back-link" href="comparador-sillas-coche.html" style="margin-bottom:0;">← Volver a todas las sillas</a>
+</div>
+
+<div id="cmp-result" hidden>
+  <div class="mc-vs-card">
+    <div class="mc-product" data-slot="a"></div>
+    <div class="mc-divider"></div>
+    <div class="mc-vs">VS</div>
+    <div class="mc-product" data-slot="b"></div>
+  </div>
+  <div class="mc-features" id="mc-features">
+    <div class="mc-feat-label">Normativa</div>
+    <div class="mc-feat-val" data-feat="normativa" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="normativa" data-slot="b"></div>
+    <div class="mc-feat-label">Edad</div>
+    <div class="mc-feat-val" data-feat="edad" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="edad" data-slot="b"></div>
+    <div class="mc-feat-label">Altura</div>
+    <div class="mc-feat-val" data-feat="altura" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="altura" data-slot="b"></div>
+    <div class="mc-feat-label">Peso</div>
+    <div class="mc-feat-val" data-feat="peso" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="peso" data-slot="b"></div>
+    <div class="mc-feat-label">Grupo</div>
+    <div class="mc-feat-val" data-feat="grupo" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="grupo" data-slot="b"></div>
+    <div class="mc-feat-label">ISOFIX</div>
+    <div class="mc-feat-val" data-feat="isofix" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="isofix" data-slot="b"></div>
+    <div class="mc-feat-label">Orientación</div>
+    <div class="mc-feat-val" data-feat="orientacion" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="orientacion" data-slot="b"></div>
+    <div class="mc-feat-label">Arnés</div>
+    <div class="mc-feat-val" data-feat="arnes" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="arnes" data-slot="b"></div>
+    <div class="mc-feat-label">360º</div>
+    <div class="mc-feat-val" data-feat="giro360" data-slot="a"></div>
+    <div class="mc-feat-val" data-feat="giro360" data-slot="b"></div>
+  </div>
+  <div class="mc-ficha">
+    <button type="button" class="mc-ficha-toggle" id="mc-ficha-toggle" aria-expanded="false" aria-controls="mc-ficha-panel">
+      <span>Ficha técnica</span>
+      <span class="mc-ficha-toggle-icon" aria-hidden="true">▾</span>
+    </button>
+    <div class="mc-ficha-panel" id="mc-ficha-panel" hidden>
+      <div class="mc-feat-label">Reposacabezas: altura regulable</div>
+      <div class="mc-feat-val" data-ficha="reposacabezas" data-slot="a"></div>
+      <div class="mc-feat-val" data-ficha="reposacabezas" data-slot="b"></div>
+      <div class="mc-feat-label">Peso de la silla</div>
+      <div class="mc-feat-val" data-ficha="peso_silla" data-slot="a"></div>
+      <div class="mc-feat-val" data-ficha="peso_silla" data-slot="b"></div>
+      <div class="mc-feat-label">Protección lateral</div>
+      <div class="mc-feat-val" data-ficha="proteccion_lateral" data-slot="a"></div>
+      <div class="mc-feat-val" data-ficha="proteccion_lateral" data-slot="b"></div>
+      <div class="mc-feat-label">Reclinable</div>
+      <div class="mc-feat-val" data-ficha="reclinable" data-slot="a"></div>
+      <div class="mc-feat-val" data-ficha="reclinable" data-slot="b"></div>
+      <div class="mc-feat-label">Funda lavable</div>
+      <div class="mc-feat-val" data-ficha="funda_lavable" data-slot="a"></div>
+      <div class="mc-feat-val" data-ficha="funda_lavable" data-slot="b"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script src="js/sillas-comparador-data.js"></script>
+<script>
+(function () {
+  if (typeof MOBILE_PRODUCTS === 'undefined') return;
+  var byAsin = {};
+  MOBILE_PRODUCTS.forEach(function (p) { byAsin[p.asin] = p; });
+
+  var params = new URLSearchParams(window.location.search);
+  var asinA = params.get('modelo1');
+  var asinB = params.get('modelo2');
+  var a = asinA && byAsin[asinA];
+  var b = asinB && byAsin[asinB];
+
+  var elError = document.getElementById('cmp-error');
+  var elResult = document.getElementById('cmp-result');
+
+  if (!a || !b) {
+    elError.hidden = false;
+    return;
+  }
+
+  document.title = a.marca + ' ' + a.modelo + ' vs ' + b.marca + ' ' + b.modelo + ' · Comparar sillas de coche';
+  document.getElementById('cmp-title').textContent = a.marca + ' ' + a.modelo + ' vs ' + b.marca + ' ' + b.modelo;
+  document.getElementById('cmp-sub').textContent = 'Comparativa detallada de estas 2 sillitas: normativa, edad, altura, peso, grupo, Isofix, orientación, arnés y giro 360º.';
+
+  var productos = { a: a, b: b };
+  document.querySelectorAll('.mc-product[data-slot]').forEach(function (el) {
+    el.innerHTML = productos[el.dataset.slot].vsSlotHtml;
+  });
+  document.querySelectorAll('[data-feat]').forEach(function (el) {
+    el.innerHTML = productos[el.dataset.slot].featureValues[el.dataset.feat];
+  });
+  document.querySelectorAll('[data-ficha]').forEach(function (el) {
+    el.innerHTML = productos[el.dataset.slot].fichaValues[el.dataset.ficha];
+  });
+
+  elResult.hidden = false;
+})();
+
+(function () {
+  var btn = document.getElementById('mc-ficha-toggle');
+  var panel = document.getElementById('mc-ficha-panel');
+  if (!btn || !panel) return;
+  btn.addEventListener('click', function () {
+    var abierta = !panel.hasAttribute('hidden');
+    if (abierta) {
+      panel.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      panel.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
