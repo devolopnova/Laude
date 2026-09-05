@@ -1,0 +1,7 @@
+Total celdas cambiadas: 4
+Atributos afectados: ['arnes', 'edad', 'reposacabezas']
+
+B0FGDM2ZTS   edad           ANTES='No determinado'          DESPUES='Sin especificar'         fuente='amazon' confianza='media'
+B0CWS19269   reposacabezas  ANTES='Sí — 14 posiciones'      DESPUES='Sí'                      fuente='fabricante_oficial (confirmado manualmente)' confianza=None
+B0DSL7WGB2   arnes          ANTES='No determinado'          DESPUES='Sin especificar'         fuente='amazon' confianza='alta'
+B0F1R26D8L   arnes          ANTES='No determinado'          DESPUES='Sin especificar'         fuente='amazon' confianza='alta'

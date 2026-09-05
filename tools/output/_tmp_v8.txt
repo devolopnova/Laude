@@ -1,0 +1,4 @@
+scp-section margin-top 48px: True
+scp-faq ahora 48px: True
+ya no queda el 16px: True
+head/body balance: 1/1 1/1

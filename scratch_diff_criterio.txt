@@ -1,0 +1,17 @@
+Total celdas cambiadas: 14
+Atributos afectados: ['altura_r129', 'funda_lavable', 'orientacion', 'proteccion_lateral']
+
+B0FKBWNF2G   orientacion        ANTES='No determinado'     DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0FKBWNF2G   funda_lavable      ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP63YCW   proteccion_lateral ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP63YCW   funda_lavable      ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP9MTBX   proteccion_lateral ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP9MTBX   funda_lavable      ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0FGDM2ZTS   altura_r129        ANTES='No determinado'     DESPUES='76-150 cm'          fuente='amazon' confianza=None
+B0FGDM2ZTS   orientacion        ANTES='No determinado'     DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0F9YR27XX   funda_lavable      ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='media'
+B0DSL7WGB2   altura_r129        ANTES='No determinado'     DESPUES='100-150 cm'         fuente='amazon' confianza=None
+B0DSL7WGB2   orientacion        ANTES='No determinado'     DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0GGZYY3BZ   proteccion_lateral ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0GGZYY3BZ   funda_lavable      ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0F1R26D8L   proteccion_lateral ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'

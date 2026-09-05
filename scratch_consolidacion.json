@@ -1,0 +1,452 @@
+[
+ {
+  "marca": "Kinderkraft",
+  "modelo": "I-GROW",
+  "asin": "B0BZ89X9YC",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 1485,
+  "score_ind": 86.95,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "I-BOOST 2",
+  "asin": "B0F1R26D8L",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 143,
+  "score_ind": 55.5,
+  "val_incr": 90.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "SAFETY FIX 3 PRO",
+  "asin": "B0FGDM2ZTS",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 153,
+  "score_ind": 59.77,
+  "val_incr": 20.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "JUNIOR FIX 2 PRO",
+  "asin": "B0FKBWNF2G",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": true,
+  "n_val": 63,
+  "score_ind": 54.01,
+  "val_incr": 10.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "I-COMFY",
+  "asin": "B0F9YPF1V1",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": true,
+  "n_val": 377,
+  "score_ind": 64.5,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "COMFORT UP",
+  "asin": "B0BYP63YCW",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": true,
+  "n_val": 4105,
+  "score_ind": 71.96,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "I-GROW 2 PRO",
+  "asin": "B0F9YR27XX",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": true,
+  "n_val": 67,
+  "score_ind": 79.69,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "UNITY 2",
+  "asin": "B0DSL7WGB2",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": true,
+  "n_val": 234,
+  "score_ind": 58.26,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Kinderkraft",
+  "modelo": "FIX2GO",
+  "asin": "B0DP7TG8KY",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": true,
+  "n_val": 186,
+  "score_ind": 66.53,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Maxi-Cosi",
+  "modelo": "Emerald 360 S",
+  "asin": "B0CWS19269",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 617,
+  "score_ind": 80.9,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Maxi-Cosi",
+  "modelo": "Tanza",
+  "asin": "B0CZ47FKZL",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 1385,
+  "score_ind": 64.03,
+  "val_incr": 70.0
+ },
+ {
+  "marca": "Maxi-Cosi",
+  "modelo": "Pearl 360",
+  "asin": "B0C6R47BCV",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 1500,
+  "score_ind": 64.59,
+  "val_incr": 45.0
+ },
+ {
+  "marca": "Maxi-Cosi",
+  "modelo": "Kore i-Size",
+  "asin": "B07RS6KP8C",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 1244,
+  "score_ind": 59.79,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Maxi-Cosi",
+  "modelo": "RodiFix M",
+  "asin": "B0CKZC1WZG",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 900,
+  "score_ind": 59.08,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Maxi-Cosi",
+  "modelo": "Mica Pro Eco",
+  "asin": "B0BXB1S1Z5",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 182,
+  "score_ind": 69.98,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Bebe Confort",
+  "modelo": "RevolveFix Plus 360",
+  "asin": "B0F3P61P8C",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 458,
+  "score_ind": 82.34,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Bebe Confort",
+  "modelo": "Marvel RoadSafe",
+  "asin": "B0GGZYY3BZ",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 224,
+  "score_ind": 54.86,
+  "val_incr": 90.0
+ },
+ {
+  "marca": "Bebe Confort",
+  "modelo": "Manga i-Fix",
+  "asin": "B000O6OAG0",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 837,
+  "score_ind": 53.81,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Cybex",
+  "modelo": "Solution X i-Fix",
+  "asin": "B0C58QGJNG",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": true,
+  "n_val": 1659,
+  "score_ind": 64.27,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Cybex",
+  "modelo": "Cloud G i-Size Comfort",
+  "asin": "B0DB2J1HMK",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 100,
+  "score_ind": 57.42,
+  "val_incr": 85.0
+ },
+ {
+  "marca": "Cybex",
+  "modelo": "Pallas G i-Size (G2)",
+  "asin": "B0DPHRJ1YH",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 295,
+  "score_ind": 54.73,
+  "val_incr": 26.8
+ },
+ {
+  "marca": "Cybex",
+  "modelo": "Solution S2 i-Fix",
+  "asin": "B0B97Z1C6M",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 4000,
+  "score_ind": 58.34,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Britax Romer",
+  "modelo": "DUALFIX2 R",
+  "asin": "B07QLSYS2Y",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 1800,
+  "score_ind": 71.92,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Britax Romer",
+  "modelo": "BABY-SAFE CORE",
+  "asin": "B0CP2QYQK8",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 35,
+  "score_ind": 60.72,
+  "val_incr": 100.0
+ },
+ {
+  "marca": "Britax Romer",
+  "modelo": "EVOLVAFIX",
+  "asin": "B0C3HJNK2M",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 763,
+  "score_ind": 70.82,
+  "val_incr": 54.1
+ },
+ {
+  "marca": "Chicco",
+  "modelo": "Unico EVO I'Size Classic",
+  "asin": "B0C6KZCY6Z",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 1230,
+  "score_ind": 84.86,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Chicco",
+  "modelo": "Kory i-Size Essential",
+  "asin": "B0C6KXB9LL",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 71,
+  "score_ind": 55.1,
+  "val_incr": 90.0
+ },
+ {
+  "marca": "Chicco",
+  "modelo": "Quasar Fix i-Size",
+  "asin": "B0DW9GD5CG",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 52,
+  "score_ind": 47.9,
+  "val_incr": 55.0
+ },
+ {
+  "marca": "BabyAuto",
+  "modelo": "Rodia Plus i-Size",
+  "asin": "B0CQP3VKSK",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 142,
+  "score_ind": 65.56,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Graco",
+  "modelo": "SlimFit R129",
+  "asin": "B0BMGN89G3",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 85,
+  "score_ind": 69.22,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Graco",
+  "modelo": "Junior Maxi i-Size",
+  "asin": "B0CYQD2H66",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 3484,
+  "score_ind": 62.98,
+  "val_incr": 56.0
+ },
+ {
+  "marca": "Lionelo",
+  "modelo": "Bastiaan i-Size",
+  "asin": "B0CJCC2YYP",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 614,
+  "score_ind": 82.46,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Lionelo",
+  "modelo": "HUGO i-Size",
+  "asin": "B0CHS67WJ3",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 1500,
+  "score_ind": 66.92,
+  "val_incr": 70.0
+ },
+ {
+  "marca": "Lionelo",
+  "modelo": "LEVI ONE i-Size",
+  "asin": "B0D5QSYXPH",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 1062,
+  "score_ind": 71.0,
+  "val_incr": 20.0
+ },
+ {
+  "marca": "Lionelo",
+  "modelo": "NAVY i-Size",
+  "asin": "B0DG2MBP6Z",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 174,
+  "score_ind": 72.86,
+  "val_incr": 10.0
+ },
+ {
+  "marca": "KikkaBoo",
+  "modelo": "i-MOOVE 2",
+  "asin": "B0FL7MMYHN",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 209,
+  "score_ind": 80.48,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "KikkaBoo",
+  "modelo": "i-PASS",
+  "asin": "B0DYDY6C5Y",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 780,
+  "score_ind": 54.37,
+  "val_incr": 65.0
+ },
+ {
+  "marca": "KikkaBoo",
+  "modelo": "i-FLIT",
+  "asin": "B0DS6C4XR8",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 462,
+  "score_ind": 67.7,
+  "val_incr": 20.0
+ },
+ {
+  "marca": "Jovikids",
+  "modelo": "Alzador Coche Grupo 2/3",
+  "asin": "B09FQ3PYZX",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 2991,
+  "score_ind": 56.52,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Nania",
+  "modelo": "Belem",
+  "asin": "B0FLDLZTHJ",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 224,
+  "score_ind": 53.83,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Nania",
+  "modelo": "Bogota",
+  "asin": "B0FLDT4541",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 176,
+  "score_ind": 52.47,
+  "val_incr": 10.0
+ },
+ {
+  "marca": "Nania",
+  "modelo": "diversluxe",
+  "asin": "B0CN9MM6ZW",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 65,
+  "score_ind": 44.15,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Babify",
+  "modelo": "Onboard",
+  "asin": "B07RYWKS9Z",
+  "estado_pool": "SELECCIONADO",
+  "es_actual_lote1": false,
+  "n_val": 7143,
+  "score_ind": 82.72,
+  "val_incr": 0.0
+ },
+ {
+  "marca": "Babify",
+  "modelo": "Silla Isofix 15-36kg",
+  "asin": "B08BY2XL1M",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 202,
+  "score_ind": 46.03,
+  "val_incr": 90.0
+ },
+ {
+  "marca": "Babify",
+  "modelo": "FlexiFit Basic",
+  "asin": "B0F1TVJ463",
+  "estado_pool": "DESCARTADO",
+  "es_actual_lote1": false,
+  "n_val": 13,
+  "score_ind": 43.12,
+  "val_incr": 70.0
+ }
+]

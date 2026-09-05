@@ -1,0 +1,4 @@
+font link has 700 for JetBrains Mono: True
+specs-title weight 700: True
+opiniones-head weight 700: True
+head/body balance: 1/1 1/1

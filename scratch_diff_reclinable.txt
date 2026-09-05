@@ -1,0 +1,10 @@
+Total celdas cambiadas: 7
+Cambios FUERA de reclinable: 0
+
+B0FKBWNF2G   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0BYP63YCW   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0CZ47FKZL   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0BYP9MTBX   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0FGDM2ZTS   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='media'
+B0GGZYY3BZ   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0F1R26D8L   reclinable   ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'

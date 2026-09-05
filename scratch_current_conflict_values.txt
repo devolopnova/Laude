@@ -1,0 +1,30 @@
+B0BYP63YCW | Kinderkraft
+  reposacabezas: mostrar=Sí normalizado={'regulable': True, 'posiciones': None} original=✅ CÓMODA: el reposacabezas se regula en 11 niveles, y gracias a EASY GROW SYSTEM, se puede ajustar simultáneamente junto con el arnés interior. Tiene un asiento amplio y blando de tela transpirable
+  peso_silla: mostrar=6 kg
+  edad: mostrar=15 meses - 12 años original=Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Rosa
+
+B0C58QGJNG | Cybex
+  reposacabezas: mostrar=Sí — 3 posiciones normalizado={'regulable': True, 'posiciones': 3} original=Óptima seguridad: Protección lineal contra impactos laterales integrada en los protectores laterales de los hombros, Reposacabezas reclinable Cybex de 3 posiciones que sujeta la cabeza mientras se duerme
+  peso_silla: mostrar=7 kg
+  edad: mostrar=3-12 años original=CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)
+
+B0BYP9MTBX | Kinderkraft
+  reposacabezas: mostrar=Sí normalizado={'regulable': True, 'posiciones': None} original=✅ CÓMODA: el reposacabezas se regula en 11 niveles, y gracias a EASY GROW SYSTEM, se puede ajustar simultáneamente junto con el arnés interior. Tiene un asiento amplio y blando de tela transpirable
+  peso_silla: mostrar=6 kg
+  edad: mostrar=15 meses - 12 años original=Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Negro
+
+B0F3P61P8C | Bébé Confort
+  reposacabezas: mostrar=Sí — 12 posiciones normalizado={'regulable': True, 'posiciones': 12} original=12 POSICIONES DE REPOSACABEZAS: el reposacabezas de estas sillas coche grupo 0 1 2 3 puede ajustarse en 12 posiciones con una mano, regulando simultáneamente el arnés de 5 puntos. Además, el cojín y el reductor para recién nacidos pueden quitarse
+  peso_silla: mostrar=10,75 kg
+  edad: mostrar=0-4 años original=SILLAS COCHE GRUPO 0 1 2 3: silla de coche 360 bebé en posición a contramarcha con almohada y reductor para recién nacidos integrados (de 0 a 4 años) y silla de coche infantil en posición a favor de la marcha (de 15 meses a 12 años)
+
+B0CWS19269 | Maxi-Cosi
+  reposacabezas: mostrar=Sí — 14 posiciones normalizado={'regulable': True, 'posiciones': 14} original=14 POSICIONES DE REPOSACABEZAS: Con 14 posiciones de altura ajustable para el reposacabezas y arnés ajustable, la silla de coche con giro 360° crece con tu hijo de 0 a 12 años
+  peso_silla: mostrar=12,7 kg
+  edad: mostrar=0-12 años original=14 POSICIONES DE REPOSACABEZAS: Con 14 posiciones de altura ajustable para el reposacabezas y arnés ajustable, la silla de coche con giro 360° crece con tu hijo de 0 a 12 años
+
+B0DP7TG8KY | Kinderkraft
+  reposacabezas: mostrar=No determinado normalizado=None original=None
+  peso_silla: mostrar=6,3 kg
+  edad: mostrar=No determinado original=None
+

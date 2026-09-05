@@ -1,0 +1,6 @@
+orientacion: N/A
+reclinable: Sí — 5 posiciones
+giro_360: N/A
+tipo_arnes_proteccion: N/A
+proteccion_lateral: Sí
+funda_lavable: Sí

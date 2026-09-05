@@ -1,0 +1,801 @@
+{
+  "province": "A Coruña",
+  "province_slug": "a-coruna",
+  "generated_at": "2026-08-31",
+  "searches": [
+    "planes con niños A Coruña",
+    "actividades con niños A Coruña",
+    "qué hacer con niños A Coruña"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se analizaron los 5 primeros resultados orgánicos de cada una de las 3 búsquedas (15 posiciones, 11 URLs únicas tras deduplicar; laguiago.com aparecía en las tres y minube.com en dos). Nueve fuentes superaron el cribado y se pudieron leer: escapalandia.com, mochiadictos.com, galiciamaxica.eu, laguiago.com, minube.com, littlevigo.com, agendadeisa.com, elidealgallego.com y quehacerconlosninos.es. Descartadas: planomato.com (agenda de eventos puntuales, no listado de lugares estables), yumping.com (plataforma comercial de reservas) y TripAdvisor (HTTP 403, no legible). La base de evidencias es mucho más sólida que la de Lugo: los cinco primeros puestos tienen entre 5 y 7 medios independientes. Se buscaban 18 lugares y se consiguieron 18 (15 primary + 3 backup). Sesgo detectado y corregido: casi todas las guías son de la ciudad de A Coruña, no de la provincia, así que un ranking por evidencias puras habría dejado fuera toda la provincia (Costa da Morte, Fragas do Eume, comarcas del interior). Por eso, aplicando el criterio de variedad de tipos de plan de la Fase A.5, se reservaron puestos para propuestas provinciales con menos evidencias pero experiencia claramente distinta: Casa Grande de Xanceda (Mesía), Corax Fauna (Paderne), Aquapark de Cerceda, Fervenza do Ézaro (Dumbría), Fragas do Eume (Pontedeume) y Naturmaz (Mazaricos). Como contrapartida, tres lugares urbanos con 2-3 evidencias bajaron a backup (Parque de Oza, MegaJump, Paseo Marítimo). Aplicación de la regla de diversificación del patrimonio histórico/arqueológico: los candidatos de esa naturaleza eran la Torre de Hércules, el Castillo de San Antón, el Castro de Elviña, las antiguas murallas y los hórreos de Carnota. Se seleccionaron solo 2 entre los primary (Torre de Hércules en el puesto 7 y Castillo de San Antón en el 15, ambos a partir de la posición 7); Castro de Elviña, murallas y Carnota quedaron fuera. La Torre de Hércules baja al puesto 7 pese a tener 5 evidencias precisamente por esta regla, aunque sea el símbolo de la ciudad. Las posiciones 1-6 se reservaron a experiencias con atractivo infantil evidente: acuario, dos museos interactivos de ciencia, un museo tecnológico, un parque con laberinto y ascensor panorámico, y una granja ecológica visitable. También se descartaron por redundancia temática dos centros apícolas de la provincia (Casa das Abellas en Abegondo y O Enredo do Abelleiro), cada uno con una sola evidencia y muy parecidos entre sí.",
+  "sources_analyzed": [
+    {
+      "name": "El Ideal Gallego — Planes con niños en A Coruña cuando hace mal tiempo",
+      "domain": "elidealgallego.com",
+      "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+      "title": "Planes con niños en A Coruña cuando hace mal tiempo",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 16
+    },
+    {
+      "name": "Minube — La Coruña con niños: 9 planes para disfrutar en familia",
+      "domain": "minube.com",
+      "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+      "title": "La Coruña con niños: 9 planes para disfrutar en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 9
+    },
+    {
+      "name": "La Guía Go! — Los mejores planes para hacer con niños en A Coruña",
+      "domain": "laguiago.com",
+      "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+      "title": "Los mejores planes para hacer con niños en A Coruña",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 9
+    },
+    {
+      "name": "Mochiadictos — A Coruña con niños: 27 planes",
+      "domain": "mochiadictos.com",
+      "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+      "title": "A Coruña con niños: 27 Planes molones qué hacer en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 22
+    },
+    {
+      "name": "Planomato — Planes con niños en A Coruña",
+      "domain": "planomato.com",
+      "url": "https://www.planomato.com/es/a-coruna/ni%C3%B1os",
+      "title": "Planes con niños en A Coruña 2026",
+      "included": false,
+      "exclusion_reason": "Agenda de eventos puntuales (fiestas, talleres, espectáculos con fecha), no un listado de lugares visitables de forma estable.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Yumping — Actividades para niños en A Coruña",
+      "domain": "yumping.com",
+      "url": "https://www.yumping.com/en/activities-for-children/acoruna",
+      "title": "Actividades para niños en A Coruña",
+      "included": false,
+      "exclusion_reason": "Plataforma comercial de reserva de actividades, no una guía editorial.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Qué Hacer con los Niños — Divertidas actividades en A Coruña",
+      "domain": "quehacerconlosninos.es",
+      "url": "https://www.quehacerconlosninos.es/divertidas-actividades-en-a-coruna/",
+      "title": "Divertidas actividades con hijos en A Coruña",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 4
+    },
+    {
+      "name": "Agenda de Isa — 9 planes para hacer en Coruña con niños",
+      "domain": "agendadeisa.com",
+      "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+      "title": "9 planes para hacer en Coruña con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 9
+    },
+    {
+      "name": "Little Vigo — A Coruña con niños",
+      "domain": "littlevigo.com",
+      "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+      "title": "A Coruña con Niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 15
+    },
+    {
+      "name": "Escapalandia — Qué hacer en A Coruña con niños: 25 planes",
+      "domain": "escapalandia.com",
+      "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+      "title": "Qué hacer en A Coruña con niños: 25 planes",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 24
+    },
+    {
+      "name": "TripAdvisor — Cosas que hacer con niños en A Coruña",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187507-Activities-zft11306-La_Coruna_Province_of_A_Coruna_Galicia.html",
+      "title": "Las 10 mejores cosas que hacer con niños en A Coruña",
+      "included": false,
+      "exclusion_reason": "El servidor devolvió HTTP 403 y no se pudo leer el contenido de la página.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Galicia Máxica — Lugares en A Coruña (Galicia con niños)",
+      "domain": "galiciamaxica.eu",
+      "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-a-coruna/",
+      "title": "Hoy toca LUGARES EN A CORUÑA — Galicia con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 20
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "sesgo_de_fuentes",
+        "message": "Las nueve fuentes válidas se centran casi por completo en la ciudad de A Coruña. La cobertura de la provincia (Costa da Morte, Fragas do Eume, comarcas del interior) se apoya en lugares con una sola evidencia, incorporados por criterio de variedad y no por respaldo entre medios.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "Monte de San Pedro no tiene web propia: se usa la ficha oficial de Turismo de A Coruña (visitcoruna.com, del Concello), no una web del parque en sentido estricto.",
+        "place_rank": 4
+      },
+      {
+        "severity": "warning",
+        "category": "informacion_limitada",
+        "message": "Monte de San Pedro es un parque de ladera con varios accesos: la dirección (aportada por el usuario) corresponde a la entrada por la parte alta, mientras que el ascensor panorámico arranca abajo, en el paseo marítimo.",
+        "place_rank": 4
+      },
+      {
+        "severity": "warning",
+        "category": "informacion_limitada",
+        "message": "Corax Fauna exige reserva previa y aparece en una sola fuente. La dirección se ha tomado de su web oficial, que la escribe como 'Finca Astrabesas San Julian de Vigo' — grafía castellanizada que probablemente corresponde a la finca As Travesas, en San Xiao de Vigo; se conserva literal la de la web oficial, sin corregirla.",
+        "place_rank": 8
+      },
+      {
+        "severity": "warning",
+        "category": "informacion_limitada",
+        "message": "El Aquapark de Cerceda solo abre de principios de junio a principios de septiembre, y la Fervenza do Ézaro tiene la iluminación nocturna limitada a determinados días de verano. Conviene reflejar la estacionalidad en la redacción de ambas tarjetas.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "aquaparkcerceda.es figura como web oficial en fuentes secundarias, pero el canal de venta que aparece en las búsquedas es aquaparkcerceda.sacatuentrada.es. No se pudo confirmar por lectura directa cuál es la web institucional vigente.",
+        "place_rank": 12
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "Para las Fragas do Eume se usa la ficha oficial de Patrimonio Natural de Galicia (Xunta). El parque natural no tiene web propia independiente; el centro de interpretación depende de esa misma administración.",
+        "place_rank": 13
+      },
+      {
+        "severity": "warning",
+        "category": "direccion_discrepante",
+        "message": "Para el Parque de Eirís las fuentes dan dos direcciones distintas ('Parque de Eirís, s/n' y 'Av. de Lamadosa, 3'). No hay fuente oficial con dirección postal, así que se usa la forma en la que coinciden más fuentes; el código postal (15009) sí es consistente en todas.",
+        "place_rank": 10
+      },
+      {
+        "severity": "warning",
+        "category": "sin_direccion",
+        "message": "La Fervenza do Ézaro es un enclave natural sin dirección postal de edificio: la referencia disponible es el punto de acceso en Río do Barco, Dumbría, desde donde parte la pasarela hasta la base de la cascada.",
+        "place_rank": 11
+      },
+      {
+        "severity": "warning",
+        "category": "sin_direccion",
+        "message": "MegaJump (backup) no publica una dirección postal de la instalación: las fuentes la sitúan en el centro comercial Comcord del polígono de A Grela y solo dan la dirección fiscal de la empresa, que no sirve para localizar el parque.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "sin_direccion",
+        "message": "El paseo marítimo de A Coruña (backup) es un recorrido continuo de más de 13 km sin dirección postal única.",
+        "place_rank": 18
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Aquarium Finisterrae",
+      "description": "Acuario municipal junto a la Torre de Hércules, con cuatro salas y una colección de más de trescientas especies marinas. La sala Maremagnum es interactiva y el Nautilus reproduce el interior de un submarino rodeado de agua, además de la piscina exterior de focas. Es el plan más redondo de la ciudad para una mañana entera con niños de cualquier edad.",
+      "official_url": "https://www.coruna.gal/mc2/es/aquarium-finisterrae",
+      "url_verified": true,
+      "address": "Paseo Alcalde Francisco Vázquez, 34, 15002 A Coruña",
+      "evidence_count": 7,
+      "independent_source_count": 7,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Lo incluye entre los museos imprescindibles, con tiburones y focas."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Lo cita como una de las atracciones principales de la ciudad con niños."
+        },
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Lo describe como el mayor acuario interactivo de Europa, con salas temáticas y focas."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+          "evidence": "Centro de ciencia marina con exposiciones interactivas y el submarino Nautilus."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Vida marina con tiburones, meros, pulpos y focas."
+        },
+        {
+          "name": "Agenda de Isa",
+          "domain": "agendadeisa.com",
+          "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+          "evidence": "Cuatro salas con especies marinas y piscina exterior con focas."
+        },
+        {
+          "name": "El Ideal Gallego",
+          "domain": "elidealgallego.com",
+          "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+          "evidence": "Lo encabeza como plan de interior para días de mal tiempo."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Casa de las Ciencias",
+      "description": "Museo interactivo instalado en un edificio octogonal dentro del parque de Santa Margarita, con tres plantas de experiencias de física y un planetario digital bajo la cúpula. Las sesiones del planetario incluyen pases pensados para público infantil, en los que se aprende a reconocer estrellas y constelaciones. Al salir, el propio parque tiene instalaciones científicas al aire libre para seguir jugando.",
+      "official_url": "https://www.coruna.gal/mc2/es/casa-de-las-ciencias",
+      "url_verified": true,
+      "address": "Parque de Santa Margarita, s/n, 15005 A Coruña",
+      "evidence_count": 7,
+      "independent_source_count": 7,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Museo de ciencia con módulos interactivos y el péndulo de Foucault."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Experimentos interactivos de física y sesiones de planetario."
+        },
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Módulos interactivos y planetario digital con sesiones para niños."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+          "evidence": "La incluye entre los nueve planes familiares de la ciudad."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Planetario con sesiones infantiles y juegos educativos."
+        },
+        {
+          "name": "Agenda de Isa",
+          "domain": "agendadeisa.com",
+          "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+          "evidence": "Planetario en el parque de Santa Margarita con salas interactivas de astronomía."
+        },
+        {
+          "name": "El Ideal Gallego",
+          "domain": "elidealgallego.com",
+          "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+          "evidence": "Actividades interactivas de física, naturaleza y planetario."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Domus (Casa del Hombre)",
+      "description": "Museo interactivo dedicado por completo a la especie humana, en un edificio con forma de vela diseñado por Arata Isozaki frente al mar. Más de doscientos módulos manipulables invitan a experimentar con las sombras, comprobar cómo reacciona la pupila a la luz o entender por qué nos parecemos a nuestros padres. Tiene además cine en 3D y laboratorio abierto.",
+      "official_url": "https://www.coruna.gal/mc2/es/domus",
+      "url_verified": true,
+      "address": "Rúa Ángel Rebollo, 91, 15002 A Coruña",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Museo interactivo centrado en el cuerpo humano y los sentidos."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Museo interactivo sobre la naturaleza humana, con cine 3D."
+        },
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Actividades manipulables, cine 3D y laboratorio abierto."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+          "evidence": "Más de 200 módulos interactivos sobre el cuerpo humano, obra de Arata Isozaki."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Museo interactivo sobre el ser humano con más de 200 módulos."
+        },
+        {
+          "name": "El Ideal Gallego",
+          "domain": "elidealgallego.com",
+          "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+          "evidence": "Primer museo interactivo dedicado a las características humanas, con más de 150 módulos."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Monte de San Pedro",
+      "description": "Antiguo emplazamiento militar convertido en un gran parque sobre la ciudad, con jardines, laberinto vegetal, estanque con patos, zona de juegos y los cañones históricos aún en su sitio. Se sube en un ascensor panorámico con forma de esfera de cristal que recorre la ladera desde el paseo marítimo. Arriba está la Cúpula Atlántica, un mirador cubierto de 360 grados sobre la bahía.",
+      "official_url": "https://www.visitcoruna.com/turismo/es/que-hacer-en-a-coruna/naturaleza-y-deporte/parques-y-jardines/monte-de-san-pedro",
+      "url_verified": false,
+      "address": "Estrada Os Fortes, 7, 15011 A Coruña",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Parque con zonas de juego infantil y laberinto vegetal."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Parque en alto con cañones históricos, laberinto de vegetación y mirador cubierto de 360°."
+        },
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Jardines, laberinto inglés, cañones, estanque con patos, parque infantil y ascensor panorámico."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+          "evidence": "Vistas panorámicas, laberintos de seto, zonas de juego y un pequeño estanque."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Jardines, laberinto, parque infantil y ascensor panorámico hasta la Cúpula Atlántica."
+        },
+        {
+          "name": "Agenda de Isa",
+          "domain": "agendadeisa.com",
+          "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+          "evidence": "Mirador de 360º accesible por ascensor panorámico."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "MUNCYT — Museo Nacional de Ciencia y Tecnología",
+      "description": "Sede coruñesa del museo nacional, instalada en el edificio Prisma de Cristal, con exposiciones sobre cine, energía, química y biología repartidas en varias plantas. Entre las piezas se pueden ver robots, el primer coche fabricado en Europa y la cabina real de un Boeing 747 en la que se puede entrar. La entrada es gratuita y programa talleres educativos.",
+      "official_url": "https://muncyt.es/sobre-el-museo/sedes/muncyt-coruna",
+      "url_verified": true,
+      "address": "Praza do Museo Nacional de Ciencia, 1, 15011 A Coruña",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Museo de tecnología con robots interactivos."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Museo de ciencia interactivo de nueve plantas y entrada gratuita."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+          "evidence": "Exposiciones interactivas, robots y experimentos."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Robots, el primer coche europeo y la cabina de un Boeing 747."
+        },
+        {
+          "name": "Agenda de Isa",
+          "domain": "agendadeisa.com",
+          "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+          "evidence": "Exposiciones interactivas sobre cine, energías, química y biología con talleres educativos."
+        },
+        {
+          "name": "El Ideal Gallego",
+          "domain": "elidealgallego.com",
+          "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+          "evidence": "Cultura científica y tecnológica a través del juego, con entrada libre."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Casa Grande de Xanceda",
+      "description": "Granja ecológica en Mesía, con más de trescientas vacas pastando libres en prados y bosques, que se visita en una ecovisita guiada de unas dos horas. El recorrido pasa por la sala de ordeño, la eco huerta y el eco zoo, donde los niños dan de comer y cepillan a ponis, cabras y ovejas, y termina con una degustación de los yogures y quesos de la casa. Hay que reservar con antelación.",
+      "official_url": "https://www.casagrandexanceda.com/",
+      "url_verified": true,
+      "address": "Casa Grande de Xanceda, s/n, 15685 Mesía, A Coruña",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Granja ecológica con visitas guiadas por la sala de ordeño, talleres de queso y experiencias de alimentación de animales."
+        },
+        {
+          "name": "Agenda de Isa",
+          "domain": "agendadeisa.com",
+          "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+          "evidence": "Visitas guiadas donde los niños alimentan terneros y aprenden agricultura sostenible."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Torre de Hércules",
+      "description": "El faro romano en funcionamiento más antiguo del mundo, declarado Patrimonio de la Humanidad, con 234 escalones hasta lo alto y vistas abiertas al Atlántico. Alrededor se extiende un parque escultórico al aire libre con obras dedicadas a la cultura celta y a las leyendas de la ciudad, que se recorre gratis y sin prisa. Los lunes la entrada es gratuita, aunque hay que reservar plaza igualmente.",
+      "official_url": "https://www.torredeherculesacoruna.com/",
+      "url_verified": true,
+      "address": "Avenida de Navarra, s/n, 15002 A Coruña",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Faro antiguo con vistas panorámicas, junto al parque escultórico."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Faro con 234 escalones y vistas al Atlántico."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/la-coruna-con-ninos-9-planes-para-disfrutar-en-familia",
+          "evidence": "Faro romano en activo de más de 2.000 años, con centro de visitantes."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Faro antiguo con vistas y rutas exteriores."
+        },
+        {
+          "name": "Agenda de Isa",
+          "domain": "agendadeisa.com",
+          "url": "https://agendadeisa.com/a-coruna/viajar-con-ninos/coruna-con-ninos/",
+          "evidence": "El faro en funcionamiento más antiguo del mundo, con 234 escalones y parque alrededor."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Corax Fauna",
+      "description": "Centro educativo de fauna salvaje en una finca de Paderne, con más de cincuenta especies entre las que hay leones, tigres, lobos y monos. La visita es siempre guiada y se centra en explicar de dónde viene cada animal y por qué está allí, más que en el simple paseo por recintos. Hay que reservar con antelación y ser puntual, porque los grupos salen a hora fija.",
+      "official_url": "https://corax.es/",
+      "url_verified": true,
+      "address": "Finca Astrabesas San Julian de Vigo, s/n, 15314 Paderne, A Coruña",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Centro educativo de fauna con más de 50 especies, visitas guiadas y actividades de naturaleza."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Termaria Casa del Agua",
+      "description": "Centro de agua marina junto al paseo marítimo, con piscinas, chorros y una zona Termalia Kids pensada para los más pequeños. Funciona con horarios específicos para familias, así que conviene mirar el calendario antes de ir. Es el recurso más socorrido de la ciudad cuando llueve y hace falta gastar energía bajo techo.",
+      "official_url": "https://www.termaria.es/",
+      "url_verified": false,
+      "address": "Rúa Manuel Murguía, s/n, 15011 A Coruña",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Piscinas de agua marina con horarios infantiles disponibles."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Piscinas, chorros de agua y zona Termalia Kids."
+        },
+        {
+          "name": "El Ideal Gallego",
+          "domain": "elidealgallego.com",
+          "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+          "evidence": "Piscinas de agua marina con actividades infantiles de 3 a 12 años."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Parque de Eirís",
+      "description": "El parque infantil más completo de la ciudad: más de ocho hectáreas de zonas verdes con doble tirolina, terraplén con tobogán, rocódromo, pista de skate y sendas para pasear. Una pérgola cubre parte de la zona de juegos, lo que permite usarla tanto con sol fuerte como con lluvia ligera. Tiene además buenas vistas sobre la ría y sitio de sobra para merendar.",
+      "official_url": "https://www.coruna.gal/web/es/temas/sociedad-y-bienestar/ocio-y-cultura/equipamientos-de-ocio/equipamiento/parque-de-eiris/entidad/1149056344524",
+      "url_verified": true,
+      "address": "Parque de Eirís, s/n, 15009 A Coruña",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Parque infantil con doble tirolina y toboganes."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Gran espacio verde con estanques y carriles para bicicleta."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Tirolinas, camas elásticas y tobogán gigante."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Fervenza do Ézaro",
+      "description": "La única cascada de Europa que desemboca directamente en el mar: el río Xallas se despeña unos 40 metros al pie del Monte Pindo, en Dumbría. Una pasarela de madera llega hasta la base del salto, y a pocos minutos en coche hay un mirador con vistas a la desembocadura. En verano se ilumina algunas noches, algo que suele impresionar bastante a los niños.",
+      "official_url": "https://www.turismo.gal/recurso/-/detalle/17173/fervenza-do-ezaro",
+      "url_verified": false,
+      "address": "Río do Barco, s/n, 15297 Dumbría, A Coruña",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "La incluye entre las excursiones cercanas, como cascada que se encuentra con el mar."
+        },
+        {
+          "name": "Galicia Máxica",
+          "domain": "galiciamaxica.eu",
+          "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-a-coruna/",
+          "evidence": "Fervenza do Ézaro (Dumbría), cascada con iluminación nocturna."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Aquapark de Cerceda",
+      "description": "Parque acuático a media hora de A Coruña, con piscina de olas, jacuzzi, acuatubos y varios toboganes, entre ellos un kamikaze de 54 metros y otros de flotador individual o por parejas. Hay piscinas específicas para los más pequeños, así que la familia entera puede repartirse por zonas. Solo abre de principios de junio a principios de septiembre.",
+      "official_url": "https://aquaparkcerceda.es/",
+      "url_verified": false,
+      "address": "Rúa Acebedo, s/n, 15185 Cerceda, A Coruña",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Parque acuático abierto de junio a septiembre, con toboganes, piscina de olas y piscinas infantiles."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Fragas do Eume",
+      "description": "Uno de los mejores bosques atlánticos de ribera que quedan en Europa, recorrido por sendas señalizadas que siguen el río Eume hasta el monasterio de Caaveiro. El centro de interpretación, en la carretera de Ombre a Caaveiro, explica con maquetas y paneles qué se va a ver antes de echar a andar. Las rutas son llanas en buena parte del recorrido, así que funcionan bien con niños.",
+      "official_url": "https://patrimonionatural.xunta.gal/es/fragas-do-eume",
+      "url_verified": false,
+      "address": "Centro de interpretación: Lugar de Andarúbel, carretera de Ombre a Caaveiro km 5, Pontedeume, A Coruña",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Bosque atlántico con sendero hasta el monasterio, entre las excursiones cercanas."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Naturmaz",
+      "description": "Centro de turismo activo junto al embalse de A Fervenza, en Mazaricos, con escalada, tiro con arco, tirolina, kayak y paddle surf. Las actividades se contratan por programas y se adaptan al nivel del grupo, así que se puede montar una jornada a medida según la edad de los niños. Está en plena Costa da Morte, lejos de la ciudad, así que encaja mejor como excursión de día completo.",
+      "official_url": "https://naturmaz.com/multiaventura/",
+      "url_verified": true,
+      "address": "Aeródromo da Fervenza, 15625 Mazaricos, A Coruña",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "La Guía Go!",
+          "domain": "laguiago.com",
+          "url": "https://www.laguiago.com/a-coruna/planes-para-hacer-con-ninos-en-a-coruna/",
+          "evidence": "Parque de aventura con escalada, tiro con arco, tirolina, kayak y paddle surf."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Castillo de San Antón",
+      "description": "Fortaleza del siglo XVI levantada sobre un islote en la bocana del puerto, hoy convertida en el Museo Arqueológico e Histórico de la ciudad. Se llega por un pequeño paso desde tierra y se recorren tanto las salas con piezas de la prehistoria gallega como los baluartes y el aljibe. La combinación de castillo, mar alrededor y visita corta funciona bien con niños.",
+      "official_url": "https://museos.xunta.gal/es/arqueoloxico-coruna",
+      "url_verified": false,
+      "address": "Paseo Alcalde Francisco Vázquez, 2-A, 15001 A Coruña",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Museo arqueológico en una fortaleza histórica."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Fortaleza junto al mar que alberga un museo arqueológico."
+        },
+        {
+          "name": "El Ideal Gallego",
+          "domain": "elidealgallego.com",
+          "url": "https://www.elidealgallego.com/articulo/a-coruna/planes-ninos-coruna-cuando-hace-mal-tiempo-4922690",
+          "evidence": "Fortaleza del siglo XVI con exposiciones arqueológicas, como plan de interior."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Parque de Oza",
+      "description": "Pulmón verde junto a la ría con tres zonas infantiles distintas, repartidas por altura y separadas por franjas de edad, además de estanques y pistas deportivas. La de la parte alta y la de la parte baja se pueden combinar en un mismo paseo, con vistas a la bahía de por medio. Plan gratuito y de duración flexible dentro de la ciudad.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Parque de Oza, 15006 A Coruña",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Parque con varios toboganes y equipamiento de juego."
+        },
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Parque junto al mar con zonas de juego y vistas a la bahía."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Balancín Prometeo, tobogán y estanques."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "MegaJump",
+      "description": "Parque de camas elásticas con más de cincuenta trampolines conectados, canastas, cancha de dodgeball y una piscina de espuma. Tiene una Kids Zone reservada a los menores de cinco años, separada de la zona general, y tarifa de familia. Es plan de interior puro, útil para tardes de lluvia.",
+      "official_url": "https://www.megajump.es/",
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Mochiadictos",
+          "domain": "mochiadictos.com",
+          "url": "https://www.mochiadictos.com/coruna-con-ninos/",
+          "evidence": "Parque de trampolines entre los planes de interior."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Camas elásticas con tarifa de familia."
+        },
+        {
+          "name": "Qué Hacer con los Niños",
+          "domain": "quehacerconlosninos.es",
+          "url": "https://www.quehacerconlosninos.es/divertidas-actividades-en-a-coruna/",
+          "evidence": "Más de 50 trampolines, piscina de espuma, cancha de dodgeball y Kids Zone para menores de 5 años."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Paseo marítimo de A Coruña",
+      "description": "Más de trece kilómetros continuos junto al mar, considerados el paseo marítimo urbano más largo de Europa, con carril bici y parques infantiles repartidos por el recorrido. Se puede hacer por tramos, en bici o en patinete, y enlaza las playas de Riazor y Orzán con la Torre de Hércules. Por el mismo trazado circula el tranvía turístico, que ahorra la vuelta a pie.",
+      "official_url": null,
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Escapalandia",
+          "domain": "escapalandia.com",
+          "url": "https://www.escapalandia.com/que-hacer-en-a-coruna-con-ninos-25-planes/",
+          "evidence": "Paseo marítimo de 12 km alrededor de la ciudad."
+        },
+        {
+          "name": "Little Vigo",
+          "domain": "littlevigo.com",
+          "url": "https://www.littlevigo.com/a-coruna-con-ninos/",
+          "evidence": "Más de 13 km con carril bici y zonas de juego."
+        }
+      ]
+    }
+  ]
+}

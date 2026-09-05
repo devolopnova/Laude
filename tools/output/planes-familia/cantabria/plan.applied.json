@@ -1,0 +1,585 @@
+{
+  "province": "Cantabria",
+  "province_slug": "cantabria",
+  "generated_at": "2026-08-31",
+  "searches": [
+    "planes con niños Cantabria",
+    "actividades con niños Cantabria",
+    "qué hacer con niños Cantabria"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "De las 3 búsquedas (5 primeros resultados orgánicos cada una = 15 candidatas máx.) se obtuvieron 8 páginas únicas tras quitar duplicados entre búsquedas (familiasenruta.com, minube.com y aunclicdelaaventura.com aparecieron en más de una búsqueda). De esas 8, se descartaron 4 en el cribado: turismodecantabria.com/blog/planes-con-ninos-en-cantabria (error HTTP 403 al intentar leer el contenido completo, dos intentos), vrbo.com (error HTTP 429 al intentar leer el contenido, y además es una plataforma de alquiler vacacional, no una guía editorial independiente), yumping.com (confirmado como plataforma de reserva de actividades/marketplace, con botones 'Book now' y sistema de pagos, no una guía de lugares) y tripadvisor.com (plataforma agregadora de atracciones con reseñas, mismo criterio de exclusión que en provincias anteriores). Quedaron 4 fuentes válidas y leídas por completo: familiasenruta.com, minube.com, viajocomoquiero.com y aunclicdelaaventura.com. Entre las 4 fuentes se extrajeron más de 25 lugares distintos tras normalizar variantes (p.ej. 'Península de la Magdalena' y 'Palacio de la Magdalena' se trataron como el mismo lugar, igual que 'Forestal Park Tirolinas Go' y 'Forestal park Santander'). Se buscaban 18 lugares (15 primary + 3 backup) y se consiguieron los 18. Un candidato mencionado solo en minube.com ('Parque de Atracciones Costa Aventuras') se descartó de la selección por no haber podido confirmar que se trate de un lugar real y vigente en Cantabria (no aparece en ninguna otra fuente ni búsqueda de verificación); ante la duda, se prefirió no incluirlo antes que arriesgar un dato inventado. La selección de las posiciones 1-6 priorizó experiencias con atractivo familiar directo y variedad de tipo de plan (fauna en semilibertad, palacio con zoo gratuito, teleférico de montaña, parque de aventura entre árboles, museo marítimo interactivo, cueva geológica) antes que patrimonio histórico o arqueológico. Regla de diversificación de patrimonio histórico/arqueológico: el único lugar con ese perfil en las posiciones 1-15 es el Museo Nacional y Centro de Investigación de Altamira (cueva con arte rupestre paleolítico, Patrimonio de la Humanidad Unesco), colocado en la posición 7, fuera de las posiciones 1-6 y por debajo del máximo de 2 permitidos. El Capricho de Gaudí (Comillas) no se trató como patrimonio histórico/arqueológico restringido por la regla (es arquitectura modernista con jardín interactivo pensado para niños, no una ruina/muralla/casco histórico). Otros candidatos de tipo patrimonial con solo 1 evidencia cada uno (Castillo de San Vicente en Argüeso, Poblados Cántabros de Argüeso y Cabezón de la Sal, Pozo de los Lobos en Revelillas, Ferrería y Molino de Cades) quedaron fuera de la selección final por evidencia débil frente a otros candidatos más sólidos, no por la regla de diversificación en sí.",
+  "sources_analyzed": [
+    {
+      "name": "Familias en Ruta",
+      "domain": "familiasenruta.com",
+      "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+      "title": "Cantabria con niños, 20 planes para no perderse",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 15
+    },
+    {
+      "name": "Turismo de Cantabria (blog)",
+      "domain": "turismodecantabria.com",
+      "url": "https://turismodecantabria.com/blog/planes-con-ninos-en-cantabria/",
+      "title": "Planes con niños en Cantabria",
+      "included": false,
+      "exclusion_reason": "Error HTTP 403 al intentar leer el contenido completo de la página (dos intentos, mismo resultado).",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "VRBO (guías de viaje)",
+      "domain": "vrbo.com",
+      "url": "https://www.vrbo.com/es-es/guias-de-viaje/casas-rurales/destinos-espanoles/norte/que-ver-cantabria-ninos-planes-familia",
+      "title": "Qué ver en Cantabria con niños: 10 planes para toda la familia",
+      "included": false,
+      "exclusion_reason": "Error HTTP 429 (demasiadas peticiones) al intentar leer el contenido completo; además es una plataforma de alquiler vacacional, no una guía editorial independiente.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Minube",
+      "domain": "minube.com",
+      "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+      "title": "Cantabria con niños: 12 planes divertidos",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 12
+    },
+    {
+      "name": "Viajo Como Quiero",
+      "domain": "viajocomoquiero.com",
+      "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+      "title": "Los mejores planes con niños en Cantabria: Diversión en familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Yumping",
+      "domain": "yumping.com",
+      "url": "https://www.yumping.com/en/activities-for-children/cantabria",
+      "title": "Actividades para niños en Cantabria",
+      "included": false,
+      "exclusion_reason": "Plataforma de reserva de actividades (marketplace) con botones de compra directa y sistema de pagos/reseñas por proveedor, no una guía editorial de lugares.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "A un Clic de la Aventura",
+      "domain": "aunclicdelaaventura.com",
+      "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+      "title": "15 Planes divertidos para hacer en Cantabria con niños (y no tan niños)",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 14
+    },
+    {
+      "name": "Tripadvisor",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187483-Activities-zft11306-Cantabria.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Cantabria",
+      "included": false,
+      "exclusion_reason": "Plataforma agregadora de atracciones con reseñas de usuarios, no un artículo o guía editorial.",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "El Nacimiento del río Asón es una ruta/monumento natural sin gestión de un único organismo con web propia; no se ha asignado official_url.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "La Playa de Oyambre es un espacio natural protegido sin gestión de un único organismo con web propia; no se ha asignado official_url.",
+        "place_rank": 18
+      },
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "No se ha encontrado una dirección con calle/número para la Playa de Oyambre, solo su localización entre San Vicente de la Barquera y Comillas.",
+        "place_rank": 18
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "No se ha encontrado una web oficial propia del Funicular de Río de la Pila (Santander); es una infraestructura municipal sin sitio web dedicado.",
+        "place_rank": 16
+      },
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "No se ha encontrado una dirección con calle/número exacta para el centro de interpretación del Parque Natural Saja-Besaya, solo su localización aproximada junto al pueblo de Saja.",
+        "place_rank": 14
+      },
+      {
+        "severity": "warning",
+        "category": "limited_evidence",
+        "message": "9 de los 18 lugares seleccionados (posiciones 10 a 18) tienen una única evidencia/medio independiente, frente a las posiciones 1-9 que tienen entre 2 y 4.",
+        "place_rank": null
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Parque de la Naturaleza de Cabárceno",
+      "description": "El Parque de la Naturaleza de Cabárceno reúne a más de 100 especies de animales en semilibertad, repartidas por un antiguo paisaje minero de casi 750 hectáreas que se recorre en coche o en teleférico. Elefantes, leones, osos y rinocerontes conviven en grandes recintos abiertos, con zonas específicas donde los niños pueden acercarse a otras especies. Uno de los planes familiares más completos de Cantabria, con espectáculos y área infantil incluidos.",
+      "official_url": "https://www.parquedecabarceno.com",
+      "url_verified": true,
+      "address": "39690 Obregón, Penagos (Cantabria)",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Parque Cabárceno: 'una de las atracciones turística más visitada de Cantabria' con más de 100 especies en régimen de semi-libertad."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Parque de la Naturaleza de Cabárceno: observar más de 100 especies de animales en semilibertad desde el coche y participar en espectáculos educativos."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Parque de la Naturaleza de Cabárceno: reserva salvaje tipo drive-through donde los niños observan elefantes, jirafas y gorilas."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Parque de la Naturaleza de Cabárceno: recorrer con el coche el laberinto de recintos con animales salvajes en semilibertad."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Palacio de la Magdalena",
+      "description": "El Palacio de la Magdalena fue la residencia de verano de Alfonso XIII y la reina Victoria Eugenia, y hoy se puede visitar por dentro con distintas modalidades de recorrido guiado. La península que lo rodea suma amplios jardines junto al mar y un pequeño zoo gratuito con focas, pingüinos y leones marinos en piscinas de agua salada. Un plan de historia y naturaleza a la vez, en pleno centro de Santander.",
+      "official_url": "https://palaciomagdalena.com",
+      "url_verified": true,
+      "address": "Avenida de la Reina Victoria, s/n, Santander",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Santander y su bahía: la Península de la Magdalena con parques infantiles y el Palacio de la Magdalena."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Palacio de la Magdalena: disfrutar de jardines, mini zoológico y un centro infantil con actividades educativas."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Mini Zoo: instalación gratuita de animales marinos en la Península de la Magdalena, con focas, pingüinos y leones marinos en piscinas de agua salada natural."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Península de la Magdalena (Santander): incluye la Balsa de Vital Alsar y un zoo gratuito con focas, leones marinos y pingüinos."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Teleférico de Fuente Dé",
+      "description": "El teleférico de Fuente Dé sube 753 metros en apenas cuatro minutos hasta el Mirador del Cable, en pleno corazón de los Picos de Europa. Desde arriba se abren vistas panorámicas de la cordillera y rutas de senderismo de distinta dificultad para completar la excursión. Una forma rápida y espectacular de acercar a los niños a la alta montaña sin necesidad de caminar para llegar.",
+      "official_url": "https://telefericodefuentede.com",
+      "url_verified": true,
+      "address": "Calle Fuente la Riega, 0, 39588, Camaleño",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Picos de Europa (teleférico de Fuente Dé): acceso rápido a casi 2.000 metros con vistas espectaculares y rutas señalizadas adaptadas."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Teleférico De Fuente Dé: sube a 1.823 metros en los Picos de Europa con vistas espectaculares y rutas de senderismo accesibles."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Teleférico de Fuente Dé: sube 753 metros en 5 minutos hacia los Picos de Europa."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Forestal Park Santander",
+      "description": "Forestal Park es un parque de aventura entre árboles junto al Faro de Cabo Mayor, con tirolinas, puentes tibetanos y pasarelas colgantes repartidas en circuitos de distinta dificultad. Los circuitos están adaptados a diferentes edades, así que toda la familia puede participar a su propio nivel. Un plan de aire libre con dosis de adrenalina, junto a uno de los rincones más bonitos de la costa de Santander.",
+      "official_url": "https://www.tirolinasgo.com/santander/",
+      "url_verified": true,
+      "address": "Avenida del Faro, s/n, 39010, Santander",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Forestal Park Tirolinas Go: parque de arbolismo con circuitos familiares para diferentes edades."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Forestal park Santander: parque de aventura con circuitos de árboles, puentes colgantes y tirolinas de varios niveles de dificultad."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Forestal Park (Santander): parque de aventuras con tirolinas, puentes tibetanos y actividades entre árboles."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Museo Marítimo del Cantábrico",
+      "description": "El Museo Marítimo del Cantábrico combina un acuario con más de 20 tanques de vida marina y una colección sobre la historia pesquera y naval de la región, incluidos esqueletos de ballenas a tamaño real. Los niños pueden acercarse a especies del Cantábrico y descubrir cómo era la vida en el mar en otras épocas. Un plan de museo entretenido, en pleno paseo marítimo de Santander.",
+      "official_url": "https://www.museosdecantabria.es/museo-maritimo/visitar/situacion",
+      "url_verified": true,
+      "address": "San Martín de Bajamar, s/n, 39004, Santander",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Santander y su bahía: el Museo Marítimo, entre los planes del paseo marítimo de la capital."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Museo Marítimo del Cantábrico: explorar exposiciones interactivas sobre historia marina con talleres y zonas de juego para aprender navegación."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Museo Marítimo del Cantábrico (Santander): ofrece 20 acuarios visitables y esqueletos de ballenas para conocer la fauna marina."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Cueva El Soplao",
+      "description": "La Cueva El Soplao esconde formaciones geológicas excepcionales, como las llamadas 'excéntricas', que desafían la gravedad en sus galerías. La visita estándar recorre pasillos acondicionados con paneles explicativos, mientras que existen rutas más de aventura para quienes quieran ir más allá. Un plan subterráneo que suele sorprender a los niños por lo espectacular de sus formaciones.",
+      "official_url": "https://www.elsoplao.es",
+      "url_verified": true,
+      "address": "Prao Collao, s/n, 39553, Rionansa",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Cueva del Soplao: 'una de las maravillas geológicas Cántabras' con formaciones geológicas únicas y un trencito hasta la entrada."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Cueva El Soplao: sistema de cuevas con formaciones rocosas inusuales llamadas 'excéntricas', con opciones de recorrido estándar y de aventura."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Museo Nacional y Centro de Investigación de Altamira",
+      "description": "El Museo de Altamira recrea con fidelidad la cueva original y sus famosas pinturas rupestres de bisontes, declaradas Patrimonio de la Humanidad por la Unesco, en un espacio pensado para visitarse sin dañar el yacimiento real. Además de la Neocueva, el museo organiza talleres y actividades familiares los fines de semana. Un buen plan para acercar a los niños al arte prehistórico de forma segura y accesible.",
+      "official_url": "http://museodealtamira.mcu.es/",
+      "url_verified": true,
+      "address": "Avenida Marcelino Sanz de Sautuola, s/n, 39330, Santillana del Mar",
+      "evidence_count": 4,
+      "independent_source_count": 4,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Cueva de Altamira: Neocueva con réplica de pinturas rupestres, museo con ludoteca y talleres familiares."
+        },
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Museo de Altamira: ver réplica exacta de cuevas prehistóricas con talleres y actividades diseñadas para que los niños aprendan jugando."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Museo nacional y Centro de Investigación de Altamira: museo con una réplica de cueva prehistórica con arte rupestre y talleres familiares interactivos."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Neocueva y Museo de Altamira (Santillana del Mar): reproducción fiel de pinturas rupestres de 14.500 años."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Laberinto de Villapresente",
+      "description": "El Laberinto de Villapresente es un entramado de más de 5 kilómetros de pasillos formado por setos de ciprés, considerado el laberinto más grande de España. Encontrar la salida se convierte en un reto entretenido para toda la familia, con distintos puntos de control repartidos por el recorrido. Un plan sencillo y diferente, pensado para pasar una hora jugando al aire libre.",
+      "official_url": "https://laberintodevillapresente.es",
+      "url_verified": true,
+      "address": "Barrio Los Laureles, 150 B, Villapresente",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Laberinto de Villapresente: 'el laberinto más grande de España' para una experiencia divertida de una hora."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Laberinto de Villapresente: 'el laberinto más grande de España' con 5 km de paredes de cipreses."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Ecomuseo Fluviarium (Liérganes)",
+      "description": "El Ecomuseo Fluviarium de Liérganes recrea el recorrido de un río cántabro de principio a fin, con acuarios que permiten observar de cerca truchas, anguilas y nutrias en su hábitat. El recorrido también repasa la cultura pasiega y el papel del agua en la vida tradicional de la zona. Un plan de naturaleza compacto, ideal para una visita de una hora en familia.",
+      "official_url": "https://fluviariumdelierganes.com",
+      "url_verified": true,
+      "address": "Calle Camino Real, 9, Liérganes",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Fluviarium Ecomuseo: museo ambiental con exhibiciones de hábitat fluvial en vivo, incluidas nutrias, anguilas y muestras regionales tradicionales."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-cantabria-con-ninos/",
+          "evidence": "Ecomuseo Fluviarium (Liérganes): acuarios fluviales con nutrias y exposiciones sobre cultura pasiega."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Capricho de Gaudí (Comillas)",
+      "description": "El Capricho de Gaudí es un edificio modernista construido por Antoni Gaudí entre 1883 y 1885, reconocible por sus azulejos de girasoles y su torre-mirador. La visita incluye un jardín pensado para que los más pequeños descubran detalles arquitectónicos de forma interactiva. Un plan de arquitectura poco habitual para niños, en el corazón de Comillas.",
+      "official_url": "https://www.elcaprichodegaudi.com",
+      "url_verified": true,
+      "address": "Barrio Sobrellano, s/n, 39520, Comillas",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/cantabria-con-ninos/",
+          "evidence": "Pueblos marineros: Comillas, con el Capricho de Gaudí."
+        },
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Capricho de Gaudí: arquitectura modernista única en Comillas con persianas musicales y un jardín de descubrimiento interactivo."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Centro Botín",
+      "description": "El Centro Botín es un centro de arte diseñado por el arquitecto Renzo Piano, suspendido sobre la bahía de Santander, con exposiciones y una intensa programación de talleres familiares. Los niños pueden participar en actividades de pintura, escultura y otras disciplinas pensadas para despertar la creatividad. Un plan cultural muy vistoso, con jardines propios junto al mar.",
+      "official_url": "https://www.centrobotin.org",
+      "url_verified": true,
+      "address": "Muelle de Albareda, Paseo de Pereda, s/n, 39004, Santander",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Centro Botín: participar en talleres de arte, explorar exposiciones interactivas y usar jardines diseñados para aprendizaje."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Zoológico de Santillana del Mar",
+      "description": "El Zoo de Santillana del Mar reúne especies exóticas como orangutanes de Sumatra y leopardos de las nieves, junto a zonas interactivas como un jardín de mariposas. Su tamaño reducido permite recorrerlo con calma en una visita de medio día, sin agobios para las familias con niños pequeños. Un plan clásico y seguro para acercarse a la fauna, cerca de Altamira.",
+      "official_url": "https://www.zoosantillanadelmar.com",
+      "url_verified": true,
+      "address": "Avenida del Zoo, 2, 39330, Santillana del Mar",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Zoológico de Santillana del Mar: zoo con especies exóticas como orangutanes de Sumatra, leopardos de las nieves y zonas interactivas como un jardín de mariposas."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "Jardines de Pereda",
+      "description": "Los Jardines de Pereda son un parque histórico junto a la bahía de Santander, con más de 200 árboles entre magnolias, palmeras y castaños de indias. Su ubicación central, junto al Centro Botín y el paseo marítimo, lo convierte en una parada fácil para que los niños corran y descansen entre plan y plan. Un espacio verde tranquilo en pleno centro de la ciudad.",
+      "official_url": "https://descubresantander.es/recinto/jardines-de-pereda/",
+      "url_verified": true,
+      "address": "Paseo de Pereda, 8, 39004, Santander",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Jardines de Pereda: picnic familiar, áreas de juego infantil seguras y fuentes que fascinan a los niños."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Reserva del Saja-Besaya",
+      "description": "El Parque Natural Saja-Besaya es el espacio protegido más extenso de Cantabria, con casi 25.000 hectáreas de bosques y montaña en el centro de la región. Su centro de interpretación, de entrada gratuita, explica los valores naturales del parque antes de salir a recorrer alguna de sus rutas señalizadas. Un plan de naturaleza tranquilo, alejado de las rutas más masificadas.",
+      "official_url": "https://turismodecantabria.com/disfrutala/naturaleza/parque-natural-de-saja-besaya/",
+      "url_verified": true,
+      "address": "Carretera del Puerto de Palombera, Saja, Los Tojos (Cantabria)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "La reserva del Saja-Besaya: reserva natural de 24.500 hectáreas con diversas rutas de senderismo y oportunidades de observación de fauna."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Estación de Esquí Alto Campoo",
+      "description": "Alto Campoo es la única estación de esquí de Cantabria, con más de 30 kilómetros esquiables repartidos en 23 pistas de distinto nivel. Fuera de temporada de nieve, la zona también ofrece rutas de senderismo y paisajes de alta montaña. Un plan de invierno pensado para iniciar a los niños en la nieve sin salir de la región.",
+      "official_url": "https://altocampoo.com",
+      "url_verified": true,
+      "address": "Carretera Reinosa-Alto Campoo, km 24, Hermandad de Campoo de Suso",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Estación de Esquí Alto Campoo: esquí y diversión invernal para todas las edades."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Funicular de Río de la Pila (Santander)",
+      "description": "El funicular de Río de la Pila conecta dos calles del centro de Santander salvando un desnivel pronunciado, con un trayecto corto y gratuito abierto casi todo el día. Es el único funicular de Cantabria, y para los niños supone una pequeña atracción en sí misma dentro de un paseo por la ciudad. Un plan curioso y rápido, fácil de combinar con otros planes urbanos.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Calle Río de la Pila, 36, 39001, Santander",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Funicular de Santander: subir para disfrutar 'vistas espectaculares' de playas, puerto y alrededores desde la cima."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Nacimiento del río Asón",
+      "description": "La ruta al Nacimiento del río Asón recorre unos 7 km de ida y vuelta por un bosque frondoso hasta llegar a una cascada de más de 70 metros, dentro del Parque Natural de los Collados del Asón. El desnivel es suave y el camino está bien señalizado, lo que la hace apta para familias con niños ya acostumbrados a caminar. Uno de los rincones de naturaleza más espectaculares de Cantabria.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Asón, Soba (Cantabria)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Viajo Como Quiero",
+          "domain": "viajocomoquiero.com",
+          "url": "https://viajocomoquiero.com/que-hacer-con-ninos-en-cantabria/",
+          "evidence": "Nacimiento del río Asón: ruta de senderismo familiar accesible que lleva a una hermosa cascada perfecta para nadar y hacer picnic."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Playa de Oyambre",
+      "description": "La playa de Oyambre es un extenso arenal de más de dos kilómetros dentro del Parque Natural de Oyambre, entre San Vicente de la Barquera y Comillas, con dunas y marismas de gran valor natural. Es una playa abierta y con oleaje, más pensada para pasear y jugar en la arena que para bañarse con niños pequeños sin vigilancia. Un plan de costa distinto, con los Picos de Europa como telón de fondo en los días claros.",
+      "official_url": null,
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Minube",
+          "domain": "minube.com",
+          "url": "https://www.minube.com/tips/actualidad/cantabria-con-ninos-12-planes-divertidos",
+          "evidence": "Playa de Oyambre: jugar en arena fina, nadar en aguas tranquilas y recorrer senderos naturales del parque costero."
+        }
+      ]
+    }
+  ]
+}

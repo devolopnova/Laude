@@ -69,7 +69,14 @@ h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em
 }
 .mc-product-img{width:100%; max-width:132px; aspect-ratio:1/1; object-fit:contain; margin-bottom:8px;}
 .mc-product-brand{font-size:11px; font-weight:700; color:var(--accent-deep); text-transform:uppercase; letter-spacing:.03em;}
-.mc-product-model{font-size:14px; font-weight:600; color:var(--ink); line-height:1.3; margin-bottom:4px;}
+/* min-height reserva sitio para 2 lineas (31-ago-2026): el nombre mas
+   largo del catalogo ("CBX by Cybex Solution B i-Fix") ya ocupa 2
+   lineas incluso en movil -- con esto, cuando una de las 2 sillitas
+   tiene un nombre corto de 1 linea, su columna reserva igualmente el
+   alto de 2, asi "Valoracion"/"Precio"/"Ver en Amazon" arrancan
+   siempre a la misma altura en ambas columnas, sea cual sea la
+   longitud del nombre. */
+.mc-product-model{font-size:14px; font-weight:600; color:var(--ink); line-height:1.3; margin-bottom:4px; min-height:2.6em;}
 .mc-product-rating{font-size:13px; font-weight:700; color:var(--ink);}
 .mc-product-reviews{font-size:11.5px; font-weight:400; color:var(--ink-soft); margin-bottom:6px;}
 .mc-product-price{font-size:16px; font-weight:700; color:var(--accent-deep);}

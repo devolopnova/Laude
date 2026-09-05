@@ -1,0 +1,293 @@
+{
+ "asin": "B0DTV5R9FT",
+ "marca": "Chicco",
+ "modelo": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+ "titulo_amazon": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+ "url": "https://www.amazon.es/Chicco-Instalaci%C3%B3n-Reclinable-Reposabrazos-Acolchados/dp/B0DTV5R9FT/ref=sr_1_8?dib=eyJ2IjoiMSJ9._uMdiVUSi046NvUNd0kxh4T3Mn5LxbFP18KMy8-vnG_pJJ1UYf0sNQ4SyiM82_EdFcZvLP5POxLdXJVnSdJGlZiILS654TW2natBNKqZ410VehjtgdHB_sFJZqUdgRld1rNWpCHx2n6Ye7bz7qn_f6jwG6ghCFws-zAwNoozPAuczIqEzR4AZkw8b1xc2TO_ejdeeMQgJ092VbPuC6_EN9Ej2MJNlY5lixNLqzNh27a1yRxQRc9k065WEMTlCD2-z6GBZL-IASv4NcrM25s48envpcqR5PvOpjqcGpA6YY4.UdLEuINMaWK11GbhDYSUXgeKiguaAYRO8Z4rzw3-MB8&dib_tag=se&keywords=silla+coche+chicco&qid=1787853452&sr=8-8",
+ "imagen": null,
+ "precio": {
+  "actual": 126.0,
+  "anterior": 149.0,
+  "fecha_extraccion": "2026-08-27"
+ },
+ "valoraciones": {
+  "puntuacion": 4.0,
+  "numero": 141
+ },
+ "caracteristicas": {
+  "grupo_edad": "3-12 años",
+  "peso_recomendado": "15-36 kg",
+  "isofix": "Sí",
+  "orientacion": "N/A",
+  "reclinable": "Sí",
+  "homologacion": "i-Size",
+  "giro_360": "N/A",
+  "reposacabezas_regulable": "Sí",
+  "tipo_arnes_proteccion": "N/A",
+  "peso_silla": "6,22 kg",
+  "proteccion_lateral": "N/A",
+  "funda_lavable": "N/A",
+  "travel_system": "N/A"
+ },
+ "caracteristicas_fuente": {
+  "grupo_edad": "SILLA DE COCHE: Quizy i-Size es la silla de coche Chicco realizada con el sistema patentado ONE-STEP SYSTEM, para una mayor seguridad y facilidad de uso. Está homologada según la normativa ECE R129/03 para niños de 100 a 150 cm (aproximadamente de 3 a 12 años).",
+  "peso_recomendado": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+  "isofix": "INSTALACIÓN FÁCIL: Quizy i-Size se instala fácilmente con el cinturón de 3 puntos del coche que, pasando por las guías, asegura al niño y la silla. Los conectores Isofix estabilizan la silla y el Safe Pad para una mayor protección del cuello y el pecho.",
+  "orientacion": null,
+  "reclinable": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+  "homologacion": "SILLA DE COCHE: Quizy i-Size es la silla de coche Chicco realizada con el sistema patentado ONE-STEP SYSTEM, para una mayor seguridad y facilidad de uso. Está homologada según la normativa ECE R129/03 para niños de 100 a 150 cm (aproximadamente de 3 a 12 años).",
+  "giro_360": null,
+  "reposacabezas_regulable": "SISTEMA DE CABEZALES EASY-EXTEND: Es posible ajustar la altura del reposacabezas para seguir el crecimiento del niño y ofrecerle en cada etapa la protección adecuada.",
+  "tipo_arnes_proteccion": null,
+  "peso_silla": "Peso del producto: 6,22 Kilogramos",
+  "proteccion_lateral": null,
+  "funda_lavable": null,
+  "travel_system": null
+ },
+ "clasificacion": {
+  "isofix": {
+   "original": "INSTALACIÓN FÁCIL: Quizy i-Size se instala fácilmente con el cinturón de 3 puntos del coche que, pasando por las guías, asegura al niño y la silla. Los conectores Isofix estabilizan la silla y el Safe Pad para una mayor protección del cuello y el pecho.",
+   "normalizado": true,
+   "mostrar": "Sí",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "INSTALACIÓN FÁCIL: Quizy i-Size se instala fácilmente con el cinturón de 3 puntos del coche que, pasando por las guías, asegura al niño y la silla. Los conectores Isofix estabilizan la silla y el Safe Pad para una mayor protección del cuello y el pecho.",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "tipo_instalacion": {
+   "original": "INSTALACIÓN FÁCIL: Quizy i-Size se instala fácilmente con el cinturón de 3 puntos del coche que, pasando por las guías, asegura al niño y la silla. Los conectores Isofix estabilizan la silla y el Safe Pad para una mayor protección del cuello y el pecho.",
+   "normalizado": "isofix",
+   "mostrar": "ISOFIX",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "INSTALACIÓN FÁCIL: Quizy i-Size se instala fácilmente con el cinturón de 3 puntos del coche que, pasando por las guías, asegura al niño y la silla. Los conectores Isofix estabilizan la silla y el Safe Pad para una mayor protección del cuello y el pecho.",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "normativa": {
+   "original": "SILLA DE COCHE: Quizy i-Size es la silla de coche Chicco realizada con el sistema patentado ONE-STEP SYSTEM, para una mayor seguridad y facilidad de uso. Está homologada según la normativa ECE R129/03 para niños de 100 a 150 cm (aproximadamente de 3 a 12 años).",
+   "normalizado": "r129_isize",
+   "mostrar": "R129 / i-Size",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "SILLA DE COCHE: Quizy i-Size es la silla de coche Chicco realizada con el sistema patentado ONE-STEP SYSTEM, para una mayor seguridad y facilidad de uso. Está homologada según la normativa ECE R129/03 para niños de 100 a 150 cm (aproximadamente de 3 a 12 años).",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "grupo_r44": {
+   "original": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "normalizado": "2/3",
+   "mostrar": "Grupo 2/3",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "confianza": "media",
+   "contradiccion_detectada": false,
+   "valor_amazon": "2/3",
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "altura_r129": {
+   "original": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "normalizado": {
+    "altura_min_cm": 100,
+    "altura_max_cm": 150
+   },
+   "mostrar": "100-150 cm",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "peso": {
+   "original": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "normalizado": {
+    "peso_min_kg": 15,
+    "peso_max_kg": 36
+   },
+   "mostrar": "15-36 kg",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "edad": {
+   "original": "SILLA DE COCHE: Quizy i-Size es la silla de coche Chicco realizada con el sistema patentado ONE-STEP SYSTEM, para una mayor seguridad y facilidad de uso. Está homologada según la normativa ECE R129/03 para niños de 100 a 150 cm (aproximadamente de 3 a 12 años).",
+   "normalizado": {
+    "edad_min_anios": 3.0,
+    "edad_max_anios": 12.0
+   },
+   "mostrar": "3-12 años",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "SILLA DE COCHE: Quizy i-Size es la silla de coche Chicco realizada con el sistema patentado ONE-STEP SYSTEM, para una mayor seguridad y facilidad de uso. Está homologada según la normativa ECE R129/03 para niños de 100 a 150 cm (aproximadamente de 3 a 12 años).",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "orientacion": {
+   "original": null,
+   "normalizado": null,
+   "mostrar": "Sin especificar",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Auditado en Amazon (revisión exhaustiva): ninguna mención explícita de orientación. La ausencia de mención no implica una orientación concreta.",
+   "confianza": "alta",
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "giro_360": {
+   "original": null,
+   "normalizado": null,
+   "mostrar": "Sin especificar",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Auditado en Amazon (revisión exhaustiva de título, bullets, descripción y tabla de características): ninguna evidencia ni a favor ni en contra. La ausencia de mención no implica que el producto no sea giratorio.",
+   "confianza": "alta",
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "reclinable": {
+   "original": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "normalizado": {
+    "reclinable": true,
+    "posiciones": null
+   },
+   "mostrar": "Sí",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Chicco, Quizy i-Size, Silla de Coche para Niños 3-12 Años (100-150 cm), Peso 15-36 kg, Grupo 2/3, Instalación Fácil con Sistema Isofix, Reclinable, Ajustable en Altura, Reposabrazos Acolchados, Negro",
+   "confianza": "alta",
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "reposacabezas": {
+   "original": "SISTEMA DE CABEZALES EASY-EXTEND: Es posible ajustar la altura del reposacabezas para seguir el crecimiento del niño y ofrecerle en cada etapa la protección adecuada.",
+   "normalizado": {
+    "regulable": true,
+    "posiciones": null
+   },
+   "mostrar": "Sí",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "SISTEMA DE CABEZALES EASY-EXTEND: Es posible ajustar la altura del reposacabezas para seguir el crecimiento del niño y ofrecerle en cada etapa la protección adecuada.",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "arnes": {
+   "original": null,
+   "normalizado": null,
+   "mostrar": "Sin especificar",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Auditado en Amazon (revisión exhaustiva): ninguna mención específica de tipo de arnés/sujeción del niño. La ausencia de mención no implica una categoría concreta.",
+   "confianza": "alta",
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "peso_silla": {
+   "original": "Peso del producto: 6,22 Kilogramos",
+   "normalizado": {
+    "peso_silla_kg": 6.22
+   },
+   "mostrar": "6,22 kg",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Peso del producto: 6,22 Kilogramos",
+   "confianza": null,
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "proteccion_lateral": {
+   "original": null,
+   "normalizado": null,
+   "mostrar": "Sin especificar",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Auditado en Amazon (revisión exhaustiva): ninguna mención específica de protección lateral ni tecnología dedicada. La ausencia de mención no implica que el producto carezca de la característica.",
+   "confianza": "alta",
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "funda_lavable": {
+   "original": null,
+   "normalizado": null,
+   "mostrar": "Sin especificar",
+   "revisar": false,
+   "fuente": "amazon",
+   "url_fuente": null,
+   "texto_fuente": "Auditado en Amazon (revisión exhaustiva): ninguna mención de \"lavable\"/\"lava\" ni equivalentes. La ausencia de mención no implica que el producto no sea lavable.",
+   "confianza": "alta",
+   "contradiccion_detectada": false,
+   "valor_amazon": null,
+   "valor_fabricante": null,
+   "motivo_contradiccion": null
+  },
+  "fabricante_oficial": null
+ },
+ "opiniones": {
+  "muestra": [
+   "Muy fácil de instalar, pesa muy poco",
+   "La compré para un segundo vehículo, es tal y como se ve en la imagen, cumple perfectamente su función, recomendable al cien por cien",
+   "Compré dos sillas-adaptadores para mis gemelos y han resultado ser demasiado anchas. Tengo un Volvo xc90 (que no es pequeño) y la silla-adaptador queda demasiado ancha por lo que se abrochan los cinturones con mucha dificultad. No me sirven porque las quería para que mis hijos tuvieran más autonomía, es muy complicado abrochar el cinturón de seguridad del coche. Las voy a descambiar y observar si ",
+   "Excelente produto e de facil instalacao",
+   "Buenas medidas.",
+   "Me ha llegado media silla literalmente. Solo el asiento sin respaldo y con los posa brazos rotos. Tomadura de pelo",
+   "Si no lo pones bien hace ruido…",
+   "Directamente la silla es una basura, no tiene nada de esponja es todo plástico barato y de mala calidad, cuando compramos algo que se supone que tienen que usar desde los 3 a 12 años por lo menos debería de tener calidad y esta silla no la tiene.",
+   "ottimo seggiolino, fra poco lo dovremo cambiare per limiti di età, ma mio figlio si è fatto dormite colossali grazie anche all'inclinazione regolabile",
+   "Bon siège pour pas très cher. Je recommande ! 👍. Lea \"sangle\" entre les jambes permets de mieux maintenir l'enfant. S'il s'endort il ne glissera pas sous la ceinture de la voiture. Toutefois, le tissu sur les accoudoirs ne tient pas très bien. Mais cela ne jour pas sur la securité donc c'est bon 👍. Fr 2026"
+  ],
+  "resumen": null
+ },
+ "estado": "PENDIENTE_REVISION"
+}

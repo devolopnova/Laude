@@ -1,0 +1,24 @@
+APLICADO (21):
+  sillitas-de-coche
+  sillas-coche-isofix
+  silla-coche-grupo-0-recien-nacido
+  sillas-coche-grupo-1-2-3
+  alzadores-elevadores-coche
+  sillas-coche-cybex
+  sillas-coche-maxi-cosi
+  sillas-coche-britax-romer
+  sillas-coche-chicco
+  sillas-coche-nania
+  sillas-coche-jovikids
+  sillas-coche-kinderkraft
+  sillas-coche-babyauto
+  sillas-coche-lionelo
+  sillas-coche-kikkaboo
+  sillas-coche-graco
+  otras-marcas-sillas-coche
+  normativa-dgt-i-size-sillas-coche
+  silla-coche-a-contramarcha
+  silla-coche-giratoria-360
+  alquiler-sillas-coche-segunda-mano
+
+OMITIDO (0):

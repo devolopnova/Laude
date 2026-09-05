@@ -1,0 +1,5 @@
+head/body balance: 1/1 1/1
+new rule present: True
+scp-lead base rule untouched (font-size 14.5px still there): True
+sc-ficha-desc NOT touched by new rule (spot check no 45454A near sc-ficha-desc def): True
+scp-links a still accent+600: True

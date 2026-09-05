@@ -1,0 +1,10 @@
+head/body: 1/1 1/1
+scp-links-grupo1 ul: 1
+scp-links-grupo2 ul: 1
+li en grupo1 (deberia ser 3): 3
+li en grupo2 (deberia ser 2): 2
+silla-coche-grupo-0-recien-nacido.html: 1
+sillas-coche-grupo-1-2-3.html: 1
+normativa-dgt-i-size-sillas-coche.html: 1
+silla-coche-a-contramarcha.html: 1
+alquiler-sillas-coche-segunda-mano.html: 1

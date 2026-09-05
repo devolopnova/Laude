@@ -1,0 +1,47 @@
+[
+  {
+    "sesion": 1,
+    "metodo": "B (calentado)",
+    "producto": "B0CKQWZ59X",
+    "bloqueado": false,
+    "tiempo_s": 55.35,
+    "espera1_s": 23.9,
+    "espera2_s": 20.0
+  },
+  {
+    "sesion": 2,
+    "metodo": "B (calentado)",
+    "producto": "B0CKQWZ59X",
+    "bloqueado": false,
+    "tiempo_s": 49.12,
+    "espera1_s": 20.3,
+    "espera2_s": 17.7
+  },
+  {
+    "sesion": 3,
+    "metodo": "B (calentado)",
+    "producto": "B0CKQWZ59X",
+    "bloqueado": false,
+    "tiempo_s": 46.39,
+    "espera1_s": 24.8,
+    "espera2_s": 10.7
+  },
+  {
+    "sesion": 4,
+    "metodo": "B (calentado)",
+    "producto": "B0CKQWZ59X",
+    "bloqueado": "ERROR: Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.amazon.es/\", waiting until \"networkidle\"\n",
+    "tiempo_s": 60.53,
+    "espera1_s": 0,
+    "espera2_s": 0
+  },
+  {
+    "sesion": 5,
+    "metodo": "B (calentado)",
+    "producto": "B0CKQWZ59X",
+    "bloqueado": false,
+    "tiempo_s": 57.57,
+    "espera1_s": 29.1,
+    "espera2_s": 17.3
+  }
+]

@@ -1,0 +1,22 @@
+Total productos: 15
+Normativa confirmada (Si/No ambiguo aparte): 14/15 (93%)
+Normativa revisar: 0
+ISOFIX/tipo_instalacion confirmado: 14/15 (93%)
+ISOFIX revisar: 1
+
+--- detalle ---
+B0FKBWNF2G | normativa='No determinado' revisar=False | isofix='Sí' revisar=False
+B0F9YPF1V1 | normativa='R129 / i-Size' revisar=False | isofix='No' revisar=False
+B0BYP63YCW | normativa='R129 / i-Size' revisar=False | isofix='No' revisar=False
+B0C58QGJNG | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0BZ89X9YC | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0CZ47FKZL | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0BYP9MTBX | normativa='R129 / i-Size' revisar=False | isofix='No' revisar=False
+B0FGDM2ZTS | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0F3P61P8C | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0CWS19269 | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0F9YR27XX | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0DSL7WGB2 | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0GGZYY3BZ | normativa='R129 / i-Size' revisar=False | isofix='No confirmado / Revisar' revisar=True
+B0DP7TG8KY | normativa='R129 / i-Size' revisar=False | isofix='Sí' revisar=False
+B0F1R26D8L | normativa='R129 / i-Size' revisar=False | isofix='No' revisar=False

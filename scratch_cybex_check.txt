@@ -1,0 +1,6 @@
+caracteristicas.reclinable: Sí — 3 posiciones
+caracteristicas.tipo_arnes_proteccion: Arnés de 3 puntos
+caracteristicas.orientacion: A favor de la marcha
+caracteristicas.funda_lavable: N/A
+clasificacion.arnes: {'original': 'Tipo de arnés: 3 puntos', 'normalizado': 'arnes_3_puntos', 'mostrar': 'Arnés de 3 puntos', 'revisar': False, 'fuente': 'amazon', 'url_fuente': None, 'texto_fuente': 'Tipo de arnés: 3 puntos'}
+clasificacion.funda_lavable: {'original': None, 'normalizado': None, 'mostrar': 'No determinado', 'revisar': False, 'fuente': None, 'url_fuente': None, 'texto_fuente': None}

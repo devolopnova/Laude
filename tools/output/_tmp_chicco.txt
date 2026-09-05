@@ -1,0 +1,7 @@
+CHICCO EN EL DATASET (4):
+  B0C6KZCY6Z | Unico EVO I'Size Classic | 1230 val.
+  B0C6KXB9LL | Kory i-Size Essential | 71 val.
+  B0DW9GD5CG | Quasar Fix i-Size | 52 val.
+  B0DFWX71FS | Everone i-Size | 103 val.
+
+TOTAL productos en dataset: 33

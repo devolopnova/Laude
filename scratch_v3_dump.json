@@ -1,0 +1,597 @@
+[
+  {
+    "asin": "B0FKBWNF2G",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-12 años), ISOFIX + cinturón, reposacabezas ajustable, guiados de cinturón, H-GUARD, SPS, AIR FLOW transpirable, Negro",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "Silla de coche para niños de 100–150 cm (3,5–12 años) con asiento cómodo y reposacabezas ajustable: crece con el niño y ofrece confort en cada viaje.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Silla de coche para niños de 100–150 cm (3,5–12 años) con asiento cómodo y reposacabezas ajustable: crece con el niño y ofrece confort en cada viaje.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": "No determinado",
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0F9YPF1V1",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 cm), Respaldo ajustable, Cinturón de seguridad de 5 puntos, SISTEMA EASY GROW, Fácil instalación, Rosa",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "SISTEMA EASY GROW – ajuste simultáneo del reposacabezas y del arnés, garantizando comodidad y seguridad en cada etapa de crecimiento.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "SISTEMA EASY GROW – ajuste simultáneo del reposacabezas y del arnés, garantizando comodidad y seguridad en cada etapa de crecimiento.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 5,98 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 5.98
+      },
+      "mostrar": "5,98 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 5,98 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0BYP63YCW",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Rosa",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "✅ CÓMODA: el reposacabezas se regula en 11 niveles, y gracias a EASY GROW SYSTEM, se puede ajustar simultáneamente junto con el arnés interior. Tiene un asiento amplio y blando de tela transpirable",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "✅ CÓMODA: el reposacabezas se regula en 11 niveles, y gracias a EASY GROW SYSTEM, se puede ajustar simultáneamente junto con el arnés interior. Tiene un asiento amplio y blando de tela transpirable",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 6 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 6.0
+      },
+      "mostrar": "6 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 6 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0C58QGJNG",
+    "marca": "Cybex",
+    "modelo": "CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "Reposacabezas ajustable en altura en 11 posiciones para adaptarse al tamaño del niño, Respaldo de inclinación ajustable para una adaptación óptima al asiento del vehículo",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": 11
+      },
+      "mostrar": "Sí — 11 posiciones",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Reposacabezas ajustable en altura en 11 posiciones para adaptarse al tamaño del niño, Respaldo de inclinación ajustable para una adaptación óptima al asiento del vehículo",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 7 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 7.0
+      },
+      "mostrar": "7 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 7 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0BZ89X9YC",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft I-GROW Silla de coche, I-SIZE 40-150 cm, Isofix, Silla coche bebé, para niños, Ajustable, Sillade, RWF, FWF, Universal para coche, Asiento, 360º, Grupo 0+/1/2/3, 0-36 kg, Negro grafito",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "✅ REGULABLE: la altura del reposacabezas se puede ajustar en 12 niveles. También puedes ajustar el ángulo de inclinación del respaldo (sistema de reclinado) en uno de los 5 niveles disponibles (tanto en RWF como FWF).",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "✅ REGULABLE: la altura del reposacabezas se puede ajustar en 12 niveles. También puedes ajustar el ángulo de inclinación del respaldo (sistema de reclinado) en uno de los 5 niveles disponibles (tanto en RWF como FWF).",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 11 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 11.0
+      },
+      "mostrar": "11 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 11 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0CZ47FKZL",
+    "marca": "Maxi-Cosi",
+    "modelo": "Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full Black | Silla de Coche Plegable, 3.5–12 Años, 10 Posiciones del Reposacabezas, Protección Contra Impactos Laterales G-CELL",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "10 POSICIONES DE REPOSACABEZAS: La silla de coche de viaje portátil i-Size Tanza ofrece 10 posiciones de reposacabezas, lo que da a tu niño una mayor comodidad, ya que se puede ajustar en altura a medida que crece",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": 10
+      },
+      "mostrar": "Sí — 10 posiciones",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "10 POSICIONES DE REPOSACABEZAS: La silla de coche de viaje portátil i-Size Tanza ofrece 10 posiciones de reposacabezas, lo que da a tu niño una mayor comodidad, ya que se puede ajustar en altura a medida que crece",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 5,32 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 5.32
+      },
+      "mostrar": "5,32 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 5,32 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0BYP9MTBX",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Negro",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "✅ CÓMODA: el reposacabezas se regula en 11 niveles, y gracias a EASY GROW SYSTEM, se puede ajustar simultáneamente junto con el arnés interior. Tiene un asiento amplio y blando de tela transpirable",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "✅ CÓMODA: el reposacabezas se regula en 11 niveles, y gracias a EASY GROW SYSTEM, se puede ajustar simultáneamente junto con el arnés interior. Tiene un asiento amplio y blando de tela transpirable",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 6 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 6.0
+      },
+      "mostrar": "6 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 6 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0FGDM2ZTS",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft SAFETY FIX 3 PRO, Silla de Coche i-Size 76–150 cm, ISOFIX, Top Tether, Protección Lateral H-GUARD, Arnés 5 Puntos, Funda Lavable, Fácil Instalación, Gris",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "El sistema EASY GROW permite ajustar simultáneamente el reposacabezas y el arnés con un solo movimiento fluido, sin reenhebrar, para que la silla se adapte siempre perfectamente al crecimiento del niño.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "El sistema EASY GROW permite ajustar simultáneamente el reposacabezas y el arnés con un solo movimiento fluido, sin reenhebrar, para que la silla se adapte siempre perfectamente al crecimiento del niño.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 7,31 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 7.31
+      },
+      "mostrar": "7,31 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 7,31 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0F3P61P8C",
+    "marca": "Bébé Confort",
+    "modelo": "Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche 360, 0-12 Años, 40-150 cm, Silla Coche ISOFIX, Instalación Pata Apoyo, Giro 360, 8 Posiciones Reclinación, 12 Posiciones Reposacabezas, Full Black",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "12 POSICIONES DE REPOSACABEZAS: el reposacabezas de estas sillas coche grupo 0 1 2 3 puede ajustarse en 12 posiciones con una mano, regulando simultáneamente el arnés de 5 puntos. Además, el cojín y el reductor para recién nacidos pueden quitarse",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": 12
+      },
+      "mostrar": "Sí — 12 posiciones",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "12 POSICIONES DE REPOSACABEZAS: el reposacabezas de estas sillas coche grupo 0 1 2 3 puede ajustarse en 12 posiciones con una mano, regulando simultáneamente el arnés de 5 puntos. Además, el cojín y el reductor para recién nacidos pueden quitarse",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 10,75 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 10.75
+      },
+      "mostrar": "10,75 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 10,75 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0CWS19269",
+    "marca": "Maxi-Cosi",
+    "modelo": "Maxi-Cosi Emerald 360 S i-Size, Silla coche bebé giratoria 360°multiedad, 0-12 años (40-150 cm), 360° FlexiSpin, 4 posiciones reclinación, Protección contra impactos laterales G-CELL, Tonal Graphite",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "Contradiccion real entre Amazon (bullet explicito: \"14 POSICIONES DE REPOSACABEZAS\") y fabricante (contenido visible: \"nueve posiciones ajustables de altura del reposacabezas\") para el numero exacto de posiciones de altura del reposacabezas. Ambas fuentes son explicitas y hablan del mismo atributo, sin indicio de variante/color/generacion distinta. RESUELTO MANUALMENTE por decision del usuario (2026-08-11): se mantiene la confirmacion cualitativa (reposacabezas regulable = Si, coincidente en ambas fuentes) pero se omite el numero de posiciones al no poder determinarse con fiabilidad cual de las dos cifras (14 o 9) es correcta -- no es una resolucion automatica del sistema.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "fabricante_oficial (confirmado manualmente)",
+      "url_fuente": "https://www.maxi-cosi.es/sillas-de-coche/emerald-360-s",
+      "texto_fuente": "Contradiccion real entre Amazon (bullet explicito: \"14 POSICIONES DE REPOSACABEZAS\") y fabricante (contenido visible: \"nueve posiciones ajustables de altura del reposacabezas\") para el numero exacto de posiciones de altura del reposacabezas. Ambas fuentes son explicitas y hablan del mismo atributo, sin indicio de variante/color/generacion distinta. RESUELTO MANUALMENTE por decision del usuario (2026-08-11): se mantiene la confirmacion cualitativa (reposacabezas regulable = Si, coincidente en ambas fuentes) pero se omite el numero de posiciones al no poder determinarse con fiabilidad cual de las dos cifras (14 o 9) es correcta -- no es una resolucion automatica del sistema.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 12,7 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 12.7
+      },
+      "mostrar": "12,7 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 12,7 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0F9YR27XX",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft I-GROW 2 PRO Silla de coche, I-SIZE 40-150 cm, Isofix, Silla coche bebé, para niños, Ajustable, Sillade, RWF, FWF, Universal para coche, Asiento, 360º, Grupo 0+/1/2/3, 0-36 kg, Negro",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "AJUSTE EASY GROW – Regulación simultánea del reposacabezas y del arnés. Cojín con espuma viscoelástica para niños de hasta 60 cm.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "AJUSTE EASY GROW – Regulación simultánea del reposacabezas y del arnés. Cojín con espuma viscoelástica para niños de hasta 60 cm.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 13 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 13.0
+      },
+      "mostrar": "13 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 13 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0DSL7WGB2",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 cm, De 3,5 a 12 años aproximadamente, Reposacabezas ajustable, Tapizado con sistema AIR FLOW, Ajuste del respaldo en 5 posiciones, Negro",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "SILLA DE COCHE PARA NIÑOS DE 100 A 150 CM: UNITY 2 es una silla de coche moderna para niños de 100 a 150 cm – aproximadamente de 3,5 a 12 años. El reposacabezas ajustable y los reposabrazos ergonómicos garantizan una posición adecuada y gran comodidad en cada etapa del crecimiento.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "SILLA DE COCHE PARA NIÑOS DE 100 A 150 CM: UNITY 2 es una silla de coche moderna para niños de 100 a 150 cm – aproximadamente de 3,5 a 12 años. El reposacabezas ajustable y los reposabrazos ergonómicos garantizan una posición adecuada y gran comodidad en cada etapa del crecimiento.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 6,3 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 6.3
+      },
+      "mostrar": "6,3 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 6,3 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0GGZYY3BZ",
+    "marca": "Bébé Confort",
+    "modelo": "Bebeconfort Marvel RoadSafe i-Size,Asiento Elevador Coche Respaldo,3,5-12 años(100-150cm), Silla Coche Marvel Spiderman, Instalación Cinturón Seguridad,14 Posiciones Reposacabezas, Authentic Spiderman",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "14 POSICIONES DEL REPOSACABEZAS: a medida que tu pequeño crece, el práctico ajuste del reposacabezas con una mano permite seleccionar entre 14 posiciones para una seguridad y un confort óptimos",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": 14
+      },
+      "mostrar": "Sí — 14 posiciones",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "14 POSICIONES DEL REPOSACABEZAS: a medida que tu pequeño crece, el práctico ajuste del reposacabezas con una mano permite seleccionar entre 14 posiciones para una seguridad y un confort óptimos",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 3,35 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 3.35
+      },
+      "mostrar": "3,35 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 3,35 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0DP7TG8KY",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Isofix, Top Tether, sensores electrónicos, hasta aprox. 12 años, sistemas de seguridad, tapizados premium, reclinables, Gris",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": "Contenido visible: \"el ajuste del reposacabezas y el arnés en un movimiento hace que la silla se ajuste siempre a la perfección\". Confirma que es regulable pero no da un numero de posiciones.",
+      "normalizado": {
+        "regulable": true,
+        "posiciones": null
+      },
+      "mostrar": "Sí",
+      "revisar": false,
+      "fuente": "fabricante_oficial",
+      "url_fuente": "https://kinderkraft.es/productos/fix2go",
+      "texto_fuente": "Contenido visible: \"el ajuste del reposacabezas y el arnés en un movimiento hace que la silla se ajuste siempre a la perfección\". Confirma que es regulable pero no da un numero de posiciones.",
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 6,3 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 6.3
+      },
+      "mostrar": "6,3 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 6,3 Kilogramos",
+      "confianza": null
+    }
+  },
+  {
+    "asin": "B0F1R26D8L",
+    "marca": "Kinderkraft",
+    "modelo": "Kinderkraft I-BOOST 2 Silla de coche, Silla de Bebe, Asiento de coche, I-Size, 125-150cm, asiento elevador de 6 a 12 años, fácil de montar, postura ergonómica, espuma adicional, Negro",
+    "grupo_r44": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": null,
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "reposacabezas": {
+      "original": null,
+      "normalizado": null,
+      "mostrar": "No determinado",
+      "revisar": false,
+      "fuente": null,
+      "url_fuente": null,
+      "texto_fuente": null,
+      "confianza": null
+    },
+    "peso_silla": {
+      "original": "Peso del producto: 1,2 Kilogramos",
+      "normalizado": {
+        "peso_silla_kg": 1.2
+      },
+      "mostrar": "1,2 kg",
+      "revisar": false,
+      "fuente": "amazon",
+      "url_fuente": null,
+      "texto_fuente": "Peso del producto: 1,2 Kilogramos",
+      "confianza": null
+    }
+  }
+]

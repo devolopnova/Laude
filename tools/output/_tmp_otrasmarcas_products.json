@@ -1,0 +1,56 @@
+FOUND B0GGZYY3BZ
+{
+ "asin": "B0GGZYY3BZ",
+ "marca": "Bébé Confort",
+ "modelo": "Marvel RoadSafe",
+ "actual_lote1": true,
+ "precio": 79.99,
+ "valoracion": 4.4,
+ "n_val": 224,
+ "grupo": "Sin especificar (contradicción ISOFIX en Amazon ya detectada y descartada como evidencia de grupo)",
+ "edad": "3,5-12 años",
+ "altura": "100-150 cm",
+ "peso_recomendado": "15-36 kg",
+ "isofix": "No (confirmado por fabricante, resuelto manualmente)",
+ "tipo_instalacion": "Cinturón",
+ "orientacion": "A favor de la marcha",
+ "reclinable": "Sin especificar",
+ "giro_360": "Sin especificar",
+ "normativa": "R129 / i-Size",
+ "reposacabezas": "Sí",
+ "arnes": "Cinturón del vehículo",
+ "peso_silla": "3,35 kg",
+ "proteccion_lateral": "Sin especificar",
+ "funda_lavable": "Sin especificar",
+ "travel_system": "Sin especificar",
+ "estado_auditoria": "Confirmado (Lote 1, sin cambios)"
+}
+---
+FOUND B07RYWKS9Z
+{
+ "asin": "B07RYWKS9Z",
+ "marca": "Babify",
+ "modelo": "Onboard",
+ "actual_lote1": false,
+ "precio": 149.99,
+ "valoracion": 4.4,
+ "n_val": 7143,
+ "grupo": "Grupo 0123",
+ "edad": "0-12 años",
+ "altura": "40-150 cm",
+ "peso_recomendado": "Hasta 36 kg",
+ "isofix": "Sí",
+ "tipo_instalacion": "ISOFIX + Top Tether",
+ "orientacion": "Ambas",
+ "reclinable": "Sí",
+ "giro_360": "Sí",
+ "normativa": "R129 / i-Size",
+ "reposacabezas": "Sí",
+ "arnes": "Arnés de 5 puntos",
+ "peso_silla": "8,3 kg",
+ "proteccion_lateral": "Sin especificar explícito",
+ "funda_lavable": "Sí (transpirable y lavable, confirmado en Amazon)",
+ "travel_system": "Sin especificar",
+ "estado_auditoria": "✅ RESUELTO (13-ago-2026): normativa R129/i-Size confirmada por el titulo del listing de Amazon para este ASIN exacto (\"i-Size ECE R129\"). La mencion a R44/04 detectada en la auditoria previa procedia de manuales de modelos HERMANOS de la marca (\"Onboard Swivel 360\", \"Isofix Reclining Car Seat\" -- productos distintos, clasificados por peso, no por altura), no del manual de este producto \"Onboard\" 40-150cm. Sin web de fabricante oficial independiente localizable (marca de marketplace); no se encontro numero de homologacion E-mark en ninguna fuente accesible."
+}
+---

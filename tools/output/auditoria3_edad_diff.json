@@ -1,0 +1,41 @@
+{
+  "productos_con_cambios": [
+    "B0D5QSYXPH",
+    "B0FGDM2ZTS"
+  ],
+  "atributos_afectados": [
+    "edad",
+    "estado_auditoria"
+  ],
+  "num_celdas_modificadas": 4,
+  "celdas": [
+    {
+      "asin": "B0D5QSYXPH",
+      "modelo": "LEVI ONE i-Size",
+      "campo": "edad",
+      "antes": "Sin especificar (por altura: 76-150cm)",
+      "despues": "15 meses - 12 años"
+    },
+    {
+      "asin": "B0D5QSYXPH",
+      "modelo": "LEVI ONE i-Size",
+      "campo": "estado_auditoria",
+      "antes": "Confirmado en lionelo.com, sin contradicciones.",
+      "despues": "Confirmado en lionelo.com, sin contradicciones. | ✅ RESUELTO (16-ago-2026, punto 7.3): edad derivada del propio dataset, sin inventar ni recalcular. Este producto tiene altura \"76-150 cm\" (sin cambios). Los otros 3 productos del dataset con esa MISMA altura exacta -- Cybex Pallas G i-Size (G2) [B0DPHRJ1YH], KikkaBoo i-PASS [B0DYDY6C5Y] y KikkaBoo i-FLIT [B0DS6C4XR8] -- tienen los 3 la edad \"15 meses - 12 años\" (unanimidad 3/3 referencias disponibles en el dataset). Se aplica el mismo valor por coherencia con el patron ya auditado, no por calculo propio. No se modifica altura/grupo/peso de este producto."
+    },
+    {
+      "asin": "B0FGDM2ZTS",
+      "modelo": "SAFETY FIX 3 PRO",
+      "campo": "edad",
+      "antes": "Sin especificar",
+      "despues": "15 meses - 12 años"
+    },
+    {
+      "asin": "B0FGDM2ZTS",
+      "modelo": "SAFETY FIX 3 PRO",
+      "campo": "estado_auditoria",
+      "antes": "Confirmado (Lote 1, sin cambios)",
+      "despues": "Confirmado (Lote 1, sin cambios) | ✅ RESUELTO (16-ago-2026, punto 7.3): edad establecida manualmente por el usuario -- \"15 meses - 12 años\". No se modifica altura/grupo/peso de este producto."
+    }
+  ]
+}

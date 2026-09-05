@@ -1,0 +1,15 @@
+B0FKBWNF2G | Kinderkraft    | No   | fuente=amazon               | confianza=alta
+B0F9YPF1V1 | Kinderkraft    | No   | fuente=amazon               | confianza=alta
+B0BYP63YCW | Kinderkraft    | No   | fuente=amazon               | confianza=alta
+B0C58QGJNG | Cybex          | No   | fuente=amazon               | confianza=alta
+B0BZ89X9YC | Kinderkraft    | Sí   | fuente=amazon               | confianza=alta
+B0CZ47FKZL | Maxi-Cosi      | No   | fuente=amazon               | confianza=alta
+B0BYP9MTBX | Kinderkraft    | No   | fuente=amazon               | confianza=alta
+B0FGDM2ZTS | Kinderkraft    | No   | fuente=amazon               | confianza=media
+B0F3P61P8C | Bébé Confort   | Sí   | fuente=amazon               | confianza=alta
+B0CWS19269 | Maxi-Cosi      | Sí   | fuente=amazon               | confianza=alta
+B0F9YR27XX | Kinderkraft    | Sí   | fuente=amazon               | confianza=alta
+B0DSL7WGB2 | Kinderkraft    | No   | fuente=amazon               | confianza=alta
+B0GGZYY3BZ | Bébé Confort   | No   | fuente=amazon               | confianza=alta
+B0DP7TG8KY | Kinderkraft    | No   | fuente=amazon               | confianza=alta
+B0F1R26D8L | Kinderkraft    | No   | fuente=amazon               | confianza=alta

@@ -1,0 +1,457 @@
+{
+  "stats": {
+    "busqueda": "sillita coche",
+    "paginas_recorridas": 1,
+    "candidatos_brutos": 60,
+    "tras_filtro_marca": 23,
+    "tras_deduplicado": 23,
+    "procesados": 7,
+    "verificados": 0,
+    "pendiente_revision": 7,
+    "descartados_marca_ficha": 0,
+    "fallos_ficha": 0
+  },
+  "productos": [
+    {
+      "asin": "B0F9YNC8CD",
+      "marca": "Kinderkraft",
+      "modelo": "Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 cm), Respaldo ajustable, Cinturón de seguridad de 5 puntos, SISTEMA EASY GROW, Fácil instalación, Gris oscuro",
+      "titulo_amazon": "Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 cm), Respaldo ajustable, Cinturón de seguridad de 5 puntos, SISTEMA EASY GROW, Fácil instalación, Gris oscuro",
+      "url": "https://www.amazon.es/sspa/click?ie=UTF8&spc=MToxMzkzODYyNjQzMTkxNDY3OjE3ODYzNTIwODY6c3BfYXRmOjMwMDkwMjg5NDk2MDIzMjo6MDo6&url=%2FKinderkraft-Ajustable-ajustable-seguridad-instalaci%25C3%25B3n%2Fdp%2FB0F9YNC8CD%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE%26dib_tag%3Dse%26keywords%3Dsillita%2Bcoche%26qid%3D1786352086%26sr%3D8-2-spons%26aref%3DGWZ0H3TalV%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=GWZ0H3TalV&sp_cr=ZAZ",
+      "imagen": null,
+      "precio": {
+        "actual": 62.9,
+        "anterior": 69.9,
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.5,
+        "numero": 377
+      },
+      "caracteristicas": {
+        "grupo_edad": "15 meses - 12 años",
+        "peso_recomendado": "N/A",
+        "isofix": "N/A",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "Sí — 5 posiciones",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "N/A",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "7,5 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "SILLA DE COCHE 76–150 CM (aprox. 15 meses – 12 años) – conforme a la normativa i-Size (R129), instalación únicamente en sentido de la marcha, con ajuste a la altura del niño.",
+        "peso_recomendado": null,
+        "isofix": null,
+        "orientacion": "SILLA DE COCHE 76–150 CM (aprox. 15 meses – 12 años) – conforme a la normativa i-Size (R129), instalación únicamente en sentido de la marcha, con ajuste a la altura del niño.",
+        "reclinable": "COMODIDAD DURANTE TODA LA VIDA ÚTIL – reclinado en 5 posiciones, carcasa ventilada, funda fácilmente desmontable y lavable.",
+        "homologacion": "SILLA DE COCHE 76–150 CM (aprox. 15 meses – 12 años) – conforme a la normativa i-Size (R129), instalación únicamente en sentido de la marcha, con ajuste a la altura del niño.",
+        "giro_360": null,
+        "reposacabezas_regulable": null,
+        "tipo_arnes_proteccion": null,
+        "peso_silla": "Peso del producto: 7,5 Kilogramos",
+        "proteccion_lateral": "PROTECCIÓN PREMIUM – H-GUARD con reposacabezas de 3 capas que protege la cabeza, SPS que minimiza las fuerzas en caso de impacto lateral.",
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "En calidad y precio me parece muy bien, encantada con la silla. Gracias",
+          "La silla parece de buena calidad en cuanto a seguridad y a tejido. Y además se instala muy fácilmente.",
+          "Es muy cómoda y bonita pero el repartidor un poco desagradable, el envío rápido me tardo 1 día.",
+          "Comoda",
+          "La verdad que una silla muy económica Qie cumple su función para un segundo coche. Fácil de instalar",
+          "Perfecto. Lo hemos comprado para mi hija de dos años y le queda genial. Va mejor que el que tenía antes.",
+          "Estan muy bien",
+          "La silla parece muy confortable es cómoda, pero el problema está en que no tiene Isofix, aparte va agarrada al coche mediante el cinturón de seguridad pero intentas mover la silla y se menea bastante no me fío mucho de ella. También en el transporte es un poco incómodo porque al ser dos partes independientes cuesta un poco llevarlas no es un artilugio que se pliega y se lleva fácilmente me imagino",
+          "Schicker Autositz, macht optisch was her und ist trotzdem schlicht und zeitlos genug um zu jedem Fahrzeuginnenraum zu passen. Keine Endmontage, er wird nach der Lieferung einfach nur ineinander gesteckt und fertig. Wie er im Auto mit den Gurten zu befestigen ist, geht aus der beiliegenden Beschreibung, aber auch aus der Anleitung - die auf beiden Seiten des Sitzes zu finden ist, man sie also immer",
+          "Bel seggiolino. Io ne ho acquistati due ad un prezzo di promozione molto conveniente, colore nero, bello come appare in foto. Si fissa con le cinture auto (no isofix), modificabile in base all’altezza del bambino (cioè adeguabile in base alle tre fasce di altezza dell’obbligo seggiolini). Lo consiglio sicuramente"
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0FKBWNF2G",
+      "marca": "Kinderkraft",
+      "modelo": "Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-12 años), ISOFIX + cinturón, reposacabezas ajustable, guiados de cinturón, H-GUARD, SPS, AIR FLOW transpirable, Negro",
+      "titulo_amazon": "Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-12 años), ISOFIX + cinturón, reposacabezas ajustable, guiados de cinturón, H-GUARD, SPS, AIR FLOW transpirable, Negro",
+      "url": "https://www.amazon.es/Kinderkraft-cintur%C3%B3n-reposacabezas-ajustable-transpirable/dp/B0FKBWNF2G/ref=sr_1_5?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE&dib_tag=se&keywords=sillita+coche&qid=1786352086&sr=8-5",
+      "imagen": null,
+      "precio": {
+        "actual": 79.9,
+        "anterior": "N/A",
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.5,
+        "numero": 63
+      },
+      "caracteristicas": {
+        "grupo_edad": "3,5-12 años",
+        "peso_recomendado": "N/A",
+        "isofix": "Sí",
+        "orientacion": "N/A",
+        "reclinable": "N/A",
+        "homologacion": "N/A",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Cinturón del vehículo",
+        "peso_silla": "N/A",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "Silla de coche para niños de 100–150 cm (3,5–12 años) con asiento cómodo y reposacabezas ajustable: crece con el niño y ofrece confort en cada viaje.",
+        "peso_recomendado": null,
+        "isofix": "Montaje flexible: ISOFIX + cinturón del vehículo o solo cinturón – podrás cambiar la silla fácilmente de un coche a otro manteniendo una posición estable y correcta del niño.",
+        "orientacion": null,
+        "reclinable": null,
+        "homologacion": null,
+        "giro_360": null,
+        "reposacabezas_regulable": "Silla de coche para niños de 100–150 cm (3,5–12 años) con asiento cómodo y reposacabezas ajustable: crece con el niño y ofrece confort en cada viaje.",
+        "tipo_arnes_proteccion": "Montaje flexible: ISOFIX + cinturón del vehículo o solo cinturón – podrás cambiar la silla fácilmente de un coche a otro manteniendo una posición estable y correcta del niño.",
+        "peso_silla": null,
+        "proteccion_lateral": null,
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "Estoy muy contento con la compra. La silla es muy fácil de instalar, se nota que está bien fabricada y ofrece una gran sensación de seguridad. Mi hijo va muy cómodo incluso en trayectos largos y el reposacabezas se ajusta fácilmente a medida que crece. Los materiales tienen buena calidad y el diseño es bonito. La relación calidad-precio me parece excelente. Sin duda, una compra totalmente recomend",
+          "Sillas muy cómodas y bonitas ,se colocan perfectamente por su sistema isofix Llegaron a tiempo y en perfecto estado y embaladas",
+          "Una silla preciosa",
+          "Es la segunda que compro, mi otra hija tiene una igual y estoy muy contento",
+          "É bastante boa e fácil de montar no isofix",
+          "La silla está muy bien cálida precio",
+          "Es un alzador con Isofix. La parte superior se separa y monta como los más baratos. Yo al menos esperaba que todo fuese una pieza solida.",
+          "Buena silla calidad precio",
+          "Utilisé pour ma fille de 6 ans. Très facile à installer. Confortable et très simple à régler. Ma fille l'apprécie. Très satisfait.",
+          "This car seat is perfect. It’s nice and light weight, got iso mount & really nice colour. My son loves it plenty of room after we upgraded from a smaller seat. Installed it into my car yesterday took 2 minutes to attach up. Would recommend this seat."
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0F9YPF1V1",
+      "marca": "Kinderkraft",
+      "modelo": "Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 cm), Respaldo ajustable, Cinturón de seguridad de 5 puntos, SISTEMA EASY GROW, Fácil instalación, Rosa",
+      "titulo_amazon": "Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 cm), Respaldo ajustable, Cinturón de seguridad de 5 puntos, SISTEMA EASY GROW, Fácil instalación, Rosa",
+      "url": "https://www.amazon.es/Kinderkraft-Ajustable-ajustable-seguridad-instalaci%C3%B3n/dp/B0F9YPF1V1/ref=sr_1_6?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE&dib_tag=se&keywords=sillita+coche&qid=1786352086&sr=8-6",
+      "imagen": null,
+      "precio": {
+        "actual": 62.9,
+        "anterior": 69.9,
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.5,
+        "numero": 377
+      },
+      "caracteristicas": {
+        "grupo_edad": "15 meses - 12 años",
+        "peso_recomendado": "N/A",
+        "isofix": "N/A",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "Sí — 5 posiciones",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "N/A",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "5,98 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "SILLA DE COCHE 76–150 CM (aprox. 15 meses – 12 años) – conforme a la normativa i-Size (R129), instalación únicamente en sentido de la marcha, con ajuste a la altura del niño.",
+        "peso_recomendado": null,
+        "isofix": null,
+        "orientacion": "SILLA DE COCHE 76–150 CM (aprox. 15 meses – 12 años) – conforme a la normativa i-Size (R129), instalación únicamente en sentido de la marcha, con ajuste a la altura del niño.",
+        "reclinable": "COMODIDAD DURANTE TODA LA VIDA ÚTIL – reclinado en 5 posiciones, carcasa ventilada, funda fácilmente desmontable y lavable.",
+        "homologacion": "SILLA DE COCHE 76–150 CM (aprox. 15 meses – 12 años) – conforme a la normativa i-Size (R129), instalación únicamente en sentido de la marcha, con ajuste a la altura del niño.",
+        "giro_360": null,
+        "reposacabezas_regulable": null,
+        "tipo_arnes_proteccion": null,
+        "peso_silla": "Peso del producto: 5,98 Kilogramos",
+        "proteccion_lateral": "PROTECCIÓN PREMIUM – H-GUARD con reposacabezas de 3 capas que protege la cabeza, SPS que minimiza las fuerzas en caso de impacto lateral.",
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "En calidad y precio me parece muy bien, encantada con la silla. Gracias",
+          "La silla parece de buena calidad en cuanto a seguridad y a tejido. Y además se instala muy fácilmente.",
+          "Es muy cómoda y bonita pero el repartidor un poco desagradable, el envío rápido me tardo 1 día.",
+          "Comoda",
+          "La verdad que una silla muy económica Qie cumple su función para un segundo coche. Fácil de instalar",
+          "Perfecto. Lo hemos comprado para mi hija de dos años y le queda genial. Va mejor que el que tenía antes.",
+          "Estan muy bien",
+          "La silla parece muy confortable es cómoda, pero el problema está en que no tiene Isofix, aparte va agarrada al coche mediante el cinturón de seguridad pero intentas mover la silla y se menea bastante no me fío mucho de ella. También en el transporte es un poco incómodo porque al ser dos partes independientes cuesta un poco llevarlas no es un artilugio que se pliega y se lleva fácilmente me imagino",
+          "Schicker Autositz, macht optisch was her und ist trotzdem schlicht und zeitlos genug um zu jedem Fahrzeuginnenraum zu passen. Keine Endmontage, er wird nach der Lieferung einfach nur ineinander gesteckt und fertig. Wie er im Auto mit den Gurten zu befestigen ist, geht aus der beiliegenden Beschreibung, aber auch aus der Anleitung - die auf beiden Seiten des Sitzes zu finden ist, man sie also immer",
+          "Bel seggiolino. Io ne ho acquistati due ad un prezzo di promozione molto conveniente, colore nero, bello come appare in foto. Si fissa con le cinture auto (no isofix), modificabile in base all’altezza del bambino (cioè adeguabile in base alle tre fasce di altezza dell’obbligo seggiolini). Lo consiglio sicuramente"
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "marca": "Cybex",
+      "modelo": "CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)",
+      "titulo_amazon": "CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)",
+      "url": "https://www.amazon.es/Silver-infantil-Solution-coches-ISOFIX/dp/B0C58QGJNG/ref=sr_1_10?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE&dib_tag=se&keywords=sillita+coche&qid=1786352086&sr=8-10",
+      "imagen": null,
+      "precio": {
+        "actual": 119.99,
+        "anterior": "N/A",
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.7,
+        "numero": 1659
+      },
+      "caracteristicas": {
+        "grupo_edad": "3-12 años",
+        "peso_recomendado": "15-50 kg",
+        "isofix": "Sí",
+        "orientacion": "N/A",
+        "reclinable": "Sí — 3 posiciones",
+        "homologacion": "N/A",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí — 11 posiciones",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "7 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)",
+        "peso_recomendado": "CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)",
+        "isofix": "Silla de coche estable y duradera de alta calidad para niños desde los 3 hasta los 12 años aprox. (15-50 kg, aprox. 100-150 cm), Apta para coches sin y con ISOFIX",
+        "orientacion": null,
+        "reclinable": "Óptima seguridad: Protección lineal contra impactos laterales integrada en los protectores laterales de los hombros, Reposacabezas reclinable Cybex de 3 posiciones que sujeta la cabeza mientras se duerme",
+        "homologacion": null,
+        "giro_360": null,
+        "reposacabezas_regulable": "Reposacabezas ajustable en altura en 11 posiciones para adaptarse al tamaño del niño, Respaldo de inclinación ajustable para una adaptación óptima al asiento del vehículo",
+        "tipo_arnes_proteccion": null,
+        "peso_silla": "Peso del producto: 7 Kilogramos",
+        "proteccion_lateral": null,
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "Buena silla, varias posiciones para la cabeza cosa que se agradece según el momento del viaje. Se instala fácil y la niña está encantada con ella, de hecho, al quedar más bajita que la anterior que tenía ya ni se marea. Nos parece una silla cómoda, práctica y segura.",
+          "Facil de poner y muy cómoda",
+          "Buena silla, es comoda y la parte de arriba donde descansa la cabeza tiene varios niveles de reclinamiento, eso lo hace muy comoda, al igual que toda la silla tambien se puede separar un poco del asiento y se puede reclinar tambien! Asi que todo ese plus la hace muy comoda, mi hijo de 4 años esta muy contento, por ahora excelente silla , de las pocas que tienen ese plus de comodidad para que no qu",
+          "Cybex muy cómoda , economica y bien fabricada. Variedad de colores . Bajo peso .",
+          "La silla está bien, viene con el isofix que funciona bien Lo único que no me gusta es la guía del cinturón porque lo termina doblando",
+          "Muy fácil de poner en el coche. Hemos hecho un viaje largo y se ve cómoda. La niña ha dormido muy bien y dice que va muy a gusto en la silla. Que pueda ponerse más inclinada creo que es un acierto. Además, se ve fuerte y resistente, lo que da seguridad.",
+          "Very lightweight for a car seat. My 126cm tall 6 year old is very happy. It’s easy to install and remove with isofix, comfortable and the seatbelt hooks are just in the right place to not rub or bother her. The tilted headrest is great. I’ll definitely be buying another when my son has to upgrade 👍🏼",
+          "Perfect for our daughter!",
+          "À peine sortie du carton, on voit directement la qualité du siège ! Le tissu est épais et impeccable, le siège se tient bien et est facile à monter. Nous l'avons pris pour notre fille de 3ans qui s'endort pendant les longs trajets en voiture et c'est parfait, grâce à l'inclinaison du siège, sa tête ne tombe plus en avant mais reste bien en arrière. La possibilité de choisir en position simple ou I",
+          "Dopo alcune settimane di utilizzo posso dire di essere molto soddisfatto di questo seggiolino CBX by CYBEX. Si tratta di un modello solido, curato nei materiali e con il classico livello di sicurezza che contraddistingue i prodotti del marchio. È pensato per bambini dai circa 3 ai 12 anni (da 100 a 150 cm di altezza) e si percepisce subito che è progettato per durare nel tempo. L’installazione è s"
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0BYP9MTBX",
+      "marca": "Kinderkraft",
+      "modelo": "Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Negro",
+      "titulo_amazon": "Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Negro",
+      "url": "https://www.amazon.es/Kinderkraft-COMFORT-Sillade-Cintur%C3%B3n-niveles/dp/B0BYP9MTBX/ref=sr_1_14?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE&dib_tag=se&keywords=sillita+coche&qid=1786352086&sr=8-14",
+      "imagen": null,
+      "precio": {
+        "actual": 69.9,
+        "anterior": "N/A",
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.4,
+        "numero": 4105
+      },
+      "caracteristicas": {
+        "grupo_edad": "15 meses - 12 años",
+        "peso_recomendado": "N/A",
+        "isofix": "No",
+        "orientacion": "N/A",
+        "reclinable": "N/A",
+        "homologacion": "R129",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "N/A",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "6 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Negro",
+        "peso_recomendado": null,
+        "isofix": "COMFORT UP i-Size es una silla de coche destinada para niños de entre 76 y 150 cm de estatura (aproximadamente entre 15 meses y 12 años, o de acuerdo con la normativa antigua, 9-36 kg). La silla cumple la última normativa R129 i-Size y ha aprobado todas las pruebas de impacto.\n\nEl montaje de esta silla de coche es de lo más versátil, ya que se puede instalar en coches sin ISOFIX. COMFORT UP i-Size se instala con el cinturón de 3 puntos del coche gracias a las cómodas guías.\n\nCOMFORT UP i-Size está equipada con soluciones prácticas que aumentan la seguridad de uso. Gracias a EASY GROW SYSTEM, ajustarás el reposacabezas y el arnés simultáneamente en 11 posiciones distintas. Cuando ya toque abrochar al niño con el cinturón del coche, solo tienes que guardar el arnés interior sin necesidad de desengancharlo de la silla.\n\nComposición\nChasis: PP\nForro: poliéster\n\nDimensiones: 61,5-84 x 44 x 49 cm (altura, anchura, profundidad)\n\nPeso: 6 kg",
+        "orientacion": null,
+        "reclinable": null,
+        "homologacion": "✅ FUNCIONAL: silla de coche para niños de 75-150 cm de estatura (entre 15 meses y 12 años o 9-36 kg). Cumple la última normativa R129 i-Size, ha aprobado todas las pruebas de impacto.",
+        "giro_360": null,
+        "reposacabezas_regulable": null,
+        "tipo_arnes_proteccion": null,
+        "peso_silla": "Peso del producto: 6 Kilogramos",
+        "proteccion_lateral": null,
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "Es perfecta !! Cómoda , fácil de instalar y se ve de buena calidad , no hace falta gastarse un dineral en marcas que te ofrecen lo mismo",
+          "Ya hace un tiempo que la tengo y genial.",
+          "Tal qual la foto, bastante práctico y confortable para viajes rápidas",
+          "⭐️⭐️⭐️⭐️⭐️ Segura, cómoda y versátil: perfecta para crecer con tu hijo Compré la Kinderkraft COMFORT UP I-SIZE para mi hijo de 18 meses como segunda silla para ir a la guardería y pequeños trayectos y estoy muy contento con la compra. La silla es fácil de instalar, se ajusta perfectamente al cinturón de seguridad y ofrece una sensación de seguridad excelente gracias a su estructura robusta y a la ",
+          "Me ha parecido buena calidad, cómodo para mi hijo y muy funcional eh! Lo recomiendo",
+          "Al desembalarla se nota que la estructura plástica cumple bien con la normativa i-Size actual y los acabados de las costuras de la tela son correctos. Visualmente es una silla robusta que transmite seguridad desde el primer momento. Lo mejor que tiene es su versatilidad a largo plazo. Al regularse en 11 niveles de altura, se adapta genial al crecimiento del niño desde los 15 meses hasta que ya no ",
+          "todo correcto !!!",
+          "Genial, se acopla fácil al coche, el nene va a gusto",
+          "Excellent! Ne prend pas beaucoup de place idéal pour des familles avec des enfants en âges rapprochés.",
+          "Perfetto, si attacca benissimo. È solido e comodo."
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0BZ89X9YC",
+      "marca": "Kinderkraft",
+      "modelo": "Kinderkraft I-GROW Silla de coche, I-SIZE 40-150 cm, Isofix, Silla coche bebé, para niños, Ajustable, Sillade, RWF, FWF, Universal para coche, Asiento, 360º, Grupo 0+/1/2/3, 0-36 kg, Negro grafito",
+      "titulo_amazon": "Kinderkraft I-GROW Silla de coche, I-SIZE 40-150 cm, Isofix, Silla coche bebé, para niños, Ajustable, Sillade, RWF, FWF, Universal para coche, Asiento, 360º, Grupo 0+/1/2/3, 0-36 kg, Negro grafito",
+      "url": "https://www.amazon.es/Kinderkraft-Ajustable-Sillade-Universal-Asiento/dp/B0BZ89X9YC/ref=sr_1_15?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE&dib_tag=se&keywords=sillita+coche&qid=1786352086&sr=8-15",
+      "imagen": null,
+      "precio": {
+        "actual": 129.9,
+        "anterior": "N/A",
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.5,
+        "numero": 1485
+      },
+      "caracteristicas": {
+        "grupo_edad": "0-12 años",
+        "peso_recomendado": "N/A",
+        "isofix": "Sí",
+        "orientacion": "Ambas",
+        "reclinable": "Sí",
+        "homologacion": "R129",
+        "giro_360": "Sí",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "11 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "✅ MULTIFUNCIONAL: silla de coche 40-150 cm (0-36 kg, 0-12 años) que permita transportar a contramarcha (RWF) hasta los 4 años y a favor de la marcha (FWF). Cumple la última normativa de seguridad R129 i-Size. Se ha probado en pruebas de impacto rigurosas.",
+        "peso_recomendado": null,
+        "isofix": "Tipo de instalación: ISOFIX",
+        "orientacion": "✅ MULTIFUNCIONAL: silla de coche 40-150 cm (0-36 kg, 0-12 años) que permita transportar a contramarcha (RWF) hasta los 4 años y a favor de la marcha (FWF). Cumple la última normativa de seguridad R129 i-Size. Se ha probado en pruebas de impacto rigurosas.",
+        "reclinable": "✅ REGULABLE: la altura del reposacabezas se puede ajustar en 12 niveles. También puedes ajustar el ángulo de inclinación del respaldo (sistema de reclinado) en uno de los 5 niveles disponibles (tanto en RWF como FWF).",
+        "homologacion": "✅ MULTIFUNCIONAL: silla de coche 40-150 cm (0-36 kg, 0-12 años) que permita transportar a contramarcha (RWF) hasta los 4 años y a favor de la marcha (FWF). Cumple la última normativa de seguridad R129 i-Size. Se ha probado en pruebas de impacto rigurosas.",
+        "giro_360": "✅ GIRATORIA: gracias a EASY SPIN 360°, la silla se gira fácilmente hacia la puerta para sentar al niño y abrocharlo con el arnés interior de 5 puntos. El sistema también permite cambiar posiciones de RWF a FWF sin tener que desmontar la silla.",
+        "reposacabezas_regulable": "✅ REGULABLE: la altura del reposacabezas se puede ajustar en 12 niveles. También puedes ajustar el ángulo de inclinación del respaldo (sistema de reclinado) en uno de los 5 niveles disponibles (tanto en RWF como FWF).",
+        "tipo_arnes_proteccion": null,
+        "peso_silla": "Peso del producto: 11 Kilogramos",
+        "proteccion_lateral": null,
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "Nos ha encantado la silla de coche Kinderkraft 360. Es realmente práctica y fácil de usar, especialmente por su sistema giratorio, que facilita muchísimo colocar y sacar al bebé del coche sin esfuerzo. El reductor es muy cómodo y hace que el bebé vaya perfectamente sujeto y seguro desde los primeros meses. La silla se nota de buena calidad, con materiales resistentes y un diseño muy bonito. Nos gu",
+          "Material y diseño 100% recomendado",
+          "Compramos la sillita para auto como regalo a un familiar, para su segundo bebé. Él mismo nos indicó el modelo que quería, después de la experiencia con su primer hijo: pensando que el precio elevado le podría dar más prestaciones, , compró una sillita mucho más cara, para descubrir al final que la silla de auto Kinderkraft disponía de mejores prestaciones.",
+          "La silla tiene buen material , pero noto que el bebé está muy sentado si la utilizas desde que nacen por lo que se les va la cabeza hacia adelante , recomiendo comprar un cuello para esto si no sería inviable andar con el bebé atrás solo sentado",
+          "Excelente, se instala en 20 segundos y tiene unos buenos acabados. El hecho de poder girar la silla 360º es super cómodo para colocar a mi hijo sin tener que encorvarme dentro del coche. El único problema que le veo es que si quieres sujetar la silla a la parte trasera del maletero no te permite girarla más de 90º a lado y lado (osea 180º en total) pero en principio es suficiente para nosotros.",
+          "Sin duda la mejor marca de tema bebes-niños, ya tenía una silleta de coche , pero al venir el segundo , vuelvo a confiar en esta marca y tipo de sillas, encaja perfecto en el Isofix y gira 360 que es muy práctico para el día día",
+          "La silla viene montada completa. La calidad es normal. Por una silla de este precio no puedes pedir mucho mas. No tiene nada que ver con otras marcas mejores, es de calidad media. Me sorprendió que abultaba bastante. Lo bueno que trae el sistema de seguridad de isofix y la correa para atar en los enganches que llevan ahora muchos coches. Se gira por completo, los 360 grados. Los adaptadores se qui",
+          "Excelente",
+          "Great and easy to use Works for babies more than older kids",
+          "Il seggiolino si installa facilmente seguendo le istruzioni ed è fissato al veicolo sia tramite la base con attacchi isofix (che hanno tutti i veicoli prodotti dal 2006) sia tramite il top tether ovvero una cinghia che si attacca ai ganci nel bagagliaio. È quindi un seggiolino conforme alla normativa e sicuro. Anche quando il top tether è agganciato è possibile girare il seggiolino verso la portie"
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0CZ47FKZL",
+      "marca": "Maxi-Cosi",
+      "modelo": "Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full Black | Silla de Coche Plegable, 3.5–12 Años, 10 Posiciones del Reposacabezas, Protección Contra Impactos Laterales G-CELL",
+      "titulo_amazon": "Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full Black | Silla de Coche Plegable, 3.5–12 Años, 10 Posiciones del Reposacabezas, Protección Contra Impactos Laterales G-CELL",
+      "url": "https://www.amazon.es/Maxi-Cosi-100-150cm-Posiciones-Reposacabezas-Protecci%C3%B3n/dp/B0CZ47FKZL/ref=sr_1_16?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy4NE51XiPG0xvQIjBg1jLo9C-YrQPjePdL07eEIElg4CbKAEJ8aVLhsYipogP57qh7aA-3OlNSut7_DSPmu5OKMFE_MEBSPTgLmjrK47pA4El-Psp10eC4SHnAHSyshHTDOXmWmXpbHdJ_sdLREudjcS5AuxF8NTk98OKjhQNz6ab3jqLOQjpnrZgOuYw912qbCipQRzK0sH7NPH0f8BoSR3M62qXVppvZWa_GUg13sOnkSjR8w1YCWSrVVczAAtak.pmBIjbz5oeCSMWpnMY7Kf4ByfC_5yGxeG2eJOSp7HBE&dib_tag=se&keywords=sillita+coche&qid=1786352086&sr=8-16",
+      "imagen": null,
+      "precio": {
+        "actual": 99.99,
+        "anterior": "N/A",
+        "fecha_extraccion": "2026-08-10"
+      },
+      "valoraciones": {
+        "puntuacion": 4.4,
+        "numero": 1385
+      },
+      "caracteristicas": {
+        "grupo_edad": "Grupo 2/3",
+        "peso_recomendado": "N/A",
+        "isofix": "Sí",
+        "orientacion": "N/A",
+        "reclinable": "N/A",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí — 10 posiciones",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "5,32 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "caracteristicas_fuente": {
+        "grupo_edad": "SILLA COCHE GRUPO 2/3: La silla de coche multiedad orientada hacia delante combina sin esfuerzo confort, seguridad y comodidad durante toda la infancia a partir de los 100-150 cm (aprox. 15-36 kg)",
+        "peso_recomendado": null,
+        "isofix": "SEGURIDAD I-SIZE: La silla coche ISOFIX está diseñada conforme a las normas de seguridad UE más exigentes (i-size ECE R129), mientras que las fijaciones ISOFIX te ofrecen confianza durante años",
+        "orientacion": null,
+        "reclinable": null,
+        "homologacion": "SEGURIDAD I-SIZE: La silla coche ISOFIX está diseñada conforme a las normas de seguridad UE más exigentes (i-size ECE R129), mientras que las fijaciones ISOFIX te ofrecen confianza durante años",
+        "giro_360": null,
+        "reposacabezas_regulable": "10 POSICIONES DE REPOSACABEZAS: La silla de coche de viaje portátil i-Size Tanza ofrece 10 posiciones de reposacabezas, lo que da a tu niño una mayor comodidad, ya que se puede ajustar en altura a medida que crece",
+        "tipo_arnes_proteccion": null,
+        "peso_silla": "Peso del producto: 5,32 Kilogramos",
+        "proteccion_lateral": null,
+        "funda_lavable": null,
+        "travel_system": null
+      },
+      "opiniones": {
+        "muestra": [
+          "Me gustó mucho, es fácil de instalar y el niño va cómodo. Hay que usar el cinturón del coche para abrochar al niño, ya que no lleva uno propio. Como lleva el Isofix, se pone y quita muy fácilmente, viene genial para familias que tengan 2 coches y tengan que cambiar de coche y colocar la silla de nuevo. Se dobla y ocupa poco espacio. Los protectores laterales y el respaldo están muy bien, mi hijo v",
+          "Estábamos buscando una silla para nuestro segundo coche. Esta vez nos daba igual si era a contra marcha como en el coche principal o a favor de la marcha. Nuestra hija tiene 5 años e iba en una silla a favor de la marcha sin Isofix, y aun sabiendo que no sirve de nada cuando el menor pesa más de 20kg, no nos daba ninguna seguridad.. Está silla nos ha encantado. - Es muy fácil de montar y se queda ",
+          "Confortable, compact, lightweight and very good quality for the price! For sporadic use is just the go to!! Let’s see how it does over time!",
+          "Compramos la sillita porque nos hace falta de forma esporádica, la solemos llevar en el maletero y la montamos en momentos puntuales por lo que decidimos comprar este modelo, Ligereza, compacta, rápida de instalar y desinstalar. se le ve robusta en la parte de asiento y torso, la zona los hombros lo que son las \"orejas\" tiene cierta elasticidad y envuelve bien al niño, el sistema isofix sale solo ",
+          "Compre la silleta por la marca, la anterior silleta de mi hijo también era de la marca Maxi Cosi y como me transmite confianza la he comprado. La silleta en si la compre por que a mi niño se le quedo pequeñaa y esta ofrece unas tallas mas de las que tenia con la otra, la silleta es super ligera y transportable, pesa muy poco, creo que son 5 kg o asi, se pliega fácilmente para transportarla, y la f",
+          "Cómoda, segura y pequeña para no perder una plaza en la parte trasera del coche.",
+          "Tenemos un Fiat 500e con lo que tenemos el espacio trasero muy limitado. Hasta el momento, teníamos esta silla: https://www.amazon.es/dp/B0F6YPZF6R?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_1&th=1 y, aunque nos servía de maravilla, cuando nuestro peque alcanzó los 105cm de estatura, ya no cabía bien detrás. Esta silla nos ha resuelto todos esos problemas: - Ocupa menos por lo que el peque va más ",
+          "¡Pésima seguridad! No la compres por nada del mundo. Esta silla es, por mucho, una de las más inseguras que existen para tu bebé. El respaldo no se traba ni se queda fijo, lo que significa que cada vez que frenas, la silla se dobla y el niño se va hacia adelante. Para poder usarla, prácticamente tienes que conducir a paso de tortuga. Además, no tiene ningún tipo de soporte para la cabeza. En resum",
+          "Abbiamo scelto il Maxi-Cosi Tanza i-Size per nostra figlia, che ha 4 anni ed è alta circa 110 cm, e finora l’esperienza è stata davvero positiva. Il poggiatesta regolabile in 10 posizioni è comodissimo. Azzurra è già alta per la sua età, ma il seggiolino ha ancora margine per accompagnarla negli anni. Questo per noi significa un acquisto che dura davvero nel tempo. L’installazione con ISOFIX è sem",
+          "Wir haben den Maxi-Cosi Tanza i-Size Sitz vor ca. einem halben Jahr gekauft und ich erlaube mir ein erstes Fazit. Zum Hintergrund: wir haben mehrere Kinder und dadurch schon sehr viele Kindersitze im Gebrauch. Der Sitz überzeugt durch seine sehr ergonomisch Konstruktion und kann sich gut an die Körpergrößen der Kinder anpassen. Durch seinen schlanken Aufbau kann er auch sehr gut in schmalen Autosi"
+        ],
+        "resumen": null
+      },
+      "estado": "PENDIENTE_REVISION"
+    }
+  ]
+}

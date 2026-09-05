@@ -1,0 +1,597 @@
+{
+  "province": "Lugo",
+  "province_slug": "lugo",
+  "generated_at": "2026-08-31",
+  "searches": [
+    "planes con niños Lugo",
+    "actividades con niños Lugo",
+    "qué hacer con niños Lugo"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "Se analizaron los 5 primeros resultados orgánicos de cada una de las 3 búsquedas (15 posiciones, 12 URLs únicas tras deduplicar). Solo 4 fuentes superaron el cribado y fueron legibles: tuscasasrurales.com, terrasdelugo.info, galiciamaxica.eu y micuadernodeviajero.es. Las descartadas lo fueron por ser plataformas de reservas (yumping), directorios de empresas (paxinasgalegas), páginas institucionales de programas municipales (concellodelugo.gal/infancia), agendas de eventos puntuales (planomato), páginas índice sin listado real (mamatieneunplan) o por devolver HTTP 403 y no poder leerse (planenfamilia, las dos fichas de TripAdvisor). Se buscaban 18 lugares y se consiguieron 18 (15 primary + 3 backup), pero con una base de evidencias más estrecha de lo habitual: 10 de los 18 tienen una sola evidencia. Durante el cribado se descartaron dos candidatos que las fuentes citaban pero que NO están en la provincia de Lugo: el MELGA (Museo Etnolúdico de Galicia, en Ponteceso, A Coruña) y el Labirinto de Breoghán (Vilarmaior, A Coruña); este último se confundía fácilmente con el Laberinto Costa Mariña de Rinlo, que sí es de Lugo y sí se incluye. También se verificó que la Aldea das Formigas de San Clodio pertenece a Outeiro de Rei y no al San Clodio de Ribas de Sil. Aplicación de la regla de diversificación del patrimonio histórico/arqueológico: los candidatos de esa naturaleza eran la Muralla romana de Lugo, el subsuelo romano (Casa dos Mosaicos), Piornedo con sus pallozas y el Pazo de Tor. Se seleccionaron como máximo 2 entre los primary (Muralla en el puesto 7 y Piornedo en el 15, ambos a partir de la posición 7); la Casa dos Mosaicos pasó a backup y el Pazo de Tor quedó fuera. Las posiciones 1-6 se reservaron a experiencias con atractivo infantil evidente: dos parques de animales, un museo interactivo, un museo ferroviario, un parque de aventura y un laberinto con zona de juegos. Piornedo baja al puesto 15 pese a tener 3 evidencias (el máximo del plan) precisamente por esta regla.",
+  "sources_analyzed": [
+    {
+      "name": "Tuscasasrurales.com — Qué hacer y qué ver en Lugo con niños",
+      "domain": "tuscasasrurales.com",
+      "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+      "title": "Qué hacer y qué ver en Lugo con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 13
+    },
+    {
+      "name": "Mamá tiene un plan — Planes con niños en Lugo",
+      "domain": "mamatieneunplan.com",
+      "url": "https://mamatieneunplan.com/provincia/planes-con-ninos-en-lugo",
+      "title": "Planes con niños en Lugo",
+      "included": false,
+      "exclusion_reason": "Página índice/plantilla sin listado real de lugares: los filtros de la provincia devuelven 0 resultados y solo hay descripciones genéricas de categorías.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Planomato — Planes con niños en Lugo",
+      "domain": "planomato.com",
+      "url": "https://www.planomato.com/es/lugo/ni%C3%B1os",
+      "title": "Planes con niños en Lugo 2026",
+      "included": false,
+      "exclusion_reason": "Agenda de eventos puntuales (fiestas, campamentos, espectáculos, torneos), no un listado de lugares visitables de forma estable.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Plan en Familia — 17 planes para niños de 4 años en Lugo",
+      "domain": "planenfamilia.com",
+      "url": "https://planenfamilia.com/lugo/planes-para-4-anos",
+      "title": "17 planes para niños de 4 años en Lugo (2026)",
+      "included": false,
+      "exclusion_reason": "El servidor devolvió HTTP 403 y no se pudo leer el contenido de la página.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Terras de Lugo — Planes de invierno con niños en Lugo",
+      "domain": "terrasdelugo.info",
+      "url": "https://www.terrasdelugo.info/blog/planes-de-invierno-con-ninos-en-lugo-diversion-y-aprendizaje-en-la-naturaleza-y-la-historia",
+      "title": "Planes de invierno con niños en Lugo",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 5
+    },
+    {
+      "name": "Yumping — Actividades para niños en Lugo",
+      "domain": "yumping.com",
+      "url": "https://www.yumping.com/en/activities-for-children/lugo",
+      "title": "Actividades para niños en Lugo",
+      "included": false,
+      "exclusion_reason": "Plataforma comercial de reserva de actividades, no una guía editorial.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Páxinas Galegas — Centros de ocio en Lugo",
+      "domain": "paxinasgalegas.es",
+      "url": "https://www.paxinasgalegas.es/centros-de-ocio-lugo-2178ep_122ay.html",
+      "title": "Centros de ocio en Lugo",
+      "included": false,
+      "exclusion_reason": "Directorio de empresas, no una guía ni un listado editorial de planes.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Concello de Lugo — Infancia",
+      "domain": "concellodelugo.gal",
+      "url": "https://concellodelugo.gal/es/general-temas/infancia",
+      "title": "Infancia | Concello de Lugo",
+      "included": false,
+      "exclusion_reason": "Página institucional sobre programas y talleres municipales, no un listado de lugares visitables.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "TripAdvisor — Cosas que hacer con niños en Lugo (ciudad)",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g609027-Activities-zft11306-Lugo_Province_of_Lugo_Galicia.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Lugo",
+      "included": false,
+      "exclusion_reason": "El servidor devolvió HTTP 403 y no se pudo leer el contenido de la página.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "TripAdvisor — Cosas que hacer con niños en la provincia de Lugo",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g1768744-Activities-zft11306-Province_of_Lugo_Galicia.html",
+      "title": "Cosas que hacer con niños en Provincia de Lugo",
+      "included": false,
+      "exclusion_reason": "El servidor devolvió HTTP 403 y no se pudo leer el contenido de la página.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Galicia Máxica — Lugares en Lugo (Galicia con niños)",
+      "domain": "galiciamaxica.eu",
+      "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-lugo/",
+      "title": "Hoy toca LUGARES EN LUGO — Galicia con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 14
+    },
+    {
+      "name": "Mi cuaderno de viajero — Lugo con niños",
+      "domain": "micuadernodeviajero.es",
+      "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+      "title": "LUGO CON NIÑOS",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 7
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "fuentes_limitadas",
+        "message": "Solo 4 de las 12 fuentes únicas analizadas superaron el cribado y resultaron legibles (tres devolvieron HTTP 403). La base de evidencias del plan es más estrecha de lo habitual y 10 de los 18 lugares se apoyan en una sola fuente.",
+        "place_rank": null
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "avifauna.net aparece como web oficial en fuentes de directorio, pero la lectura directa de la página no devolvió contenido suficiente para confirmarlo. Corroboración indirecta únicamente.",
+        "place_rank": 2
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "La Muralla no tiene web propia del monumento. Se usa la ficha oficial de Turismo de Galicia (Xunta) como official_url, no una web del lugar en sentido estricto.",
+        "place_rank": 7
+      },
+      {
+        "severity": "warning",
+        "category": "url_no_oficial",
+        "message": "La Aldea das Formigas de San Clodio es una iniciativa particular sin web oficial: la URL (aportada por el usuario y comprobada) es visitarlugo.com, una guía turística de terceros, no la web del propio lugar. Decisión editorial consciente ante la ausencia de web oficial; revisar si en el futuro aparece una.",
+        "place_rank": 9
+      },
+      {
+        "severity": "warning",
+        "category": "sin_url_oficial",
+        "message": "Carballolandia no tiene web oficial localizable: las fuentes solo aportan un teléfono de contacto para reservas de grupo. official_url queda en null (la dirección la aportó el usuario).",
+        "place_rank": 10
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "El parque infantil cubierto no tiene ficha propia: se usa la ficha oficial de Turismo de Galicia (Xunta) del Parque do Miño, el parque fluvial en el que está la instalación. URL aportada por el usuario y comprobada; describe el parque, no específicamente la zona de juegos cubierta.",
+        "place_rank": 12
+      },
+      {
+        "severity": "warning",
+        "category": "informacion_limitada",
+        "message": "La Tirolina das Minas / Ruta dos Fornos es una actividad guiada: la dirección (aportada por el usuario) corresponde al punto de encuentro en el casco de A Pontenova, no al emplazamiento de la tirolina, que está en las antiguas minas.",
+        "place_rank": 14
+      },
+      {
+        "severity": "warning",
+        "category": "url_baja_confianza",
+        "message": "pallozamuseocasadosesto.com figura como web del museo en el directorio de Museos de Galicia (Xunta), pero no se pudo leer directamente para confirmarlo.",
+        "place_rank": 15
+      },
+      {
+        "severity": "warning",
+        "category": "informacion_limitada",
+        "message": "La Fervenza de Augacaída es un enclave natural sin dirección postal: la localización (aportada por el usuario) es la parroquia de Marce, en Pantón, desde donde arranca la ruta a pie hasta la cascada.",
+        "place_rank": 16
+      },
+      {
+        "severity": "warning",
+        "category": "sin_direccion",
+        "message": "Los acantilados de Barreiros son un tramo de costa con varios accesos, sin dirección postal única ni web oficial propia.",
+        "place_rank": 17
+      },
+      {
+        "severity": "warning",
+        "category": "sin_url_oficial",
+        "message": "La Casa dos Mosaicos forma parte de la red de museos municipales de Lugo, pero no se confirmó una URL oficial estable para su ficha. official_url en null.",
+        "place_rank": 18
+      },
+      {
+        "severity": "warning",
+        "category": "informacion_limitada",
+        "message": "Roq Park (Viveiro), Carballolandia (Chantada), la Tirolina das Minas (A Pontenova) y el Laberinto Costa Mariña abren por temporada o requieren aviso previo. Antes de publicar conviene tenerlo en cuenta en la redacción de las tarjetas.",
+        "place_rank": null
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Marcelle Natureza",
+      "description": "Parque de animales en semilibertad a orillas del Miño, a pocos minutos de la ciudad de Lugo. El recorrido se hace a pie por amplios recintos con especies de varios continentes, muchas de ellas llegadas de rescates, y hay visitas guiadas y zona de restauración dentro del recinto. Es un plan de mañana o tarde completa que funciona bien con niños de cualquier edad.",
+      "official_url": "https://marcellenatureza.com/",
+      "url_verified": true,
+      "address": "Marcelle, 6, San Martín de Guillar, 27154 Outeiro de Rei, Lugo",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Lo describe como espacio natural con animales en semilibertad, restaurantes y visitas guiadas."
+        },
+        {
+          "name": "Terras de Lugo",
+          "domain": "terrasdelugo.info",
+          "url": "https://www.terrasdelugo.info/blog/planes-de-invierno-con-ninos-en-lugo-diversion-y-aprendizaje-en-la-naturaleza-y-la-historia",
+          "evidence": "Zoo natural en Outeiro de Rei con animales rescatados y programas educativos de conservación."
+        },
+        {
+          "name": "Mi cuaderno de viajero",
+          "domain": "micuadernodeviajero.es",
+          "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+          "evidence": "Lo compara con un Cabárceno en pequeño, con animales en entorno natural y servicio de restauración."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Avifauna",
+      "description": "Parque ornitológico en Outeiro de Rei con centenares de aves de los cinco continentes repartidas por unos 30.000 metros cuadrados de jardines botánicos. Se recorre en visita guiada, lo que ayuda a que los niños se fijen en detalles que por su cuenta se les pasarían. Es una alternativa tranquila y muy visual al zoo clásico, fácil de combinar con Marcelle en la misma jornada.",
+      "official_url": "https://avifauna.net/",
+      "url_verified": false,
+      "address": "Lugar Bravos, 8, 27157 Outeiro de Rei, Lugo",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Parque de aves con más de 200 especies de cinco continentes en 30.000 m² con jardín botánico y visitas guiadas."
+        },
+        {
+          "name": "Mi cuaderno de viajero",
+          "domain": "micuadernodeviajero.es",
+          "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+          "evidence": "Zoo ornitológico con 200 especies de aves y recorrido guiado por los jardines."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Museo Interactivo da Historia de Lugo (MIHL)",
+      "description": "Museo municipal que cuenta la evolución de la ciudad con maquetas manipulables, audiovisuales y paneles pensados para tocar y probar, no solo para mirar. Está en el parque de A Milagrosa, algo apartado del casco histórico, y ofrece visitas guiadas gratuitas para grupos. Es el mejor recurso de interior de la ciudad cuando el tiempo no acompaña.",
+      "official_url": "https://museoslugo.gal/museo-interactivo-de-historia",
+      "url_verified": true,
+      "address": "Avenida Infanta Elena, s/n, 27003 Lugo",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Museo interactivo con tecnología, maquetas y recursos audiovisuales sobre la historia local, de entrada gratuita."
+        },
+        {
+          "name": "Mi cuaderno de viajero",
+          "domain": "micuadernodeviajero.es",
+          "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+          "evidence": "Destaca sus talleres pensados para niños y avisa de que las plazas se llenan rápido."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Museo do Ferrocarril de Galicia (MUFERGA)",
+      "description": "Instalado en la antigua rotonda de locomotoras de Monforte de Lemos, conserva máquinas de vapor, vagones y material ferroviario que se pueden ver de cerca. El propio edificio, con sus vías radiales, forma parte del atractivo de la visita. Es un plan muy agradecido con niños a los que les gusten los trenes, y tiene entrada reducida para los más pequeños.",
+      "official_url": "https://muferga.es/",
+      "url_verified": true,
+      "address": "Rúa Padre Feijoo, s/n, 27400 Monforte de Lemos, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Museo del ferrocarril en Monforte de Lemos con trenes históricos, locomotoras y parque temático."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Roq Park",
+      "description": "Parque de aventura en el monte San Roque, sobre Viveiro, con circuitos entre los árboles, tirolinas, tiro con arco, rápel y karts de pedales. Hay recorridos de distinta dificultad, así que cada niño puede ir a su nivel mientras los adultos participan también. Conviene consultar antes las condiciones de altura y edad de cada circuito y confirmar el horario de temporada.",
+      "official_url": "https://reservas.turismodeaventuraengalicia.es/es/actividad/parque-de-aventura-roq-park",
+      "url_verified": true,
+      "address": "Monte San Roque, 27850 Viveiro, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Terras de Lugo",
+          "domain": "terrasdelugo.info",
+          "url": "https://www.terrasdelugo.info/blog/planes-de-invierno-con-ninos-en-lugo-diversion-y-aprendizaje-en-la-naturaleza-y-la-historia",
+          "evidence": "Parque de aventura en Viveiro con tirolinas, tiro con arco, karts de pedales, rápel y circuitos de obstáculos."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Laberinto Costa Mariña",
+      "description": "Laberinto vegetal de 4.000 metros cuadrados con mirador central, dentro de un recinto de más de 11.000 que incluye futbolín humano gigante, tiro con arco, minigolf y juegos tradicionales. Está en Rinlo, a cinco minutos de la playa de As Catedrais, así que se combina fácilmente con un día de costa. Abre por temporada, conviene comprobar el calendario antes de ir.",
+      "official_url": "https://laberintoderinlo.com/",
+      "url_verified": true,
+      "address": "Lugar O Candil, polígono 1, parcela 49, 27715 Rinlo, Ribadeo, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Laberinto de 4.000 m² en Ribadeo con mirador elevado y juegos tradicionales como bolos, petanca y minigolf."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Muralla romana de Lugo",
+      "description": "El adarve de la muralla es un paseo circular de más de dos kilómetros por encima de la ciudad, con acceso libre y gratuito a cualquier hora del día. A los niños les engancha ir contando torres y asomarse a las vistas desde arriba, y al bajar por cualquiera de sus puertas se entra directamente en el casco histórico. Es la forma más cómoda de recorrer Lugo entera sin cuestas.",
+      "official_url": "https://www.turismo.gal/que-visitar/destacados/muralla-romana-de-lugo",
+      "url_verified": false,
+      "address": "Rda. da Muralla, s/n, 27001 Lugo",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Recorrido de 2 km por lo alto de la muralla, Patrimonio de la Humanidad, con vistas panorámicas y acceso gratuito."
+        },
+        {
+          "name": "Mi cuaderno de viajero",
+          "domain": "micuadernodeviajero.es",
+          "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+          "evidence": "Paseo completo por el adarve, con sus 71 torres, como plan central de la visita con niños."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Praia das Catedrais",
+      "description": "Playa famosa por sus arcos y bóvedas de roca, que solo pueden recorrerse a pie durante la marea baja. Con niños es un paseo entre paredes de piedra que parece de otro planeta, pero exige planificación: hay que mirar la tabla de mareas y, en Semana Santa y de julio a septiembre, reservar la visita con antelación. El acceso es gratuito y hay visitas guiadas.",
+      "official_url": "https://ascatedrais.xunta.gal/",
+      "url_verified": true,
+      "address": "Praia de Augas Santas (As Catedrais), Ribadeo, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Playa con formaciones rocosas singulares, accesible a pie, con compra previa de entrada en temporada."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Aldea das Formigas de San Clodio",
+      "description": "Una aldea decorada con hormigas gigantes y personajes construidos a partir de materiales reciclados, repartidos por un recorrido señalizado de aproximadamente una hora. Se visita libremente a cualquier hora, es gratuita —se admiten donativos— y tiene aparcamiento propio. Funciona como un cuento al aire libre, muy fácil de encajar con niños pequeños porque el ritmo lo marcan ellos.",
+      "official_url": "https://www.visitarlugo.com/san-clodio-la-aldea-de-las-hormigas/",
+      "url_verified": false,
+      "address": "San Clodio, Outeiro de Rei, Lugo (salida 500 de la A-6, LU-P-3907 dirección Seivante)",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Aldea con decoraciones y personajes temáticos hechos con materiales reciclados, con bosques encantados y túneles mágicos."
+        },
+        {
+          "name": "Mi cuaderno de viajero",
+          "domain": "micuadernodeviajero.es",
+          "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+          "evidence": "La incluye como muy recomendable dentro de sus planes con niños en Lugo."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Carballolandia",
+      "description": "Ecoparque de tres hectáreas junto al Miño, en Chantada, dedicado al carballo: columpios, bancos, cuerdas y rincones creados a partir de un roble centenario derribado por el viento. Las visitas se hacen con actividades guiadas —cuentos entre los árboles, juegos tradicionales, paseos por la ribera— más que como un recorrido libre. Para grupos hay que reservar con antelación por teléfono.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Unnamed Road, 27518 Garabelos, Chantada, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Galicia Máxica",
+          "domain": "galiciamaxica.eu",
+          "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-lugo/",
+          "evidence": "Lo presenta como el primer parque temático del mundo dedicado al carballo, en Chantada."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Parque Rosalía de Castro",
+      "description": "El gran parque urbano de Lugo: 23 hectáreas de jardines, paseos con sombra, palco de música, estanque con aves y una zona de juegos infantiles bajo la arboleda. Está pegado a la muralla, entre las puertas de Santiago y Obispo Aguirre, así que encaja perfectamente como descanso después de recorrer el adarve. Plan gratuito y de duración flexible.",
+      "official_url": "https://concellodelugo.gal/es/localizaciones/parque-rosalia-de-castro",
+      "url_verified": true,
+      "address": "Praza Avilés, s/n, 27002 Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Parque urbano histórico de 23 hectáreas con jardines, fuentes y zonas de juego infantil."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Parque infantil cubierto do paseo fluvial do Miño",
+      "description": "Zona de juegos protegida por una carpa junto al paseo fluvial del Miño, pensada para poder jugar tanto si llueve como si aprieta el sol. Está a un paso del puente romano y del parque fluvial, con más de seis kilómetros de sendas llanas para pasear, ir en bici o en patinete. Es el recurso más útil de la ciudad cuando el día se tuerce y hay que quemar energía igualmente.",
+      "official_url": "https://www.turismo.gal/recurso/-/detalle/26490/parque-do-mino?langId=es_ES&tp=5&ctre=18",
+      "url_verified": true,
+      "address": "Ctra. de Madrid, 27004 Lugo",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Parque infantil cubierto con columpios y estructuras para trepar, utilizable con cualquier tiempo."
+        },
+        {
+          "name": "Mi cuaderno de viajero",
+          "domain": "micuadernodeviajero.es",
+          "url": "https://micuadernodeviajero.es/lugo-con-ninos/",
+          "evidence": "Parque infantil cubierto en el paseo fluvial, a la entrada de Lugo desde Ourense, útil con lluvia o sol."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "O Fuciño do Porco (Punta Socastro)",
+      "description": "Ruta costera de unos 2,8 kilómetros ida y vuelta que termina en una pasarela de madera en zigzag colgada sobre los acantilados de O Vicedo. Las vistas al mar son espectaculares, pero hay bastantes escaleras, así que encaja mejor con niños que ya caminan bien un buen rato. El acceso es gratuito y en verano hay que reservar plaza por turnos.",
+      "official_url": "https://turismo.concellodovicedo.org/es/project/fucino-do-porco-2/",
+      "url_verified": true,
+      "address": "Suegos, O Vicedo, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Terras de Lugo",
+          "domain": "terrasdelugo.info",
+          "url": "https://www.terrasdelugo.info/blog/planes-de-invierno-con-ninos-en-lugo-diversion-y-aprendizaje-en-la-naturaleza-y-la-historia",
+          "evidence": "Ruta costera con pasarelas de madera sobre los acantilados y vistas espectaculares al mar, más indicada para niños mayores por las escaleras."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Tirolina das Minas — Ruta dos Fornos",
+      "description": "Experiencia guiada en A Pontenova que recorre los antiguos hornos de calcinación y una galería minera visitable, y termina con un vuelo en tirolina de más de 300 metros entre dos laderas. Para los más pequeños hay un bosque con tirolinas adaptadas, de modo que participa toda la familia y no solo quien se atreve con la grande. La actividad dura unas dos horas y media y conviene avisar antes de ir.",
+      "official_url": "https://turismoapontenova.es/tirolinadasminas/",
+      "url_verified": true,
+      "address": "Estrada Xeral, 31, 27720 A Pontenova, Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Galicia Máxica",
+          "domain": "galiciamaxica.eu",
+          "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-lugo/",
+          "evidence": "Cita A Pontenova como destino de actividades de aventura con la tirolina más larga de Galicia."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "Piornedo e a Palloza Casa do Sesto",
+      "description": "Aldea de montaña en Os Ancares que conserva pallozas, las casas circulares de piedra y techo vegetal en las que convivían familias y animales. En la Palloza Casa do Sesto se entra a ver por dentro cómo era esa vida, con entrada simbólica y gratuita para menores de seis años. Alrededor salen rutas sencillas para caminar por la sierra, así que la visita se puede alargar tanto como apetezca.",
+      "official_url": "https://www.pallozamuseocasadosesto.com",
+      "url_verified": false,
+      "address": "Piornedo dos Ancares, 27667 Cervantes, Lugo",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Aldea prerrománica con pallozas y museo de arquitectura tradicional."
+        },
+        {
+          "name": "Terras de Lugo",
+          "domain": "terrasdelugo.info",
+          "url": "https://www.terrasdelugo.info/blog/planes-de-invierno-con-ninos-en-lugo-diversion-y-aprendizaje-en-la-naturaleza-y-la-historia",
+          "evidence": "Aldea de montaña donde las familias pueden explorar pallozas y hórreos y hacer rutas por el entorno."
+        },
+        {
+          "name": "Galicia Máxica",
+          "domain": "galiciamaxica.eu",
+          "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-lugo/",
+          "evidence": "Aldea histórica de Os Ancares donde 'el tiempo se detiene'."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Fervenza de Augacaída",
+      "description": "Cascada de unos 40 metros escondida en un valle de la Ribeira Sacra, en el municipio de Pantón. La ruta a pie desde la aldea de Marce está acondicionada con pasarelas de madera y escalones en los tramos más empinados, aunque sigue siendo exigente para piernas pequeñas. También se puede llegar por el Miño en las embarcaciones que recorren los cañones.",
+      "official_url": "https://turismo.ribeirasacra.org/fervenza-de-augacaida",
+      "url_verified": true,
+      "address": "Parroquia de Marce, Pantón, Lugo (Ribeira Sacra)",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Galicia Máxica",
+          "domain": "galiciamaxica.eu",
+          "url": "https://www.galiciamaxica.eu/mini/hoy-toca-lugares-en-lugo/",
+          "evidence": "Incluye la fervenza de Augacaída entre las cascadas visitables de la provincia."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Acantilados de Barreiros",
+      "description": "Tramo de costa con senderos sobre los acantilados y miradores hacia pequeñas playas y calas, a poca distancia de As Catedrais. Es un paseo sencillo y bonito para hacer sin prisa, con paradas frecuentes para asomarse al mar. Buena opción para completar un día en A Mariña sin depender del horario de las mareas.",
+      "official_url": null,
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Acantilados con sendas panorámicas sobre playas y calas cerca de la playa de las Catedrales."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Casa dos Mosaicos",
+      "description": "Restos de una vivienda romana conservados bajo el nivel actual de la calle, con suelos de mosaico y pinturas murales que se recorren desde pasarelas. La visita es corta, algo que juega a favor con niños, y ayuda a entender qué había dentro de la muralla cuando Lugo era Lucus Augusti. Forma parte de la red de museos municipales y la entrada es muy económica.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Rúa Doutor Castro, 20-22, 27001 Lugo",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Tuscasasrurales.com",
+          "domain": "tuscasasrurales.com",
+          "url": "https://www.tuscasasrurales.com/blog/lugo-con-ninos/",
+          "evidence": "Subsuelo romano de Lugo, con la Casa de los Mosaicos y termas visibles tras cristales o con acceso directo."
+        }
+      ]
+    }
+  ]
+}

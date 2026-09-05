@@ -1,0 +1,39 @@
+B0FGDM2ZTS
+'Kinderkraft SAFETY FIX 3 PRO, Silla de Coche i-Size 76–150 cm, ISOFIX, Top Tether, Protección Lateral H-GUARD, Arnés 5 P'
+match ascii hyphen: None
+  ['Marca', 'Kinderkraft']
+  ['Material', 'Espuma de polipropileno']
+  ['Color', 'Gray']
+  ['Dimensiones del producto', '38f. x 45an. x 57al. centímetros']
+  ['Peso del producto', '7,31 Kilogramos']
+  ['Recomendación de peso máximo', '36 Kilogramos']
+  ['Recomendación de altura mínima', '76 Centímetros']
+  ['Recomendación de peso mínimo', '9 Kilogramos']
+  ['Rango de edad (descripción)', 'Niño']
+  ['Recomendación de altura máxima', '150 Centímetros']
+  ['Dimensiones del producto', ': \u200e 30,99 x 45,01 x 70,99 cm; 7,31 kg']
+  ['Fabricante', ': \u200e 4Kraft']
+  ['ASIN', ': \u200e B0FGDM2ZTS']
+  ['Número de modelo del producto', ': \u200e KCSAFI03GRY0000']
+  ['País/Región de origen', ': \u200e China']
+  ['Opiniones de los clientes', '4,5 \n4,5 de 5 estrellas\n   (153)']
+
+B0DSL7WGB2
+'Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 cm, De 3,5 a 12 años aproximadamente, Reposacabezas ajustabl'
+match ascii hyphen: None
+  ['Marca', 'Kinderkraft']
+  ['Material', 'Metal']
+  ['Color', 'Black']
+  ['Dimensiones del producto', '10f. x 10an. x 10al. milímetros']
+  ['Peso del producto', '6,3 Kilogramos']
+  ['Recomendación de peso máximo', '36 Kilogramos']
+  ['Rango de edad (descripción)', 'Infant']
+  ['Fabricante', '4Kraft']
+  ['Número de unidades', '1 Conteo']
+  ['Dimensiones del producto', ': \u200e 26,49 x 53,49 x 45,01 cm; 6,3 kg']
+  ['Fabricante', ': \u200e 4Kraft']
+  ['ASIN', ': \u200e B0DSL7WGB2']
+  ['Número de modelo del producto', ': \u200e KCUNIT02BLK0000']
+  ['País/Región de origen', ': \u200e China']
+  ['Opiniones de los clientes', '4,4 \n4,4 de 5 estrellas\n   (234)']
+

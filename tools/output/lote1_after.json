@@ -1,0 +1,289 @@
+{
+  "productos": [
+    {
+      "asin": "B0FKBWNF2G",
+      "caracteristicas": {
+        "grupo_edad": "3,5-12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "N/A",
+        "reclinable": "N/A",
+        "homologacion": "N/A",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Cinturón del vehículo",
+        "peso_silla": "N/A",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0F9YPF1V1",
+      "caracteristicas": {
+        "grupo_edad": "15 meses - 12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "N/A",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "Sí — 5 posiciones",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "5,98 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0BYP63YCW",
+      "caracteristicas": {
+        "grupo_edad": "15 meses - 12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "No",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "N/A",
+        "homologacion": "R129",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Arnés de 5 puntos",
+        "peso_silla": "6 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "caracteristicas": {
+        "grupo_edad": "3-12 años",
+        "peso_recomendado": "Hasta 50 kg",
+        "isofix": "Sí",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "Sí — 3 posiciones",
+        "homologacion": "N/A",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí — 3 posiciones",
+        "tipo_arnes_proteccion": "Arnés de 3 puntos",
+        "peso_silla": "7 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0BZ89X9YC",
+      "caracteristicas": {
+        "grupo_edad": "0-12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "A contramarcha",
+        "reclinable": "Sí",
+        "homologacion": "R129",
+        "giro_360": "Sí",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Arnés de 5 puntos",
+        "peso_silla": "11 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "VERIFICADO"
+    },
+    {
+      "asin": "B0CZ47FKZL",
+      "caracteristicas": {
+        "grupo_edad": "Grupo 2/3",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "N/A",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí — 10 posiciones",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "5,32 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0BYP9MTBX",
+      "caracteristicas": {
+        "grupo_edad": "15 meses - 12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "No",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "N/A",
+        "homologacion": "R129",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Arnés de 5 puntos",
+        "peso_silla": "6 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0FGDM2ZTS",
+      "caracteristicas": {
+        "grupo_edad": "N/A",
+        "peso_recomendado": "9-36 kg",
+        "isofix": "Sí",
+        "orientacion": "N/A",
+        "reclinable": "N/A",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Cinturón del vehículo",
+        "peso_silla": "7,31 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0F3P61P8C",
+      "caracteristicas": {
+        "grupo_edad": "0-4 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "A contramarcha",
+        "reclinable": "Sí — 8 posiciones",
+        "homologacion": "i-Size",
+        "giro_360": "Sí",
+        "reposacabezas_regulable": "Sí — 12 posiciones",
+        "tipo_arnes_proteccion": "Arnés de 5 puntos",
+        "peso_silla": "10,75 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "VERIFICADO"
+    },
+    {
+      "asin": "B0CWS19269",
+      "caracteristicas": {
+        "grupo_edad": "Grupo 0+",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "A contramarcha",
+        "reclinable": "Sí",
+        "homologacion": "i-Size",
+        "giro_360": "Sí",
+        "reposacabezas_regulable": "Sí — 14 posiciones",
+        "tipo_arnes_proteccion": "Arnés de 5 puntos",
+        "peso_silla": "12,7 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "VERIFICADO"
+    },
+    {
+      "asin": "B0F9YR27XX",
+      "caracteristicas": {
+        "grupo_edad": "0-12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "Ambas",
+        "reclinable": "Sí — 5 posiciones",
+        "homologacion": "i-Size",
+        "giro_360": "Sí",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "Cinturón del vehículo",
+        "peso_silla": "13 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "estado": "VERIFICADO"
+    },
+    {
+      "asin": "B0DSL7WGB2",
+      "caracteristicas": {
+        "grupo_edad": "3,5-12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "N/A",
+        "orientacion": "N/A",
+        "reclinable": "Sí — 5 posiciones",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "6,3 kg",
+        "proteccion_lateral": "Sí",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0GGZYY3BZ",
+      "caracteristicas": {
+        "grupo_edad": "3,5-12 años",
+        "peso_recomendado": "15-36 kg",
+        "isofix": "Sí",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "N/A",
+        "homologacion": "i-Size",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "Sí — 14 posiciones",
+        "tipo_arnes_proteccion": "Cinturón del vehículo",
+        "peso_silla": "3,35 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "N/A",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0DP7TG8KY",
+      "caracteristicas": {
+        "grupo_edad": "N/A",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "Sí",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "Sí",
+        "homologacion": "R129",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "N/A",
+        "tipo_arnes_proteccion": "Arnés de 5 puntos",
+        "peso_silla": "6,3 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    },
+    {
+      "asin": "B0F1R26D8L",
+      "caracteristicas": {
+        "grupo_edad": "6-12 años",
+        "peso_recomendado": "Hasta 36 kg",
+        "isofix": "N/A",
+        "orientacion": "A favor de la marcha",
+        "reclinable": "N/A",
+        "homologacion": "R129",
+        "giro_360": "N/A",
+        "reposacabezas_regulable": "N/A",
+        "tipo_arnes_proteccion": "N/A",
+        "peso_silla": "1,2 kg",
+        "proteccion_lateral": "N/A",
+        "funda_lavable": "Sí",
+        "travel_system": "N/A"
+      },
+      "estado": "PENDIENTE_REVISION"
+    }
+  ]
+}

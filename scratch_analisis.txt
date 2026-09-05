@@ -1,0 +1,91 @@
+=== COBERTURA Y VALORES UNICOS ===
+grupo_edad: 13/15 (87%)
+    [2x] 0-12 años
+    [1x] 0-4 años
+    [3x] 15 meses - 12 años
+    [3x] 3,5-12 años
+    [1x] 3-12 años
+    [1x] 6-12 años
+    [1x] Grupo 0+
+    [1x] Grupo 2/3
+
+peso_recomendado: 15/15 (100%)
+    [1x] 15-36 kg
+    [1x] 9-36 kg
+    [12x] Hasta 36 kg
+    [1x] Hasta 50 kg
+
+isofix: 12/15 (80%)
+    [2x] No
+    [10x] Sí
+
+orientacion: 12/15 (80%)
+    [3x] A contramarcha
+    [8x] A favor de la marcha
+    [1x] Ambas
+
+reclinable: 8/15 (53%)
+    [3x] Sí
+    [1x] Sí — 3 posiciones
+    [3x] Sí — 5 posiciones
+    [1x] Sí — 8 posiciones
+
+homologacion: 13/15 (87%)
+    [5x] R129
+    [8x] i-Size
+
+giro_360: 4/15 (27%)
+    [4x] Sí
+
+reposacabezas_regulable: 13/15 (87%)
+    [8x] Sí
+    [1x] Sí — 10 posiciones
+    [1x] Sí — 12 posiciones
+    [2x] Sí — 14 posiciones
+    [1x] Sí — 3 posiciones
+
+tipo_arnes_proteccion: 11/15 (73%)
+    [1x] Arnés de 3 puntos
+    [6x] Arnés de 5 puntos
+    [4x] Cinturón del vehículo
+
+peso_silla: 14/15 (93%)
+    [1x] 1,2 kg
+    [1x] 10,75 kg
+    [1x] 11 kg
+    [1x] 12,7 kg
+    [1x] 13 kg
+    [1x] 3,35 kg
+    [1x] 5,32 kg
+    [1x] 5,98 kg
+    [2x] 6 kg
+    [2x] 6,3 kg
+    [1x] 7 kg
+    [1x] 7,31 kg
+
+proteccion_lateral: 9/15 (60%)
+    [9x] Sí
+
+funda_lavable: 9/15 (60%)
+    [9x] Sí
+
+travel_system: 0/15 (0%)
+
+=== MARCAS ===
+  Bébé Confort: 2
+  Cybex: 1
+  Kinderkraft: 10
+  Maxi-Cosi: 2
+
+=== PRECIO ===
+  min=24.9 max=381.39 n=15
+  valores: [24.9, 62.9, 67.0, 69.9, 79.9, 79.99, 89.9, 99.0, 99.99, 104.0, 119.99, 129.9, 149.0, 199.99, 381.39]
+  con precio anterior (oferta): 5/15
+
+=== VALORACIONES ===
+  puntuacion min=4.2 max=4.7
+  numero valoraciones min=63 max=4105
+  con puntuacion: 15/15, con numero: 15/15
+
+=== ESTADO ===
+  VERIFICADO: 4/15

@@ -1,0 +1,521 @@
+{
+  "eliminados": [
+    {
+      "asin": "B0C3HJNK2M",
+      "modelo": "EVOLVAFIX"
+    }
+  ],
+  "anadidos": [
+    {
+      "asin": "B0B97Z1C6M",
+      "modelo": "Solution S2 i-Fix"
+    }
+  ],
+  "productos_con_cambios": [
+    "B07QLSYS2Y",
+    "B07RYWKS9Z",
+    "B09FQ3PYZX",
+    "B0BMGN89G3",
+    "B0BZ89X9YC",
+    "B0C58QGJNG",
+    "B0C6KXB9LL",
+    "B0C6KZCY6Z",
+    "B0C6R47BCV",
+    "B0CHS67WJ3",
+    "B0CJCC2YYP",
+    "B0CP2QYQK8",
+    "B0CQP3VKSK",
+    "B0CWS19269",
+    "B0CYQD2H66",
+    "B0CZ47FKZL",
+    "B0D5QSYXPH",
+    "B0DB2J1HMK",
+    "B0DPHRJ1YH",
+    "B0DS6C4XR8",
+    "B0DW9GD5CG",
+    "B0DYDY6C5Y",
+    "B0F1R26D8L",
+    "B0F3P61P8C",
+    "B0FGDM2ZTS",
+    "B0FL7MMYHN",
+    "B0FLDLZTHJ",
+    "B0FLDT4541",
+    "B0GGZYY3BZ"
+  ],
+  "atributos_afectados": [
+    "arnes",
+    "estado_auditoria",
+    "fuente_datos",
+    "identidad_fabricante",
+    "normativa",
+    "peso_silla",
+    "peso_silla_fuente",
+    "reclinable",
+    "reposacabezas"
+  ],
+  "num_celdas_modificadas": 66,
+  "celdas": [
+    {
+      "asin": "B07QLSYS2Y",
+      "modelo": "DUALFIX2 R",
+      "campo": "estado_auditoria",
+      "antes": "⚠️⚠️ HALLAZGO IMPORTANTE: la propia ficha de Amazon indica \"Hay una nueva versión de este producto: BRITAX RÖMER DUALFIX PLUS\" — este modelo aparece como SUPERADO por una versión más reciente. Precio también subió a 504,99€ (vs 399,99€ registrado en la fase de candidatos). Recomiendo revisar si sustituir por DUALFIX PLUS antes de incorporar al catálogo.",
+      "despues": "⚠️⚠️ HALLAZGO IMPORTANTE: la propia ficha de Amazon indica \"Hay una nueva versión de este producto: BRITAX RÖMER DUALFIX PLUS\" — este modelo aparece como SUPERADO por una versión más reciente. Precio también subió a 504,99€ (vs 399,99€ registrado en la fase de candidatos). Recomiendo revisar si sustituir por DUALFIX PLUS antes de incorporar al catálogo. | DECISION FINAL (13-ago-2026): se investigo sustituir por DUALFIX PLUS (modelo mas actual segun britax-romer.es, premio STIWA-ADAC 06/2023) pero DUALFIX PLUS tiene la misma espera de 3-7 meses en Amazon.es que llevo a descartar EVOLVAFIX; DUALFIX PRO esta directamente 'No disponible'; DUALFIX 2 Z-LINE esta disponible pero con solo 42 valoraciones y 3 unidades en stock. El usuario confirmo explicitamente mantener DUALFIX2 R sin sustitucion: sigue disponible en Amazon.es ahora (4,7★/1.809 valoraciones, solo 4 en stock) pese a estar descatalogado por el fabricante (confirmado por OCU)."
+    },
+    {
+      "asin": "B07QLSYS2Y",
+      "modelo": "DUALFIX2 R",
+      "campo": "reclinable",
+      "antes": "Sí, múltiples posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B07QLSYS2Y",
+      "modelo": "DUALFIX2 R",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B07RYWKS9Z",
+      "modelo": "Onboard",
+      "campo": "estado_auditoria",
+      "antes": "⚠️ Sin web de fabricante oficial independiente localizable (marca de marketplace); specs corroboradas vía manual de instrucciones, no ficha oficial propia. ⚠️ Normativa: el manual menciona tanto R129 como R44/04 — Revisar antes de dar la normativa por definitiva.",
+      "despues": "✅ RESUELTO (13-ago-2026): normativa R129/i-Size confirmada por el titulo del listing de Amazon para este ASIN exacto (\"i-Size ECE R129\"). La mencion a R44/04 detectada en la auditoria previa procedia de manuales de modelos HERMANOS de la marca (\"Onboard Swivel 360\", \"Isofix Reclining Car Seat\" -- productos distintos, clasificados por peso, no por altura), no del manual de este producto \"Onboard\" 40-150cm. Sin web de fabricante oficial independiente localizable (marca de marketplace); no se encontro numero de homologacion E-mark en ninguna fuente accesible."
+    },
+    {
+      "asin": "B07RYWKS9Z",
+      "modelo": "Onboard",
+      "campo": "normativa",
+      "antes": "R129 / i-Size (manual también cita R44/04 en una linea, posible plantilla genérica — Revisar)",
+      "despues": "R129 / i-Size"
+    },
+    {
+      "asin": "B07RYWKS9Z",
+      "modelo": "Onboard",
+      "campo": "reclinable",
+      "antes": "Sí, varias posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B07RYWKS9Z",
+      "modelo": "Onboard",
+      "campo": "reposacabezas",
+      "antes": "Sí — 11 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B09FQ3PYZX",
+      "modelo": "Alzador Coche Grupo 2/3",
+      "campo": "reclinable",
+      "antes": "Sin especificar",
+      "despues": "No"
+    },
+    {
+      "asin": "B09FQ3PYZX",
+      "modelo": "Alzador Coche Grupo 2/3",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar",
+      "despues": "No"
+    },
+    {
+      "asin": "B0BMGN89G3",
+      "modelo": "SlimFit R129",
+      "campo": "reclinable",
+      "antes": "Sí — 6 posiciones (2 contramarcha + 4 favor)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0BMGN89G3",
+      "modelo": "SlimFit R129",
+      "campo": "reposacabezas",
+      "antes": "Sí — 10 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0BZ89X9YC",
+      "modelo": "I-GROW",
+      "campo": "reclinable",
+      "antes": "Sí — 5 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0BZ89X9YC",
+      "modelo": "I-GROW",
+      "campo": "reposacabezas",
+      "antes": "Sí (12 niveles de altura, sin posiciones de reclinado especificadas)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "modelo": "Solution X i-Fix",
+      "campo": "reclinable",
+      "antes": "Sí — 3 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "modelo": "Solution X i-Fix",
+      "campo": "reposacabezas",
+      "antes": "Sí — 11 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0C6KXB9LL",
+      "modelo": "Kory i-Size Essential",
+      "campo": "estado_auditoria",
+      "antes": "⚠️ Identidad: no aparece con este nombre exacto en chicco.es (aparece \"Kory Plus\"), no verificado al 100%.",
+      "despues": "⚠️ Identidad: no aparece con este nombre exacto en chicco.es (aparece \"Kory Plus\"), no verificado al 100%. | Decision de cierre (13-ago-2026): identidad exacta con el fabricante no verificada -- no se sigue buscando indefinidamente ni se usan specs de un modelo parecido del fabricante. El producto se mantiene en el catalogo usando exclusivamente datos de Amazon."
+    },
+    {
+      "asin": "B0C6KXB9LL",
+      "modelo": "Kory i-Size Essential",
+      "campo": "fuente_datos",
+      "antes": null,
+      "despues": "amazon"
+    },
+    {
+      "asin": "B0C6KXB9LL",
+      "modelo": "Kory i-Size Essential",
+      "campo": "identidad_fabricante",
+      "antes": null,
+      "despues": "no_verificada"
+    },
+    {
+      "asin": "B0C6KZCY6Z",
+      "modelo": "Unico EVO I'Size Classic",
+      "campo": "reclinable",
+      "antes": "Sí — 5 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0C6KZCY6Z",
+      "modelo": "Unico EVO I'Size Classic",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar (ajuste simultáneo con arnés hasta 105cm)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0C6R47BCV",
+      "modelo": "Pearl 360",
+      "campo": "reclinable",
+      "antes": "Sí, varias posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0C6R47BCV",
+      "modelo": "Pearl 360",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CHS67WJ3",
+      "modelo": "HUGO i-Size",
+      "campo": "arnes",
+      "antes": "Sin especificar",
+      "despues": "Cinturón del vehículo (3 puntos)"
+    },
+    {
+      "asin": "B0CHS67WJ3",
+      "modelo": "HUGO i-Size",
+      "campo": "estado_auditoria",
+      "antes": "Confirmado en lionelo.com, sin contradicciones.",
+      "despues": "Confirmado en lionelo.com, sin contradicciones. | ✅ RESUELTO manualmente (13-ago-2026): el campo estructurado \"Tipo de cinturón de seguridad\" de la ficha técnica de Amazon decía \"5 puntos\", pero el resto del contenido visible de la misma ficha (bullets, descripción: \"Montaje: Montaje con cinturones de seguridad de 3 puntos\") y la web oficial de Lionelo (es.lionelo.com) coincidian en \"cinturón de 3 puntos del coche\", sin mencionar arnés en ningún punto. El usuario confirmó manualmente en el chat que en el rango 100-150cm el montaje es con ISOFIX+cinturón de 3 puntos o solo cinturón de 3 puntos (coherente con tipo_instalacion ya registrado), lo que corrobora que la sujeción del niño es el cinturón de 3 puntos del coche, no un arnés propio de la silla. Se descarta el campo estructurado de Amazon (\"5 puntos\") como erróneo -- ese mismo campo parece poco fiable en sillas grupo 2/3 o multietapa (mismo patrón detectado en LEVI ONE)."
+    },
+    {
+      "asin": "B0CHS67WJ3",
+      "modelo": "HUGO i-Size",
+      "campo": "reposacabezas",
+      "antes": "Sí — 8 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CJCC2YYP",
+      "modelo": "Bastiaan i-Size",
+      "campo": "arnes",
+      "antes": "Sin especificar",
+      "despues": "Arnés de 5 puntos"
+    },
+    {
+      "asin": "B0CJCC2YYP",
+      "modelo": "Bastiaan i-Size",
+      "campo": "reclinable",
+      "antes": "Sí — 4 posiciones favor + semi-reclinado contramarcha",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CJCC2YYP",
+      "modelo": "Bastiaan i-Size",
+      "campo": "reposacabezas",
+      "antes": "Sí — 7 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CP2QYQK8",
+      "modelo": "BABY-SAFE CORE",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CQP3VKSK",
+      "modelo": "Rodia Plus i-Size",
+      "campo": "estado_auditoria",
+      "antes": "⚠️ Identidad: probable coincidencia con \"Rodia Fix\" en babyauto.com (mismas specs) pero nombre no idéntico — no verificado al 100%.",
+      "despues": "⚠️ Identidad: probable coincidencia con \"Rodia Fix\" en babyauto.com (mismas specs) pero nombre no idéntico — no verificado al 100%. | Decision de cierre (13-ago-2026): identidad exacta con el fabricante no verificada -- no se sigue buscando indefinidamente ni se usan specs de un modelo parecido del fabricante. El producto se mantiene en el catalogo usando exclusivamente datos de Amazon."
+    },
+    {
+      "asin": "B0CQP3VKSK",
+      "modelo": "Rodia Plus i-Size",
+      "campo": "fuente_datos",
+      "antes": null,
+      "despues": "amazon"
+    },
+    {
+      "asin": "B0CQP3VKSK",
+      "modelo": "Rodia Plus i-Size",
+      "campo": "identidad_fabricante",
+      "antes": null,
+      "despues": "no_verificada"
+    },
+    {
+      "asin": "B0CQP3VKSK",
+      "modelo": "Rodia Plus i-Size",
+      "campo": "reclinable",
+      "antes": "Sí — 5 posiciones (1 contramarcha + 4 favor)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CQP3VKSK",
+      "modelo": "Rodia Plus i-Size",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar posiciones (varias alturas)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CWS19269",
+      "modelo": "Emerald 360 S",
+      "campo": "reclinable",
+      "antes": "Sí — 4 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CWS19269",
+      "modelo": "Emerald 360 S",
+      "campo": "reposacabezas",
+      "antes": "Sí, sin número (contradicción 14 vs 9 posiciones resuelta manualmente)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CYQD2H66",
+      "modelo": "Junior Maxi i-Size",
+      "campo": "reposacabezas",
+      "antes": "Sí — 10 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0CZ47FKZL",
+      "modelo": "Tanza",
+      "campo": "reposacabezas",
+      "antes": "Sí — 10 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0D5QSYXPH",
+      "modelo": "LEVI ONE i-Size",
+      "campo": "arnes",
+      "antes": "Sin especificar tipo exacto",
+      "despues": "Arnés de 5 puntos (76-105cm) / cinturón de 3 puntos (100-150cm)"
+    },
+    {
+      "asin": "B0D5QSYXPH",
+      "modelo": "LEVI ONE i-Size",
+      "campo": "reposacabezas",
+      "antes": "Sí — 10 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DB2J1HMK",
+      "modelo": "Cloud G i-Size Comfort",
+      "campo": "reclinable",
+      "antes": "Sí (posición horizontal ergonómica)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DB2J1HMK",
+      "modelo": "Cloud G i-Size Comfort",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "estado_auditoria",
+      "antes": "⚠️ Peso de la silla: la tabla de Amazon indica \"1,11 Kilogramos\", cifra no creíble para una silla multi-grupo de este tipo (probablemente error de ficha/confusión con un accesorio) — NO se usa, queda en Revisar en vez de aceptarse sin más.",
+      "despues": "✅ RESUELTO manualmente (13-ago-2026): peso real 8,9 kg, confirmado en dos paginas independientes de cybex-online.com (cs-go-pallas-g2.html y CS_GO_Pallas_G_i-Size_EN.html), coincidentes entre si. El '1,11 Kilogramos' que muestra Amazon (repetido en dos bloques de la misma ficha) se descarta por fisicamente inverosimil para esta silla -- no se usa como dato valido."
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "peso_silla",
+      "antes": "REVISAR — ver nota",
+      "despues": "8,9 kg"
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "peso_silla_fuente",
+      "antes": null,
+      "despues": "fabricante_oficial (confirmado manualmente)"
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "reclinable",
+      "antes": "Sí (Impact Shield reclinable con una mano)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "reposacabezas",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DS6C4XR8",
+      "modelo": "i-FLIT",
+      "campo": "arnes",
+      "antes": "Sin especificar",
+      "despues": "Arnés de 5 puntos"
+    },
+    {
+      "asin": "B0DS6C4XR8",
+      "modelo": "i-FLIT",
+      "campo": "reclinable",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DS6C4XR8",
+      "modelo": "i-FLIT",
+      "campo": "reposacabezas",
+      "antes": "Sí — 12 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0DW9GD5CG",
+      "modelo": "Quasar Fix i-Size",
+      "campo": "estado_auditoria",
+      "antes": "⚠️ Identidad: no aparece con este nombre exacto en chicco.es, no verificado al 100%.",
+      "despues": "⚠️ Identidad: no aparece con este nombre exacto en chicco.es, no verificado al 100%. | Decision de cierre (13-ago-2026): identidad exacta con el fabricante no verificada -- no se sigue buscando indefinidamente ni se usan specs de un modelo parecido del fabricante. El producto se mantiene en el catalogo usando exclusivamente datos de Amazon."
+    },
+    {
+      "asin": "B0DW9GD5CG",
+      "modelo": "Quasar Fix i-Size",
+      "campo": "fuente_datos",
+      "antes": null,
+      "despues": "amazon"
+    },
+    {
+      "asin": "B0DW9GD5CG",
+      "modelo": "Quasar Fix i-Size",
+      "campo": "identidad_fabricante",
+      "antes": null,
+      "despues": "no_verificada"
+    },
+    {
+      "asin": "B0DYDY6C5Y",
+      "modelo": "i-PASS",
+      "campo": "reposacabezas",
+      "antes": "Sí — 13 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0F1R26D8L",
+      "modelo": "I-BOOST 2",
+      "campo": "arnes",
+      "antes": "Sin especificar",
+      "despues": "Cinturón del vehículo (3 puntos)"
+    },
+    {
+      "asin": "B0F3P61P8C",
+      "modelo": "RevolveFix Plus 360",
+      "campo": "reclinable",
+      "antes": "Sí — 8 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0F3P61P8C",
+      "modelo": "RevolveFix Plus 360",
+      "campo": "reposacabezas",
+      "antes": "Sí — 12 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0FGDM2ZTS",
+      "modelo": "SAFETY FIX 3 PRO",
+      "campo": "reclinable",
+      "antes": "Sin especificar",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0FGDM2ZTS",
+      "modelo": "SAFETY FIX 3 PRO",
+      "campo": "reposacabezas",
+      "antes": "Sí, sin número",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0FL7MMYHN",
+      "modelo": "i-MOOVE 2",
+      "campo": "reclinable",
+      "antes": "Sí — 5 posiciones (3 favor + 1 contramarcha, cifras de bullet inconsistentes)",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0FL7MMYHN",
+      "modelo": "i-MOOVE 2",
+      "campo": "reposacabezas",
+      "antes": "Sí — 24 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0FLDLZTHJ",
+      "modelo": "Belem",
+      "campo": "reposacabezas",
+      "antes": "Sí — 9 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0FLDT4541",
+      "modelo": "Bogota",
+      "campo": "arnes",
+      "antes": "ISOFIX o cinturón del vehículo",
+      "despues": "Cinturón del vehículo"
+    },
+    {
+      "asin": "B0FLDT4541",
+      "modelo": "Bogota",
+      "campo": "estado_auditoria",
+      "antes": "Confirmado en Amazon (ficha real), sin contradicciones.",
+      "despues": "Confirmado en Amazon (ficha real), sin contradicciones. | ✅ CORREGIDO (14-ago-2026): el valor anterior (\"ISOFIX o cinturón del vehículo\") era un error de copia -- identico al campo tipo_instalacion de este mismo producto, y ISOFIX nunca puede ser un tipo de arnés (ancla la silla, no sujeta al niño). Investigado en Amazon España (única fuente disponible: Nania/Team Tex cerró en 2024, nania.fr/nania.com son dominios en venta sin contenido del fabricante): título, bullets y descripción solo mencionan ISOFIX/cinturón para el anclaje de la silla; es un alzador (booster) convertible a \"elevador sin respaldo a partir de 135cm\", categoría que por diseño no lleva arnés de 5 puntos. Coherente con su hermano de línea Nania Belem (mismo grupo 2/3, sin ISOFIX), que ya tenía correctamente \"Cinturón del vehículo\"."
+    },
+    {
+      "asin": "B0FLDT4541",
+      "modelo": "Bogota",
+      "campo": "reposacabezas",
+      "antes": "Sí — 9 posiciones",
+      "despues": "Sí"
+    },
+    {
+      "asin": "B0GGZYY3BZ",
+      "modelo": "Marvel RoadSafe",
+      "campo": "reposacabezas",
+      "antes": "Sí — 14 posiciones",
+      "despues": "Sí"
+    }
+  ]
+}

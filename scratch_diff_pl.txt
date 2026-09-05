@@ -1,0 +1,7 @@
+Total celdas cambiadas: 4
+Cambios FUERA de proteccion_lateral: 0
+
+B0BYP63YCW   proteccion_lateral ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0BYP9MTBX   proteccion_lateral ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0GGZYY3BZ   proteccion_lateral ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0F1R26D8L   proteccion_lateral ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'

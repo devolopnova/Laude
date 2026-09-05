@@ -1,0 +1,10 @@
+B0FKBWNF2G
+  peso_recomendado: Hasta 36 kg
+  orientacion: N/A
+  giro_360: N/A
+  reposacabezas_regulable: Sí
+B0F9YPF1V1
+  peso_recomendado: Hasta 36 kg
+  orientacion: A favor de la marcha
+  giro_360: N/A
+  reposacabezas_regulable: Sí

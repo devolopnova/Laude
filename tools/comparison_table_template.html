@@ -1,0 +1,175 @@
+<!-- =====================================================================
+     COMPONENTE REUTILIZABLE: tabla comparativa editorial "A vs. B"
+     =====================================================================
+     Diseño CERRADO y aprobado (29-ago-2026). Primera implementación real:
+     silla-coche-grupo-0-recien-nacido.html ("Grupo 0 vs. Grupo 0+"), que
+     usa el prefijo .g0c- por ser anterior a este componente; a partir de
+     ahora toda instancia nueva usa el prefijo genérico .vs- de abajo.
+
+     NO es .sc-compare (la tabla comparativa clásica de css/site.css, con
+     cabecera monoespaciada y muchas filas de producto). Esta es una
+     comparativa editorial de DOS opciones enfrentadas, con cabeceras de
+     color y pocas filas conceptuales.
+
+     REGLAS DURAS (no romperlas, cada una costó varias iteraciones):
+
+     1. CSS GRID, NUNCA <table>. La celda superior izquierda NO EXISTE
+        como elemento: en grid simplemente no se coloca nada en (fila 1,
+        columna 1). Con <table> haría falta un <th></th> vacío, que
+        siempre ocupa una caja y acaba mostrando fondo/borde por mucho
+        que se intente ocultar -> se ve como "celda fantasma".
+
+     2. El CONTENEDOR (.vs-wrap) NO lleva border ni border-radius. Si los
+        lleva, dibuja borde superior + izquierdo + esquina redondeada
+        alrededor de esa zona vacía, que es exactamente el contorno
+        fantasma que hay que evitar. Solo lleva overflow-x:auto para el
+        scroll en móvil.
+
+     3. El marco exterior lo forman los bordes de las CELDAS VISIBLES:
+        border-left en la columna de etiquetas, border-right en la última
+        columna de datos, border-bottom en todas las filas.
+
+     4. Las 4 esquinas redondeadas van en las celdas reales:
+        - arriba-izquierda -> PRIMERA celda de la columna de etiquetas
+          (la primera fila de datos, NO la zona vacía)
+        - arriba-derecha   -> cabecera de color de la última columna
+        - arriba-izq. de la 1ª cabecera de color
+        - abajo-izquierda  -> última celda de la columna de etiquetas
+        - abajo-derecha    -> última celda de la última columna
+
+     5. Sin iconos, emojis, sombras, degradados ni decoración.
+
+     ---------------------------------------------------------------------
+     PARÁMETROS FIJOS
+     ---------------------------------------------------------------------
+     Columnas ................ 26% / 37% / 37%   (etiquetas / A / B)
+     min-width del grid ...... 560px (por debajo, scroll horizontal)
+     Cabecera A (verde) ...... #5C8C6E, texto #fff
+     Cabecera B (azul) ....... #3C5FA0, texto #fff
+     Cuerpo columna A ........ #E9F1E7  (verde pastel)
+     Cuerpo columna B ........ #F2F5FA  (azul muy claro)
+     Columna etiquetas ....... #FDFCFA  (blanco cálido)
+     Líneas divisorias ....... 1px solid #E7E4DC (gris muy claro, NUNCA negro)
+     Radio de esquina ........ 13px
+     Detalle dorado .......... #C9A227 (línea 34x2px + punto 5px)
+     Cabecera: texto ......... Inter 13.5px/700, mayúsculas, .03em
+     Etiquetas ............... Inter 16px/600, alineadas a la izquierda
+     Valores ................. Inter 16px/500, centrados
+     Padding de celda ........ 18px 20px  (22px arriba/abajo en última fila)
+     Padding móvil ........... 14px 12px  (18px arriba/abajo en última fila)
+     Línea secundaria ........ 14.5px, var(--ink-soft), margin-top 6px
+
+     ---------------------------------------------------------------------
+     CÓMO INSTANCIARLO
+     ---------------------------------------------------------------------
+     - Copiar el CSS y el HTML de abajo al <style>/cuerpo de la página
+       destino (no hay hoja compartida para este componente, igual que
+       .pec-hub-* o .scp-*).
+     - Ajustar el nº de filas: añadir/quitar bloques de 3 divs y las
+       clases .vs-rN correspondientes (y la regla .vs-rN en el CSS).
+     - La ÚLTIMA fila lleva siempre .vs-last en sus 3 celdas.
+     - La PRIMERA fila de datos lleva siempre .vs-r2 en su etiqueta
+       (es la que aporta el borde superior y la esquina redondeada).
+     - Una celda puede llevar dos líneas: <span class="vs-line">principal
+       </span><span class="vs-line vs-line-sub">secundaria</span>.
+     - Si la comparativa no necesita el detalle dorado, se omite el
+       bloque .vs-deco entero (no dejarlo vacío).
+     ================================================================== -->
+
+<!-- ============================ CSS ============================ -->
+<style>
+  .vs-title{text-align:center;margin-bottom:0;}
+  .vs-deco{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;margin-bottom:28px;}
+  .vs-deco-line{width:34px;height:2px;background:#C9A227;border-radius:2px;}
+  .vs-deco-dot{width:5px;height:5px;border-radius:50%;background:#C9A227;}
+
+  /* El contenedor NO lleva marco ni radio -- ver regla 2 arriba. */
+  .vs-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+
+  /* Grid, no <table> -- ver regla 1 arriba. */
+  .vs-grid{display:grid;grid-template-columns:26% 37% 37%;min-width:560px;}
+  .vs-c1{grid-column:1;}
+  .vs-c2{grid-column:2;}
+  .vs-c3{grid-column:3;}
+  .vs-r1{grid-row:1;}
+  .vs-r2{grid-row:2;}
+  .vs-r3{grid-row:3;}
+  .vs-r4{grid-row:4;}
+  .vs-r5{grid-row:5;}
+
+  .vs-th{
+    font-family:'Inter',sans-serif;font-size:13.5px;font-weight:700;color:#fff;
+    text-transform:uppercase;letter-spacing:.03em;text-align:center;
+    padding:14px 12px;display:flex;align-items:center;justify-content:center;
+  }
+  .vs-th-a{background:#5C8C6E;border-top-left-radius:13px;}
+  .vs-th-b{background:#3C5FA0;border-left:1px solid #E7E4DC;border-top-right-radius:13px;}
+
+  .vs-label{
+    font-weight:600;color:var(--ink);font-size:16px;text-align:left;
+    display:flex;align-items:center;
+    padding:18px 20px;border-bottom:1px solid #E7E4DC;
+    border-left:1px solid #E7E4DC;background:#FDFCFA;
+  }
+  .vs-val{
+    font-weight:500;color:var(--ink);font-size:16px;text-align:center;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    padding:18px 20px;border-bottom:1px solid #E7E4DC;
+    border-left:1px solid #E7E4DC;background:#FDFCFA;
+  }
+  .vs-val.vs-c3{border-right:1px solid #E7E4DC;}
+  .vs-val-a{background:#E9F1E7;}
+  .vs-val-b{background:#F2F5FA;}
+
+  /* Esquinas exteriores del CUERPO -- ver regla 4 arriba. */
+  .vs-label.vs-r2{border-top:1px solid #E7E4DC;border-top-left-radius:13px;}
+  .vs-label.vs-last{border-bottom-left-radius:13px;}
+  .vs-val-b.vs-last{border-bottom-right-radius:13px;}
+
+  /* Última fila: algo más de aire vertical. */
+  .vs-val.vs-last,.vs-label.vs-last{padding-top:22px;padding-bottom:22px;}
+
+  .vs-line{display:block;}
+  .vs-line-sub{margin-top:6px;font-size:14.5px;color:var(--ink-soft);}
+  .vs-wrap + p{margin-top:24px;}
+
+  @media (max-width:560px){
+    .vs-label,.vs-val{padding:14px 12px;}
+    .vs-val.vs-last,.vs-label.vs-last{padding-top:18px;padding-bottom:18px;}
+  }
+</style>
+
+<!-- ============================ HTML ============================ -->
+<h2 class="vs-title">{{TITULO}}</h2>
+<div class="vs-deco"><span class="vs-deco-line"></span><span class="vs-deco-dot"></span></div>
+<div class="vs-wrap">
+  <div class="vs-grid" role="table">
+    <!-- Fila 1: SOLO las dos cabeceras de color.
+         NO hay ningún elemento en la columna 1 -- es lo que evita la
+         "celda fantasma". No añadir aquí un div vacío por simetría. -->
+    <div class="vs-th vs-th-a vs-c2 vs-r1" role="columnheader">{{OPCION_A}}</div>
+    <div class="vs-th vs-th-b vs-c3 vs-r1" role="columnheader">{{OPCION_B}}</div>
+
+    <!-- Primera fila de datos: su etiqueta lleva .vs-r2 (borde superior
+         + esquina redondeada arriba-izquierda). -->
+    <div class="vs-label vs-c1 vs-r2" role="rowheader">{{ETIQUETA_1}}</div>
+    <div class="vs-val vs-val-a vs-c2 vs-r2">{{A_1}}</div>
+    <div class="vs-val vs-val-b vs-c3 vs-r2">{{B_1}}</div>
+
+    <div class="vs-label vs-c1 vs-r3" role="rowheader">{{ETIQUETA_2}}</div>
+    <div class="vs-val vs-val-a vs-c2 vs-r3">{{A_2}}</div>
+    <div class="vs-val vs-val-b vs-c3 vs-r3">{{B_2}}</div>
+
+    <div class="vs-label vs-c1 vs-r4" role="rowheader">{{ETIQUETA_3}}</div>
+    <div class="vs-val vs-val-a vs-c2 vs-r4">{{A_3}}</div>
+    <div class="vs-val vs-val-b vs-c3 vs-r4">{{B_3}}</div>
+
+    <!-- Última fila: las 3 celdas llevan .vs-last (sin borde inferior
+         interno, esquinas inferiores redondeadas, más padding).
+         Ejemplo de celda a dos líneas. -->
+    <div class="vs-label vs-c1 vs-r5 vs-last" role="rowheader">{{ETIQUETA_4}}</div>
+    <div class="vs-val vs-val-a vs-c2 vs-r5 vs-last"><span class="vs-line">{{A_4}}</span><span class="vs-line vs-line-sub">{{A_4_SUB}}</span></div>
+    <div class="vs-val vs-val-b vs-c3 vs-r5 vs-last"><span class="vs-line">{{B_4}}</span><span class="vs-line vs-line-sub">{{B_4_SUB}}</span></div>
+  </div>
+</div>
+<p class="scp-lead">{{CONCLUSION}}</p>

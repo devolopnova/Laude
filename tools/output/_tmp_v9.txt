@@ -1,0 +1,4 @@
+landing usa border-top: True
+sin restos de nth-last-child: True
+head/body: 1/1 1/1
+enlaces amazon: 3

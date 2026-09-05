@@ -1,0 +1,21 @@
+isofix: 15/15 confirmado (100%) | revisar=0
+normativa: 15/15 confirmado (100%) | revisar=0
+
+--- REVISAR (todos los campos) ---
+
+--- DETALLE ISOFIX / NORMATIVA (15) ---
+B0FKBWNF2G   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=fabricante_oficial
+B0F9YPF1V1   isofix=No                           fuente=fabricante_oficial                  | normativa=R129 / i-Size fuente=amazon
+B0BYP63YCW   isofix=No                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0C58QGJNG   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=fabricante_oficial
+B0BZ89X9YC   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0CZ47FKZL   isofix=Sí                           fuente=amazon_y_fabricante                 | normativa=R129 / i-Size fuente=amazon
+B0BYP9MTBX   isofix=No                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0FGDM2ZTS   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0F3P61P8C   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0CWS19269   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0F9YR27XX   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0DSL7WGB2   isofix=Sí                           fuente=fabricante_oficial                  | normativa=R129 / i-Size fuente=amazon
+B0GGZYY3BZ   isofix=No                           fuente=fabricante_oficial (confirmado manualmente) | normativa=R129 / i-Size fuente=amazon
+B0DP7TG8KY   isofix=Sí                           fuente=amazon                              | normativa=R129 / i-Size fuente=amazon
+B0F1R26D8L   isofix=No                           fuente=fabricante_oficial                  | normativa=R129 / i-Size fuente=amazon

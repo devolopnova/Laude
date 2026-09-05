@@ -1,0 +1,179 @@
+--- grupo ---
+    9 | Sin especificar
+    4 | Grupo 2/3
+    3 | Grupo 1/2/3
+    2 | Grupo 0+/1/2/3 (Amazon, confianza media)
+    2 | Sin especificar (etapa infantil, sin nom
+    2 | Grupo 0+
+    2 | Grupo 0123
+    1 | Grupo 2/3 (Amazon + fabricante, confianz
+    1 | Sin especificar (decisión manual, ver co
+    1 | Sin especificar (contradicción ISOFIX en
+    1 | Grupo 0+/1
+    1 | Grupo 3
+    1 | Grupo 0/1/2/3
+--- edad ---
+    6 | 0-12 años
+    3 | 3,5-12 años
+    3 | 15 meses - 12 años
+    3 | 0-12 años aprox.
+    3 | 4-12 años aprox.
+    2 | 6-12 años
+    1 | Sin especificar
+    1 | 3-12 años
+    1 | 3-12 años aprox.
+    1 | 3 meses - 4 años
+    1 | 0-24 meses aprox.
+    1 | 0-4 años
+    1 | 0-15 meses aprox.
+    1 | Recién nacido - 15 meses aprox.
+    1 | 7-12 años aprox.
+    1 | Sin especificar (por altura: 76-150cm)
+--- altura ---
+    8 | 40-150 cm
+    8 | 100-150 cm
+    5 | 76-150 cm
+    2 | 125-150 cm
+    1 | 61-105 cm
+    1 | 40-87 cm
+    1 | Sin especificar (0-18kg, sin cm explícit
+    1 | 40-83 cm
+    1 | 40-80 cm
+    1 | 126-150 cm
+    1 | 40-145 cm
+--- peso_recomendado ---
+   12 | Hasta 36 kg
+    4 | 9-36 kg
+    3 | 15-36 kg
+    1 | Hasta 50 kg
+    1 | 15-50 kg
+    1 | Hasta 17,5 kg
+    1 | Hasta 13 kg
+    1 | 9-50 kg
+    1 | Hasta 18 kg
+    1 | Hasta 12 kg
+    1 | Hasta 21 kg
+    1 | 23-36 kg (máx. de la ficha: 22 kg)
+    1 | Hasta 25 kg
+    1 | Sin especificar
+--- isofix ---
+   15 | Sí
+    6 | No
+    1 | No (confirmado por fabricante, resuelto 
+    1 | Sí (opcional, también cinturón)
+    1 | Sí — requiere base FamilyFix 360 vendida
+    1 | Sí — requiere Base G vendida por separad
+    1 | Sí (obligatorio salvo modo elevador 100-
+    1 | Sí — con base BABY-SAFE CORE Base vendid
+    1 | Sí (40-105cm) / cinturón (100-150cm)
+    1 | No de serie — ISOFIX solo con "Base Full
+    1 | Sí — como refuerzo de estabilidad junto 
+--- tipo_instalacion ---
+    7 | ISOFIX
+    3 | Cinturón
+    3 | ISOFIX + Top Tether
+    2 | ISOFIX (vía base)
+    2 | ISOFIX o cinturón
+    2 | Cinturón de seguridad
+    1 | Cinturón + ISOFIX opcional
+    1 | ISOFIX o cinturón (según etapa)
+    1 | ISOFIX + soporte de piernas
+    1 | ISOFIX o cinturón según etapa
+    1 | Cinturón (ISOFIX opcional vía base)
+    1 | Cinturón de 3 puntos + conectores ISOFIX
+    1 | Cinturón (integrated belt lock-off)
+    1 | ISOFIX + Top Tether o cinturón
+    1 | ISOFIX o cinturón de 3 puntos
+    1 | Cinturón (5 puntos hasta 18kg, luego cin
+    1 | ISOFIX + cinturón
+--- orientacion ---
+   15 | A favor de la marcha
+    8 | Ambas
+    3 | A contramarcha
+    1 | Sin especificar
+    1 | A contramarcha (con reclinado en todas l
+    1 | Ambas (contramarcha hasta 18kg/105cm)
+    1 | Ambas (RWF 40-105cm + FWF 76-150cm, conf
+--- reclinable ---
+   17 | Sí
+   12 | Sin especificar
+    1 | No
+--- giro_360 ---
+   19 | Sin especificar
+    9 | Sí
+    1 | Sí (FlexiSpin, con la base)
+    1 | No — 180° (confirmado, no 360° completo)
+--- normativa ---
+   23 | R129 / i-Size
+    3 | R129/03
+    2 | R129
+    1 | R129/04
+    1 | R129 / i-Size (ECE R129)
+--- reposacabezas ---
+   26 | Sí
+    3 | Sin especificar
+    1 | No
+--- arnes ---
+   14 | Arnés de 5 puntos
+    5 | Cinturón del vehículo
+    4 | Arnés de 3 puntos
+    3 | Cinturón del vehículo (3 puntos)
+    1 | Arnés de 3 puntos (confirmado por fabric
+    1 | Sin especificar con certeza (tabla dice 
+    1 | Cinturón del vehículo (guías de cinturón
+    1 | Arnés de 5 puntos (76-105cm) / cinturón 
+--- peso_silla ---
+    5 | Sin especificar
+    2 | 7 kg
+    2 | 3,9 kg
+    2 | 4,4 kg
+    1 | 11 kg
+    1 | 1,2 kg
+    1 | 7,31 kg
+    1 | 5,32 kg
+    1 | 12,7 kg
+    1 | 10,75 kg
+    1 | 3,35 kg
+    1 | 6,2 kg
+    1 | 7,45 kg
+    1 | 8,9 kg
+    1 | 14 kg
+    1 | 11,55 kg
+    1 | 8,76 kg
+    1 | 3,49 kg
+    1 | 9,1 kg
+    1 | 4,7 kg
+    1 | 3 kg
+    1 | 3,4 kg
+    1 | 8,3 kg
+--- proteccion_lateral ---
+    8 | Sin especificar explícito
+    4 | Sí (SPS)
+    3 | Sí (G-CELL)
+    2 | Sin especificar
+    2 | Sí
+    1 | Sí (H-GUARD + SPS+)
+    1 | Sí (H-GUARD + SPS)
+    1 | Sí (Sistema L.S.P., confirmado en Amazon
+    1 | Sí (Linear Side-impact Protection Plus)
+    1 | Sin especificar explícito (tiene Impact 
+    1 | Sí (mencionada en título)
+    1 | Sí (Safety Surround + TrueShield)
+    1 | Sí (protección mejorada contra impactos 
+    1 | Sí (SideProtect)
+    1 | Sí (protección lateral mencionada en fab
+    1 | Sí (mencionada por fabricante)
+--- funda_lavable ---
+   18 | Sin especificar
+    7 | Sí
+    1 | Sí (confirmado por fabricante)
+    1 | Sí (lavable a máquina 30°C, confirmado e
+    1 | Sí (extracción rápida, lavable)
+    1 | Sí (fundas extraíbles lavables a mano)
+    1 | Sí (transpirable y lavable, confirmado e
+--- travel_system ---
+   26 | Sin especificar
+    1 | Compatible con cochecitos Maxi-Cosi (ver
+    1 | Compatible (adaptador para cochecitos Cy
+    1 | Compatible con numerosos cochecitos (con
+    1 | Sí — compatible con carritos Chicco

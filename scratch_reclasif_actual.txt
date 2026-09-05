@@ -1,0 +1,15 @@
+B0FKBWNF2G | Kinderkraft    | arnes=Cinturón del vehículo     altura=100-150 cm      edad=3,5-12 años
+B0F9YPF1V1 | Kinderkraft    | arnes=Arnés de 5 puntos         altura=76-150 cm       edad=15 meses - 12 años
+B0BYP63YCW | Kinderkraft    | arnes=Arnés de 5 puntos         altura=75-150 cm       edad=15 meses - 12 años
+B0C58QGJNG | Cybex          | arnes=Arnés de 3 puntos         altura=100-150 cm      edad=3-12 años
+B0BZ89X9YC | Kinderkraft    | arnes=Arnés de 5 puntos         altura=40-150 cm       edad=0-12 años
+B0CZ47FKZL | Maxi-Cosi      | arnes=Arnés de 3 puntos         altura=100-150 cm      edad=3,5-12 años
+B0BYP9MTBX | Kinderkraft    | arnes=Arnés de 5 puntos         altura=75-150 cm       edad=15 meses - 12 años
+B0FGDM2ZTS | Kinderkraft    | arnes=Cinturón del vehículo     altura=No determinado  edad=No determinado
+B0F3P61P8C | Bébé Confort   | arnes=Arnés de 5 puntos         altura=40-150 cm       edad=0-12 años
+B0CWS19269 | Maxi-Cosi      | arnes=Arnés de 5 puntos         altura=40-150 cm       edad=0-12 años
+B0F9YR27XX | Kinderkraft    | arnes=Cinturón del vehículo     altura=40-150 cm       edad=0-12 años
+B0DSL7WGB2 | Kinderkraft    | arnes=No determinado            altura=No determinado  edad=3,5-12 años
+B0GGZYY3BZ | Bébé Confort   | arnes=Cinturón del vehículo     altura=100-150 cm      edad=3,5-12 años
+B0DP7TG8KY | Kinderkraft    | arnes=Arnés de 5 puntos         altura=76-150 cm       edad=15 meses - 12 años
+B0F1R26D8L | Kinderkraft    | arnes=No determinado            altura=125-150 cm      edad=6-12 años

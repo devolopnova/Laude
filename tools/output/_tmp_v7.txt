@@ -1,0 +1,6 @@
+scp-lead ahora var(--ink): True
+conflicto eliminado (ya no queda ink-soft en scp-lead): True
+regla Fase 4 intacta: True
+enlaces coral intactos: True
+h2 sin color forzado: True
+head/body balance: 1/1 1/1

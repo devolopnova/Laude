@@ -1,0 +1,41 @@
+{
+  "productos_con_cambios": [
+    "B0C6KZCY6Z",
+    "B0DPHRJ1YH"
+  ],
+  "atributos_afectados": [
+    "estado_auditoria",
+    "proteccion_lateral"
+  ],
+  "num_celdas_modificadas": 4,
+  "celdas": [
+    {
+      "asin": "B0C6KZCY6Z",
+      "modelo": "Unico EVO I'Size Classic",
+      "campo": "estado_auditoria",
+      "antes": "Confirmado en Amazon. No se pudo confirmar en chicco.es con este nombre exacto.",
+      "despues": "Confirmado en Amazon. No se pudo confirmar en chicco.es con este nombre exacto. | ✅ RESUELTO (15-ago-2026, 2ª auditoría reclinable/protección lateral): título literal de Amazon para este ASIN: \"Chicco Unico EVO I'Size Classic, Silla de Coche ISOFIX para Bebés y Niños de 40 a 150 cm, Grupo 0123 Desde Recién Nacido hasta 12 Años, Giratoria 360º, Reductor, Ajustable y Protección Lateral, Negra\" -- mención explícita como característica nombrada del producto (mismo patrón ya aceptado en el dataset para otros ASIN: 'Sí (mencionada en título)'). Los bullets/descripción no añaden más detalle (no nombran un sistema con marca propia), pero la mención en título es evidencia suficiente según el criterio ya vigente."
+    },
+    {
+      "asin": "B0C6KZCY6Z",
+      "modelo": "Unico EVO I'Size Classic",
+      "campo": "proteccion_lateral",
+      "antes": "Sin especificar explícito",
+      "despues": "Sí (mencionada en título)"
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "estado_auditoria",
+      "antes": "✅ RESUELTO manualmente (13-ago-2026): peso real 8,9 kg, confirmado en dos paginas independientes de cybex-online.com (cs-go-pallas-g2.html y CS_GO_Pallas_G_i-Size_EN.html), coincidentes entre si. El '1,11 Kilogramos' que muestra Amazon (repetido en dos bloques de la misma ficha) se descarta por fisicamente inverosimil para esta silla -- no se usa como dato valido.",
+      "despues": "✅ RESUELTO manualmente (13-ago-2026): peso real 8,9 kg, confirmado en dos paginas independientes de cybex-online.com (cs-go-pallas-g2.html y CS_GO_Pallas_G_i-Size_EN.html), coincidentes entre si. El '1,11 Kilogramos' que muestra Amazon (repetido en dos bloques de la misma ficha) se descarta por fisicamente inverosimil para esta silla -- no se usa como dato valido. | ✅ RESUELTO (15-ago-2026, 2ª auditoría reclinable/protección lateral): fabricante oficial (cybex-online.com/es/es/p/CS_GO_Pallas_G_i-Size_EN.html, identidad verificada por modelo/color exactos), sección 'Destacados y características' visible: \"El sistema de Protección lineal contra impactos laterales Plus (LSP) y la estructura absorbe-energía reducen las fuerzas de impacto de una colisión lateral en más del 20 %\". Corrige la nota previa de la auditoría anterior ('Impact Shield, tecnología distinta a protección lateral tradicional') -- el Impact Shield (chest-shield tipo airbag, protección frontal) y el LSP (protección lateral) son dos sistemas de seguridad DISTINTOS presentes ambos en este producto; el LSP sí es protección lateral en el sentido que pide este atributo."
+    },
+    {
+      "asin": "B0DPHRJ1YH",
+      "modelo": "Pallas G i-Size (G2)",
+      "campo": "proteccion_lateral",
+      "antes": "Sin especificar explícito (tiene Impact Shield, tecnología distinta a protección lateral tradicional)",
+      "despues": "Sí (Protección lineal contra impactos laterales Plus — LSP, confirmado en fabricante oficial cybex-online.com)"
+    }
+  ]
+}

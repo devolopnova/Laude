@@ -1,0 +1,15 @@
+B0FKBWNF2G JUNIOR FIX 2 PRO     isofix=Sí                   normativa=R129 / i-Size   altura=100-150 cm   peso=Hasta 36 kg  edad=3,5-12 años          peso_silla=No determinado reposacab=Sí
+B0F9YPF1V1 I-COMFY              isofix=No                   normativa=R129 / i-Size   altura=76-150 cm    peso=Hasta 36 kg  edad=15 meses - 12 años   peso_silla=5,98 kg      reposacab=Sí
+B0BYP63YCW COMFORT UP Rosa      isofix=No                   normativa=R129 / i-Size   altura=75-150 cm    peso=Hasta 36 kg  edad=15 meses - 12 años   peso_silla=6 kg         reposacab=Sí
+B0C58QGJNG Solution X i-Fix     isofix=Sí                   normativa=R129 / i-Size   altura=100-150 cm   peso=Hasta 50 kg  edad=3-12 años            peso_silla=7 kg         reposacab=Sí — 11 posiciones
+B0BZ89X9YC I-GROW               isofix=Sí                   normativa=R129 / i-Size   altura=40-150 cm    peso=Hasta 36 kg  edad=0-12 años            peso_silla=11 kg        reposacab=Sí
+B0CZ47FKZL Tanza                isofix=Sí                   normativa=R129 / i-Size   altura=100-150 cm   peso=Hasta 36 kg  edad=3,5-12 años          peso_silla=5,32 kg      reposacab=Sí — 10 posiciones
+B0BYP9MTBX COMFORT UP Negro     isofix=No                   normativa=R129 / i-Size   altura=75-150 cm    peso=Hasta 36 kg  edad=15 meses - 12 años   peso_silla=6 kg         reposacab=Sí
+B0FGDM2ZTS SAFETY FIX 3 PRO     isofix=Sí                   normativa=R129 / i-Size   altura=No determinado peso=9-36 kg      edad=No determinado       peso_silla=7,31 kg      reposacab=Sí
+B0F3P61P8C RevolveFix Plus 360  isofix=Sí                   normativa=R129 / i-Size   altura=40-150 cm    peso=Hasta 36 kg  edad=0-12 años            peso_silla=10,75 kg     reposacab=Sí — 12 posiciones
+B0CWS19269 Emerald 360 S        isofix=Sí                   normativa=R129 / i-Size   altura=40-150 cm    peso=Hasta 36 kg  edad=0-12 años            peso_silla=12,7 kg      reposacab=Sí — 14 posiciones
+B0F9YR27XX I-GROW 2 PRO         isofix=Sí                   normativa=R129 / i-Size   altura=40-150 cm    peso=Hasta 36 kg  edad=0-12 años            peso_silla=13 kg        reposacab=Sí
+B0DSL7WGB2 UNITY 2              isofix=Sí                   normativa=R129 / i-Size   altura=No determinado peso=Hasta 36 kg  edad=3,5-12 años          peso_silla=6,3 kg       reposacab=Sí
+B0GGZYY3BZ Marvel RoadSafe      isofix=No                   normativa=R129 / i-Size   altura=100-150 cm   peso=15-36 kg     edad=3,5-12 años          peso_silla=3,35 kg      reposacab=Sí — 14 posiciones
+B0DP7TG8KY FIX2GO               isofix=Sí                   normativa=R129 / i-Size   altura=76-150 cm    peso=Hasta 36 kg  edad=No determinado       peso_silla=6,3 kg       reposacab=No determinado
+B0F1R26D8L I-BOOST 2            isofix=No                   normativa=R129 / i-Size   altura=125-150 cm   peso=Hasta 36 kg  edad=6-12 años            peso_silla=1,2 kg       reposacab=No determinado

@@ -1,0 +1,3 @@
+Total cambios: 2
+('B0C58QGJNG', 'reposacabezas', 'Sí — 3 posiciones', 'Sí — 11 posiciones')
+('B0F3P61P8C', 'edad', '0-4 años', '0-12 años')

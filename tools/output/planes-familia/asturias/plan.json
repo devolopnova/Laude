@@ -1,0 +1,669 @@
+{
+  "province": "Asturias",
+  "province_slug": "asturias",
+  "generated_at": "2026-08-31",
+  "searches": [
+    "planes con niños Asturias",
+    "actividades con niños Asturias",
+    "qué hacer con niños Asturias"
+  ],
+  "plan_status": "applied",
+  "selection_notes": "De las 3 búsquedas (5 primeros resultados orgánicos cada una = 15 candidatas máx.) se obtuvieron 10 páginas únicas tras quitar duplicados entre búsquedas (familiasenruta.com y elblog.bintercanarias.com aparecieron en las 3 búsquedas). De esas 10, se descartaron 4 en el cribado: laquintanaderomillo.es (contenido principalmente promocional del alojamiento rural que lo publica), turismoasturias.es/agenda-de-asturias/ocio-infantil (agenda de eventos y talleres con fechas puntuales de 2026, no un listado de lugares permanentes), jairecanoas.com (blog de la empresa de piragüismo Jaire Aventura, centrado en dirigir reservas hacia sus propias actividades, sin recomendaciones independientes de otros lugares) y tripadvisor.com (plataforma agregadora de atracciones con reseñas, no una guía o artículo editorial). Quedaron 6 fuentes válidas y leídas por completo: familiasenruta.com, elblog.bintercanarias.com, aunclicdelaaventura.com, campingvillaviciosa.es (blog de un camping, pero con contenido de guía general verificable más allá de la promoción del propio negocio), asturias.com y viajesyrutas.es. Entre las 6 fuentes se extrajeron más de 35 lugares distintos tras normalizar variantes (p.ej. 'Bioparc Acuario de Gijón' y 'Acuario de Gijón' se trataron como el mismo lugar). Se buscaban 18 lugares (15 primary + 3 backup) y se consiguieron los 18. El nivel de evidencia es más moderado que en provincias grandes ya trabajadas (máximo 6 evidencias / 6 medios independientes en el primer puesto, MUJA, y varios lugares con solo 1-2 evidencias en las últimas posiciones y en los backups). La selección de las posiciones 1-6 priorizó museos y experiencias con atractivo familiar directo (dinosaurios, acuario, fauna real) y naturaleza accesible (Senda del Oso, funicular de montaña) antes que patrimonio histórico o minero. Regla de diversificación de patrimonio histórico/arqueológico: el único lugar con ese perfil en las posiciones 1-15 es el Centro de Arte Rupestre Tito Bustillo (cueva con arte paleolítico, Patrimonio de la Humanidad Unesco), colocado en la posición 7, fuera de las posiciones 1-6 y muy por debajo del máximo de 2 permitidos. Los museos mineros (Ecomuseo Minero del Valle de Samuño y MUMI) se trataron como patrimonio industrial interactivo (recorridos en tren minero, galería real) y no como el tipo de patrimonio histórico/arqueológico restringido por la regla (ruinas, anfiteatros, murallas o cascos históricos), igual que el Parque de la Prehistoria de Teverga, que es una recreación museística con cercado de animales y no un yacimiento arqueológico real.",
+  "sources_analyzed": [
+    {
+      "name": "Familias en Ruta",
+      "domain": "familiasenruta.com",
+      "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+      "title": "Asturias con niños en 12 planes para no perderse",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 20
+    },
+    {
+      "name": "Blog Binter Canarias",
+      "domain": "elblog.bintercanarias.com",
+      "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+      "title": "Qué hacer con niños en Asturias: 8 planes para toda la familia",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 8
+    },
+    {
+      "name": "A un Clic de la Aventura",
+      "domain": "aunclicdelaaventura.com",
+      "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+      "title": "15 Planes divertidos para hacer en Asturias con niños (y no tan niños)",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 15
+    },
+    {
+      "name": "Camping Villaviciosa (blog)",
+      "domain": "campingvillaviciosa.es",
+      "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+      "title": "Asturias con niños: 7 planes de turismo familiar en el paraíso natural",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 11
+    },
+    {
+      "name": "La Quintana de Romillo",
+      "domain": "laquintanaderomillo.es",
+      "url": "https://www.laquintanaderomillo.es/turismo/planes-con-ninos-en-asturias/",
+      "title": "Planes con Niños en Asturias | Naturaleza y Diversión en Familia",
+      "included": false,
+      "exclusion_reason": "Contenido principalmente promocional del alojamiento rural La Quintana de Romillo, que presenta los lugares como justificación para reservar allí ('punto de partida perfecto').",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Asturias.com",
+      "domain": "asturias.com",
+      "url": "https://asturias.com/que-hacer-este-fin-de-semana-en-asturias-con-ninos/",
+      "title": "Qué hacer este fin de semana en Asturias con niños",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 6
+    },
+    {
+      "name": "Turismo Asturias (Agenda, ocio infantil)",
+      "domain": "turismoasturias.es",
+      "url": "https://www.turismoasturias.es/en/agenda-de-asturias/ocio-infantil",
+      "title": "Agenda de Asturias. Actividades y talleres de ocio infantil",
+      "included": false,
+      "exclusion_reason": "Agenda de eventos y talleres con fechas puntuales (agosto/septiembre 2026), no un listado de lugares o planes permanentes visitables.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Viajes y Rutas",
+      "domain": "viajesyrutas.es",
+      "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+      "title": "Qué ver en Asturias con niños, 10 planes imprescindibles",
+      "included": true,
+      "exclusion_reason": null,
+      "places_extracted_approx": 10
+    },
+    {
+      "name": "Jaire Aventura (blog)",
+      "domain": "jairecanoas.com",
+      "url": "https://jairecanoas.com/blog/que-hacer-en-asturias-con-ninos/",
+      "title": "¿Qué hacer en Asturias con niños? Planes de aventura",
+      "included": false,
+      "exclusion_reason": "Contenido promocional de la empresa de piragüismo Jaire Aventura; los lugares concretos mencionados son solo los operados por el propio negocio (descenso del Sella, escalada, parque de aventura, paintball), sin recomendaciones independientes de otros lugares.",
+      "places_extracted_approx": 0
+    },
+    {
+      "name": "Tripadvisor",
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g187449-Activities-zft11306-Asturias.html",
+      "title": "Las 10 mejores cosas que hacer con niños en Asturias",
+      "included": false,
+      "exclusion_reason": "Plataforma agregadora de atracciones con reseñas de usuarios, no un artículo o guía editorial.",
+      "places_extracted_approx": 0
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "issues": [
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "No se ha podido verificar una dirección con calle/número concreta para Senda del Oso / Casa del Oso (Proaza); solo hay coordenadas GPS publicadas.",
+        "place_rank": 3
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "El descenso del Sella en canoa lo ofrecen numerosas empresas distintas; no existe una única web oficial del plan en sí.",
+        "place_rank": 9
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "No se ha podido verificar de forma fiable una web oficial propia de El Camín Encantáu (el dominio elcaminencantau.com no resolvió en la comprobación); se ha dejado como null en vez de usar una fuente de descubrimiento.",
+        "place_rank": 13
+      },
+      {
+        "severity": "warning",
+        "category": "address_missing",
+        "message": "No se ha encontrado una dirección con calle/número para El Camín Encantáu, solo el punto de inicio aproximado (aparcamiento de La Venta, Ardisana).",
+        "place_rank": 13
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_low_confidence",
+        "message": "museoycircuitofernandoalonso.com se referencia como web oficial desde la propia web personal de Fernando Alonso, pero no se pudo verificar su contenido directamente (error de certificado en la comprobación automática).",
+        "place_rank": 16
+      },
+      {
+        "severity": "warning",
+        "category": "official_url_missing",
+        "message": "Playa de Gulpiyuri es un monumento natural sin gestión de un único organismo con web propia; no se ha asignado official_url.",
+        "place_rank": 17
+      }
+    ]
+  },
+  "places": [
+    {
+      "rank": 1,
+      "status": "primary",
+      "name": "Museo del Jurásico de Asturias (MUJA)",
+      "description": "El Museo del Jurásico de Asturias sorprende ya desde fuera, con un edificio en forma de huella de dinosaurio asomado al mar entre Colunga y Lastres. Dentro, esqueletos y réplicas a tamaño real, junto a más de 700 piezas y una de las mejores colecciones de icnitas de Europa, acercan a los niños al mundo jurásico de forma visual y accesible. Un plan de museo que engancha incluso a los más pequeños gracias a sus recreaciones a escala real.",
+      "official_url": "http://www.museojurasicoasturias.com",
+      "url_verified": true,
+      "address": "Rasa de San Telmo, s/n, 33328, Colunga",
+      "evidence_count": 6,
+      "independent_source_count": 6,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Museo del Jurásico de Asturias (MUJA): esqueletos de dinosaurios a escala real."
+        },
+        {
+          "name": "Blog Binter Canarias",
+          "domain": "elblog.bintercanarias.com",
+          "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+          "evidence": "Museo del Jurásico de Asturias: réplicas a tamaño real, incluyendo un Tyrannosaurus Rex."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "MUJA (Colunga): esqueletos de dinosaurios a escala real y actividades paleontológicas para niños."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "MUJA (Colunga): museo de dinosaurios con yacimientos de fósiles."
+        },
+        {
+          "name": "Asturias.com",
+          "domain": "asturias.com",
+          "url": "https://asturias.com/que-hacer-este-fin-de-semana-en-asturias-con-ninos/",
+          "evidence": "Museo Jurásico de Colunga: experiencias inmersivas como 'Misión Dinotiempo'."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Museo del Jurásico de Asturias (MUJA): museo sobre dinosaurios con réplicas a tamaño real en sus jardines."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "status": "primary",
+      "name": "Acuario de Gijón (Bioparc)",
+      "description": "El Acuario de Gijón (Bioparc) reúne 60 acuarios y 12 ecosistemas distintos, desde selvas tropicales hasta fondos polares, con miles de especies marinas para descubrir de cerca. Situado junto a la playa de Poniente, es un plan cubierto perfecto para cualquier época del año. Recorridos pensados para que los niños se acerquen a tiburones, pingüinos y peces de todo el mundo sin salir de Gijón.",
+      "official_url": "https://acuariogijon.es",
+      "url_verified": true,
+      "address": "Playa de Poniente, s/n, 33212, Gijón",
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Bioparc Acuario de Gijón: centro divulgativo junto al puerto dedicado a la vida marina."
+        },
+        {
+          "name": "Blog Binter Canarias",
+          "domain": "elblog.bintercanarias.com",
+          "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+          "evidence": "Acuario de Gijón: una vuelta por los océanos y mares del mundo de forma didáctica y visual."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Acuario de Gijón: 60 acuarios con 12 ecosistemas marinos diferentes alrededor del mundo."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Acuario de Gijón: más de 4.000 animales acuáticos."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Acuario de Gijón - Bioparc: 60 acuarios y 12 ecosistemas con más de 5.000 animales marinos."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "status": "primary",
+      "name": "Senda del Oso (Casa del Oso, Proaza)",
+      "description": "La Senda del Oso es una vía verde que discurre entre Proaza y Teverga sobre una antigua vía de tren, ideal para recorrer en bici o a pie con niños por su trazado llano. En la Casa del Oso, sede de la Fundación Oso de Asturias, se puede ver de cerca a osos pardos cantábricos en semilibertad en sus cercados. Un plan que combina naturaleza, ejercicio suave en familia y fauna real.",
+      "official_url": "https://www.osodeasturias.es",
+      "url_verified": true,
+      "address": null,
+      "evidence_count": 5,
+      "independent_source_count": 5,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Senda Cicloturista del Oso: vía verde de baja pendiente ideal para familias en bicicleta."
+        },
+        {
+          "name": "Blog Binter Canarias",
+          "domain": "elblog.bintercanarias.com",
+          "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+          "evidence": "Senda del Oso: recorrida caminando o en bici, permite ver osos en su hábitat natural en la Casa del Oso de Proaza."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Senda del Oso (Proaza): ruta ciclable fácil con cercado de osos en la Casa del Oso."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Senda del Oso (Proaza): observación de osos pardos en su hábitat."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Senda del Oso: ruta senderista accesible en bicicleta con área recreativa y cercado con osos."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "status": "primary",
+      "name": "Funicular de Bulnes",
+      "description": "El funicular de Bulnes sube en apenas ocho minutos desde Poncebos hasta el pueblo de montaña de Bulnes, salvando un desnivel que de otro modo solo se alcanza a pie. El trayecto regala vistas de los Picos de Europa y del Naranjo de Bulnes que sorprenden a los niños desde la propia cabina. Una forma cómoda de acercar a toda la familia a un pueblo tradicional enclavado en plena montaña.",
+      "official_url": "https://www.asturias.es/funicular-de-bulnes",
+      "url_verified": true,
+      "address": "Poncebos, s/n, 33554, Arenas de Cabrales",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Funicular de Bulnes: transporte espectacular que sube 400 metros entre Poncebos y Bulnes."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Picos de Europa en funicular (Bulnes): acceso fácil a un pueblo de montaña tradicional con vistas del Naranjo de Bulnes."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Funicular de Bulnes: acceso al pueblo de montaña."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "status": "primary",
+      "name": "Parque de la Prehistoria de Teverga",
+      "description": "El Parque de la Prehistoria de Teverga recrea el arte rupestre paleolítico europeo en tres edificios integrados en el paisaje, junto a un cercado con animales y la recreación de un poblado prehistórico. Los niños pueden recorrer galerías con reproducciones de pinturas y descubrir cómo vivían nuestros antepasados de forma cercana y visual. Un plan educativo pensado también para las familias, con talleres y actividades guiadas.",
+      "official_url": "https://www.parquedelaprehistoria.es",
+      "url_verified": true,
+      "address": "San Salvador d'Alesga, s/n, 33111, Teverga",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Parque de la Prehistoria (Teverga): recrea cuevas con arte rupestre y cercado con animales prehistóricos en semilibertad."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Parque de la Prehistoria (Teverga): 'viaje al arte paleolítico'."
+        },
+        {
+          "name": "Asturias.com",
+          "domain": "asturias.com",
+          "url": "https://asturias.com/que-hacer-este-fin-de-semana-en-asturias-con-ninos/",
+          "evidence": "Parque de la Prehistoria de Teverga: actividades familiares como caza paleolítica y visitas a cercados con animales prehistóricos."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "status": "primary",
+      "name": "Ecomuseo Minero del Valle de Samuño",
+      "description": "El Ecomuseo Minero del Valle de Samuño permite recorrer en un auténtico tren minero el trazado que durante décadas usaron los mineros asturianos, hasta llegar a una galería real de mina. Es una forma directa de acercar a los niños a la historia industrial de Asturias, sintiendo por un rato lo que era trabajar bajo tierra. El recorrido termina en el Pozo San Luis, uno de los enclaves mineros más singulares de la región.",
+      "official_url": "https://ecomuseo.ayto-langreo.es/",
+      "url_verified": true,
+      "address": "El Cadavíu, s/n, 33900, Ciaño, Langreo",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "Blog Binter Canarias",
+          "domain": "elblog.bintercanarias.com",
+          "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+          "evidence": "Ecomuseo Minero Valle de Samuño (Langreo): montar en un viejo tren minero, el momento más impactante."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Ecomuseo Minero del Valle de Samuño (Ciaño): recorrido en tren minero."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Ecomuseo Minero del Valle de Samuño: experiencia en tren minero para sentirse auténticos mineros."
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "status": "primary",
+      "name": "Centro de Arte Rupestre Tito Bustillo",
+      "description": "El Centro de Arte Rupestre Tito Bustillo, en Ribadesella, permite acercarse a una de las cuevas con arte paleolítico más importantes de Europa, declarada Patrimonio de la Humanidad por la Unesco. Como el acceso a la cueva original está limitado para su conservación, el centro recrea la experiencia con reproducciones y recursos audiovisuales pensados para todos los públicos. Un buen plan para introducir a los niños en la prehistoria sin necesidad de entrar en una cueva real.",
+      "official_url": "https://www.centrotitobustillo.com",
+      "url_verified": true,
+      "address": "Avda. de Tito Bustillo, s/n, 33560, Ribadesella",
+      "evidence_count": 3,
+      "independent_source_count": 3,
+      "sources": [
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Cueva de Tito Bustillo (Ribadesella): Patrimonio Unesco con pinturas rupestres de 12.000-17.000 años de antigüedad."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Cueva de Tito Bustillo (Ribadesella): pinturas rupestres de 15.000 años de antigüedad."
+        },
+        {
+          "name": "Asturias.com",
+          "domain": "asturias.com",
+          "url": "https://asturias.com/que-hacer-este-fin-de-semana-en-asturias-con-ninos/",
+          "evidence": "Centro de Arte Rupestre Tito Bustillo: talleres donde experimentar con pinceles, pigmentos y piedras de colores."
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "status": "primary",
+      "name": "Bufones de Pría",
+      "description": "Los Bufones de Pría son chimeneas naturales excavadas en la roca caliza de la costa de Llanes que, con temporal, expulsan violentos chorros de agua y aire a gran altura. El paseo hasta ellos, de baja dificultad, es un plan de naturaleza al aire libre distinto, que sorprende especialmente a los niños cuando el mar está más movido. Declarados Monumento Natural, son uno de los fenómenos costeros más espectaculares de Asturias.",
+      "official_url": "https://www.turismoasturias.es/es/descubre/naturaleza/otros-espacios/bufones/bufones-de-pria",
+      "url_verified": true,
+      "address": "Llames de Pría, 33595, Llanes",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Blog Binter Canarias",
+          "domain": "elblog.bintercanarias.com",
+          "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+          "evidence": "Los Bufones de Pría: fuentes naturales formadas por erosión marina, espectaculares con marea alta."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Bufones de Pría: chimeneas naturales que expulsan chorros de agua, espectaculares con mal tiempo."
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "status": "primary",
+      "name": "Museo y Circuito Fernando Alonso",
+      "description": "El Museo y Circuito Fernando Alonso, en Llanera, reúne más de 400 piezas de la trayectoria del piloto asturiano, entre monoplazas, cascos y trofeos, repartidas en dos plantas. Junto al museo hay un circuito de karting homologado donde toda la familia puede subirse a un kart. Un plan que combina motor y diversión para los niños más aficionados a la velocidad.",
+      "official_url": "https://www.museoycircuitofernandoalonso.com",
+      "url_verified": false,
+      "address": "Complejo Deportivo La Morgal, Cayés, s/n, 33428, Llanera",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Blog Binter Canarias",
+          "domain": "elblog.bintercanarias.com",
+          "url": "https://elblog.bintercanarias.com/blog/que-hacer-con-ninos-en-asturias-8-planes-para-toda-la-familia",
+          "evidence": "Museo y Circuito de Fernando Alonso: los pequeños pueden pilotar un kart en el circuito de carreras."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Museo Fernando Alonso (Llanera): vehículos de carreras y circuito de karts para pilotar."
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "status": "primary",
+      "name": "Museo del Oro de Asturias (Navelgas)",
+      "description": "El Museo del Oro de Asturias, en Navelgas, cuenta la historia del oro en la región y de las técnicas usadas para extraerlo desde época romana. Su gran atractivo para los niños es el taller de bateo de oro, donde pueden probar con sus propias manos la técnica ancestral en un cauce de agua. Un plan práctico y distinto, ideal para completar con el paseo de la Huella del Oro junto al museo.",
+      "official_url": "https://museodeloro.es",
+      "url_verified": true,
+      "address": "Barrio San Nicolás, s/n, 33873, Navelgas, Tineo",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Museo del Oro (Navelgas): experiencia de bateo de oro en río con actividad práctica."
+        },
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Museo del Oro (Navelgas): técnicas ancestrales de bateo para buscar pepitas de oro en ríos."
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "status": "primary",
+      "name": "Casa del Lobo (Belmonte de Miranda)",
+      "description": "La Casa del Lobo, en Belmonte de Miranda, es un centro de interpretación dedicado al lobo ibérico, con un enfoque de educación ambiental y conservación de la especie. La visita incluye un pequeño sendero de naturaleza y un cercado de unos 7.000 m² donde se puede observar a varios ejemplares en semilibertad. Un plan que acerca a los niños a uno de los animales más emblemáticos y desconocidos de la fauna asturiana.",
+      "official_url": "https://www.belmontedemiranda.es/casa-del-lobo",
+      "url_verified": true,
+      "address": "Avenida Carretera del Puerto, 19, 33830, Belmonte de Miranda",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Casa del Lobo (Belmonte de Miranda): exposición sobre lobos ibéricos con cercado de observación."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Casa del Lobo (Belmonte): santuario del lobo ibérico."
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "status": "primary",
+      "name": "Los Caserinos (granja ecológica, Villaviciosa)",
+      "description": "Los Caserinos es una granja familiar ecológica cerca de Villaviciosa donde se elaboran de forma artesanal quesos, arroz con leche y yogur. Durante la visita, gratuita, los niños pueden dar de comer a cabras y conejos y conocer razas autóctonas asturianas como la oveja xalda o el gochu asturcelta. Un plan sencillo y cercano para que los más pequeños entiendan de dónde vienen algunos productos que ya conocen.",
+      "official_url": "https://loscaserinos.com",
+      "url_verified": true,
+      "address": "Maoxu, 7, Grases, Villaviciosa, 33313",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Los Caserinos (Grases): granja ecológica con interacción con animales."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Los Caserinos (Granja): visita gratuita a granja ecológica donde ver animales autóctonos asturianos de cerca."
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "status": "primary",
+      "name": "El Camín Encantáu",
+      "description": "El Camín Encantáu es una ruta circular de unos 9 km por el valle de Ardisana, en Llanes, en la que figuras de madera de personajes de la mitología asturiana como el Nuberu o el Busgosu aparecen escondidas entre bosques y prados. Es un recorrido pensado para hacer con niños, que convierte el paseo en una búsqueda de personajes fantásticos. Bien señalizada y de dificultad asequible, combina naturaleza y leyendas asturianas en un mismo plan.",
+      "official_url": null,
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "El Camín Encantáu: ruta de 10 km con figuras mitológicas de madera en el valle de Ardisana."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "El Camín Encantáu: ruta donde descubrir juntos la mitología asturiana con esculturas de personajes legendarios."
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "status": "primary",
+      "name": "Jardín Botánico Atlántico de Gijón",
+      "description": "El Jardín Botánico Atlántico de Gijón reúne cerca de 30.000 plantas y unas 2.000 especies distintas repartidas en 150.000 m² de jardines, invernaderos y bosques. Su laberinto de laurel y las zonas dedicadas a la flora atlántica hacen del paseo un plan entretenido también para los niños. Un espacio verde amplio, ideal para combinar naturaleza y aire libre en pleno Gijón.",
+      "official_url": "https://www.gijon.es/es/directorio/jardin-botanico-atlantico-de-gijon",
+      "url_verified": true,
+      "address": "Avenida del Jardín Botánico, 2230, 33203, Gijón",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Jardín Botánico de Gijón: 19 hectáreas visitables con área infantil y laberinto de laurel."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "Jardín Botánico (Gijón): jardines con senderos."
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "status": "primary",
+      "name": "MUMI - Museo de la Minería y de la Industria",
+      "description": "El MUMI recrea en El Entrego una mina subterránea real que se puede recorrer para entender cómo era el trabajo de los mineros asturianos. Documenta también la historia del carbón y la revolución industrial en la región a través de maquinaria y recursos didácticos. Un plan que combina historia local y una experiencia inmersiva que suele sorprender a los niños.",
+      "official_url": "http://www.mumi.es",
+      "url_verified": true,
+      "address": "Calle El Trabanquín, s/n, 33940, El Entrego",
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Museo de la Minería y de la Industria (MUMI): centro con tren minero que accede a una mina real."
+        },
+        {
+          "name": "Camping Villaviciosa (blog)",
+          "domain": "campingvillaviciosa.es",
+          "url": "https://campingvillaviciosa.es/que-hacer-en-asturias/con-ninos/",
+          "evidence": "MUMI (Mining Museum, El Entrego): descender a galerías de mina reales."
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "status": "backup",
+      "name": "Descenso del Sella en canoa",
+      "description": "El descenso del río Sella en canoa, entre Arriondas y Ribadesella, es uno de los planes de aventura más populares de Asturias para hacer en familia, con recorridos y niveles de dificultad adaptados a distintas edades. Remar en equipo entre paisajes verdes es una experiencia distinta que suele encantar a partir de los 5-6 años. Numerosas empresas de la zona organizan el descenso con todo el material y la seguridad necesarios.",
+      "official_url": null,
+      "url_verified": false,
+      "address": null,
+      "evidence_count": 2,
+      "independent_source_count": 2,
+      "sources": [
+        {
+          "name": "Familias en Ruta",
+          "domain": "familiasenruta.com",
+          "url": "https://familiasenruta.com/destinos/asturias-con-ninos/",
+          "evidence": "Descenso del Río Sella en canoa: actividad deportiva desde Arriondas con diferentes niveles de dificultad, a partir de 5 años."
+        },
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Descenso del Sella en Canoa: actividad de aventura navegando el río entre Arriondas y Ribadesella."
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "status": "backup",
+      "name": "Playa de Gulpiyuri",
+      "description": "La playa de Gulpiyuri, en Llanes, es una pequeña playa de interior formada por el hundimiento de una cueva junto al mar, a la que solo se llega caminando entre prados. Sus apenas 40 metros de arena y su piscina natural resguardada del viento la convierten en un rincón curioso para descubrir en familia. Declarada Monumento Natural, es una de las playas más singulares de toda la costa asturiana.",
+      "official_url": null,
+      "url_verified": false,
+      "address": "Naves, 33595, Llanes",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "A un Clic de la Aventura",
+          "domain": "aunclicdelaaventura.com",
+          "url": "https://aunclicdelaaventura.com/planes-para-hacer-en-asturias-con-ninos/",
+          "evidence": "Playa de Gulpiyuri: playa interior única sin oleaje, ideal para que niños pequeños disfruten del mar sin peligro."
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "status": "backup",
+      "name": "Cascadas de Oneta",
+      "description": "La ruta de las Cascadas de Oneta, en Villayón, es un paseo corto y sencillo de apenas 2 km que lleva hasta un conjunto de tres saltos de agua escalonados, el mayor de ellos de unos 15 metros. Por el camino se pueden ver restos de antiguos molinos hidráulicos que aprovechaban la fuerza del agua. Un plan de naturaleza fácil y accesible, ideal para niños que empiezan a caminar por el monte.",
+      "official_url": "https://www.villayon.es/index.php?M1=3&M2=43&M3=33",
+      "url_verified": true,
+      "address": "Oneta, 33787, Villayón",
+      "evidence_count": 1,
+      "independent_source_count": 1,
+      "sources": [
+        {
+          "name": "Viajes y Rutas",
+          "domain": "viajesyrutas.es",
+          "url": "https://www.viajesyrutas.es/2023/05/que-ver-en-asturias-con-ninos.html",
+          "evidence": "Cascadas de Oneta: paseo corto y accesible donde los niños descubren cascadas naturales y pueden darse un baño."
+        }
+      ]
+    }
+  ]
+}

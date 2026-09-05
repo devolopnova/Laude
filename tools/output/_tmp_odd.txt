@@ -1,0 +1,11 @@
+FICHAS CON Nº IMPAR DE ATRIBUTOS:
+  silla-coche-grupo-0-recien-nacido: 9 atributos
+  sillas-coche-grupo-1-2-3: 9 atributos
+  sillas-coche-cybex: 9 atributos
+  sillas-coche-cybex: 9 atributos
+  sillas-coche-maxi-cosi: 9 atributos
+  sillas-coche-chicco: 7 atributos
+  sillas-coche-kinderkraft: 7 atributos
+  sillas-coche-lionelo: 7 atributos
+  sillas-coche-lionelo: 7 atributos
+  sillas-coche-graco: 9 atributos

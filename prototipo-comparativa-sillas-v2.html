@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>PROTOTIPO v2 — Comparativa sillitas de coche</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF8; --ink:#1C1C1E; --ink-soft:#6B6B70; --line:#E4E2DC; --card:#FFFFFF;
+  --accent:#FF8A65; --accent-deep:#D85A30;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding:40px 32px 80px;}
+h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+
+.proto-banner{background:#2C2C2A;color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;border-radius:8px;display:inline-block;margin-bottom:14px;}
+.proto-banner b{color:#FFB199;}
+.proto-note{max-width:760px;font-size:13px;color:var(--ink-soft);margin-bottom:28px;line-height:1.6;}
+.proto-note code{background:#F0EEE8;padding:1px 5px;border-radius:4px;font-size:12px;}
+
+.page-head{margin-bottom:28px;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent-deep);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.page-head h1{font-size:30px;margin-bottom:6px;}
+.page-head p{color:var(--ink-soft);font-size:14.5px;}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+.filter-pill{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-size:13px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:6px;cursor:default;user-select:none;}
+.filter-pill:after{content:"▾";color:var(--ink-soft);font-size:10px;}
+.filter-note{font-size:12px;color:var(--ink-soft);align-self:center;font-style:italic;}
+
+.table-shell{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.04);}
+
+table{border-collapse:separate;border-spacing:0;width:100%;}
+
+thead th{
+  background:#F4F2EE; color:var(--ink); font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.03em;
+  padding:14px 16px; text-align:left; white-space:nowrap;
+  border-bottom:1px solid var(--line); border-right:1px solid var(--line);
+}
+thead th:last-child{border-right:none;}
+
+tbody td{
+  padding:14px 16px; font-size:14px; color:var(--ink);
+  border-bottom:1px solid var(--line); border-right:1px solid var(--line);
+  vertical-align:middle; white-space:nowrap;
+}
+tbody tr.main-row:last-of-type td{border-bottom:none;}
+tbody tr.main-row:hover td{background:#FBF6F1;cursor:pointer;}
+tbody tr.main-row:nth-of-type(4n+1) td{background:#FCFCFA;}
+tbody tr.main-row:nth-of-type(4n+1):hover td{background:#FBF6F1;}
+
+td.col-product{min-width:260px;max-width:320px;white-space:normal;}
+
+.prod-cell{display:flex;align-items:center;gap:12px;}
+.prod-thumb-ph{
+  width:52px;height:52px;border-radius:8px;background:linear-gradient(135deg,#F4F2EE,#E9E6DF);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:var(--ink-soft);
+  border:1px solid var(--line);
+}
+.prod-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.prod-brand{font-size:12px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.02em;}
+.prod-model{font-size:13.5px;font-weight:600;color:var(--ink);white-space:normal;line-height:1.3;}
+
+td.col-price{min-width:110px;}
+.price-current{display:block;font-size:15px;font-weight:700;color:var(--ink);}
+.price-old{display:block;font-size:12px;color:var(--ink-soft);text-decoration:line-through;margin-top:2px;}
+
+td.col-rating{min-width:150px;}
+.rating-star{display:block;font-size:14px;font-weight:700;color:#B8860B;}
+.rating-count{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:2px;font-weight:400;}
+
+.cell-empty{color:#C7C4BC;font-weight:400;}
+
+td.col-action{min-width:160px;white-space:normal;}
+.btn-amazon{
+  display:inline-block;background:var(--accent-deep);color:#fff;font-size:12.5px;font-weight:700;
+  padding:9px 14px;border-radius:7px;white-space:nowrap;transition:background .15s;margin-bottom:6px;
+}
+.btn-amazon:hover{background:#B5471F;}
+.btn-toggle{
+  display:block;background:none;border:1px solid var(--line);color:var(--ink-soft);
+  font-size:12px;font-weight:600;padding:6px 12px;border-radius:7px;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:.15s;
+}
+.btn-toggle:hover, .btn-toggle.is-open{border-color:var(--accent-deep);color:var(--accent-deep);}
+
+tr.detail-row td{padding:0;border-right:none;}
+tr.detail-row[hidden]{display:none;}
+.detail-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px 24px;
+  background:#FBF9F5;padding:20px 24px;border-bottom:1px solid var(--line);
+}
+.detail-item{display:flex;flex-direction:column;gap:3px;white-space:normal;}
+.detail-label{font-size:11px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;}
+.detail-value{font-size:13.5px;color:var(--ink);font-weight:500;}
+
+.foot-note{margin-top:18px;font-size:12px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<div class="proto-banner">⚠ Prototipo v2 — <b>no es la web real</b> — datos de tools/output/lote1_final.json tal cual</div>
+<p class="proto-note">
+  v2, tras medir el v1: en un viewport de 1280px solo 7 de 20 columnas eran
+  visibles sin hacer scroll horizontal. Aquí las 7 columnas esenciales
+  (Producto, Precio, Valoración, Edad, ISOFIX, Orientación, CTA) quedan
+  fijas y sin scroll; el resto vive en el panel <code>Ficha técnica ▾</code>
+  de cada fila. Se han eliminado 3 columnas del v1 sin valor real en este
+  lote: <b>Travel system</b> (0/15 con dato), <b>Marca</b> (duplicada — ya
+  aparece en la celda de producto) y <b>Clasificación/grupo R44</b> (0/15
+  con dato: las 15 sillas son R129/i-Size, no R44).
+</p>
+
+<div class="page-head">
+  <div class="eyebrow">Comparador de sillitas de coche</div>
+  <h1>Comparativa de sillitas de coche</h1>
+  <p>15 modelos</p>
+</div>
+
+<div class="filters">
+  <span class="filter-pill">Precio</span>
+  <span class="filter-pill">Edad</span>
+  <span class="filter-pill">ISOFIX</span>
+  <span class="filter-pill">Orientación</span>
+  <span class="filter-pill">Giratoria 360º</span>
+  <span class="filter-pill">Marca</span>
+  <span class="filter-pill">Valoración</span>
+  <span class="filter-note">(filtros de prueba, sin funcionalidad todavía)</span>
+</div>
+
+<div class="table-shell">
+    <table>
+      <thead>
+        <tr>
+          <th class="col-product">Producto</th>
+<th class="col-price">Precio</th>
+<th class="col-rating">Valoración</th>
+<th class="">Edad</th>
+<th class="">ISOFIX</th>
+<th class="">Orientación</th>
+<th class="col-action"></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    <tr class="main-row" data-target="detail-0">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-12 años), ISOFIX + cinturón, reposacabezas ajustable, guiados de cinturón, H-GUARD, SPS, AIR FLOW transpirable, Negro">Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-12 años…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">79,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,5</span><span class="rating-count">63 valoraciones</span></td>
+      <td>3,5-12 años</td>
+      <td>Sí</td>
+      <td>Sin especificar</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-cintur%C3%B3n-reposacabezas-ajustable-transpirable/dp/B0FKBWNF2G/ref=sr_1_5?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-5" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-0">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-0" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">100-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value cell-empty">—</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sin especificar</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-1">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 cm), Respaldo ajustable, Cinturón de seguridad de 5 puntos, SISTEMA EASY GROW, Fácil instalación, Rosa">Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (76-150 …</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">62,90 €</span><span class="price-old">69,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,5</span><span class="rating-count">377 valoraciones</span></td>
+      <td>15 meses - 12 años</td>
+      <td>No</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-Ajustable-ajustable-seguridad-instalaci%C3%B3n/dp/B0F9YPF1V1/ref=sr_1_6?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-6" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-1">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-1" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">76-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 5 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">5,98 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-2">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Rosa">Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla co…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">67,00 €</span><span class="price-old">79,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,4</span><span class="rating-count">4.105 valoraciones</span></td>
+      <td>15 meses - 12 años</td>
+      <td>No</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-COMFORT-Sillade-Cintur%C3%B3n-niveles/dp/B0BYP63YCW/ref=sr_1_8?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-2">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-2" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">75-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">6 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sin especificar</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-3">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model" title="CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches con y sin ISOFIX, De 3 a 12 años aprox. (100 - 150 cm), De 15 a 50 kg aprox., Negro (Pure Black)">CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para coches …</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">119,99 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,7</span><span class="rating-count">1.659 valoraciones</span></td>
+      <td>3-12 años</td>
+      <td>Sí</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Silver-infantil-Solution-coches-ISOFIX/dp/B0C58QGJNG/ref=sr_1_12?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-12" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-3">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-3" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">100-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 50 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 3 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí — 11 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-4">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft I-GROW Silla de coche, I-SIZE 40-150 cm, Isofix, Silla coche bebé, para niños, Ajustable, Sillade, RWF, FWF, Universal para coche, Asiento, 360º, Grupo 0+/1/2/3, 0-36 kg, Negro grafito">Kinderkraft I-GROW Silla de coche, I-SIZE 40-150 cm, Isofix, Silla …</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">129,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,5</span><span class="rating-count">1.485 valoraciones</span></td>
+      <td>0-12 años</td>
+      <td>Sí</td>
+      <td>Ambas</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-Ajustable-Sillade-Universal-Asiento/dp/B0BZ89X9YC/ref=sr_1_14?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-14" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-4">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-4" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">40-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 5 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">11 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-5">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model" title="Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full Black | Silla de Coche Plegable, 3.5–12 Años, 10 Posiciones del Reposacabezas, Protección Contra Impactos Laterales G-CELL">Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full Black …</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,99 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,4</span><span class="rating-count">1.385 valoraciones</span></td>
+      <td>3,5-12 años</td>
+      <td>Sí</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Maxi-Cosi-100-150cm-Posiciones-Reposacabezas-Protecci%C3%B3n/dp/B0CZ47FKZL/ref=sr_1_15?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-15" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-5">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-5" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">100-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí — 10 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">5,32 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-6">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla coche para niños, Sillade, Cinturón, regula en 11 niveles, Grupo 1/2/3, 15 meses - 12 años, 9-36 kg, Negro">Kinderkraft COMFORT UP i-Size 75-150 cm, Silla coche bebé, Silla co…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">69,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,4</span><span class="rating-count">4.105 valoraciones</span></td>
+      <td>15 meses - 12 años</td>
+      <td>No</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-COMFORT-Sillade-Cintur%C3%B3n-niveles/dp/B0BYP9MTBX/ref=sr_1_16?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-16" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-6">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-6" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">75-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">6 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sin especificar</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-7">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft SAFETY FIX 3 PRO, Silla de Coche i-Size 76–150 cm, ISOFIX, Top Tether, Protección Lateral H-GUARD, Arnés 5 Puntos, Funda Lavable, Fácil Instalación, Gris">Kinderkraft SAFETY FIX 3 PRO, Silla de Coche i-Size 76–150 cm, ISOF…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,00 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,5</span><span class="rating-count">153 valoraciones</span></td>
+      <td>Sin especificar</td>
+      <td>Sí</td>
+      <td>Sin especificar</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-Protecci%C3%B3n-Lateral-H-GUARD-Instalaci%C3%B3n/dp/B0FGDM2ZTS/ref=sr_1_20?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-20" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-7">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-7" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">76-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">9-36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">7,31 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-8">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BC</div>
+          <div class="prod-info">
+            <span class="prod-brand">Bébé Confort</span>
+            <span class="prod-model" title="Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche 360, 0-12 Años, 40-150 cm, Silla Coche ISOFIX, Instalación Pata Apoyo, Giro 360, 8 Posiciones Reclinación, 12 Posiciones Reposacabezas, Full Black">Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche 360, 0-12 Años,…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">199,99 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,2</span><span class="rating-count">458 valoraciones</span></td>
+      <td>0-12 años</td>
+      <td>Sí</td>
+      <td>Ambas</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Bebeconfort-RevolveFix-Instalaci%C3%B3n-Reclinaci%C3%B3n-Reposacabezas/dp/B0F3P61P8C/ref=sr_1_21?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-8">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-8" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">40-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 8 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí — 12 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">10,75 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-9">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model" title="Maxi-Cosi Emerald 360 S i-Size, Silla coche bebé giratoria 360°multiedad, 0-12 años (40-150 cm), 360° FlexiSpin, 4 posiciones reclinación, Protección contra impactos laterales G-CELL, Tonal Graphite">Maxi-Cosi Emerald 360 S i-Size, Silla coche bebé giratoria 360°mult…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">381,39 €</span><span class="price-old">429,99 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,6</span><span class="rating-count">617 valoraciones</span></td>
+      <td>0-12 años</td>
+      <td>Sí</td>
+      <td>Ambas</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Maxi-Cosi-giratorio-multiedad-inclinaciones-protecci%C3%B3n/dp/B0CWS19269/ref=sr_1_23_mod_primary_new?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&amp;sr=8-23" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-9">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-9" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">40-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 4 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">12,7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-10">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft I-GROW 2 PRO Silla de coche, I-SIZE 40-150 cm, Isofix, Silla coche bebé, para niños, Ajustable, Sillade, RWF, FWF, Universal para coche, Asiento, 360º, Grupo 0+/1/2/3, 0-36 kg, Negro">Kinderkraft I-GROW 2 PRO Silla de coche, I-SIZE 40-150 cm, Isofix, …</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">149,00 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,2</span><span class="rating-count">67 valoraciones</span></td>
+      <td>0-12 años</td>
+      <td>Sí</td>
+      <td>Ambas</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-Ajustable-Sillade-Universal-Asiento/dp/B0F9YR27XX/ref=sr_1_25?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-25" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-10">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-10" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">40-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 5 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">13 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sin especificar</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-11">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 cm, De 3,5 a 12 años aproximadamente, Reposacabezas ajustable, Tapizado con sistema AIR FLOW, Ajuste del respaldo en 5 posiciones, Negro">Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 cm, De …</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">89,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,4</span><span class="rating-count">234 valoraciones</span></td>
+      <td>3,5-12 años</td>
+      <td>Sí</td>
+      <td>Sin especificar</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-aproximadamente-Reposacabezas-ajustable-posiciones/dp/B0DSL7WGB2/ref=sr_1_29?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-29" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-11">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-11" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">100-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 5 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">6,3 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-12">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BC</div>
+          <div class="prod-info">
+            <span class="prod-brand">Bébé Confort</span>
+            <span class="prod-model" title="Bebeconfort Marvel RoadSafe i-Size,Asiento Elevador Coche Respaldo,3,5-12 años(100-150cm), Silla Coche Marvel Spiderman, Instalación Cinturón Seguridad,14 Posiciones Reposacabezas, Authentic Spiderman">Bebeconfort Marvel RoadSafe i-Size,Asiento Elevador Coche Respaldo,…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">79,99 €</span><span class="price-old">99,99 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,4</span><span class="rating-count">224 valoraciones</span></td>
+      <td>3,5-12 años</td>
+      <td>No</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Bebeconfort-100-150cm-Instalaci%C3%B3n-Posiciones-Reposacabezas/dp/B0GGZYY3BZ/ref=sr_1_32?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-32" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-12">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-12" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">100-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">15-36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí — 14 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3,35 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sin especificar</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-13">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Isofix, Top Tether, sensores electrónicos, hasta aprox. 12 años, sistemas de seguridad, tapizados premium, reclinables, Gris">Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Isofix, T…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">104,00 €</span><span class="price-old">119,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,5</span><span class="rating-count">186 valoraciones</span></td>
+      <td>15 meses - 12 años</td>
+      <td>Sí</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-electr%C3%B3nicos-seguridad-tapizados-reclinables/dp/B0DP7TG8KY/ref=sr_1_37?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-37" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-13">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-13" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">76-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 5 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">6,3 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-14">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model" title="Kinderkraft I-BOOST 2 Silla de coche, Silla de Bebe, Asiento de coche, I-Size, 125-150cm, asiento elevador de 6 a 12 años, fácil de montar, postura ergonómica, espuma adicional, Negro">Kinderkraft I-BOOST 2 Silla de coche, Silla de Bebe, Asiento de coc…</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">24,90 €</span></td>
+      <td class="col-rating"><span class="rating-star">★ 4,6</span><span class="rating-count">143 valoraciones</span></td>
+      <td>6-12 años</td>
+      <td>No</td>
+      <td>A favor de la marcha</td>
+      <td class="col-action">
+        <a class="btn-amazon" href="https://www.amazon.es/Kinderkraft-125-150cm-elevador-ergon%C3%B3mica-adicional/dp/B0F1R26D8L/ref=sr_1_41?dib=eyJ2IjoiMSJ9.2_Sdo4aL30V9vSpsCsfUo3DZ4tGT0qWDOy_fM191Uy7gwUpeHDxofV7C34S35BBjD2RahJYYN1ehTBVtYeU-Gz2ZqPeQRM5f8LycSLc2Id-BR0Su-w4a7-c6W4OcmJc2q5IREg79Yxt55avELfpmm9OV1HNbDmxdBhe_V1CaKYeMdeZ0oyMI4KwwALyevE02sLl04mKQftXoPsZjsE-sLy3VVbnQOlZ_Ahqn7vOFJau0i6U7TDQdmspTs0wuYGxmcl5efLECARjJZO4ffLft7QZDXSvmEa29wKZWVUXFtkc.rY66lEhGwRim2mKdZeDYkcmbbMllmonWwBOU5VuKMdM&amp;dib_tag=se&amp;keywords=sillita+coche&amp;qid=1786367149&amp;sr=8-41" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        <button class="btn-toggle" type="button" data-toggle="detail-14">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-14" hidden>
+      <td colspan="7">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Altura R129</span><span class="detail-value">125-150 cm</span></div>
+<div class="detail-item"><span class="detail-label">Peso recomendado</span><span class="detail-value">Hasta 36 kg</span></div>
+<div class="detail-item"><span class="detail-label">Homologación</span><span class="detail-value">R129 / i-Size</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Giratoria 360º</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value cell-empty">—</span></div>
+<div class="detail-item"><span class="detail-label">Arnés / protección</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">1,2 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+      </td>
+    </tr>
+      </tbody>
+    </table>
+</div>
+
+<p class="foot-note">Prototipo generado por tools/build_comparativa_prototipo_v2.py — no modifica ningún archivo de producción.</p>
+
+<script>
+document.querySelectorAll('.btn-toggle').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const panel = document.getElementById(btn.dataset.toggle);
+    const isOpen = !panel.hasAttribute('hidden');
+    if (isOpen) { panel.setAttribute('hidden', ''); btn.classList.remove('is-open'); btn.textContent = 'Ficha técnica ▾'; }
+    else { panel.removeAttribute('hidden'); btn.classList.add('is-open'); btn.textContent = 'Ficha técnica ▴'; }
+  });
+});
+document.querySelectorAll('tr.main-row').forEach(row => {
+  row.addEventListener('click', () => {
+    row.querySelector('.btn-toggle').click();
+  });
+});
+</script>
+
+</body>
+</html>

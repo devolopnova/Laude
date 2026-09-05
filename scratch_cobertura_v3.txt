@@ -1,0 +1,17 @@
+Campo                  Si   No  Revisar  Sin esp.  % cobertura
+isofix                 22    8        0         0         100%
+tipo_instalacion        0    0        0         0         100%
+normativa               0    0        0         0         100%
+altura                  0    0        0         1          97%
+peso_recomendado        0    0        0         1          97%
+orientacion             0    0        0         1          97%
+arnes                   0    0        1         0          97%
+edad                    0    0        0         2          93%
+reposacabezas          26    1        0         3          90%
+peso_silla              0    0        0         5          83%
+proteccion_lateral     19    0        0        11          63%
+reclinable             17    1        0        12          60%
+grupo                   0    0        0        13          57%
+funda_lavable          12    0        0        18          40%
+giro_360               10    1        0        19          37%
+travel_system           1    0        0        26          13%

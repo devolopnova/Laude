@@ -252,17 +252,18 @@ h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em
 .mc-compare-btn:hover{background:#B5471F;}
 .mc-compare-btn:disabled{background:var(--line); color:var(--ink-soft); cursor:not-allowed;}
 
-/* Panel de busqueda -- hoja inferior (bottom sheet), patron movil
-   estandar: overlay + tarjeta anclada abajo con lista con scroll
-   propio, para no arrastrar scroll horizontal ni usar una tabla. */
+/* Panel de busqueda -- movil (31-ago-2026): anclado ARRIBA (no abajo
+   como un bottom sheet clasico), para que se vea de inmediato sin tener
+   que buscarlo en la parte baja de la pantalla. Overlay + tarjeta con
+   scroll propio, para no arrastrar scroll horizontal ni usar una tabla. */
 .mc-selector-panel{
   position:fixed; inset:0; z-index:60; background:rgba(28,28,30,.45);
-  display:flex; align-items:flex-end; justify-content:center;
+  display:flex; align-items:flex-start; justify-content:center;
 }
 .mc-selector-panel[hidden]{display:none;}
 .mc-selector-panel-inner{
   width:100%; max-width:520px; max-height:82vh; background:var(--card);
-  border-radius:20px 20px 0 0; box-shadow:0 -8px 24px rgba(0,0,0,.18);
+  border-radius:0 0 20px 20px; box-shadow:0 8px 24px rgba(0,0,0,.18);
   display:flex; flex-direction:column; overflow:hidden;
 }
 .mc-selector-panel-head{
@@ -663,7 +664,7 @@ tr.detail-row[hidden]{display:none;}
 <div class="page-head">
   <div class="eyebrow">Comparador de sillitas de coche</div>
   <h1>Comparativa de sillitas de coche</h1>
-  <p>54 modelos</p>
+  <p>68 modelos</p>
 </div>
 
 <div class="mobile-compare">
@@ -3314,6 +3315,637 @@ tr.detail-row[hidden]{display:none;}
 <div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
         <div class="detail-amazon">
           <a class="btn-amazon" href="https://www.amazon.es/dp/B0BYP6Q1PC?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-54" data-orig-index="54" data-sort-precio="219.99" data-sort-valoracion="4.6" data-sort-nval="768" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="15.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0C3HJNK2M.webp" alt="Britax Römer EVOLVAFIX" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">EVOLVAFIX</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">219,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">768 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">15 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos"><span class="cell-block">Arnés 5 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0C3HJNK2M?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-54">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-54" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-54" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">9,8 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C3HJNK2M?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-55" data-orig-index="55" data-sort-precio="169.0" data-sort-valoracion="4.6" data-sort-nval="595" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0BDBYLMYR.webp" alt="Britax Römer DISCOVERY PLUS 2" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">DISCOVERY PLUS 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">169,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">595 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos"><span class="cell-block">Arnés 3 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0BDBYLMYR?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-55">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-55" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-55" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">5,9 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BDBYLMYR?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-56" data-orig-index="56" data-sort-precio="129.0" data-sort-valoracion="4.6" data-sort-nval="366" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0BDBX11ZY.webp" alt="Britax Römer ADVENTURE PLUS 2" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">ADVENTURE PLUS 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">129,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">366 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Grupo 2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos"><span class="cell-block">Arnés 3 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0BDBX11ZY?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-56">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-56" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-56" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">5,2 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón del vehículo</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BDBX11ZY?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-57" data-orig-index="57" data-sort-precio="222.84" data-sort-valoracion="4.3" data-sort-nval="334" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0CL7TWRCS.webp" alt="Britax Römer KIDFIX 2 Z-LINE" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">KIDFIX 2 Z-LINE</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">222,84 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,3</span><span class="val-count">334 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos"><span class="cell-block">Arnés 3 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CL7TWRCS?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-57">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-57" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-57" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">6,6 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CL7TWRCS?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-58" data-orig-index="58" data-sort-precio="289.0" data-sort-valoracion="4.3" data-sort-nval="331" data-sort-altura-min="40.0" data-sort-altura-max="105.0" data-sort-peso-max="20.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="contramarcha" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0BDC9QNXM.webp" alt="Britax Römer DUALFIX PLUS" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">DUALFIX PLUS</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">289,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,3</span><span class="val-count">331 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">40-105 cm</span>
+<span class="rango-secondary">Hasta 20 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A contramarcha"><span class="cell-block">A contramarcha</span></td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos"><span class="cell-block">Arnés 5 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0BDC9QNXM?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-58">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-58" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-58" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">12,5 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BDC9QNXM?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-59" data-orig-index="59" data-sort-precio="259.9" data-sort-valoracion="4.6" data-sort-nval="187" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="9.0" data-sort-edad-max="144.0" data-sort-grupo-num="3" data-sort-grupo-first="1.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0CL7GK9NZ.webp" alt="Britax Römer ADVANSAFIX 2 Z-LINE" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">ADVANSAFIX 2 Z-LINE</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">259,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">187 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">9 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">Grupo 1/2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos"><span class="cell-block">Arnés 5 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CL7GK9NZ?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-59">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-59" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-59" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">10 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CL7GK9NZ?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-60" data-orig-index="60" data-sort-precio="173.42" data-sort-valoracion="4.3" data-sort-nval="97" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0DGY3YPG6.webp" alt="Britax Römer KIDFIX PRO M" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">KIDFIX PRO M</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">173,42 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,3</span><span class="val-count">97 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí (opcional, también cinturón)">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos"><span class="cell-block">Arnés 3 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DGY3YPG6?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-60">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-60" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-60" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">6,5 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DGY3YPG6?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-61" data-orig-index="61" data-sort-precio="112.95" data-sort-valoracion="4.5" data-sort-nval="333" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="contramarcha" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0CQP6H2WW.webp" alt="BabyAuto LOLO i-Size" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">BabyAuto</span>
+            <span class="prod-model">LOLO i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">112,95 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">333 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A contramarcha"><span class="cell-block">A contramarcha</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos"><span class="cell-block">Arnés 5 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CQP6H2WW?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-61">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-61" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-61" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CQP6H2WW?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-62" data-orig-index="62" data-sort-precio="38.9" data-sort-valoracion="4.7" data-sort-nval="252" data-sort-edad-min="60.0" data-sort-edad-max="144.0" data-sort-grupo-num="1" data-sort-grupo-first="3.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0BRTNR2DS.webp" alt="BabyAuto Nauna" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">BabyAuto</span>
+            <span class="prod-model">Nauna</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">38,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">252 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">5-12 años</span>
+<span class="rango-secondary">Grupo 3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion cell-unspecified" title="Sin especificar"><span class="cell-block">—</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje cell-unspecified" title="Sin especificar"><span class="cell-block">—</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0BRTNR2DS?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-62">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-62" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-62" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BRTNR2DS?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-63" data-orig-index="63" data-sort-precio="38.9" data-sort-valoracion="4.5" data-sort-nval="104" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0F7Y88MMC.webp" alt="BabyAuto Pico i-Size" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">BabyAuto</span>
+            <span class="prod-model">Pico i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">38,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">104 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-secondary">22-36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos"><span class="cell-block">Arnés 3 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0F7Y88MMC?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-63">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-63" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-63" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0F7Y88MMC?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-64" data-orig-index="64" data-sort-precio="25.41" data-sort-valoracion="4.6" data-sort-nval="1040" data-sort-altura-min="125.0" data-sort-altura-max="150.0" data-sort-edad-min="84.0" data-sort-edad-max="144.0" data-sort-grupo-num="1" data-sort-grupo-first="3.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0DWNFPMX1.webp" alt="KikkaBoo i-POP" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-POP</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">25,41 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">1.040 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">7-12 años</span>
+<span class="rango-primary">125-150 cm</span>
+<span class="rango-secondary">Grupo 3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo"><span class="cell-block">Cinturón vehículo</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DWNFPMX1?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-64">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-64" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-64" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DWNFPMX1?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-65" data-orig-index="65" data-sort-precio="16.91" data-sort-valoracion="4.6" data-sort-nval="751" data-sort-altura-min="125.0" data-sort-altura-max="150.0" data-sort-edad-min="84.0" data-sort-edad-max="144.0" data-sort-grupo-num="1" data-sort-grupo-first="3.0" data-sort-peso-max="36.0" data-sort-orientacion-cat="favor">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0DWNG58LK.webp" alt="KikkaBoo i-UP" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-UP</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">16,91 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">751 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">7-12 años</span>
+<span class="rango-primary">125-150 cm</span>
+<span class="rango-secondary">Grupo 3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain txt-plain--unk" title="Sin especificar">Sin especificar</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje cell-unspecified" title="Sin especificar"><span class="cell-block">—</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DWNG58LK?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-65">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-65" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-65" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">1,1 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DWNG58LK?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-66" data-orig-index="66" data-sort-precio="109.95" data-sort-valoracion="4.4" data-sort-nval="131" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0CWCWJKGS.webp" alt="KikkaBoo i-TRACK" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-TRACK</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">109,95 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">131 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-secondary">Grupo 2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos"><span class="cell-block">Arnés 3 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CWCWJKGS?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-66">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-66" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-66" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí — 12 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">6,7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CWCWJKGS?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-67" data-orig-index="67" data-sort-precio="84.9" data-sort-valoracion="4.2" data-sort-nval="226" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-grupo-num="4" data-sort-grupo-first="0.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <img class="prod-thumb-img" src="images/sillas-coche/B0FF9K9WM3.webp" alt="KikkaBoo i-EXPLORE 2" width="44" height="44" loading="lazy">
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-EXPLORE 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">84,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,2</span><span class="val-count">226 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size"><span class="cell-block">R129 / i-Size</span></td>
+      <td class="col-rango"><div class="rango-block"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Grupo 0/1/2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></div></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha"><span class="cell-block">A favor</span></td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos"><span class="cell-block">Arnés 5 puntos</span></td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0FF9K9WM3?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-67">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-67" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-67" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí — 3 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí — 14 posiciones</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">6,5 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FF9K9WM3?tag=laude09-21" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
         </div>
       </td>
     </tr>

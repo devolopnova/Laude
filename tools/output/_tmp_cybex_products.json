@@ -1,0 +1,56 @@
+FOUND B0B97Z1C6M
+{
+ "asin": "B0B97Z1C6M",
+ "marca": "Cybex",
+ "modelo": "Solution S2 i-Fix",
+ "actual_lote1": false,
+ "precio": 149.95,
+ "valoracion": 4.8,
+ "n_val": 4098,
+ "grupo": "Sin especificar",
+ "edad": "3-12 años",
+ "altura": "100-150 cm",
+ "peso_recomendado": "15-50 kg",
+ "isofix": "Sí (opcional, también cinturón)",
+ "tipo_instalacion": "Cinturón + ISOFIX opcional",
+ "orientacion": "A favor de la marcha",
+ "reclinable": "Sí",
+ "giro_360": "Sin especificar",
+ "normativa": "R129 / i-Size",
+ "reposacabezas": "Sí",
+ "arnes": "Arnés de 3 puntos",
+ "peso_silla": "6,2 kg",
+ "proteccion_lateral": "Sí (Sistema L.S.P., confirmado en Amazon)",
+ "funda_lavable": "Sí (lavable a máquina 30°C, confirmado en Amazon)",
+ "travel_system": "Sin especificar",
+ "estado_auditoria": "✅ Sustituye a EVOLVAFIX por decisión del usuario (13-ago-2026): es el Cybex con mas valoraciones en Amazon.es (4.098, verificado en vivo), elegido explicitamente por ese criterio tras descartar EVOLVAFIX por disponibilidad (3-7 meses de espera). Nota de redundancia: mismo rango 100-150cm que Solution X i-Fix, ya en la seleccion -- aceptado conscientemente por el usuario. Normativa R129/03 confirmada solo por fabricante oficial (cybex-online.com, manual de usuario), Amazon no la menciona explicitamente."
+}
+---
+FOUND B0C58QGJNG
+{
+ "asin": "B0C58QGJNG",
+ "marca": "Cybex",
+ "modelo": "Solution X i-Fix",
+ "actual_lote1": true,
+ "precio": 119.99,
+ "valoracion": 4.7,
+ "n_val": 1659,
+ "grupo": "Sin especificar",
+ "edad": "3-12 años",
+ "altura": "100-150 cm",
+ "peso_recomendado": "Hasta 50 kg",
+ "isofix": "Sí",
+ "tipo_instalacion": "ISOFIX",
+ "orientacion": "A favor de la marcha",
+ "reclinable": "Sí",
+ "giro_360": "Sin especificar",
+ "normativa": "R129 / i-Size",
+ "reposacabezas": "Sí",
+ "arnes": "Arnés de 3 puntos",
+ "peso_silla": "7 kg",
+ "proteccion_lateral": "Sí",
+ "funda_lavable": "Sí (confirmado por fabricante)",
+ "travel_system": "Sin especificar",
+ "estado_auditoria": "Confirmado (Lote 1, sin cambios)"
+}
+---

@@ -1,0 +1,179 @@
+{
+  "_comentario": "Hallazgos verificados a mano navegando la web oficial de cada fabricante para el MODELO EXACTO (ver auditoria en la conversacion del proyecto, 2026-08-10). No es un scraper automatico: para productos nuevos que no esten aqui, la clasificacion depende solo de Amazon hasta que se investigue y añada su entrada. Solo se usa el contenido VISIBLE de la ficha oficial (nunca <title>/meta/SEO). identidad_verificada=true exige al menos 2 señales independientes de que es el mismo producto (SKU/familia, caracteristicas tecnicas, rango de altura, homologacion, ISOFIX...).",
+
+  "B0FKBWNF2G": {
+    "marca_fabricante": "Kinderkraft",
+    "modelo_fabricante": "JUNIOR FIX 2 PLUS i-Size",
+    "url_fabricante": "https://kinderkraft.es/productos/junior-fix-2-plus",
+    "nombre_amazon": "Kinderkraft JUNIOR FIX 2 PRO",
+    "nombre_fabricante": "Kinderkraft JUNIOR FIX 2 PLUS i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": true,
+    "motivo_equivalencia": "SKU/familia coincidente (Amazon 'KCJUFI20BLK000N' vs. web oficial 'KCJUFI20ALLPL0N', mismo prefijo KCJUFI20) + coincidencia exacta de 5 caracteristicas tecnicas de Amazon (AIR FLOW transpirable, guias de cinturon, H-GUARD y SPS, ISOFIX, reposacabezas regulable) con el carrusel de caracteristicas de la ficha oficial + mismo rango 100-150cm / 3,5-12 años.",
+    "hallazgos": {
+      "normativa": {
+        "valor": "r129_isize",
+        "texto_fuente": "Titulo visible de la ficha oficial: 'Silla de auto JUNIOR FIX 2 PLUS i-Size'."
+      }
+    }
+  },
+
+  "B0F9YPF1V1": {
+    "marca_fabricante": "Kinderkraft",
+    "modelo_fabricante": "I-COMFY i-Size",
+    "url_fabricante": "https://kinderkraft.es/productos/i-comfy",
+    "nombre_amazon": "Kinderkraft I-COMFY",
+    "nombre_fabricante": "Kinderkraft I-COMFY i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Mismo nombre de modelo (I-COMFY) en Amazon y fabricante; mismo rango 76-150cm / 15 meses-12 años en ambas fichas.",
+    "hallazgos": {
+      "isofix": {
+        "valor": false,
+        "texto_fuente": "Ninguna mencion de ISOFIX en toda la ficha de caracteristicas visibles (Easy Grow System, H-GUARD/SPS, guia unica para el cinturon abdominal, respaldo ajustable); corrobora el Q&A visible de Amazon ('No; la silla se instala con el cinturon de seguridad del coche')."
+      }
+    }
+  },
+
+  "B0DSL7WGB2": {
+    "marca_fabricante": "Kinderkraft",
+    "modelo_fabricante": "UNITY 2 i-Size",
+    "url_fabricante": "https://kinderkraft.es/productos/unity-2",
+    "nombre_amazon": "Kinderkraft UNITY 2 i-Size",
+    "nombre_fabricante": "Kinderkraft UNITY 2 i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Nombre de modelo identico; mismo rango 100-150cm / 3,5-12 años en ambas fichas.",
+    "hallazgos": {
+      "isofix": {
+        "valor": true,
+        "texto_fuente": "Contenido visible: \"Instalación ISOFIX – rápida, estable y segura\" (seccion Principales ventajas); \"un sistema de instalación ISOFIX para mayor estabilidad y seguridad\" (seccion Características)."
+      }
+    }
+  },
+
+  "B0F1R26D8L": {
+    "marca_fabricante": "Kinderkraft",
+    "modelo_fabricante": "I-BOOST 2 i-Size",
+    "url_fabricante": "https://kinderkraft.es/productos/i-boost-2",
+    "nombre_amazon": "Kinderkraft I-BOOST 2",
+    "nombre_fabricante": "Kinderkraft I-BOOST 2 i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Mismo nombre de modelo; mismo rango 125-150cm / 6-12 años; mismo peso de la silla (1,2 kg) en ambas fichas.",
+    "hallazgos": {
+      "isofix": {
+        "valor": false,
+        "texto_fuente": "Contenido visible: \"Instalación fácil y segura con el cinturón de seguridad\": El asiento se instala utilizando el cinturón de seguridad de 3 puntos del coche. \"Instalación fácil y universal con el cinturón de seguridad\". Ninguna mención de ISOFIX en toda la ficha visible."
+      }
+    }
+  },
+
+  "B0C58QGJNG": {
+    "marca_fabricante": "Cybex (CBX by CYBEX)",
+    "modelo_fabricante": "Solution X i-Fix",
+    "url_fabricante": "https://www.cybex-online.com/es/es/p/cs-cx-solution-x-i-fix.html",
+    "nombre_amazon": "CBX by CYBEX Silla de coche infantil Solution X i-Fix",
+    "nombre_fabricante": "CYBEX Solution X i-Fix (vendido en la tienda oficial bajo la seccion 'cbx by CYBEX')",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Mismo nombre de producto ('Solution X i-Fix'); codigo de producto de la tienda oficial 'cs-cx-solution-x-i-fix' (cx = CBX); manual oficial de usuario para el mismo modelo. La diferencia es solo de presentacion de marca (CBX es sub-marca de Cybex, vendida en su misma tienda oficial), no de modelo.",
+    "hallazgos": {
+      "normativa": {
+        "valor": "r129_isize",
+        "texto_fuente": "Manual oficial de usuario titulado 'SOLUTION X I-FIX User guide UN R129/03, 100 – 150cm'; ficha oficial confirma cumplimiento de UN R129/04 e i-Size."
+      },
+      "funda_lavable": {
+        "valor": true,
+        "texto_fuente": "Contenido visible, apartado 'Instrucciones para el cuidado' de la ficha oficial: \"Tejidos lavables a máquina a 30°C\"."
+      }
+    }
+  },
+
+  "B0CZ47FKZL": {
+    "marca_fabricante": "Maxi-Cosi",
+    "modelo_fabricante": "Tanza i-Size",
+    "url_fabricante": "https://www.maxi-cosi.es/sillas-de-coche/tanza-i-size",
+    "nombre_amazon": "Maxi-Cosi Tanza i-Size",
+    "nombre_fabricante": "Maxi-Cosi Tanza i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Nombre de modelo identico; mismo rango 100-150cm / 3,5-12 años en ambas fichas.",
+    "hallazgos": {
+      "isofix": {
+        "valor": true,
+        "texto_fuente": "Contenido VISIBLE de la seccion 'Uso sencillo' (verificado por el usuario con captura de pantalla, descartando la etiqueta <title> que se habia leido por error en una primera pasada): \"Con conectores ISOFIX, garantiza una instalación rápida, segura y estable en el coche, minimizando la configuración\". Sin ninguna mencion de cinturon en el cuerpo visible de la pagina."
+      },
+      "arnes": {
+        "valor": "arnes_3_puntos",
+        "texto_fuente": "Tabla de especificaciones visible de la ficha oficial: \"Tipo de arnés: 3 puntos\" (misma etiqueta que usa Amazon en su propia tabla, pero Amazon no la tenía rellenada para este ASIN)."
+      },
+      "grupo": {
+        "valor": "2/3",
+        "texto_fuente": "Encabezado principal visible de la ficha oficial: \"silla de coche infantil con cinturón para grupo 2/3\" (auditoria de grupo, 2026-08-11). Coincide exactamente con el bullet de Amazon \"SILLA COCHE GRUPO 2/3\"."
+      }
+    }
+  },
+
+  "B0GGZYY3BZ": {
+    "marca_fabricante": "Bebeconfort",
+    "modelo_fabricante": "Marvel RoadSafe i-Size",
+    "url_fabricante": "https://www.bebeconfort.es/sillas-de-coche/bebeconfort-marvel-roadsafe-i-size",
+    "nombre_amazon": "Bebeconfort Marvel RoadSafe i-Size (Spiderman)",
+    "nombre_fabricante": "Bebeconfort Marvel RoadSafe i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Nombre de modelo identico (variante de personaje/color Spiderman, no cambia el modelo); mismo rango 100-150cm / 3,5-12 años; mismo peso maximo 36kg.",
+    "hallazgos": {
+      "isofix": {
+        "valor": false,
+        "resuelto_manualmente": true,
+        "texto_fuente": "Contenido VISIBLE, pestaña 'Especificaciones' de la ficha oficial (bebeconfort.es), campo estructurado explicito, encontrado y verificado por el usuario: 'Instalación de la silla de coche: base ISOFIX: No' / 'Instalación de la silla de coche: cinturón de seguridad: Yes'. Corroborado por la version internacional (bebeconfort.com): 'installed with straightforward seat belt fixture'. Contradice un bullet aislado de Amazon ('esta silla coche ISOFIX grupo 2-3') que el resto de la propia ficha de Amazon (tabla + descripcion) tampoco corrobora. RESUELTO: el usuario confirmo explicitamente en el chat (2026-08-10) que el valor correcto es 'No lleva ISOFIX, si cinturon' — no es una resolucion automatica del sistema."
+      }
+    }
+  },
+
+  "B0DP7TG8KY": {
+    "marca_fabricante": "Kinderkraft",
+    "modelo_fabricante": "FIX2GO i-Size",
+    "url_fabricante": "https://kinderkraft.es/productos/fix2go",
+    "nombre_amazon": "Kinderkraft FIX2GO",
+    "nombre_fabricante": "FIX2GO i-Size",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Mismo nombre de modelo (FIX2GO); mismo rango tecnico 76-150cm/15 meses-12 años en ambas fichas (bullet de Amazon: 'silla de coche para niños de entre 15 meses y 12 años (76–150 cm)' vs. acordeon 'Dimensiones y material' del fabricante: 'Estatura/peso/edad del niño 76-150 cm/9-36 kg/15 meses-12 años').",
+    "hallazgos": {
+      "proteccion_lateral": {
+        "valor": true,
+        "texto_fuente": "Contenido visible, caracteristica destacada de la ficha oficial: \"SPS+: protección lateral reforzada — El sistema SPS+ son refuerzos especiales en los laterales de la silla. Son los primeros que reciben la fuerza de los choques laterales, absorbiéndola y reduciendo sus consecuencias\"."
+      },
+      "reposacabezas": {
+        "valor": {"regulable": true, "posiciones": null},
+        "texto_fuente": "Contenido visible: \"el ajuste del reposacabezas y el arnés en un movimiento hace que la silla se ajuste siempre a la perfección\". Confirma que es regulable pero no da un numero de posiciones."
+      },
+      "edad": {
+        "valor": {"edad_min_anios": 1.25, "edad_max_anios": 12.0},
+        "mostrar": "15 meses - 12 años",
+        "texto_fuente": "Contenido visible, acordeon 'Dimensiones y material' de la ficha oficial: \"Estatura/peso/edad del niño 76-150 cm/9-36 kg/15 meses-12 años\"."
+      }
+    }
+  },
+
+  "B0CWS19269": {
+    "marca_fabricante": "Maxi-Cosi",
+    "modelo_fabricante": "Emerald 360 S",
+    "url_fabricante": "https://www.maxi-cosi.es/sillas-de-coche/emerald-360-s",
+    "nombre_amazon": "Maxi-Cosi Emerald 360 S i-Size",
+    "nombre_fabricante": "Emerald 360 S",
+    "identidad_verificada": true,
+    "aviso_nombre_diferente": false,
+    "motivo_equivalencia": "Nombre de modelo identico; mismo peso del producto (12,7 kg) y mismo rango de edad (0-12 años) en ambas fichas -- 3 señales independientes coincidentes.",
+    "hallazgos": {
+      "reposacabezas": {
+        "valor": {"regulable": true, "posiciones": null},
+        "resuelto_manualmente": true,
+        "texto_fuente": "Contradiccion real entre Amazon (bullet explicito: \"14 POSICIONES DE REPOSACABEZAS\") y fabricante (contenido visible: \"nueve posiciones ajustables de altura del reposacabezas\") para el numero exacto de posiciones de altura del reposacabezas. Ambas fuentes son explicitas y hablan del mismo atributo, sin indicio de variante/color/generacion distinta. RESUELTO MANUALMENTE por decision del usuario (2026-08-11): se mantiene la confirmacion cualitativa (reposacabezas regulable = Si, coincidente en ambas fuentes) pero se omite el numero de posiciones al no poder determinarse con fiabilidad cual de las dos cifras (14 o 9) es correcta -- no es una resolucion automatica del sistema."
+      }
+    }
+  }
+}

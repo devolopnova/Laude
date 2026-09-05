@@ -1,0 +1,41 @@
+orientacion: 12/15 confirmados
+  N/A: B0FKBWNF2G | Kinderkraft
+  N/A: B0FGDM2ZTS | Kinderkraft
+  N/A: B0DSL7WGB2 | Kinderkraft
+reclinable: 8/15 confirmados
+  N/A: B0FKBWNF2G | Kinderkraft
+  N/A: B0BYP63YCW | Kinderkraft
+  N/A: B0CZ47FKZL | Maxi-Cosi
+  N/A: B0BYP9MTBX | Kinderkraft
+  N/A: B0FGDM2ZTS | Kinderkraft
+  N/A: B0GGZYY3BZ | Bébé Confort
+  N/A: B0F1R26D8L | Kinderkraft
+giro_360: 4/15 confirmados
+  N/A: B0FKBWNF2G | Kinderkraft
+  N/A: B0F9YPF1V1 | Kinderkraft
+  N/A: B0BYP63YCW | Kinderkraft
+  N/A: B0C58QGJNG | Cybex
+  N/A: B0CZ47FKZL | Maxi-Cosi
+  N/A: B0BYP9MTBX | Kinderkraft
+  N/A: B0FGDM2ZTS | Kinderkraft
+  N/A: B0DSL7WGB2 | Kinderkraft
+  N/A: B0GGZYY3BZ | Bébé Confort
+  N/A: B0DP7TG8KY | Kinderkraft
+  N/A: B0F1R26D8L | Kinderkraft
+arnes: 12/15 confirmados
+  N/A: B0CZ47FKZL | Maxi-Cosi
+  N/A: B0DSL7WGB2 | Kinderkraft
+  N/A: B0F1R26D8L | Kinderkraft
+proteccion_lateral: 10/15 confirmados
+  N/A: B0BYP63YCW | Kinderkraft
+  N/A: B0BYP9MTBX | Kinderkraft
+  N/A: B0GGZYY3BZ | Bébé Confort
+  N/A: B0DP7TG8KY | Kinderkraft
+  N/A: B0F1R26D8L | Kinderkraft
+funda_lavable: 9/15 confirmados
+  N/A: B0FKBWNF2G | Kinderkraft
+  N/A: B0BYP63YCW | Kinderkraft
+  N/A: B0C58QGJNG | Cybex
+  N/A: B0BYP9MTBX | Kinderkraft
+  N/A: B0F9YR27XX | Kinderkraft
+  N/A: B0GGZYY3BZ | Bébé Confort

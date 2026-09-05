@@ -1,0 +1,146 @@
+FASE PILOTO - investigacion fabricante (peso_silla, reposacabezas+posiciones, edad)
+Notas de investigacion en bruto, se compilara tabla final al terminar.
+=====================================================================
+
+
+--- B0FKBWNF2G Kinderkraft JUNIOR FIX 2 PRO (fabricante: JUNIOR FIX 2 PLUS i-Size) ---
+URL: https://kinderkraft.es/productos/junior-fix-2-plus
+Identidad: ya verificada en fabricante_lookup.json (SKU+caracteristicas). aviso_nombre_diferente=true.
+peso_silla: NO mencionado en ningun sitio visible de la ficha (ni specs ni descripcion). = N/A fabricante.
+reposacabezas: "reposacabezas regulable" confirmado en texto ("El reposacabezas regulable... permiten adaptar la silla al crecimiento del niño") pero SIN numero de posiciones indicado en ningun lugar visible. = confirma "Si" (ya lo teniamos) pero NO aporta numero de posiciones.
+edad: "aproximadamente desde los 3,5 hasta los 12 años" -- coincide EXACTO con Amazon (3,5-12 años). Sin aportar rango nuevo.
+Nota: la ficha no tiene tabla de especificaciones tecnicas con peso del producto en kg visible (solo texto de marketing/caracteristicas cualitativas).
+
+--- B0F9YPF1V1 Kinderkraft I-COMFY ---
+URL: https://kinderkraft.es/productos/i-comfy
+Identidad: ya verificada en lookup.
+peso_silla: NO mencionado. N/A fabricante (Amazon ya tenia 5,98 kg, se mantiene sin contradiccion).
+reposacabezas: EASY GROW ajusta reposacabezas+arnes simultaneamente, pero SIN numero de posiciones del reposacabezas (el "10 posiciones" que aparece es de RECLINACION, atributo distinto, fuera de alcance esta fase). N/A fabricante para el numero.
+edad: "76 a 150 cm de altura (aprox. 15 meses - 12 años)" -- coincide EXACTO con Amazon.
+
+--- B0DSL7WGB2 Kinderkraft UNITY 2 i-Size ---
+URL: https://kinderkraft.es/productos/unity-2
+IMPORTANTE: encontrada seccion colapsada (acordeon "Dimensiones y material", visible al desplegar, x-show con display:none por defecto -- cuenta como contenido visible/desplegable de la ficha) con TABLA REAL:
+  Rango util/edad: 100-150cm / aprox. 3,5-12 anos
+  Peso: 6,3 kg
+  Dimensiones: (vacio)
+peso_silla: CONFIRMADO 6,3 kg -- coincide EXACTO con Amazon (6,3 kg). fuente=amazon_y_fabricante.
+edad: CONFIRMADO 3,5-12 anos -- coincide EXACTO con Amazon.
+reposacabezas: bullets dicen "reposacabezas regulable" (SIN numero de posiciones en ningun sitio). N/A para el numero.
+NOTA METODOLOGICA: hay que revisar JUNIOR FIX 2 PLUS e I-COMFY otra vez con JS (por si tenian el mismo acordeon colapsado que get_page_text no capturo).
+
+--- B0FKBWNF2G / B0F9YPF1V1: confirmado (revisado con JS) que esas 2 fichas NO tienen seccion "Dimensiones y material" -- solo tienen Instrucciones/Info fabricante/Info seguridad. Sin peso_silla disponible en fabricante para ninguna de las dos. (edad SI aparece en "Informacion importante de seguridad" como rango de altura cm, coincide con Amazon en ambas)
+
+--- B0F1R26D8L Kinderkraft I-BOOST 2 ---
+URL: https://kinderkraft.es/productos/i-boost-2
+Acordeon "Dimensiones y material": Peso: 1,2 kg | Altura/peso/edad: 125-150cm / aprox. 6-12 anos
+peso_silla: CONFIRMADO 1,2 kg -- coincide EXACTO con Amazon. fuente=amazon_y_fabricante.
+edad: CONFIRMADO 6-12 anos -- coincide EXACTO con Amazon (ya lo teniamos).
+reposacabezas: SIN mencion alguna de "reposacabezas" en toda la ficha (ni bullets, ni caracteristicas, ni acordeon). Consistente con ser un booster sin reposacabezas integrado (usa el del coche). Confirma que el N/A actual es N/A REAL, no falta de investigacion.
+
+--- B0C58QGJNG Cybex CBX Solution X i-Fix ---
+URL: https://www.cybex-online.com/es/es/p/cs-cx-solution-x-i-fix.html
+(pagina con acordeones lazy: contenido real solo accesible via textContent, no innerText/get_page_text estandar -- confirmado via inspeccion DOM)
+Medidas (acordeon): Longitud 380mm | Anchura 470mm | Altura 640mm | Peso: 7 kg
+peso_silla: CONFIRMADO 7 kg -- coincide EXACTO con Amazon (7 kg). fuente=amazon_y_fabricante.
+Especificaciones: "Rango de edad: desde los 3 hasta 12 años aprox." 
+edad: CONFIRMADO 3-12 anos -- coincide EXACTO con Amazon.
+reposacabezas -- HALLAZGO IMPORTANTE (posible bug del extractor, no solo dato nuevo):
+  Fabricante dice explicitamente: "reposacabezas de altura regulable en 11 posiciones" (ajuste de ALTURA).
+  Valor actual guardado: "Si - 3 posiciones".
+  Revisando el bullet de Amazon de origen: bullet 2 dice "Reposacabezas RECLINABLE Cybex de 3 posiciones" (eso es reclinado, NO altura) y bullet 3 (aparte) dice "Reposacabezas AJUSTABLE EN ALTURA en 11 posiciones" (esto es lo que corresponde al atributo "reposacabezas regulable en altura").
+  El detector actual escaneo bullets en orden y cogio el "3 posiciones" del bullet de RECLINADO en vez del "11 posiciones" del bullet de ALTURA -- son dos datos distintos de Amazon, no una contradiccion fabricante-vs-amazon real, sino una mala asignacion interna del extractor entre dos bullets del MISMO Amazon.
+  Fabricante confirma inequivocamente 11 (altura). PROPONGO: revisar=true, valor_definitivo pendiente de decision humana antes de tocar codigo (posiblemente "Si - 11 posiciones", fuente amazon_y_fabricante, corrigiendo el bug de bullet).
+
+--- B0CZ47FKZL Maxi-Cosi Tanza i-Size ---
+URL: https://www.maxi-cosi.es/sillas-de-coche/tanza-i-size
+"Peso total del producto: 5.32 kg" -- CONFIRMADO, coincide EXACTO con Amazon (5,32 kg). fuente=amazon_y_fabricante.
+"Edad del niño: 3.5 - 12 A[nos]" -- CONFIRMADO, coincide EXACTO con Amazon.
+reposacabezas: "El reposacabezas es ajustable y crece con tu hijo" -- confirma cualitativamente "Si" pero SIN numero de posiciones (no contradice el "10 posiciones" que ya teniamos de Amazon, simplemente no lo menciona). Se mantiene el valor de Amazon sin cambios.
+
+--- B0GGZYY3BZ Bebeconfort Marvel RoadSafe i-Size ---
+URL: https://www.bebeconfort.es/sillas-de-coche/bebeconfort-marvel-roadsafe-i-size
+"Peso total del producto: 3.35 kg" -- CONFIRMADO, coincide EXACTO con Amazon (3,35 kg). fuente=amazon_y_fabricante.
+"Edad: 3.5 - 12 A" -- CONFIRMADO, coincide EXACTO con Amazon.
+reposacabezas: "ajustar facilmente el reposacabezas" confirma cualitativo, CERO menciones de "posicion/posiciones" en toda la pagina (ni numero ni palabra). No contradice ni confirma el "14 posiciones" de Amazon -- silencio total. Se mantiene Amazon sin cambios.
+
+=====================================================================
+PRODUCTOS SIN ENTRADA PREVIA EN EL LOOKUP (identidad por verificar)
+=====================================================================
+
+--- B0BYP63YCW / B0BYP9MTBX Kinderkraft COMFORT UP i-Size (mismo modelo, 2 colores) ---
+URL: https://kinderkraft.es/productos/comfort-up-i-size
+Identidad: mismo nombre de modelo exacto en Amazon y fabricante ("COMFORT UP i-Size"), mismo rango 76-150cm/9-36kg/15 meses-12 años en ambas fuentes. identidad_verificada=true (2 señales: nombre identico + rango tecnico identico).
+Acordeon "Dimensiones y material": "Altura del niño/Peso/Edad: 76-150cm/9-36kg/15 meses-12 años | Peso del producto: 6 kg"
+peso_silla: CONFIRMADO 6 kg -- coincide EXACTO con Amazon (6 kg) para ambos ASIN. fuente=amazon_y_fabricante.
+edad: CONFIRMADO 15 meses-12 años -- coincide EXACTO con Amazon.
+reposacabezas -- HALLAZGO DE CONTRADICCION (necesita revision, no auto-resolver):
+  Fabricante repite varias veces en la pagina: "ajuste simultaneo de reposacabezas y arnes (EN 11 NIVELES)" -- consistente con el bullet de Amazon ("el reposacabezas se regula en 11 niveles").
+  PERO la tabla de detalles de Amazon tiene una fila separada: "Numero de posiciones de altura: 7" -- un numero DISTINTO (7 vs 11).
+  El valor actualmente guardado es "Si" (sin numero, porque el detector no reconoce "niveles" como sinonimo de "posiciones" y tampoco reconoce el formato "Numero de posiciones de altura: 7" con el numero DESPUES de la palabra).
+  Fabricante confirma "11" de forma repetida e inequivoca. La fila de tabla "7" de Amazon parece ser un dato inconsistente/incorrecto de la propia ficha de Amazon (podria ser un campo generico mal rellenado, comun en tablas de detalle de Amazon).
+  PROPONGO: revisar=true, con nota de que 11 (fabricante + bullet Amazon) parece mas fiable que 7 (tabla Amazon aislada), pendiente de decision humana.
+
+--- B0BZ89X9YC Kinderkraft I-GROW ---
+URL: https://kinderkraft.es/productos/i-grow-i-size
+Identidad: nombre identico "I-GROW", mismo rango tecnico 40-150cm en ambas fuentes. identidad_verificada=true (2 señales).
+Acordeon "Dimensiones y material": "Peso del producto: 11 kg" | rango 40-150cm (sin años explicitos aqui)
+peso_silla: CONFIRMADO 11 kg -- coincide EXACTO con Amazon (11 kg). fuente=amazon_y_fabricante.
+edad: fabricante solo da el rango en cm (40-150), sin cifra de años en esta pagina. No contradice ni amplia el "0-12 años" que ya teniamos de Amazon (bullets/descripcion Amazon). Se mantiene Amazon sin cambios.
+reposacabezas: fabricante dice repetidamente "reposacabezas regulable en 12 niveles" -- y el propio BULLET de Amazon (no la tabla) YA decia lo mismo: "la altura del reposacabezas se puede ajustar en 12 niveles". AMBAS FUENTES COINCIDEN en 12, sin contradiccion. El valor actual guardado es solo "Si" sin numero porque el detector no reconoce "niveles" como sinonimo de "posiciones". Aqui NO hay conflicto que resolver -- es simplemente informacion adicional (num=12) que ya estaba en el propio Amazon pero el detector no la capturaba.
+
+--- B0FGDM2ZTS Kinderkraft SAFETY FIX 3 PRO -- IDENTIDAD NO CONFIRMADA ---
+Busque en kinderkraft.es y kinderkraft.com: "SAFETY FIX 3 PRO" NO EXISTE en ninguno de los dos sitios oficiales (0 resultados de busqueda, sin coleccion de "Safety" en kinderkraft.com).
+Unico candidato similar: "SAFETY FIX 2 i-Size" (kinderkraft.es/productos/safety-fix-2-i-size).
+Comparacion:
+  Rango (76-150cm/9-36kg/15meses-12años): COINCIDE con Amazon.
+  Top Tether + H-GUARD: presentes en ambos (pero es una tecnologia compartida por varios modelos Kinderkraft, no es una señal exclusiva/distintiva).
+  Peso del producto: fabricante dice 7,75 kg vs Amazon dice 7,31 kg -- NO COINCIDE (diferencia real de 0,44 kg, demasiado grande para ser redondeo).
+  Nombre: "SAFETY FIX 2" vs "SAFETY FIX 3 PRO" -- numero de generacion distinto.
+DECISION: NO se confirma identidad (solo 1 señal a favor -- el rango -- y 2 señales en contra -- peso y nombre/generacion). identidad_verificada=false. NO se usa ningun dato de "SAFETY FIX 2" para este ASIN. peso_silla/reposacabezas/edad quedan exactamente como estaban con Amazon (7,31 kg / Si sin numero / No determinado edad).
+
+--- B0F3P61P8C Bebeconfort RevolveFix Plus 360 i-Size ---
+URL: https://www.bebeconfort.es/sillas-de-coche/revolvefix-plus-360-i-size
+Identidad: nombre EXACTO identico + rango tecnico 40-150cm identico. identidad_verificada=true.
+Ficha tecnica (tabla "Especificaciones" visible): "Peso total del producto: 10.75 kg" | "Edad del niño: 0-12 A[nos]" | "Altura del niño: 40-150cm"
+peso_silla: CONFIRMADO 10,75 kg -- coincide EXACTO con Amazon.
+reposacabezas: "12 posiciones de reposacabezas" -- coincide EXACTO con lo que ya teniamos (Si - 12 posiciones). Sin cambios.
+edad -- HALLAZGO IMPORTANTE (correccion, no solo relleno):
+  Valor actual guardado: "0-4 anos".
+  Fabricante confirma explicitamente en su ficha de especificaciones: "Edad del nino: 0 - 12 A[nos]" -- coincide con el TITULO de Amazon ("0-12 Anos") y con la descripcion completa de Amazon ("Viaje con seguridad durante 12 anos", uso progresivo 0-4/15meses-4/4-12).
+  El "0-4 anos" guardado viene del BULLET 1 de Amazon ("...a contramarcha... (de 0 a 4 anos)"), que describe solo la FASE a contramarcha, no el rango total del producto. El detector de edad se quedo con el primer patron "X a Y anos" que encontro (bullet 1) en vez del rango completo.
+  Fabricante + titulo Amazon + descripcion Amazon coinciden en 0-12 anos: es el valor correcto, "0-4 anos" es una extraccion parcial equivocada.
+  PROPONGO: revisar=true (o corregir directamente a "0-12 anos", fuente amazon_y_fabricante) -- pendiente de decision humana antes de tocar codigo.
+
+--- B0CWS19269 Maxi-Cosi Emerald 360 S i-Size ---
+URL: https://www.maxi-cosi.es/sillas-de-coche/emerald-360-s
+Identidad: nombre EXACTO identico, peso EXACTO identico (12,7kg), edad EXACTA identica (0-12 años) -- 3 señales independientes coincidentes. identidad_verificada=true, muy alta confianza.
+Ficha: "Peso total del producto: 12.7 kg" | "Edad del niño: 0-12 A[nos]" | "Peso del nino: 0-36kg" | "Altura: 40-150cm"
+peso_silla: CONFIRMADO 12,7 kg -- coincide EXACTO con Amazon.
+edad: CONFIRMADO 0-12 anos -- coincide EXACTO con Amazon (aqui Amazon ya lo tenia bien).
+reposacabezas -- CONTRADICCION REAL (no es bug de extraccion, ambas fuentes son explicitas e inequivocas):
+  Amazon (titulo Y bullet 8, texto muy claro): "14 POSICIONES DE REPOSACABEZAS: Con 14 posiciones de altura ajustable para el reposacabezas"
+  Fabricante (maxi-cosi.es, texto visible de la ficha): "con NUEVE posiciones ajustables de altura del reposacabezas"
+  14 (Amazon) vs 9 (fabricante) -- disparidad real, ambas fuentes especificas y sin ambiguedad de contexto (misma caracteristica: altura del reposacabezas). No parece error de bullet mal indexado como los casos anteriores.
+  PROPONGO: revisar=true, conservar ambos valores documentados, sin resolver automaticamente -- requiere decision humana o una tercera fuente.
+
+--- B0F9YR27XX Kinderkraft I-GROW 2 PRO -- NO ENCONTRADO EN FABRICANTE ---
+Busque en kinderkraft.es (0 resultados de producto, solo "I-GROW" original y "XPAND 2 PRO" no relacionado) y kinderkraft.com (1 resultado mostrado, pero es una pagina de FAQ, no una ficha de producto).
+"I-GROW 2 PRO" no tiene ficha oficial de fabricante localizable en ninguno de los dos dominios oficiales de Kinderkraft.
+DECISION: identidad no verificable (no hay pagina que verificar). No se usa ningun dato de fabricante para este ASIN. peso_silla (13kg)/reposacabezas (Si sin numero)/edad (0-12 años) quedan exactamente como estaban con Amazon.
+
+--- B0DP7TG8KY Kinderkraft FIX2GO ---
+URL: https://kinderkraft.es/productos/fix2go
+Identidad: nombre EXACTO identico "FIX2GO", rango 76-150cm/15meses-12años identico al bullet de Amazon. identidad_verificada=true (2 señales).
+Acordeon "Dimensiones y material": "Estatura/peso/edad del nino: 76-150cm/9-36kg/15 meses-12 anos | Peso del producto: 6.5 kg"
+edad -- RELLENA UN N/A REAL: Amazon tenia "No determinado" (ningun bullet/tabla de Amazon menciona anos explicitamente para este ASIN pese a que "15 meses" aparece en el bullet de rango de uso, el regex de edad no lo capturo por algun motivo -- posible mejora futura del patron). Fabricante CONFIRMA "15 meses-12 anos". Alta confianza (coincide con lo que ya sugeria el propio bullet de Amazon).
+reposacabezas -- RELLENA UN N/A REAL parcialmente: Amazon tenia "No determinado" (ninguna mencion en bullets/tabla). Fabricante confirma cualitativamente "el ajuste del reposacabezas y el arnes en un movimiento" (regulable = Si), pero SIN numero de posiciones. 
+peso_silla -- CONTRADICCION REAL (pequeña pero real):
+  Amazon (tabla): "Peso del producto: 6,3 Kilogramos"
+  Fabricante (kinderkraft.es): "Peso del producto: 6.5 kg"
+  Diferencia de 0,2 kg. Ambas fuentes son tablas de especificaciones formales, no bullets de marketing ambiguos -- discrepancia real, no error de lectura.
+  PROPONGO: revisar=true, conservar ambos valores (6,3 kg Amazon / 6,5 kg fabricante), sin resolver automaticamente.
+
+=====================================================================
+FIN DE LA INVESTIGACION. Compilando tabla final.
+=====================================================================

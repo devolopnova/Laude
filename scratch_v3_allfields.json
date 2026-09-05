@@ -1,0 +1,962 @@
+[
+ {
+  "asin": "B0FKBWNF2G",
+  "modelo": "Kinderkraft JUNIOR FIX 2 PRO silla de co",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "100-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "3,5-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Cinturón del vehículo",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "No determinado",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0F9YPF1V1",
+  "modelo": "Kinderkraft I-COMFY, Silla de coche, Par",
+  "isofix": {
+   "mostrar": "No",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "Cinturón de seguridad",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "76-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "15 meses - 12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 5 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "5,98 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0BYP63YCW",
+  "modelo": "Kinderkraft COMFORT UP i-Size 75-150 cm,",
+  "isofix": {
+   "mostrar": "No",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "Cinturón de seguridad",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "75-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "15 meses - 12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "6 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0C58QGJNG",
+  "modelo": "CBX by CYBEX Silla de coche infantil Sol",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "100-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 50 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "3-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 3 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí — 11 posiciones",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 3 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "7 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0BZ89X9YC",
+  "modelo": "Kinderkraft I-GROW Silla de coche, I-SIZ",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "40-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "0-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Ambas",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 5 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "11 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0CZ47FKZL",
+  "modelo": "Maxi-Cosi Tanza i-Size, Silla Coche ISOF",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "100-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "3,5-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí — 10 posiciones",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 3 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "5,32 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0BYP9MTBX",
+  "modelo": "Kinderkraft COMFORT UP i-Size 75-150 cm,",
+  "isofix": {
+   "mostrar": "No",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "Cinturón de seguridad",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "75-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "15 meses - 12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "6 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0FGDM2ZTS",
+  "modelo": "Kinderkraft SAFETY FIX 3 PRO, Silla de C",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "76-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "9-36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Cinturón del vehículo",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "7,31 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0F3P61P8C",
+  "modelo": "Bebeconfort RevolveFix Plus 360 i-Size, ",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "40-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "0-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Ambas",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 8 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí — 12 posiciones",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "10,75 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0CWS19269",
+  "modelo": "Maxi-Cosi Emerald 360 S i-Size, Silla co",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "40-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "0-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Ambas",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 4 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "12,7 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0F9YR27XX",
+  "modelo": "Kinderkraft I-GROW 2 PRO Silla de coche,",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "40-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "0-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Ambas",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 5 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Cinturón del vehículo",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "13 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0DSL7WGB2",
+  "modelo": "Kinderkraft UNITY 2 i-Size, Silla de coc",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "100-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "3,5-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 5 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "6,3 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0GGZYY3BZ",
+  "modelo": "Bebeconfort Marvel RoadSafe i-Size,Asien",
+  "isofix": {
+   "mostrar": "No",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "Cinturón de seguridad",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "100-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "15-36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "3,5-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí — 14 posiciones",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Cinturón del vehículo",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "3,35 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0DP7TG8KY",
+  "modelo": "Kinderkraft FIX2GO Silla infantil i-size",
+  "isofix": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "ISOFIX",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "76-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "15 meses - 12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sí — 5 posiciones",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Arnés de 5 puntos",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "6,3 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sí",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ },
+ {
+  "asin": "B0F1R26D8L",
+  "modelo": "Kinderkraft I-BOOST 2 Silla de coche, Si",
+  "isofix": {
+   "mostrar": "No",
+   "revisar": false
+  },
+  "tipo_instalacion": {
+   "mostrar": "Cinturón de seguridad",
+   "revisar": false
+  },
+  "normativa": {
+   "mostrar": "R129 / i-Size",
+   "revisar": false
+  },
+  "grupo_r44": {
+   "mostrar": null,
+   "revisar": false
+  },
+  "altura_r129": {
+   "mostrar": "125-150 cm",
+   "revisar": false
+  },
+  "peso": {
+   "mostrar": "Hasta 36 kg",
+   "revisar": false
+  },
+  "edad": {
+   "mostrar": "6-12 años",
+   "revisar": false
+  },
+  "orientacion": {
+   "mostrar": "A favor de la marcha",
+   "revisar": false
+  },
+  "giro_360": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reclinable": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "reposacabezas": {
+   "mostrar": "No determinado",
+   "revisar": false
+  },
+  "arnes": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "peso_silla": {
+   "mostrar": "1,2 kg",
+   "revisar": false
+  },
+  "proteccion_lateral": {
+   "mostrar": "Sin especificar",
+   "revisar": false
+  },
+  "funda_lavable": {
+   "mostrar": "Sí",
+   "revisar": false
+  }
+ }
+]

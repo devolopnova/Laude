@@ -1,0 +1,126 @@
+AUDITORIA COMPLETA DE ATRIBUTOS EN FABRICANTE - 15 productos Lote 1
+Notas de investigacion en bruto. NO se modifica ningun archivo.
+=====================================================================
+
+METODOLOGIA: extraccion via clon del DOM sin <script>/<style>/<noscript> (document.body.cloneNode + remove), solo textContent visible real. Confirmado que el metodo anterior (sin limpiar) capturaba basura de JSON-LD/JS embebido -- corregido desde este punto.
+
+--- B0FKBWNF2G Kinderkraft JUNIOR FIX 2 PLUS ---
+URL: https://kinderkraft.es/productos/junior-fix-2-plus
+Ya confirmado antes: peso_silla=N/A, edad=3,5-12 anos (coincide Amazon), reposacabezas=Si sin numero (regulable, sin cifra).
+NUEVO (esta fase): orientacion=SIN MENCION alguna en toda la pagina (22764 caracteres de texto visible limpio). reclinable=SIN MENCION. giro360=SIN MENCION. arnes(tipo/puntos)=SIN MENCION. funda(lavable)=SIN MENCION.
+proteccion_lateral: YA CONOCIDO -- "H-GUARD y las protecciones laterales SPS...ayudan a absorber la energia en caso de impacto lateral" = SI (confirma).
+isofix: confirma "Si" (ya sabido).
+CONCLUSION: orientacion/reclinable/giro360/arnes/funda = N/A REAL en fabricante (no hay evidencia visible en ningun sitio de la ficha).
+
+--- B0F9YPF1V1 Kinderkraft I-COMFY ---
+URL: https://kinderkraft.es/productos/i-comfy
+NUEVO: reclinable -- CONTRADICCION: Amazon bullet "reclinado en 5 posiciones" (caracteristicas.reclinable = "Si - 5 posiciones") vs fabricante "la silla ofrece una reclinacion ajustable en 10 posiciones" (texto visible explicito). Ambas fuentes explicitas, mismo atributo. 5 vs 10 -> revisar.
+arnes: fabricante confirma "arnes de 5 puntos" -- coincide con Amazon (ya lo teniamos "arnes de 5 puntos" via caracteristicas, y clasificacion.arnes ya estaba N/A porque el amazon_import no lo tenia en clasificacion -- ver mas abajo). CONFIRMADO POR AMBAS.
+orientacion: sin mencion en fabricante (ninguna palabra clave encontrada). N/A real fabricante (Amazon ya establece "instalacion unicamente en sentido de la marcha" en su propio bullet -- eso ya deberia estar considerado como Amazon-only si no se capturo).
+giro360: sin mencion (I-COMFY no es giratoria). N/A real (coherente, no es una funcion de este modelo).
+funda_lavable: sin mencion en fabricante (ni "funda", ni "forro", ni "tapiceria", ni "lava"). N/A real fabricante (Amazon SI tenia "funda facilmente desmontable y lavable" en su propio bullet -- dato solo de Amazon, sin refuerzo ni contradiccion del fabricante).
+
+--- B0BYP63YCW / B0BYP9MTBX Kinderkraft COMFORT UP i-Size ---
+URL: https://kinderkraft.es/productos/comfort-up-i-size
+arnes: fabricante "Arnes de 5 puntos" explicito -- coincide con Amazon (tabla "Tipo de arnes: 5 puntos"). CONFIRMADO POR AMBAS.
+funda_lavable: fabricante dice "La silla posee un forro extraible que se limpia con facilidad" -- NO dice "lavable"/"lava" literalmente, solo "se limpia con facilidad". Segun la regla de no asumir extraible=lavable sin decirlo explicitamente: DUDOSO, no confirmar como "Si".
+proteccion_lateral: "red transpirable en los laterales" es sobre ventilacion del tejido, NO proteccion de impacto. Ninguna mencion de SPS/H-GUARD/impacto lateral. N/A REAL (confirma lo que ya sabiamos).
+orientacion/reclinable/giro360: sin mencion alguna. N/A REAL.
+(reposacabezas 7-vs-11 y peso ya cubiertos, no se tocan -- casos aparcados)
+
+--- B0C58QGJNG Cybex Solution X i-Fix ---
+URL: https://www.cybex-online.com/es/es/p/cs-cx-solution-x-i-fix.html
+funda_lavable: fabricante confirma explicito "Instrucciones para el cuidado: Tejidos lavables a maquina a 30C" -- RECUPERA UN N/A. clasificacion.funda_lavable pasa de "No determinado" a "Si", fuente=fabricante_oficial. Alta confianza.
+HALLAZGO IMPORTANTE (mismo patron que el bug de reposacabezas, pero en OTRO atributo): 
+  caracteristicas.reclinable actual = "Si - 3 posiciones", con fuente = el mismo bullet "Reposacabezas reclinable Cybex de 3 posiciones..." -- este es el reposacabezas (headrest) reclinandose, NO el respaldo/asiento reclinandose. El atributo "reclinable" (que deberia referirse al respaldo/asiento) esta capturando por error el mismo dato que "reposacabezas.posiciones" (que ya corregimos). 
+  Bullet aparte de Amazon: "Respaldo de inclinacion ajustable para una adaptacion optima al asiento del vehiculo" -- esto SI describe el respaldo, pero no usa la raiz "reclin-" (usa "inclinacion"), por eso el detector no lo coge; ademas describe que es para ajustar al angulo del asiento del COCHE (instalacion), no confort del nino, asi que ni siquiera esta claro que cuente como "reclinable" en el sentido de nuestro atributo.
+  Fabricante: SIN mencion de "respaldo reclinable" en absoluto.
+  CONCLUSION: el "reclinable = Si - 3 posiciones" actual de Cybex probablemente NO es correcto para este atributo (deberia ser N/A o revisar, igual que se corrigio reposacabezas) -- PATRON NUEVO A APRENDER, ver seccion final del informe. No se toca en esta fase (solo diagnostico).
+arnes: fabricante SIN mencion de "arnes"/numero de puntos para la sujecion del nino (los unicos "puntos" que aparecen son "puntos de anclaje ISOFIX", no relacionados). Amazon tiene "Tipo de arnes: 3 puntos" en tabla -- dado que Solution X es un elevador (booster grupo 2/3), es dudoso si realmente tiene arnes interior de 3 puntos o si Amazon esta describiendo el cinturon del vehiculo de 3 puntos. Fabricante no lo aclara ni lo contradice -- se mantiene el dato de Amazon sin cambios, pero queda anotado como DUDOSO para revision futura.
+orientacion: sin mencion en fabricante. N/A real fabricante (Amazon ya tiene "A favor de la marcha" propio, sin cambios).
+
+--- B0BZ89X9YC Kinderkraft I-GROW ---
+URL: https://kinderkraft.es/productos/i-grow-i-size
+giro360: fabricante "EASY SPIN 360: silla giratoria" -- CONFIRMADO POR AMBAS (ya era Si).
+arnes: fabricante "arnes interior de 5 puntos" -- CONFIRMADO POR AMBAS (ya era "Arnes de 5 puntos").
+proteccion_lateral: fabricante "SIDE PROTECT SYSTEM+ son protectores laterales reforzados...absorben la energia de los impactos laterales" -- CONFIRMADO POR AMBAS (ya era Si).
+funda_lavable: fabricante "El forro se quita facilmente para que puedas lavarlo" -- CONFIRMADO POR AMBAS (ya era Si).
+reclinable: fabricante "respaldo reclinable en 5 niveles" -- coincide con el propio bullet de Amazon ("...inclinacion del respaldo (sistema de reclinado) en uno de los 5 niveles") -- mismo numero, sin contradiccion. El "5" no se captura actualmente en el valor guardado (solo "Si" sin numero) porque el texto usa "niveles" en vez de "posicion" (mismo patron ya visto en reposacabezas de otros productos) -- dato adicional disponible pero no es una correccion ni conflicto.
+orientacion -- HALLAZGO DE PRIORIDAD DE ORIGEN (mismo patron que el bug de edad de RevolveFix, pero en orientacion, no corregido en esta fase):
+  Valor actual guardado: "A contramarcha" (solo).
+  Motivo: la fila de tabla de Amazon "Orientacion: Orientacion trasera" se escanea ANTES que los bullets (prioridad de detalle > bullet) y solo menciona contramarcha, asi que "gana" y detiene el escaneo.
+  PERO el propio bullet 1 de Amazon dice explicitamente: "...transportar a contramarcha (RWF) hasta los 4 anos y a favor de la marcha (FWF)" -- ambas orientaciones, en el mismo bullet.
+  Fabricante confirma tambien AMBAS: "RWF y FWF" repetido varias veces, "tambien permite cambiar rapidamente la posicion de la silla (RWF y FWF)".
+  CONCLUSION: el valor correcto deberia ser "Ambas", no "A contramarcha". Es una correccion propuesta (mismo patron de bug que el de edad ya corregido, pero en otro atributo, no tocado en esta fase).
+
+--- B0CZ47FKZL Maxi-Cosi Tanza i-Size ---
+URL: https://www.maxi-cosi.es/sillas-de-coche/tanza-i-size
+orientacion: FAQ explicita: "¿Se puede instalar Tanza i-Size a contramarcha? No, Tanza i-Size solo se puede utilizar a favor de la marcha." -- CONFIRMADO POR AMBAS, muy alta confianza (niega explicitamente contramarcha).
+arnes -- RECUPERA UN N/A: tabla de especificaciones del fabricante dice explicitamente "Tipo de arnes: 3 puntos" (mismo campo/etiqueta que usa Amazon, pero Amazon nunca lo tuvo capturado para este ASIN -- estaba N/A). Alta confianza, fuente=fabricante_oficial.
+funda_lavable: fabricante tiene "Funda lavable" como caracteristica destacada -- CONFIRMADO POR AMBAS (ya era Si via Amazon).
+reclinable: sin mencion para Tanza (la unica mencion de "multiples posiciones de reclinacion" encontrada pertenece a OTRO producto -- "RodiFix S i-Size" -- mostrado como recomendacion cruzada en la misma pagina, no a Tanza). N/A REAL, confirmado.
+giro360: sin mencion. N/A REAL (booster fijo, coherente).
+
+--- B0F3P61P8C Bebeconfort RevolveFix Plus 360 ---
+URL: https://www.bebeconfort.es/sillas-de-coche/revolvefix-plus-360-i-size
+reclinable: fabricante "8 posiciones de reclinacion (4 contramarcha + 4 favor marcha)" -- CONFIRMADO POR AMBAS (Amazon ya tenia "Si - 8 posiciones", coincide exacto).
+giro360: fabricante "puede girarse 360" -- CONFIRMADO POR AMBAS (ya Si).
+arnes: fabricante "Tipo de arnes: 5 puntos" -- CONFIRMADO POR AMBAS (ya "Arnes de 5 puntos").
+proteccion_lateral: fabricante "proteccion frente a impactos laterales" repetido -- CONFIRMADO POR AMBAS (ya Si).
+funda_lavable: fabricante "Funda lavable en la lavadora" + specs "Lavable a maquina, delicado a 30 grados" -- CONFIRMADO POR AMBAS (ya Si).
+orientacion -- MISMO PATRON DE BUG que I-GROW (prioridad de origen):
+  Valor actual: "A contramarcha" (solo, por la fila de tabla aislada de Amazon).
+  Fabricante confirma explicitamente "tanto a favor de la marcha como a contramarcha" -- AMBAS.
+  El propio bullet de Amazon YA decia "en posicion a contramarcha...y...en posicion a favor de la marcha" (ya analizado en la fase de correccion de edad, mismo bullet 1).
+  CONCLUSION: correccion propuesta a "Ambas", mismo patron que I-GROW, no corregido en esta fase (diagnostico).
+
+--- B0CWS19269 Maxi-Cosi Emerald 360 S ---
+URL: https://www.maxi-cosi.es/sillas-de-coche/emerald-360-s
+giro360: fabricante "rotacion 360 FlexiSpin" -- CONFIRMADO POR AMBAS (ya Si).
+arnes: fabricante "Tipo de arnes: 5 puntos" -- CONFIRMADO POR AMBAS (ya "Arnes de 5 puntos").
+proteccion_lateral: fabricante "proteccion contra impactos laterales G-CELL" extensamente confirmado -- CONFIRMADO POR AMBAS (ya Si).
+funda_lavable: fabricante "Lavable en la lavadora" + "lavar la funda a maquina" -- CONFIRMADO POR AMBAS (ya Si).
+orientacion -- MISMO PATRON DE BUG (tercera instancia, I-GROW/RevolveFix/Emerald):
+  Valor actual: "A contramarcha" solo.
+  Fabricante confirma AMBAS: "en posicion a contramarcha...en posicion orientada hacia delante" (describe las 4 etapas del producto, incluye ambas orientaciones).
+  Correccion propuesta a "Ambas", mismo patron, no corregido en esta fase.
+reclinable -- HALLAZGO ADICIONAL, MISMO PATRON DE BUG PERO EN reclinable (nueva variante, no solo orientacion):
+  Valor actual: "Si" (sin numero). Fuente real usada: bullet "ROTACION 360 FLEXISPIN: ...la silla gira en cualquier posicion de reclinacion..." -- satisface la condicion (contiene "reclinacion") pero sin numero en ESE bullet concreto.
+  El bullet CORRECTO con el numero ("4 POSICIONES DE RECLINACION: Asegura el confort...") viene DESPUES en el orden de escaneo, nunca se llega a el porque el anterior ya "gano" con un "Si" generico.
+  Fabricante confirma explicitamente "cuatro comodas posiciones de reclinacion" = 4, coincide con el propio bullet correcto de Amazon (no capturado).
+  CONCLUSION: correccion propuesta a "Si - 4 posiciones", mismo patron de bug de prioridad de origen, no corregido en esta fase.
+
+--- B0DSL7WGB2 Kinderkraft UNITY 2 ---
+URL: https://kinderkraft.es/productos/unity-2
+reclinable: fabricante "Respaldo reclinable en 5 posiciones" -- CONFIRMADO POR AMBAS (ya "Si - 5 posiciones", exacto).
+proteccion_lateral: fabricante SPS+ H-GUARD -- CONFIRMADO POR AMBAS (ya Si).
+funda_lavable: fabricante "tapiceria...facil de quitar y lavar" -- CONFIRMADO POR AMBAS (ya Si).
+orientacion: sin mencion real de orientacion del asiento (la unica coincidencia de "hacia adelante" es sobre la cabeza del nino cayendo hacia delante al dormir, no sobre la orientacion de instalacion). N/A REAL en ambas fuentes.
+giro360: sin mencion. N/A REAL (no es giratoria).
+arnes: sin mencion de tipo/puntos en fabricante tampoco. N/A REAL en ambas fuentes -- no recuperable con esta fuente.
+
+--- B0GGZYY3BZ Bebeconfort Marvel RoadSafe ---
+URL: https://www.bebeconfort.es/sillas-de-coche/bebeconfort-marvel-roadsafe-i-size
+Pagina con muy poco contenido visible (13540 caracteres limpios, ficha simple de booster).
+orientacion: sin mencion nueva (ya "A favor de la marcha" via Amazon, coherente con ser booster fijo). Sin cambios.
+arnes: fabricante confirma indirectamente via specs "Instalacion de la silla de coche: cinturon de seguridad: Yes" -- coherente con el valor actual "Cinturon del vehiculo". Sin contradiccion.
+reclinable/giro360/proteccion_lateral: SIN mencion alguna en fabricante. N/A REAL confirmado en ambas fuentes.
+funda_lavable: fabricante SOLO dice "Fundas extraibles: Si" -- NO dice "lavable" en ningun sitio visible. Segun la regla estricta (extraible != lavable sin decirlo explicitamente), se mantiene N/A REAL, no se puede confirmar con esta evidencia.
+
+--- B0DP7TG8KY Kinderkraft FIX2GO ---
+URL: https://kinderkraft.es/productos/fix2go
+proteccion_lateral -- RECUPERA UN N/A: fabricante confirma explicito "SPS+: proteccion lateral reforzada...refuerzos especiales en los laterales...reciben la fuerza de los choques laterales" + "H-GUARD+: proteccion maxima de la cabeza". Pasa de N/A a "Si", fuente=fabricante_oficial, alta confianza.
+funda_lavable: fabricante "el forro...se puede quitar facilmente para lavar a maquina" -- CONFIRMADO POR AMBAS, mas explicito aun que Amazon (ya era Si).
+reclinable: fabricante "reclinado del respaldo en 5 niveles" -- coincide con el propio bullet de Amazon ("RECLINADO A 5 NIVELES"), mismo numero sin contradiccion, no capturado actualmente por el mismo motivo de siempre ("niveles" no "posicion"). Dato adicional, no conflicto.
+arnes: ya "Arnes de 5 puntos" via Amazon, fabricante SIN mencion (silencio, sin contradiccion).
+orientacion: ya "A favor de la marcha" via Amazon, fabricante SIN mencion (silencio, sin contradiccion).
+giro360: SIN mencion en ninguna fuente. N/A REAL confirmado (base fija ISOFIX+TopTether, no gira).
+
+(peso 6,3 vs 6,5 kg sigue APARCADO, no se toca)
+
+--- B0F1R26D8L Kinderkraft I-BOOST 2 ---
+URL: https://kinderkraft.es/productos/i-boost-2
+funda_lavable: fabricante FAQ explicito "Funda extraible y lavable a maquina" + "se pueden lavar a maquina de acuerdo con las instrucciones de uso" -- CONFIRMADO POR AMBAS (ya Si), fabricante aun mas explicito.
+orientacion: fabricante FAQ explicito "I-BOOST 2 se instala solo FWF" -- CONFIRMADO POR AMBAS con alta confianza (excluye explicitamente RWF), ya era "A favor de la marcha".
+arnes: fabricante FAQ "No, este asiento solo se monta con los cinturones de seguridad del coche" (respuesta a si tiene Isofix) -- sigue siendo sobre INSTALACION, no aclara si el mismo cinturon sujeta al nino de forma distinta a la instalacion. Mismo caso DUDOSO que ya identificamos en la auditoria de N/A originaria (boosters: instalacion y sujecion del nino son fisicamente el mismo cinturon) -- se mantiene N/A, no se resuelve con esta evidencia adicional.
+reclinable/giro360/proteccion_lateral: SIN mencion en fabricante. N/A REAL confirmado en ambas fuentes (I-BOOST2 es un booster simple sin estas funciones).

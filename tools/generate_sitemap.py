@@ -28,6 +28,11 @@ EXCLUDE = {
     # y Recetas sencillas). El archivo se deja en disco pero fuera de
     # navegación y de sitemap — ver CLAUDE.md.
     "preparaciones-sin-horno.html",
+    # Experimento de adaptacion a escritorio del comparador de 2 sillitas
+    # (30-ago-2026), nunca publicado ni enlazado -- su logica ya se porto
+    # a comparador-sillas-coche.html / comparar-sillas.html. Mismo
+    # criterio que EXCLUDE_PREFIXES para prototipo-comparativa-sillas-v*.
+    "comparador-sillas-coche-prototipo-pc.html",
 }
 
 # Prefijos de páginas de prueba/preview cuyo número de versión cambia

@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>PROTOTIPO v4 — Comparativa sillitas de coche</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF8; --ink:#1C1C1E; --ink-soft:#6B6B70; --line:#E4E2DC; --card:#FFFFFF;
+  --accent:#FF8A65; --accent-deep:#D85A30; --revisar:#B5841C; --revisar-bg:#FBF2DE;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding:40px 32px 80px;}
+h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+
+.proto-banner{background:#2C2C2A;color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;border-radius:8px;display:inline-block;margin-bottom:14px;}
+.proto-banner b{color:#FFB199;}
+.proto-note{max-width:820px;font-size:13px;color:var(--ink-soft);margin-bottom:28px;line-height:1.6;}
+.proto-note code{background:#F0EEE8;padding:1px 5px;border-radius:4px;font-size:12px;}
+
+.page-head{margin-bottom:24px;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent-deep);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.page-head h1{font-size:30px;margin-bottom:6px;}
+.page-head p{color:var(--ink-soft);font-size:14.5px;}
+
+.table-shell{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.05);}
+.table-scroll{overflow-x:auto;overflow-y:visible;max-width:100%;}
+
+table{border-collapse:separate;border-spacing:0;table-layout:fixed;}
+
+thead th{
+  background:#F4F2EE; color:var(--ink); font-size:11.5px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.03em;
+  padding:15px 12px; text-align:left; white-space:nowrap;
+  border-bottom:1px solid var(--line);
+}
+
+tbody td{
+  padding:14px 12px; font-size:14px; color:var(--ink);
+  border-bottom:1px solid var(--line);
+  vertical-align:middle;
+}
+tbody tr.main-row:last-of-type td{border-bottom:1px solid var(--line);}
+tbody tr.main-row:hover td{background:#FBF6F1;cursor:pointer;}
+tbody tr.main-row td{transition:background .12s;}
+
+/* Anchos fijos via colgroup (mas abajo) para que la tabla nunca supere
+   ~1320px de ancho total y quepa sin scroll horizontal en un escritorio
+   normal (1366px+). Los textos largos se recortan con ellipsis y el
+   texto integro va siempre en el title (tooltip). */
+td.col-product{white-space:normal;}
+.prod-cell{display:flex;align-items:center;gap:12px;}
+.prod-thumb-ph{
+  width:44px;height:44px;border-radius:9px;background:linear-gradient(135deg,#F4F2EE,#E9E6DF);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;color:var(--ink-soft);
+  border:1px solid var(--line);
+}
+.prod-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.prod-brand{font-size:11px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.03em;}
+.prod-model{font-size:13px;font-weight:600;color:var(--ink);white-space:normal;line-height:1.3;}
+
+.price-current{font-size:14.5px;font-weight:700;color:var(--ink);white-space:nowrap;}
+
+td.col-normativa{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+.grupo-main{display:block;font-size:13px;font-weight:600;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.grupo-peso{display:block;font-size:11.5px;color:var(--ink-soft);font-weight:400;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+td.col-altura{font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+.cell-unspecified{color:#9C9A93;font-weight:400;font-style:italic;font-size:12.5px;}
+.cell-revisar{color:var(--revisar);font-weight:600;}
+
+td.col-isofix,td.col-360{text-align:center;}
+.chk{display:inline-block;font-size:16px;font-weight:700;line-height:1;}
+.chk--yes{color:#2F7A45;}
+.chk--no{color:#B5471F;}
+.chk--unk{color:#9C9A93;font-weight:400;font-style:italic;font-size:11.5px;}
+
+td.col-orientacion{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+td.col-action{}
+.btn-toggle{
+  display:block;background:none;border:1px solid var(--line);color:var(--ink-soft);
+  font-size:12px;font-weight:600;padding:8px 14px;border-radius:8px;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:.15s;width:100%;
+}
+.btn-toggle:hover, .btn-toggle.is-open{border-color:var(--accent-deep);color:var(--accent-deep);background:#FFF7F3;}
+
+tr.detail-row td{padding:0;}
+tr.detail-row[hidden]{display:none;}
+.detail-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;
+  background:#FBF9F5;padding:22px 26px 8px;border-bottom:1px solid var(--line);
+}
+.detail-item{display:flex;flex-direction:column;gap:3px;white-space:normal;padding-bottom:12px;border-bottom:1px dashed var(--line);}
+.detail-label{font-size:11px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;}
+.detail-value{font-size:13.5px;color:var(--ink);font-weight:500;}
+.detail-value.cell-revisar{color:var(--revisar);cursor:help;border-bottom:1px dotted var(--revisar);display:inline-block;width:fit-content;}
+.detail-amazon{padding:16px 26px 22px;background:#FBF9F5;}
+.btn-amazon{
+  display:inline-block;background:var(--accent-deep);color:#fff;font-size:13px;font-weight:700;
+  padding:10px 18px;border-radius:8px;white-space:nowrap;transition:background .15s;
+}
+.btn-amazon:hover{background:#B5471F;}
+
+.foot-note{margin-top:18px;font-size:12px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<div class="proto-banner">⚠ Prototipo v4 — <b>no es la web real</b> — fuente única: tools/output/auditoria_30_candidatos.json (dataset maestro consolidado 13-ago-2026)</div>
+<p class="proto-note">
+  Lee directamente el dataset auditado, sin re-extraer ni reinterpretar. Los campos <code>Sin especificar</code> se muestran en cursiva gris en la tabla principal (nunca como guion) y se ocultan por completo dentro de la ficha técnica (Opción A — configurable con <code>HIDE_UNSPECIFIED_IN_DETAIL</code> en el script). Los campos <code>Revisar</code> se muestran tal cual, sin resolver — pasa el ratón por encima para ver la nota completa de la contradicción.
+</p>
+
+<div class="page-head">
+  <div class="eyebrow">Comparador de sillitas de coche · Prototipo PC</div>
+  <h1>Comparativa de sillitas de coche</h1>
+  <p>30 modelos</p>
+</div>
+
+<div class="table-shell">
+  <div class="table-scroll">
+    <table>
+      <colgroup>
+        <col style="width:260px">
+<col style="width:95px">
+<col style="width:110px">
+<col style="width:150px">
+<col style="width:115px">
+<col style="width:65px">
+<col style="width:65px">
+<col style="width:150px">
+<col style="width:150px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="col-product">Producto</th>
+<th class="col-price">Precio</th>
+<th class="col-normativa">Normativa</th>
+<th class="col-grupo">Grupo + Peso</th>
+<th class="col-altura">Altura</th>
+<th class="col-isofix">ISOFIX</th>
+<th class="col-360">360º</th>
+<th class="col-orientacion">Orientación</th>
+<th class="col-action"></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    <tr class="main-row" data-target="detail-0">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model">I-GROW</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">129,90 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0+/1/2/3 (Amazon, confianza media)">Grupo 0+/1/2/3 (Amazon, confianza media)</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-0">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-0" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,5 · 1.485 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">11 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (H-GUARD + SPS+)</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BZ89X9YC" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-1">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model">I-BOOST 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">24,90 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="125-150 cm">125-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--no">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-1">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-1" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,6 · 143 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo (3 puntos)</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">1,2 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0F1R26D8L" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-2">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model">SAFETY FIX 3 PRO</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,00 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="9-36 kg">9-36 kg</span></td>
+      <td title="76-150 cm">76-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td class="cell-unspecified">Sin especificar</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-2">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-2" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,5 · 153 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">7,31 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (H-GUARD + SPS)</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FGDM2ZTS" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-3">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model">Tanza</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 2/3 (Amazon + fabricante, confianza alta)">Grupo 2/3 (Amazon + fabricante, confianza alta)</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-3">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-3" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,4 · 1.385 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 3 puntos (confirmado por fabricante)</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">5,32 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (G-CELL)</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CZ47FKZL" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-4">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model">Emerald 360 S</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">386,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0+/1/2/3 (Amazon, confianza media)">Grupo 0+/1/2/3 (Amazon, confianza media)</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-4">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-4" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,6 · 617 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">12,7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (G-CELL)</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CWS19269" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-5">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BC</div>
+          <div class="prod-info">
+            <span class="prod-brand">Bébé Confort</span>
+            <span class="prod-model">RevolveFix Plus 360</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">199,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified" title="Sin especificar (decisión manual, ver contradicción ISOFIX de Marvel no aplica aquí)">Sin especificar</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-5">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-5" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,2 · 458 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">10,75 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0F3P61P8C" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-6">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BC</div>
+          <div class="prod-info">
+            <span class="prod-brand">Bébé Confort</span>
+            <span class="prod-model">Marvel RoadSafe</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">79,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified" title="Sin especificar (contradicción ISOFIX en Amazon ya detectada y descartada como evidencia de grupo)">Sin especificar</span><span class="grupo-peso" title="15-36 kg">15-36 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--no" title="No (confirmado por fabricante, resuelto manualmente)">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-6">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-6" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,4 · 224 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3,35 kg</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0GGZYY3BZ" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-7">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Solution X i-Fix</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">119,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="Hasta 50 kg">Hasta 50 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-7">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-7" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 1.659 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (confirmado por fabricante)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C58QGJNG" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-8">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Solution S2 i-Fix</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">149,95 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="15-50 kg">15-50 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí (opcional, también cinturón)">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-8">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-8" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,8 · 4.098 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón + ISOFIX opcional</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">6,2 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Sistema L.S.P., confirmado en Amazon)</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (lavable a máquina 30°C, confirmado en Amazon)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0B97Z1C6M" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-9">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model">Pearl 360</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">329,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified" title="Sin especificar (etapa infantil, sin nomenclatura de grupo)">Sin especificar</span><span class="grupo-peso" title="Hasta 17,5 kg">Hasta 17,5 kg</span></td>
+      <td title="61-105 cm">61-105 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí — requiere base FamilyFix 360 vendida por separado">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes" title="Sí (FlexiSpin, con la base)">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-9">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-9" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,4 · 344 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX (vía base)</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">7,45 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (G-CELL)</span></div>
+<div class="detail-item"><span class="detail-label">Travel system</span><span class="detail-value">Compatible con cochecitos Maxi-Cosi (ver widget de compatibilidad)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C6R47BCV" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-10">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Cloud G i-Size Comfort</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">229,95 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified" title="Sin especificar (etapa infantil, sin nomenclatura de grupo)">Sin especificar</span><span class="grupo-peso" title="Hasta 13 kg">Hasta 13 kg</span></td>
+      <td title="40-87 cm">40-87 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí — requiere Base G vendida por separado (229€ extra)">✓</span></td>
+      <td class="col-360"><span class="chk chk--no" title="No — 180° (confirmado, no 360° completo)">✕</span></td>
+      <td title="A contramarcha">A contramarcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-10">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-10" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 232 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX (vía base)</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3,9 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Linear Side-impact Protection Plus)</span></div>
+<div class="detail-item"><span class="detail-label">Travel system</span><span class="detail-value">Compatible (adaptador para cochecitos Cybex/gb, confirmado en ficha)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DB2J1HMK" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-11">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Pallas G i-Size (G2)</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">234,86 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="9-50 kg">9-50 kg</span></td>
+      <td title="76-150 cm">76-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí (obligatorio salvo modo elevador 100-150cm)">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-11">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-11" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 301 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX o cinturón (según etapa)</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">8,9 kg</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DPHRJ1YH" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-12">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BR</div>
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">DUALFIX2 R</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">504,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0+/1">Grupo 0+/1</span><span class="grupo-peso" title="Hasta 18 kg">Hasta 18 kg</span></td>
+      <td class="cell-unspecified" title="Sin especificar (0-18kg, sin cm explícito)">Sin especificar</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="A contramarcha (con reclinado en todas las posiciones)">A contramarcha (con reclinado en todas las posiciones)</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-12">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-12" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 1.809 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX + soporte de piernas</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value cell-revisar" title="Sin especificar con certeza (tabla dice &quot;3 puntos&quot;, posible error de ficha para un arnés de bebé — Revisar)">Revisar</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">14 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (extracción rápida, lavable)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B07QLSYS2Y" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-13">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BR</div>
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">BABY-SAFE CORE</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">135,92 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0+">Grupo 0+</span><span class="grupo-peso" title="Hasta 12 kg">Hasta 12 kg</span></td>
+      <td title="40-83 cm">40-83 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí — con base BABY-SAFE CORE Base vendida por separado, o cinturón">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A contramarcha">A contramarcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-13">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-13" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,2 · 35 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX o cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3,9 kg</span></div>
+<div class="detail-item"><span class="detail-label">Travel system</span><span class="detail-value">Compatible con numerosos cochecitos (confirmado por fabricante)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CP2QYQK8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-14">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Chicco</span>
+            <span class="prod-model">Unico EVO I&#x27;Size Classic</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">229,00 €</span></td>
+      <td title="R129/03">R129/03</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0123">Grupo 0123</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí (40-105cm) / cinturón (100-150cm)">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-14">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-14" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,5 · 1.230 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX o cinturón según etapa</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">11,55 kg</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C6KZCY6Z" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-15">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Chicco</span>
+            <span class="prod-model">Kory i-Size Essential</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">169,00 €</span></td>
+      <td title="R129/03">R129/03</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0+">Grupo 0+</span><span class="grupo-peso" title="Hasta 21 kg">Hasta 21 kg</span></td>
+      <td title="40-80 cm">40-80 cm</td>
+      <td class="col-isofix"><span class="chk chk--no" title="No de serie — ISOFIX solo con &quot;Base Full 360 i-Size&quot; vendida por separado (219€)">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A contramarcha">A contramarcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-15">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-15" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,3 · 71 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón (ISOFIX opcional vía base)</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">4,4 kg</span></div>
+<div class="detail-item"><span class="detail-label">Travel system</span><span class="detail-value">Sí — compatible con carritos Chicco</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C6KXB9LL" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-16">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Chicco</span>
+            <span class="prod-model">Quasar Fix i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">55,00 €</span></td>
+      <td title="R129/03">R129/03</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 3">Grupo 3</span><span class="grupo-peso" title="23-36 kg (máx. de la ficha: 22 kg)">23-36 kg (máx. de la ficha: 22 kg)</span></td>
+      <td title="126-150 cm">126-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-16">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-16" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 52 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de 3 puntos + conectores ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DW9GD5CG" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-17">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">B</div>
+          <div class="prod-info">
+            <span class="prod-brand">BabyAuto</span>
+            <span class="prod-model">Rodia Plus i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">159,00 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas (contramarcha hasta 18kg/105cm)">Ambas (contramarcha hasta 18kg/105cm)</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-17">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-17" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,4 · 142 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (mencionada en título)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CQP3VKSK" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-18">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">G</div>
+          <div class="prod-info">
+            <span class="prod-brand">Graco</span>
+            <span class="prod-model">SlimFit R129</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">197,53 €</span></td>
+      <td title="R129">R129</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="Hasta 25 kg">Hasta 25 kg</span></td>
+      <td title="40-145 cm">40-145 cm</td>
+      <td class="col-isofix"><span class="chk chk--no">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-18">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-18" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 85 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón (integrated belt lock-off)</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">8,76 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Safety Surround + TrueShield)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BMGN89G3" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-19">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">G</div>
+          <div class="prod-info">
+            <span class="prod-brand">Graco</span>
+            <span class="prod-model">Junior Maxi i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">54,00 €</span></td>
+      <td title="R129">R129</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--no">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-19">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-19" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,5 · 3.484 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo (guías de cinturón)</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3,49 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (protección mejorada contra impactos laterales)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CYQD2H66" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-20">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">L</div>
+          <div class="prod-info">
+            <span class="prod-brand">Lionelo</span>
+            <span class="prod-model">Bastiaan i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">154,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main cell-unspecified">Sin especificar</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-20">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-20" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,5 · 614 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX + Top Tether o cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SideProtect)</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CJCC2YYP" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-21">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">L</div>
+          <div class="prod-info">
+            <span class="prod-brand">Lionelo</span>
+            <span class="prod-model">HUGO i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">84,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 2/3">Grupo 2/3</span><span class="grupo-peso cell-unspecified">Sin especificar</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-21">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-21" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,6 · 1.500 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX o cinturón de 3 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo (3 puntos)</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (protección lateral mencionada en fabricante)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CHS67WJ3" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-22">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">L</div>
+          <div class="prod-info">
+            <span class="prod-brand">Lionelo</span>
+            <span class="prod-model">LEVI ONE i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">74,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 1/2/3">Grupo 1/2/3</span><span class="grupo-peso" title="9-36 kg">9-36 kg</span></td>
+      <td title="76-150 cm">76-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--no">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-22">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-22" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,6 · 1.062 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón (5 puntos hasta 18kg, luego cinturón 3 puntos)</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos (76-105cm) / cinturón de 3 puntos (100-150cm)</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (mencionada por fabricante)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0D5QSYXPH" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-23">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-MOOVE 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">139,90 €</span></td>
+      <td title="R129/04">R129/04</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0/1/2/3">Grupo 0/1/2/3</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas (RWF 40-105cm + FWF 76-150cm, confirmado por fabricante)">Ambas (RWF 40-105cm + FWF 76-150cm, confirmado por fabricante)</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-23">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-23" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,1 · 209 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX + Top Tether</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">9,1 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FL7MMYHN" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-24">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-PASS</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">69,90 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 1/2/3">Grupo 1/2/3</span><span class="grupo-peso" title="9-36 kg">9-36 kg</span></td>
+      <td title="76-150 cm">76-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--no">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-24">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-24" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,4 · 785 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">4,7 kg</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DYDY6C5Y" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-25">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-FLIT</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,90 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 1/2/3">Grupo 1/2/3</span><span class="grupo-peso" title="9-36 kg">9-36 kg</span></td>
+      <td title="76-150 cm">76-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-25">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-25" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,5 · 462 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX + Top Tether</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DS6C4XR8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-26">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">J</div>
+          <div class="prod-info">
+            <span class="prod-brand">Jovikids</span>
+            <span class="prod-model">Alzador Coche Grupo 2/3</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">55,99 €</span></td>
+      <td title="R129 / i-Size (ECE R129)">R129 / i-Size (ECE R129)</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 2/3">Grupo 2/3</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="125-150 cm">125-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes" title="Sí — como refuerzo de estabilidad junto al cinturón (confirmado por fabricante)">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-26">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-26" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 2.991 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX + cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">No</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">No</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo (3 puntos)</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (fundas extraíbles lavables a mano)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B09FQ3PYZX" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-27">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">N</div>
+          <div class="prod-info">
+            <span class="prod-brand">Nania</span>
+            <span class="prod-model">Belem</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">59,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 2/3">Grupo 2/3</span><span class="grupo-peso" title="15-36 kg">15-36 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--no">✕</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-27">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-27" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 227 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">Cinturón de seguridad</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">3,4 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FLDLZTHJ" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-28">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">N</div>
+          <div class="prod-info">
+            <span class="prod-brand">Nania</span>
+            <span class="prod-model">Bogota</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">65,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 2/3">Grupo 2/3</span><span class="grupo-peso" title="15-36 kg">15-36 kg</span></td>
+      <td title="100-150 cm">100-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--unk" title="Sin especificar">Sin especificar</span></td>
+      <td title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-28">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-28" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,7 · 181 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX o cinturón</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">ISOFIX o cinturón del vehículo</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">4,4 kg</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FLDT4541" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-29">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">B</div>
+          <div class="prod-info">
+            <span class="prod-brand">Babify</span>
+            <span class="prod-model">Onboard</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">149,99 €</span></td>
+      <td title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-grupo"><span class="grupo-main" title="Grupo 0123">Grupo 0123</span><span class="grupo-peso" title="Hasta 36 kg">Hasta 36 kg</span></td>
+      <td title="40-150 cm">40-150 cm</td>
+      <td class="col-isofix"><span class="chk chk--yes">✓</span></td>
+      <td class="col-360"><span class="chk chk--yes">✓</span></td>
+      <td title="Ambas">Ambas</td>
+      <td class="col-action">
+        <button class="btn-toggle" type="button" data-toggle="detail-29">Ficha técnica ▾</button>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-29" hidden>
+      <td colspan="9">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-label">Valoración</span><span class="detail-value">⭐ 4,4 · 7.143 valoraciones</span></div>
+<div class="detail-item"><span class="detail-label">Tipo de instalación</span><span class="detail-value">ISOFIX + Top Tether</span></div>
+<div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Arnés</span><span class="detail-value">Arnés de 5 puntos</span></div>
+<div class="detail-item"><span class="detail-label">Peso silla</span><span class="detail-value">8,3 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (transpirable y lavable, confirmado en Amazon)</span></div>
+        </div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B07RYWKS9Z" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p class="foot-note">Prototipo generado por tools/build_comparativa_prototipo_v4.py a partir de tools/output/auditoria_30_candidatos.json — no modifica ningún archivo de producción ni el dataset auditado.</p>
+
+<script>
+document.querySelectorAll('.btn-toggle').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const panel = document.getElementById(btn.dataset.toggle);
+    const isOpen = !panel.hasAttribute('hidden');
+    if (isOpen) { panel.setAttribute('hidden', ''); btn.classList.remove('is-open'); btn.textContent = 'Ficha técnica ▾'; }
+    else { panel.removeAttribute('hidden'); btn.classList.add('is-open'); btn.textContent = 'Ficha técnica ▴'; }
+  });
+});
+document.querySelectorAll('tr.main-row').forEach(row => {
+  row.addEventListener('click', () => {
+    row.querySelector('.btn-toggle').click();
+  });
+});
+
+// Autocomprobacion (visible en consola del navegador)
+(function selfCheck() {
+  const rows = document.querySelectorAll('tr.main-row').length;
+  const panels = document.querySelectorAll('tr.detail-row').length;
+  const toggles = document.querySelectorAll('.btn-toggle').length;
+  console.log(`[prototipo v4] filas de producto: ${rows} | paneles de ficha: ${panels} | botones toggle: ${toggles}`);
+  console.assert(rows === 30, `Se esperaban 30 productos, hay ${rows}`);
+  console.assert(rows === panels && panels === toggles, 'Descuadre entre filas, paneles y botones');
+})();
+</script>
+
+</body>
+</html>

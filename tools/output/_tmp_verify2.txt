@@ -1,0 +1,5 @@
+star glyph count: 3
+head/body balance: 1/1 1/1
+229,95 intact: True
+504,99 intact: True
+1.809 valoraciones intact: True

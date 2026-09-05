@@ -1,0 +1,6 @@
+head/body: 1/1 1/1
+h1 count: 1
+sc-ficha count: 7
+sc-ficha-product count: 7
+cta buttons: 7
+amazon links: 7

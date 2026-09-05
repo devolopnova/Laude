@@ -1,0 +1,8 @@
+Total celdas cambiadas: 5
+Cambios FUERA de funda_lavable: 0
+
+B0FKBWNF2G   funda_lavable  ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0BYP63YCW   funda_lavable  ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0BYP9MTBX   funda_lavable  ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'
+B0F9YR27XX   funda_lavable  ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='media'
+B0GGZYY3BZ   funda_lavable  ANTES='No determinado'     DESPUES='No'                   fuente='amazon' confianza='alta'

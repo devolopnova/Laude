@@ -895,3 +895,57 @@ a.pf-hub-card:hover .pf-hub-card-arrow{transform:translateX(4px);}
   .specials-grid:has(> .specials-card:only-child) .specials-card{flex-direction:column;}
   .specials-grid:has(> .specials-card:only-child) .specials-img{width:100%;max-width:none;}
 }
+
+/* ============================================================
+   Ficha de producto — Sillitas de coche ("Creciendo juntos",
+   27-ago-2026). Componente COMPARTIDO, reutilizado en el pilar y en
+   todos los articulos de sillitas de coche (marca/grupo/tema). Los
+   datos (precio, valoracion, caracteristicas) vienen SIEMPRE de
+   tools/output/auditoria_30_candidatos.json por ASIN -- nunca
+   inventados; si un atributo no esta en el JSON, su fila no se
+   muestra (nunca "No especificado" en una ficha de recomendacion,
+   a diferencia de la tabla comparativa completa). La foto reutiliza
+   images/sillas-coche/<ASIN>.webp (misma imagen ya validada del
+   comparador). Reutiliza var(--accent)/var(--ink)/var(--line)/
+   var(--card)/.cta -- ningun color ni boton nuevo. */
+.sc-ficha{
+  display:flex; gap:24px; padding:28px 0; border-top:1px solid var(--line);
+}
+.sc-ficha:last-child{border-bottom:1px solid var(--line);}
+.sc-ficha-img{
+  width:160px;height:160px;object-fit:contain;border-radius:8px;
+  border:1px solid var(--line);background:#fff;flex-shrink:0;align-self:flex-start;
+}
+.sc-ficha-body{display:flex;flex-direction:column;gap:14px;min-width:0;flex:1;}
+.sc-ficha-brand{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;}
+.sc-ficha-name{font-size:19px;margin-top:2px;}
+.sc-ficha-desc{color:var(--ink-soft);font-size:14.5px;max-width:560px;}
+.sc-ficha-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.sc-ficha-price{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:17px;color:var(--ink);}
+.sc-ficha-rating{font-size:13.5px;color:var(--ink-soft);}
+.sc-ficha-rating strong{color:var(--ink);}
+.sc-ficha-attrs{
+  display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:8px 20px;
+  background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;
+}
+.sc-ficha-attr{font-size:13px;line-height:1.5;}
+.sc-ficha-attr-label{color:var(--ink-soft);}
+.sc-ficha-attr-value{color:var(--ink);font-weight:600;}
+.sc-ficha-opiniones{font-size:13.5px;color:var(--ink-soft);line-height:1.6;}
+.sc-ficha-opiniones strong{color:var(--ink);}
+.sc-ficha .cta{align-self:flex-start;}
+@media (max-width:560px){
+  .sc-ficha{flex-direction:column;}
+  .sc-ficha-img{width:120px;height:120px;}
+  .sc-ficha-attrs{grid-template-columns:1fr;}
+}
+
+/* Tabla comparativa (grupo/marca): reutilizada en articulos de tema
+   (Isofix, Grupo 1/2/3...) y de marca -- lista simple de filas
+   etiqueta/valor por columna, para que el HTML pueda generarse desde
+   Python sin depender de <table> (evita problemas de wrap en movil). */
+.sc-compare{overflow-x:auto;margin:20px 0;-webkit-overflow-scrolling:touch;}
+.sc-compare table{width:100%;border-collapse:collapse;font-size:13.5px;}
+.sc-compare th,.sc-compare td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;}
+.sc-compare th{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;}
+.sc-compare td{color:var(--ink);}

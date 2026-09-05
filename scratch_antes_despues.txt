@@ -1,0 +1,73 @@
+ASIN        Attr          ANTES                       DESPUES                     fuente                      
+B0FKBWNF2G  normativa     N/A                         R129 / i-Size               fabricante_oficial          
+B0FKBWNF2G  orientacion   N/A                         No determinado              None                        
+B0FKBWNF2G  giro_360      N/A                         No determinado              None                        
+B0FKBWNF2G  reclinable    N/A                         No determinado              None                        
+B0FKBWNF2G  peso_silla    N/A                         No determinado              None                        
+B0FKBWNF2G  proteccion_lateralN/A                         No determinado              None                        
+B0FKBWNF2G  funda_lavable N/A                         No determinado              None                        
+B0F9YPF1V1  isofix        N/A                         No                          fabricante_oficial          
+B0F9YPF1V1  normativa     i-Size                      R129 / i-Size               amazon                      
+B0F9YPF1V1  giro_360      N/A                         No determinado              None                        
+B0F9YPF1V1  arnes         N/A                         No determinado              None                        
+B0F9YPF1V1  peso_silla    5,98 kg                     5.98 kg                     amazon                      
+B0BYP63YCW  normativa     R129                        R129 / i-Size               amazon                      
+B0BYP63YCW  giro_360      N/A                         No determinado              None                        
+B0BYP63YCW  reclinable    N/A                         No determinado              None                        
+B0BYP63YCW  proteccion_lateralN/A                         No determinado              None                        
+B0BYP63YCW  funda_lavable N/A                         No determinado              None                        
+B0C58QGJNG  normativa     N/A                         R129 / i-Size               fabricante_oficial          
+B0C58QGJNG  giro_360      N/A                         No determinado              None                        
+B0C58QGJNG  funda_lavable N/A                         No determinado              None                        
+B0BZ89X9YC  normativa     R129                        R129 / i-Size               amazon                      
+B0CZ47FKZL  normativa     i-Size                      R129 / i-Size               amazon                      
+B0CZ47FKZL  edad          Grupo 2/3                   3,5-12 años                 amazon                      
+B0CZ47FKZL  giro_360      N/A                         No determinado              None                        
+B0CZ47FKZL  reclinable    N/A                         No determinado              None                        
+B0CZ47FKZL  arnes         N/A                         No determinado              None                        
+B0CZ47FKZL  peso_silla    5,32 kg                     5.32 kg                     amazon                      
+B0BYP9MTBX  normativa     R129                        R129 / i-Size               amazon                      
+B0BYP9MTBX  giro_360      N/A                         No determinado              None                        
+B0BYP9MTBX  reclinable    N/A                         No determinado              None                        
+B0BYP9MTBX  proteccion_lateralN/A                         No determinado              None                        
+B0BYP9MTBX  funda_lavable N/A                         No determinado              None                        
+B0FGDM2ZTS  normativa     i-Size                      R129 / i-Size               amazon                      
+B0FGDM2ZTS  edad          N/A                         No determinado              None                        
+B0FGDM2ZTS  orientacion   N/A                         No determinado              None                        
+B0FGDM2ZTS  giro_360      N/A                         No determinado              None                        
+B0FGDM2ZTS  reclinable    N/A                         No determinado              None                        
+B0FGDM2ZTS  peso_silla    7,31 kg                     7.31 kg                     amazon                      
+B0F3P61P8C  normativa     i-Size                      R129 / i-Size               amazon                      
+B0F3P61P8C  peso_silla    10,75 kg                    10.75 kg                    amazon                      
+B0CWS19269  normativa     i-Size                      R129 / i-Size               amazon                      
+B0CWS19269  edad          Grupo 0+                    0-12 años                   amazon                      
+B0CWS19269  peso_silla    12,7 kg                     12.7 kg                     amazon                      
+B0F9YR27XX  normativa     i-Size                      R129 / i-Size               amazon                      
+B0F9YR27XX  funda_lavable N/A                         No determinado              None                        
+B0DSL7WGB2  isofix        N/A                         Sí                          fabricante_oficial          
+B0DSL7WGB2  normativa     i-Size                      R129 / i-Size               amazon                      
+B0DSL7WGB2  orientacion   N/A                         No determinado              None                        
+B0DSL7WGB2  giro_360      N/A                         No determinado              None                        
+B0DSL7WGB2  arnes         N/A                         No determinado              None                        
+B0DSL7WGB2  peso_silla    6,3 kg                      6.3 kg                      amazon                      
+B0GGZYY3BZ  isofix        Sí                          No                          fabricante_oficial (confirmado manualmente)
+B0GGZYY3BZ  normativa     i-Size                      R129 / i-Size               amazon                      
+B0GGZYY3BZ  giro_360      N/A                         No determinado              None                        
+B0GGZYY3BZ  reclinable    N/A                         No determinado              None                        
+B0GGZYY3BZ  peso_silla    3,35 kg                     3.35 kg                     amazon                      
+B0GGZYY3BZ  proteccion_lateralN/A                         No determinado              None                        
+B0GGZYY3BZ  funda_lavable N/A                         No determinado              None                        
+B0DP7TG8KY  normativa     R129                        R129 / i-Size               amazon                      
+B0DP7TG8KY  edad          N/A                         No determinado              None                        
+B0DP7TG8KY  giro_360      N/A                         No determinado              None                        
+B0DP7TG8KY  reposacabezas N/A                         No determinado              None                        
+B0DP7TG8KY  peso_silla    6,3 kg                      6.3 kg                      amazon                      
+B0DP7TG8KY  proteccion_lateralN/A                         No determinado              None                        
+B0F1R26D8L  isofix        N/A                         No                          fabricante_oficial          
+B0F1R26D8L  normativa     R129                        R129 / i-Size               amazon                      
+B0F1R26D8L  giro_360      N/A                         No determinado              None                        
+B0F1R26D8L  reclinable    N/A                         No determinado              None                        
+B0F1R26D8L  reposacabezas N/A                         No determinado              None                        
+B0F1R26D8L  arnes         N/A                         No determinado              None                        
+B0F1R26D8L  peso_silla    1,2 kg                      1.2 kg                      amazon                      
+B0F1R26D8L  proteccion_lateralN/A                         No determinado              None                        

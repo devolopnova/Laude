@@ -1,0 +1,6 @@
+orientacion: A favor de la marcha
+reclinable: N/A
+giro_360: N/A
+tipo_arnes_proteccion: Cinturón del vehículo
+proteccion_lateral: N/A
+funda_lavable: N/A

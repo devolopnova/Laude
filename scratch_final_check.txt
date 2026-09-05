@@ -1,0 +1,2 @@
+ISOFIX confirmado: 15/15 (100%)  |  Revisar: 0
+B0GGZYY3BZ -> mostrar=No fuente=fabricante_oficial (confirmado manualmente) revisar=False

@@ -1,0 +1,13 @@
+Total celdas cambiadas: 11
+
+B0C58QGJNG   funda_lavable      ANTES='No determinado'          DESPUES='Sí'                      fuente_antes=None fuente_despues='fabricante_oficial'
+B0BZ89X9YC   orientacion        ANTES='A contramarcha'          DESPUES='Ambas'                   fuente_antes='amazon' fuente_despues='amazon'
+B0BZ89X9YC   reclinable         ANTES='Sí'                      DESPUES='Sí — 5 posiciones'       fuente_antes='amazon' fuente_despues='amazon'
+B0CZ47FKZL   arnes              ANTES='No determinado'          DESPUES='Arnés de 3 puntos'       fuente_antes=None fuente_despues='fabricante_oficial'
+B0F3P61P8C   orientacion        ANTES='A contramarcha'          DESPUES='Ambas'                   fuente_antes='amazon' fuente_despues='amazon'
+B0CWS19269   orientacion        ANTES='A contramarcha'          DESPUES='Ambas'                   fuente_antes='amazon' fuente_despues='amazon'
+B0CWS19269   reclinable         ANTES='Sí'                      DESPUES='Sí — 4 posiciones'       fuente_antes='amazon' fuente_despues='amazon'
+B0DP7TG8KY   edad               ANTES='No determinado'          DESPUES='15 meses - 12 años'      fuente_antes=None fuente_despues='fabricante_oficial'
+B0DP7TG8KY   reclinable         ANTES='Sí'                      DESPUES='Sí — 5 posiciones'       fuente_antes='amazon' fuente_despues='amazon'
+B0DP7TG8KY   reposacabezas      ANTES='No determinado'          DESPUES='Sí'                      fuente_antes=None fuente_despues='fabricante_oficial'
+B0DP7TG8KY   proteccion_lateral ANTES='No determinado'          DESPUES='Sí'                      fuente_antes=None fuente_despues='fabricante_oficial'

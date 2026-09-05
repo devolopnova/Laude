@@ -1,0 +1,18 @@
+Atributo                            Antes    Despues   Delta
+Grupo/rango edad               13/15 (87%) -> 13/15 (87%)  +0
+Peso recomendado (kg)          1/15 (7%) -> 15/15 (100%)  +14
+ISOFIX                         12/15 (80%) -> 12/15 (80%)  +0
+Orientación                    5/15 (33%) -> 12/15 (80%)  +7
+Reclinable                     8/15 (53%) -> 8/15 (53%)  +0
+Homologación                   13/15 (87%) -> 13/15 (87%)  +0
+Giratoria 360º                 3/15 (20%) -> 4/15 (27%)  +1
+Reposacabezas regulable        6/15 (40%) -> 13/15 (87%)  +7
+Tipo arnés/protección          5/15 (33%) -> 11/15 (73%)  +6
+Peso silla                     14/15 (93%) -> 14/15 (93%)  +0
+Protección lateral             3/15 (20%) -> 9/15 (60%)  +6
+Funda lavable                  2/15 (13%) -> 9/15 (60%)  +7
+Travel system/capazo           0/15 (0%) -> 0/15 (0%)  +0
+
+--- estado ---
+VERIFICADO antes: 0/15
+VERIFICADO despues: 4/15

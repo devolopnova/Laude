@@ -1,0 +1,9 @@
+B0BYP63YCW (COMFORT UP Rosa)
+  reposacabezas: Sí | fuente=amazon
+  peso_silla: 6 kg | fuente=amazon
+B0CWS19269 (Emerald 360S)
+  reposacabezas: Sí — 14 posiciones | fuente=amazon
+  peso_silla: 12,7 kg | fuente=amazon
+B0DP7TG8KY (FIX2GO)
+  reposacabezas: Sí | fuente=fabricante_oficial
+  peso_silla: 6,3 kg | fuente=amazon

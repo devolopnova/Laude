@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>PROTOTIPO v25 — Comparativa sillitas de coche</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF8; --ink:#1C1C1E; --ink-soft:#6B6B70; --line:#E4E2DC; --card:#FFFFFF;
+  --accent:#FF8A65; --accent-deep:#D85A30; --revisar:#B5841C; --revisar-bg:#FBF2DE;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding:40px 32px 80px;}
+h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-0.01em;}
+
+.proto-banner{background:#2C2C2A;color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;border-radius:8px;display:inline-block;margin-bottom:14px;}
+.proto-banner b{color:#FFB199;}
+.proto-note{max-width:820px;font-size:13px;color:var(--ink-soft);margin-bottom:28px;line-height:1.6;}
+.proto-note code{background:#F0EEE8;padding:1px 5px;border-radius:4px;font-size:12px;}
+
+.page-head{margin-bottom:24px;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent-deep);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.page-head h1{font-size:30px;margin-bottom:6px;}
+.page-head p{color:var(--ink-soft);font-size:14.5px;}
+
+.sort-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.sort-toolbar label{font-size:13px;font-weight:700;color:var(--ink);}
+.sort-toolbar select{
+  font-family:'Inter',sans-serif;font-size:13.5px;font-weight:600;color:var(--ink);
+  background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:8px 12px;cursor:pointer;min-width:260px;
+}
+.sort-toolbar select:focus{outline:2px solid var(--accent-deep);outline-offset:1px;}
+
+.table-shell{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.05);}
+.table-scroll{overflow-x:auto;overflow-y:visible;max-width:100%;}
+
+table{border-collapse:separate;border-spacing:0;table-layout:fixed;}
+
+/* Punto 7.1 -- rediseño de cabecera (16-ago-2026): mas aire vertical,
+   tipografia un punto mas grande y con mas letter-spacing, mismo fondo
+   diferenciado (#F4F2EE) que ya existia. Producto se queda a la
+   izquierda (valor por defecto); el resto de columnas se centra mas
+   abajo con selectores especificos. */
+thead th{
+  background:#F4F2EE; color:var(--ink); font-size:12.5px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.045em;
+  padding:19px 14px; text-align:left; white-space:nowrap;
+  border-bottom:1px solid var(--line);
+  position:relative; /* ancla para el menu de "Rango de uso" en modo fallback */
+}
+thead th.col-price, thead th.col-valoracion, thead th.col-normativa,
+thead th.col-rango, thead th.col-isofix, thead th.col-orientacion,
+thead th.col-360, thead th.col-anclaje, thead th.col-action{
+  text-align:center;
+}
+
+/* Cabeceras ordenables (Precio/Valoración/Rango de uso): el nombre de
+   columna es un boton "fantasma" (sin fondo/borde propios) con el
+   mismo tamaño/peso que el resto de cabeceras, mas un indicador ↕
+   discreto. El resto de cabeceras (Normativa/ISOFIX/Orientación/360º/
+   Arnés/Acciones) no llevan boton ni indicador -- texto plano igual
+   que antes. */
+th.is-sortable{padding:0;}
+.th-sort-btn{
+  display:inline-flex; align-items:center; gap:5px; justify-content:center;
+  width:100%; height:100%; padding:19px 14px; margin:0; border:0; background:none;
+  font-family:'Inter',sans-serif; font-size:12.5px; font-weight:700; color:var(--ink);
+  text-transform:uppercase; letter-spacing:.045em; cursor:pointer; transition:color .15s;
+}
+.th-sort-btn:hover{color:var(--accent-deep);}
+.th-sort-icon{font-size:11px;font-weight:400;color:#B3B0A8;transition:color .15s;}
+.th-sort-btn:hover .th-sort-icon{color:var(--accent-deep);}
+.th-sort-icon.is-active{color:var(--accent-deep);font-weight:700;}
+th.is-sortable.is-active-sort .th-sort-btn{color:var(--accent-deep);}
+
+/* Menu compacto de "Rango de uso" -- position:fixed calculado por JS
+   (para no quedar recortado por el overflow-x:auto de .table-scroll) y
+   movido a <body> al abrirse. */
+.th-sort-menu{
+  position:fixed; z-index:40; background:var(--card); border:1px solid var(--line);
+  border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.12); padding:8px; min-width:210px;
+  text-align:left;
+}
+.th-sort-menu[hidden]{display:none;}
+.th-sort-menu-group{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:4px 6px;}
+.th-sort-menu-label{font-size:11px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;width:44px;flex-shrink:0;}
+.th-sort-menu-btn{
+  flex:1; text-align:left; background:none; border:0; border-radius:6px; padding:6px 8px;
+  font-family:'Inter',sans-serif; font-size:12.5px; font-weight:500; color:var(--ink);
+  cursor:pointer; text-transform:none; letter-spacing:normal;
+}
+.th-sort-menu-btn:hover{background:#FFF7F3;color:var(--accent-deep);}
+.th-sort-menu-btn.is-active{background:#FFF1EA;color:var(--accent-deep);font-weight:700;}
+/* Menus de un solo campo con 3 prioridades (Orientación/Arnés): sin el
+   agrupador "campo + 2 sentidos" de Rango de uso, cada boton ocupa toda
+   la fila. */
+.th-sort-menu-btn--block{display:block;width:100%;margin:1px 0;}
+
+tbody td{
+  padding:14px 12px; font-size:14px; color:var(--ink);
+  border-bottom:1px solid var(--line);
+  vertical-align:middle;
+}
+tbody tr.main-row:last-of-type td{border-bottom:1px solid var(--line);}
+tbody tr.main-row:hover td{background:#FBF6F1;cursor:pointer;}
+tbody tr.main-row td{transition:background .12s;}
+
+td.col-product{white-space:normal;max-width:250px;}
+.prod-cell{display:flex;align-items:center;gap:12px;}
+.prod-thumb-ph{
+  width:44px;height:44px;border-radius:9px;background:linear-gradient(135deg,#F4F2EE,#E9E6DF);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;color:var(--ink-soft);
+  border:1px solid var(--line);
+}
+.prod-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.prod-brand{font-size:11px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.03em;}
+.prod-model{font-size:13px;font-weight:600;color:var(--ink);white-space:normal;line-height:1.3;}
+
+.price-current{font-size:14.5px;font-weight:700;color:var(--ink);white-space:nowrap;}
+
+/* Punto 7.2 (16-ago-2026): jerarquia visual clara entre puntuacion (dato
+   protagonista) y nº de valoraciones (secundario), ambos centrados en la
+   columna. Ancho +14px (70->84) respecto a v17 -- lo justo para que quepa
+   la palabra "valoraciones" sin desbordar ni envolver a media palabra;
+   sigue siendo una columna compacta. */
+/* Punto 7.x (16-ago-2026): TAMAÑO BASE UNIFICADO para todas las
+   columnas de informacion (Normativa/Rango de uso/ISOFIX/Orientación/
+   360º/Arnés/Valoración) = 12.5px, tomando como referencia el tamaño
+   que ya tenia Normativa ("R129 / i-Size"). La jerarquia visual se
+   consigue SOLO con font-weight (negrita donde tiene sentido), nunca
+   con tamaños de fuente distintos. Unica excepcion explicita: el nº de
+   valoraciones (.val-count), que sigue mas pequeño por ser dato
+   secundario. */
+td.col-valoracion{text-align:center;white-space:normal;max-width:84px;}
+.val-star{display:block;font-size:12.5px;font-weight:700;color:var(--ink);white-space:nowrap;line-height:1.2;}
+.val-count{display:block;font-size:11.5px;font-weight:400;color:var(--ink-soft);margin-top:4px;line-height:1.3;}
+
+td.col-normativa{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:90px;}
+
+/* "Rango de uso" -- Edad y Altura son datos PRINCIPALES: mismo tamaño
+   BASE (12.5px, igual que Normativa) que Grupo/Peso, la diferencia es
+   solo font-weight (700 vs 400) y color (ink vs ink-soft) -- ya NO hay
+   dos tamaños de fuente distintos dentro de la columna. El espaciado
+   entre lineas sigue via selectores de hermano adyacente (sin cambios
+   respecto a v20): separacion pequeña DENTRO del mismo nivel
+   (Edad->Altura, o Grupo->Peso), separacion algo mayor en el cambio de
+   nivel (de Edad/Altura a Grupo/Peso). */
+td.col-rango{white-space:normal;max-width:190px;}
+.rango-primary{display:block;font-size:12.5px;font-weight:700;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rango-secondary{display:block;font-size:12.5px;font-weight:400;color:var(--ink-soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rango-primary + .rango-primary,
+.rango-secondary + .rango-secondary{margin-top:2px;}
+.rango-primary + .rango-secondary,
+.rango-secondary + .rango-primary{margin-top:5px;}
+
+.cell-unspecified{color:#9C9A93;font-weight:400;font-size:13px;}
+.cell-revisar{color:var(--revisar);font-weight:600;}
+
+/* ISOFIX/360º -- punto 7.6 (16-ago-2026): texto explicito "Sí"/"No" en
+   vez de simbolos ✓/✕. Mismo tamaño base (12.5px) que Normativa/
+   Orientación/Arnés, texto plano sin negrita ni color. Ajuste v23: 360º
+   "Sin especificar" vuelve a mostrarse como "—" (decision del usuario
+   tras revisar v22) -- ninguna de las dos columnas necesita ya el
+   ancho/padding extra que se añadio en v22 para la palabra
+   "especificar", asi que vuelven a max-width:55px y al padding
+   estandar de la tabla (sin override). */
+td.col-isofix,td.col-360{text-align:center;max-width:55px;}
+.txt-plain{display:inline-block;font-size:12.5px;font-weight:400;color:var(--ink);line-height:1.3;}
+.txt-plain--unk{color:#9C9A93;}
+
+td.col-orientacion{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:120px;}
+
+td.col-anclaje{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:150px;}
+
+td.col-action{max-width:160px;}
+
+/* Dos acciones apiladas: "Ver en Amazon" (CTA principal, solido) arriba,
+   "Ficha técnica" (accion secundaria, outline) debajo -- jerarquia
+   visual clara para que no parezcan del mismo nivel de importancia. */
+.action-group{display:flex;flex-direction:column;gap:8px;}
+
+.btn-amazon-row{
+  display:block;background:var(--accent-deep);color:#fff;text-align:center;text-decoration:none;
+  font-size:12.5px;font-weight:700;padding:9px 12px;border-radius:8px;
+  font-family:'Inter',sans-serif;transition:background .15s;white-space:nowrap;width:100%;
+}
+.btn-amazon-row:hover{background:#B5471F;}
+
+.btn-toggle{
+  display:block;background:none;border:1px solid var(--line);color:var(--ink-soft);
+  font-size:12px;font-weight:600;padding:8px 14px;border-radius:8px;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:.15s;width:100%;
+}
+.btn-toggle:hover, .btn-toggle.is-open{border-color:var(--accent-deep);color:var(--accent-deep);background:#FFF7F3;}
+
+tr.detail-row td{padding:0;}
+tr.detail-row[hidden]{display:none;}
+
+/* Punto 7.8 (16-ago-2026): ficha tecnica rediseñada -- bloque compacto,
+   sin lineas horizontales entre cada campo, cabecera clara con cierre
+   propio. Mismo fondo que antes (#FBF9F5), sin tarjetas ni bordes
+   innecesarios. */
+.ficha-header{
+  display:flex;align-items:center;justify-content:space-between;
+  background:#FBF9F5;padding:16px 26px 4px;
+}
+.ficha-title{font-size:11.5px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.05em;}
+.ficha-close{
+  background:none;border:0;color:var(--ink-soft);font-size:13px;line-height:1;cursor:pointer;
+  padding:4px 6px;border-radius:6px;transition:.15s;
+}
+.ficha-close:hover{color:var(--accent-deep);background:#FFF1EA;}
+
+.ficha-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:2px 32px;
+  background:#FBF9F5;padding:10px 26px 14px;
+}
+/* Campos principales -- ajuste 16-ago-2026 (punto 7.8.x): nombre y
+   valor van JUNTOS como una sola unidad (antes "justify-content:
+   space-between" empujaba el valor al extremo derecho de la columna,
+   dejando un hueco enorme). Ahora es un flex normal con un gap fijo y
+   corto (10px) entre nombre y valor, sin borde debajo de cada campo. */
+.detail-item{
+  display:flex;align-items:baseline;justify-content:flex-start;gap:10px;
+  padding:6px 0;white-space:normal;
+}
+.detail-label{font-size:12px;font-weight:600;color:var(--ink-soft);flex-shrink:0;}
+.detail-value{font-size:12.5px;color:var(--ink);font-weight:400;text-align:left;}
+.detail-value--unk{color:#9C9A93;font-weight:400;font-style:italic;}
+.detail-value.cell-revisar{color:var(--revisar);cursor:help;border-bottom:1px dotted var(--revisar);}
+
+/* Particularidades (instalacion/arnes): solo aparecen cuando existen,
+   a ancho completo, etiqueta encima del valor (texto mas largo que un
+   campo principal). Separacion sutil respecto al bloque anterior con
+   un borde muy ligero -- no una linea por cada campo. */
+.ficha-particularidades{background:#FBF9F5;padding:10px 26px 16px;border-top:1px solid var(--line);}
+.detail-item--particularidad{display:flex;flex-direction:column;gap:3px;align-items:stretch;padding:8px 0;}
+.detail-item--particularidad .detail-label{font-size:11px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.03em;}
+.detail-item--particularidad .detail-value{font-size:13px;font-weight:500;text-align:left;}
+
+.detail-amazon{padding:16px 26px 22px;background:#FBF9F5;}
+.btn-amazon{
+  display:inline-block;background:var(--accent-deep);color:#fff;font-size:13px;font-weight:700;
+  padding:10px 18px;border-radius:8px;white-space:nowrap;transition:background .15s;
+}
+.btn-amazon:hover{background:#B5471F;}
+
+@media (max-width:640px){
+  .ficha-grid{grid-template-columns:1fr;}
+}
+
+.foot-note{margin-top:18px;font-size:12px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<div class="proto-banner">⚠ Prototipo v25 — <b>no es la web real</b> — misma fuente que v4-v24: tools/output/auditoria_30_candidatos.json (sin cambios de dato en esta versión, solo CSS interno de la ficha técnica)</div>
+<p class="proto-note">
+  Ajuste sobre v24 (punto 7.8.x, 16-ago-2026): dentro de la <b>ficha técnica</b>, el nombre de cada característica y su valor quedan juntos como una unidad — antes "justify-content: space-between" empujaba el valor al extremo derecho de la columna, dejando un hueco enorme. Ahora hay una separación fija y corta (10px) entre nombre y valor en todas las filas. "Sin especificar" se mantiene como texto (gris, cursiva). No se ha tocado ningún dato, campo, la tabla principal, la cabecera ni la ordenación.
+</p>
+
+<div class="page-head">
+  <div class="eyebrow">Comparador de sillitas de coche · Prototipo PC</div>
+  <h1>Comparativa de sillitas de coche</h1>
+  <p>30 modelos</p>
+</div>
+
+<div class="sort-toolbar">
+  <label for="sortSelect">Ordenar por</label>
+  <select id="sortSelect">
+    <option value="default" selected>Sin ordenar (orden original)</option>
+    <optgroup label="Datos numéricos">
+      <option value="precio-asc">Precio: menor → mayor</option>
+      <option value="precio-desc">Precio: mayor → menor</option>
+      <option value="valoracion-desc">Valoración: mayor → menor</option>
+      <option value="valoracion-asc">Valoración: menor → mayor</option>
+      <option value="nval-desc">Nº de valoraciones: mayor → menor</option>
+      <option value="nval-asc">Nº de valoraciones: menor → mayor</option>
+      <option value="altura-asc">Altura: menor → mayor</option>
+      <option value="altura-desc">Altura: mayor → menor</option>
+      <option value="edad-asc">Edad: menor → mayor</option>
+      <option value="edad-desc">Edad: mayor → menor</option>
+      <option value="grupo-desc">Grupo: más grupos → menos grupos</option>
+      <option value="grupo-asc">Grupo: menos grupos → más grupos</option>
+      <option value="peso-asc">Peso: menor → mayor</option>
+      <option value="peso-desc">Peso: mayor → menor</option>
+    </optgroup>
+    <optgroup label="Características">
+      <option value="isofix-si">ISOFIX: Sí primero</option>
+      <option value="isofix-no">ISOFIX: No primero</option>
+      <option value="360-si">360º: Sí primero</option>
+      <option value="360-no">360º: No primero</option>
+      <option value="orientacion-ambas">Orientación: Ambas primero</option>
+      <option value="orientacion-contramarcha">Orientación: A contramarcha primero</option>
+      <option value="orientacion-favor">Orientación: A favor de la marcha primero</option>
+      <option value="arnes-5">Arnés: 5 puntos primero</option>
+      <option value="arnes-3">Arnés: 3 puntos primero</option>
+      <option value="arnes-cinturon">Arnés: Cinturón del vehículo primero</option>
+    </optgroup>
+  </select>
+</div>
+
+<div class="table-shell">
+  <div class="table-scroll">
+    <table>
+      <colgroup>
+        <col style="width:250px">
+<col style="width:85px">
+<col style="width:84px">
+<col style="width:90px">
+<col style="width:190px">
+<col style="width:55px">
+<col style="width:120px">
+<col style="width:55px">
+<col style="width:150px">
+<col style="width:160px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="col-product">Producto</th>
+<th class="col-price is-sortable">
+      <button type="button" class="th-sort-btn" data-sort-toggle="precio">Precio<span class="th-sort-icon" data-sort-icon="precio">↕</span></button>
+    </th>
+<th class="col-valoracion is-sortable">
+      <button type="button" class="th-sort-btn" data-sort-toggle="valoracion">Valoración<span class="th-sort-icon" data-sort-icon="valoracion">↕</span></button>
+    </th>
+<th class="col-normativa">Normativa</th>
+<th class="col-rango is-sortable">
+      <button type="button" class="th-sort-btn" data-menu-toggle="rango-menu">Rango de uso<span class="th-sort-icon" data-sort-icon="rango">↕</span></button>
+      <div class="th-sort-menu" id="rango-menu" hidden>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Altura</span><button type="button" class="th-sort-menu-btn" data-sort-key="altura-asc">menor → mayor</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Altura</span><button type="button" class="th-sort-menu-btn" data-sort-key="altura-desc">mayor → menor</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Edad</span><button type="button" class="th-sort-menu-btn" data-sort-key="edad-asc">menor → mayor</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Edad</span><button type="button" class="th-sort-menu-btn" data-sort-key="edad-desc">mayor → menor</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Grupo</span><button type="button" class="th-sort-menu-btn" data-sort-key="grupo-desc">más grupos → menos</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Grupo</span><button type="button" class="th-sort-menu-btn" data-sort-key="grupo-asc">menos grupos → más</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Peso</span><button type="button" class="th-sort-menu-btn" data-sort-key="peso-asc">menor → mayor</button></div>
+      <div class="th-sort-menu-group"><span class="th-sort-menu-label">Peso</span><button type="button" class="th-sort-menu-btn" data-sort-key="peso-desc">mayor → menor</button></div>
+      </div>
+    </th>
+<th class="col-isofix is-sortable">
+      <button type="button" class="th-sort-btn" data-sort-toggle="isofix">ISOFIX<span class="th-sort-icon" data-sort-icon="isofix">↕</span></button>
+    </th>
+<th class="col-orientacion is-sortable">
+      <button type="button" class="th-sort-btn" data-menu-toggle="orientacion-menu">Orientación<span class="th-sort-icon" data-sort-icon="orientacion">↕</span></button>
+      <div class="th-sort-menu" id="orientacion-menu" hidden>
+      <button type="button" class="th-sort-menu-btn th-sort-menu-btn--block" data-sort-key="orientacion-ambas">Ambas primero</button>
+      <button type="button" class="th-sort-menu-btn th-sort-menu-btn--block" data-sort-key="orientacion-contramarcha">A contramarcha primero</button>
+      <button type="button" class="th-sort-menu-btn th-sort-menu-btn--block" data-sort-key="orientacion-favor">A favor de la marcha primero</button>
+      </div>
+    </th>
+<th class="col-360 is-sortable">
+      <button type="button" class="th-sort-btn" data-sort-toggle="giro360">360º<span class="th-sort-icon" data-sort-icon="giro360">↕</span></button>
+    </th>
+<th class="col-anclaje is-sortable">
+      <button type="button" class="th-sort-btn" data-menu-toggle="arnes-menu">Arnés<span class="th-sort-icon" data-sort-icon="arnes">↕</span></button>
+      <div class="th-sort-menu" id="arnes-menu" hidden>
+      <button type="button" class="th-sort-menu-btn th-sort-menu-btn--block" data-sort-key="arnes-5">5 puntos primero</button>
+      <button type="button" class="th-sort-menu-btn th-sort-menu-btn--block" data-sort-key="arnes-3">3 puntos primero</button>
+      <button type="button" class="th-sort-menu-btn th-sort-menu-btn--block" data-sort-key="arnes-cinturon">Cinturón del vehículo primero</button>
+      </div>
+    </th>
+<th class="col-action">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    <tr class="main-row" data-target="detail-0" data-orig-index="0" data-sort-precio="129.9" data-sort-valoracion="4.5" data-sort-nval="1485" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-grupo-num="4" data-sort-grupo-first="0.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model">I-GROW</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">129,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">1.485 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Grupo 0+/1/2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0BZ89X9YC" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-0">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-0" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-0" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (H-GUARD + SPS+)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">11 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BZ89X9YC" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-1" data-orig-index="1" data-sort-precio="24.9" data-sort-valoracion="4.6" data-sort-nval="143" data-sort-altura-min="125.0" data-sort-altura-max="150.0" data-sort-edad-min="72.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model">I-BOOST 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">24,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">143 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">6-12 años</span>
+<span class="rango-primary">125-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo (3 puntos)">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0F1R26D8L" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-1">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-1" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-1" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">1,2 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad del arnés</span><span class="detail-value">Cinturón del vehículo (3 puntos)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0F1R26D8L" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-2" data-orig-index="2" data-sort-precio="99.0" data-sort-valoracion="4.5" data-sort-nval="153" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="15.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">Kinderkraft</span>
+            <span class="prod-model">SAFETY FIX 3 PRO</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">153 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">15 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">9-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion cell-unspecified" title="Sin especificar">—</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0FGDM2ZTS" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-2">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-2" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-2" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (H-GUARD + SPS)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">7,31 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FGDM2ZTS" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-3" data-orig-index="3" data-sort-precio="99.99" data-sort-valoracion="4.4" data-sort-nval="1385" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model">Tanza</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">1.385 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Grupo 2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos">Arnés 3 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CZ47FKZL" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-3">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-3" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-3" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (G-CELL)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">5,32 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CZ47FKZL" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-4" data-orig-index="4" data-sort-precio="386.99" data-sort-valoracion="4.6" data-sort-nval="617" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-grupo-num="4" data-sort-grupo-first="0.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model">Emerald 360 S</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">386,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">617 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Grupo 0+/1/2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CWS19269" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-4">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-4" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-4" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (G-CELL)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">12,7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CWS19269" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-5" data-orig-index="5" data-sort-precio="199.99" data-sort-valoracion="4.2" data-sort-nval="458" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BC</div>
+          <div class="prod-info">
+            <span class="prod-brand">Bébé Confort</span>
+            <span class="prod-model">RevolveFix Plus 360</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">199,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,2</span><span class="val-count">458 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0F3P61P8C" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-5">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-5" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-5" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">10,75 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0F3P61P8C" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-6" data-orig-index="6" data-sort-precio="79.99" data-sort-valoracion="4.4" data-sort-nval="224" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BC</div>
+          <div class="prod-info">
+            <span class="prod-brand">Bébé Confort</span>
+            <span class="prod-model">Marvel RoadSafe</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">79,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">224 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">15-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0GGZYY3BZ" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-6">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-6" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-6" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">3,35 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0GGZYY3BZ" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-7" data-orig-index="7" data-sort-precio="119.99" data-sort-valoracion="4.7" data-sort-nval="1659" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="36.0" data-sort-edad-max="144.0" data-sort-peso-max="50.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Solution X i-Fix</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">119,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">1.659 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">3-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Hasta 50 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos">Arnés 3 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0C58QGJNG" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-7">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-7" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-7" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C58QGJNG" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-8" data-orig-index="8" data-sort-precio="149.95" data-sort-valoracion="4.8" data-sort-nval="4098" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="36.0" data-sort-edad-max="144.0" data-sort-peso-max="50.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Solution S2 i-Fix</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">149,95 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,8</span><span class="val-count">4.098 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">3-12 años aprox.</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">15-50 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí (opcional, también cinturón)">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos">Arnés 3 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0B97Z1C6M" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-8">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-8" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-8" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Sistema L.S.P.)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">6,2 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (lavable a máquina 30°C)</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">Cinturón + ISOFIX opcional</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0B97Z1C6M" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-9" data-orig-index="9" data-sort-precio="329.99" data-sort-valoracion="4.4" data-sort-nval="344" data-sort-altura-min="61.0" data-sort-altura-max="105.0" data-sort-edad-min="3.0" data-sort-edad-max="48.0" data-sort-peso-max="17.5" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">M</div>
+          <div class="prod-info">
+            <span class="prod-brand">Maxi-Cosi</span>
+            <span class="prod-model">Pearl 360</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">329,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">344 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">3 meses - 4 años</span>
+<span class="rango-primary">61-105 cm</span>
+<span class="rango-secondary">Hasta 17,5 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí — requiere base FamilyFix 360 vendida por separado">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain" title="Sí (FlexiSpin, con la base)">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0C6R47BCV" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-9">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-9" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-9" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (G-CELL)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">7,45 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value">Compatible con cochecitos Maxi-Cosi (ver widget de compatibilidad)</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX (vía base)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C6R47BCV" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-10" data-orig-index="10" data-sort-precio="229.95" data-sort-valoracion="4.7" data-sort-nval="232" data-sort-altura-min="40.0" data-sort-altura-max="87.0" data-sort-edad-min="0.0" data-sort-edad-max="24.0" data-sort-peso-max="13.0" data-sort-isofix-cat="si" data-sort-giro360-cat="no" data-sort-orientacion-cat="contramarcha" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Cloud G i-Size Comfort</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">229,95 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">232 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-24 meses aprox.</span>
+<span class="rango-primary">40-87 cm</span>
+<span class="rango-secondary">Hasta 13 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí — requiere Base G vendida por separado (229€ extra)">Sí</span></td>
+      <td class="col-orientacion" title="A contramarcha">A contramarcha</td>
+      <td class="col-360"><span class="txt-plain" title="No — 180° (no 360° completo)">No</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DB2J1HMK" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-10">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-10" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-10" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Linear Side-impact Protection Plus)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">3,9 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value">Compatible (adaptador para cochecitos Cybex/gb)</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX (vía base)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DB2J1HMK" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-11" data-orig-index="11" data-sort-precio="234.86" data-sort-valoracion="4.7" data-sort-nval="301" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="15.0" data-sort-edad-max="144.0" data-sort-peso-max="50.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Cybex</span>
+            <span class="prod-model">Pallas G i-Size (G2)</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">234,86 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">301 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">15 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">9-50 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí (obligatorio salvo modo elevador 100-150cm)">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DPHRJ1YH" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-11">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-11" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-11" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Protección lineal contra impactos laterales Plus — LSP)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">8,9 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX o cinturón (según etapa)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DPHRJ1YH" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-12" data-orig-index="12" data-sort-precio="504.99" data-sort-valoracion="4.7" data-sort-nval="1809" data-sort-edad-min="0.0" data-sort-edad-max="48.0" data-sort-grupo-num="2" data-sort-grupo-first="0.0" data-sort-peso-max="18.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="contramarcha">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BR</div>
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">DUALFIX2 R</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">504,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">1.809 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-4 años</span>
+<span class="rango-secondary">Grupo 0+/1</span>
+<span class="rango-secondary">Hasta 18 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A contramarcha (con reclinado en todas las posiciones)">A contramarcha (con reclinado en todas las posiciones)</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje cell-revisar" title="Sin especificar con certeza (tabla dice &quot;3 puntos&quot;, posible error de ficha para un arnés de bebé — Revisar)">Revisar</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B07QLSYS2Y" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-12">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-12" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-12" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">14 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (extracción rápida, lavable)</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX + soporte de piernas</span></div>
+<div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad del arnés</span><span class="detail-value cell-revisar" title="Sin especificar con certeza (tabla dice &quot;3 puntos&quot;, posible error de ficha para un arnés de bebé — Revisar)">Revisar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B07QLSYS2Y" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-13" data-orig-index="13" data-sort-precio="135.92" data-sort-valoracion="4.2" data-sort-nval="35" data-sort-altura-min="40.0" data-sort-altura-max="83.0" data-sort-edad-min="0.0" data-sort-edad-max="15.0" data-sort-grupo-num="1" data-sort-grupo-first="0.0" data-sort-peso-max="12.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="contramarcha" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">BR</div>
+          <div class="prod-info">
+            <span class="prod-brand">Britax Römer</span>
+            <span class="prod-model">BABY-SAFE CORE</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">135,92 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,2</span><span class="val-count">35 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-15 meses aprox.</span>
+<span class="rango-primary">40-83 cm</span>
+<span class="rango-secondary">Grupo 0+</span>
+<span class="rango-secondary">Hasta 12 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí — con base BABY-SAFE CORE Base vendida por separado, o cinturón">Sí</span></td>
+      <td class="col-orientacion" title="A contramarcha">A contramarcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos">Arnés 3 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CP2QYQK8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-13">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-13" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-13" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">3,9 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value">Compatible con numerosos cochecitos</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX o cinturón</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CP2QYQK8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-14" data-orig-index="14" data-sort-precio="229.0" data-sort-valoracion="4.5" data-sort-nval="1230" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-grupo-num="4" data-sort-grupo-first="0.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Chicco</span>
+            <span class="prod-model">Unico EVO I&#x27;Size Classic</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">229,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">1.230 valoraciones</span></td>
+      <td class="col-normativa" title="R129/03">R129/03</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Grupo 0123</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí (40-105cm) / cinturón (100-150cm)">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0C6KZCY6Z" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-14">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-14" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-14" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (mencionada en título)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">11,55 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX o cinturón según etapa</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C6KZCY6Z" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-15" data-orig-index="15" data-sort-precio="169.0" data-sort-valoracion="4.3" data-sort-nval="71" data-sort-altura-min="40.0" data-sort-altura-max="80.0" data-sort-edad-min="0.0" data-sort-edad-max="15.0" data-sort-grupo-num="1" data-sort-grupo-first="0.0" data-sort-peso-max="21.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="contramarcha" data-sort-arnes-cat="3puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Chicco</span>
+            <span class="prod-model">Kory i-Size Essential</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">169,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,3</span><span class="val-count">71 valoraciones</span></td>
+      <td class="col-normativa" title="R129/03">R129/03</td>
+      <td class="col-rango"><span class="rango-primary">Recién nacido - 15 meses aprox.</span>
+<span class="rango-primary">40-80 cm</span>
+<span class="rango-secondary">Grupo 0+</span>
+<span class="rango-secondary">Hasta 21 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="No de serie — ISOFIX solo con &quot;Base Full 360 i-Size&quot; vendida por separado (219€)">No</span></td>
+      <td class="col-orientacion" title="A contramarcha">A contramarcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 3 puntos">Arnés 3 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0C6KXB9LL" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-15">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-15" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-15" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">4,4 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value">Sí — compatible con carritos Chicco</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">Cinturón (ISOFIX opcional vía base)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0C6KXB9LL" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-16" data-orig-index="16" data-sort-precio="55.0" data-sort-valoracion="4.7" data-sort-nval="52" data-sort-altura-min="126.0" data-sort-altura-max="150.0" data-sort-edad-min="84.0" data-sort-edad-max="144.0" data-sort-grupo-num="1" data-sort-grupo-first="3.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">C</div>
+          <div class="prod-info">
+            <span class="prod-brand">Chicco</span>
+            <span class="prod-model">Quasar Fix i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">55,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">52 valoraciones</span></td>
+      <td class="col-normativa" title="R129/03">R129/03</td>
+      <td class="col-rango"><span class="rango-primary">7-12 años aprox.</span>
+<span class="rango-primary">126-150 cm</span>
+<span class="rango-secondary">Grupo 3</span>
+<span class="rango-secondary">23-36 kg (máx. de la ficha: 22 kg)</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DW9GD5CG" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-16">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-16" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-16" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">Cinturón de 3 puntos + conectores ISOFIX</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DW9GD5CG" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-17" data-orig-index="17" data-sort-precio="159.0" data-sort-valoracion="4.4" data-sort-nval="142" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">B</div>
+          <div class="prod-info">
+            <span class="prod-brand">BabyAuto</span>
+            <span class="prod-model">Rodia Plus i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">159,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">142 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas (contramarcha hasta 18kg/105cm)">Ambas (contramarcha hasta 18kg/105cm)</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CQP3VKSK" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-17">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-17" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-17" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (mencionada en título)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CQP3VKSK" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-18" data-orig-index="18" data-sort-precio="197.53" data-sort-valoracion="4.7" data-sort-nval="85" data-sort-altura-min="40.0" data-sort-altura-max="145.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-peso-max="25.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">G</div>
+          <div class="prod-info">
+            <span class="prod-brand">Graco</span>
+            <span class="prod-model">SlimFit R129</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">197,53 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">85 valoraciones</span></td>
+      <td class="col-normativa" title="R129">R129</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años aprox.</span>
+<span class="rango-primary">40-145 cm</span>
+<span class="rango-secondary">Hasta 25 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0BMGN89G3" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-18">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-18" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-18" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (Safety Surround + TrueShield)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">8,76 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">Cinturón (integrated belt lock-off)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0BMGN89G3" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-19" data-orig-index="19" data-sort-precio="54.0" data-sort-valoracion="4.5" data-sort-nval="3484" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="42.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">G</div>
+          <div class="prod-info">
+            <span class="prod-brand">Graco</span>
+            <span class="prod-model">Junior Maxi i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">54,00 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">3.484 valoraciones</span></td>
+      <td class="col-normativa" title="R129">R129</td>
+      <td class="col-rango"><span class="rango-primary">3,5-12 años</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo (guías de cinturón)">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CYQD2H66" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-19">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-19" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-19" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (protección mejorada contra impactos laterales)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">3,49 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad del arnés</span><span class="detail-value">Cinturón del vehículo (guías de cinturón)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CYQD2H66" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-20" data-orig-index="20" data-sort-precio="154.99" data-sort-valoracion="4.5" data-sort-nval="614" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">L</div>
+          <div class="prod-info">
+            <span class="prod-brand">Lionelo</span>
+            <span class="prod-model">Bastiaan i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">154,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">614 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años aprox.</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CJCC2YYP" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-20">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-20" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-20" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SideProtect)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX + Top Tether o cinturón</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CJCC2YYP" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-21" data-orig-index="21" data-sort-precio="84.99" data-sort-valoracion="4.6" data-sort-nval="1500" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="48.0" data-sort-edad-max="144.0" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">L</div>
+          <div class="prod-info">
+            <span class="prod-brand">Lionelo</span>
+            <span class="prod-model">HUGO i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">84,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">1.500 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">4-12 años aprox.</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Grupo 2/3</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo (3 puntos)">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0CHS67WJ3" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-21">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-21" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-21" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (protección lateral mencionada en fabricante)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX o cinturón de 3 puntos</span></div>
+<div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad del arnés</span><span class="detail-value">Cinturón del vehículo (3 puntos)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0CHS67WJ3" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-22" data-orig-index="22" data-sort-precio="74.99" data-sort-valoracion="4.6" data-sort-nval="1062" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="15.0" data-sort-edad-max="144.0" data-sort-grupo-num="3" data-sort-grupo-first="1.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">L</div>
+          <div class="prod-info">
+            <span class="prod-brand">Lionelo</span>
+            <span class="prod-model">LEVI ONE i-Size</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">74,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,6</span><span class="val-count">1.062 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">15 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">Grupo 1/2/3</span>
+<span class="rango-secondary">9-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos (76-105cm) / cinturón de 3 puntos (100-150cm)">Arnés 5 puntos / cinturón 3 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0D5QSYXPH" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-22">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-22" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-22" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (mencionada por fabricante)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">Cinturón (5 puntos hasta 18kg, luego cinturón 3 puntos)</span></div>
+<div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad del arnés</span><span class="detail-value">Arnés de 5 puntos (76-105cm) / cinturón de 3 puntos (100-150cm)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0D5QSYXPH" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-23" data-orig-index="23" data-sort-precio="139.9" data-sort-valoracion="4.1" data-sort-nval="209" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-grupo-num="4" data-sort-grupo-first="0.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-MOOVE 2</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">139,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,1</span><span class="val-count">209 valoraciones</span></td>
+      <td class="col-normativa" title="R129/04">R129/04</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años aprox.</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Grupo 0/1/2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas (RWF 40-105cm + FWF 76-150cm)">Ambas (RWF 40-105cm + FWF 76-150cm)</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0FL7MMYHN" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-23">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-23" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-23" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">9,1 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX + Top Tether</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FL7MMYHN" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-24" data-orig-index="24" data-sort-precio="69.9" data-sort-valoracion="4.4" data-sort-nval="785" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="15.0" data-sort-edad-max="144.0" data-sort-grupo-num="3" data-sort-grupo-first="1.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-PASS</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">69,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">785 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">15 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">Grupo 1/2/3</span>
+<span class="rango-secondary">9-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DYDY6C5Y" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-24">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-24" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-24" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">4,7 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DYDY6C5Y" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-25" data-orig-index="25" data-sort-precio="99.9" data-sort-valoracion="4.5" data-sort-nval="462" data-sort-altura-min="76.0" data-sort-altura-max="150.0" data-sort-edad-min="15.0" data-sort-edad-max="144.0" data-sort-grupo-num="3" data-sort-grupo-first="1.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">K</div>
+          <div class="prod-info">
+            <span class="prod-brand">KikkaBoo</span>
+            <span class="prod-model">i-FLIT</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">99,90 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,5</span><span class="val-count">462 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">15 meses - 12 años</span>
+<span class="rango-primary">76-150 cm</span>
+<span class="rango-secondary">Grupo 1/2/3</span>
+<span class="rango-secondary">9-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0DS6C4XR8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-25">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-25" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-25" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX + Top Tether</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0DS6C4XR8" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-26" data-orig-index="26" data-sort-precio="55.99" data-sort-valoracion="4.7" data-sort-nval="2991" data-sort-altura-min="125.0" data-sort-altura-max="150.0" data-sort-edad-min="72.0" data-sort-edad-max="144.0" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">J</div>
+          <div class="prod-info">
+            <span class="prod-brand">Jovikids</span>
+            <span class="prod-model">Alzador Coche Grupo 2/3</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">55,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">2.991 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size (ECE R129)">R129 / i-Size (ECE R129)</td>
+      <td class="col-rango"><span class="rango-primary">6-12 años</span>
+<span class="rango-primary">125-150 cm</span>
+<span class="rango-secondary">Grupo 2/3</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain" title="Sí — como refuerzo de estabilidad junto al cinturón">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo (3 puntos)">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B09FQ3PYZX" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-26">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-26" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-26" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">No</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">No</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">3 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (fundas extraíbles lavables a mano)</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX + cinturón</span></div>
+<div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad del arnés</span><span class="detail-value">Cinturón del vehículo (3 puntos)</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B09FQ3PYZX" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-27" data-orig-index="27" data-sort-precio="59.99" data-sort-valoracion="4.7" data-sort-nval="227" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="48.0" data-sort-edad-max="144.0" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-peso-max="36.0" data-sort-isofix-cat="no" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">N</div>
+          <div class="prod-info">
+            <span class="prod-brand">Nania</span>
+            <span class="prod-model">Belem</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">59,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">227 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">4-12 años aprox.</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Grupo 2/3</span>
+<span class="rango-secondary">15-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">No</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0FLDLZTHJ" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-27">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-27" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-27" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">3,4 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FLDLZTHJ" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-28" data-orig-index="28" data-sort-precio="65.99" data-sort-valoracion="4.7" data-sort-nval="181" data-sort-altura-min="100.0" data-sort-altura-max="150.0" data-sort-edad-min="48.0" data-sort-edad-max="144.0" data-sort-grupo-num="2" data-sort-grupo-first="2.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-orientacion-cat="favor" data-sort-arnes-cat="cinturon">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">N</div>
+          <div class="prod-info">
+            <span class="prod-brand">Nania</span>
+            <span class="prod-model">Bogota</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">65,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,7</span><span class="val-count">181 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">4-12 años aprox.</span>
+<span class="rango-primary">100-150 cm</span>
+<span class="rango-secondary">Grupo 2/3</span>
+<span class="rango-secondary">15-36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="A favor de la marcha">A favor de la marcha</td>
+      <td class="col-360"><span class="txt-plain txt-plain--unk" title="Sin especificar">—</span></td>
+      <td class="col-anclaje" title="Cinturón del vehículo">Cinturón vehículo</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B0FLDT4541" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-28">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-28" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-28" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value">Sí (SPS)</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">4,4 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value detail-value--unk">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX o cinturón</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B0FLDT4541" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="main-row" data-target="detail-29" data-orig-index="29" data-sort-precio="149.99" data-sort-valoracion="4.4" data-sort-nval="7143" data-sort-altura-min="40.0" data-sort-altura-max="150.0" data-sort-edad-min="0.0" data-sort-edad-max="144.0" data-sort-grupo-num="4" data-sort-grupo-first="0.0" data-sort-peso-max="36.0" data-sort-isofix-cat="si" data-sort-giro360-cat="si" data-sort-orientacion-cat="ambas" data-sort-arnes-cat="5puntos">
+      <td class="col-product">
+        <div class="prod-cell">
+          <div class="prod-thumb-ph">B</div>
+          <div class="prod-info">
+            <span class="prod-brand">Babify</span>
+            <span class="prod-model">Onboard</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-price"><span class="price-current">149,99 €</span></td>
+      <td class="col-valoracion"><span class="val-star">⭐ 4,4</span><span class="val-count">7.143 valoraciones</span></td>
+      <td class="col-normativa" title="R129 / i-Size">R129 / i-Size</td>
+      <td class="col-rango"><span class="rango-primary">0-12 años</span>
+<span class="rango-primary">40-150 cm</span>
+<span class="rango-secondary">Grupo 0123</span>
+<span class="rango-secondary">Hasta 36 kg</span></td>
+      <td class="col-isofix"><span class="txt-plain">Sí</span></td>
+      <td class="col-orientacion" title="Ambas">Ambas</td>
+      <td class="col-360"><span class="txt-plain">Sí</span></td>
+      <td class="col-anclaje" title="Arnés de 5 puntos">Arnés 5 puntos</td>
+      <td class="col-action">
+        <div class="action-group">
+          <a class="btn-amazon-row" href="https://www.amazon.es/dp/B07RYWKS9Z" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+          <button class="btn-toggle" type="button" data-toggle="detail-29">Ficha técnica ▾</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="detail-row" id="detail-29" hidden>
+      <td colspan="10">
+        <div class="ficha-header">
+          <span class="ficha-title">Ficha técnica</span>
+          <button type="button" class="ficha-close" data-close-panel="detail-29" aria-label="Cerrar ficha técnica">✕</button>
+        </div>
+        <div class="ficha-grid"><div class="detail-item"><span class="detail-label">Reclinable</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Reposacabezas</span><span class="detail-value">Sí</span></div>
+<div class="detail-item"><span class="detail-label">Protección lateral</span><span class="detail-value detail-value--unk" title="Sin especificar explícito">Sin especificar</span></div>
+<div class="detail-item"><span class="detail-label">Peso de la silla</span><span class="detail-value">8,3 kg</span></div>
+<div class="detail-item"><span class="detail-label">Funda lavable</span><span class="detail-value">Sí (transpirable y lavable)</span></div>
+<div class="detail-item"><span class="detail-label">Travel System</span><span class="detail-value detail-value--unk">Sin especificar</span></div></div>
+<div class="ficha-particularidades"><div class="detail-item detail-item--particularidad"><span class="detail-label">Particularidad de instalación</span><span class="detail-value">ISOFIX + Top Tether</span></div></div>
+        <div class="detail-amazon">
+          <a class="btn-amazon" href="https://www.amazon.es/dp/B07RYWKS9Z" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon →</a>
+        </div>
+      </td>
+    </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p class="foot-note">Prototipo generado por tools/build_comparativa_prototipo_v25.py a partir de tools/output/auditoria_30_candidatos.json — no modifica ningún archivo de producción ni la web real.</p>
+
+<script>
+document.querySelectorAll('.btn-toggle').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const panel = document.getElementById(btn.dataset.toggle);
+    const isOpen = !panel.hasAttribute('hidden');
+    if (isOpen) { panel.setAttribute('hidden', ''); btn.classList.remove('is-open'); btn.textContent = 'Ficha técnica ▾'; }
+    else { panel.removeAttribute('hidden'); btn.classList.add('is-open'); btn.textContent = 'Ficha técnica ▴'; }
+  });
+});
+// "Ver en Amazon" de la fila no debe disparar tambien el toggle de ficha
+// tecnica (el click en cualquier punto de la fila abre la ficha, ver mas
+// abajo) -- solo debe abrir el enlace.
+document.querySelectorAll('.btn-amazon-row').forEach(link => {
+  link.addEventListener('click', (e) => { e.stopPropagation(); });
+});
+document.querySelectorAll('tr.main-row').forEach(row => {
+  row.addEventListener('click', () => {
+    row.querySelector('.btn-toggle').click();
+  });
+});
+
+// Punto 7.8 -- boton "✕" DENTRO de la ficha tecnica para cerrarla. No
+// duplica logica: simplemente simula un clic en el boton "Ficha
+// técnica" de la fila (mismo panel_id), que ya sabe abrir/cerrar.
+document.querySelectorAll('.ficha-close').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const toggle = document.querySelector(`.btn-toggle[data-toggle="${btn.dataset.closePanel}"]`);
+    if (toggle) toggle.click();
+  });
+});
+
+// ---------------------------------------------------------------------
+// PUNTO 6 -- "Ordenar por". Lee los data-sort-* incrustados por Python
+// (ver parse_altura_rango / parse_edad_rango_meses / parse_grupo_amplitud
+// / parse_peso_max, definidos mas arriba en este mismo archivo) y reordena las
+// filas en el DOM. No toca ningun dato, no recarga la pagina.
+// ---------------------------------------------------------------------
+(function setupSort() {
+  const select = document.getElementById('sortSelect');
+  const tbody = document.querySelector('tbody');
+
+  function getNum(row, attr) {
+    const v = row.dataset[attr];
+    return (v === undefined || v === '') ? null : parseFloat(v);
+  }
+
+  function getStr(row, attr) {
+    const v = row.dataset[attr];
+    return (v === undefined || v === '') ? null : v;
+  }
+
+  // Un solo campo numerico, misma columna para ambos sentidos (Precio,
+  // Valoracion, Nº de valoraciones, Peso -- Peso SIEMPRE usa el maximo,
+  // en los dos sentidos, tal como pidio el usuario).
+  const SIMPLE_CRITERIA = {
+    'precio-asc':      {attr: 'sortPrecio',     dir: 1},
+    'precio-desc':     {attr: 'sortPrecio',     dir: -1},
+    'valoracion-desc': {attr: 'sortValoracion', dir: -1},
+    'valoracion-asc':  {attr: 'sortValoracion', dir: 1},
+    'nval-desc':       {attr: 'sortNval',       dir: -1},
+    'nval-asc':        {attr: 'sortNval',       dir: 1},
+    'peso-asc':        {attr: 'sortPesoMax',    dir: 1},
+    'peso-desc':       {attr: 'sortPesoMax',    dir: -1},
+  };
+
+  // Altura/Edad: el campo usado cambia segun el sentido (minimo para
+  // "menor -> mayor", maximo para "mayor -> menor"), pedido explicito
+  // del usuario -- no es un simple cambio de signo del mismo valor.
+  const MINMAX_CRITERIA = {
+    'altura-asc':  {attr: 'sortAlturaMin', dir: 1},
+    'altura-desc': {attr: 'sortAlturaMax', dir: -1},
+    'edad-asc':    {attr: 'sortEdadMin',   dir: 1},
+    'edad-desc':   {attr: 'sortEdadMax',   dir: -1},
+  };
+
+  // ---- Ampliacion 16-ago-2026: ordenacion por CARACTERISTICAS ----
+  // No son asc/desc: son prioridades categoricas que definimos
+  // nosotros (p.ej. "ISOFIX: Sí primero"). ISOFIX/360º son binarios
+  // (Sí/No); Orientación/Arnés tienen 3 categorias -- el criterio
+  // elegido pasa a prioridad 0, el resto conserva su orden relativo de
+  // base (BASE_ORDER), sin inventar un orden nuevo para las no
+  // elegidas. "Sin especificar" (dato ausente) va SIEMPRE al final.
+  const CATEGORY_BINARY = {
+    'isofix-si': {attr: 'sortIsofixCat', first: 'si'},
+    'isofix-no': {attr: 'sortIsofixCat', first: 'no'},
+    '360-si':    {attr: 'sortGiro360Cat', first: 'si'},
+    '360-no':    {attr: 'sortGiro360Cat', first: 'no'},
+  };
+  const ORIENTACION_BASE = ['ambas', 'contramarcha', 'favor'];
+  const ORIENTACION_KEYS = {
+    'orientacion-ambas':        'ambas',
+    'orientacion-contramarcha': 'contramarcha',
+    'orientacion-favor':        'favor',
+  };
+  const ARNES_BASE = ['5puntos', '3puntos', 'cinturon'];
+  const ARNES_KEYS = {
+    'arnes-5':        '5puntos',
+    'arnes-3':         '3puntos',
+    'arnes-cinturon': 'cinturon',
+  };
+
+  function compareCategoryBinary(a, b, key, origA, origB) {
+    const cfg = CATEGORY_BINARY[key];
+    const va = getStr(a, cfg.attr), vb = getStr(b, cfg.attr);
+    if (va === null && vb === null) return origA - origB;
+    if (va === null) return 1;
+    if (vb === null) return -1;
+    const rank = v => v === cfg.first ? 0 : 1;
+    const ra = rank(va), rb = rank(vb);
+    if (ra !== rb) return ra - rb;
+    return origA - origB;
+  }
+
+  function compareRotate(a, b, key, attr, baseOrder, keysMap, origA, origB) {
+    const selected = keysMap[key];
+    const va = getStr(a, attr), vb = getStr(b, attr);
+    if (va === null && vb === null) return origA - origB;
+    if (va === null) return 1;
+    if (vb === null) return -1;
+    const rank = v => v === selected ? -1 : baseOrder.indexOf(v);
+    const ra = rank(va), rb = rank(vb);
+    if (ra !== rb) return ra - rb;
+    return origA - origB;
+  }
+
+  function compareRows(a, b, key) {
+    const origA = parseInt(a.dataset.origIndex, 10);
+    const origB = parseInt(b.dataset.origIndex, 10);
+
+    if (key === 'default') {
+      return origA - origB;
+    }
+
+    if (key === 'grupo-asc' || key === 'grupo-desc') {
+      const dir = key === 'grupo-asc' ? 1 : -1;
+      const ga = getNum(a, 'sortGrupoNum'), gb = getNum(b, 'sortGrupoNum');
+      // "Sin especificar" (sin prefijo "Grupo ") siempre al final, en
+      // los dos sentidos.
+      if (ga === null && gb === null) return origA - origB;
+      if (ga === null) return 1;
+      if (gb === null) return -1;
+      if (ga !== gb) return dir * (ga - gb);
+      // Empate en nº de etapas -> desempate por el primer grupo de la
+      // secuencia, SIEMPRE de menor a mayor (regla fija, no depende del
+      // sentido elegido).
+      const fa = getNum(a, 'sortGrupoFirst'), fb = getNum(b, 'sortGrupoFirst');
+      if (fa !== fb) return fa - fb;
+      return origA - origB;
+    }
+
+    if (CATEGORY_BINARY[key]) {
+      return compareCategoryBinary(a, b, key, origA, origB);
+    }
+    if (ORIENTACION_KEYS[key]) {
+      return compareRotate(a, b, key, 'sortOrientacionCat', ORIENTACION_BASE, ORIENTACION_KEYS, origA, origB);
+    }
+    if (ARNES_KEYS[key]) {
+      return compareRotate(a, b, key, 'sortArnesCat', ARNES_BASE, ARNES_KEYS, origA, origB);
+    }
+
+    const cfg = SIMPLE_CRITERIA[key] || MINMAX_CRITERIA[key];
+    if (!cfg) return origA - origB;
+    const va = getNum(a, cfg.attr), vb = getNum(b, cfg.attr);
+    // Sin dato para este criterio -> siempre al final, en los dos
+    // sentidos (no se multiplica por dir).
+    if (va === null && vb === null) return origA - origB;
+    if (va === null) return 1;
+    if (vb === null) return -1;
+    if (va !== vb) return cfg.dir * (va - vb);
+    return origA - origB;
+  }
+
+  function applySort(key) {
+    // Cerrar cualquier ficha abierta al reordenar (mas limpio, no rompe
+    // nada: cada boton conserva su propio panel_id y sigue funcionando
+    // igual despues de reordenar).
+    document.querySelectorAll('.btn-toggle.is-open').forEach(btn => btn.click());
+
+    const rows = Array.from(document.querySelectorAll('tr.main-row'));
+    rows.sort((a, b) => compareRows(a, b, key));
+    rows.forEach(row => {
+      const panel = document.getElementById(row.dataset.target);
+      tbody.appendChild(row);   // mover al final reinserta en el nuevo orden
+      tbody.appendChild(panel); // su ficha tecnica le sigue inmediatamente detras
+    });
+  }
+
+  select.addEventListener('change', () => applySort(select.value));
+})();
+
+// ---------------------------------------------------------------------
+// PUNTO 7.1 -- integracion visual de la ordenacion en la cabecera.
+// NO reimplementa la ordenacion: unicamente cambia el `value` del
+// <select id="sortSelect"> ya existente y dispara el mismo evento
+// 'change' que ya escuchaba setupSort() de arriba -- el motor de
+// ordenacion (compareRows/applySort) es exactamente el mismo. Esto es
+// solo una segunda interfaz para disparar las mismas 14 claves.
+// ---------------------------------------------------------------------
+(function setupHeaderSort() {
+  const select = document.getElementById('sortSelect');
+
+  function triggerSort(key) {
+    select.value = key;
+    select.dispatchEvent(new Event('change'));
+  }
+
+  const ICONS = {
+    precio: document.querySelector('[data-sort-icon="precio"]'),
+    valoracion: document.querySelector('[data-sort-icon="valoracion"]'),
+    rango: document.querySelector('[data-sort-icon="rango"]'),
+    isofix: document.querySelector('[data-sort-icon="isofix"]'),
+    giro360: document.querySelector('[data-sort-icon="giro360"]'),
+    orientacion: document.querySelector('[data-sort-icon="orientacion"]'),
+    arnes: document.querySelector('[data-sort-icon="arnes"]'),
+  };
+  const THS = {
+    precio: document.querySelector('th.col-price'),
+    valoracion: document.querySelector('th.col-valoracion'),
+    rango: document.querySelector('th.col-rango'),
+    isofix: document.querySelector('th.col-isofix'),
+    giro360: document.querySelector('th.col-360'),
+    orientacion: document.querySelector('th.col-orientacion'),
+    arnes: document.querySelector('th.col-anclaje'),
+  };
+  const RANGO_KEYS = new Set([
+    'altura-asc', 'altura-desc', 'edad-asc', 'edad-desc',
+    'grupo-asc', 'grupo-desc', 'peso-asc', 'peso-desc',
+  ]);
+
+  function keyGroup(key) {
+    if (key === 'precio-asc' || key === 'precio-desc') return 'precio';
+    if (key === 'valoracion-asc' || key === 'valoracion-desc') return 'valoracion';
+    if (RANGO_KEYS.has(key)) return 'rango';
+    if (key === 'isofix-si' || key === 'isofix-no') return 'isofix';
+    if (key === '360-si' || key === '360-no') return 'giro360';
+    if (key === 'orientacion-ambas' || key === 'orientacion-contramarcha' || key === 'orientacion-favor') return 'orientacion';
+    if (key === 'arnes-5' || key === 'arnes-3' || key === 'arnes-cinturon') return 'arnes';
+    return null;
+  }
+
+  // Grupos cuyo indicador es binario (↑/↓ segun sentido asc/desc real).
+  // ISOFIX/360º son prioridades categoricas (Sí/No primero), no tienen
+  // "sentido" asc/desc -- su icono activo se queda fijo (↕ resaltado en
+  // color), igual que Orientación/Arnés.
+  const DIRECTIONAL_GROUPS = new Set(['precio', 'valoracion', 'rango']);
+
+  // Refleja en la cabecera cual es el criterio activo -- sea cual sea
+  // el origen del cambio (select de toda la vida, boton directo, o item
+  // de alguno de los menus).
+  function updateIndicators(key) {
+    Object.keys(ICONS).forEach(g => {
+      ICONS[g].textContent = '↕';
+      ICONS[g].classList.remove('is-active');
+      THS[g].classList.remove('is-active-sort');
+    });
+    document.querySelectorAll('.th-sort-menu-btn.is-active').forEach(b => b.classList.remove('is-active'));
+
+    const group = keyGroup(key);
+    if (!group) return; // 'default' u otra clave -> cabecera neutra
+    ICONS[group].textContent = DIRECTIONAL_GROUPS.has(group) ? (key.endsWith('-asc') ? '↑' : '↓') : '↕';
+    ICONS[group].classList.add('is-active');
+    THS[group].classList.add('is-active-sort');
+    const btn = document.querySelector(`.th-sort-menu-btn[data-sort-key="${key}"]`);
+    if (btn) btn.classList.add('is-active');
+  }
+  select.addEventListener('change', () => updateIndicators(select.value));
+
+  // Precio / Valoración / ISOFIX / 360º: clic directo en la cabecera,
+  // alterna entre los 2 sentidos/prioridades ya existentes de ese
+  // criterio (mismo orden por defecto que ya tenia el <select>).
+  function wireToggle(name, onKey, offKey) {
+    document.querySelector(`[data-sort-toggle="${name}"]`).addEventListener('click', () => {
+      triggerSort(select.value === onKey ? offKey : onKey);
+    });
+  }
+  wireToggle('precio', 'precio-asc', 'precio-desc');
+  wireToggle('valoracion', 'valoracion-desc', 'valoracion-asc');
+  wireToggle('isofix', 'isofix-si', 'isofix-no');
+  wireToggle('giro360', '360-si', '360-no');
+
+  // Rango de uso / Orientación / Arnés: menu compacto. Cada menu se
+  // saca del <th> y se ancla a <body> con position:fixed calculado por
+  // JS, para que el overflow:hidden de .table-shell / el
+  // overflow-x:auto de .table-scroll no lo recorten. Solo un menu
+  // puede estar abierto a la vez.
+  let openMenuEl = null;
+  function closeOpenMenu() {
+    if (openMenuEl) { openMenuEl.setAttribute('hidden', ''); openMenuEl = null; }
+  }
+  function wireMenu(menuId, toggleSelector) {
+    const menu = document.getElementById(menuId);
+    const toggle = document.querySelector(toggleSelector);
+    document.body.appendChild(menu);
+
+    function open() {
+      closeOpenMenu();
+      const rect = toggle.getBoundingClientRect();
+      const maxLeft = window.innerWidth - 226;
+      menu.style.top = `${rect.bottom + 6}px`;
+      menu.style.left = `${Math.max(8, Math.min(rect.left, maxLeft))}px`;
+      menu.removeAttribute('hidden');
+      openMenuEl = menu;
+    }
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (menu.hasAttribute('hidden')) open(); else closeOpenMenu();
+    });
+    menu.querySelectorAll('.th-sort-menu-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        triggerSort(btn.dataset.sortKey);
+        closeOpenMenu();
+      });
+    });
+    return {menu, toggle};
+  }
+  const menus = [
+    wireMenu('rango-menu', '[data-menu-toggle="rango-menu"]'),
+    wireMenu('orientacion-menu', '[data-menu-toggle="orientacion-menu"]'),
+    wireMenu('arnes-menu', '[data-menu-toggle="arnes-menu"]'),
+  ];
+  document.addEventListener('click', (e) => {
+    if (!openMenuEl) return;
+    const stillInside = menus.some(m => m.menu === openMenuEl && (m.menu.contains(e.target) || m.toggle === e.target));
+    if (!stillInside) closeOpenMenu();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeOpenMenu();
+  });
+})();
+
+// Autocomprobacion (visible en consola del navegador)
+(function selfCheck() {
+  const rows = document.querySelectorAll('tr.main-row').length;
+  const panels = document.querySelectorAll('tr.detail-row').length;
+  const toggles = document.querySelectorAll('.btn-toggle').length;
+  const amazonRowBtns = document.querySelectorAll('.btn-amazon-row').length;
+  const sortableHeaders = document.querySelectorAll('th.is-sortable').length;
+  const totalMenuItems = document.querySelectorAll('.th-sort-menu-btn').length;
+  const selectOptions = document.querySelectorAll('#sortSelect option').length;
+  const fichaCampos = document.querySelectorAll('.ficha-grid .detail-item').length;
+  const fichaCloseBtns = document.querySelectorAll('.ficha-close').length;
+  console.log(`[prototipo v25] filas de producto: ${rows} | paneles de ficha: ${panels} | botones toggle: ${toggles} | botones Ver en Amazon (fila): ${amazonRowBtns} | cabeceras ordenables: ${sortableHeaders} | items en menus de cabecera: ${totalMenuItems} | opciones select: ${selectOptions} | campos ficha (6x30): ${fichaCampos} | botones cerrar ficha: ${fichaCloseBtns}`);
+  console.assert(rows === 30, `Se esperaban 30 productos, hay ${rows}`);
+  console.assert(rows === panels && panels === toggles, 'Descuadre entre filas, paneles y botones');
+  console.assert(rows === amazonRowBtns, 'Descuadre entre filas y botones "Ver en Amazon"');
+  console.assert(sortableHeaders === 7, `Se esperaban 7 cabeceras ordenables (Precio/Valoración/Rango de uso/ISOFIX/360º/Orientación/Arnés), hay ${sortableHeaders}`);
+  console.assert(totalMenuItems === 14, `Se esperaban 14 items en total (8 Rango de uso + 3 Orientación + 3 Arnés), hay ${totalMenuItems}`);
+  console.assert(selectOptions === 25, `Se esperaban 25 opciones en el select (1 default + 14 numericas + 10 caracteristicas), hay ${selectOptions}`);
+  console.assert(fichaCampos === rows * 6, `Se esperaban ${rows * 6} campos de ficha (6 por producto, siempre visibles), hay ${fichaCampos}`);
+  console.assert(fichaCloseBtns === rows, `Se esperaban ${rows} botones de cerrar ficha, hay ${fichaCloseBtns}`);
+})();
+</script>
+
+</body>
+</html>

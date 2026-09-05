@@ -1,0 +1,41 @@
+{
+  "total_productos": 30,
+  "por_marca": {
+    "Kinderkraft": 3,
+    "Maxi-Cosi": 3,
+    "Bébé Confort": 2,
+    "Cybex": 4,
+    "Britax Römer": 2,
+    "Chicco": 3,
+    "BabyAuto": 1,
+    "Graco": 2,
+    "Lionelo": 3,
+    "KikkaBoo": 3,
+    "Jovikids": 1,
+    "Nania": 2,
+    "Babify": 1
+  },
+  "eliminados": [
+    {
+      "asin": "B0C3HJNK2M",
+      "modelo": "EVOLVAFIX"
+    }
+  ],
+  "anadidos": [
+    {
+      "asin": "B0B97Z1C6M",
+      "modelo": "Solution S2 i-Fix"
+    }
+  ],
+  "num_celdas_modificadas": 41,
+  "atributos_afectados": [
+    "estado_auditoria",
+    "fuente_datos",
+    "identidad_fabricante",
+    "normativa",
+    "peso_silla",
+    "peso_silla_fuente",
+    "reposacabezas"
+  ],
+  "productos_con_cambios": 28
+}

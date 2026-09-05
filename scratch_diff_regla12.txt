@@ -1,0 +1,15 @@
+B0F9YPF1V1 | reposacabezas: ANTES='Sí' DESPUES='No determinado'
+    original_antes='SISTEMA EASY GROW – ajuste simultáneo del reposacabezas y del arnés, garantizando comodidad y seguridad en cada etapa de crecimiento.'
+    original_despues=None
+B0C58QGJNG | reposacabezas: ANTES='Sí — 3 posiciones' DESPUES='Sí — 11 posiciones'
+    original_antes='Óptima seguridad: Protección lineal contra impactos laterales integrada en los protectores laterales de los hombros, Reposacabezas reclinable Cybex de 3 posiciones que sujeta la cabeza mientras se duerme'
+    original_despues='Reposacabezas ajustable en altura en 11 posiciones para adaptarse al tamaño del niño, Respaldo de inclinación ajustable para una adaptación óptima al asiento del vehículo'
+B0FGDM2ZTS | reposacabezas: ANTES='Sí' DESPUES='No determinado'
+    original_antes='El sistema EASY GROW permite ajustar simultáneamente el reposacabezas y el arnés con un solo movimiento fluido, sin reenhebrar, para que la silla se adapte siempre perfectamente al crecimiento del niño.'
+    original_despues=None
+B0F3P61P8C | edad: ANTES='0-4 años' DESPUES='0-12 años'
+    original_antes='SILLAS COCHE GRUPO 0 1 2 3: silla de coche 360 bebé en posición a contramarcha con almohada y reductor para recién nacidos integrados (de 0 a 4 años) y silla de coche infantil en posición a favor de la marcha (de 15 meses a 12 años)'
+    original_despues='Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche 360, 0-12 Años, 40-150 cm, Silla Coche ISOFIX, Instalación Pata Apoyo, Giro 360, 8 Posiciones Reclinación, 12 Posiciones Reposacabezas, Full Black'
+B0F9YR27XX | reposacabezas: ANTES='Sí' DESPUES='No determinado'
+    original_antes='AJUSTE EASY GROW – Regulación simultánea del reposacabezas y del arnés. Cojín con espuma viscoelástica para niños de hasta 60 cm.'
+    original_despues=None

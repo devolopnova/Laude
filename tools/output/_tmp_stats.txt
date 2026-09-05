@@ -1,0 +1,8 @@
+stats: {'busqueda': 'silla de coche', 'paginas_recorridas': 3, 'candidatos_brutos': 156, 'tras_filtro_marca': 69, 'tras_deduplicado': 68, 'procesados': 30, 'verificados': 6, 'pendiente_revision': 24, 'descartados_marca_ficha': 0, 'fallos_ficha': 0}
+Kinderkraft: 12
+Maxi-Cosi: 5
+Britax Römer: 3
+Babify: 3
+Bébé Confort: 3
+Cybex: 3
+Chicco: 1

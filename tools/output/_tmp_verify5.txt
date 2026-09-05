@@ -1,0 +1,4 @@
+new color present: True
+old color gone: True
+font-weight still 500 only (no bold added): True
+head/body balance: 1/1 1/1

@@ -1,0 +1,7 @@
+15 | A favor de la marcha
+8 | Ambas
+3 | A contramarcha
+1 | Sin especificar
+1 | A contramarcha (con reclinado en todas las posiciones)
+1 | Ambas (contramarcha hasta 18kg/105cm)
+1 | Ambas (RWF 40-105cm + FWF 76-150cm, confirmado por fabricante)

@@ -1,0 +1,10 @@
+Total celdas cambiadas: 7
+Atributos afectados: ['reclinable']
+
+B0FKBWNF2G   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP63YCW   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0CZ47FKZL   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP9MTBX   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0FGDM2ZTS   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='media'
+B0GGZYY3BZ   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0F1R26D8L   reclinable   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'

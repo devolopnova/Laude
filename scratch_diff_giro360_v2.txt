@@ -1,0 +1,14 @@
+Total celdas cambiadas: 11
+Atributos afectados: ['giro_360']
+
+B0FKBWNF2G   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0F9YPF1V1   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP63YCW   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0C58QGJNG   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0CZ47FKZL   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0BYP9MTBX   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0FGDM2ZTS   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='media'
+B0DSL7WGB2   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0GGZYY3BZ   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0DP7TG8KY   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'
+B0F1R26D8L   giro_360   ANTES='No'                 DESPUES='Sin especificar'    fuente='amazon' confianza='alta'

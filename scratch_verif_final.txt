@@ -1,0 +1,6 @@
+proteccion_lateral: {'Si': 11, 'No': 0, 'Revisar': 0, 'SinEsp': 4, 'otros': 0}
+funda_lavable: {'Si': 10, 'No': 0, 'Revisar': 0, 'SinEsp': 5, 'otros': 0}
+reclinable: {'Si': 0, 'No': 0, 'Revisar': 0, 'SinEsp': 7, 'otros': 8}
+orientacion: {'Si': 0, 'No': 0, 'Revisar': 0, 'SinEsp': 3, 'otros': 12}
+giro_360: {'Si': 4, 'No': 11, 'Revisar': 0, 'SinEsp': 0, 'otros': 0}
+altura_r129: {'Si': 0, 'No': 0, 'Revisar': 0, 'SinEsp': 0, 'otros': 15}

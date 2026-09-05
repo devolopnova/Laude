@@ -1,0 +1,64 @@
+B0F9YPF1V1
+  isofix: False | mostrar=No | fuente=fabricante_oficial | revisar=False
+  tipo_instalacion: cinturon_seguridad
+  normativa: r129_isize | fuente=amazon
+  altura: {'altura_min_cm': 76, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': None, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 1.25, 'edad_max_anios': 12.0}
+
+B0DSL7WGB2
+  isofix: True | mostrar=Sí | fuente=fabricante_oficial | revisar=False
+  tipo_instalacion: isofix
+  normativa: r129_isize | fuente=amazon
+  altura: None
+  peso: {'peso_min_kg': None, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 3.5, 'edad_max_anios': 12.0}
+
+B0F1R26D8L
+  isofix: False | mostrar=No | fuente=fabricante_oficial | revisar=False
+  tipo_instalacion: cinturon_seguridad
+  normativa: r129_isize | fuente=amazon
+  altura: {'altura_min_cm': 125, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': None, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 6.0, 'edad_max_anios': 12.0}
+
+B0C58QGJNG
+  isofix: True | mostrar=Sí | fuente=amazon | revisar=False
+  tipo_instalacion: isofix
+  normativa: r129_isize | fuente=fabricante_oficial
+  altura: {'altura_min_cm': 100, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': None, 'peso_max_kg': 50}
+  edad: {'edad_min_anios': 3.0, 'edad_max_anios': 12.0}
+
+B0CZ47FKZL
+  isofix: True | mostrar=Sí | fuente=amazon+fabricante_oficial | revisar=False
+  tipo_instalacion: isofix
+  normativa: r129_isize | fuente=amazon
+  altura: {'altura_min_cm': 100, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': None, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 5.0, 'edad_max_anios': 12.0}
+
+B0GGZYY3BZ
+  isofix: None | mostrar=No confirmado / Revisar | fuente=amazon+fabricante_oficial | revisar=True
+  tipo_instalacion: None
+  normativa: r129_isize | fuente=amazon
+  altura: {'altura_min_cm': 100, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': 15, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 3.5, 'edad_max_anios': 12.0}
+
+B0FKBWNF2G
+  isofix: True | mostrar=Sí | fuente=amazon | revisar=False
+  tipo_instalacion: isofix
+  normativa: None | fuente=None
+  altura: {'altura_min_cm': 100, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': None, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 3.5, 'edad_max_anios': 12.0}
+
+B0BYP63YCW
+  isofix: False | mostrar=No | fuente=amazon | revisar=False
+  tipo_instalacion: cinturon_seguridad
+  normativa: r129_isize | fuente=amazon
+  altura: {'altura_min_cm': 75, 'altura_max_cm': 150}
+  peso: {'peso_min_kg': None, 'peso_max_kg': 36}
+  edad: {'edad_min_anios': 1.25, 'edad_max_anios': 12.0}
+

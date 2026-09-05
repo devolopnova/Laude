@@ -1,0 +1,263 @@
+{
+  "total_productos": 15,
+  "cobertura": {
+    "isofix": {
+      "confirmados": 15,
+      "na": 0,
+      "revisar": 0,
+      "cobertura_pct": 100.0
+    },
+    "tipo_instalacion": {
+      "confirmados": 15,
+      "na": 0,
+      "revisar": 0,
+      "cobertura_pct": 100.0
+    },
+    "normativa": {
+      "confirmados": 15,
+      "na": 0,
+      "revisar": 0,
+      "cobertura_pct": 100.0
+    },
+    "grupo_r44": {
+      "confirmados": 7,
+      "na": 8,
+      "revisar": 0,
+      "cobertura_pct": 46.7
+    },
+    "altura_r129": {
+      "confirmados": 15,
+      "na": 0,
+      "revisar": 0,
+      "cobertura_pct": 100.0
+    },
+    "peso": {
+      "confirmados": 15,
+      "na": 0,
+      "revisar": 0,
+      "cobertura_pct": 100.0
+    },
+    "edad": {
+      "confirmados": 14,
+      "na": 1,
+      "revisar": 0,
+      "cobertura_pct": 93.3
+    },
+    "orientacion": {
+      "confirmados": 12,
+      "na": 3,
+      "revisar": 0,
+      "cobertura_pct": 80.0
+    },
+    "giro_360": {
+      "confirmados": 4,
+      "na": 11,
+      "revisar": 0,
+      "cobertura_pct": 26.7
+    },
+    "reclinable": {
+      "confirmados": 8,
+      "na": 7,
+      "revisar": 0,
+      "cobertura_pct": 53.3
+    },
+    "reposacabezas": {
+      "confirmados": 14,
+      "na": 1,
+      "revisar": 0,
+      "cobertura_pct": 93.3
+    },
+    "arnes": {
+      "confirmados": 13,
+      "na": 2,
+      "revisar": 0,
+      "cobertura_pct": 86.7
+    },
+    "peso_silla": {
+      "confirmados": 14,
+      "na": 1,
+      "revisar": 0,
+      "cobertura_pct": 93.3
+    },
+    "proteccion_lateral": {
+      "confirmados": 11,
+      "na": 4,
+      "revisar": 0,
+      "cobertura_pct": 73.3
+    },
+    "funda_lavable": {
+      "confirmados": 10,
+      "na": 5,
+      "revisar": 0,
+      "cobertura_pct": 66.7
+    }
+  },
+  "revisar": [],
+  "identidad_verificada": [
+    {
+      "asin": "B0FKBWNF2G",
+      "marca_modelo": "Kinderkraft — Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-",
+      "nombre_amazon": "Kinderkraft JUNIOR FIX 2 PRO",
+      "nombre_fabricante": "Kinderkraft JUNIOR FIX 2 PLUS i-Size",
+      "aviso_nombre_diferente": true,
+      "motivo_equivalencia": "SKU/familia coincidente (Amazon 'KCJUFI20BLK000N' vs. web oficial 'KCJUFI20ALLPL0N', mismo prefijo KCJUFI20) + coincidencia exacta de 5 caracteristicas tecnicas de Amazon (AIR FLOW transpirable, guias de cinturon, H-GUARD y SPS, ISOFIX, reposacabezas regulable) con el carrusel de caracteristicas de la ficha oficial + mismo rango 100-150cm / 3,5-12 años."
+    },
+    {
+      "asin": "B0F9YPF1V1",
+      "marca_modelo": "Kinderkraft — Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (",
+      "nombre_amazon": "Kinderkraft I-COMFY",
+      "nombre_fabricante": "Kinderkraft I-COMFY i-Size",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Mismo nombre de modelo (I-COMFY) en Amazon y fabricante; mismo rango 76-150cm / 15 meses-12 años en ambas fichas."
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "marca_modelo": "Cybex — CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para ",
+      "nombre_amazon": "CBX by CYBEX Silla de coche infantil Solution X i-Fix",
+      "nombre_fabricante": "CYBEX Solution X i-Fix (vendido en la tienda oficial bajo la seccion 'cbx by CYBEX')",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Mismo nombre de producto ('Solution X i-Fix'); codigo de producto de la tienda oficial 'cs-cx-solution-x-i-fix' (cx = CBX); manual oficial de usuario para el mismo modelo. La diferencia es solo de presentacion de marca (CBX es sub-marca de Cybex, vendida en su misma tienda oficial), no de modelo."
+    },
+    {
+      "asin": "B0CZ47FKZL",
+      "marca_modelo": "Maxi-Cosi — Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full",
+      "nombre_amazon": "Maxi-Cosi Tanza i-Size",
+      "nombre_fabricante": "Maxi-Cosi Tanza i-Size",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Nombre de modelo identico; mismo rango 100-150cm / 3,5-12 años en ambas fichas."
+    },
+    {
+      "asin": "B0CWS19269",
+      "marca_modelo": "Maxi-Cosi — Maxi-Cosi Emerald 360 S i-Size, Silla coche bebé giratoria 3",
+      "nombre_amazon": "Maxi-Cosi Emerald 360 S i-Size",
+      "nombre_fabricante": "Emerald 360 S",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Nombre de modelo identico; mismo peso del producto (12,7 kg) y mismo rango de edad (0-12 años) en ambas fichas -- 3 señales independientes coincidentes."
+    },
+    {
+      "asin": "B0DSL7WGB2",
+      "marca_modelo": "Kinderkraft — Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 ",
+      "nombre_amazon": "Kinderkraft UNITY 2 i-Size",
+      "nombre_fabricante": "Kinderkraft UNITY 2 i-Size",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Nombre de modelo identico; mismo rango 100-150cm / 3,5-12 años en ambas fichas."
+    },
+    {
+      "asin": "B0GGZYY3BZ",
+      "marca_modelo": "Bébé Confort — Bebeconfort Marvel RoadSafe i-Size,Asiento Elevador Coche Re",
+      "nombre_amazon": "Bebeconfort Marvel RoadSafe i-Size (Spiderman)",
+      "nombre_fabricante": "Bebeconfort Marvel RoadSafe i-Size",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Nombre de modelo identico (variante de personaje/color Spiderman, no cambia el modelo); mismo rango 100-150cm / 3,5-12 años; mismo peso maximo 36kg."
+    },
+    {
+      "asin": "B0DP7TG8KY",
+      "marca_modelo": "Kinderkraft — Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Is",
+      "nombre_amazon": "Kinderkraft FIX2GO",
+      "nombre_fabricante": "FIX2GO i-Size",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Mismo nombre de modelo (FIX2GO); mismo rango tecnico 76-150cm/15 meses-12 años en ambas fichas (bullet de Amazon: 'silla de coche para niños de entre 15 meses y 12 años (76–150 cm)' vs. acordeon 'Dimensiones y material' del fabricante: 'Estatura/peso/edad del niño 76-150 cm/9-36 kg/15 meses-12 años')."
+    },
+    {
+      "asin": "B0F1R26D8L",
+      "marca_modelo": "Kinderkraft — Kinderkraft I-BOOST 2 Silla de coche, Silla de Bebe, Asiento",
+      "nombre_amazon": "Kinderkraft I-BOOST 2",
+      "nombre_fabricante": "Kinderkraft I-BOOST 2 i-Size",
+      "aviso_nombre_diferente": false,
+      "motivo_equivalencia": "Mismo nombre de modelo; mismo rango 125-150cm / 6-12 años; mismo peso de la silla (1,2 kg) en ambas fichas."
+    }
+  ],
+  "fabricante_aporta_dato_que_amazon_no_tenia": [
+    {
+      "asin": "B0FKBWNF2G",
+      "marca_modelo": "Kinderkraft — Kinderkraft JUNIOR FIX 2 PRO silla de coche 100-150 cm (3,5-",
+      "atributo": "Normativa",
+      "valor": "R129 / i-Size",
+      "url_fuente": "https://kinderkraft.es/productos/junior-fix-2-plus"
+    },
+    {
+      "asin": "B0F9YPF1V1",
+      "marca_modelo": "Kinderkraft — Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (",
+      "atributo": "ISOFIX",
+      "valor": "No",
+      "url_fuente": "https://kinderkraft.es/productos/i-comfy"
+    },
+    {
+      "asin": "B0F9YPF1V1",
+      "marca_modelo": "Kinderkraft — Kinderkraft I-COMFY, Silla de coche, Para niños, Ajustable (",
+      "atributo": "Tipo de instalacion",
+      "valor": "Cinturón de seguridad",
+      "url_fuente": "https://kinderkraft.es/productos/i-comfy"
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "marca_modelo": "Cybex — CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para ",
+      "atributo": "Normativa",
+      "valor": "R129 / i-Size",
+      "url_fuente": "https://www.cybex-online.com/es/es/p/cs-cx-solution-x-i-fix.html"
+    },
+    {
+      "asin": "B0C58QGJNG",
+      "marca_modelo": "Cybex — CBX by CYBEX Silla de coche infantil Solution X i-Fix, Para ",
+      "atributo": "Funda lavable",
+      "valor": "Sí",
+      "url_fuente": "https://www.cybex-online.com/es/es/p/cs-cx-solution-x-i-fix.html"
+    },
+    {
+      "asin": "B0CZ47FKZL",
+      "marca_modelo": "Maxi-Cosi — Maxi-Cosi Tanza i-Size, Silla Coche ISOFIX, 100–150 cm, Full",
+      "atributo": "Arnes / proteccion",
+      "valor": "Arnés de 3 puntos",
+      "url_fuente": "https://www.maxi-cosi.es/sillas-de-coche/tanza-i-size"
+    },
+    {
+      "asin": "B0DSL7WGB2",
+      "marca_modelo": "Kinderkraft — Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 ",
+      "atributo": "ISOFIX",
+      "valor": "Sí",
+      "url_fuente": "https://kinderkraft.es/productos/unity-2"
+    },
+    {
+      "asin": "B0DSL7WGB2",
+      "marca_modelo": "Kinderkraft — Kinderkraft UNITY 2 i-Size, Silla de coche plegable 100–150 ",
+      "atributo": "Tipo de instalacion",
+      "valor": "ISOFIX",
+      "url_fuente": "https://kinderkraft.es/productos/unity-2"
+    },
+    {
+      "asin": "B0DP7TG8KY",
+      "marca_modelo": "Kinderkraft — Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Is",
+      "atributo": "Edad",
+      "valor": "15 meses - 12 años",
+      "url_fuente": "https://kinderkraft.es/productos/fix2go"
+    },
+    {
+      "asin": "B0DP7TG8KY",
+      "marca_modelo": "Kinderkraft — Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Is",
+      "atributo": "Reposacabezas regulable",
+      "valor": "Sí",
+      "url_fuente": "https://kinderkraft.es/productos/fix2go"
+    },
+    {
+      "asin": "B0DP7TG8KY",
+      "marca_modelo": "Kinderkraft — Kinderkraft FIX2GO Silla infantil i-size, 76-150 cm, base Is",
+      "atributo": "Proteccion lateral",
+      "valor": "Sí",
+      "url_fuente": "https://kinderkraft.es/productos/fix2go"
+    },
+    {
+      "asin": "B0F1R26D8L",
+      "marca_modelo": "Kinderkraft — Kinderkraft I-BOOST 2 Silla de coche, Silla de Bebe, Asiento",
+      "atributo": "ISOFIX",
+      "valor": "No",
+      "url_fuente": "https://kinderkraft.es/productos/i-boost-2"
+    },
+    {
+      "asin": "B0F1R26D8L",
+      "marca_modelo": "Kinderkraft — Kinderkraft I-BOOST 2 Silla de coche, Silla de Bebe, Asiento",
+      "atributo": "Tipo de instalacion",
+      "valor": "Cinturón de seguridad",
+      "url_fuente": "https://kinderkraft.es/productos/i-boost-2"
+    }
+  ]
+}

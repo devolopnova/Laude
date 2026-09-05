@@ -1,0 +1,15 @@
+B0FKBWNF2G | Kinderkraft    | No determinado       | fuente=None
+B0F9YPF1V1 | Kinderkraft    | A favor de la marcha | fuente=amazon
+B0BYP63YCW | Kinderkraft    | A favor de la marcha | fuente=amazon
+B0C58QGJNG | Cybex          | A favor de la marcha | fuente=amazon
+B0BZ89X9YC | Kinderkraft    | Ambas                | fuente=amazon
+B0CZ47FKZL | Maxi-Cosi      | A favor de la marcha | fuente=amazon
+B0BYP9MTBX | Kinderkraft    | A favor de la marcha | fuente=amazon
+B0FGDM2ZTS | Kinderkraft    | No determinado       | fuente=None
+B0F3P61P8C | Bébé Confort   | Ambas                | fuente=amazon
+B0CWS19269 | Maxi-Cosi      | Ambas                | fuente=amazon
+B0F9YR27XX | Kinderkraft    | Ambas                | fuente=amazon
+B0DSL7WGB2 | Kinderkraft    | No determinado       | fuente=None
+B0GGZYY3BZ | Bébé Confort   | A favor de la marcha | fuente=amazon
+B0DP7TG8KY | Kinderkraft    | A favor de la marcha | fuente=amazon
+B0F1R26D8L | Kinderkraft    | A favor de la marcha | fuente=amazon

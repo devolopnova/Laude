@@ -1,0 +1,8 @@
+orientacion: A favor de la marcha
+reclinable: N/A
+giro_360: N/A
+tipo_arnes_proteccion: N/A
+proteccion_lateral: Sí
+funda_lavable: Sí
+clasificacion.arnes: {'original': None, 'normalizado': None, 'mostrar': 'No determinado', 'revisar': False, 'fuente': None, 'url_fuente': None, 'texto_fuente': None}
+clasificacion.funda_lavable: {'original': 'TEJIDOS 100% RECICLADOS: La funda sostenible está diseñada con Eco Care, tejidos 100 % reciclados; se puede quitar fácilmente y es lavable en la lavadora', 'normalizado': True, 'mostrar': 'Sí', 'revisar': False, 'fuente': 'amazon', 'url_fuente': None, 'texto_fuente': 'TEJIDOS 100% RECICLADOS: La funda sostenible está diseñada con Eco Care, tejidos 100 % reciclados; se puede quitar fácilmente y es lavable en la lavadora'}

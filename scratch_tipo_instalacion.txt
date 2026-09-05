@@ -1,0 +1,17 @@
+7 | ISOFIX
+3 | Cinturón
+3 | ISOFIX + Top Tether
+2 | ISOFIX (vía base)
+2 | ISOFIX o cinturón
+2 | Cinturón de seguridad
+1 | Cinturón + ISOFIX opcional
+1 | ISOFIX o cinturón (según etapa)
+1 | ISOFIX + soporte de piernas
+1 | ISOFIX o cinturón según etapa
+1 | Cinturón (ISOFIX opcional vía base)
+1 | Cinturón de 3 puntos + conectores ISOFIX
+1 | Cinturón (integrated belt lock-off)
+1 | ISOFIX + Top Tether o cinturón
+1 | ISOFIX o cinturón de 3 puntos
+1 | Cinturón (5 puntos hasta 18kg, luego cinturón 3 puntos)
+1 | ISOFIX + cinturón

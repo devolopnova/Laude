@@ -1,0 +1,20 @@
+Total productos: 30
+
+Campo                  Con dato  Revisar  Sin esp.  % cobertura
+isofix                        30        0         0 100%
+tipo_instalacion              30        0         0 100%
+normativa                     30        0         0 100%
+altura                        29        0         1 97%
+peso_recomendado              29        0         1 97%
+orientacion                   29        0         1 97%
+arnes                         29        1         0 97%
+    revisar: ['Britax Römer DUALFIX2 R']
+edad                          28        0         2 93%
+reposacabezas                 27        0         3 90%
+peso_silla                    25        0         5 83%
+proteccion_lateral            19        0        11 63%
+reclinable                    18        0        12 60%
+grupo                         17        0        13 57%
+funda_lavable                 12        0        18 40%
+giro_360                      11        0        19 37%
+travel_system                  4        0        26 13%

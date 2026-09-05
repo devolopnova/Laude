@@ -1,0 +1,6 @@
+orientacion: A contramarcha
+reclinable: Sí
+giro_360: Sí
+tipo_arnes_proteccion: Arnés de 5 puntos
+proteccion_lateral: Sí
+funda_lavable: Sí

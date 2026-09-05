@@ -1,0 +1,16 @@
+TOTAL productos: 37
+MARCAS DISTINTAS: 13
+
+  Babify: 1 producto(s)
+  BabyAuto: 1 producto(s)
+  Britax Römer: 2 producto(s)
+  Bébé Confort: 2 producto(s)
+  Chicco: 8 producto(s)
+  Cybex: 6 producto(s)
+  Graco: 2 producto(s)
+  Jovikids: 1 producto(s)
+  KikkaBoo: 3 producto(s)
+  Kinderkraft: 3 producto(s)
+  Lionelo: 3 producto(s)
+  Maxi-Cosi: 3 producto(s)
+  Nania: 2 producto(s)

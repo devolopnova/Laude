@@ -536,6 +536,66 @@ en `css/site.css`):
   (enlace de afiliado saliente: `nofollow sponsored`, no solo `noopener`
   como en los enlaces internos de Favoritos).
 
+## Componente reutilizable: "Tabla comparativa A vs. B"
+
+Tabla editorial para enfrentar **dos opciones** (p.ej. "Grupo 0 vs.
+Grupo 0+", una normativa vs. otra, un producto vs. otro) con pocas filas
+conceptuales — no confundir con `.sc-compare` (la tabla comparativa
+clásica de `css/site.css`, con cabecera monoespaciada y muchas filas de
+producto, usada en artículos de sillitas). Diseño **cerrado** (29/08),
+plantilla de referencia en `tools/comparison_table_template.html`.
+Primera implementación real: la tabla "Grupo 0 vs. Grupo 0+" de
+`silla-coche-grupo-0-recien-nacido.html` (ahí usa el prefijo histórico
+`.g0c-`; toda instancia nueva usa el prefijo genérico `.vs-` de la
+plantilla).
+
+**Reglas duras** (cada una costó varias iteraciones fallidas — no
+romperlas):
+
+1. **CSS Grid, nunca `<table>`.** La celda superior izquierda (encima de
+   la columna de etiquetas) no debe existir como elemento — en grid,
+   simplemente no se coloca nada en fila 1/columna 1. Con `<table>` hace
+   falta un `<th></th>` vacío que siempre ocupa una caja y acaba
+   mostrando fondo o borde por mucho que se intente ocultar — se ve como
+   una "celda fantasma".
+2. **El contenedor (`.vs-wrap`) no lleva `border` ni `border-radius`.**
+   Si los lleva, dibuja borde superior + izquierdo + esquina redondeada
+   alrededor de esa zona vacía — exactamente el contorno fantasma a
+   evitar. Solo lleva `overflow-x:auto` para scroll en móvil.
+3. El marco exterior lo forman los **bordes de las celdas visibles**:
+   `border-left` en la columna de etiquetas, `border-right` en la última
+   columna de datos, `border-bottom` en todas las filas.
+4. Las 4 esquinas redondeadas van en celdas reales, nunca en el
+   contenedor: arriba-izquierda en la **primera celda de datos** de la
+   columna de etiquetas (no en la zona vacía), arriba-derecha en la
+   cabecera de color de la última columna, abajo-izquierda en la última
+   celda de etiquetas, abajo-derecha en la última celda de la última
+   columna.
+5. Sin iconos, emojis, sombras, degradados ni decoración.
+
+**Parámetros fijos:** columnas 26% / 37% / 37% (etiquetas / opción A /
+opción B), `min-width:560px` (scroll horizontal por debajo). Cabecera A
+verde `#5C8C6E`, cabecera B azul `#3C5FA0`, texto blanco. Cuerpo columna
+A verde pastel `#E9F1E7`, cuerpo columna B azul muy claro `#F2F5FA`,
+columna de etiquetas blanco cálido `#FDFCFA`. Líneas divisorias `1px
+solid #E7E4DC` (gris muy claro, nunca negro). Radio de esquina `13px`.
+Detalle dorado opcional bajo el título: línea de 34×2px + punto de 5px,
+color `#C9A227`. Tipografía Inter en toda la tabla: cabeceras 13.5px/700
+mayúsculas, etiquetas 16px/600 alineadas a la izquierda, valores
+16px/500 centrados. Padding de celda `18px 20px` (`22px` arriba/abajo en
+la última fila; en móvil `14px 12px` / `18px` en la última fila). Una
+celda admite una segunda línea secundaria (`.vs-line-sub`, 14.5px,
+`var(--ink-soft)`).
+
+**Al instanciarla en una página nueva:** copiar el CSS y el HTML de
+`tools/comparison_table_template.html`, ajustar el nº de filas (bloques
+de 3 divs + su clase `.vs-rN`, añadiendo la regla `.vs-rN` en el CSS si
+hacen falta más de 4 filas de datos), y aplicar `.vs-last` a las 3
+celdas de la última fila y `.vs-r2` a la etiqueta de la primera fila de
+datos (son las que aportan los bordes/esquinas exteriores). Si la
+comparativa no necesita el detalle dorado, se omite el bloque `.vs-deco`
+entero en vez de dejarlo vacío.
+
 ## Sección editorial "Planes en casa" (arquitectura, en desarrollo)
 
 Sección editorial de ocio y actividades para hacer en casa con niños —
@@ -1147,9 +1207,37 @@ verticales (Organización, Cumpleaños, Viajes, Consumo).
 
 Extractor **independiente** de `amazon_import.py` (nunca se toca ese
 archivo ni su lógica): `tools/amazon_sillas_coche.py`. Busca en Amazon
-España, filtra por 17 marcas autorizadas, deduplica por ASIN y extrae 13
+España, filtra por 22 marcas autorizadas, deduplica por ASIN y extrae 13
 atributos técnicos + precio + valoración + hasta 10 reseñas por producto.
 Uso: `python tools/amazon_sillas_coche.py --search "sillita coche"`.
+
+**Si una marca no está en el diccionario `BRANDS` del script, buscarla
+devuelve 0 resultados**: el filtro por marca descarta todos sus anuncios
+y solo deja pasar competencia, sin ningún aviso. Pasó el 31-ago-2026 con
+KikkaBoo (0 resultados de 180 candidatos) y afectaba también a Lionelo,
+Graco, Nania y Jovikids — las cinco ya tenían productos en el catálogo
+pero eran inbuscables. Al añadirlas, la lista pasó de 17 a 22 marcas.
+Antes de dar por hecho que una marca "no tiene modelos nuevos",
+comprobar que está en `BRANDS`.
+
+**Imágenes de producto — regla permanente:** toda imagen usada en el
+comparador (selector, tarjeta VS, ficha, o cualquier vista futura) debe
+mostrar **exclusivamente** la sillita del producto correspondiente, como
+fotografía de producto limpia. Debe: mostrar la sillita completa siempre
+que sea posible, permitir identificar claramente el modelo, tener un
+encuadre limpio adecuado para la tarjeta, y mantener presentación
+homogénea con el resto de productos. No debe: aparecer ningún niño ni
+persona, la caja/embalaje, otro producto, mobiliario u objetos que
+distraigan, textos promocionales, precios/banners/elementos
+publicitarios, varias sillitas/modelos distintos en la misma imagen, ni
+composiciones publicitarias de Amazon en lugar de una foto limpia del
+producto. Prioridad: el usuario debe reconocer de un vistazo qué sillita
+está viendo. Aplica tanto a las imágenes ya descargadas en
+`images/sillas-coche/` como a cualquier sillita nueva que se incorpore al
+dataset — al importar/auditar una imagen, validarla contra esta lista
+antes de darla por buena; si la imagen de Amazon no la cumple, buscar una
+alternativa (p.ej. otra imagen del listing, o la ficha del fabricante)
+en vez de usarla igualmente.
 
 **Capas de cada producto en el JSON:**
 - `caracteristicas` / `caracteristicas_fuente`: los 13 atributos "planos"
